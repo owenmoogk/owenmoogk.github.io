@@ -1,0 +1,68 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+    line-height: 30px;
+}
+.top{
+    float: right;
+    width: 370px;
+}
+.nav{
+    background-color: #d3d3d3af;
+    position: fixed;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+}
+.subnav{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+.navlinks{
+    text-decoration: none;
+    color: black;
+}
+.navlinks:hover{
+    border-bottom: 6px solid rgb(0,150,255);
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+.activenav{
+    border-bottom: 4px solid rgb(0,150,255);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+.activenav:hover{
+    border-bottom: 6px solid rgb(0,150,255);
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+.buttonholder{
+    float: right;
+    width: 30px;
+}
+.button{
+    position: fixed;
+    background-color: black;
+    height: 40px;
+    width: 50px;
+    margin-top: 150px;
+    border-radius: 10px;
+}
+.menuimg{
+    width: 60%;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav{
+        display: none;
+    }
+}
+@media only screen and (min-width:800px) {
+    .button{
+        display: none;
+    }
+}

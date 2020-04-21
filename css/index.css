@@ -1,0 +1,55 @@
+/*giving all font*/
+*{
+    font-family: 'IBM Plex Sans', serif;
+    line-height: 30px;
+}
+.body{
+    float: left;
+    width: 95%;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.blinks{
+    text-decoration: none;
+    color: rgb(0,150,255);
+}
+.blinks:hover{
+    border-bottom: 2px solid rgb(0,150,255);
+}
+.text{
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+div.img{
+    width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+img.img{
+    width: 100%;
+    border: 10px solid rgb(211,211,211);
+}
+.row{
+    width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+    .body{
+        margin-left: 100px;
+    }
+}
+@media only screen and (max-width: 860px) {
+    .text{
+        width: 100%;
+    }
+    div.img{
+        width: 50%;
+    }
+}
