@@ -47,7 +47,7 @@ img.img{
 }
 @media only screen and (max-width: 860px) {
     .text{
-        width: 100%;
+        width: 85%;
     }
     div.img{
         width: 50%;
