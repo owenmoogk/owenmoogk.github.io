@@ -69,6 +69,9 @@ img.resume{
 .blinks:hover{
     border-bottom: 2px solid rgb(0,150,255);
 }
+.hidden{
+    text-decoration: none;
+}
 @media only screen and (min-width: 1000px) {
     .body{
         margin-left: 100px;
