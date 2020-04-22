@@ -71,6 +71,7 @@ img.resume{
 }
 .hidden{
     text-decoration: none;
+    color: black;
 }
 @media only screen and (min-width: 1000px) {
     .body{
