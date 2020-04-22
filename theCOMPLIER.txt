@@ -13,3 +13,8 @@ spacex tm
 awardspace
 my colors
 stack overflow
+solidworks
+inkscape
+vscode
+hex codes from images
+hex to rgb
