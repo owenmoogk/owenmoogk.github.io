@@ -5,7 +5,7 @@
 }
 .body{
     float: left;
-    width: 95%;
+    width: 55%;
     font-size: 20px;
     margin-left: 20px;
 }
@@ -46,10 +46,11 @@ img.img{
     }
 }
 @media only screen and (max-width: 860px) {
-    .text{
-        width: 85%;
-    }
     div.img{
-        width: 50%;
+        width: 0%;
+    }
+    img.img{
+        border: 0px;
+        width: 0px;
     }
 }
