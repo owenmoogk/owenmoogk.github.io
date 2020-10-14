@@ -27,30 +27,14 @@
     vertical-align: middle;
     padding: 30px;
 }
-div.img{
-    width: 250px;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 30px;
-}
-img.img{
-    width: 100%;
-    border: 10px solid rgb(211,211,211);
-}
 .row{
     width: 100%;
 }
+
+
+/*when page gets small this removes left margin*/
 @media only screen and (min-width: 1000px) {
     .body{
         margin-left: 100px;
-    }
-}
-@media only screen and (max-width: 860px) {
-    div.img{
-        width: 0%;
-    }
-    img.img{
-        border: 0px;
-        width: 0px;
     }
 }
