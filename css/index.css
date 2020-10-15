@@ -5,30 +5,29 @@
 }
 .body{
     float: left;
-    width: 55%;
+    width: 1200px;
     font-size: 20px;
     margin-left: 20px;
 }
 .title{
     font-size: 60px;
     font-weight: bold;
-    padding-left: 10px;
 }
-.blinks{
+.bluelinks{
     text-decoration: none;
     color: rgb(0,150,255);
 }
-.blinks:hover{
+.bluelinks:hover{
     border-bottom: 2px solid rgb(0,150,255);
 }
 .text{
     width: 60%;
     display: inline-block;
     vertical-align: middle;
-    padding: 30px;
 }
-.row{
-    width: 100%;
+.notice{
+    width: 700px;
+    color: red;
 }
 
 
