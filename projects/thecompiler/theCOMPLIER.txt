@@ -18,3 +18,6 @@ inkscape
 vscode
 hex codes from images
 hex to rgb
+art station alena
+icons
+typing practice
