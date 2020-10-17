@@ -73,6 +73,10 @@ img.resume{
     text-decoration: none;
     color: black;
 }
+.navbox{
+    width: 200px;
+    float: left;
+}
 @media only screen and (min-width: 1000px) {
     .body{
         margin-left: 100px;

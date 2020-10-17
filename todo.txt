@@ -20,3 +20,6 @@ the compiler
 projects
     img for the compiler
     img for cad challenge
+    minirobot
+    rc car?
+    3d printed rokcets (tinkercad learning for demo??)
