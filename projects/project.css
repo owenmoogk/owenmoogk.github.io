@@ -2,15 +2,12 @@
     float: left;
     width: 85%;
     font-size: 20px;
-    margin-left: 20px;
 }
 .title{
     font-size: 60px;
     font-weight: bold;
-    padding-left: 10px;
 }
 .date{
-    padding-left: 17px;
     padding-bottom: 20px;
     margin-top: -50px;
     width: 150px;
@@ -20,7 +17,6 @@
     padding-top: 10px;
 }
 .block{
-    padding-left: 40px;
     padding-bottom: 20px;
     width: 100%;
     float: left;
@@ -52,7 +48,7 @@ img.img{
     color: rgb(0,150,255);
 }
 .blinks:hover{
-    border-bottom: 2px solid rgb(0,150,255);
+    border-bottom: 3px solid rgb(0,150,255);
 }
 h1{
     line-height: 50px;
@@ -60,7 +56,7 @@ h1{
 
 @media only screen and (min-width: 1000px) {
     .body{
-        margin-left: 100px;
+        margin-left: 175px;
     }
 }
 @media only screen and (max-width: 1000px) {

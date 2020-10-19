@@ -6,11 +6,10 @@
     font-weight: bold;
     text-align: right;
     position: fixed;
-    width: 200px;
+    width: 100px;
     height: 100%;
     float: left;
     overflow-x: hidden;
-    padding-top: 50px;
     padding-left: 20px;
 }
 .navlinks{
