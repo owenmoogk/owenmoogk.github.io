@@ -8,26 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+    <script src="js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="projects.html" class="navlinks">Projects</a>
-                    &nbsp;
-                    <a href="work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="contact.html" class="activenav">Contact</a>
-                    &nbsp;
-                    <a href="resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-    </div>
+    <div w3-include-html="nav.html"></div>
+        <script>
+          includeHTML();
+        </script>
     <div class="body">
         <div class="title">
             <p style="line-height: 70px;">
@@ -35,7 +22,7 @@
             </p>
         </div>
         <div class="contactmain">
-            <p style="line-height: 40px;">
+            <p class="contactP">
                 <b>Personal Email:</b> <a href="mailto:owenmoogk@gmail.com" class="contactlink">owenmoogk@gmail.com</a>
                 <br>
                 <b>School Email:</b> <a href="mailto:moogo4920@wrdsb.ca" class="contactlink">moogo4920@wrdsb.ca</a>
@@ -54,7 +41,7 @@
                 <br>
                 <b>Repl.it:</b> <a href="https://repl.it/@owenm21" class="contactlink" target="_blank">owenm21</a>
                 <br>
-                <b>Project Euler:</b> owen.moog<a href="https://www.youtube.com/watch?v=ug4c2mqlE_0" class="hidden" target="_blank">k</a>
+                <b>Project Euler:</b> owen.moog<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="hidden" target="_blank">k</a>
             </p>
         </div>
     </div>
