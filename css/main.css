@@ -82,6 +82,7 @@ img.img{
 .text{
     display: inline-block;
     position: absolute;
+    width: 50%;
 }
 
 
