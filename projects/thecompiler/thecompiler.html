@@ -5,34 +5,17 @@
     <meta name="author" content="Owen Moogk">
     <meta name="keywords" content="Owen, Moogk, Owenmoogk">
     <meta name="description" content="Just a little bit about me :)">
-    <link rel="stylesheet" href="thecompiler/thecompiler.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="/thecompiler.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/projects/project.css">
+    <script src="/js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="../index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="../projects.html" class="navlinks">Projects</a>
-                    &nbsp;
-                    <a href="../work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="../contact.html" class="navlinks">Contact</a>
-                    &nbsp;
-                    <a href="../resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-        <div class="buttonholder">
-            <div class="button">
-                <img src="../img/nav/hamburgerbutton.svg" alt="MENU" class="menuimg">
-            </div>
-        </div>
+    <div w3-include-html="/nav.html"></div>
+        <script>
+          includeHTML();
+        </script>
     </div>
     <div class="body">
         <div class="title">
@@ -46,9 +29,6 @@
                 I have never done anything like this before, so it's a big learning curve.
                 Will be updated soon
             </p>
-        </div>
-        <div class="table">
-            <iframe src="./thecompiler/" frameborder="0" width="1000px" height="500px"></iframe>
         </div>
     </div>
 </body>

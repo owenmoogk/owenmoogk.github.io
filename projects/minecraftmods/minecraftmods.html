@@ -5,34 +5,16 @@
     <meta name="author" content="Owen Moogk">
     <meta name="keywords" content="Owen, Moogk, Owenmoogk">
     <meta name="description" content="Just a little bit about me :)">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="/projects/project.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+    <script src="/js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="../index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="../projects.html" class="navlinks">Projects</a>
-                    &nbsp;
-                    <a href="../work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="../contact.html" class="navlinks">Contact</a>
-                    &nbsp;
-                    <a href="../resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-        <div class="buttonholder">
-            <div class="button">
-                <img src="../img/nav/hamburgerbutton.svg" alt="MENU" class="menuimg">
-            </div>
-        </div>
-    </div>
+    <div w3-include-html="/nav.html"></div>
+        <script>
+          includeHTML();
+        </script>
     <div class="body">
         <div class="title">
             <p style="line-height: 70px;">
@@ -78,7 +60,7 @@
                 </p>
             </div>
             <div class="img">
-                <img src="minecraftmods/highlightedores.png" alt="Highlighted Ores" class="img">
+                <img src="img/highlightedores.png" alt="Highlighted Ores" class="img">
             </div>
         </div>
         <div class="block">
@@ -130,7 +112,7 @@
                 </p>
             </div>
             <div class="img">
-                <img src="minecraftmods/demo.png" alt="Pack Demo" class="img">
+                <img src="img/demo.png" alt="Pack Demo" class="img">
             </div>
         </div>
         <div class="block">
@@ -146,7 +128,7 @@
                 </p>
             </div>
             <div class="img">
-                <img src="minecraftmods/shulker.png" alt="Shulker Box">
+                <img src="img/shulker.png" alt="Shulker Box">
             </div>
         </div>
         <div class="block">

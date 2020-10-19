@@ -5,34 +5,16 @@
     <meta name="author" content="Owen Moogk">
     <meta name="keywords" content="Owen, Moogk, Owenmoogk">
     <meta name="description" content="Just a little bit about me :)">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="/projects/project.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+    <script src="/js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="../index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="../projects.html" class="navlinks">Projects</a>
-                    &nbsp;
-                    <a href="../work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="../contact.html" class="navlinks">Contact</a>
-                    &nbsp;
-                    <a href="../resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-        <div class="buttonholder">
-            <div class="button">
-                <img src="../img/nav/hamburgerbutton.svg" alt="MENU" class="menuimg">
-            </div>
-        </div>
-    </div>
+    <div w3-include-html="/nav.html"></div>
+        <script>
+          includeHTML();
+        </script>
     <div class="body">
         <div class="title">
             <p style="line-height: 70px;">
@@ -65,7 +47,7 @@
                 <p>
                     Along with this, I have made older versions of this website public as well. You can see it 
                     <a href="https://owenmoogk.github.io/website_old/" class="blinks" target="_blank">here</a>.
-                    As with the other website, both the ZIP file and GitHub page are linked below.
+                    As with the other website, the GitHub page is linked below.
                     Please do not use it as a source for information, as it is not up to date
                     and is missing key components. This website has all the information relevant, so please use it as only an archive.
             </div>

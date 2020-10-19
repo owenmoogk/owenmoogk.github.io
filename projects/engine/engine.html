@@ -5,34 +5,16 @@
     <meta name="author" content="Owen Moogk">
     <meta name="keywords" content="Owen, Moogk, Owenmoogk">
     <meta name="description" content="Just a little bit about me :)">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="/projects/project.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+    <script src="/js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="../index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="../projects.html" class="navlinks">Projects</a>
-                    &nbsp;
-                    <a href="../work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="../contact.html" class="navlinks">Contact</a>
-                    &nbsp;
-                    <a href="../resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-        <div class="buttonholder">
-            <div class="button">
-                <img src="../img/nav/hamburgerbutton.svg" alt="MENU" class="menuimg">
-            </div>
-        </div>
-    </div>
+    <div w3-include-html="/nav.html"></div>
+        <script>
+          includeHTML();
+        </script>
     <div class="body">
         <div class="title">
             <p style="line-height: 70px;">
@@ -55,7 +37,7 @@
                     This was a really fun project, and I learned much more about how a 4-stroke combustion engine works.
             </div>
             <div class="img">
-                <img src="engine/fullengine.png" alt="Full Engine" class="img"> 
+                <img src="img/fullengine.png" alt="Full Engine" class="img"> 
             </div>
         </div>
         <div class="block">
@@ -67,13 +49,13 @@
         </div>
         <div class="block">
             <div class="img">
-                <img src="engine/cam_drive_shafts.jpg" alt="Cam and Drive Shafts" class="img">
+                <img src="img/cam_drive_shafts.jpg" alt="Cam and Drive Shafts" class="img">
             </div>
             <div class="img">
-                <img src="engine/valves.jpg" alt="Valves" class="img"> 
+                <img src="img/valves.jpg" alt="Valves" class="img"> 
             </div>
             <div class="img">
-                <img src="engine/workstation.jpg" alt="Workstation" class="img">
+                <img src="img/workstation.jpg" alt="Workstation" class="img">
             </div>
         </div>
         <div class="block">

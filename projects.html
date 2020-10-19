@@ -8,30 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+    <script src="js/js-for-all.js"></script>
 </head>
 <body>
-    <div class="top">
-        <div class="nav">
-            <div class="subnav">
-                <p>
-                    <a href="index.html" class="navlinks">Home</a>
-                    &nbsp;
-                    <a href="projects.html" class="activenav">Projects</a>
-                    &nbsp;
-                    <a href="work.html" class="navlinks">Work</a>
-                    <br>
-                    <br>
-                    <a href="contact.html" class="navlinks">Contact</a>
-                    &nbsp;
-                    <a href="resume.html" class="navlinks">Resume</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="body">
+  <div w3-include-html="nav.html"></div>
+  <script>
+    includeHTML();
+  </script>
+  <div class="body">
         <div class="title">
             <p style="line-height: 70px;">
-               Projects 
+               Projects
             </p>
         </div>
         <div class="row">
