@@ -1,6 +1,4 @@
 work/extra
-    resume (4)
-        download
     work (1)
         umpire
         merryhill
@@ -12,7 +10,7 @@ work/extra
         c2l
         etc etc
 
-the compiler
+
 
 projects
     img for the compiler
@@ -20,3 +18,4 @@ projects
     minirobot
     rc car?
     3d printed rokcets (tinkercad learning for demo??)
+    the compiler
