@@ -2,7 +2,7 @@
     font-family: 'IBM Plex Sans', serif;
 }
 .subnav{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: right;
     position: fixed;
@@ -18,7 +18,7 @@
     color: black;
 }
 .navlinks:hover{
-    border-bottom: 6px solid rgb(0,150,255);
+    border-bottom: 6px solid lightgray;
     border-radius: 5px;
     transition-duration: .25s;
 }
