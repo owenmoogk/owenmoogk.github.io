@@ -1,19 +1,16 @@
 work/extra
-    resume
+    resume (4)
         download
-    work
+    work (1)
         umpire
         merryhill
-    volunteering
+    volunteering (2)
         look on myway, idk
-    extracurric
+    extracurric (3)
         shad
         duke
         c2l
         etc etc
-
-
-fix broken pics and links
 
 the compiler
 
@@ -23,6 +20,3 @@ projects
     minirobot
     rc car?
     3d printed rokcets (tinkercad learning for demo??)
-
-
-linkedin
