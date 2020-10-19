@@ -2,7 +2,7 @@
 since its all using basically the same layout.
 Don't wanna type everything 5 billion times */
 
-/* all */
+/* ALL */
 .body{
     float: left;
     font-size: 20px;
@@ -19,22 +19,50 @@ Don't wanna type everything 5 billion times */
 .link:hover{
     border-bottom: 3px solid rgb(0,150,255);
 }
-.text{
-    width: 60%;
-}
 *{
     font-family: 'IBM Plex Sans', serif;
     line-height: 30px;
 }
 
 
-/* homepage */
+/* HOMEPAGE */
 .notice{
-    width: 700px;
     color: red;
 }
+.indexText{
+    width: 60%;
+}
+.indexP{
+    padding-bottom: 10px;
+}
 
-/* list style pages */
+
+/* RESUME */
+div.resume{
+    padding-left: 10px;
+    width: 100%;
+}
+img.resume{
+    width: 700px;
+}
+
+
+/* CONTACT */
+.contactP{
+    line-height: 40px;
+}
+
+/* LIST PAGES */
+.titlelink{
+    text-decoration: none;
+    color: black;
+}
+.titlelink:hover{
+    border-bottom: 3px solid black;
+}
+
+
+
 .row{
     width: 100%;
     padding-left: 20px;
@@ -57,29 +85,9 @@ img.img{
 .listtitle{
     line-height: 50px;
 }
-.titlelink{
-    text-decoration: none;
-    color: black;
-}
-.titlelink:hover{
-    border-bottom: 3px solid black;
-}
-div.resume{
-    padding-left: 10px;
-    width: 100%;
-}
-img.resume{
-    width: 700px;
-}
 .hidden{
     text-decoration: none;
     color: black;
-}
-.contactP{
-    line-height: 40px;
-}
-.indexP{
-    padding-bottom: 10px;
 }
 @media only screen and (min-width: 850px) {
     .body{
@@ -87,6 +95,12 @@ img.resume{
     }
 }
 @media only screen and (max-width: 850px) {
+    .indexText{
+        width: 100%;
+    }
+
+
+    /* resume */
     img.resume{
         width: 80%;
     }

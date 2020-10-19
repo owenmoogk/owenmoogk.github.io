@@ -23,3 +23,6 @@ projects
     minirobot
     rc car?
     3d printed rokcets (tinkercad learning for demo??)
+
+
+linkedin
