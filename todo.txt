@@ -19,3 +19,5 @@ projects
     rc car?
     3d printed rokcets (tinkercad learning for demo??)
     the compiler
+    cad accessories
+        headphone mount, etx
