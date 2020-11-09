@@ -5,7 +5,7 @@
 /*INDEX*/
 body{
 	/*background image*/
-	background-image: url('img/index/background.jpg');
+	background-image: url('../img/index/background.jpg');
 	background-size: 100%;
 	background-attachment: fixed;
 	height: 100vh;
