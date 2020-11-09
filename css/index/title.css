@@ -1,0 +1,36 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+
+/*INDEX*/
+body{
+	/*background image*/
+	background-image: url('/img/index/background.jpg');
+	background-size: 100%;
+	background-attachment: fixed;
+	height: 100vh;
+	margin-top: -60px;
+}
+.title{
+	font-size: 100px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+#title{
+	margin-bottom: 10px;
+	text-shadow: 3px 3px black;
+}
+#navBox{
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
+.navlinks{
+	text-decoration: none;
+	color: white;
+	text-shadow: 3px 3px black;
+}
+.navlinks:hover{
+	border-bottom: 2px solid white;
+}

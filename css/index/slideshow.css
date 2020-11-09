@@ -1,33 +1,4 @@
-*{
-    font-family: 'IBM Plex Sans', serif;
-}
-
-/*INDEX*/
-body{
-	/*background image*/
-	background-image: url('/index/background.jpg');
-	background-size: 100%;
-	height: 100vh;
-	margin-top: -60px;
-}
-.title{
-	font-size: 100px;
-	width: 100%;
-	text-align: center;
-}
-#title{
-	margin-bottom: 10px;
-}
-#navBox{
-	display: flex;
-	justify-content: center;
-	font-size: 50px;
-}
-.navlinks{
-	text-decoration: none;
-	color: grey;
-}
-
+/*SLIDESHOW*/
 
 /* Slideshow container */
 .slideshow-container {
@@ -48,7 +19,7 @@ body{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.ss-prev, .ss-next {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -65,17 +36,17 @@ body{
 }
 
 /* Position the "next button" to the right */
-.next {
+.ss-next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.ss-prev:hover, .ss-next:hover {
 	background-color: black;
 }
 
-img{
+.ss-img{
 	opacity: 1;
 	display: block;
 	width: 100%;
@@ -83,7 +54,7 @@ img{
 	transition: .5s ease;
 	backface-visibility: hidden;
 }
-.overlay {
+.ss-overlay {
 	transition: .5s ease;
 	opacity: 0;
 	position: absolute;
@@ -95,14 +66,14 @@ img{
 }
 
 /* Caption text */
-.text {
+.ss-text {
 	color: black;
 	font-size: 40px;
 	font-weight: bold;
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.ss-dot {
 	cursor: pointer;
 	height: 15px;
 	width: 15px;
@@ -113,6 +84,6 @@ img{
 	transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.ss-active, .ss-dot:hover {
 	background-color: #717171;
 }

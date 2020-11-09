@@ -1,0 +1,26 @@
+<menu>
+    <item>
+        <title>Home</title>
+        <link>"index.html"</link>
+    </item>
+    <item>
+        <title>Projects</title>
+        <link>"projects.html"</link>
+    </item>
+    <item>
+        <title>Work</title>
+        <link>"work.html"</link>
+    </item>
+    <item>
+        <title>Blog</title>
+        <link>"blog.html"</link>
+    </item>
+    <item>
+        <title>Contact</title>
+        <link>"contact.html"</link>
+    </item>
+    <item>
+        <title>Resume</title>
+        <link>"resume.html"</link>
+    </item>
+</menu>

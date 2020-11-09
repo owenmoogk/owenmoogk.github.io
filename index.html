@@ -2,7 +2,8 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/index/title.css">
+        <link rel="stylesheet" href="css/index/slideshow.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
         <meta name="author" content="Owen Moogk">
         <meta name="keywords" content="Owen, Moogk, Owenmoogk">
@@ -11,6 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/js-for-all.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/slideshow.js"></script>
     </head>
     <body onload="load()">
         <div class="title">
@@ -19,5 +21,36 @@
             </p>
         </div>
         <div id="navBox"></div>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <a href="https://www.firstinspires.org">
+                <div class="slide">
+                    <img class="ss-img" src="/img/index/slideshow/arm.png">
+                    <div class="ss-overlay">
+                        <div class="ss-text">yo yo yo</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.2702rebels.com">
+                <div class="slide">
+                    <img class="ss-img" src="/img/index/slideshow/rocket.png">
+                    <div class="ss-overlay">
+                        <div class="ss-text">poggers</div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.whitehouse.gov">
+                <div class="slide">
+                    <img class="ss-img" src="/img/index/slideshow/robot.png">
+                    <div class="ss-overlay">
+                        <div class="ss-text">MY DUDE</div>
+                    </div>
+                </div>
+            </a>
+            <!-- Next and previous buttons -->
+            <a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="ss-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
     </body>
 </html>
