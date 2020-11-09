@@ -5,17 +5,22 @@
 	max-width: 1000px;
 	position: relative;
 	margin: auto;
+	background-color: rgba(0,0,0,0.4);
+	border-radius: 40px;
+	height: 500px;
 }
 
 /* Hide the images by default */
 .slide {
 	display: none;
+	height: 100%;
 }
-.slide:hover .overlay{
+.slideshow-container:hover .ss-overlay{
 	opacity: 1;
 }
-.slide:hover img{
-	opacity: 0.6;
+.slideshow-container:hover{
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: 0.5s;
 }
 
 /* Next & previous buttons */
@@ -49,13 +54,13 @@
 .ss-img{
 	opacity: 1;
 	display: block;
-	width: 100%;
-	height: auto;
+	object-fit: contain;
+	height: 100%;
 	transition: .5s ease;
 	backface-visibility: hidden;
 }
 .ss-overlay {
-	transition: .5s ease;
+	transition: 0.5s;
 	opacity: 0;
 	position: absolute;
 	top: 50%;
@@ -67,7 +72,7 @@
 
 /* Caption text */
 .ss-text {
-	color: black;
+	color: white;
 	font-size: 40px;
 	font-weight: bold;
 }
