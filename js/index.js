@@ -3,9 +3,9 @@
 function loadMenuItems() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        menuItems(this);
-      }
+		if (this.readyState == 4 && this.status == 200) {
+			menuItems(this);
+		}
     };
     xmlhttp.open("GET", "assets/index/menu-items.xml", true);
     xmlhttp.send();
@@ -51,4 +51,6 @@ function slideshow(xml) {
 
 function load(){
     loadMenuItems()
+    showSlides(1)
+	giveImgTags()
 }

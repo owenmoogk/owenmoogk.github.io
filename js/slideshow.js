@@ -32,9 +32,4 @@ function giveImgTags(){
 	}
 }
 
-function onLoad(){
-	showSlides(1)
-	giveImgTags()
-}
-
 var slideIndex = 0;
