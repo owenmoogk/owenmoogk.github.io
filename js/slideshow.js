@@ -9,7 +9,6 @@ function showSlides(n) {
 	var i;
 	var slides = document.getElementsByClassName("slide");
 	var dots = document.getElementsByClassName("ss-dot");
-
 	if (slideIndex > slides.length) {slideIndex = 1}
 	if (slideIndex < 1) {slideIndex = slides.length}
 	
@@ -19,6 +18,8 @@ function showSlides(n) {
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" ss-active", "");
 	}
+	console.log(slides)
+	console.log(slides[0])
 	slides[slideIndex-1].style.display = "block";
 	dots[slideIndex-1].className += " ss-active";
 }
