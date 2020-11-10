@@ -2,7 +2,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-	max-width: 1000px;
+	max-width: 500px;
 	position: relative;
 	margin: auto;
 	background-color: rgba(0,0,0,0.4);
@@ -14,6 +14,7 @@
 .slide {
 	display: none;
 	height: 100%;
+	
 }
 .slideshow-container:hover .ss-overlay{
 	opacity: 1;
