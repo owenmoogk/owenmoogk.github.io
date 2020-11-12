@@ -2,12 +2,13 @@
 
 /* Slideshow container */
 .slideshow-container {
-	max-width: 500px;
+	max-width: 900px;
 	position: relative;
 	margin: auto;
 	background-color: rgba(0,0,0,0.4);
 	border-radius: 40px;
 	height: 500px;
+	transition: 0.5s;
 }
 
 /* Hide the images by default */
