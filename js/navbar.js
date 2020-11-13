@@ -11,7 +11,7 @@ function loadMenuItems() {
 function menuItems(xml) {
     var titles, links, i, txt, xmlDoc; 
     xmlDoc = xml.responseXML;
-    txt = "";
+    txt = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     for (i = 0; i < titles.length; i++) { 
