@@ -5,28 +5,43 @@
         <image>"/img/projects/hydraulic-arm.png"</image>
     </item>
     <item>
-        <title>Projects</title>
-        <link>"/html/projects.html"</link>
-        <image>"/img/projects/"</image>
+        <title>Space Invaders</title>
+        <link>"/html/projects/space-invaders.html"</link>
+        <image>"/img/projects/space-invaders.png"</image>
     </item>
     <item>
-        <title>Work</title>
-        <link>"/html/work.html"</link>
-        <image>"/img/projects/"</image>
+        <title>The Compiler</title>
+        <link>"/html/projects/The Compiler"</link>
+        <image>"/img/projects/classified.png"</image>
     </item>
     <item>
-        <title>Blog</title>
-        <link>"/html/blog.html"</link>
-        <image>"/img/projects/"</image>
+        <title>Website Development</title>
+        <link>"/html/projects/website-development.html"</link>
+        <image>"/img/projects/website-development.png"</image>
     </item>
     <item>
-        <title>Contact</title>
-        <link>"/html/contact.html"</link>
-        <image>"/img/projects/"</image>
+        <title>Renders/Graphic Design</title>
+        <link>"/html/projects/renders.html"</link>
+        <image>"/img/projects/renders.png"</image>
     </item>
     <item>
-        <title>Resume</title>
-        <link>"/html/resume.html"</link>
-        <image>"/img/projects/"</image>
+        <title>Double Chomp</title>
+        <link>"/html/projects/double-chomp.html"</link>
+        <image>"/img/projects/classified.png"</image>
+    </item>
+    <item>
+        <title>2702 Rebels 2020 Robot</title>
+        <link>"/html/projects/2702-2020.html"</link>
+        <image>"/img/projects/2702-2020.png"</image>
+    </item>
+    <item>
+        <title>Engine Assembly</title>
+        <link>"/html/projects/engine.html"</link>
+        <image>"/img/projects/engine.png"</image>
+    </item>
+    <item>
+        <title>2702 Rebels 2019 Robot</title>
+        <link>"/html/projects/2702-2019.html"</link>
+        <image>"/img/projects/2702-2019.png"</image>
     </item>
 </projects>

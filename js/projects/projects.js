@@ -16,7 +16,7 @@ function projects(xml) {
     links = xmlDoc.getElementsByTagName('link');
     images = xmlDoc.getElementsByTagName('image');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<div class="container"><div class="content"><a href='+links[i].childNodes[0].nodeValue+' target="_blank"><img class="content-image-png" src='+images[i].childNodes[0].nodeValue+'><div class="content-details fadeIn-bottom"><h3 class="content-title">'+titles[i].childNodes[0].nodeValue+'</h3></div></a></div></div>';
+        txt += '<div class="container"><div class="content"><a href='+links[i].childNodes[0].nodeValue+'><img class="content-image-png" src='+images[i].childNodes[0].nodeValue+'><div class="content-details fadeIn-bottom"><h3 class="content-title">'+titles[i].childNodes[0].nodeValue+'</h3></div></a></div></div>';
     }
     document.getElementById("projects").innerHTML = txt;
 }
