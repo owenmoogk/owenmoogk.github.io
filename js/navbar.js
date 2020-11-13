@@ -20,7 +20,3 @@ function menuItems(xml) {
     document.getElementById("navBox").innerHTML = txt;
     console.log(document.getElementById('navBox'))
 }
-
-function load(){
-    loadMenuItems()
-}

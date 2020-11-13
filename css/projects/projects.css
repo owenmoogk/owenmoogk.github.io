@@ -45,23 +45,10 @@
     margin: auto;
     overflow: hidden;
     background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 20px;
 }
 
-
-.content .content-overlay {
-    background: rgba(0,0,0,0.7);
-    position: absolute;
-    height: 99%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-}
 .content-details {
     position: absolute;
     text-align: center;
@@ -83,13 +70,13 @@
     background-color: rgba(0,0,0,0.7);
     transition: 0.6s;
 }
-.content:hover .content-image{
-    opacity: 0.5;
-}
 .content:hover .content-details{
     top: 50%;
     left: 50%;
     opacity: 1;
+}
+.content:hover .content-image-png{
+    opacity: 0.5;
 }
   
 .content-details h3{
@@ -103,9 +90,8 @@
 .fadeIn-bottom{
     top: 80%;
 }
-  
-.content-image{
-    width: 100%;
+.content-image-png{
+    height: 100%;
 }
 
 @media only screen and (max-width: 1300px) {
