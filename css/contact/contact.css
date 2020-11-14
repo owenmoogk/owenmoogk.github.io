@@ -1,0 +1,55 @@
+
+/* ALL */
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+.title{
+	font-size: 70px;
+    width: 70%;
+    padding-left: 15%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 70px;
+    padding-top: 60px;
+}
+#navBox{
+    font-size: 30px;
+    padding-top: 40px;
+}
+.navlinks{
+	text-decoration: none;
+    color: black;
+}
+.navlinks:hover{
+	border-bottom: 3px solid black;
+}
+
+/* CONTACT */
+.contactmain{
+    width: 60%;
+    padding-left: 20%;
+}
+#main{
+    line-height: 40px;
+    font-size: 23px;
+    font-weight: bold;
+}
+#other{
+    line-height: 40px;
+    font-size: 20px;
+}
+.link{
+    text-decoration: none;
+    color: rgb(0,150,255);
+}
+.link:hover{
+    border-bottom: 3px solid rgb(0,150,255);
+}
+.hidden{
+    text-decoration: none;
+    color: black;
+}
