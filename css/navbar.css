@@ -1,3 +1,7 @@
+body{
+    background-color: #CBB0B5;
+}
+
 *{
     font-family: 'IBM Plex Sans', serif;
 }
@@ -6,6 +10,7 @@
     width: 70%;
     padding-left: 15%;
     padding-right: 20%;
+    margin-left: -10px;
     color: black;
     display: flex;
     align-items: center;
@@ -14,6 +19,8 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: #CBB0B5;
+    border-bottom: 3px solid black;
 }
 .logo{
     height: 70px;

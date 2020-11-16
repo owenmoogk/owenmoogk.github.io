@@ -23,7 +23,7 @@ body{
 	height: 110%;
 	filter: blur(5px);
 	z-index: -1;
-  }
+}
 .title{
 	font-size: 100px;
 	width: 100%;
