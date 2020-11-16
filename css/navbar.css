@@ -1,0 +1,33 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+.title{
+	font-size: 70px;
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 20%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+.logo{
+    height: 70px;
+    padding-top: 60px;
+}
+#navBox{
+    font-size: 30px;
+    padding-top: 40px;
+}
+.navlinks{
+	text-decoration: none;
+    color: black;
+}
+.navlinks:hover{
+	border-bottom: 3px solid black;
+}
