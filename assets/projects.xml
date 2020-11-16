@@ -1,47 +1,47 @@
 <projects>
     <item>
         <title>Hydraulic Arm</title>
-        <link>"/html/projects/hydraulic-arm.html"</link>
+        <link>"/html/projectshydraulic-arm/hydraulic-arm.html"</link>
         <image>"/img/projects/hydraulic-arm.png"</image>
     </item>
     <item>
         <title>Space Invaders</title>
-        <link>"/html/projects/space-invaders.html"</link>
+        <link>"/html/projects/space-invaders/space-invaders.html"</link>
         <image>"/img/projects/space-invaders.png"</image>
     </item>
     <item>
         <title>The Compiler</title>
-        <link>"/html/projects/The Compiler"</link>
+        <link>"/html/projects/the-compiler/the-compiler.html"</link>
         <image>"/img/projects/classified.png"</image>
     </item>
     <item>
         <title>Website Development</title>
-        <link>"/html/projects/website-development.html"</link>
+        <link>"/html/projects/website-development/website-development.html"</link>
         <image>"/img/projects/website-development.png"</image>
     </item>
     <item>
         <title>Renders/Graphic Design</title>
-        <link>"/html/projects/renders.html"</link>
+        <link>"/html/projects/renders/renders.html"</link>
         <image>"/img/projects/renders.png"</image>
     </item>
     <item>
         <title>Double Chomp</title>
-        <link>"/html/projects/double-chomp.html"</link>
+        <link>"/html/projects/double-chomp/double-chomp.html"</link>
         <image>"/img/projects/classified.png"</image>
     </item>
     <item>
         <title>2702 Rebels 2020 Robot</title>
-        <link>"/html/projects/2702-2020.html"</link>
+        <link>"/html/projects/2702-2020/2702-2020.html"</link>
         <image>"/img/projects/2702-2020.png"</image>
     </item>
     <item>
         <title>Engine Assembly</title>
-        <link>"/html/projects/engine.html"</link>
+        <link>"/html/projects/engine/engine.html"</link>
         <image>"/img/projects/engine.png"</image>
     </item>
     <item>
         <title>2702 Rebels 2019 Robot</title>
-        <link>"/html/projects/2702-2019.html"</link>
+        <link>"/html/projects/2702-2019/2702-2019.html"</link>
         <image>"/img/projects/2702-2019.png"</image>
     </item>
 </projects>
