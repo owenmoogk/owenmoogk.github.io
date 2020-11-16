@@ -7,10 +7,16 @@
 	font-size: 70px;
     width: 70%;
     padding-left: 15%;
+    padding-right: 20%;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 .logo{
     height: 70px;
