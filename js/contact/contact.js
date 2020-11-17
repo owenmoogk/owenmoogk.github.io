@@ -16,13 +16,12 @@ function contacts(xml) {
     links = xmlDoc.getElementsByTagName('link');
     texts = xmlDoc.getElementsByTagName('text');
     for (i = 0; i < 3; i++) { 
-        txt += titles[i].childNodes[0].nodeValue+': <a href="'+links[i].childNodes[0].nodeValue+'" class="link">'+texts[i].childNodes[0].nodeValue+'</a><br>';
+        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
     }
     console.log(txt)
     document.getElementById("main").innerHTML = txt;
     txt = '';
     for (i = 3; i < titles.length; i++) { 
-        txt += titles[i].childNodes[0].nodeValue+': <a href="'+links[i].childNodes[0].nodeValue+'" class="link" target="_blank">'+texts[i].childNodes[0].nodeValue+'</a><br>';
-    }
+        txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
     document.getElementById("other").innerHTML = txt;
 }
