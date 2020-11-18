@@ -1,84 +1,9 @@
 /*PROJECTS*/
 
 #projects{
-    width: 1200px;
+    width: 100%;
     display: flex; /*flex stuff*/
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
-}
-.container{
-    text-align: center;
-    margin-bottom: 30px; /*to space them out*/
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.content {
-    position: relative; /*makes the words appear right*/
-    height: 320px;
-    width: 568px;
-    overflow: hidden;
-    background-color: rgba(119, 115, 115, 0.7);
-    transition: 0.5s;
-    border-radius: 10px;
-}
-
-.content-details {
-    position: absolute; /*for the text*/
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.content:hover{
-    background-color: rgba(0,0,0,0.4);
-    /* transition: 0.6s; */
-}
-.content:hover .content-details{
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-}
-.content:hover .content-image-png{
-    opacity: 0.5;
-}
-  
-.content-details h3{
-    /*pop up text formatting*/
-    color: white;
-    font-weight: 900;
-    font-size: 30px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-  
-.fadeIn-bottom{ 
-    /*slide up*/
-    top: 80%;
-}
-
-.content-image-png{
-    /*fit img to div*/
-    height: 100%;
-}
-
-@media only screen and (max-width: 1200px) {
-    #projects{
-        width: 100%;
-        padding-left: 0%;
-    }
-}
-@media only screen and (max-width: 570px) {
-    .content {
-        height: calc(calc(100vw * 9) / 16);
-        width: 100%;
-    }
 }
