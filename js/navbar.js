@@ -19,4 +19,10 @@ function menuItems(xml) {
     }
     document.getElementById("navBox").innerHTML = txt;
     console.log(document.getElementById('navBox'))
+    var image = '/img/index/background.jpg'
+    txt = document.getElementById('title').innerHTML
+    txt += "<div class = 'nav-img-container'><img class = 'nav-img' src ="+image+"></div>"
+    document.getElementById('title').innerHTML = txt
+
+    console.log(document.getElementById('title').innerHTML)
 }

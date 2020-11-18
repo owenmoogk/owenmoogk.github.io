@@ -27,6 +27,4 @@ function menuItems(xml) {
 
 function load(){
     loadMenuItems()
-    showSlides(1)
-	giveImgTags()
 }

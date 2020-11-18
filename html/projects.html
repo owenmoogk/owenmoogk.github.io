@@ -5,23 +5,66 @@
         <link rel="stylesheet" href="/css/projects/projects.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
         <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/projects/slideshow.css">
         <meta name="author" content="Owen Moogk">
         <meta name="keywords" content="Owen, Moogk, Owenmoogk">
         <meta name="description" content="Just a little bit about me :)">
         <title>Owen Moogk - Projects</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/navbar.js"></script>
+        <script src="/js/projects/slideshow.js"></script>
         <script src="/js/projects/projects.js"></script>
     </head>
     <body onload="loadMenuItems()">
-        <div class="title">
+        <div id="title">
             <a href="/index.html">
                 <img src="/img/icon.png" class="logo">
             </a>
             <div id="navBox"></div>
         </div>
         <br><br>
-        <div id="projects"></div>
+        <div id="projects">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <a href="https://www.firstinspires.org">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/hydraulic-arm.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Hyrdaulic Arm</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.2702rebels.com">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/classified.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Model Rocket Project</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.whitehouse.gov">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/minecraft-mods.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">2702 Robot (2020)</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Next and previous buttons -->
+                <a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="ss-next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br><br><br>
+            <div style="text-align:center">
+                <span class="ss-dot" onclick="showSlides(1)"></span>
+                <span class="ss-dot" onclick="showSlides(2)"></span>
+                <span class="ss-dot" onclick="showSlides(3)"></span>
+            </div>
+            <br><br>
+        </div>
     </body>
-    <script>loadProjects()</script>
+    <!-- <script>loadProjects()</script> -->
+    <script>showSlides(1)</script>
+    <script>giveImgTags()</script>
 </html>
