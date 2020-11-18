@@ -7,8 +7,9 @@
 	margin: auto;
 	background-color: rgba(0,0,0,0.4);
 	border-radius: 40px;
-	height: 500px;
+	height: 506px;
 	transition: 0.5s;
+	overflow: hidden;
 }
 
 /* Hide the images by default */
@@ -78,7 +79,9 @@
 	font-size: 40px;
 	font-weight: bold;
 }
-
+.dots{
+	text-align: center;
+}
 /* The dots/bullets/indicators */
 .ss-dot {
 	cursor: pointer;
