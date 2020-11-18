@@ -15,7 +15,7 @@
         <script src="/js/projects/slideshow.js"></script>
         <script src="/js/projects/projects.js"></script>
     </head>
-    <body onload="loadMenuItems()">
+    <body>
         <div id="title">
             <a href="/index.html">
                 <img src="/img/icon.png" class="logo">
@@ -24,7 +24,7 @@
         </div>
         <br><br>
         <div id="projects">
-            <div class="slideshow-container">
+            <div id="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <a href="https://www.firstinspires.org">
@@ -55,7 +55,7 @@
                 <a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="ss-next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <br><br><br>
+            <br>
             <div style="text-align:center">
                 <span class="ss-dot" onclick="showSlides(1)"></span>
                 <span class="ss-dot" onclick="showSlides(2)"></span>
@@ -64,7 +64,6 @@
             <br><br>
         </div>
     </body>
-    <!-- <script>loadProjects()</script> -->
+    <script>loadMenuItems()</script>
     <script>showSlides(1)</script>
-    <script>giveImgTags()</script>
 </html>

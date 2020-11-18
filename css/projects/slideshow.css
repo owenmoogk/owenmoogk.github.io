@@ -1,8 +1,8 @@
 /*SLIDESHOW*/
 
 /* Slideshow container */
-.slideshow-container {
-	max-width: 900px;
+#slideshow-container {
+	width: 900px;
 	position: relative;
 	margin: auto;
 	background-color: rgba(0,0,0,0.4);
@@ -16,12 +16,11 @@
 .slide {
 	display: none;
 	height: 100%;
-	
 }
-.slideshow-container:hover .ss-overlay{
+#slideshow-container:hover .ss-overlay{
 	opacity: 1;
 }
-.slideshow-container:hover{
+#slideshow-container:hover{
 	background-color: rgba(0, 0, 0, 0.8);
 	transition: 0.5s;
 }

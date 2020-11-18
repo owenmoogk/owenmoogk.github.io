@@ -18,11 +18,8 @@ function menuItems(xml) {
         txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
     }
     document.getElementById("navBox").innerHTML = txt;
-    console.log(document.getElementById('navBox'))
     var image = '/img/index/background.jpg'
     txt = document.getElementById('title').innerHTML
     txt += "<div class = 'nav-img-container'><img class = 'nav-img' src ="+image+"></div>"
     document.getElementById('title').innerHTML = txt
-
-    console.log(document.getElementById('title').innerHTML)
 }

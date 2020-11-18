@@ -16,7 +16,9 @@ function projects(xml) {
     links = xmlDoc.getElementsByTagName('link');
     images = xmlDoc.getElementsByTagName('image');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<div class="container"><div class="content"><a href='+links[i].childNodes[0].nodeValue+'><img class="content-image-png" src='+images[i].childNodes[0].nodeValue+'><div class="content-details fadeIn-bottom"><h3 class="content-title">'+titles[i].childNodes[0].nodeValue+'</h3></div></a></div></div>';
+        txt += '<a href='+links[i].childNodes[0].nodeValue+'><div class="slide"><img class="ss-img" src='+images[i].childNodes[0].nodeValue+'><div class="ss-overlay"><div class="ss-text">'+titles[i].childNodes[0].nodeValue+'</div></div></a>';
     }
-    document.getElementById("projects").innerHTML = txt;
+    txt += '<a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a><a class="ss-next" onclick="plusSlides(1)">&#10095;</a>'
+    document.getElementById("slideshow-container").innerHTML = txt;
+    console.log(txt)
 }

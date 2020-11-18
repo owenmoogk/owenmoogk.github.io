@@ -22,13 +22,4 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " ss-active";
 }
 
-function giveImgTags(){
-	var imgs = document.getElementsByClassName('ss-img')
-	numOfImgs = imgs.length
-	for (var i = 0; i < numOfImgs; i++){
-		var img = imgs[i]
-		img.setAttribute("style", "width:100%;")
-	}
-}
-
 var slideIndex = 0;
