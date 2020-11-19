@@ -29,7 +29,6 @@ function addDots(){
 		txt += '<span class="ss-dot" onclick="showSlides('+i+')"></span>&nbsp'
 	}
 	document.getElementById('dots').innerHTML = txt
-	console.log(txt)
 }
 
 var slideIndex = 0;
