@@ -14,11 +14,13 @@ function projects(xml) {
     txt = "";
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
-    images = xmlDoc.getElementsByTagName('image');
+    descriptions = xmlDoc.getElementsByTagName('description');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href='+links[i].childNodes[0].nodeValue+'><div class="slide"><img class="ss-img" src='+images[i].childNodes[0].nodeValue+'><div class="ss-overlay"><div class="ss-text">'+titles[i].childNodes[0].nodeValue+'</div></div></a>';
+        txt += '<div class="item"><a href='+links[i].childNodes[0].nodeValue+'>'+titles[i].childNodes[0].nodeValue+'</a> - '+descriptions[i].childNodes[0].nodeValue+'</div>';
+        if (i+1 != titles.length){
+            txt += '<hr class="list-seperate">'
+        }
     }
-    txt += '<a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a><a class="ss-next" onclick="plusSlides(1)">&#10095;</a>'
-    document.getElementById("slideshow-container").innerHTML = txt;
+    document.getElementById("list-items").innerHTML = txt;
     console.log(txt)
 }

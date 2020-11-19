@@ -12,14 +12,29 @@
     margin: auto;
     align-items: center;
 }
+#list-items{
+    width: 80%;
+}
 
+.item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .item a{
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     font-weight: 900;
+    letter-spacing: 0.05em;
 }
 .item a:hover{
-    border-bottom: 2px solid blue;
+    border-bottom: 3px solid black;
+}
+.list-seperate{
+    width: 20%;
+    text-align: left;
+    margin-left: 0;
+    background-color: grey;
+    border: 1px solid grey;
 }
