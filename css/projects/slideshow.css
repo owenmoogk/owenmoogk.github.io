@@ -82,7 +82,9 @@
 	font-weight: bold;
 }
 #dots{
+	margin-top: -40px;
 	text-align: center;
+	z-index: 1;
 }
 /* The dots/bullets/indicators */
 .ss-dot {
