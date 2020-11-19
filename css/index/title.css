@@ -6,10 +6,9 @@
 body{
 	/*background image*/
 	background-size: 100%;
-	background-attachment: fixed;
-	height: 100vh;
 	margin-top: -60px;
 	background-color: black;
+	padding-top: 40px;
 }
 .background-image {
 	position: fixed;
@@ -32,6 +31,8 @@ body{
 	width: 100%;
 	text-align: center;
 	color: white;
+	display: flex;
+	flex-direction: column;
 }
 #title{
 	margin-bottom: 10px;
