@@ -24,6 +24,9 @@
 	background-color: rgba(0, 0, 0, 0.8);
 	transition: 0.5s;
 }
+#slideshow-container:hover .ss-img{
+	opacity: 0.5;
+}
 
 /* Next & previous buttons */
 .ss-prev, .ss-next {
@@ -78,7 +81,7 @@
 	font-size: 40px;
 	font-weight: bold;
 }
-.dots{
+#dots{
 	text-align: center;
 }
 /* The dots/bullets/indicators */
@@ -95,4 +98,13 @@
 
 .ss-active, .ss-dot:hover {
 	background-color: #717171;
+}
+
+@media only screen and (max-width: 930px) {
+	#slideshow-container{
+		display: none;
+	}
+	#dots{
+		display: none;
+	}
 }

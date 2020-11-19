@@ -5,7 +5,7 @@
 	font-size: 70px;
     width: 70%;
     padding-left: 15%;
-    padding-right: 20%;
+    padding-right: calc(15% + 15px);
     padding-bottom: 30px;
     margin-left: -10px;
     margin-top: -12px;

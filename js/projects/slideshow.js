@@ -22,4 +22,14 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " ss-active";
 }
 
+function addDots(){
+	var slides = document.getElementsByClassName("slide");
+	var txt = '';
+	for (i = 1; i <= slides.length; i++){
+		txt += '<span class="ss-dot" onclick="showSlides('+i+')"></span>'
+	}
+	document.getElementById('dots').innerHTML = txt
+	console.log(txt)
+}
+
 var slideIndex = 0;

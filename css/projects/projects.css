@@ -1,9 +1,27 @@
 /*PROJECTS*/
 
+*{
+    font-size: 25px;
+}
+
 #projects{
     width: 100%;
     display: flex; /*flex stuff*/
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
+    align-items: center;
+}
+
+#list-items{
+
+}
+.item a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.item a:hover{
+    border-bottom: 2px solid blue;
 }
