@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/projects/projects.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/projects/slideshow.css">
+        <meta name="author" content="Owen Moogk">
+        <meta name="keywords" content="Owen, Moogk, Owenmoogk">
+        <meta name="description" content="Just a little bit about me :)">
+        <title>Owen Moogk - Projects</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/navbar.js"></script>
+        <script src="/js/projects/slideshow.js"></script>
+        <script src="/js/projects/projects.js"></script>
+    </head>
+    <body>
+        <div id="title">
+            <a href="/index.html">
+                <img src="/img/icon.png" class="logo">
+            </a>
+            <div id="navBox"></div>
+        </div>
+        <br><br>
+        <div id="projects">
+            <div id="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <a href="/html/projects/hydraulic-arm/hydraulic-arm.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/hydraulic-arm.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Hyrdaulic Arm</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/space-invaders/space-invaders.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/space-invaders.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Space Invaders</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/the-compiler/the-compiler.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/classified.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">The Compiler</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/website-development/website-development.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/website-development.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Website Development</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/renders/renders.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/renders.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Renders/Graphic Design</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/minecraft-mods/minecraft-mods.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/minecraft-mods.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Minecraft Modifications</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/double-chomp/double-chomp.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/classified.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Double Chomp (Robot)</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/2702-2020/2702-2020.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/2702-2020.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">2702 Rebels 2020 Robot</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/engine/engine.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/engine.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">Engine Assembly</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/html/projects/2702-2019/2702-2019.html">
+                    <div class="slide">
+                        <img class="ss-img" src="/img/projects/2702-2019.png">
+                        <div class="ss-overlay">
+                            <div class="ss-text">2702 Rebels 2019 Robot</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Next and previous buttons -->
+                <a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="ss-next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div id="dots"></div>
+            <br><br><br>
+            <div id="list-items"></div>
+            <br><br>
+        </div>
+    </body>
+    <script>loadMenuItems()</script>
+    <script>addDots()</script>
+    <script>showSlides(1)</script>
+    <script>loadProjects()</script>
+</html>
