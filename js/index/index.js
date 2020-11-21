@@ -17,14 +17,7 @@ function menuItems(xml) {
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
     document.getElementById("navBox").innerHTML = txt;
-}
-
-
-//onload
-
-function load(){
-    loadMenuItems()
 }
