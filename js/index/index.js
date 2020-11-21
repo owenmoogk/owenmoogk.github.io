@@ -17,7 +17,7 @@ function menuItems(xml) {
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
+        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks"><p>'+titles[i].childNodes[0].nodeValue+'</p></a>';
     }
     document.getElementById("navBox").innerHTML = txt;
 }
