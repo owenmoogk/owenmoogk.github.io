@@ -1,17 +1,28 @@
 <blog>
     <item>
-        <title>Test1</title>
-        <date>October 1</date>
-        <text>i like chocolate, it is good, i wanna go for a walk, uwuwuwuw</text>
+        <title>3D Printer</title>
+        <date>November 20, 2020</date>
+        <text>MY ENDER 3 IS COMING THIS WEEKEND!!!!!! Shoutout to Tyler for agreeing to put up with me and help build it.
+        The man is a freaking genius.</text>
     </item>
     <item>
-        <title>Test2</title>
-        <date>October 2 2020</date>
-        <text>ye yeet leetle brother jakey tryna roast me whaaaaaca</text>
+        <title>Model Rocket</title>
+        <date>November 20, 2020</date>
+        <text>Well. I'm printing my first model of the rocket I'm building. My tech design teacher let me use his printer, so
+        I'm excited to launch that soon. I'm going to try launching it with an A class engine, just to see the height, and then
+        I may go out and get a C class engine depending on how high it goes off the bat. My friend is giving me a few rocket engines
+        to mess around with and text. Hopefully I can have it in the air by next week.</text>
     </item>
     <item>
-        <title>Test3</title>
-        <date>october 2000 303029</date>
-        <text>(uwuw chocolate im simping over janik uwuwuwuwuwuwuwuw</text>
+        <title>Websites</title>
+        <date>November 19, 2020</date>
+        <text>Websites. So rewarding. And a pain in the ass. I have probably spent 40 hours on my website version 3,
+        and i just decided I really don't like it. Look at it. It's ugly. So I am resorting to a similar layout of
+        my website version 2. Hopefully I can take everything I've learned and use it to make this one actually good.</text>
     </item>
-</contacts>
+    <item>
+        <title>Blog</title>
+        <date>November 19, 2020</date>
+        <text>So I guess this is my blog... welcome. (PS, hover to see the full blog content when its too big to view.)</text>
+    </item>
+</blog>

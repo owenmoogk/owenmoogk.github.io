@@ -9,15 +9,18 @@ function loadBlog() {
     xmlhttp.send();
 }
 function blog(xml) {
-    var titles, links, i, txt, xmlDoc, images; 
+    var titles, dates, i, txt, xmlDoc, texts; 
     xmlDoc = xml.responseXML;
     txt = "";
+    console.log(xmlDoc)
     titles = xmlDoc.getElementsByTagName("title");
     dates = xmlDoc.getElementsByTagName('date');
     texts = xmlDoc.getElementsByTagName('text');
-    for (i = 0; i < 3; i++) { 
-        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
+    for (i = 0; i < titles.length; i++) { 
+        txt += '<div class="item"><div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div><div class="date">'+dates[i].childNodes[0].nodeValue+'</div><div class="content">'+texts[i].childNodes[0].nodeValue+'</div></div>';
+        if (i+1 != titles.length){
+            txt += '<hr class="list-seperate">'
+        }
     }
-    document.getElementById("main").innerHTML = txt;
-    txt = '';
+    document.getElementById("blogs").innerHTML = txt;
 }

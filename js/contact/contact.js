@@ -9,9 +9,10 @@ function loadContacts() {
     xmlhttp.send();
 }
 function contacts(xml) {
-    var titles, links, i, txt, xmlDoc, images; 
+    var titles, links, i, txt, xmlDoc, texts; 
     xmlDoc = xml.responseXML;
     txt = "";
+    console.log(xmlDoc)
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     texts = xmlDoc.getElementsByTagName('text');
