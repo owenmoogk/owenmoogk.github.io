@@ -1,9 +1,5 @@
 /*PROJECTS*/
 
-*{
-    font-size: 25px;
-}
-
 #projects{
     width: 100%;
     display: flex; /*flex stuff*/
@@ -19,6 +15,7 @@
 .item{
     padding-top: 15px;
     padding-bottom: 15px;
+    font-size: 20px;
 }
 
 .item a{
