@@ -18,10 +18,13 @@ function contacts(xml) {
     for (i = 0; i < 3; i++) { 
         txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
     }
-    console.log(txt)
     document.getElementById("main").innerHTML = txt;
     txt = '';
-    for (i = 3; i < titles.length; i++) { 
+    for (i = 3; i < 6; i++) { 
         txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
     document.getElementById("other").innerHTML = txt;
+    txt = '';
+    for (i = 6; i < titles.length; i++) { 
+        txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
+    document.getElementById("other1").innerHTML = txt;
 }

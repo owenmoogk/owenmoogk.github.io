@@ -15,11 +15,7 @@ function menuItems(xml) {
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp';
+        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
-    document.getElementById("navBox").innerHTML = txt;
-    var image = '/img/index/background.jpg'
-    txt = document.getElementById('title').innerHTML
-    txt += "<div class = 'nav-img-container'><img class = 'nav-img' src ="+image+"></div>"
-    document.getElementById('title').innerHTML = txt
+    document.getElementById('nav').innerHTML = txt
 }

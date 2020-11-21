@@ -1,56 +1,47 @@
+  
 *{
     font-family: 'IBM Plex Sans', serif;
 }
-#title{
-	font-size: 70px;
-    width: 70%;
-    padding-left: 15%;
-    padding-right: calc(15% + 15px);
-    padding-bottom: 30px;
-    margin-left: -10px;
-    margin-top: -12px;
-    color: white;
+#nav{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    float: left;
+    overflow-x: hidden;
+    padding-left: 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 3px solid black;
-    background-color: black;
-    overflow: hidden;
-    height: 100px;
-}
-.logo{
-    height: 70px;
-    padding-top: 60px;
-}
-#navBox{
-    font-size: 30px;
-    padding-top: 40px;
+    flex-direction: column;
 }
 .navlinks{
-	text-decoration: none;
-    color: white;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 .navlinks:hover{
-	border-bottom: 3px solid white;
+    background-color: lightgrey;
 }
-.nav-img-container{
-    position: fixed;
-	margin-top: -60px;
-	margin-left: -10px;
-	left: 0;
-	right: 0;
-	display: block;
-    width: 100%;
-	filter: blur(5px);
-    z-index: -1;
-    overflow: hidden;
+.pnav{
+    line-height: 45px;
+    text-align: left;
 }
-.nav-img{
+
+/* for all pages, not really a nav thing */
+.title{
+    font-size: 70px;
+    font-weight: bold;
+}
+.main{
     width: 100%;
-    height: 245px;
-    border-bottom: 5px solid black;
+    display: flex; /*flex stuff*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
 }
