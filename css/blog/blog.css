@@ -9,20 +9,20 @@
     text-align: left;
     width: 65%;
 }
-.search-bar{
+.search{
     display: flex;
     text-align: left;
     width: 65%;
     justify-content: left;
 }
-.item{
+.text{
     padding-top: 35px;
     max-width: 500px;
     max-height: 200px;
     overflow: hidden;
 }
 
-.item:hover{
+.text:hover{
     max-height: fit-content;
 }
 .blog-title{
@@ -43,4 +43,20 @@
     margin-left: 0;
     background-color: grey;
     border: 1px solid grey;
+}
+#searchBar{
+    border: 3px solid black;
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+#dropdown{
+    width: 100px;
+    height: 38px;
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: auto;
+    margin-left: 100px;
+    font-weight: bold;
 }

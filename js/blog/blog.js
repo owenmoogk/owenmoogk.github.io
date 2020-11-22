@@ -1,5 +1,5 @@
 function loadBlog() {
-    var xmlhttp = new XMLHttpRequest();
+    xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			blog(this);
@@ -16,14 +16,15 @@ function blog(xml) {
     dates = xmlDoc.getElementsByTagName('date');
     texts = xmlDoc.getElementsByTagName('text');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<div class="item"><div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div><div class="date">'+dates[i].childNodes[0].nodeValue+'</div><div class="content">'+texts[i].childNodes[0].nodeValue+'</div></div>';
+        txt += '<div class="item"><div class="text"><div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div><div class="date">'+dates[i].childNodes[0].nodeValue+'</div><div class="content">'+texts[i].childNodes[0].nodeValue+'</div></div>';
         if (i+1 != titles.length){
-            txt += '<hr class="list-seperate '+i+'">'
+            txt += '<hr class="list-seperate">'
         }
+        txt += '</div>'
     }
     document.getElementById("blogs").innerHTML = txt;
 }
-// search function. the search bar searches through name and description
+// search function. the search bar searches through name, title, and description
 function search() {
     var filter = document.getElementById("searchBar").value.toUpperCase(); // input from search bar set to upper case so the serach is not case-senesative
     var blogs = document.getElementById("blogs"); // pulls blogs from html
@@ -53,67 +54,67 @@ function search() {
     }
 }
 
-// sorting function. will sort either by the name or the category. there will be both ascending and descending sorting
-// the fuction takes in a value (sortBy). this value index of the thing being sorted in a tablerow, so 0 is name, and 2 is category
-function sortBlog(sortBy){
-    // variables UwU
-    var file = xmlhttp.responseXML;
-    var x = file.getElementsByTagName("resource"); // picks out just the resources aka "<resource>"
-    let sortedList = []; // initialize a list to be sorted
-
-    // get a sorted list sorted by the sortBy value
-    for (i = 0; i < x.length; i++){
-        value = x[i].getElementsByTagName(sortBy)[0].childNodes[0].nodeValue // gets the value to push to the list
-        sortedList.push(value); // pushed value to list
+function sortBlog(sortBy) {
+    var row = document.getElementById("blogs").getElementsByClassName('item'); // this pulls all the rows of the table we're sorting
+    var rowNum; // well we're running through all the rows, this will hold the number of the row we want to switch
+    var order = "asc"; // this hold whether we're sorting in an ascending(asc) or descending(desc) order, we'll set defualt to ascendign
+    var switching = true; // this will tell the main while loop weather to keep running through the rows or not
+    var shouldSwitch; // this var will hold whether or not a switch between two rows needs to be made in the table
+    var switchCount = 0; // this shows the number of switchs made, starts with 0
+    var currentRow; // will hold the plain data of the current row compared
+    var nextRow; // wil hold the plain  data of the row next to the current one
+    console.log(row[1])
+    if (sortBy == 'date-asc'){
+        order = 'asc'
+        sortBy = 'date'
     }
-    sortedList.sort(); // sorts list
-    console.log(sortedList); // just for checking :)
-
-    let blogs = [];
-    let idsPassed = [];
-    for (p = 0; p < sortedList.length; p++) {
-        for (w = 0; w < x.length; w++){
-
-            let doContinue = false;
-
-            let title = x[w].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-            let category = x[w].getElementsByTagName("category")[0].childNodes[0].nodeValue
-            let description = x[w].getElementsByTagName("description")[0].childNodes[0].nodeValue
-            let id = x[w].getElementsByTagName("id")[0].childNodes[0].nodeValue
-
-            console.log('firstmaybe')
-            for (idCycler = 0; idCycler < idsPassed.length; idCycler++){
-                console.log('maybe');
-                if (idsPassed[idCycler] == id){
-                    doContinue = true;
-                    console.log('continuing')
-                }
-            }
-            if (doContinue == true){
-                continue;
-            }
-
-            if (sortBy == 'title'){
-                if (title == sortedList[p]){
-                    blogs += "<tr><td>" + title + "</td><td>" + description + "</td><td>" + category + "</td></tr>";
-                    idsPassed.push(id);
+    if (sortBy == 'date-desc'){
+        order = 'desc'
+        sortBy = 'date'
+    }
+    // the while loop will keep running through the rows and seeing if they need switching
+    while (switching) {
+        // set it that there is no switching done, this may be changed later
+        switching = false;
+        
+        // loop through all the rows in the table (row.length - 1 is needed as if we're at the last row, there is no next row)
+        for(rowNum = 0; rowNum < (row.length - 1); rowNum++) {
+            // state that there is need for switching at the moment
+            shouldSwitch = false;
+            // compare the current and next row, and see if they are in the order you're sorting by. the "sortBy" pulls the coloum we're sorting by
+            currentRow = row[rowNum].getElementsByClassName(sortBy)[0];
+            nextRow = row[rowNum + 1].getElementsByClassName(sortBy)[0];
+            // check if the rows compared need to switch places, based on the order (will first put both to upper case)
+            if (order == "asc") {   
+                if (currentRow.innerHTML.toUpperCase() > nextRow.innerHTML.toUpperCase()) {
+                    // if this is true, mark it as a switch and break the loop to move to switching
+                    shouldSwitch = true;
                     break;
                 }
             }
-            if (sortBy == 'category'){
-                if (category == sortedList[p]){
-                    blogs += "<tr><td>" + title + "</td><td>" + description + "</td><td>" + category + "</td></tr>";
-                    idsPassed.push(id);
+            else if (order == "desc") {
+                if (currentRow.innerHTML.toUpperCase() < nextRow.innerHTML.toUpperCase()) {
+                    // if this is true, mark it as a switch and break the loop to move to switching
+                    shouldSwitch = true;
                     break;
                 }
             }
         }
+
+        // if a switch has been marked, it will change the places of the rows 
+        if (shouldSwitch) {
+            row[rowNum].parentNode.insertBefore(row[rowNum + 1], row[rowNum]);
+            // now mark that switching has been down and increase the switch count by 1
+            switching = true;
+            switchCount++;
+        }
+        // on the other hand, if no switching has been done, that meaning we're ordering in the wrong way, and we switch the order
+        // this could be more efficient by having a global varible telling if it was asc or desc, but this is more reliable and less messy
+        else {
+            if (switchCount == 0 && order == "asc") {
+                order = "desc";
+                switching = true;
+            }
+        }
     }
-    // sets the html inside the empty table we made to be the great table varible we just made
-    document.getElementById("demo").innerHTML = table;
-
-
-
-    // lastly call search function to show and hide proper ones
-    search();
 }
