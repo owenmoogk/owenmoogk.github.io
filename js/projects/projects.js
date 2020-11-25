@@ -22,5 +22,4 @@ function projects(xml) {
         }
     }
     document.getElementById("list-items").innerHTML = txt;
-    console.log(txt)
 }
