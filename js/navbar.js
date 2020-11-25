@@ -10,38 +10,53 @@ function loadMenuItems() {
 }
 function menuItems(xml) {
     var titles, links, i, xmlDoc; 
+    
+    // text that is appended to elements
     var txt = ''
+    var modalTxt = ''
+
+    // xml variables
     xmlDoc = xml.responseXML;
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
+    
+    // loading text variables
     for (i = 0; i < titles.length; i++) { 
         txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
+        modalTxt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
+    modalTxt += '<p class="close" onClick="modalClose()">&times</p>'
     // text with modal contains the text with the modal html. this is so we can also import text into the modal
-    textWithModal = txt+'<div id="nav-button"></div>'
-    textWithModal += '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><p class="modal-text">Some text in the Modal..</p></div></div>'
-    document.getElementById('nav').innerHTML = textWithModal
+    txt = txt+'<div id="nav-button"></div>'
+    txt += '<div id="myModal" class="modal"><div class="modal-content"><p class="modal-text">Some text in the Modal..</p></div></div>'
 
+    // side nav
+    document.getElementById('nav').innerHTML = txt
+
+    // modal text
     var modal = document.getElementById("myModal");
     var modalText = document.getElementsByClassName("modal-text")[0];
     var button = document.getElementById("nav-button");
-    var span = document.getElementsByClassName("close")[0];
-    var body = document.getElementsByTagName('body')[0];
-    modalText.innerHTML = txt
+    modalText.innerHTML = modalTxt
     console.log(modalText)
     button.onclick = function() {
-        modal.style.display = "block";
-        body.classList.add("overlay");
-    }
-    span.onclick = function() {
-        modal.style.display = "none";
-        body.classList.remove("overlay");
-
+        modalOpen()
     }
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
-            body.classList.remove("overlay");
+            modalClose()
         }
     }
+}
+function modalClose(){
+    var modal = document.getElementById("myModal");
+    var body = document.getElementsByTagName('body')[0];
+    modal.style.display = "none";
+    body.classList.remove("overlay");
+}
+function modalOpen(){
+    var modal = document.getElementById("myModal");
+    var body = document.getElementsByTagName('body')[0];
+    modal.style.display = "block";
+    body.classList.add("overlay");
 }
