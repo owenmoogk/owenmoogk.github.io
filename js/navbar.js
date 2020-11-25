@@ -17,5 +17,27 @@ function menuItems(xml) {
     for (i = 0; i < titles.length; i++) { 
         txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
+    txt += '<div id="nav-button"></div>'
     document.getElementById('nav').innerHTML = txt
+}
+
+// modal stuff
+
+function navButton(){
+    var modal = document.getElementById("myModal");
+    var button = document.getElementById("nav-button");
+    var span = document.getElementsByClassName("close")[0];
+    console.log(button)
+    button.onclick = function() {
+        modal.style.display = "block";
+        console.log('ello')
+    }
+    // span.onclick = function() {
+    //     modal.style.display = "none";
+    // }
+    // window.onclick = function(event) {
+    //     if (event.target == modal) {
+    //         modal.style.display = "none";
+    //     }
+    // }
 }
