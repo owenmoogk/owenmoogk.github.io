@@ -13,6 +13,7 @@
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    padding-top: 60px;
 }
 .navlinks{
     text-decoration: none;
@@ -41,11 +42,58 @@
     margin: auto;
     align-items: center;
 }
+
+
+/* modal stuff */
+
 #nav-button{
     display: none;
     width: 50px;
     height: 50px;
     background-color: black;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-text .navlinks{
+    display: block;
+    text-align: center;
+}
+.overlay {
+    position:absolute;
+    /* color with alpha transparency */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 800px) {
@@ -56,5 +104,3 @@
         display: block;
     }
 }
-
-/* modal stuff */
