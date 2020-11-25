@@ -16,12 +16,13 @@
         <div id="nav"></div>
         <div class="main">
             <p class="title">Blog</p>
+            <br><br>
             <div class="search">
                 <input type="text" id="searchBar" onkeyup="search()" placeholder="Search by Date, Title, or Text" title="Type to search">
                 <select id = "dropdown" onChange="sortBlog(this.value);">
-                    <option value = "date-desc">Date (desc)</option>
-                    <option value = "date-asc">Date (asc)</option>
-                    <option value = "blog-title">Title</option>
+                    <option value="date-desc">Date (desc)</option>
+                    <option value="date-asc">Date (asc)</option>
+                    <option value="blog-title">Title</option>
                 </select>
             </div>
             <div id="blogs"></div>
