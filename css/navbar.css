@@ -9,7 +9,6 @@
     width: 150px;
     height: 100%;
     float: left;
-    overflow-x: hidden;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
 }
 .main{
     width: 100%;
-    display: flex; /*flex stuff*/
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
@@ -46,34 +45,42 @@
 
 
 /* modal stuff */
-
 #nav-button{
     display: none;
     width: 50px;
     height: 50px;
-    background-color: black;
+    margin-left: -30px;
+    background-color: rgba(211,211,211,0.4);
+    border-radius: 10px;
 }
-#myModal{
-    z-index: 1000;
+#nav-button:hover{
+    background-color: rgb(211,211,211);
 }
-.modal {
+.nav-img{
+    width: 100%;
+    height: 100%;
+}
+.modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(10px);
 }
 .modal-content {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     width: 200px; /* Could be more or less, depending on screen size */
 }
-  
-  /* The Close Button */
+.modal-text .navlinks{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* The Close Button */
 .close {
     text-decoration: none;
     color: black;
@@ -89,16 +96,7 @@
 .close:hover {
     cursor: pointer;
 }
-.modal-text .navlinks{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-}
-.overlay{
-    position: absolute;
-    /* color with alpha transparency */
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
 
 @media only screen and (max-width: 800px) {
     .navlinks {
@@ -106,5 +104,8 @@
     }
     #nav-button{
         display: block;
+    }
+    #nav{
+        width: 0px;
     }
 }

@@ -27,7 +27,7 @@ function menuItems(xml) {
     }
     modalTxt += '<p class="close" onClick="modalClose()">&times</p>'
     // text with modal contains the text with the modal html. this is so we can also import text into the modal
-    txt = txt+'<div id="nav-button"></div>'
+    txt = txt+'<div id="nav-button"><img class="nav-img" src="/img/open-nav-button.png"></div>'
     txt += '<div id="myModal" class="modal"><div class="modal-content"><p class="modal-text">Some text in the Modal..</p></div></div>'
 
     // side nav
@@ -57,6 +57,6 @@ function modalClose(){
 function modalOpen(){
     var modal = document.getElementById("myModal");
     var body = document.getElementsByTagName('body')[0];
-    modal.style.display = "block";
+    modal.style.display = "flex";
     body.classList.add("overlay");
 }
