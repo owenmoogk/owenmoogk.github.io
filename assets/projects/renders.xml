@@ -5,9 +5,11 @@
     </page-head>
     <block>
         <title>Overview</title>
-        <text>I have recently been doing renders and graphical design with <a href="https://www.solidworks.com/" class="blinks" target="_blank">SolidWorks</a>
-                    and <a href="https://inkscape.org/" class="blinks" target="_blanks">Inkscapes</a>. Some of my projects include futuristic cell phones, sticky notes, and other
-                    miscellaneous items that looked cool in a render. Enjoy!</text>
+        <text>
+            I have recently been doing renders and graphical design with <a href="https://www.solidworks.com/" class="blinks" target="_blank">SolidWorks</a>
+            and <a href="https://inkscape.org/" class="blinks" target="_blanks">Inkscapes</a>. Some of my projects include futuristic cell phones, sticky notes, and other
+            miscellaneous items that looked cool in a render. Enjoy!
+        </text>
     </block>
     <block>
         <title>Sticky Notes</title>
