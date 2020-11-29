@@ -1,0 +1,15 @@
+<page>
+    <page-head> 
+        <page-title>The Compiler</page-title>
+        <date>October 19. 2020</date>
+    </page-head>
+    <block>
+        <!-- blank for proper divs ¯\_(ツ)_/¯ -->
+        <title></title>
+        <text> 
+            This is very early in development, and I am just messing around with the JS to make it work.
+            I have never done anything like this before, so it's a big learning curve.
+            Will be updated soon. You can find what I have at the moment <a href="https://owenmoogk.github.io/the-compiler/" target="_blinks" class="blinks">in this repository</a>:
+        </text>
+    </block>
+</page>
