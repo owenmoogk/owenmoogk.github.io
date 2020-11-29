@@ -51,6 +51,9 @@ function projectPage(xml) {
             else if (elementType == 'image'){
                 txt += '<div class="img"><img src="'+elementData+'" class="img"></div>'
             }
+            else if (elementType == 'render'){
+                txt += '<div class="render"><img src="'+elementData+'" class="img"></div>'
+            }
             else{
                 console.log('unknown tag name') // shouldnt ever happen
             }
