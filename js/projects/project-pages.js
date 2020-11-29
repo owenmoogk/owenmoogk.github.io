@@ -46,6 +46,14 @@ function projectPage(xml) {
                 txt += '<div class="text"><h1>'+elementData+'</h1>'
             }
             else if (elementType == 'text'){
+                var exitLoop = false
+                while (exitLoop == false){
+                    elementData = elementData.replace('~~','<br>')
+                    var i = elementData.search('~~')
+                    if (i == -1){
+                        exitLoop = true
+                    }
+                }
                 txt += '<p>'+elementData+'</p></div>'
             }
             else if (elementType == 'image'){
