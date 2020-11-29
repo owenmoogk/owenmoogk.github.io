@@ -1,26 +1,65 @@
-function loadProjectPage(xmlDoc) {
+// the function called when loading page
+function loadProjectPage(xmlPage) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			projectPage(this);
 		}
     };
-    xmlhttp.open("GET", xmlDoc, true);
+    xmlhttp.open("GET", xmlPage, true);
     xmlhttp.send();
 }
+
+// actual loading process
 function projectPage(xml) {
-    var titles, links, i, txt, xmlDoc, images; 
+
+    // xml doxument
+    var xmlDoc;
     xmlDoc = xml.responseXML;
+
+    // entire html of page
     txt = "";
-    titles = xmlDoc.getElementsByTagName("title");
-    links = xmlDoc.getElementsByTagName('link');
-    descriptions = xmlDoc.getElementsByTagName('description');
-    for (i = 0; i < titles.length; i++) { 
-        txt += '<div class="item"><a href='+links[i].childNodes[0].nodeValue+'>'+titles[i].childNodes[0].nodeValue+'</a> - '+descriptions[i].childNodes[0].nodeValue+'</div>';
-        if (i+1 != titles.length){
-            txt += '<hr class="list-seperate">'
+
+    // load header of page
+    var pageTitle = xmlDoc.getElementsByTagName('page-title')[0].innerHTML
+    var date = xmlDoc.getElementsByTagName('date')[0].innerHTML
+    txt += '<div class="title"><p style="line-height: 70px;">'+pageTitle+'</p></div><div class="date"><p class="pdate">'+date+'</p></div>';
+
+
+    // load main part of the page
+    blocks = xmlDoc.getElementsByTagName("block");
+
+    // loading the main part of the page
+    for (currBlockNum = 0; currBlockNum < blocks.length; currBlockNum++) {
+        var currBlockLength = blocks[currBlockNum].children.length // the number of elements in the current block
+        var currBlock = blocks[currBlockNum].children // the elements inside the current block
+
+        txt += '<div class="block">'
+
+        // looping thru the elements in the block
+        for (var blockElementNum = 0; blockElementNum < currBlockLength; blockElementNum++){
+            var elementType = currBlock[blockElementNum].tagName // contains the tag name for the element (eg... title, text, image)
+            var elementData = currBlock[blockElementNum].innerHTML // contains the inner data for the element
+
+            // appending text to var 'txt' depending on tag name
+            if (elementType == 'title'){
+                txt += '<div class="text"><h1>'+elementData+'</h1>'
+            }
+            else if (elementType == 'text'){
+                txt += '<p>'+elementData+'</p></div>'
+            }
+            else if (elementType == 'image'){
+                txt += '<div class="img"><img src="'+elementData+'" class="img"></div>'
+            }
+            else{
+                console.log('unknown tag name') // shouldnt ever happen
+            }
         }
+        
+        txt += '</div>' // close out block div
+
     }
-    document.getElementById("list-items").innerHTML = txt;
-    console.log(txt)
+
+    // finally append the 'txt' variable to the body[class] of the html page
+    document.getElementsByClassName("body")[0].innerHTML = txt;
 }
