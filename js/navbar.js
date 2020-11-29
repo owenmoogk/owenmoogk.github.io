@@ -38,7 +38,6 @@ function menuItems(xml) {
     var modalText = document.getElementsByClassName("modal-text")[0];
     var button = document.getElementById("nav-button");
     modalText.innerHTML = modalTxt
-    console.log(modalText)
     button.onclick = function() {
         modalOpen()
     }
