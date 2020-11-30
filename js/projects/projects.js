@@ -35,7 +35,7 @@ function loadEntries(xml) {
 
         // put the things into their varibles
         image = "<div class=\"image_div\"><img class=\"image\" src=\"" + pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "\"></div>";
-        title = "<p class=\"project-title\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</p>";
+        title = "<p class=\"project-title\"><a class='title-link' href = \""+pulledData[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</a></p>";
         type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toUpperCase() + "</p><p>&nbsp · &nbsp</p>";
         date = "<p class=\"date\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue+"</p></div>";
         description = "<p class=\"description\">" + pulledData[i].getElementsByTagName("description")[0].childNodes[0].nodeValue + "</p>";

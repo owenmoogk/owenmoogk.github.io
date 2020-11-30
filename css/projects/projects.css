@@ -35,7 +35,7 @@ p{
     border-bottom: 1px solid lightgray;
     margin-right: 2rem;
     margin-top: 2rem;
-    height: 150px;
+    height: 190px;
 }
 .entry div {
     margin-bottom: 0.3rem;
@@ -46,12 +46,16 @@ p{
 
 /* image side */
 .image_div {
-    flex: 0.2;
+    flex: .8;
+    max-width: 330px;
     margin: 0 1rem 0.5rem 0;
     height: 100%;
     overflow: hidden;
     text-align: center;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
 }
 .image {
     border-radius: 6%;
@@ -60,35 +64,35 @@ p{
 
 /* text side */
 .text_div {
-    flex: 0.9;
+    flex: 1;
 }
 .project-title {
     font-size: 200%;
     font-weight: bold;
+    padding-bottom: 5px;
+}
+.title-link{
+    text-decoration: none;
+    color: black;
+    margin-bottom: -30px;
+}
+.title-link:hover{
+    border-bottom: 3px solid black;
 }
 .type_date {
     font-weight: bold;
     display: flex;
     font-size: 1rem;
+    color: grey;
 }
 .date {
     color: rgb(0, 150, 255);
 }
 .description {
-    overflow: hidden;
     max-height: 4em;
 }
 
-@media screen and (max-width: 1400px) {
-    .image_div {
-        flex: 0.5;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .image_div {
-        flex: 0.3;
-    }
+@media screen and (max-width: 1460px) {
     .entry {
         max-width: 100%;
         margin-right: 0px;
@@ -98,33 +102,6 @@ p{
         width: 100%;
         flex-direction: column;
         margin: 0px;
-    }
-}
-
-
-/* mobile jazz */
-@media screen and (max-width: 600px) {
-    .entry {
-        max-width: 100%;
-        margin-right: 0px;
-    }
-    .image_div {
-        flex: 0.4;
-    }
-    .entry p {
-        font-size: 0.8em;
-    }
-    .project-title {
-        font-size: 1.2em !important;
-    }
-    #ThoughtsGoHere {
-        display: block;
-        width: 100%;
-        flex-direction: column;
-        margin: 0px;
-    }
-    .entry div {
-        margin-bottom: 0.2rem;
     }
 }
 
@@ -142,7 +119,6 @@ p{
     --color_coding: #a6c44e;
     --color_mechanical: #ff9f43;
     --color_web-dev: #d65858;
-    --color_music: #d467c6;
     --white: #ffffff;
 }
 
