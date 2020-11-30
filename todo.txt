@@ -5,3 +5,5 @@ dark mode??
 popup on home screen (website in development)
 
 modal needs work (mobile nav)
+
+fix project page

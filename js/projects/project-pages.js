@@ -46,6 +46,8 @@ function projectPage(xml) {
                 txt += '<div class="text"><h1>'+elementData+'</h1>'
             }
             else if (elementType == 'text'){
+                
+                // add in breaks for ~~
                 var exitLoop = false
                 while (exitLoop == false){
                     elementData = elementData.replace('~~','<br>')
