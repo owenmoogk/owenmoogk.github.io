@@ -1,3 +1,4 @@
+// loading the blog xml doc
 function loadBlog() {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -8,14 +9,30 @@ function loadBlog() {
     xmlhttp.open("GET", "/assets/blog.xml", true);
     xmlhttp.send();
 }
+
+// populating the blog page
 function blog(xml) {
+    
+    // variables
     var titles, dates, i, txt, xmlDoc, texts; 
     xmlDoc = xml.responseXML;
     txt = "";
     titles = xmlDoc.getElementsByTagName("title");
     dates = xmlDoc.getElementsByTagName('date');
     texts = xmlDoc.getElementsByTagName('text');
-    for (i = 0; i < titles.length; i++) { 
+
+    // looping throught the elements and appending to text
+    for (i = 0; i < titles.length; i++) {
+        var exitLoop = false
+
+        // turn ~~ into breaks
+        while (exitLoop == false){
+            texts[i].childNodes[0].nodeValue = texts[i].childNodes[0].nodeValue.replace('~~','<br>')
+            var searchReturn = texts[i].childNodes[0].nodeValue.search('~~')
+            if (searchReturn == -1){
+                exitLoop = true
+            }
+        }
         txt += '<div class="item"><div class="text"><div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div><div class="date">'+dates[i].childNodes[0].nodeValue+'</div><div class="content">'+texts[i].childNodes[0].nodeValue+'</div></div>';
         if (i+1 != titles.length){
             txt += '<hr class="list-seperate">'
@@ -26,11 +43,11 @@ function blog(xml) {
 }
 // search function. the search bar searches through name, title, and description
 function search() {
-    var filter = document.getElementById("searchBar").value.toUpperCase(); // input from search bar set to upper case so the serach is not case-senesative
+    var filter = document.getElementById("searchBar").value.toUpperCase(); // input from search bar set to upper case so the serach is not case-sensitive
     var blogs = document.getElementById("blogs"); // pulls blogs from html
     var blogItem = blogs.getElementsByClassName("item"); // pulls all the blogitems
 
-    // theses two varibles will hold the title/description of the row we're running through
+    // theses three varibles will hold the title/description of the row we're running through
     var title, description, date; 
 
     // will run throuhg all the rows
@@ -46,7 +63,7 @@ function search() {
             hrToShow.style.display = ''
         }
         else {
-            // if it doesnt itll change its display style in css to "none", which basiclly just hides it
+            // if it doesnt it'll change its display style in css to "none", which basiclly just hides it
             blogItem[i].style.display = "none";
             hrToHide = document.getElementsByClassName(i)[0]
             hrToHide.style.display = 'none'
