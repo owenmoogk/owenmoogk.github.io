@@ -1,5 +1,15 @@
 <blog>
     <item>
+        <title>Website Updates</title>
+        <date>November 29, 2020</date>
+        <text>
+            So been working on my website this weekend and just pushed this to my website. It all looks pretty good :)
+            ~~~~
+            The homepage might need some work, but that's a problem for another time. My website is now more Javascript than anything else according to Github,
+            which is what I was going for as I wanted the most of it to be really easy to edit with XML files and all the HTML be handled by JS.
+        </text>
+    </item>
+    <item>
         <title>Rocket</title>
         <date>November 26, 2020</date>
         <text>Just finished up with my model rocket, the files are all on my github and I am SUPER PUMPED to launch it this week. The nosecone is just finishing up on the printer,
