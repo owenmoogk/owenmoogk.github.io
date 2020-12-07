@@ -1,7 +1,10 @@
+#references the 404 page
+
 ErrorDocument 404 /404.html
 
-RewriteEngine on
+#gets rid of .html in url
 
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
