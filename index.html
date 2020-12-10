@@ -4,14 +4,16 @@
     <head>
         <link rel="stylesheet" href="css/index/title.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+        <link rel="stylesheet" href="css/index/modal.css">
         <meta name="author" content="Owen Moogk">
         <meta name="keywords" content="Owen, Moogk, Owenmoogk">
         <meta name="description" content="Just a little bit about me :)">
         <title>Owen Moogk - Home</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js//index/index.js"></script>
+        <script src="js/index/index.js"></script>
+        <script src="js/index/modal.js"></script>
     </head>
-    <body>
+    <body onload="openModal()">
         <div class="background-image">
             <img src="/img/index/background.jpg" class="background-image-img">
         </div>
@@ -20,6 +22,14 @@
                 Owen Moogk
             </p>
             <div id="navBox"></div>
+        </div>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <p>Notice:<br><br>Hey! Welcome. Some of the pages here aren't quite working like the work page. It's all still in development. Thanks :)</p>
+            </div>
         </div>
         <br><br>
     </body>
