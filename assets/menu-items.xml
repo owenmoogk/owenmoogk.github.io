@@ -1,23 +1,23 @@
 <menu>
     <item>
         <title>Home</title>
-        <link>"/index"</link>
+        <link>"/index.html"</link>
     </item>
     <item>
         <title>Projects</title>
-        <link>"/html/projects"</link>
+        <link>"/html/projects.html"</link>
     </item>
     <item>
         <title>Work</title>
-        <link>"/html/work"</link>
+        <link>"/html/work.html"</link>
     </item>
     <item>
         <title>Blog</title>
-        <link>"/html/blog"</link>
+        <link>"/html/blog.html"</link>
     </item>
     <item>
         <title>Contact</title>
-        <link>"/html/contact"</link>
+        <link>"/html/contact.html"</link>
     </item>
     <item>
         <title>Resume</title>
