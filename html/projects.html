@@ -8,22 +8,18 @@
         <link rel="stylesheet" href="/css/projects/projects.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
         <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/projects/sort.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/navbar.js"></script>
         <script src="/js/projects/projects.js"></script>
     </head>
-
     <body>
-
         <div id="nav"></div>
-
-        <!-- page content begins here -->
         <div class="main">
             <div class="page">
                 <p class="title">Projects</p>
                 <br>
                 <div class="sorting">
-                <!-- buttons for the catagorys -->
                 <div class="buttons">
                     <span class="sort_all btn active"><p>All</p></span>
                     <span class="sort_cad btn"><p>CAD</p></span>
@@ -31,7 +27,6 @@
                     <span class="sort_mechanical btn"><p>Mechanical</p></span>
                     <span class="sort_web-dev btn"><p>Web-Dev</p></span>
                 </div>
-                <!-- the dropdown for sorting -->
                 <div class="sort">
                     <label>Sort by: &nbsp</label>
                     <select id="mySort" onchange="sortProjects()">
@@ -42,13 +37,10 @@
                 </div>
             </div>
             <br>
-            <!-- will drop xml thoughts into here -->
             <div id="projectsGoHere"></div>
         </div>
         <br><br>
     </body>
-
     <script>loadMenuItems()</script>
     <script>loadProjects()</script>
-
 </html>
