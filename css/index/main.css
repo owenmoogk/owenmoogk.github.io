@@ -8,7 +8,7 @@ body{
 	overflow: hidden;
 	background-position: center;
 	background-size: cover;
-	background-image: url('/img/index/background.png');
+	background-image: url('/img/backgrounds/index.png');
 }
 .title{
 	font-size: 100px;
