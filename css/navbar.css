@@ -25,7 +25,7 @@
     margin-bottom: 5px;
 }
 .navlinks:hover{
-    background-color: lightgrey;
+    background-color: rgba(150,150,150,0.5);
 }
 
 /* for all pages, not really a nav thing */
