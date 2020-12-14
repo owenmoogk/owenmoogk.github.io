@@ -2,40 +2,40 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 200px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
-  margin: auto;
-  padding: 20px;
-  max-width: 400px;
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	margin: auto;
+	padding: 20px;
+	max-width: 400px;
+	font-weight: bold;
+	color: black;
+	font-size: 20px;
 }
 
 /* The Close Button */
 .close {
-  color: black;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+	color: black;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
 }
