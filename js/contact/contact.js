@@ -17,7 +17,7 @@ function contacts(xml) {
     links = xmlDoc.getElementsByTagName('link');
     texts = xmlDoc.getElementsByTagName('text');
     for (i = 0; i < titles.length; i++) { 
-        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
+        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'" target = "_blank"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
     }
     document.getElementById("main").innerHTML = txt;
 }
