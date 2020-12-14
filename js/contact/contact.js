@@ -16,16 +16,8 @@ function contacts(xml) {
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     texts = xmlDoc.getElementsByTagName('text');
-    for (i = 0; i < 3; i++) { 
+    for (i = 0; i < titles.length; i++) { 
         txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
     }
     document.getElementById("main").innerHTML = txt;
-    txt = '';
-    for (i = 3; i < 6; i++) { 
-        txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
-    document.getElementById("other").innerHTML = txt;
-    txt = '';
-    for (i = 6; i < titles.length; i++) { 
-        txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
-    document.getElementById("other1").innerHTML = txt;
 }

@@ -3,6 +3,18 @@
 *{
     text-decoration: none;
 }
+body{
+    height: 100vh;
+    overflow: hidden;
+	background-position: center;
+	background-size: cover;
+    background-image: url('/img/backgrounds/color-clouds.jpg');
+    backdrop-filter: blur(8px);
+    background-attachment: fixed;
+    margin-right: -5vw;
+    margin-top: -5vh;
+    padding-top: 5vh;
+}
 .contact{
     display: flex;
     flex-direction: row;
@@ -13,32 +25,19 @@
     font-size: 23px;
     font-weight: bold;
     display: flex;
-    flex-direction: column;
-}
-#other{
-    line-height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-}
-#other1{
-    line-height: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: center;
 }
 .link{
     margin: 20px;
-    border: 2px solid black;
+    border: 3px solid black;
     text-align: center;
     font-weight: bolder;
-    width: 150px;
+    width: 175px;
     transition: 0.5s;
-}
-.primary{
-    width: 350px;
+    padding: .21em 0px;
 }
 .text{
     text-align: center;
@@ -56,9 +55,14 @@
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 700px) {
-    .contact{
-        width: 100%;
-        padding-left: 0px;
+
+@media only screen and (min-width: 1300px) {
+    .link{
+        width: 250px;
+    }
+    #main{
+        font-size: 30px;
+        max-width: 1000px;
     }
 }
+  
