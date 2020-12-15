@@ -10,6 +10,7 @@ body{
     backdrop-filter: blur(10px);
     background-attachment: fixed;
     margin-right: -5vw;
+    overflow-x: hidden;
 }
 #blogs{
     display: flex;
