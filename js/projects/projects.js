@@ -25,27 +25,28 @@ function loadEntries(xml) {
     var loaded = "";
     var pulledData = file.getElementsByTagName("entry");
 
+    var randomColors = ["215,38,61","226,132,19","1,151,246","254,253,255"]
     // loops through all <resource>'s and addes them to the great table varible
     for (i = 0; i < pulledData.length; i++) {
-        var image = "";
-        var title = "";
-        var type = "";
-        var date = "";
-        var description = "";
-
+    
+        var image,title,type,link;
+        
+        var color = i;
+        while (color > randomColors.length - 1){
+            color -= randomColors.length
+        }
+    
         // put the things into their varibles
-        image = "<div class=\"image_div\"><img class=\"image\" src=\"" + pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "\"></div>";
-        title = "<p class=\"project-title\"><a class='title-link' href = \""+pulledData[i].getElementsByTagName("link")[0].childNodes[0].nodeValue+"\">" + pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</a></p>";
-        type = "<div class=\"type_date\"><p class=\"TypeClass\">" + pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toUpperCase() + "</p><p>&nbsp · &nbsp</p>";
-        date = "<p class=\"date\">" + pulledData[i].getElementsByTagName("date")[0].childNodes[0].nodeValue+"</p></div>";
-        description = "<p class=\"description\">" + pulledData[i].getElementsByTagName("description")[0].childNodes[0].nodeValue + "</p>";
+        image = pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue
+        title = pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue
+        link = pulledData[i].getElementsByTagName("link")[0].childNodes[0].nodeValue
+        type = pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toUpperCase()
 
         // put it all together
-        loaded += "<div class='entry'>" + image + "<div class=\"text_div\">" + title + type + date + description + "</div></div>";
+        loaded += '<div class="content"><a href="'+ link + '"><div class="content-overlay" style="background-color: rgb('+randomColors[color]+');"></div><img class="content-image" src="' + image + '"><div class="content-details" style="background-color: rgba('+ randomColors[color] +',1);"><h3 class="content-title">' + title + '</h3><p class="type">' + type + '</div></a></div>';
     }
+    
     document.getElementById("projectsGoHere").innerHTML += loaded;
-
-    // putting the click detections here as some may need the loaded xml first
 
     // for when buttons are clicked
     var buttons = document.getElementsByClassName("btn");
@@ -82,7 +83,7 @@ function loadEntries(xml) {
 function filterProjects(filterBy) {
 
     // pulls all entries
-    var entries = document.getElementsByClassName("entry");
+    var entries = document.getElementsByClassName("content");
 
     // loops thru them all
     for (var i = 0; i < entries.length; i++) {
@@ -95,7 +96,7 @@ function filterProjects(filterBy) {
         // if we're filtering anything else, then ...
         else {
             // gets the p element holding the type
-            var type = entries[i].getElementsByClassName("TypeClass")[0];
+            var type = entries[i].getElementsByClassName("type")[0];
 
             // if it matchs what we are filtering by it stays
             if (type.innerHTML.toString().toLowerCase() == filterBy) {
@@ -109,6 +110,7 @@ function filterProjects(filterBy) {
     }
 }
 
+// sorts by the dropdown
 function sortProjects() {
 
     // pulls the value we're soring by
@@ -131,7 +133,7 @@ function sortProjects() {
     }
 
     // some varibles we'll need
-    var entries = document.getElementsByClassName("entry"); // pulls all entries
+    var entries = document.getElementsByClassName("content"); // pulls all entries
     var switching = true; // shows that we're still running through the entries
     var shouldSwitch; // this var will hold whether or not a switch between two rows needs to be made
     var entryNum; // will store what entry number we're at
@@ -141,7 +143,6 @@ function sortProjects() {
     while (switching) {
         // set it that there is no switching done, this may be changed later
         switching = false;
-        console.log('loopoing')
         // run through all the entries, except last, as at that point we wont be able to compare it to the next
         for (entryNum = 0; entryNum < entries.length - 1; entryNum++) {
             // state that there is need for switching at the moment
@@ -149,8 +150,8 @@ function sortProjects() {
             
             // if date
             if (sortBy == "alpha" || sortBy == 'alpha') {
-                currentEntry = entries[entryNum].getElementsByClassName("project-title")[0].innerHTML;
-                nextEntry = entries[entryNum + 1].getElementsByClassName("project-title")[0].innerHTML;
+                currentEntry = entries[entryNum].getElementsByClassName("content-title")[0].innerHTML;
+                nextEntry = entries[entryNum + 1].getElementsByClassName("content-title")[0].innerHTML;
             }
 
             // if we're doing ascending order

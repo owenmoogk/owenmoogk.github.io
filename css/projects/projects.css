@@ -1,3 +1,16 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+
+body{
+	background-position: center;
+	background-size: cover;
+    background-image: url('/img/backgrounds/ice.jpg');
+    backdrop-filter: blur(10px);
+    background-attachment: fixed;
+    margin-right: -5vw;
+    margin-left: -0.000001px;
+}
 .title{
     padding-top: 30px;
     text-align: center;
@@ -10,112 +23,80 @@
         width: 100vw;
     }
 }
-p{
-    line-height: normal !important;
-    width: auto !important;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-}
 
 /* the entry has the image and text side */
 #projectsGoHere {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    float: left;
-    clear: both;
-}
-.entry {
-    display: flex;
-    flex: 1 0 42%;
-    max-width: 47%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid lightgray;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    height: 190px;
-}
-.entry div {
-    margin-bottom: 0.3rem;
-}
-.entry p {
-    max-width: 95%;
 }
 
-/* image side */
-.image_div {
-    flex: .8;
-    max-width: 330px;
-    margin: 0 1rem 0.5rem 0;
-    height: 100%;
+.content {
+    position: relative;
+    max-width: 400px;
     overflow: hidden;
+    height: 400px;
+    width: 300px;
     text-align: center;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    background-color: lightgrey;
+    margin-top: 30px;
+    margin: 20px 30px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 30px 30px 10px 10px;
+
 }
-.image {
-    border-radius: 6%;
+
+.content .content-overlay {
+    position: absolute;
     height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.25;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    z-index: 2;
+}
+.content .content-overlay:hover{
+    opacity: 0;
 }
 
-/* text side */
-.text_div {
-    flex: 1;
+.content-image{
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
 }
-.project-title {
-    font-size: 200%;
-    font-weight: bold;
-    padding-bottom: 5px;
+  
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 5em;
+    padding-right: 5em;
+    width: 90%;
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    z-index: 3;
+    height: 100px;
 }
-.title-link{
-    text-decoration: none;
+
+.content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+  
+.content-details h3{
     color: black;
-    margin-bottom: -30px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5em;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
-.title-link:hover{
-    border-bottom: 3px solid black;
-}
-.type_date {
-    font-weight: bold;
-    display: flex;
-    font-size: 1rem;
-    color: grey;
-}
-.date {
-    color: rgb(0, 150, 255);
-}
-.description {
-    max-height: 4em;
-}
-
-@media screen and (max-width: 1460px) {
-    .entry {
-        max-width: 100%;
-        margin-right: 0px;
-    }
-    #projectsGoHere {
-        display: block;
-        width: 100%;
-        flex-direction: column;
-        margin: 0px;
-    }
-}
-
-/* here we got the sorting css */
-
-}
-
-}
-
-.sort label {
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--m-color);
-}
-
-}
+  
+.content-details p{
+    color: black;
+    font-size: 0.8em;
 }
