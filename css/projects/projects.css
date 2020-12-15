@@ -10,6 +10,7 @@ body{
     background-attachment: fixed;
     margin-right: -5vw;
     margin-left: -0.000001px;
+    overflow-x: hidden;
 }
 .title{
     padding-top: 30px;
