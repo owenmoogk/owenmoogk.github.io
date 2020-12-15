@@ -25,25 +25,25 @@ function loadEntries(xml) {
     var loaded = "";
     var pulledData = file.getElementsByTagName("entry");
 
-    var randomColors = ["215,38,61","226,132,19","1,151,246","254,253,255"]
+    var colors = {
+        cad: '0abde3',
+        coding:"a6c44e",
+        mechanical:"ff9f43",
+        'web-dev':"d65858"
+    }
     // loops through all <resource>'s and addes them to the great table varible
     for (i = 0; i < pulledData.length; i++) {
     
         var image,title,type,link;
-        
-        var color = i;
-        while (color > randomColors.length - 1){
-            color -= randomColors.length
-        }
     
         // put the things into their varibles
         image = pulledData[i].getElementsByTagName("image")[0].childNodes[0].nodeValue
         title = pulledData[i].getElementsByTagName("title")[0].childNodes[0].nodeValue
         link = pulledData[i].getElementsByTagName("link")[0].childNodes[0].nodeValue
-        type = pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toUpperCase()
-
+        type = pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toLowerCase()
+        console.log(type)
         // put it all together
-        loaded += '<div class="content"><a href="'+ link + '"><div class="content-overlay" style="background-color: rgb('+randomColors[color]+');"></div><img class="content-image" src="' + image + '"><div class="content-details" style="background-color: rgba('+ randomColors[color] +',1);"><h3 class="content-title">' + title + '</h3><p class="type">' + type + '</div></a></div>';
+        loaded += '<div class="content"><a href="'+ link + '"><div class="content-overlay" style="background-color: #'+colors[type]+';"></div><img class="content-image" src="' + image + '"><div class="content-details" style="background-color: #'+ colors[type] +';"><h3 class="content-title">' + title + '</h3><p class="type">' + type.toUpperCase() + '</div></a></div>';
     }
     
     document.getElementById("projectsGoHere").innerHTML += loaded;
