@@ -72,7 +72,6 @@ body{
   
 .content-details {
     position: absolute;
-    text-align: center;
     padding-left: 5em;
     padding-right: 5em;
     width: 90%;
@@ -80,6 +79,10 @@ body{
     transform: translate(-50%, 100%);
     z-index: 3;
     height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .content-details{
@@ -100,4 +103,5 @@ body{
 .content-details p{
     color: black;
     font-size: 0.8em;
+    margin-top: 0;
 }
