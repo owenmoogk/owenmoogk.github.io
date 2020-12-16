@@ -1,7 +1,7 @@
 <menu>
     <item>
         <title>Home</title>
-        <link>"/index.html"</link>
+        <link>"/"</link>
     </item>
     <item>
         <title>Projects</title>
