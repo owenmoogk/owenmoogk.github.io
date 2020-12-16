@@ -59,13 +59,13 @@ function search() {
         if (title.toUpperCase().indexOf(filter) > -1 || description.toUpperCase().indexOf(filter) > -1 || date.toUpperCase().indexOf(filter) > -1) {
             // if it does, it'll just leave it alone
             blogItem[i].style.display = "";
-            hrToShow = document.getElementsByClassName(i)[0]
+            var hrToShow = document.getElementsByClassName('item')[i]
             hrToShow.style.display = ''
         }
         else {
             // if it doesnt it'll change its display style in css to "none", which basiclly just hides it
             blogItem[i].style.display = "none";
-            hrToHide = document.getElementsByClassName(i)[0]
+            var hrToHide = document.getElementsByClassName('item')[i]
             hrToHide.style.display = 'none'
         }
     }
