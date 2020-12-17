@@ -4,16 +4,17 @@
     text-decoration: none;
 }
 body{
-    height: 100vh;
-    overflow: hidden;
 	background-position: center;
 	background-size: cover;
     background-image: url('/img/backgrounds/color-clouds.jpg');
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     background-attachment: fixed;
     margin-right: -5vw;
-    margin-top: -5vh;
-    padding-top: 5vh;
+    margin-left: -0.000001px;
+    margin-top: -10px;
+    overflow-x: hidden;
+    height: 110vh;
+    overflow: hidden;
 }
 .contact{
     display: flex;
