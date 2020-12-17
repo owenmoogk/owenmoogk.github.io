@@ -128,9 +128,6 @@ function sortProjects() {
         sortBy = "alpha";
         order = "desc";
     }
-    else if (sortValue == 'date'){
-        location.reload();
-    }
 
     // some varibles we'll need
     var entries = document.getElementsByClassName("content"); // pulls all entries
