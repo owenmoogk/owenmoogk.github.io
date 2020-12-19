@@ -17,6 +17,7 @@
     </block>
     <block>
         <render>img/donut/donut1.png</render>
+        <render>img/donut/donut7.png</render>
     </block>
     <block>
         <title>Sticky Notes</title>
