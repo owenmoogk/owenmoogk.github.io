@@ -15,7 +15,7 @@
     <block>
         <title>IFrame</title>
         <text>
-            <iframe src="http://thecompiler.cf" frameborder="0" style='width:85vw;height:50vh;'></iframe>
+            <iframe src="http://thecompiler.cf" frameborder="0" style='width:85vw;height:80vh;'></iframe>
         </text>
     </block>
 </page>
