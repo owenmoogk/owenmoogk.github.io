@@ -32,6 +32,12 @@
             </ul>
             <h3>Old Versions</h3>
             <ul>
+                <li><a href="http://website-v1.tk" class="blinks" target="_blank">Version 1</a></li>
+                <li><a href="http://website-v2.tk" class="blinks" target="_blank">Version 2</a></li>
+                <li><a href="http://website-v3.tk" class="blinks" target="_blank">Version 3</a></li>
+            </ul>
+            <h3>Old Versions (Source Code)</h3>
+            <ul>
                 <li><a href="https://github.com/owenmoogk/website-v1/" class="blinks" target="_blank">Version 1</a></li>
                 <li><a href="https://github.com/owenmoogk/website-v2/" class="blinks" target="_blank">Version 2</a></li>
                 <li><a href="https://github.com/owenmoogk/website-v3/" class="blinks" target="_blank">Version 3</a></li>
