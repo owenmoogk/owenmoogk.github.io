@@ -8,16 +8,17 @@ body{
     background-image: url('/img/backgrounds/ice.jpg');
     backdrop-filter: blur(10px);
     background-attachment: fixed;
-    margin-right: -5vw;
-    margin-left: -0.000001px;
-    margin-top: -10px;
     overflow-x: hidden;
+    width: calc(100vw - 13px);
+    margin-left: 0px;
+    margin-top: 0px;
 }
 .title{
     text-align: center;
 }
 .page {
     width: calc(100vw - 400px);
+    scrollbar-width: none;
 }
 @media only screen and (max-width: 800px) {
     .page{
