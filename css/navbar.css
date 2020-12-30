@@ -1,6 +1,18 @@
 *{
     font-family: 'IBM Plex Sans', serif;
 }
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lightslategrey; 
+}
 #nav{
     font-size: 20px;
     font-weight: bold;
