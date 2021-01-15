@@ -1,6 +1,14 @@
+/* css for all */
 *{
     font-family: 'IBM Plex Sans', serif;
 }
+
+/* highlights */
+::selection{
+    background: lightgray;
+    color: black;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
