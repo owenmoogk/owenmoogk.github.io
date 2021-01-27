@@ -1,5 +1,7 @@
 Website Version 3
 
-Work in progress, wanted an upgrade from my older website.
+Website I made to work on my web design skills and showcase what I have been up to.
 
-Up on github pages, but please still use the website at owenmoogk.codes, as it contains more information
+This is now and older version, please go to https://owenmoogk.codes for the updated version.
+
+If you would like to look at this version, it is active at https://website-v3.tk
