@@ -1,0 +1,67 @@
+/* CONTACT */
+
+*{
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', serif;
+}
+.contact{
+    padding-top: 50px;
+    width: 80%;
+    padding-left: 10%;
+    display: flex;
+}
+.container{
+    line-height: 40px;
+    font-size: 20px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.link{
+    margin: 20px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bolder;
+    width: 200px;
+    transition: 0.5s;
+}
+.primary{
+    width: 300px;
+}
+.text{
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+    transition: 0.5s;
+}
+.link:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.link:hover .text{
+    color: white;
+    transition: 0.5s;
+}
+.page-title{
+	font-size: 100px;
+	width: 100%;
+	text-align: center;
+	color: black;
+	display: flex;
+	flex-direction: column;
+}
+#page-title{
+	margin-bottom: 10px;
+}
+@media only screen and (max-width: 700px) {
+    .contact{
+        width: 100%;
+        padding-left: 0px;
+    }
+    .page-title{
+        font-size: 60px;
+    }
+}

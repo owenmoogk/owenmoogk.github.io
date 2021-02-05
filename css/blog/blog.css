@@ -1,0 +1,118 @@
+/* Blog */
+
+*{
+    text-decoration: none;
+    color: var(--textcolor);
+}
+
+
+/* this holds all of the blogs */
+#blogs{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.title{
+    color: white;
+}
+/* me search bar */
+.search{
+    display: flex;
+    width: 65%;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+#searchBar{
+    color: white;
+
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding-left: 10px;
+    backdrop-filter: blur(50px);
+    background-color: rgb(30, 30, 30);
+    border: 2px solid white;
+}
+#searchBar::placeholder{
+    color: lightgrey;
+}
+#dropdown{
+    width: 100px;
+    height: 38px;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+select option{
+    color: white;
+
+}
+
+/* this is the main part of the blog */
+.item{
+    width: 800px;
+    margin: 0px auto 30px auto;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 5px solid black;
+    background: lightgrey;
+}
+/* image encompassing div */
+.image{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    width: 80%;
+}
+
+/* right side text encompassing div */
+.text{
+    flex: 5;
+    overflow: hidden;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+}
+.blog-title{
+    font-size: 30px;
+    width: fit-content;
+    margin: none;
+    font-weight: bold;
+}
+.date{
+    font-size: 17px;
+    color: grey;
+    width: fit-content;
+    padding-bottom: 15px;
+    margin: none;
+    font-weight: bold;
+}
+.content{
+    color: black;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    #blogs{
+        width: 90%;
+    }
+    .item{
+        width: 100%;
+    }
+}
