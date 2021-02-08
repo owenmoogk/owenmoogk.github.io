@@ -57,7 +57,7 @@ function loadEntries(xml) {
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
 
-            // based on what class is in the span, itll filter by that type by calling the  filterProjects function
+            // based on what class is in the span, it'll filter by that type by calling the  filterProjects function
             if (this.classList.contains("sort_all")) {
                 filterProjects("all");
             }
