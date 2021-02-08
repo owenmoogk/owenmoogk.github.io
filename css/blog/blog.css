@@ -62,8 +62,7 @@ select option{
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-bottom: 5px solid black;
-    background: lightgrey;
+    background: grey;
 }
 /* image encompassing div */
 .image{
