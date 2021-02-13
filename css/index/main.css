@@ -30,6 +30,8 @@ body{
 #subtitle{
 	color: var(--textcolor);
 	font-size: 20px;
+	width: fit-content;
+	margin: auto;
 }
 #hidden{
 	color: rgb(70,70,70);
