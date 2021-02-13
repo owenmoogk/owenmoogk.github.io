@@ -1,11 +1,8 @@
 /* Blog */
-
 *{
     text-decoration: none;
     color: var(--textcolor);
 }
-
-
 /* this holds all of the blogs */
 #blogs{
     display: flex;
@@ -52,7 +49,6 @@
 }
 select option{
     color: white;
-
 }
 
 /* this is the main part of the blog */
