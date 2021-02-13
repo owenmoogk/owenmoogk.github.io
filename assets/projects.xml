@@ -1,5 +1,85 @@
 <projects>
     <entry>
+        <title>COVID Scraper</title>
+        <link>/html/projects/covid-scraper/covid-scraper.html</link>
+        <image>/img/projects/covid-scraper.png</image>
+        <date>February 6, 2021</date>
+        <type>Coding</type>
+        <description>A web scraper to scrape data from a website, and can be accessed using voice commands.</description>
+    </entry>
+    <entry>
+        <title>Sorting Visualizer</title>
+        <link>https://owenmoogk.github.io/sorting-visualizer/</link>
+        <image>/img/projects/sorting-visualizer.png</image>
+        <date>January 31, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>COVID Website</title>
+        <link>/html/projects/covid-website/covid-website.html</link>
+        <image>/img/projects/covid-website.png</image>
+        <date>January 31, 2021</date>
+        <type>Web-dev</type>
+        <description>A web application for a hackathon, to track and </description>
+    </entry>
+    <entry>
+        <title>Dino Game AI</title>
+        <link>/html/projects/dino-game-ai/dino-game-ai.html</link>
+        <image>/img/projects/dino-game-ai.png</image>
+        <date>January 26, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Geometry Calculator</title>
+        <link>https://owenmoogk.github.io/geometry-calculator/</link>
+        <image>/img/projects/geometry-calculator.png</image>
+        <date>January 17, 2021</date>
+        <type>Coding</type>
+        <description>A hydraulic arm I made for a school project. It turned out pretty well.</description>
+    </entry>
+    <entry>
+        <title>Simplelib</title>
+        <link>https://owenmoogk.github.io/simplelib-documentation</link>
+        <image>/img/projects/simplelib.png</image>
+        <date>Janary 14, 2021</date>
+        <type>Coding</type>
+        <description>A python library for more indepth use of datastructures and algorithms, as well as simplifying routine code.</description>
+    </entry>
+    <entry>
+        <title>Flappy Bird AI</title>
+        <link>/html/projects/flappy-bird-ai/flappy-bird-ai.html</link>
+        <image>/img/projects/flappy-bird-ai.png</image>
+        <date>January 7, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Email Bot</title>
+        <link>/html/projects/email-bot/email-bot.html</link>
+        <image>/img/projects/email-bot.png</image>
+        <date>January 6, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Snake</title>
+        <link>/html/projects/snake/snake.html</link>
+        <image>/img/projects/snake.png</image>
+        <date>January 6, 2021</date>
+        <type>Coding</type>
+        <description>A snake game build in python pygame.</description>
+    </entry>
+    <entry>
+        <title>Model Rocket</title>
+        <link>/html/projects/model-rocket/model-rocket.html</link>
+        <image>/img/projects/model-rocket.png</image>
+        <date>January 8, 2021</date>
+        <type>Mechanical</type>
+        <description>A model rocket I designed and 3D printed to be launched.</description>
+    </entry>
+    <entry>
         <title>Hydraulic Arm</title>
         <link>/html/projects/hydraulic-arm/hydraulic-arm.html</link>
         <image>/img/projects/hydraulic-arm.png</image>
