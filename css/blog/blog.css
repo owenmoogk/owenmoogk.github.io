@@ -1,30 +1,75 @@
-/* Blog */
-*{
-    text-decoration: none;
-    color: var(--textcolor);
+@media screen and (max-width: 480px) {
+	html, body {
+		min-width: 320px;
+	}
 }
-/* this holds all of the blogs */
-#blogs{
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    padding-left: 50px;
-    padding-right: 50px;
+html {
+	box-sizing: border-box;
 }
-.title{
-    color: white;
+
+hr {
+	border: 0;
+	border-bottom: solid 2px #e5e5e5;
+	margin: 2em 0;
 }
-/* me search bar */
+
+/* Container */
+
+.container {
+	margin: 0 auto;
+	max-width: calc(100% - 5em);
+	width: 60em;
+}
+
+@media screen and (max-width: 840px) {
+	.container {
+		width: 100% !important;
+	}
+}
+@media screen and (max-width: 736px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+/* Box */
+
+#blogs {
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 0 0 #e5e5e5;
+	margin: 0 0 2em 0;
+	padding: 3em;
+}
+.blog-title{
+    font-size: 30px;
+    width: fit-content;
+    margin: none;
+    font-weight: bold;
+}
+.date{
+    font-size: 17px;
+    color: grey;
+    width: fit-content;
+    padding-bottom: 15px;
+    margin: none;
+    font-weight: bold;
+}
+.content{
+    color: black;
+    font-size: 20px;
+	font-weight: normal;
+}
+
+/* search */
 .search{
     display: flex;
-    width: 65%;
     margin-bottom: 30px;
     align-items: center;
     justify-content: center;
 }
 #searchBar{
     color: white;
-
     height: 30px;
     width: 250px;
     border-radius: 8px;
@@ -49,65 +94,4 @@
 }
 select option{
     color: white;
-}
-
-/* this is the main part of the blog */
-.item{
-    width: 800px;
-    margin: 0px auto 30px auto;
-    display: flex;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background: grey;
-}
-/* image encompassing div */
-.image{
-    flex: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image img{
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    width: 80%;
-}
-
-/* right side text encompassing div */
-.text{
-    flex: 5;
-    overflow: hidden;
-    max-height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 30px;
-}
-.blog-title{
-    font-size: 30px;
-    width: fit-content;
-    margin: none;
-    font-weight: bold;
-}
-.date{
-    font-size: 17px;
-    color: grey;
-    width: fit-content;
-    padding-bottom: 15px;
-    margin: none;
-    font-weight: bold;
-}
-.content{
-    color: black;
-    font-size: 20px;
-}
-
-@media only screen and (max-width: 800px) {
-    #blogs{
-        width: 90%;
-    }
-    .item{
-        width: 100%;
-    }
 }

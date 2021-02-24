@@ -34,13 +34,13 @@ function blog(xml) {
                 exitLoop = true
             }
         }
-        txt += '<div class="item">'
-        txt += '<div class="text">'
-        txt += '<div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div>'
-        txt += '<div class="date">'+dates[i].childNodes[0].nodeValue+'</div>'
-        txt += '<div class="content">'+texts[i].childNodes[0].nodeValue+'</div>'
-        txt += '</div></div>'
         // txt += '<div class="image"><img src="'+images[i].childNodes[0].nodeValue+'"></div>'
+        txt += '<div class="item">'
+        txt += '<p class="blog-title">'+titles[i].childNodes[0].nodeValue+'<h2>'
+        txt += '<p class="date">'+dates[i].childNodes[0].nodeValue+'<h3>'
+        txt += '<p class="content">'+texts[i].childNodes[0].nodeValue+'<p>'
+        txt += '<hr />'
+        txt += '</div>'
     }
     document.getElementById("blogs").innerHTML = txt
 }
