@@ -5,7 +5,6 @@
         <text>
             If you are here and haven't seen SN9, go watch it. Seriously. Big boom. Spacex is always doing cool shit. Hire me Elon...
         </text>
-        <image>/assets/blog/sn9.jpg</image>
     </item>
     <item>
         <title>Coding</title>
@@ -13,7 +12,6 @@
         <text>
             I have been working a lot on coding skills the last while, check out my github. Did some AI, datastructures and algorithm stuff, and its all pretty cool
         </text>
-        <image>/assets/blog/github.png</image>
     </item>
     <item>
         <title>Time</title>
@@ -26,7 +24,6 @@
             We know what time we fill~~
             Why time is other than time was.
         </text>
-        <image>/assets/blog/clock.png</image>
     </item>
     <item>
         <title>Blender</title>
@@ -36,7 +33,6 @@
             I hate you and I'll see you tomorrow :/
             (im in love)
         </text>
-        <image>/assets/blog/blender.png</image>
     </item>
     <item>
         <title>Bellyflop</title>
@@ -49,7 +45,6 @@
             Lack of propellent do be like dat doe
             https://www.youtube.com/watch?v=qraeGw0kn7o
         </text>
-        <image>/assets/blog/sn8.jpg</image>
     </item>
     <item>
         <title>Website Updates</title>
@@ -60,14 +55,12 @@
             The homepage might need some work, but that's a problem for another time. My website is now more Javascript than anything else according to Github,
             which is what I was going for as I wanted the most of it to be really easy to edit with XML files and all the HTML be handled by JS.
         </text>
-        <image>/assets/blog/github.png</image>
     </item>
     <item>
         <title>Rocket</title>
         <date>November 26, 2020</date>
         <text>Just finished up with my model rocket, the files are all on my github and I am SUPER PUMPED to launch it this week. The nosecone is just finishing up on the printer,
         so I just have to build the launchpad and install the engine.</text>
-        <image>/assets/blog/sn9.jpg</image>
     </item>
     <item>
         <title>Ender 3 Pro</title>
@@ -75,20 +68,17 @@
         <text>I've been messing around with my printer the last few days, and have made a lot of progress. It took about 10 hours to build and level the bed, 
         but now I've got it going really smoothly and have been running prints non-stop that I have been planning for the last while. Most of those files are 
         on my github.</text>
-        <image>/assets/blog/ender3.png</image>
     </item>
     <item>
         <title>Funeral Music</title>
         <date>November 21, 2020</date>
         <text>PLEASE PLAY THIS SONG WHEN I DIE. Home - We're finally landing. https://www.youtube.com/watch?v=zR6fECxF44I</text>
-        <image>/assets/blog/home.jpg</image>
     </item>
     <item>
         <title>3D Printer</title>
         <date>November 20, 2020</date>
         <text>MY ENDER 3 IS COMING THIS WEEKEND!!!!!! Shoutout to Tyler for agreeing to put up with me and help build it.
         The man is a freaking genius.</text>
-        <image>/assets/blog/ender3.png</image>
     </item>
     <item>
         <title>Model Rocket</title>
@@ -97,7 +87,6 @@
         I'm excited to launch that soon. I'm going to try launching it with an A class engine, just to see the height, and then
         I may go out and get a C class engine depending on how high it goes off the bat. My friend is giving me a few rocket engines
         to mess around with and text. Hopefully I can have it in the air by next week.</text>
-        <image>/assets/blog/sn9.jpg</image>
     </item>
     <item>
         <title>Websites</title>
@@ -105,6 +94,5 @@
         <text>Websites. So rewarding. And a pain in the ass. I have probably spent 40 hours on my website version 3,
         and i just decided I really don't like it. Look at it. It's ugly. So I am resorting to a similar layout of
         my website version 2. Hopefully I can take everything I've learned and use it to make this one actually good.</text>
-        <image>/assets/blog/github.png</image>
     </item>
 </blog>

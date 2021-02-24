@@ -20,7 +20,7 @@ function blog(xml) {
     titles = xmlDoc.getElementsByTagName("title")
     dates = xmlDoc.getElementsByTagName('date')
     texts = xmlDoc.getElementsByTagName('text')
-    images = xmlDoc.getElementsByTagName("image")
+    // images = xmlDoc.getElementsByTagName("image")
 
     // looping throught the elements and appending to text
     for (i = 0; i < titles.length; i++) {
@@ -35,12 +35,12 @@ function blog(xml) {
             }
         }
         txt += '<div class="item">'
-        txt += '<div class="image"><img src="'+images[i].childNodes[0].nodeValue+'"></div>'
         txt += '<div class="text">'
         txt += '<div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div>'
         txt += '<div class="date">'+dates[i].childNodes[0].nodeValue+'</div>'
         txt += '<div class="content">'+texts[i].childNodes[0].nodeValue+'</div>'
         txt += '</div></div>'
+        // txt += '<div class="image"><img src="'+images[i].childNodes[0].nodeValue+'"></div>'
     }
     document.getElementById("blogs").innerHTML = txt
 }
