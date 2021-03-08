@@ -44,13 +44,4 @@
             </ul>
         </text>
     </block>
-    <block>
-        <title>Resources</title>
-        <text>
-            <ul>
-                <li><a href="https://stackoverflow.com/" class="blinks" target="_blank">Stack Overflow</a></li>
-                <li><a href="https://www.w3schools.com/" class="blinks" target="_blank">W3Schools</a></li>
-            </ul>
-        </text>
-    </block>
 </page>

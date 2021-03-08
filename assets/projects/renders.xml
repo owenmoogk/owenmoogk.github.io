@@ -48,15 +48,4 @@
             </ul>
         </text>
     </block>
-    <block>
-        <title>Resources</title>
-        <text>
-            <ul>
-                <li><a href="https://www.solidworks.com/" class="blinks" target="_blank">SolidWorks</a></li>
-                <li><a href="https://inkscape.org/" class="blinks" target="_blank">InkScape</a></li>
-                <li><a href="https://html-color-codes.info/colors-from-image/#" class="blinks" target="_blank">HEX Codes from Images</a></li>
-                <li><a href="https://www.rgbtohex.net/hextorgb/" class="blinks" target="_blinks">HEX to RGB</a></li>
-            </ul>
-        </text>
-    </block>
 </page>

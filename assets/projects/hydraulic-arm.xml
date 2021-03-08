@@ -20,14 +20,4 @@
         <render>img/render1.png</render>
         <render>img/render3.png</render>
     </block>
-    <block>
-        <title>Resources</title>
-        <text>
-            <ul>
-                <li>
-                    <a class="blinks" target="_blank" href="https://www.menards">SolidWorks</a>
-                </li>
-            </ul>
-        </text>
-    </block>
 </page>

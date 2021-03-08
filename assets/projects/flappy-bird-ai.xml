@@ -23,15 +23,4 @@
             </ul>
         </text>
     </block>
-    <block>
-        <title>Resources</title>
-        <text>
-            <ul>
-                <li><a href="https://www.python.org/" class="blinks" target="_blank">Python</a></li>
-                <li><a href="https://www.pygame.org" class="blinks" target="_blank">Pygame</a></li>
-                <li><a href="https://www.pyinstaller.org/" class="blinks" target="_blank">Pyinstaller</a></li>
-                <li><a href="https://www.youtube.com/watch?v=OGHA-elMrxI" class="blinks" target="_blank">TechWithTim Video</a></li>
-            </ul>
-        </text>
-    </block>
 </page>
