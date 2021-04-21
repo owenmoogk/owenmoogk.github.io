@@ -11,10 +11,10 @@
         <title>Work</title>
         <link>"/html/work.html"</link>
     </item>
-    <item>
+    <!-- <item>
         <title>Blog</title>
         <link>"/html/blog.html"</link>
-    </item>
+    </item> -->
     <item>
         <title>Contact</title>
         <link>"/html/contact.html"</link>
