@@ -1,0 +1,21 @@
+<page>
+    <page-head> 
+        <page-title>Email Bot</page-title>
+        <date>January 6, 2021</date>
+    </page-head>
+    <block>
+        <title>Overview</title>
+        <text> 
+            I just learned how to send emails with python, and realized that this can be super useful when you need to send similar emails to many people.
+            I setup my python code so you can make a template, and then input variables into the specific fields to allow for maximum flexibility.
+        </text>
+    </block>
+    <block>
+        <title>Downloads</title>
+        <text>
+            <ul>
+                <li><a href="https://github.com/owenmoogk/email-bot" class="blinks" target="_blank">Code</a></li>
+            </ul>
+        </text>
+    </block>
+</page>
