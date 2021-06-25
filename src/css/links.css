@@ -1,0 +1,19 @@
+#links {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+#links ul {
+  padding: 0;
+}
+#links svg {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+#links .verticalLine {
+  height: 60px;
+  width: 3px;
+  background-color: lightblue;
+  margin: auto;
+}
