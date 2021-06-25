@@ -1,4 +1,3 @@
-import 'css/home.css'
 import React, {useState, useEffect} from 'react'
 import Background from 'components/background/Background.js'
 

@@ -1,4 +1,4 @@
-import 'css/work.css'
+
 import React from 'react';
 
 export default function Workpage() {

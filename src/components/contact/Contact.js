@@ -1,6 +1,5 @@
 import React from 'react';
 import ContactLink from './ContactLink.js'
-import 'css/contact.css'
 
 export default function ContactPage() {
 

@@ -10,7 +10,8 @@ import Homepage from 'components/homepage/Homepage.js'
 import Workpage from 'components/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
-import 'css/index.css'
+import Links from 'components/Links'
+import 'css/STYLES.css'
 
 function App(props) {
 
@@ -18,6 +19,7 @@ function App(props) {
 		<Router>
 			<NavButton/>
 			<Nav/>
+			<Links/>
 			<Switch>
 				<Route path='/projects'>
 					<ProjectRouter/>

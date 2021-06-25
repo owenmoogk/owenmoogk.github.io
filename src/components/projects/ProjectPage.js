@@ -1,6 +1,5 @@
 import React from 'react';
 import {useParams} from 'react-router-dom'
-import 'css/projects/project-pages.css'
 
 export default function ProjectIcon() {
 
