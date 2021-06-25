@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Background from 'components/background/Background.js'
 
 export default function Homepage() {
 
@@ -22,7 +21,7 @@ export default function Homepage() {
 	}
 	
 	const [splash, setSplash] = useState('');
-	// lol this feels hacky but the [] makes it only load once
+	
 	useEffect(() => {
 
 		// load a random splash
@@ -44,12 +43,9 @@ export default function Homepage() {
 	return (
 		<div>
 			<div className='title'>
-				<p id="title">Owen Moogk</p>
+				<p id="title">Hey, it's <br/><span>Owen Moogk</span></p>
 				<p id="splash" onClick={() => loadSplash()}>{splash}</p>
-				<p id="secret">You found the top secret button (don't click this text)</p>
 			</div>
-			<div id="secretButton" onClick={()=> document.getElementById('secret').style.display = 'inherit'}></div>
-			<Background />
 		</div>
 	);
 }
