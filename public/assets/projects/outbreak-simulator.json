@@ -1,0 +1,32 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Outbreak Simulator",
+			"date": "February 16, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "In the midst of COVID, I was looking at how computers can simulate disease outbreaks such as the one we are experiencing right now.\r\n\t\t\tI made this as a proof of concept simulating immunity, death, and contact tracing. It was cool to learn and try new things with this.\r\n\t\t\tI made it in python using pygame. I also learned about graphing in MatPlotLib and saving csv data, which was cool. You can check out the code linked below."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": [
+					"main.png",
+					"graph.png"
+				]
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/outbreak-simulator"
+					}
+				]
+			}
+		]
+	}
+}
