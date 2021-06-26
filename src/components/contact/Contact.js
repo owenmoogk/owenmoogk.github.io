@@ -40,7 +40,6 @@ export default function ContactPage() {
 	return (
 		<div className="main contactPage">
 			<p className="title">Contact</p>
-			<hr />
 			<form>
 				<div>
 					<input type='text' placeholder='John Doe' id='nameInput'></input>
