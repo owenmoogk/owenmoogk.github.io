@@ -1,24 +1,50 @@
 #navBox {
 	display: flex;
-	flex-wrap: wrap;
 	font-size: 20px;
-	height: 50px;
+	height: 70px;
+	position: fixed;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 20;
+	background-color: var(--backgroundColor);
+	width: 100%;
 
-	.navlinks {
-		text-decoration: none;
-		color: var(--textColor);
-		padding-left: 20px;
-		padding-right: 20px;
-		user-select: none;
-		height: fit-content;
-		margin: auto 0;
+	#navLinks{
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-		p{
-			border-bottom: 2px solid transparent;
+		.navlink {
+			color: var(--textColor);
+			margin: 0 20px;
+			user-select: none;
+			height: fit-content;
+			border-bottom: 2px solid transparent;		
+	
+			&:hover {
+				border-bottom: 2px solid var(--textColor);
+			}
 		}
+	}
 
-		&:hover p{
-			border-bottom: 2px solid var(--textColor);
+	#darkmode{
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--textColor);
+		transition: 0.5s;
+		margin-right: 20px;
+	
+		&:hover{
+			transform: scale(1.2);
+		}
+	
+		svg{
+			fill: var(--backgroundColor);
 		}
 	}
 }
