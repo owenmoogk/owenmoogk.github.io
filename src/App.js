@@ -33,10 +33,10 @@ export default function App(props) {
 						--cardColor: rgb(30,30,30);
 					}`
 					: `:root {
-						--backgroundColor: white;
+						--cardColor: white;
 						--textColor: black;
 						--blue: blue;
-						--cardColor: rgb(230,230,230);
+						--backgroundColor: rgb(230,230,230);
 					}`
 			}} />
 			<NavButton />
