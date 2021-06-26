@@ -23,12 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # using less
-src/css/contact.css
-src/css/home.css
-src/css/index.css
-src/css/links.css
-src/css/navbar.css
-src/css/projects/project-pages.css
-src/css/projects/projects.css
-src/css/projects/sort.css
-src/css/work.css
+src/css/
