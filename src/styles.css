@@ -1,0 +1,37 @@
+@import 'css/contact.css';
+@import 'css/home.css';
+@import 'css/navbar.css';
+@import 'css/index.css';
+@import 'css/work.css';
+@import 'css/links.css';
+@import 'css/projects/project-pages.css';
+@import 'css/projects/projects.css';
+@import 'css/projects/sort.css';
+* {
+	font-family: 'IBM Plex Sans', serif;
+}
+
+/* highlights */
+
+::selection {
+	background: grey;
+	color: black;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: lightslategrey;
+}
+
+::-webkit-scrollbar-corner {
+	background: rgba(0, 0, 0, 0);
+}

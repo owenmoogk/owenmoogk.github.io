@@ -11,7 +11,7 @@ import Workpage from 'components/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
 import Links from 'components/Links'
-import 'css/STYLES.css'
+import 'styles.css'
 
 export default function App(props) {
 
