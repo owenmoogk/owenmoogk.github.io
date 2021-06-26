@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import pdf from 'resume.pdf'
 
 export default function Nav(props) {
+
+	const [scrollPos, setScrollPos] = useState(0)
+
+	window.addEventListener("scroll", () => {
+		setScrollPos(window.scrollY)
+	});
+
 	return (
-		<div id="navBox">
+		<div id="navBox" style={{borderBottom: scrollPos !== 0 ? '2px solid var(--textColor)' : ''}}>
 			<div id='navLinks'>
 				<a href="/" className="navlink">Home</a>
 				<a href="/projects" className="navlink">Projects</a>
