@@ -14,6 +14,12 @@
 		height: 30px;
 		margin-top: 10px;
 		stroke: var(--blue);
+		transition: 0.3s;
+
+		&:hover{
+			stroke: #FF69B4;
+			transform: scale(1.2);
+		}
 	}
 
 	.verticalLine{
@@ -34,4 +40,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--textColor);
+	transition: 0.5s;
+
+	&:hover{
+		transform: scale(1.2);
+	}
+
+	svg{
+		fill: var(--backgroundColor);
+	}
 }
