@@ -28,60 +28,81 @@
   width: 100%;
 }
 .content {
-  position: relative;
-  width: 350px;
+  width: 300px;
+  height: 120px;
+  padding-left: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: var(--cardColor);
   overflow: hidden;
-  height: 400px;
-  text-align: center;
-  margin-top: 30px;
-  margin: 10px 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.content .content-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.2;
-  transition: all 0.3s ease-in-out 0s;
-  z-index: 2;
-}
-.content .content-overlay:hover {
-  opacity: 0;
-}
-.content-image {
-  height: 300px;
-  opacity: 1;
-  transition: 0.3s;
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-.content-details {
-  position: absolute;
-  padding-left: 5em;
-  padding-right: 5em;
-  width: 90%;
-  transform: translate(-50%, 100%);
-  z-index: 3;
-  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: 0.3s;
+  color: var(--textColor);
+  position: relative;
 }
-.content-details {
-  top: 50%;
-  left: 50%;
+.content * {
+  z-index: 10;
 }
-.content-details h3 {
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5em;
-  margin-top: 10px;
-  text-transform: uppercase;
+.content svg {
+  stroke: var(--textColor);
+  transition: 0.3s;
+}
+.content svg:hover {
+  stroke: var(--backgroundColor);
+}
+.content:hover {
   color: black;
 }
-.content-details p {
-  font-size: 0.8em;
-  margin-top: 0;
-  color: black;
+.content:hover svg {
+  stroke: var(--backgroundColor);
+}
+.content:hover svg:hover {
+  stroke: var(--textColor);
+}
+.content:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.3s;
+}
+.content.cad:after {
+  background: var(--color_cad);
+}
+.content.web-dev:after {
+  background: var(--color_web-dev);
+}
+.content.mechanical:after {
+  background: var(--color_mechanical);
+}
+.content.coding:after {
+  background: var(--color_coding);
+}
+.content:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+.content .projectIcons {
+  display: flex;
+  padding: 10px;
+}
+.content .projectIcons a {
+  height: fit-content;
+}
+div.mechanical {
+  border: 2px solid var(--color_mechanical);
+}
+div.coding {
+  border: 2px solid var(--color_coding);
+}
+div.cad {
+  border: 2px solid var(--color_cad);
+}
+div.web-dev {
+  border: 2px solid var(--color_web-dev);
 }

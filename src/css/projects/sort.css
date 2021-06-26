@@ -104,16 +104,3 @@
   font-weight: bold;
   color: var(--m-color);
 }
-/* the project icons */
-.mechanical {
-  background-color: var(--color_mechanical);
-}
-.coding {
-  background-color: var(--color_coding);
-}
-.cad {
-  background-color: var(--color_cad);
-}
-.web-dev {
-  background-color: var(--color_web-dev);
-}
