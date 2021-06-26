@@ -1,14 +1,3 @@
-.page {
-	width: 80%;
-}
-
-@media only screen and (max-width: 800px) {
-	.page{
-		width: auto;
-		max-width: 640px;
-	}
-}
-
 @media only screen and (max-width: 800px) {
 	.sort{
 		width: 100%;
@@ -49,6 +38,16 @@
 	color: var(--textColor);
 	
 	position: relative;
+
+	.text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		*{
+			margin: 5px;
+		}
+		
+	}
 
 	*{
 		z-index: 10;

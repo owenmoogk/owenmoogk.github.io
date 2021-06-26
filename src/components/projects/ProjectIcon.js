@@ -13,7 +13,7 @@ export default function ProjectIcon(props) {
 	return (
 		// so we are not nesting <a> tags
 		<div className={"content " + type} onClick={() => navigate(link)}>
-			<div>
+			<div className='text'>
 				<h3 className="content-title">{props.title}</h3>
 				<p className="type">{type.toUpperCase()}</p>
 			</div>
