@@ -7,7 +7,6 @@
 @import 'projects/project-pages.css';
 @import 'projects/projects.css';
 @import 'projects/sort.css';
-
 * {
 	font-family: 'IBM Plex Sans', serif;
 }
@@ -31,4 +30,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
 	background: lightslategrey;
+}
+
+::-webkit-scrollbar-corner {
+	background: rgba(0, 0, 0, 0);
 }

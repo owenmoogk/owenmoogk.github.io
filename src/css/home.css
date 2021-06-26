@@ -1,18 +1,15 @@
-canvas#background-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
+.title {
+  padding-left: 150px;
+  padding-top: 20vh;
 }
 #title {
   font-size: 50px;
-  padding-top: calc(calc(100vh / 2) - 200px);
   margin: 0;
   width: fit-content;
   /* Fallback: Set a background color. */
   background-color: red;
   /* Create the gradient. */
-  background-image: linear-gradient(-45deg, lightblue, #FF69B4);
+  background-image: linear-gradient(-45deg, var(--blue), #FF69B4);
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
@@ -33,4 +30,7 @@ canvas#background-canvas {
   font-size: 20px;
   width: fit-content;
   user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

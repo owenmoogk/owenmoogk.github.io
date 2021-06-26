@@ -1,5 +1,5 @@
 #workSubtitle {
-  color: white;
+  color: var(--textColor);
   font-size: 20px;
   text-align: center;
 }
