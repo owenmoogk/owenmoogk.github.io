@@ -7,15 +7,6 @@ export default function ProjectIcon(props) {
 	let type = props.type.toLowerCase()
 
 	return (
-<<<<<<< HEAD
-		// so we are not nesting <a> tags
-		<div className={"content " + type} onClick={() => navigate(link)}>
-			<div className='text'>
-				<h3 className="content-title">{props.title}</h3>
-				<p className="type">{type.toUpperCase()}</p>
-			</div>
-			<div className='projectIcons'>
-=======
 		<a href={link}>
 			<div className={"content " + type}>
 				<div>
@@ -23,7 +14,6 @@ export default function ProjectIcon(props) {
 					<p className="type">{type.toUpperCase()}</p>
 				</div>
 				<div className='projectIcons'>
->>>>>>> parent of 2a07d0f (rid of nesting links :bird:)
 
 					{/* open externally */}
 					{props.link
