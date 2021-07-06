@@ -10,7 +10,6 @@ import Homepage from 'components/homepage/Homepage.js'
 import Workpage from 'components/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
-import Links from 'components/Links'
 import 'styles.css'
 
 export default function App(props) {
@@ -41,7 +40,6 @@ export default function App(props) {
 			}} />
 			<NavButton />
 			<Nav toggleDarkMode={toggleDarkMode}/>
-			<Links />
 			<Switch>
 				<Route path='/projects'>
 					<ProjectRouter />
@@ -56,6 +54,7 @@ export default function App(props) {
 					<Homepage />
 				</Route>
 			</Switch>
+			
 		</Router>
 	);
 }
