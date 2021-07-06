@@ -24,7 +24,6 @@ export default function App(props) {
 
 	return (
 		<Router>
-			
 			<style dangerouslySetInnerHTML={{__html: 
 				darkMode
 					? `:root{
