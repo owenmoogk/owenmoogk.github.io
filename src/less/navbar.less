@@ -5,7 +5,7 @@
 	position: fixed;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 20;
+	z-index: 2;
 	background-color: var(--backgroundColor);
 	width: 100%;
 
@@ -47,60 +47,58 @@
 			fill: var(--backgroundColor);
 		}
 	}
+
+	#links{
+
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+	
+		ul{
+			padding: 0;
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+		}
+		
+		svg{
+			width: 30px;
+			height: 30px;
+			margin-top: 10px;
+			stroke: var(--blue);
+			transition: 0.3s;
+	
+			&:hover{
+				stroke: #FF69B4;
+				transform: scale(1.2);
+			}
+		}
+	
+		.verticalLine{
+			height: 60px;
+			width: 3px;
+			background-color: var(--blue);
+			margin: auto;
+		}
+	}
+	
 }
 
 #navButton{
 	background-color: var(--textColor);
-	width: 75px;
-	height: 37.5px;
+	color: var(--backgroundColor);
+
+	display: none;
 	position: absolute;
 	top: 10px;
 	left: 10px;
+
 	border-radius: 10px;
-	display: none;
-	font-size: 22.5px;
-	justify-content: center;
-	align-items: center;
+	font-size: 22px;
+	padding: 5px 10px;
 
 	p{
-		height: 30px;
-		margin: 10px;
-		line-height: 30px;
-		text-align: center;
-	}
-}
-
-#links{
-
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-
-	ul{
-		padding: 0;
-		list-style-type: none;
-		display: flex;
-		flex-direction: column;
-	}
-	
-	svg{
-		width: 30px;
-		height: 30px;
-		margin-top: 10px;
-		stroke: var(--blue);
-		transition: 0.3s;
-
-		&:hover{
-			stroke: #FF69B4;
-			transform: scale(1.2);
-		}
-	}
-
-	.verticalLine{
-		height: 60px;
-		width: 3px;
-		background-color: var(--blue);
-		margin: auto;
+		margin: 0;
 	}
 }
 
@@ -109,32 +107,34 @@
 		z-index: 10;
 		display: flex;
 	}
-	#navBox {
-		padding-top: 50px;
-		position: absolute;
-		flex-flow: column;
+
+	#navBox{
+		flex-direction: column;
+		display: none;
 		height: 100vh;
 		width: 100vw;
-		background-color: rgba(30, 30, 30, 0.7);
-		display: none;
-		z-index: 9;
-		overflow: hidden;
-	}
-	.navlinks{
-		padding: 0;
-		padding-top: 10px;
-		margin: 25px auto;
-		width: 100%;
-		text-align: center;
-		font-size: 40px;
-		display: flex;
+		background-color: var(--overlayColor);
 		justify-content: center;
-		align-items: center;
 
-		p{
-			margin: 0;
-			padding: 0;
-			width: fit-content;
+		#navLinks {
+			flex-direction: column;
+			
+			.navlink{
+				padding-top: 10px;
+				font-size: 40px;
+			}
+		}
+
+		#darkmode{
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			margin: 20px;
+			background-color: var(--textColor);
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
