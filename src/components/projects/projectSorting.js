@@ -36,15 +36,16 @@ export function filterProjects(filterBy) {
 	}
 }
 
-export function search() {
-	// input from search bar set to upper case so the serach is not case-sensitive
-	var filter = document.getElementById("searchBar").value.toUpperCase();
+export function search(filter) {
+	
+	filter = filter.toUpperCase()
+
 	// pulls blogs from html
 	var projects = document.getElementById("projectsGoHere");
 	// pulls all the blogitems
 	var projectItems = projects.getElementsByClassName("content");
 
-	// will run throuhg all the rows
+	// will run through all the rows
 	for (var i = 0; i < projectItems.length; i++) {
 
 		// get the title and type

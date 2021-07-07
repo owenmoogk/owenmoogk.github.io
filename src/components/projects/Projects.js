@@ -16,7 +16,7 @@ export default function ProjectPage() {
 					<span className="sort_web-dev btn" onClick={() => filterProjects('web-dev')}><p>Web-Dev</p></span>
 				</div>
 				<div id="search">
-					<input type="text" onKeyUp={() => search()} placeholder="Search by Date, Title, or Text" title="Type to search" />
+					<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search by Date, Title, or Text" title="Type to search" />
 				</div>
 			</div>
 			<div id="projectsGoHere">
