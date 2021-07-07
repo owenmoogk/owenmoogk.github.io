@@ -44,7 +44,7 @@ export default function ContactPage() {
 				<div className='contactCard'>
 					<h2>Drop a Line</h2>
 					<form onSubmit={() => sendEmail()}>
-						<div>
+						<div id='nameAndEmail'>
 							<input type='text' placeholder='Name' id='nameInput' />
 							<input type='text' placeholder='Email' id='emailInput' />
 						</div>
