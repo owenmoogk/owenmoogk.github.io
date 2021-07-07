@@ -5,7 +5,6 @@ import {
 	Route
 } from 'react-router-dom';
 import Nav from "components/Nav.js"
-import NavButton from 'components/NavButton.js'
 import Homepage from 'components/homepage/Homepage.js'
 import Workpage from 'components/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
@@ -30,15 +29,16 @@ export default function App(props) {
 						--textColor: white;
 						--blue: lightblue;
 						--cardColor: rgb(30,30,30);
+						--overlayColor: rgba(0,0,0,0.8);
 					}`
 					: `:root {
 						--cardColor: white;
 						--textColor: black;
 						--blue: blue;
 						--backgroundColor: rgb(230,230,230);
+						--overlayColor: rgba(255,255,255,0.8);
 					}`
 			}} />
-			<NavButton />
 			<Nav toggleDarkMode={toggleDarkMode}/>
 			<Switch>
 				<Route path='/projects'>
