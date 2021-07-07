@@ -1,0 +1,24 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "My Website",
+			"date": "April 21, 2020"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": [
+					"I recently made this website as a place to tell a little bit about me, show off some of my projects, and to have a \"one stop shop\" for all my files that people might find useful. The links and downloads to the source files are found below. This was a fun project, as I just learned how to use ReactJS and deploy it on github pages. if you have any suggestions please feel free to",
+					{
+						"text": "contact me.",
+						"href": "contact"
+					}
+				]
+			},
+			{
+				"title": "Old Versions",
+				"text": "Along with this, I have made older versions of  this website public as well. You can find them all on my github, titled \"website-v[1-6]\". Please do not use these as a source for information, as it is not up to date and is missing key components. This here website has all the information relevant, so please use others as only an archive."
+			}
+		]
+	}
+}

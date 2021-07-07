@@ -1,0 +1,40 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Dino Game AI",
+			"date": "January 26, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": [
+					"This was a continuation of the program that I wrote for my",
+					{
+						"href": "https://github.com/owenmoogk/flappy-bird-ai",
+						"text": "Flappy Bird AI."
+					},
+					"It was lots of fun and I continue to love coding with AI or neural networks."
+				]
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/dino-game-ai"
+					},
+					{
+						"text": "Just the game",
+						"href": "https://github.com/owenmoogk/dino-game"
+					}
+				]
+			}
+		]
+	}
+}

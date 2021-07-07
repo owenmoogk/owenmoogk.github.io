@@ -1,0 +1,32 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Pendulum Physics Simulator",
+			"date": "February 26, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I decided to create a physics Simulator with a Pendulum so I could represent potential and kinetic energy. Fun quick and easy project, made in pygame. All the code is up on my github, linked below."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": [
+					"pendulum.png",
+					"main.png"
+				]
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/pendulum-simulator"
+					}
+				]
+			}
+		]
+	}
+}

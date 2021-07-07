@@ -1,0 +1,29 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "LAN Messenger",
+			"date": "March 14, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "This was a pretty fun project, I made in Django. It was interesting to learn more about backend interactions between users. Ideally you can have one computer running it on a local network, and then all the users on that network are able to communicate with eachother through the app. In the future it might be a good idea to have it running on a server and then users can create chats between eachother, like WhatsApp or something like that, but for now this works great."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/message-app/"
+					}
+				]
+			}
+		]
+	}
+}

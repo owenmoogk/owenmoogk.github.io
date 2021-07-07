@@ -1,0 +1,23 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Hydraulic Arm",
+			"date": "November 7, 2020"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I recently made a hyrdaulic arm for a school project. It was tasked with moving a small toy bin along the X and Z axis, and this was the solution I came up with. It rotates with strings, and the height and claw grip is controlled using hydraulics. I have the CAD as well as some renders down below. The red claw was 3D printed, and the rest was made from wood and dowels. String was attatched to the bottom plate which can be pulled to rotate the arm, and tubes connect the syringes at the bottom with the ones on the arm. There is one dowel through the center into the base which the whole module revolves around."
+			},
+			{
+				"title": "Renders"
+			},
+			{
+				"render": [
+					"render1.png",
+					"render3.png"
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Pathfinding Visualizer",
+			"date": "February 20, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I was looking at different types of algorithms in python and javascript, and wanted to make a visualizer to show how they work. I started in pygame, and made a pathfinding visualizer. It is pretty cool, and works well. It can use lots of different searching techniques. I had to do a lot of googling for A*, but I also implemented Dijkstra's and Greedy Best First Search. The code is linked below."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/pathfinding-visualizer"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Music Bot",
+			"date": "April 15, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I made this music bot service over the past few weeks, following along with some youtube videos. It was great to integrate React and Django into one project. This app allows users to host rooms, and let anyone else join the app and have say in the playback of music. It uses the spotify api, and is designed to be run locally. I usually run it on my computer so anyone on my network can use it, but I may consider running it on a server in the future."
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/music-bot"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "NHL Fantasy App",
+			"date": "March 24, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I made an NHL fantasy tracker app with python and Django. It was cool to implement these tools that I have been learning over the past month or two, and make something of my own that is pretty cool. It is currently very lacking of CSS but nevertheless it was really cool to implement Django into a project. The app allows users to pick players and teams and then they can easily track their stats from the website. I am pulling from the unofficial NHL API. All the code is linked below."
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/nhl-fantasy/"
+					}
+				]
+			}
+		]
+	}
+}
