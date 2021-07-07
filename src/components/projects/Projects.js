@@ -7,19 +7,18 @@ export default function ProjectPage() {
 		<div className="main">
 			<p className="title">Projects</p>
 			<br></br>
-			<div className="sorting">
-				<div className="buttons">
+			<div id="sorting">
+				<div id="buttons">
 					<span className="sort_all btn active" onClick={() => filterProjects('all')}><p>All</p></span>
 					<span className="sort_cad btn" onClick={() => filterProjects('cad')}><p>CAD</p></span>
 					<span className="sort_coding btn" onClick={() => filterProjects('coding')}><p>Coding</p></span>
 					<span className="sort_mechanical btn" onClick={() => filterProjects('mechanical')}><p>Mechanical</p></span>
 					<span className="sort_web-dev btn" onClick={() => filterProjects('web-dev')}><p>Web-Dev</p></span>
 				</div>
-				<div className="sort">
-					<input type="text" id="searchBar" onKeyUp={() => search()} placeholder="Search by Date, Title, or Text" title="Type to search" />
+				<div id="search">
+					<input type="text" onKeyUp={() => search()} placeholder="Search by Date, Title, or Text" title="Type to search" />
 				</div>
 			</div>
-			<br /><br /><br /><br />
 			<div id="projectsGoHere">
 				<ProjectIcon title='Music Bot' name='music-bot' type='coding' />
 				<ProjectIcon title='NHL Fantasy App' name='nhl-fantasy' type='coding' />
