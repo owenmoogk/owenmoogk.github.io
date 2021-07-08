@@ -2,10 +2,12 @@
 
 :root {
 	--color_all: rgb(30, 39, 46);
-	--color_cad: #DBD56E;
-	--color_coding: #53B3CB;
+	--color_solidworks: #B24C63;
+	--color_python: #53B3CB;
 	--color_mechanical: #F08A4B;
-	--color_web-dev: #B24C63;
+	--color_javascript: #DBD56E;
+	--color_react: #02b875;
+	--color_django: #4B92DB;
 	--white: #ffffff;
 }
 
@@ -20,26 +22,26 @@
 	background-color: var(--color_all);
 	fill: var(--white);
 }
-.sort_cad {
-	border: 2px solid var(--color_cad);
-	color: var(--color_cad);
+.sort_solidworks {
+	border: 2px solid var(--color_solidworks);
+	color: var(--color_solidworks);
 	background-color: var(--white);
-	fill: var(--color_cad);
+	fill: var(--color_solidworks);
 }
-.sort_cad.active, .sort_cad:hover{
+.sort_solidworks.active, .sort_solidworks:hover{
 	color: var(--white);
-	background-color: var(--color_cad);
+	background-color: var(--color_solidworks);
 	fill: var(--white);
 }
-.sort_coding {
-	border: 2px solid var(--color_coding);
-	color: var(--color_coding);
+.sort_python {
+	border: 2px solid var(--color_python);
+	color: var(--color_python);
 	background-color: var(--white);
-	fill: var(--color_coding);
+	fill: var(--color_python);
 }
-.sort_coding.active, .sort_coding:hover{
+.sort_python.active, .sort_python:hover{
 	color: var(--white);
-	background-color: var(--color_coding);
+	background-color: var(--color_python);
 	fill: var(--white);
 }
 .sort_mechanical {
@@ -53,14 +55,36 @@
 	background-color: var(--color_mechanical);
 	fill: var(--white);
 }
-.sort_web-dev {
-	border: 2px solid var(--color_web-dev);
-	color: var(--color_web-dev);
+.sort_javascript {
+	border: 2px solid var(--color_javascript);
+	color: var(--color_javascript);
 	background-color: var(--white);
-	fill: var(--color_web-dev);
+	fill: var(--color_javascript);
 }
-.sort_web-dev.active, .sort_web-dev:hover{
+.sort_javascript.active, .sort_javascript:hover{
 	color: var(--white);
-	background-color: var(--color_web-dev);
+	background-color: var(--color_javascript);
+	fill: var(--white);
+}
+.sort_react {
+	border: 2px solid var(--color_react);
+	color: var(--color_react);
+	background-color: var(--white);
+	fill: var(--color_react);
+}
+.sort_react.active, .sort_react:hover{
+	color: var(--white);
+	background-color: var(--color_react);
+	fill: var(--white);
+}
+.sort_django {
+	border: 2px solid var(--color_django);
+	color: var(--color_django);
+	background-color: var(--white);
+	fill: var(--color_django);
+}
+.sort_django.active, .sort_django:hover{
+	color: var(--white);
+	background-color: var(--color_django);
 	fill: var(--white);
 }

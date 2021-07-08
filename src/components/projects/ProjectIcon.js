@@ -4,14 +4,16 @@ export default function ProjectIcon(props) {
 
 	let link = '/projects/' + props.name
 	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name
-	let type = props.type.toLowerCase()
+	let type = props.type
+	let types = type.split(' ')
+	console.log(types)
 
 	return (
 		<a href={link}>
-			<div className={"content " + type}>
+			<div className={"content " + type.toLowerCase()}>
 				<div>
 					<h3 className="content-title">{props.title}</h3>
-					<p className="type">{type.toUpperCase()}</p>
+					<p className="type">{type}</p>
 				</div>
 				<div className='projectIcons'>
 

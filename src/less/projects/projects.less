@@ -69,19 +69,25 @@
 			transition: 0.3s;
 		}
 	
-		&.cad:after{
-			background: var(--color_cad);
+		&.javascript:after{
+			background: var(--color_javascript);
 		}
-		&.web-dev:after{
-			background: var(--color_web-dev);
+		&.python:after{
+			background: var(--color_python);
+		}
+		&.react:after{
+			background: var(--color_react);
+		}
+		&.django:after{
+			background: var(--color_django);
+		}
+		&.solidworks:after{
+			background: var(--color_solidworks);
 		}
 		&.mechanical:after{
 			background: var(--color_mechanical);
 		}
-		&.coding:after{
-			background: var(--color_coding);
-		}
-	
+
 		&:hover:after{
 			width: 100%;
 			opacity: 1;
@@ -140,15 +146,22 @@
 }
 
 // project borders
+
+div.javascript{
+	border: 2px solid var(--color_javascript);
+}
+div.python{
+	border: 2px solid var(--color_python);
+}
+div.react{
+	border: 2px solid var(--color_react);
+}
+div.django{
+	border: 2px solid var(--color_django);
+}
+div.solidworks{
+	border: 2px solid var(--color_solidworks);
+}
 div.mechanical{
 	border: 2px solid var(--color_mechanical);
-}
-div.coding{
-	border: 2px solid var(--color_coding);
-}
-div.cad{
-	border: 2px solid var(--color_cad);
-}
-div.web-dev{
-	border: 2px solid var(--color_web-dev);
 }
