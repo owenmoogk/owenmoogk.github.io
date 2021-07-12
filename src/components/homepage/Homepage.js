@@ -21,7 +21,8 @@ export default function Homepage() {
 	}
 	
 	const [splash, setSplash] = useState('');
-	
+
+	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
 
 		// load a random splash
@@ -45,9 +46,9 @@ export default function Homepage() {
 			<div id='homepageTitle'>
 				<p className="title">Hey, it's <br/><span>Owen Moogk</span></p>
 				<p id="splash" onClick={() => loadSplash()}>
-					<svg focusable="false" width="20px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M21 12l-7-9v4.99L3 8v8h11v5l7-9z" stroke="#FF69B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+					<svg focusable="false" width="20px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M21 12l-7-9v4.99L3 8v8h11v5l7-9z" stroke="#FF69B4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></g></svg>
 					&nbsp;{splash}&nbsp;
-					<svg focusable="false" width="20px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style={{transform: 'rotate(180deg)'}}><g fill="none"><path d="M21 12l-7-9v4.99L3 8v8h11v5l7-9z" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+					<svg focusable="false" width="20px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style={{transform: 'rotate(180deg)'}}><g fill="none"><path d="M21 12l-7-9v4.99L3 8v8h11v5l7-9z" stroke="var(--blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></g></svg>
 				</p>
 			</div>
 		</div>
