@@ -1,76 +1,56 @@
 {
-	"page": {
-		"page-head": {
-			"page-title": "Renders/Graphic Design",
-			"date": "April 22, 2020"
+	"meta": {
+		"title": "Renders/Graphic Design",
+		"date": "April 22, 2020",
+		"type": "Solidworks"
+	},
+	"blocks": [
+		{
+			"title": "Overview",
+			"text": [
+				"I have recently been doing renders and graphical design with <a href='https://www.solidworks.com'>Solidworks</a> and <a href='https://www.blender.org'>Blender</a>. Some of my projects include futuristic cell phones, sticky notes, and other miscellaneous items that looked cool in a render. Enjoy!"
+			]
 		},
-		"block": [
-			{
-				"title": "Overview",
-				"text": [
-					"I have recently been doing renders and graphical design with",
-					{
-						"text": "Solidworks",
-						"href": "https://www.solidworks.com/"
-					},
-					"and",
-					{
-						"text": "Blender.",
-						"href": "https://www.blender.org"
-					},
-					"Some of my projects include futuristic cell phones, sticky notes, and other miscellaneous items that looked cool in a render. Enjoy!"
-				]
-			},
-			{
-				"title": "Donut"
-			},
-			{
-				"render": [
-					"donut/donut7.png",
-					"donut/donut1.png"
-				]
-			},
-			{
-				"title": "Sticky Notes"
-			},
-			{
-				"render": [
-					"sticky_notes/stickynotes.png",
-					"sticky_notes/stickynotes2.png"
-				]
-			},
-			{
-				"title": "Futuristic/Minimal Phone Renders"
-			},
-			{
-				"render": [
-					"phone/blue w background.svg",
-					"phone/pink.png"
-				]
-			},
-			{
-				"render": [
-					"phone/pink-back.png",
-					"phone/white on grey.svg"
-				]
-			},
-			{
-				"title": "Downloads",
-				"ul": [
-					{
-						"text": "Phone",
-						"href": "https://github.com/owenmoogk/renders/tree/master/phone"
-					},
-					{
-						"text": "Sticky Notes",
-						"href": "https://github.com/owenmoogk/renders/tree/master/stickynotes"
-					},
-					{
-						"text": "Donut",
-						"href": "https://github.com/owenmoogk/renders/tree/master/donut"
-					}
-				]
-			}
-		]
-	}
+		{
+			"title": "Donut"
+		},
+		{
+			"render": [
+				"donut/donut7.png",
+				"donut/donut1.png"
+			]
+		},
+		{
+			"title": "Sticky Notes"
+		},
+		{
+			"render": [
+				"sticky_notes/stickynotes.png",
+				"sticky_notes/stickynotes2.png"
+			]
+		},
+		{
+			"title": "Futuristic/Minimal Phone Renders"
+		},
+		{
+			"render": [
+				"phone/blue w background.svg",
+				"phone/pink.png"
+			]
+		},
+		{
+			"render": [
+				"phone/pink-back.png",
+				"phone/white on grey.svg"
+			]
+		},
+		{
+			"title": "Downloads",
+			"ul": [
+				"<a href='https://github.com/owenmoogk/renders/tree/master/phone'>Phone</a>",
+				"<a href='https://github.com/owenmoogk/renders/tree/master/stickynotes'>Sticky Notes</a>",
+				"<a href='https://github.com/owenmoogk/renders/tree/master/donut'>Donut</a>"
+			]
+		}
+	]
 }

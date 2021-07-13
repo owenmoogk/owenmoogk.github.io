@@ -1,0 +1,14 @@
+{
+	"meta": {
+		"title": "Simplelib",
+		"date": "January 23, 2021",
+		"externalLink": "https://owenmoogk.github.io/simplelib-documentation/",
+		"type": "Python Javascript"
+	},
+	"blocks": [
+		{
+			"title": "Screenshots",
+			"render": "main.png"
+		}
+	]
+}

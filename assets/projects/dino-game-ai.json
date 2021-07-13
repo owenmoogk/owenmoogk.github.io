@@ -1,40 +1,28 @@
 {
-	"page": {
-		"page-head": {
-			"page-title": "Dino Game AI",
-			"date": "January 26, 2021"
+	"meta": {
+		"title": "Dino Game AI",
+		"date": "January 26, 2021",
+		"type": "NEAT Python"
+	},
+	"blocks": [
+		{
+			"title": "Overview",
+			"text": [
+				"This was a continuation of the program that I wrote for my <a href='https://github.com/owenmoogk/flappy-bird-ai'>Flappy Bird AI</a>. It was lots of fun and I continue to love coding with AI or neural networks."
+			]
 		},
-		"block": [
-			{
-				"title": "Overview",
-				"text": [
-					"This was a continuation of the program that I wrote for my",
-					{
-						"href": "https://github.com/owenmoogk/flappy-bird-ai",
-						"text": "Flappy Bird AI."
-					},
-					"It was lots of fun and I continue to love coding with AI or neural networks."
-				]
-			},
-			{
-				"title": "Screenshots"
-			},
-			{
-				"render": "main.png"
-			},
-			{
-				"title": "Downloads",
-				"ul": [
-					{
-						"text": "Code",
-						"href": "https://github.com/owenmoogk/dino-game-ai"
-					},
-					{
-						"text": "Just the game",
-						"href": "https://github.com/owenmoogk/dino-game"
-					}
-				]
-			}
-		]
-	}
+		{
+			"title": "Screenshots"
+		},
+		{
+			"render": "main.png"
+		},
+		{
+			"title": "Downloads",
+			"ul": [
+				"<a href='https://github.com/owenmoogk/dino-game-ai'>Code</a>",
+				"<a href='https://github.com/owenmoogk/dino-game'>Just the game</a>"
+			]
+		}
+	]
 }
