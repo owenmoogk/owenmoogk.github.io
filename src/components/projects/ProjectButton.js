@@ -9,7 +9,6 @@ export default function ProjectButton(props){
 			border: '2px solid var(--'+name+')',
 			color: 'var(--'+name+')',
 			backgroundColor: 'var(--cardColor)',
-			color: 'var(--'+name+')'
 		}}
 		>
 			<p>{props.name}</p>

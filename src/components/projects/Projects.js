@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectIcon from './ProjectIcon'
-import { filterProjects, search } from './projectSorting'
+import { search } from './projectSorting'
 import ProjectButton from './ProjectButton';
 
 export default function ProjectPage() {
