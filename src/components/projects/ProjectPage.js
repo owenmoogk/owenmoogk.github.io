@@ -1,152 +1,146 @@
-import React from 'react';
-import {useParams} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'
 
-export default function ProjectIcon() {
+export default function ProjectPage() {
+
+	const [xmlContent, setXmlContent] = useState()
+	var { name } = useParams()
+	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/' + name + ".json"
 
 	// the function called when loading page
-	function loadProjectPage(xmlPage, name) {
+	function loadProjectPage() {
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function() {
+		xmlhttp.onreadystatechange = function () {
 			if (this.readyState === 4 && this.status === 200) {
-				projectPage(this, name);
+				setXmlContent(JSON.parse(this.response))
 			}
 		};
-		xmlhttp.open("GET", xmlPage, true);
+		xmlhttp.open("GET", xmlFileLink, true);
 		xmlhttp.send();
 	}
 
-	// actual loading process
-	function projectPage(xml, name) {
+	/* eslint-disable react-hooks/exhaustive-deps */
+	useEffect(() => {
+		loadProjectPage()
+	}, [])
 
-		// xml doxument
-		var xmlDoc = JSON.parse(xml.response)['page'];
+	function loadBlocks() {
 
-		// entire html of page
-		var txt = "";
+		var blocks = xmlContent.blocks;
 
-		// load header of page
-		try{
-			var pageTitle = xmlDoc['page-head']['page-title']
-		}
-		catch(err){
-			document.getElementsByClassName("body")[0].innerHTML = '<h2>Page not found</h2>';
-			return
-		}
-		
-		var date = xmlDoc['page-head']['date']
-		txt += '<div class="project-page-title"><p style="line-height: 70px;">'+pageTitle+'</p></div><div class="date"><p class="pdate">'+date+'</p></div>';
+		// going through blocks and loading them
+		var html = blocks.map((block, key) => {
+			return (
+				<div className='block' key={key}>
 
-
-		// load main part of the page
-		var blocks = xmlDoc.block;
-
-		// loading the main part of the page
-		for (var currBlockNum = 0; currBlockNum < blocks.length; currBlockNum++) {
-			
-			// the elements inside the current block
-			var currBlock = blocks[currBlockNum] 
-
-			txt += '<div class="block">'
-
-			// appending text to var 'txt' depending on tag name
-			if (currBlock.title){
-				txt += '<div class="text"><h1 class="left">'+currBlock.title+'</h1>'
-			}
-			if (currBlock.text){
-
-				var currentText = '<p class="left">'
-
-				if (typeof currBlock.text == 'string'){
-					currentText += currBlock.text
-				}
-				else{
-					for (const i of currBlock.text){
-						// if its a dict then its a link
-						if (i.constructor === Object){
-							currentText += '<a href="'+i.href+'" class="blinks" target="_blank"> '+i.text+" </a>"
+					<div className='text'>
+						{block.title
+							? <h1>{block.title}</h1>
+							: null
 						}
-						else{
-							currentText += i
+						{block.text
+							? <p dangerouslySetInnerHTML={{ __html: block.text }}></p>
+							: null
 						}
-					}
-				}
-				currentText += '</p></div>'
-				txt += currentText
-			}
-			if (currBlock.image){
-				if (Array.isArray(currBlock.image)){
-					for (const image of currBlock.image){
-						txt += '<div class="img"><img src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+image+'" class="img"></div>'
-					}
-				}
-				else{
-					txt += '<div class="img"><img src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+currBlock.image+'" class="img"></div>'
-				}
-			}
-			if (currBlock.render){
-				if (Array.isArray(currBlock.render)){
-					for (const render of currBlock.render){
-						txt += '<div class="render"><img src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+render+'" class="img"></div>'
-					}
-				}
-				else{
-					txt += '<div class="render"><img src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+currBlock.render+'" class="img"></div>'
-				}
-			}
-			if (currBlock.ul){
-				txt += '<ul>'
+					</div>
 
-				for (const i of currBlock.ul){
-					txt += '<li>'
-					// if its a dict then its a link
-					if (i.constructor === Object){
-						txt += '<a href="'+i.href+'" class="blinks" target="_blank"> '+i.text+" </a>"
+					{block.image
+						? Array.isArray(block.image)
+							? block.image.map((image, key) => <img key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + image} className="img" alt='' />)
+							: <img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.image} className="img" alt='' />
+						: null
 					}
-					else{
-						txt += i
+
+					{block.render
+						? Array.isArray(block.render)
+							? block.render.map((render, key) => <div key={key} className="render"><img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} className="img" alt='' /></div>)
+							: <div className="render"><img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} className="img" alt='' /></div>
+						: null
 					}
-					txt += '</li>'
-				}
 
-				txt += "</ul>"
-			}
-
-			if (currBlock.video){
-				if (Array.isArray(currBlock.video)){
-					txt += '<br>'
-					for (const video of currBlock.video){
-						txt += '<video src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+video+'"width=300px controls></video>'
+					{block.video
+						? <video src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.video} width='250px' controls></video>
+						: null
 					}
-				}
-				else{
-					txt += '<br><video src="'+process.env.PUBLIC_URL+"/img/projects/"+name+"/"+currBlock.video+'"width=250px controls></video>'
-				}
-			}
 
-			if (currBlock.iframe){
-				txt += currBlock.iframe
-				console.log(currBlock.iframe)
-			}
+					{block.iframe
+						? block.iframe
+						: null
+					}
 
-			// add options for links
-			
-			txt += '</div>' // close out block div
+					{block.ul
+						? <ul>
+							{block.ul.map((li, key) => {
+								return (
+									<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
+								)
+							})}
+						</ul>
+						: null
+					}
 
-		}
-		document.getElementsByClassName("body")[0].innerHTML = txt;
+				</div>
+			)
+		})
+
+		return (html)
+
 	}
 
-	// passed in from the router
-	var {name} = useParams()
-	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/'+name+".json"
+	// actual loading process
+	function buildProjectPage() {
+		return (
+			<div id='projectBody'>
+
+				<div className="title">
+					{xmlContent.meta.title}
+					<hr />
+				</div>
+
+				<div id='icons'>
+
+					{xmlContent.meta.githubLink == ""
+						? null
+						: <a href={xmlContent.meta.githubLink ? xmlContent.meta.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
+							<svg className='projectSvg' viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+								<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+							</svg>
+						</a>
+					}
+
+					{xmlContent.meta.externalLink
+						? <a href={xmlContent.meta.externalLink} target='_blank' rel='noreferrer'>
+							<svg viewBox="0 0 24 24" className='projectSvg'>
+								<g fill="none">
+									<path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+								</g>
+							</svg>
+						</a>
+						: null
+					}
+
+					{xmlContent.meta.type.split(' ').map((type, key) => {
+						return (
+							<span className='type' key={key} style={{ border: "2px solid var(--color_" + type.toLowerCase() + ",grey)" }}>
+								<span className='circle' style={{ backgroundColor: "var(--color_" + type.toLowerCase() + ",grey)" }}></span>
+								{type}
+							</span>
+						)
+					})}
+				</div>
+
+
+				{loadBlocks()}
+
+			</div>
+		)
+	}
 
 	return (
-		<div className="body">
-			{
-				loadProjectPage(xmlFileLink, name) ?
-				<div>hi</div>:
-				<div>else</div>
-			}
-		</div>
+		xmlContent
+			? buildProjectPage()
+			: <div><h1 style={{ paddingTop: '100px' }}>Could not load page :/</h1>
+				<p>Probably still in developement</p>
+			</div>
 	);
 }
