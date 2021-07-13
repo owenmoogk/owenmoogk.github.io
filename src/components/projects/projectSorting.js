@@ -5,32 +5,25 @@ export function filterProjects(filterBy) {
 	var current = document.getElementsByClassName("active");
 	current[0].className = current[0].className.replace(" active", "");
 	var currentButtonClass = "sort_" + filterBy
+	
+	// make the button active
 	var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
 	chosenButton.className += ' active'
-
-	// pulls all entries
+	
+	// loops thru them all tiles
 	var entries = document.getElementsByClassName("content");
+	for (const tile of entries) {
 
-	// loops thru them all
-	for (var i = 0; i < entries.length; i++) {
-
-		// if we're filtering by "all" we need to show all
 		if (filterBy === "all") {
-			entries[i].style.display = "";
+			tile.style.display = "";
 		}
 
-		// if we're filtering anything else, then ...
 		else {
-			// gets the p element holding the type
-			var type = entries[i].getElementsByClassName("type")[0];
-
-			// if it matchs what we are filtering by it stays
-			if (type.innerHTML.toString().toLowerCase() === filterBy) {
-				entries[i].style.display = "";
+			if (tile.className.includes(filterBy)) {
+				tile.style.display = "";
 			}
-			// else it will just be gone
 			else {
-				entries[i].style.display = "none";
+				tile.style.display = "none";
 			}
 		}
 	}
@@ -38,27 +31,21 @@ export function filterProjects(filterBy) {
 
 export function search(filter) {
 	
-	filter = filter.toUpperCase()
-
-	// pulls blogs from html
-	var projects = document.getElementById("projectsGoHere");
-	// pulls all the blogitems
-	var projectItems = projects.getElementsByClassName("content");
+	filter = filter.toLowerCase()
+	var projectItems = document.getElementsByClassName("content");
 
 	// will run through all the rows
-	for (var i = 0; i < projectItems.length; i++) {
+	for (const tile of projectItems) {
 
 		// get the title and type
-		var title = projectItems[i].getElementsByClassName("content-title")[0].innerText;
-		var type = projectItems[i].getElementsByClassName("type")[0].innerText;
+		var title = tile.getElementsByClassName("content-title")[0].innerText;
+		var type = tile.getElementsByClassName("type")[0].innerText;
 
-		if (title.toUpperCase().indexOf(filter) > -1 || type.toUpperCase().indexOf(filter) > -1) {
-			// if it does, it'll just leave it alone
-			projectItems[i].style.display = "";
+		if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter)) {
+			tile.style.display = "";
 		}
 		else {
-			// if it doesnt it'll hides it
-			projectItems[i].style.display = "none";
+			tile.style.display = "none";
 		}
 	}
 }

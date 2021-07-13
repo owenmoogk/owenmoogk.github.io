@@ -5,8 +5,6 @@ export default function ProjectIcon(props) {
 	let link = '/projects/' + props.name
 	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name
 	let type = props.type
-	let types = type.split(' ')
-	console.log(types)
 
 	return (
 		<a href={link}>

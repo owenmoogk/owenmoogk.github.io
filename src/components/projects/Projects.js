@@ -26,7 +26,7 @@ export default function ProjectPage() {
 				<ProjectIcon title='NHL Fantasy App' name='nhl-fantasy' type='Django' />
 				<ProjectIcon title='Pathfinding Visualizer' name='pathfinding-visualizer' type='Python Pygame' />
 				<ProjectIcon title='Sorting Visualizer' name='sorting-visualizer' type='Javascript' link='https://owenmoogk.github.io/sorting-visualizer/' />
-				<ProjectIcon title='Simplelib' name='simplelib' type='Python Javascript' link='http://simplelib.tk/' />
+				<ProjectIcon title='Simplelib' name='simplelib' type='Python Javascript' link='https://owenmoogk.github.io/simplelib-documentation' />
 				<ProjectIcon title='Outbreak Simulator' name='outbreak-simulator' type='Python Pygame' />
 				<ProjectIcon title='Email Bot' name='email-bot' type='Python' />
 				<ProjectIcon title='Flappy Bird AI' name='flappy-bird-ai' type='Python NEAT' />
@@ -44,17 +44,17 @@ export default function ProjectPage() {
 				<ProjectIcon title='COVID Website' name='covid-website' type='Javascript' />
 				<ProjectIcon title='Geometry Calculator' name='geometry-calculator' type='Javascript Desmos' />
 				<ProjectIcon title='Snake' name='snake' type='Pygame Python' />
-				<ProjectIcon title='Model Rocket' name='model-rocket' type='Solidworks 3DPrinting' />
-				<ProjectIcon title='Hydraulic Arm' name='hydraulic-arm' type='Solidworks 3DPrinting' />
+				<ProjectIcon title='Model Rocket' name='model-rocket' type='Solidworks' />
+				<ProjectIcon title='Hydraulic Arm' name='hydraulic-arm' type='Solidworks' />
 				{/* <ProjectIcon title='Space Invaders' name='space-invaders' type='Pygame Python' /> */}
 				<ProjectIcon title='The Compiler' name='the-compiler' type='Javascript' link='http://thecompiler.cf/' />
 				<ProjectIcon title='Website Development' name='web-development' type='React' githubLink='https://github.com/owenmoogk/personal-website' />
 				<ProjectIcon title='Renders/Graphic Design' name='renders' type='Solidworks' />
 				{/* <ProjectIcon title='Minecraft Modifications' name='minecraft-modifications' type='coding' /> */}
 				<ProjectIcon title='Vortex' name='vortex' type='Solidworks' />
-				<ProjectIcon title='2702 Rebels 2020 Robot' name='2702-2020' type='Mechanical' githubLink='' />
+				<ProjectIcon title='2702 Rebels 2020 Robot' name='2702-2020' type='Mechanical Solidworks' githubLink='' />
 				<ProjectIcon title='Engine Assembly' name='engine' type='Mechanical' githubLink='' />
-				<ProjectIcon title='2702 Rebels 2019 Robot' name='2702-2019' type='Mechanical' githubLink='' />
+				<ProjectIcon title='2702 Rebels 2019 Robot' name='2702-2019' type='Mechanical Solidworks' githubLink='' />
 			</div>
 		</div>
 	);
