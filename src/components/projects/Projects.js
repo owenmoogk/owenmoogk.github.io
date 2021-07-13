@@ -31,10 +31,10 @@ export default function ProjectPage() {
 				<ProjectIcon title='Email Bot' name='email-bot' type='Python' />
 				<ProjectIcon title='Flappy Bird AI' name='flappy-bird-ai' type='Python NEAT' />
 				<ProjectIcon title='Firefly Simulator' name='firefly-simulator' type='Python Pygame' />
-				<ProjectIcon title='Pendulum Physics Simulator' name='pendulum-simulator' type='Matplotlib Python Pygame' />
-				<ProjectIcon title='Dino Game AI' name='dino-game-ai' type='NEAT Python' />
+				<ProjectIcon title='Pendulum Physics Simulator' name='pendulum-simulator' type='Python Matplotlib Pygame' />
+				<ProjectIcon title='Dino Game AI' name='dino-game-ai' type='Python NEAT' />
 				<ProjectIcon title='Sudoku Bot' name='sudoku-visualizer' type='Javascript' link='https://owenmoogk.github.io/sudoku-visualizer' />
-				<ProjectIcon title='Notes App' name='notes-app' type='Flask Javascript' />
+				<ProjectIcon title='Notes App' name='notes-app' type='Javascript Flask' />
 				<ProjectIcon title='LAN Messenger' name='lan-messenger' type='Django Javascript' />
 				<ProjectIcon title='Grocery List App' name='grocery-list' type='Django Javascript' />
 				{/* <ProjectIcon title='Unix Time Converter' name='unix-time' type='Javascript' link='https://owenmoogk.github.io/unix-time' /> */}
@@ -43,7 +43,7 @@ export default function ProjectPage() {
 				<ProjectIcon title='COVID Scraper' name='covid-scraper' type='Python' />
 				<ProjectIcon title='COVID Website' name='covid-website' type='Javascript' />
 				<ProjectIcon title='Geometry Calculator' name='geometry-calculator' type='Javascript Desmos' />
-				<ProjectIcon title='Snake' name='snake' type='Pygame Python' />
+				<ProjectIcon title='Snake' name='snake' type='Python Pygame' />
 				<ProjectIcon title='Model Rocket' name='model-rocket' type='Solidworks' />
 				<ProjectIcon title='Hydraulic Arm' name='hydraulic-arm' type='Solidworks' />
 				{/* <ProjectIcon title='Space Invaders' name='space-invaders' type='Pygame Python' /> */}

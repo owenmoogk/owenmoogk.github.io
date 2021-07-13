@@ -19,7 +19,7 @@ export function filterProjects(filterBy) {
 		}
 
 		else {
-			if (tile.className.includes(filterBy)) {
+			if (tile.className.toLowerCase().includes(filterBy)) {
 				tile.style.display = "";
 			}
 			else {

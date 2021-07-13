@@ -5,10 +5,18 @@ export default function ProjectIcon(props) {
 	let link = '/projects/' + props.name
 	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name
 	let type = props.type
-
+	let primaryType = type.split(' ')[0].toLowerCase()
+	
 	return (
 		<a href={link}>
-			<div className={"content " + type.toLowerCase()}>
+			<style dangerouslySetInnerHTML={{__html: `
+				.${primaryType}Tile:after{
+					background: var(--${primaryType})
+				}
+			`}}></style>
+
+			{/* content is the overarching; primary type is for the after pseudoelement style above; and type is for sorting*/}
+			<div className={"content "+primaryType+"Tile "+type} style={{border: '2px solid var(--'+primaryType+')'}}>
 				<div>
 					<h3 className="content-title">{props.title}</h3>
 					<p className="type">{type}</p>
