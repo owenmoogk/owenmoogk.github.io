@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectIcon from './ProjectIcon'
 import { filterProjects, search } from './projectSorting'
+import ProjectButton from './ProjectButton';
 
 export default function ProjectPage() {
 	return (
@@ -9,13 +10,13 @@ export default function ProjectPage() {
 			<br></br>
 			<div id="sorting">
 				<div id="buttons">
-					<span className="sort_all btn active" onClick={() => filterProjects('all')}><p>All</p></span>
-					<span className="sort_python btn" onClick={() => filterProjects('python')}><p>Python</p></span>
-					<span className="sort_javascript btn" onClick={() => filterProjects('javascript')}><p>Javascript</p></span>
-					<span className="sort_react btn" onClick={() => filterProjects('react')}><p>React</p></span>
-					<span className="sort_django btn" onClick={() => filterProjects('django')}><p>Django</p></span>
-					<span className="sort_solidworks btn" onClick={() => filterProjects('solidworks')}><p>Solidworks</p></span>
-					<span className="sort_mechanical btn" onClick={() => filterProjects('mechanical')}><p>Mechanical</p></span>
+					<ProjectButton name='All'/>
+					<ProjectButton name='Python'/>
+					<ProjectButton name='Javascript'/>
+					<ProjectButton name='React'/>
+					<ProjectButton name='Django'/>
+					<ProjectButton name='Solidworks'/>
+					<ProjectButton name='Mechanical'/>
 				</div>
 				<div id="search">
 					<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search by Date, Title, or Text" title="Type to search" />

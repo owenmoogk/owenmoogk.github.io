@@ -99,7 +99,7 @@ export default function ProjectPage() {
 
 				<div id='icons'>
 
-					{xmlContent.meta.githubLink == ""
+					{xmlContent.meta.githubLink === ""
 						? null
 						: <a href={xmlContent.meta.githubLink ? xmlContent.meta.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
 							<svg className='projectSvg' viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
