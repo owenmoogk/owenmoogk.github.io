@@ -12,4 +12,4 @@ add blog with nice formatting
 
 add <tags> for titles and maybe nav
 
-fix project sorting css
+fix the css to sort the projects (sidebar)
