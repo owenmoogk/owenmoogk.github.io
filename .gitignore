@@ -24,3 +24,4 @@ yarn-error.log*
 
 # using less
 src/css/
+.vscode/settings.json
