@@ -6,20 +6,20 @@
 	},
 	"blocks": [
 		{
-			"title": "Overview",
-			"text": "I wanted to learn how to use the NEAT library in python to implement machine learning. It really interests me and I find it so fascinating. I decided to do flappy bird when I saw a youtube video from TechWithTim, so I could have some guidance along the way."
-		},
-		{
-			"title": "Screenshots"
-		},
-		{
 			"render": "main.png"
+		},
+		{
+			"title": "Overview",
+			"text": "This project uses the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT</a> library in python. It really interests me and I find it quite fascinating. I decided to create a flappy bird game when I saw a YouTube video from <a href='https://youtube.com/techwithtim'>TechWithTim</a>, so I used that as an assistance when needed but wrote most of the code myself."
+		},
+		{
+			"title": "Technical",
+			"text": "This project was my first introduction to neural networks. The python NEAT library does a lot of the heavy lifting for me, but was a great introduction to the basics. It was helpful to have a tutorial to look at when working on something completely new, but I was weary of copying things line for line as it's not a good way to learn. I will be looking at doing something of my own with the NEAT library soon, so look out :)"
 		},
 		{
 			"title": "Downloads",
 			"ul": [
-				"<a href='https://github.com/owenmoogk/flappy-bird-ai'>Code</a>",
-				"<a href='https://github.com/owenmoogk/flappy-bird'>Just the game</a>"
+				"<a href='https://github.com/owenmoogk/flappy-bird'>Play the game</a>"
 			]
 		}
 	]

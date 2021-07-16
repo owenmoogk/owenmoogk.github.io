@@ -6,22 +6,24 @@
 	},
 	"blocks": [
 		{
-			"title": "Overview",
-			"text": [
-				"This was a continuation of the program that I wrote for my <a href='https://github.com/owenmoogk/flappy-bird-ai'>Flappy Bird AI</a>. It was lots of fun and I continue to love coding with AI or neural networks."
-			]
-		},
-		{
-			"title": "Screenshots"
-		},
-		{
 			"render": "main.png"
 		},
 		{
-			"title": "Downloads",
+			"title": "Overview",
+			"text": [
+				"This project is quite similar to my <a href='https://github.com/owenmoogk/flappy-bird-ai'>Flappy Bird AI</a>. It was lots of fun and I continue to love coding with AI or neural networks."
+			]
+		},
+		{
+			"title": "Technical",
+			"text": [
+				"This was a visualization of the NEAT algorithm at work, learning how to play the infamous Dino Game. It was all coded in python, and shown using pygame. It is using the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT-Python</a> module, which does most of the heavy lifting for me, but gives a great introduction to the basics of neural networks."
+			]
+		},
+		{
+			"title": "Resources",
 			"ul": [
-				"<a href='https://github.com/owenmoogk/dino-game-ai'>Code</a>",
-				"<a href='https://github.com/owenmoogk/dino-game'>Just the game</a>"
+				"<a href='https://github.com/owenmoogk/dino-game'>Play the game</a>"
 			]
 		}
 	]

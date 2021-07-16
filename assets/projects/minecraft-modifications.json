@@ -7,11 +7,11 @@
 	"blocks": [
 		{
 			"title": "Overview",
-			"text": "I am a player, who has logged many hours on the game Minecraft. I recently discovered resource packs and datapacks, and I wanted to encorperate them into my gameplay. After doing some research and looking at others, I created my own resource packs and also have my own mix of datapacks. I have all files avalible for download on my GitHub, as you can find at the bottom. Enjoy!"
+			"text": "I am a player, who has logged many hours on the game Minecraft. I recently discovered resource packs and datapacks, and I wanted to incorporate them into my gameplay. After doing some research and looking at others, I created my own resource packs and also have my own mix of datapacks. I have all files available for download on my GitHub, as you can find at the bottom. Enjoy!"
 		},
 		{
 			"title": "Resource Packs",
-			"text": "In the downloads found here, you can find some resource packs. One is the custom texture pack, one is an X-ray pack, and the others are small are customizations. The main pack has changes to some plants for easier identification of growth stages, as well as changes to the textures of many redstone components for ease of use. This includes on and off specific textures on pistons and levers, as well as arrows for hoppers, observers, and dispensers/droppers. The goal of this is to let for easier redstone and technical gaming while still keeping the basic feel of vanilla Minecraft. <br><br> The other two resource packs are soley for redstone wires. One displays the wires as bars stretching across the blocks, as commenly used by many (Codecrafted, Faithful, etc.). The other is less visually appealing, with the signal strength on the wire. There are two seperate packs for the reason of toggling between the two packs.",
+			"text": "In the downloads found here, you can find some resource packs. One is the custom texture pack, one is an X-ray pack, and the others are small are customizations. The main pack has changes to some plants for easier identification of growth stages, as well as changes to the textures of many redstone components for ease of use. This includes on and off specific textures on pistons and levers, as well as arrows for hoppers, observers, and dispensers/droppers. The goal of this is to let for easier redstone and technical gaming while still keeping the basic feel of vanilla Minecraft. <br><br> The other two resource packs are solely for redstone wires. One displays the wires as bars stretching across the blocks, as commonly used by many (Codecrafted, Faithful, etc.). The other is less visually appealing, with the signal strength on the wire. There are two separate packs for the reason of toggling between the two packs.",
 			"image": "highlightedores.png"
 		},
 		{
@@ -45,7 +45,7 @@
 			"ul": [
 				"Rainbow XP bar",
 				"Colored connection symbol",
-				"Title screen backgroun includes iron farm",
+				"Title screen background includes iron farm",
 				"Custom splashes ;)",
 				"Custom paintings (Including brewing stand chart)"
 			]

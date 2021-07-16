@@ -6,14 +6,15 @@
 	},
 	"blocks": [
 		{
-			"title": "Overview",
-			"text": "I was looking at different types of algorithms in python and javascript, and wanted to make a visualizer to show how they work. I started in pygame, and made a pathfinding visualizer. It is pretty cool, and works well. It can use lots of different searching techniques. I had to do a lot of googling for A*, but I also implemented Dijkstra's and Greedy Best First Search. The code is linked below."
-		},
-		{
-			"title": "Screenshots"
-		},
-		{
 			"render": "main.png"
+		},
+		{
+			"title": "Overview",
+			"text": "I was looking at different types of algorithms in python and javascript, and wanted to make a visualizer to show how they work. I started in pygame, and made a pathfinding visualizer. It is pretty cool, and works well. It can use lots of different searching techniques. I had to do a lot of googling for A*, but I also implemented Dijkstra's Algorithm and Greedy Best First Search."
+		},
+		{
+			"title": "Inspiration",
+			"text": "Pathfinding algorithms always fascinated me, and they are also super useful. I'm working on learning about graphs and other advanced data structures, and this essentially implements that. It is also a must know for software development roles/jobs, so I wanted to get it under my belt."
 		}
 	]
 }

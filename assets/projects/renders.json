@@ -8,49 +8,26 @@
 		{
 			"title": "Overview",
 			"text": [
-				"I have recently been doing renders and graphical design with <a href='https://www.solidworks.com'>Solidworks</a> and <a href='https://www.blender.org'>Blender</a>. Some of my projects include futuristic cell phones, sticky notes, and other miscellaneous items that looked cool in a render. Enjoy!"
+				"I have recently been doing renders and graphical design with <a href='https://www.solidworks.com'>Solidworks</a> and <a href='https://www.blender.org'>Blender</a>. Some of my renders include sticky notes, donuts (which I am particularly proud of), and futuristic cell phones (not shown here). All the source files and some more renders are on Github, so feel free to have a look."
 			]
 		},
 		{
-			"title": "Donut"
-		},
-		{
+			"title": "Donut",
 			"render": [
 				"donut/donut7.png",
 				"donut/donut1.png"
 			]
 		},
 		{
-			"title": "Sticky Notes"
-		},
-		{
+			"title": "Sticky Notes",
 			"render": [
 				"sticky_notes/stickynotes.png",
 				"sticky_notes/stickynotes2.png"
 			]
 		},
 		{
-			"title": "Futuristic/Minimal Phone Renders"
-		},
-		{
-			"render": [
-				"phone/blue w background.svg",
-				"phone/pink.png"
-			]
-		},
-		{
-			"render": [
-				"phone/pink-back.png",
-				"phone/white on grey.svg"
-			]
-		},
-		{
-			"title": "Downloads",
-			"ul": [
-				"<a href='https://github.com/owenmoogk/renders/tree/master/phone'>Phone</a>",
-				"<a href='https://github.com/owenmoogk/renders/tree/master/stickynotes'>Sticky Notes</a>",
-				"<a href='https://github.com/owenmoogk/renders/tree/master/donut'>Donut</a>"
-			]
+			"title": "Balls",
+			"video": "balls/balls.mp4"
 		}
 	]
 }
