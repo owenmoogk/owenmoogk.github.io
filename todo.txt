@@ -11,3 +11,8 @@ maybe pull project tiles from jsons
 add blog with nice formatting
 
 fix the css to sort the projects (sidebar)
+
+add project archive feature
+
+work page similar to linkedin (with css)
+	add freecodecamp
