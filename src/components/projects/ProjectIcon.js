@@ -11,12 +11,12 @@ export default function ProjectIcon(props) {
 		<a href={link}>
 			<style dangerouslySetInnerHTML={{__html: `
 				.${primaryType}Tile:after{
-					background: var(--${primaryType})
+					background: var(--${primaryType}, grey)
 				}
 			`}}></style>
 
-			{/* content is the overarching; primary type is for the after pseudoelement style above; and type is for sorting*/}
-			<div className={"content "+primaryType+"Tile "+type} style={{border: '2px solid var(--'+primaryType+')'}}>
+			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
+			<div className={"content "+primaryType+"Tile "+type+ (props.archive===true ? " archive": "")} style={{border: '2px solid var(--'+primaryType+', grey)'}}>
 				<div>
 					<h3 className="content-title">{props.title}</h3>
 					<p className="type">{type}</p>
