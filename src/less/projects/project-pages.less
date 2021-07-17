@@ -1,14 +1,18 @@
+
 #projectBody{
 	font-size: 18px;
 	color: var(--textColor);
 	padding: 100px 0;
+	margin-left: 10%;
 
 	.title{
 		font-size: 60px;
-		width: fit-content;
+		width: 100%;
+		text-align: left;
 
-		hr{
-			margin: 10px 0 20px;
+		#hr{
+			margin-top: 10px;
+			margin-bottom: 20px;
 			height: 4px;
 			width: 100px;
 			background-color: var(--textColor);
@@ -77,8 +81,9 @@
 			}
 		}
 
-		.text{
+		.text p{
 			max-width: 700px;
+			margin-top: 20px;
 		}
 
 		img{
@@ -87,11 +92,12 @@
 			
 			&.img{
 				max-height: 275px;
+				max-width: 100%;
 				margin-right: 20px;
 			}
 
 			&.render{
-				max-width: 500px;
+				max-width: min(100%, 500px);
 				margin-right: 40px;
 				display: inline-block;
 			}
@@ -100,29 +106,48 @@
 		video{
 			border-radius: 20px;
 			max-height: 500px;
-			max-width: 500px;
+			max-width: min(100%,500px);
 		}
 
 		iframe{
 			margin-top: 20px;
-		}
-	}
-
-	
-	@media only screen and (max-width: 1000px) {
-		.block{
-			width: 100%;
-		}
-	}
-	@media only screen and (max-width: 972px) {
-		.text{
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 850px) {
 	#projectBody{
-		margin-left: 175px;
+		margin-left: 15px;
+		margin-right: 15px;
+		// everything is centered except for p
+		text-align: center;
+		p{
+			text-align: left;
+		}
+
+		.img{
+			margin-right: 0 !important;
+		}
+
+		#hr{
+			margin: auto;
+		}
+
+		#icons{
+			justify-content: center;
+		}
+
+		.text{
+			max-width: 1000px;
+		}
+
+		.title{
+			text-align: center;
+		}
+
+		li{
+			width: fit-content;
+		}
 	}
 }

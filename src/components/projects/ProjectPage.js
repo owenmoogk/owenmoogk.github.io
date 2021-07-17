@@ -32,7 +32,12 @@ export default function ProjectPage() {
 		var html = blocks.map((block, key) => {
 			return (
 				<div className='block' key={key}>
-
+					<style dangerouslySetInnerHTML={{__html: `
+						html, body{
+							max-width: 100%;
+							overflow-x: hidden;
+						}
+					`}}></style>
 					<div className='text'>
 						{block.title
 							? <h1>{block.title}</h1>
@@ -94,7 +99,7 @@ export default function ProjectPage() {
 
 				<div className="title">
 					{xmlContent.meta.title}
-					<hr />
+					<div id='hr'/>
 				</div>
 
 				<div id='icons'>
