@@ -34,7 +34,7 @@ export default function ProjectPage() {
 				<ProjectIcon title='Firefly Simulator' name='firefly-simulator' type='Python Pygame' />
 				<ProjectIcon title='Pendulum Physics Simulator' name='pendulum-simulator' type='Python Matplotlib Pygame' />
 				<ProjectIcon title='Dino Game AI' name='dino-game-ai' type='Python NEAT' />
-				<ProjectIcon title='Sudoku Bot' name='sudoku-visualizer' type='Javascript' link='https://owenmoogk.github.io/sudoku-visualizer' />
+				<ProjectIcon title='Sudoku Visualizer' name='sudoku-visualizer' type='Javascript' link='https://owenmoogk.github.io/sudoku-visualizer' />
 				<ProjectIcon title='Notes App' name='notes-app' type='Javascript Flask' />
 				<ProjectIcon title='LAN Messenger' name='lan-messenger' type='Django Javascript' />
 				<ProjectIcon title='Grocery List App' name='grocery-list' type='Django Javascript' />

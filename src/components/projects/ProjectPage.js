@@ -53,13 +53,13 @@ export default function ProjectPage() {
 
 					{block.render
 						? Array.isArray(block.render)
-							? block.render.map((render, key) => <div key={key} className="render"><img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} className="img" alt='' /></div>)
-							: <div className="render"><img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} className="img" alt='' /></div>
+							? block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)
+							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} alt='' />
 						: null
 					}
 
 					{block.video
-						? <video src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.video} width='250px' controls></video>
+						? <video src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.video} controls></video>
 						: null
 					}
 
@@ -129,18 +129,30 @@ export default function ProjectPage() {
 					})}
 				</div>
 
-
-				{loadBlocks()}
+				<div id='blocks'>
+					{loadBlocks()}
+				</div>
 
 			</div>
 		)
 	}
 
+	// set all the project links to be external
+	window.onload = () => {
+		var links = document.getElementById('blocks').getElementsByTagName('a')
+		for (const link of links) {
+			if (!link.target){
+				link.target = '_blank'
+				link.rel = 'noreferrer'
+			}
+		}
+	};
+
 	return (
 		xmlContent
 			? buildProjectPage()
 			: <div><h1 style={{ paddingTop: '100px' }}>Could not load page :/</h1>
-				<p>Probably still in developement</p>
+				<p>Probably still in development</p>
 			</div>
 	);
 }

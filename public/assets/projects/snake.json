@@ -6,14 +6,11 @@
 	},
 	"blocks": [
 		{
-			"title": "Overview",
-			"text": "I have been learning a bit about python, so I implemented the classic snake game into pygame. I also am working on an AI version of this, but at the moment I am just using a Hamiltonian cycle."
-		},
-		{
-			"title": "Screenshots"
-		},
-		{
 			"render": "main.png"
+		},
+		{
+			"title": "Overview",
+			"text": "I have been learning a bit about python, so I implemented the classic snake game into pygame. At the moment this is quite a simple project, but I want to evolve this into an AI program, teaching the computer to play the game. I started this, but am currently just using a Hamiltonian cycle."
 		},
 		{
 			"title": "Downloads",

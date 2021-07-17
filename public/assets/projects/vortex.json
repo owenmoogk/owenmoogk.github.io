@@ -12,12 +12,12 @@
 		},
 		{
 			"title": "Intake",
-			"text": "This intake is made up of rollers with polycord (which is probably not the greatest idea given my experience with the 2020 robot, but it was the best thing that came to mind with the game peices). The rollers center it and pull it into the feeder system under the bot. They are all driven by 775 pro motors. Also I made sure to put an intake on both sides of the bot to give an advantage in maneuvering the field.",
+			"text": "This intake is made up of rollers with polycord (which is probably not the greatest idea given my experience with the 2020 robot, but it was the best thing that came to mind with the game pieces). The rollers center it and pull it into the feeder system under the bot. They are all driven by 775 pro motors. Also I made sure to put an intake on both sides of the bot to give an advantage in maneuvering the field.",
 			"image": "intake.png"
 		},
 		{
 			"title": "Feeder",
-			"text": "The feeder is on the underside of the bot, and it is also driven by rollers and polycord. It's sole purpose is to get the game peices from both intakes and put them into one stream, and then to hand it off to the shooter mounted on the elevator."
+			"text": "The feeder is on the underside of the bot, and it is also driven by rollers and polycord. It's sole purpose is to get the game pieces from both intakes and put them into one stream, and then to hand it off to the shooter mounted on the elevator."
 		},
 		{
 			"title": "Shooter",
@@ -30,7 +30,7 @@
 		},
 		{
 			"title": "Climber",
-			"text": "The top of the elevator has 2 bunny ears attatched to it, so it can perform a climb at the end of the match. The elevator goes up and then hooks on, which can pull the robot up to the bar.",
+			"text": "The top of the elevator has 2 bunny ears attached to it, so it can perform a climb at the end of the match. The elevator goes up and then hooks on, which can pull the robot up to the bar.",
 			"image": "climb.png"
 		},
 		{
