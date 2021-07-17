@@ -128,8 +128,8 @@ export default function ProjectPage() {
 
 					{xmlContent.meta.type.split(' ').map((type, key) => {
 						return (
-							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase() + ",grey)" }}>
-								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase() + ",grey)" }}></span>
+							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}>
+								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}></span>
 								{type}
 							</span>
 						)
