@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Space Invaders",
 		"date": "November 6, 2020",
-		"type": "Pygame Python"
+		"type": "Python Pygame",
+		"archive": true
 	},
 	"blocks": [
 		{

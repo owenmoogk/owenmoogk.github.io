@@ -18,6 +18,7 @@
 	width: 100%;
 	margin-top: 20px;
 
+	
 	.content {
 		width: 300px;
 		height: 120px;
@@ -25,18 +26,18 @@
 		margin: 10px;
 		border-radius: 20px;
 		background-color: var(--cardColor);
-	
+		
 		overflow: hidden;
-	
+		
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-	
+		
 		transition: 0.3s;
 		color: var(--textColor);
 		
 		position: relative;
-	
+		
 		.text{
 			display: flex;
 			flex-direction: column;
@@ -45,11 +46,11 @@
 				margin: 5px;
 			}
 		}
-	
+		
 		*{
 			z-index: 1;
 		}
-	
+		
 		svg{
 			stroke: var(--textColor);
 			transition: 0.3s;
@@ -57,10 +58,10 @@
 				stroke: var(--backgroundColor)
 			}
 		}
-	
+		
 		&:hover{
 			color: black;
-	
+			
 			svg{
 				stroke: var(--backgroundColor);
 				&:hover{
@@ -68,7 +69,7 @@
 				}
 			}
 		}
-	
+		
 		&:after{
 			content:"";
 			position: absolute;
@@ -79,30 +80,33 @@
 			z-index: 0;
 			transition: 0.3s;
 		}
-
+		
 		&:hover:after{
 			width: 100%;
 			opacity: 1;
 		}
-	
+		
 		.projectIcons{
 			display: flex;
 			padding: 10px;
-	
+			
 			a{
 				height: fit-content;
 			}
 		}
 	}
+	.archive{
+		display: none;
+	}
 }
 
 #sorting{
-
+	
 	#search {
 		width: 100%;
 		display: flex;
 		justify-content: center;
-
+		
 		input{
 			color: var(--textColor);
 			height: 30px;
