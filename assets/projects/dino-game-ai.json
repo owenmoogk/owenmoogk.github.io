@@ -2,7 +2,7 @@
 	"meta": {
 		"title": "Dino Game AI",
 		"date": "January 26, 2021",
-		"type": "NEAT Python"
+		"type": "Python NEAT"
 	},
 	"blocks": [
 		{
