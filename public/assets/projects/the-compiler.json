@@ -3,7 +3,8 @@
 		"title": "The Compiler",
 		"date": "Oct 22, 2020",
 		"type": "Javascript",
-		"externalLink": "https://owenmoogk.github.io/the-compiler"
+		"externalLink": "https://owenmoogk.github.io/the-compiler",
+		"archive": true
 	},
 	"blocks": [
 		{

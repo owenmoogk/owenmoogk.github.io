@@ -3,7 +3,8 @@
 		"title": "Unix Time Converter",
 		"date": "June 30, 2021",
 		"type": "Javascript",
-		"externalLink": "https://owenmoogk.github.io/unix-time"
+		"externalLink": "https://owenmoogk.github.io/unix-time",
+		"archive": true
 	},
 	"blocks": [
 		{

@@ -9,6 +9,7 @@ fix and add content to all pages
 add blog with nice formatting
 
 fix the css to sort the projects (sidebar)
+	add archive viewing
 
 work page similar to linkedin (with css)
 	add freecodecamp
