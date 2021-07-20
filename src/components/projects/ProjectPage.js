@@ -7,21 +7,11 @@ export default function ProjectPage() {
 	var { name } = useParams()
 	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/' + name + ".json"
 
-	// the function called when loading page
-	function loadProjectPage() {
-		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.onreadystatechange = function () {
-			if (this.readyState === 4 && this.status === 200) {
-				setXmlContent(JSON.parse(this.response))
-			}
-		};
-		xmlhttp.open("GET", xmlFileLink, true);
-		xmlhttp.send();
-	}
-
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		loadProjectPage()
+		fetch(xmlFileLink)
+			.then(response => response.json())
+			.then(json => setXmlContent(json))
 	}, [])
 
 	function loadBlocks() {
