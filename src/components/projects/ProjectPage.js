@@ -43,6 +43,17 @@ export default function ProjectPage() {
 							: null
 						}
 					</div>
+					
+					{block.ul
+						? <ul>
+							{block.ul.map((li, key) => {
+								return (
+									<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
+								)
+							})}
+						</ul>
+						: null
+					}
 
 					{block.image
 						? Array.isArray(block.image)
@@ -65,17 +76,6 @@ export default function ProjectPage() {
 
 					{block.iframe
 						? block.iframe
-						: null
-					}
-
-					{block.ul
-						? <ul>
-							{block.ul.map((li, key) => {
-								return (
-									<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
-								)
-							})}
-						</ul>
 						: null
 					}
 
