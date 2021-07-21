@@ -20,6 +20,16 @@ export default function ProjectPage() {
 
 		// going through blocks and loading them
 		var html = blocks.map((block, key) => {
+
+			if (block.ul){
+				var newArray = []
+				for (let num = 0; num < block.ul.length; num++){
+					newArray.push(block.ul[num].replaceAll('<a', "<a target='_blank' rel='noreferrer'"))
+				}
+				block.ul = newArray
+			}
+			block.text = block.text ? block.text.replaceAll('<a', "<a target='_blank' rel='noreferrer'") : null
+
 			return (
 				<div className='block' key={key}>
 
@@ -129,21 +139,9 @@ export default function ProjectPage() {
 				<div id='blocks'>
 					{loadBlocks()}
 				</div>
-
 			</div>
 		)
-	}
-
-	// set all the project links to be external
-	window.onload = () => {
-		var links = document.getElementById('blocks').getElementsByTagName('a')
-		for (const link of links) {
-			if (!link.target){
-				link.target = '_blank'
-				link.rel = 'noreferrer'
-			}
-		}
-	};
+	}	
 
 	return (
 		xmlContent
