@@ -1,15 +1,11 @@
-add pages for:
-	geom calculator
-	covid website
-	covid scraper
-
-fix and add content to all pages
-	go thru all :/
-
 add blog with nice formatting
 
 fix the css to sort the projects (sidebar)
 	add archive viewing
+	add:
+		geom calculator
+		covid website
+		covid scraper
 
 work page similar to linkedin (with css)
 	add freecodecamp
