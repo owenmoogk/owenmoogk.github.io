@@ -1,0 +1,54 @@
+[
+	{
+		"title": "Clubhouse Employee",
+		"subtitle": "Merry Hill Golf Club",
+		"date": "May 2020 - Present",
+		"description": "I work to provide excellent customer experiences at Merry Hill Golf Club, and work to provide the best customer service. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results.",
+		"img": "<svg preserveAspectRatio=\"xMidYMid meet\" viewBox=\"0 0 24 24\"><path d=\"M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z\"/></svg>"
+	},
+	{
+		"title": "FIRST Robotics",
+		"subtitle": "First Canada",
+		"date": "August 2018 - Present",
+		"description": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills. <br><br> On top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
+		"ul": [
+			"<a href='https://2702rebels.com'>2702 Rebels Website</a>",
+			"<a href='https://www.youtube.com/watch?v=Qg6R_3o6a9M'>2019 Robot</a>",
+			"<a href='https://www.youtube.com/watch?v=tN_Rt3pt054'>2020 Robot</a>"
+		],
+		"img": "<img src='/img/work/first.png'>"
+	},
+	{
+		"title": "Choose to Lead",
+		"subtitle": "",
+		"date": "September 2018 - Present",
+		"description": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills. <br><br> Through this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are like minded and leadership-oriented, as well have learned and practiced leadership styles and management techniques.",
+		"img": "<img src='/img/work/c2l.png'>"
+	},
+	{
+		"title": "SHAD Fellow",
+		"subtitle": "SHAD Canada",
+		"date": "July 2020",
+		"description": "I have been accepted to a prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I am learning about many of different topics, with a design project focus on solving water issues in the country.",
+		"img": "<img src='/img/work/shad.png'>"
+	},
+	{
+		"title": "Umpire",
+		"subtitle": "WMBA",
+		"date": "May 2017 - May 2020",
+		"description": "As a paid umpire for the WMBA for 3 years I navigating difficult situations employing management and cooperation skills while promoting kindness, sportsmanship and fun.",
+		"img": "<img src='/img/work/wmba.png'>"
+	},
+	{
+		"title": "DECA",
+		"subtitle": "",
+		"date": "September 2018 - November 2019",
+		"description": "DECA is a global business competition, in which participants are given business case studies and must use both practical and personal skills to solve problems. <br><br> Category: Principles of Finance (PFN): Business situations associated with careers in Accounting, Banking Services, Business Finance, Insurance and Securities, and Investments. <br><br> Achieved:",
+		"ul": [
+			"Top 10% knowledge/written test",
+			"Top 10% roleplay/practical test",
+			"Advanced to provincial championship"
+		],
+		"img": "<img src='/img/work/deca.png'>"
+	}
+]
