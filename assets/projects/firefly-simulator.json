@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Firefly Simulator",
 		"date": "March 31, 2021",
-		"type": "Python Pygame"
+		"type": "Python Pygame",
+		"archive": true
 	},
 	"blocks": [
 		{
