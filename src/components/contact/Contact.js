@@ -2,56 +2,25 @@ import React from 'react';
 
 export default function ContactPage() {
 
-	function sendEmail() {
-
-		var name = document.getElementById('nameInput').value
-		var email = document.getElementById('emailInput').value
-		var subject = document.getElementById('subjectInput').value
-		var message = document.getElementById('messageInput').value
-
-		if (!(name && email && subject && message)) {
-			alert("Fields cannot be blank")
-			return
-		}
-
-		message = 'Sent from ' + name + " -- " + email + "\r\n" + message
-		var _0x7cb6 = ["\x63\x6F\x6E\x74\x61\x63\x74\x6F\x77\x65\x6E"];
-		var password = _0x7cb6[0]
-
-		// window access stuff imported in the html
-		window.Email.send({
-			Host: "smtp.gmail.com",
-			Username: "owenswebsite1@gmail.com",
-			Password: password,
-			To: 'owenmoogk@gmail.com',
-			From: "owenswebsite@gmail.com",
-			Subject: subject,
-			Body: message,
-		})
-			.then(function () {
-				document.getElementById('nameInput').value = ''
-				document.getElementById('emailInput').value = ''
-				document.getElementById('subjectInput').value = ''
-				document.getElementById('messageInput').value = ''
-				alert("Sent!")
-			});
-	}
-
 	return (
 		<div className="main">
 			<p className="title">Contact</p>
 			<div id='contactPage'>
 				<div className='contactCard'>
 					<h2>Drop a Line</h2>
-					<form onSubmit={() => sendEmail()}>
+
+					<form action="https://send.pageclip.co/4Ru6GZ2T8CCE5mMgwxPGYhtn955GxAIj" class="pageclip-form" method="post">
 						<div id='nameAndEmail'>
-							<input type='text' placeholder='Name' id='nameInput' />
-							<input type='text' placeholder='Email' id='emailInput' />
+							<input type='text' placeholder='Name' name='name' id='nameInput' />
+							<input type='text' placeholder='Email' name='email' id='emailInput' />
 						</div>
-						<input type='text' placeholder='Subject' id='subjectInput' />
-						<textarea type='text' placeholder='Message' id='messageInput' />
-						<input type='submit' />
+						<input type='text' placeholder='Subject' name='subject' id='subjectInput' />
+						<textarea type='text' placeholder='Message' name='message' id='messageInput' />
+						<button type="submit" class="pageclip-form__submit">
+							<span>Send</span>
+						</button>
 					</form>
+
 				</div>
 
 				<div id="contacts" className='contactCard'>
@@ -116,7 +85,7 @@ export default function ContactPage() {
 							<svg width="40px" height="40px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03C24.031 5.483 18.505-.18 11.955.005zm-.047 1.701a10.276 10.276 0 0 1 7.36 17.529a10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.176.176 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z" /></svg>
 						</a>
 						<a href='https://repl.it/@owenm21' target='_blank' rel='noreferrer'>
-							<svg width="40px" height="40px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12.265.002a11.911 11.911 0 0 0-2.437.204c13.876 1.704 10.27 17.94 1.717 17.819c0 0 12.453 1.625 11.673-10.215A11.911 11.911 0 0 0 12.265.002zM8.213.827c-.2.002-.402.008-.61.016A11.856 11.856 0 0 0 .146 13.608C2.93-.421 18.805 4.122 17.9 12.688c0 0 2.85-12.014-9.688-11.861zm1.454 5.035C6.002 5.886.691 7.45.816 16.344a12.013 12.013 0 0 0 2.897 4.33c.052.051.108.1.162.149a12.02 12.02 0 0 0 1.137.926c.061.044.12.092.181.135a11.93 11.93 0 0 0 1.312.779c.132.068.266.13.4.193a11.854 11.854 0 0 0 1.199.486c.1.034.195.077.297.109a11.874 11.874 0 0 0 1.49.353c.153.027.307.05.461.07a12.016 12.016 0 0 0 1.578.123l.06.003c.4 0 .792-.021 1.18-.06c-13.949-3.327-8.645-18.924-.114-17.68c0 0-1.469-.41-3.389-.398zm2.436 2.762a3.355 3.355 0 1 0 3.354 3.356a3.355 3.355 0 0 0-3.354-3.356zm-5.95 2.192S2.82 23.09 16.172 23.196a11.978 11.978 0 0 0 7.743-9.992c.033-.319.043-.644.05-.97c.001-.085.013-.168.013-.255c0-.371-.023-.737-.056-1.1c-3.527 13.887-19.132 8.448-17.77-.063z"/></svg>
+							<svg width="40px" height="40px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12.265.002a11.911 11.911 0 0 0-2.437.204c13.876 1.704 10.27 17.94 1.717 17.819c0 0 12.453 1.625 11.673-10.215A11.911 11.911 0 0 0 12.265.002zM8.213.827c-.2.002-.402.008-.61.016A11.856 11.856 0 0 0 .146 13.608C2.93-.421 18.805 4.122 17.9 12.688c0 0 2.85-12.014-9.688-11.861zm1.454 5.035C6.002 5.886.691 7.45.816 16.344a12.013 12.013 0 0 0 2.897 4.33c.052.051.108.1.162.149a12.02 12.02 0 0 0 1.137.926c.061.044.12.092.181.135a11.93 11.93 0 0 0 1.312.779c.132.068.266.13.4.193a11.854 11.854 0 0 0 1.199.486c.1.034.195.077.297.109a11.874 11.874 0 0 0 1.49.353c.153.027.307.05.461.07a12.016 12.016 0 0 0 1.578.123l.06.003c.4 0 .792-.021 1.18-.06c-13.949-3.327-8.645-18.924-.114-17.68c0 0-1.469-.41-3.389-.398zm2.436 2.762a3.355 3.355 0 1 0 3.354 3.356a3.355 3.355 0 0 0-3.354-3.356zm-5.95 2.192S2.82 23.09 16.172 23.196a11.978 11.978 0 0 0 7.743-9.992c.033-.319.043-.644.05-.97c.001-.085.013-.168.013-.255c0-.371-.023-.737-.056-1.1c-3.527 13.887-19.132 8.448-17.77-.063z" /></svg>
 						</a>
 					</div>
 				</div>
