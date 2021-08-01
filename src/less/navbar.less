@@ -3,28 +3,40 @@
 	font-size: 20px;
 	height: 70px;
 	position: fixed;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	z-index: 2;
 	background-color: var(--backgroundColor);
 	width: 100%;
 
+	.navTitle{
+		padding-left: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		background-image: linear-gradient(-45deg, var(--blue), var(--pink));
+		background-size: 100%;
+		user-select: none;
+		font-size: 25px;
+
+		background-clip: text;
+		-webkit-text-fill-color: transparent; 
+		-moz-text-fill-color: transparent;
+	}
+
 	#navLinks{
 		
+		margin-left: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		text-transform: uppercase;
+		user-select: none;
+		font-weight: bold;
+		height: fit-content;
 
 		.navlink {
 			color: var(--textColor);
 			margin: 0 20px;
-			user-select: none;
-			height: fit-content;
-			border-bottom: 2px solid transparent;		
-	
-			&:hover {
-				border-bottom: 2px solid var(--textColor);
-			}
 		}
 	}
 
