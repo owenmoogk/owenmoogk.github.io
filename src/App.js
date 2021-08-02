@@ -39,7 +39,7 @@ export default function App(props) {
 						--blue: blue;
 						--backgroundColor: rgb(230,230,230);
 						--overlayColor: rgba(255,255,255,0.8);
-						--pink: #FF69B4;
+						--pink: blue;
 						--subtitleColor: grey;
 					}`
 			}} />
