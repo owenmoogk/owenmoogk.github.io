@@ -1,7 +1,5 @@
 #workSubtitle {
-	color: var(--textColor);
 	font-size: 20px;
-	text-align: center;
 }
 
 #workItems{
@@ -13,12 +11,16 @@
 		padding-top: 20px;
 	}
 
+	h1:hover{
+		cursor: pointer;
+	}
+
 	.workItem{
 
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 20px;
+		margin-left: 20px;
 		width: 100%;
 
 		.graphics{
@@ -28,25 +30,25 @@
 		}
 
 		.svg{
-			width: 45px;
-			height: 45px;
+			width: 60px;
+			height: 60px;
 			border-radius: 50%;
-			background-color: var(--textColor);
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color: var(--cardColor);
 
 			svg, img{
-				max-width: 40px;
-				max-height: 40px;
-				fill: var(--backgroundColor);
+				max-width: 50px;
+				max-height: 50px;
+				fill: var(--textColor);
 			}
 		}
 
 		.line{
 			width: 3px;
 			height: calc(100% - 60px);
-			background-color: var(--textColor);
+			background-color: var(--cardColor);
 		}
 
 		.text{
@@ -54,28 +56,15 @@
 
 			.workTitle{
 				font-weight: bold;
-				font-size: 20px;
-			}
-
-			.subtitle{
-				color: var(--subtitleColor);
+				font-size: 25px;
 			}
 
 			.content{
 				margin-top: 10px;
+				margin-bottom: 40px;
+				color: var(--subtitleColor);
 			}
 
 		}
-
-		.workTitle:hover, .subtitle:hover{
-			cursor: pointer;
-		}
-
-		.arrow svg:hover{
-			cursor: pointer;
-		}
-
 	}
-
-
 }
