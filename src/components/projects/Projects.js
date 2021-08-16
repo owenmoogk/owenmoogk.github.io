@@ -10,28 +10,28 @@ export default function ProjectPage() {
 	function fetchProjects() {
 		var tmpProjectData = []
 		fetch(process.env.PUBLIC_URL + 'assets/projectDirectory.json')
-		.then(response => response.json())
-		.then(projectUrls => {
-			var requests = []
-			for (const projectUrl of projectUrls) {
-				requests.push(fetch(process.env.PUBLIC_URL + 'assets/projects/' + projectUrl + '.json')
-					.then(response => response.json())
-					.then(currentProjectData => {
-						tmpProjectData.push({...currentProjectData.meta, name: projectUrl})
+			.then(response => response.json())
+			.then(projectUrls => {
+				var requests = []
+				for (const projectUrl of projectUrls) {
+					requests.push(fetch(process.env.PUBLIC_URL + 'assets/projects/' + projectUrl + '.json')
+						.then(response => response.json())
+						.then(currentProjectData => {
+							tmpProjectData.push({ ...currentProjectData.meta, name: projectUrl })
+						})
+						.catch(error => console.log(projectUrl))
+					)
+				}
+				// once all the loading is done
+				Promise.all(requests).then(function () {
+					// make sure they are in the proper order, sort by name
+					tmpProjectData.sort((a, b) => {
+						return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name))
 					})
-					.catch(error => console.log(projectUrl))
-				)
-			}
-			// once all the loading is done
-			Promise.all(requests).then(function(){
-				// make sure they are in the proper order, sort by name
-				tmpProjectData.sort((a,b) => {
-					return(projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name))
-				})
 
-				setProjectData(tmpProjectData)
+					setProjectData(tmpProjectData)
+				})
 			})
-		})
 	}
 
 	useEffect(() => {
@@ -39,29 +39,32 @@ export default function ProjectPage() {
 	}, [])
 
 	return (
-		<div className="main">
-			<p className="title">Projects</p>
-			<br></br>
-			<div id="sorting">
-				<div id="buttons">
-					<ProjectButton name='All' />
-					<ProjectButton name='Python' />
-					<ProjectButton name='Javascript' />
-					<ProjectButton name='React' />
-					<ProjectButton name='Django' />
-					<ProjectButton name='Solidworks' />
-					<ProjectButton name='Mechanical' />
+		<div style={{ paddingTop: '100px' }}>
+			<p className="title" id='projectTitle'>Projects</p>
+
+			<div id='mainProjectPage'>
+				<div id="sortingContainer">
+					<div id='sticky'>
+						<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
+						<br />
+						<ProjectButton name='All' />
+						<ProjectButton name='Python' />
+						<ProjectButton name='Javascript' />
+						<ProjectButton name='React' />
+						<ProjectButton name='Django' />
+						<ProjectButton name='Solidworks' />
+						<ProjectButton name='Mechanical' />
+					</div>
 				</div>
-				<div id="search">
-					<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search by Date, Title, or Text" title="Type to search" />
+
+				<div id="projectsGoHere">
+					{projectData
+						? projectData.map((data, key) =>
+							<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} />)
+						: null
+					}
 				</div>
-			</div>
-			<div id="projectsGoHere">
-				{projectData
-					? projectData.map((data, key) => 
-					<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} />)
-					: null
-				}
+
 			</div>
 		</div>
 	);
