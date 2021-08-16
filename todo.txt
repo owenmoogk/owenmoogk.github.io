@@ -7,5 +7,4 @@ fix the css to sort the projects (sidebar)
 		covid website
 		covid scraper
 
-work page similar to linkedin (with css)
-	add freecodecamp
+add snake ai to page
