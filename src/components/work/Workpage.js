@@ -32,14 +32,14 @@ export default function Workpage() {
 	}
 
 	return (
-		<div className="main">
+		<div className="main" id='workPage'>
 			<p className="title">Work</p>
 			<p className='subtitle'>Connect with me on <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href='/assets/resume.pdf' target='_blank' rel='noreferrer'>Resume</a></p>
 			{workData
 				? <div id='workItems'>
 
 					<h1 onClick={() => toggleActive(0)}>{loadArrow(0)}Experience</h1>
-					<div style={{ display: activeDropdown === 0 ? '' : 'none' }}>
+					<div style={{ display: activeDropdown === 0 ? '' : 'none', width: '90%'}}>
 						{workData.experience.map((data, key) => <WorkItem key={key} data={data} />)}
 					</div>
 

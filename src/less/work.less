@@ -1,14 +1,18 @@
-#workSubtitle {
-	font-size: 20px;
+
+#workPage{
+	display: flex;
+	flex-direction: column;
 }
 
 #workItems{
-	width: min(600px, 100%);
+	width: max(450px, 70%);
+	// width: 450px;/
 	border-radius: 20px;
 	padding-bottom: 40px;
 
 	h1{
 		padding-top: 20px;
+		width: fit-content;
 	}
 
 	h1:hover{
@@ -66,5 +70,20 @@
 			}
 
 		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#workPage{
+		align-items: center;
+		
+		#workItems{
+			width: 90%;
+
+			h1{
+				font-size: 25px;
+			}
+		}
+
 	}
 }
