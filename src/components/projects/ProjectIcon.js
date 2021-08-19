@@ -12,6 +12,7 @@ export default function ProjectIcon(props) {
 
 	return (
 		<a href={link} style={{display: hide ? 'none' : ''}}>
+			
 			<style dangerouslySetInnerHTML={{__html: `
 				.${primaryType}Tile:after{
 					background: var(--${primaryType}, grey)
@@ -20,6 +21,17 @@ export default function ProjectIcon(props) {
 
 			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
 			<div className={"content "+primaryType+"Tile "+type+ (props.archive===true ? " archive": "")} style={{border: '2px solid var(--'+primaryType+', grey)'}}>
+
+				{
+					props.archive
+						? <svg className='archiveIcon' style={{
+							position: 'absolute',
+							bottom: '15px',
+							right: '14px'
+						}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8"/></g></svg>
+						: null
+				}
+
 				<div>
 					<h3 className="content-title">{props.title}</h3>
 					<p className="type">{type}</p>
