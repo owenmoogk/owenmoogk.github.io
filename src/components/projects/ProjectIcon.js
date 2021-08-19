@@ -8,7 +8,7 @@ export default function ProjectIcon(props) {
 	let primaryType = type.split(' ')[0].toLowerCase()
 	
 	// if we want to show the archives, then the others are hidden
-	var hide = props.showArchive != (props.archive == true) 
+	var hide = props.showArchive !== (props.archive === true) 
 
 	return (
 		<a href={link} style={{display: hide ? 'none' : ''}}>
@@ -28,7 +28,7 @@ export default function ProjectIcon(props) {
 							position: 'absolute',
 							bottom: '15px',
 							right: '14px'
-						}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8"/></g></svg>
+						}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8"/></g></svg>
 						: null
 				}
 
