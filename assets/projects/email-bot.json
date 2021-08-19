@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Email Bot",
 		"date": "January 6, 2021",
-		"type": "Python"
+		"type": "Python",
+		"archive": true
 	},
 	"blocks": [
 		{

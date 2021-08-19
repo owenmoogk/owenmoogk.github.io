@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Sticky Caps",
 		"date": "June 30, 2021",
-		"type": "Python"
+		"type": "Python",
+		"archive": true
 	},
 	"blocks": [
 		{

@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "NHL Fantasy App",
 		"date": "March 24, 2021",
-		"type": "Django"
+		"type": "Django",
+		"archive": true
 	},
 	"blocks": [
 		{
