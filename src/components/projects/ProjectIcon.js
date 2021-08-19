@@ -7,8 +7,11 @@ export default function ProjectIcon(props) {
 	let type = props.type
 	let primaryType = type.split(' ')[0].toLowerCase()
 	
+	// if we want to show the archives, then the others are hidden
+	var hide = props.showArchive != (props.archive == true) 
+
 	return (
-		<a href={link}>
+		<a href={link} style={{display: hide ? 'none' : ''}}>
 			<style dangerouslySetInnerHTML={{__html: `
 				.${primaryType}Tile:after{
 					background: var(--${primaryType}, grey)
