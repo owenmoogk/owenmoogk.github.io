@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Pendulum Physics Simulator",
 		"date": "February 26, 2021",
-		"type": "Python Matplotlib Pygame"
+		"type": "Python Matplotlib Pygame",
+		"archive": true
 	},
 	"blocks": [
 		{

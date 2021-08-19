@@ -3,7 +3,8 @@
 		"title": "Website Development",
 		"date": "April 21, 2020",
 		"githubLink": "https://github.com/owenmoogk/personal-website",
-		"type": "React"
+		"type": "React",
+		"archive": true
 	},
 	"blocks": [
 		{

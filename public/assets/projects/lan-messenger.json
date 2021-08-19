@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "LAN Messenger",
 		"date": "March 14, 2021",
-		"type": "Django Javascript"
+		"type": "Django Javascript",
+		"archive": true
 	},
 	"blocks": [
 		{

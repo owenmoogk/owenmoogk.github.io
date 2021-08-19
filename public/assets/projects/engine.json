@@ -3,7 +3,8 @@
 		"title": "Engine Assembly",
 		"date": "March 16, 2020",
 		"githubLink": "",
-		"type": "Mechanical"
+		"type": "Mechanical",
+		"archive": true
 	},
 	"blocks": [
 		{

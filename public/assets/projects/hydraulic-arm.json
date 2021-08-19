@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Hydraulic Arm",
 		"date": "November 7, 2020",
-		"type": "Solidworks"
+		"type": "Solidworks",
+		"archive": true
 	},
 	"blocks": [
 		{
