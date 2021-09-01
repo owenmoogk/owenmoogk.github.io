@@ -1,0 +1,39 @@
+{
+	"meta": {
+		"title": "Eco Flow",
+		"date": "July 30, 2020",
+		"type": "Solidworks C++"
+	},
+	"blocks": [
+		{
+			"render": "apperatus-2.jpg"
+		},
+		{
+			"title": "Overview",
+			"text": "This ultrasonic flow rate sensor was the solution I designed to a design project for the SHAD program. I participated in this program virtually through the month of July, and the biggest challenge was the design project, coming up with a solution to a real world problem. This year we were tasked with encouraging Canadian homeowners to be more respectful of the water that they are using. <br><br> So, with my design team, we came up with the solution of tracking water usage at different locations of the household to provide meaningful insight into water use habits, which can be compatible with greywater systems, and many applicances. This sensor worked hand in hand with an app to integrate smoothly into the homeowners life."
+		},
+		{
+			"title": "Design",
+			"text": "I personally led the design of the flow rate sensor, in which we were trying to solve two main issues, being cost and convienience. There are many flow rate detectors that are quite accurate but have to be inserted into the pipe, which requires a lot of work and is not very cost effective either given install costs. <br><br> The other option is using ultrasonic sensors or something of the sort, therefore not needing to cut through the pipe at all. This can be convienient but is very expensive given current solutions, ranging from 4000-6000 dollars"
+		},
+		{
+			"title": "Components",
+			"text": "This was designed with an arduino uno, connected to an ultrasonic sensor. I had to take the ultrasonic sensor and desolder the transmitter. This left two seperate modules that could communicate with eachother. This was then attatched to some 3D printed housing (see below), which allowed it to be clamped onto the pipe.",
+			"image": ["housing.jpg", "Components.jpg"]
+		},
+		{
+			"video": "desc.mp4"
+		},
+		{
+			"title": "Result",
+			"text": "In the end, we were very happy with our results, designing a full application and the hardware solution, along with creating a business plan and marketing content. I talked here mostly about the hardware as that was my focus, specialty, and what I am most passionate about but it really was the basis of starting a business. Here is the <a href='/img/projects/eco-flow/onepager.pdf'>One Pager</a> we created, and you can also check out our <a href='https://www.figma.com/file/5FlCRbLdZS3zMjbsdgtB1w/Water-App-Prototype-(Copy)?node-id=0%3A1'>App Prototype</a>."
+		},
+		{
+			"title": "Demo",
+			"video": "demo.mp4"
+		},
+		{
+			"render": "title.png"
+		}
+	]
+}

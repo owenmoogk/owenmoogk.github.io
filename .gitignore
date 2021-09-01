@@ -25,3 +25,4 @@ yarn-error.log*
 # using less
 src/css/
 .vscode/settings.json
+public/img/projects/eco-flow/demo.mp4
