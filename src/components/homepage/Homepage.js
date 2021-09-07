@@ -48,7 +48,7 @@ export default function Homepage() {
 							
 							<br/><br/>
 
-							To pursue more learning and experience in these fields I have participated in many extracurriculars, including working as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involving myself in the <a href="https://dukeofed.org">Duke of Edinburgh's Award</a>, and attending the prestegious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. More info about all of this can be found on my <a href='work'>Work</a> page.
+							To pursue more learning and experience in these fields I have participated in many extracurriculars, including working as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involving myself in the <a href="https://dukeofed.org">Duke of Edinburgh's Award</a>, and attending the prestegious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. More info about all of this can be found on my <a href='work'>work</a> page.
 						</p>
 					</div>
 
