@@ -6,17 +6,28 @@
 
 #workItems{
 	width: max(450px, 70%);
-	// width: 450px;/
+	// width: 450px;
 	border-radius: 20px;
 	padding-bottom: 40px;
 
 	h1{
 		padding-top: 20px;
 		width: fit-content;
+		margin-top: 0;
 	}
 
 	h1:hover{
 		cursor: pointer;
+	}
+
+	.workDisplayer{
+		transition: 0.5s;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.measureDiv{
+		width: 90%
 	}
 
 	.workItem{
