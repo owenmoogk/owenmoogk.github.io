@@ -18,7 +18,7 @@
 		},
 		{
 			"title": "Components",
-			"text": "This was designed with an arduino uno, connected to an ultrasonic sensor. I had to take the ultrasonic sensor and desolder the transmitter. This left two seperate modules that could communicate with eachother. This was then attatched to some 3D printed housing (see below), which allowed it to be clamped onto the pipe.",
+			"text": "This was designed with an Arduino Uno, connected to an ultrasonic sensor. I had to take the ultrasonic sensor and desolder the transmitter. This left two seperate modules that could communicate with eachother. This was then attatched to some 3D printed housing (see below), which allowed it to be clamped onto the pipe.",
 			"image": ["housing.jpg", "Components.jpg"]
 		},
 		{
