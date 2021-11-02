@@ -29,7 +29,7 @@ export default function Homepage() {
 
 				<svg onClick={() => {
 					window.scroll(0, window.innerHeight - 70)
-				}} id='downArrow' width="30px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M4 9l8 8l8-8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
+				}} id='downArrow' width="30px" height="30px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M4 9l8 8l8-8" stroke="var(--textColor)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
 
 			</div>
 
