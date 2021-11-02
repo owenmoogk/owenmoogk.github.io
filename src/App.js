@@ -32,15 +32,17 @@ export default function App(props) {
 						--overlayColor: rgba(0,0,0,0.8);
 						--pink: #FF69B4;
 						--subtitleColor: lightgrey;
+						--grey: lightgrey;
 					}`
 					: `:root {
-						--cardColor: white;
+						--cardColor: rgb(230,230,230);
 						--textColor: black;
 						--blue: blue;
-						--backgroundColor: rgb(230,230,230);
+						--backgroundColor: white;
 						--overlayColor: rgba(255,255,255,0.8);
 						--pink: blue;
 						--subtitleColor: grey;
+						--grey: grey;
 					}`
 			}} />
 			<Nav toggleDarkMode={toggleDarkMode}/>
