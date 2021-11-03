@@ -1,32 +1,13 @@
 
 #contactPage{
 
-	display: flex;
-	flex-direction: column;
-
 	.contactCard{
-		height: fit-content;
-		width: 500px;
-
-		display: flex;
-		flex-direction: column;
+		max-width: 700px;
 
 		h2{
-			// text-align: center;
 			font-size: 30px;
 			margin-bottom: 10px;
-			font-weight: lighter;
-		}
-
-	}
-
-	svg{
-		fill: var(--textColor);
-		transition: 0.3s;
-
-		&:hover{
-			fill: var(--grey);
-			transform: scale(1.1);
+			font-weight: normal;
 		}
 	}
 
@@ -34,19 +15,6 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		
-		button{
-			width: 100px;
-			margin: auto;
-			color: var(--textColor);
-			outline: none;
-			border: none;
-			border-radius: 10px;
-			font-size: 15px;
-			padding: 10px 0;
-			background-color: var(--backgroundColor);
-			margin-top: 10px;
-		}
 
 		#name{
 			display: flex;
@@ -55,16 +23,17 @@
 		}
 
 		input, textarea{
-			background-color: var(--backgroundColor);
+			font-size: 15px;
 			padding: 10px;
 			margin: 5px;
 			border-radius: 5px;
-			outline: none;
-			border: none;
 			color: var(--textColor);
-			flex: 1;
+			background-color: var(--backgroundColor);
 			border: 1px solid var(--textColor);
-			font-size: 15px;
+		}
+
+		input{
+			flex: 1;
 		}
 
 		textarea{
@@ -73,11 +42,13 @@
 		}
 
 		button[type='submit']{
-			width: fit-content;
+			border-radius: 10px;
+			font-size: 15px;
 			padding: 5px 20px;
 			margin: auto;
 			margin-top: 5px;
 			border: 1px solid var(--textColor);
+			background-color: var(--backgroundColor);
 			transition: 0.3s;
 
 			&:hover{
@@ -86,28 +57,27 @@
 		}
 	}
 
-	#contacts {
-		line-height: 40px;
-		max-width: 500px;
 
-		#contactLinks{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			// justify-content: center;
+	#contactLinks{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-bottom: 50px;
 
-			svg{
-				width: 30px; 
-				height: 30px;
+		svg{
+			fill: var(--textColor);
+			transition: 0.3s;
+			width: 30px; 
+			height: 30px;
+	
+			&:hover{
+				fill: var(--grey);
+				transform: scale(1.1);
 			}
+		}
 
-			a{
-				padding: 10px;
-			}
+		a{
+			padding: 10px;
 		}
 	}
 }
-
-// @media only screen and (max-width: 1186px) {
-	
-// }

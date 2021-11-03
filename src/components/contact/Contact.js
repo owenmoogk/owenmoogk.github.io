@@ -24,7 +24,7 @@ export default function ContactPage() {
 
 				</div>
 
-				<div id="contacts" className='contactCard'>
+				<div className='contactCard'>
 					<h2>...or find me here</h2>
 
 					<div id='contactLinks'>
