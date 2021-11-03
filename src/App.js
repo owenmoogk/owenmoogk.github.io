@@ -13,7 +13,7 @@ import 'styles.css'
 
 export default function App(props) {
 
-	const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === 'false' ? false : true)
+	const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === 'true' ? true : false)
 
 	function toggleDarkMode() {
 		localStorage.setItem('darkmode', darkMode ? false : true)
