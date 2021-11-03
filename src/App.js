@@ -28,7 +28,7 @@ export default function App(props) {
 						--backgroundColor: black;
 						--textColor: white;
 						--cardColor: rgb(30,30,30);
-						--overlayColor: rgba(0,0,0,0.8);
+						--overlayColor: rgba(0,0,0,0.9);
 						--primaryColor: #FF69B4;
 						--grey: lightgrey;
 						--lightgrey: grey
@@ -37,7 +37,7 @@ export default function App(props) {
 						--cardColor: rgb(230,230,230);
 						--textColor: black;
 						--backgroundColor: white;
-						--overlayColor: rgba(255,255,255,0.8);
+						--overlayColor: rgba(255,255,255,0.9);
 						--primaryColor: blue;
 						--grey: grey;
 						--lightgrey: lightgrey;
