@@ -1,0 +1,165 @@
+// this is for mobile stuff
+
+// cutoff for mobile display is 875px, it is when the nav no longer fits
+
+@media only screen and (max-width: 875px) {
+
+
+    // INDEX
+    .main{
+		max-width: 100%;
+		margin: 0%;
+		padding-top: 50px;
+	}
+	h2{
+		text-align: center;
+	}
+	#contactLinks{
+		justify-content: center;
+	}
+	.title{
+		margin: 0 !important;
+		width: 100% !important;
+		text-align: center !important;
+	}
+	.title + .subtitle{
+		text-align: center;
+	}
+
+    // NAV
+	#navButton{
+		z-index: 10;
+		display: flex;
+	}
+	#navBox{
+		flex-direction: column;
+		display: none;
+		height: 100vh;
+		width: 100vw;
+		background-color: var(--overlayColor);
+		justify-content: center;
+
+		.navTitle{
+			padding-left: 0;
+		}
+		#navLinks {
+			flex-direction: column;
+			margin: 0;
+			
+			.navlink{
+				margin-top: 10px;
+				font-size: 40px;
+			}
+		}
+		#darkmode{
+			border-radius: 50%;
+			height: 40px;
+			width: 40px;
+			margin: 20px;
+			background-color: var(--textColor);
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+    // WORK
+    #workPage{
+		align-items: center;
+		
+		#workItems{
+			width: 90%;
+
+			h1{
+				font-size: 25px;
+			}
+		}
+	}
+
+    // CONTACT
+    #contactPage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+// HOMEPAGE SPLITSCREEN (SKILLS)
+@media only screen and (max-width: 1200px) {
+	#homepageSplitscreen{
+		flex-direction: column !important;
+		
+		& > *{
+			max-width: 700px;
+			margin-bottom: 0px !important;
+			margin-top: 0px !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#projectBody{
+		margin-left: 15px;
+		margin-right: 15px;
+		// everything is centered except for p
+		text-align: center;
+		p{
+			text-align: left;
+		}
+
+		.img{
+			margin-right: 0 !important;
+		}
+
+		#hr{
+			margin: auto;
+		}
+
+		#icons{
+			justify-content: center;
+		}
+
+		.text{
+			max-width: 1000px;
+		}
+
+		.title{
+			margin: auto;
+		}
+
+		li{
+			width: fit-content;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1020px) {
+	#mainProjectPage{
+		flex-direction: column;
+	}
+	
+	#sortingContainer .btn{
+		display: none;
+	}
+
+	#sortingContainer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sticky{
+		visibility: hidden;
+
+		input{
+			visibility: visible;
+		}
+	}
+
+	#projectsGoHere{
+		justify-content: center;
+		margin-left: 0 !important;
+	}
+}
