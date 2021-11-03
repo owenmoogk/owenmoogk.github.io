@@ -39,7 +39,7 @@ export default function Homepage() {
 
 						<h1>About</h1>
 						<p>
-							Hey there, it's Owen! This is my website I made using ReactJS to work on my web developement skills as well as showcase my work and skills. If you have any inquires, questions, or comments, feel free to <a href='/contact'>reach out</a>!
+							Hey there, it's Owen! This is my website I made using ReactJS to work on my web development skills as well as showcase my work and skills. If you have any inquires, questions, or comments, feel free to <a href='/contact'>reach out</a>!
 
 							<br /><br />
 
