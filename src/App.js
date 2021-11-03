@@ -27,22 +27,20 @@ export default function App(props) {
 					? `:root{
 						--backgroundColor: black;
 						--textColor: white;
-						--blue: lightblue;
 						--cardColor: rgb(30,30,30);
 						--overlayColor: rgba(0,0,0,0.8);
-						--pink: #FF69B4;
-						--subtitleColor: lightgrey;
+						--primaryColor: #FF69B4;
 						--grey: lightgrey;
+						--lightgrey: grey
 					}`
 					: `:root {
 						--cardColor: rgb(230,230,230);
 						--textColor: black;
-						--blue: blue;
 						--backgroundColor: white;
 						--overlayColor: rgba(255,255,255,0.8);
-						--pink: blue;
-						--subtitleColor: grey;
+						--primaryColor: blue;
 						--grey: grey;
+						--lightgrey: lightgrey;
 					}`
 			}} />
 			<Nav toggleDarkMode={toggleDarkMode}/>

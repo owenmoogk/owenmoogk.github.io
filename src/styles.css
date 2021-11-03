@@ -13,7 +13,7 @@
 /* highlights */
 
 ::selection {
-	background: grey;
+	background: lightgray;
 	color: black;
 }
 

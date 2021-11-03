@@ -52,7 +52,7 @@ a{
 }
 
 .special{	
-	background-image: linear-gradient(-45deg, var(--blue), var(--pink));
+	background-image: linear-gradient(-45deg, var(--primaryColor), var(--primaryColor));
 	background-size: 100%;
 	user-select: none;
 
@@ -76,9 +76,10 @@ p a{
 }
 
 li a{
-	color: var(--pink);
+	color: var(--grey);
+	text-decoration: underline;
 
 	&:hover{
-		border-bottom: 2px solid var(--pink);
+		text-decoration: none;
 	}
 }
