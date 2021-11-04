@@ -9,65 +9,34 @@
 	--white: #ffffff;
 }
 
-#projectTitle{
-	margin: 10px 330px;
-}
-
-#mainProjectPage{
-	
-	display: flex;
-	flex-direction: row;
+#projectPage{
 
 	#sortingContainer{
-		
-		// position: relative;
-		// top: -100px;
 
-		#sticky{
-			position: sticky;
-			top: 70px;
-			display: flex;
-			flex-direction: column;
-			padding: 40px;
-			width: 200px;
-			border-top: 2px solid var(--textColor);
-			border-right: 2px solid var(--textColor);
-			border-bottom: 2px solid var(--textColor);
-			border-top-right-radius: 10px;
-			border-bottom-right-radius: 10px;
-			background-color: var(--cardColor);
-		}
-			
+		margin-top: 20px;
+		display: flex;
+        flex-wrap: wrap;
+
 		input{
 			color: var(--textColor);
-			background-color: var(--cardColor);
+			background-color: var(--backgroundColor);
 			border: 2px solid var(--textColor);
-			font-size: 20px;
-			padding: 4px 6px 4px 6px;
-			margin: 0 5px 5px 0;
-			border-radius: 4px;
-			font-weight: 600;
-		}		
+			font-weight: normal !important;
+		}
 		
 		p{
 			margin: 0;
 		}
 
-		.btn {
+		.btn, input {
+			font-size: 16px;
 			float: left;
-			padding: 4px 6px 4px 6px;
+			padding: 4px 6px;
 			margin: 0 5px 5px 0;
 			border-radius: 4px;
 			font-weight: 600;
 			cursor: pointer;
 			transition: 0.3s;
-		}
-
-		#archiveButton{
-			margin-bottom: 20px;
-			& p{
-				transition: 0.3s;
-			}
 		}
 	}
 
@@ -76,15 +45,13 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
-		margin-left: 40px;
 		width: 100%;
-		height: fit-content;
 		
 		.content {
 			width: 300px;
 			height: 120px;
 			padding-left: 20px;
-			margin: 10px;
+			margin: 10px 20px 10px 0;
 			border-radius: 20px;
 			background-color: var(--cardColor);
 			
@@ -97,17 +64,10 @@
 			transition: 0.3s;
 			color: var(--textColor);
 			
-			position: relative;
-
-			.text{
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				*{
-					margin: 5px;
-				}
-			}
+			position: relative; // for the :after effect
 			
+
+			// makes hover thingy appear on bottom, text stays on top
 			*{
 				z-index: 1;
 			}
@@ -116,21 +76,18 @@
 				stroke: var(--textColor);
 				transition: 0.3s;
 				&:hover{
-					stroke: var(--backgroundColor)
+					transform: scale(1.2);
 				}
 			}
 			
 			&:hover{
 				color: black;
-				
 				svg{
-					stroke: var(--backgroundColor);
-					&:hover{
-						stroke: var(--textColor)
-					}
+					stroke: black;
 				}
 			}
 			
+			// hover animation
 			&:after{
 				content:"";
 				position: absolute;
