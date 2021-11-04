@@ -11,8 +11,13 @@ export default function ProjectButton(props) {
 		}}
 		>
 			<p>{props.name}</p>
-			<style dangerouslySetInnerHTML={{__html: `
+			<style dangerouslySetInnerHTML={{
+				__html: `
 				.sort_${name}.active{
+					background-color: var(--${name}) !important;
+					color: var(--textColor) !important
+				}
+				.sort_${name}:hover{
 					background-color: var(--${name}) !important;
 					color: var(--textColor) !important
 				}
