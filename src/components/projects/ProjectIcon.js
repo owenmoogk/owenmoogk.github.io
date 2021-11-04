@@ -53,7 +53,7 @@ export default function ProjectIcon(props) {
 					{/* github logo */}
 					{githubLink
 						? <a href={githubLink} target='_blank' rel='noreferrer'>
-							<svg width="25px" height="25px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" className={type}>
+							<svg width="25px" height="25px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g fill="none">
 									<path d="M12 4c1.668 0 2.612.4 3 .5c.525-.425 1.938-1.5 3.5-1.5c.344 1 .286 2.22 0 3c.75 1 1 2 1 3.5c0 2.188-.483 3.582-1.5 4.5c-1.017.918-2.111 1.375-3.5 1.5c.65.538.5 1.874.5 2.5v3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 									<path d="M12 4c-1.668 0-2.612.4-3 .5C8.475 4.075 7.062 3 5.5 3c-.344 1-.286 2.22 0 3c-.75 1-1 2-1 3.5c0 2.188.483 3.582 1.5 4.5c1.017.918 2.111 1.375 3.5 1.5c-.65.538-.5 1.874-.5 2.5v3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
