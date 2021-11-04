@@ -34,7 +34,7 @@ export default function App(props) {
 						--lightgrey: grey
 					}`
 					: `:root {
-						--cardColor: rgb(230,230,230);
+						--cardColor: rgb(245,245,245);
 						--textColor: black;
 						--backgroundColor: white;
 						--overlayColor: rgba(255,255,255,0.9);
