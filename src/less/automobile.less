@@ -87,7 +87,7 @@
 		justify-content: center;
 	}
 
-    // PROJECTS
+    // PROJECT PAGES
     #projectBody{
 		margin-left: 15px;
 		margin-right: 15px;
@@ -121,6 +121,15 @@
 			width: fit-content;
 		}
 	}
+
+    // PROJECTS
+    #sortingContainer{
+		justify-content: center;
+	}
+	#projectsGoHere{
+		justify-content: center;
+		margin-left: 0 !important;
+	}
 }
 
 // HOMEPAGE SPLITSCREEN (SKILLS)
@@ -133,34 +142,5 @@
 			margin-bottom: 0px !important;
 			margin-top: 0px !important;
 		}
-	}
-}
-
-@media only screen and (max-width: 1020px) {
-	#mainProjectPage{
-		flex-direction: column;
-	}
-	
-	#sortingContainer .btn{
-		display: none;
-	}
-
-	#sortingContainer{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	#sticky{
-		visibility: hidden;
-
-		input{
-			visibility: visible;
-		}
-	}
-
-	#projectsGoHere{
-		justify-content: center;
-		margin-left: 0 !important;
 	}
 }
