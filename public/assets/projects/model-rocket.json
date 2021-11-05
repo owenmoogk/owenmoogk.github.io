@@ -6,7 +6,7 @@
 	},
 	"blocks": [
 		{
-			"image": "rocket.png"
+			"render": "rocket.png"
 		},
 		{
 			"title": "Overview",
