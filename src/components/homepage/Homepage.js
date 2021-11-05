@@ -39,16 +39,16 @@ export default function Homepage() {
 
 						<h1>About</h1>
 						<p>
-							Hey there, it's Owen! This is my website I made using ReactJS to work on my web development skills as well as showcase my work and skills. If you have any inquires, questions, or comments, feel free to <a href='/contact'>reach out</a>!
+							Hey there, it's Owen! This is my website I made using ReactJS to work on my web development skills as well as showcase my work and talents. If you have any inquires, questions, or comments, feel free to <a href='/contact'>reach out</a>!
 
 							<br /><br />
 
-							I am currently a highschool student at <a href="https://bci.wrdsb.ca" target="_blank" rel='noreferrer'>Bluevale Collegiate Institute</a>,
-							who is quite passionate about engineering, coding, and design. Check out my <a href="projects">projects</a> page for details on personal endevours with Coding, Hardware, Web Development, and 3D printing.
+							I am currently a highschool student in Grade 12 at <a href="https://bci.wrdsb.ca" target="_blank" rel='noreferrer'>Bluevale Collegiate Institute</a>,
+							who is quite passionate about engineering and design. Check out my <a href="projects">projects</a> page for details on personal endeavors with coding, hardware, web development, and 3D printing.
 							
 							<br/><br/>
 
-							To pursue more learning and experience in these fields I have participated in many extracurriculars, including working as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involving myself in the <a href="https://dukeofed.org">Duke of Edinburgh's Award</a>, and attending the prestegious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. More info about all of this can be found on my <a href='work'>work</a> page.
+							To pursue more learning and experience in these fields I have participated in many extracurriculars, including working as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involving myself in the <a href="https://dukeofed.org" target="_blank" rel='noreferrer'>Duke of Edinburgh's Award</a>, and attending the prestigious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. More info about all of this can be found on my <a href='work'>work</a> page.
 						</p>
 					</div>
 
@@ -70,7 +70,6 @@ export default function Homepage() {
 							<h3>Mechanical</h3>
 							<SkillIcon name='Solidworks' percent={60} doLoad={skillsLoaded} />
 							<SkillIcon name='3D Printing' percent={70} doLoad={skillsLoaded} />
-
 						</table>
 					</div>
 
