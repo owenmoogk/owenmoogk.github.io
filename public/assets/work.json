@@ -13,9 +13,10 @@
 			"date": "August 2018 - Present",
 			"description": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills. <br><br> On top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
 			"ul": [
-				"<a href='https://2702rebels.com'>2702 Rebels Website</a>",
-				"<a href='https://www.youtube.com/watch?v=Qg6R_3o6a9M'>2019 Robot</a>",
-				"<a href='https://www.youtube.com/watch?v=tN_Rt3pt054'>2020 Robot</a>"
+				"<a href='https://2702rebels.com' target='_blank'>2702 Rebels Website</a>",
+				"<a href='https://www.youtube.com/watch?v=Qg6R_3o6a9M' target='_blank'>2019 Robot</a>",
+				"<a href='https://www.youtube.com/watch?v=tN_Rt3pt054' target='_blank'>2020 Robot</a>",
+				"<a href='https://www.firstinspires.org' target='_blank'>FIRST Program</a>"
 			],
 			"img": "<img src='/img/work/first.png'>"
 		},
@@ -23,14 +24,19 @@
 			"title": "Choose to Lead",
 			"subtitle": "",
 			"date": "September 2018 - Present",
-			"description": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills. <br><br> Through this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are like minded and leadership-oriented, as well have learned and practiced leadership styles and management techniques.",
+			"description": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills. <br><br> Through this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are like minded and leadership-oriented, as well have learned and practiced leadership styles and management techniques. More information about the program can be found <a href='https://bci.wrdsb.ca/choose-to-lead/' target='_blank'>here</a>.",
 			"img": "<img src='/img/work/c2l.png'>"
 		},
 		{
 			"title": "SHAD Fellow",
 			"subtitle": "SHAD Canada",
 			"date": "July 2020",
-			"description": "I have been accepted to a prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I am learning about many of different topics, with a design project focus on solving water issues in the country.",
+			"description": "I was accepted to and participated in SHAD Canada, a month-long STEM-based summer program being held (virtually) from the University of PEI. I learned and conversed with Ph.D. professors and business professionals about many different topics, ranging from cryptography to geological issues and starting businesses. In the end, with a small team I designed and engineered an award-winning solution to Canadian water problems.",
+			"ul": [
+				"<a href='https://shad.ca' target='_blank'>SHAD Canada Website</a>",
+				"<a href='/projects/eco-flow/'>EcoFlow Water Project</a>",
+				"<a href='/assets/shad-certificate.pdf' target='_blank'>SHAD Certificate</a>"
+			],
 			"img": "<img src='/img/work/shad.png'>"
 		},
 		{
@@ -91,6 +97,9 @@
 			"subtitle": "freeCodeCamp",
 			"date": "July 2021",
 			"description": "Completed the 300 hour course on responsive web design, to further solidify my skills and expose myself to different techniques and ideas.",
+			"ul": [
+				"<a href='https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design' target='_blank'>Certification</a>"
+			],
 			"img": "<img src='/img/work/free-code-camp.png'>"
 		}
 	]

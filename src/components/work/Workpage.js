@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import WorkItem from './WorkItem'
 
@@ -79,6 +78,7 @@ export default function Workpage() {
 				</div>
 				: null
 			}
+			<p className='subtitle'>A condensed version of my working documents can be found <a href='/assets'>here</a>.</p>
 		</div>
 	);
 }

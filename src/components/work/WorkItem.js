@@ -1,6 +1,7 @@
 export default function WorkItem(props) {
 
 	var data = props.data
+	console.log(data)
 
 	return (
 		<div className="workItem">
@@ -21,7 +22,7 @@ export default function WorkItem(props) {
 					</div>
 					{data.description
 						? <div className='content'>
-							<div dangerouslySetInnerHTML={{ __html: data.description }} />
+							<p dangerouslySetInnerHTML={{ __html: data.description }} />
 							<div>
 								{data.ul
 									? <ul>
