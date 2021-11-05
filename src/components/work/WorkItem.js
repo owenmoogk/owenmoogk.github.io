@@ -16,8 +16,8 @@ export default function WorkItem(props) {
 					<div>
 						<div className='workTitle'>{data.title}</div>
 						{data.subtitle
-							? <div className='subtitle'>{data.subtitle} • {data.date}</div>
-							: <div className='subtitle'>{data.date}</div>
+							? <div>{data.subtitle} • {data.date}</div>
+							: <div>{data.date}</div>
 						}
 					</div>
 					{data.description
