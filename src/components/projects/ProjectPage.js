@@ -64,7 +64,7 @@ export default function ProjectPage() {
 
 					{block.render
 						? Array.isArray(block.render)
-							? block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)
+							? <div style={{display: 'flex', flexDirection: 'column'}}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)}</div>
 							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} alt='' />
 						: null
 					}
