@@ -1,7 +1,6 @@
 export default function WorkItem(props) {
 
 	var data = props.data
-	console.log(data)
 
 	return (
 		<div className="workItem">

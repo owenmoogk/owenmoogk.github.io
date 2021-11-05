@@ -50,28 +50,28 @@ export default function Workpage() {
 
 					<h1 onClick={() => toggleActive(0)}>{loadArrow(0)}Experience</h1>
 					<div className='workDisplayer' id='work0'>
-						<div id='measure0' class='measureDiv'>
+						<div id='measure0' className='measureDiv'>
 							{workData.experience.map((data, key) => <WorkItem key={key} data={data} />)}
 						</div>
 					</div>
 
 					<h1 onClick={() => toggleActive(1)}>{loadArrow(1)}Education</h1>
 					<div className='workDisplayer' id='work1'>
-						<div id='measure1' class='measureDiv'>
+						<div id='measure1' className='measureDiv'>
 							{workData.education.map((data, key) => <WorkItem key={key} data={data} />)}
 						</div>
 					</div>
 
 					<h1 onClick={() => toggleActive(2)}>{loadArrow(2)}Volunteer Experience</h1>
 					<div className='workDisplayer' id='work2'>
-						<div id='measure2' class='measureDiv'>
+						<div id='measure2' className='measureDiv'>
 							{workData.volunteer.map((data, key) => <WorkItem key={key} data={data} />)}
 						</div>
 					</div>
 
 					<h1 onClick={() => toggleActive(3)}>{loadArrow(3)}Certifications / Courses</h1>
 					<div className='workDisplayer' id='work3'>
-						<div id='measure3' class='measureDiv'>
+						<div id='measure3' className='measureDiv'>
 							{workData.certifications.map((data, key) => <WorkItem key={key} data={data} />)}
 						</div>
 					</div>
