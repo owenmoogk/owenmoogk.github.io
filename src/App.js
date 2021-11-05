@@ -9,6 +9,7 @@ import Homepage from 'components/homepage/Homepage.js'
 import Workpage from 'components/work/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
+import Resources from 'components/Resources.js'
 import 'styles.css'
 
 export default function App(props) {
@@ -22,9 +23,10 @@ export default function App(props) {
 
 	return (
 		<Router>
-			<style dangerouslySetInnerHTML={{__html: 
-				darkMode
-					? `:root{
+			<style dangerouslySetInnerHTML={{
+				__html:
+					darkMode
+						? `:root{
 						--backgroundColor: black;
 						--textColor: white;
 						--cardColor: rgb(30,30,30);
@@ -33,7 +35,7 @@ export default function App(props) {
 						--grey: lightgrey;
 						--lightgrey: grey
 					}`
-					: `:root {
+						: `:root {
 						--cardColor: rgb(245,245,245);
 						--textColor: black;
 						--backgroundColor: white;
@@ -43,7 +45,7 @@ export default function App(props) {
 						--lightgrey: lightgrey;
 					}`
 			}} />
-			<Nav toggleDarkMode={toggleDarkMode}/>
+			<Nav toggleDarkMode={toggleDarkMode} />
 			<Switch>
 				<Route path='/projects'>
 					<ProjectRouter />
@@ -54,11 +56,14 @@ export default function App(props) {
 				<Route path='/contact'>
 					<ContactPage />
 				</Route>
+				<Route path='/assets'>
+					<Resources />
+				</Route>
 				<Route exact path='/'>
 					<Homepage />
 				</Route>
 			</Switch>
-			
+
 		</Router>
 	);
 }
