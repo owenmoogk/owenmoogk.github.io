@@ -8,9 +8,7 @@
 	"blocks": [
 		{
 			"title": "Overview",
-			"text": [
-				"I am a part of the <a href='https://2702rebels.com'>2702 Rebels</a> FIRST Robotics team, and we just finished our 2020 robot, designed to compete in the <a href='https://www.youtube.com/watch?v=gmiYWTmFRVE'>2020 Infinite Recharge</a> robotics competition. <br><br> This page goes in depth into our robot, with some of the specs. I was the lead student on the feeder subsystem, and also worked on the intake. Check it out in action in our <a href='https://www.youtube.com/watch?v=tN_Rt3pt054'>reveal video</a>. Unfortunately, due to COVID-19, this robot has not been able to compete yet."
-			],
+			"text": "I am a part of the <a href='https://2702rebels.com'>2702 Rebels</a> FIRST Robotics team, and we just finished our 2020 robot, designed to compete in the <a href='https://www.youtube.com/watch?v=gmiYWTmFRVE'>2020 Infinite Recharge</a> robotics competition. <br><br> This page goes in depth into our robot, with some of the specs. I was the lead student on the feeder subsystem, and also worked on the intake. Check it out in action in our <a href='https://www.youtube.com/watch?v=tN_Rt3pt054'>reveal video</a>. Unfortunately, due to COVID-19, this robot has not been able to compete yet.",
 			"image": "robot.png"
 		},
 		{
