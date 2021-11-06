@@ -11,6 +11,8 @@
 
 #projectPage{
 
+	margin-bottom: 70px;
+
 	#sortingContainer{
 
 		margin-top: 20px;
@@ -44,72 +46,59 @@
 		
 		display: flex;
 		flex-wrap: wrap;
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
 		
 		.content {
-			width: 300px;
-			height: 120px;
-			padding-left: 20px;
-			margin: 10px 20px 10px 0;
-			border-radius: 20px;
-			background-color: var(--cardColor);
-			
-			overflow: hidden;
-			
+
+			border-bottom: 1px solid var(--grey);
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			align-items: center;
 			
 			transition: 0.3s;
 			color: var(--textColor);
-			
-			position: relative; // for the :after effect
-			
+			padding: 5px 20px;
+			height: fit-content;
+			min-height: 35px;
 
-			// makes hover thingy appear on bottom, text stays on top
-			*{
-				z-index: 1;
-			}
-			
-			svg{
-				stroke: var(--textColor);
-				transition: 0.3s;
-				&:hover{
-					transform: scale(1.2);
-				}
-			}
-			
 			&:hover{
-				color: black;
-				svg{
-					stroke: black;
-				}
+				background: var(--lightgrey);
 			}
-			
-			// hover animation
-			&:after{
-				content:"";
-				position: absolute;
-				left: 0;
-				width: 0;
-				height: 100%;	
-				opacity: 0;
-				z-index: 0;
-				transition: 0.3s;
+
+			.contentTitle{
+				font-weight: bold;
+				font-size: 18px;
 			}
-			
-			&:hover:after{
-				width: 100%;
-				opacity: 1;
+
+			.contentDesc{
+				font-size: 16px;
+			}
+
+			.dot{
+				margin-left: 10px;
+				margin-right: 10px;
 			}
 			
 			.projectIcons{
 				display: flex;
-				padding: 10px;
+				align-items: center;
+				// padding: 10px;
 				
 				a{
 					height: fit-content;
+					display: flex;
+					align-items: center;
+					margin: 0 3px;
+					
+					svg{
+						stroke: var(--textColor);
+						transition: 0.3s;
+						&:hover{
+							transform: scale(1.2);
+						}
+					}
 				}
 			}
 		}

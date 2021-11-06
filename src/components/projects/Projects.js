@@ -60,7 +60,7 @@ export default function ProjectPage() {
 			<div id="projectsGoHere">
 				{projectData
 					? projectData.map((data, key) =>
-						<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} githubLink={data.githubLink} showArchive={showArchive} />)
+						<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} githubLink={data.githubLink} showArchive={showArchive} description={data.description}/>)
 					: null
 				}
 			</div>

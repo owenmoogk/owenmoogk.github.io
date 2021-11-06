@@ -5,37 +5,24 @@ export default function ProjectIcon(props) {
 	let link = '/projects/' + props.name
 	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name
 	let type = props.type
+	let typeList = props.type.split(' ')
 	let primaryType = type.split(' ')[0].toLowerCase()
-	
+
 	// if we want to show the archives, then the others are hidden
-	var hide = props.showArchive !== (props.archive === true) 
+	var hide = props.showArchive !== (props.archive === true)
 
 	return (
-		<a href={link} style={{display: hide ? 'none' : ''}}>
-			
-			<style dangerouslySetInnerHTML={{__html: `
-				.${primaryType}Tile:after{
-					background: var(--${primaryType}, grey)
-				}
-			`}}></style>
+		<a href={link} style={{ display: hide ? 'none' : '' }}>
 
 			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
-			<div className={"content "+primaryType+"Tile "+type+ (props.archive===true ? " archive": "")} style={{border: '2px solid var(--'+primaryType+', grey)'}}>
-
-				{
-					props.archive
-						? <svg className='archiveIcon' style={{
-							position: 'absolute',
-							bottom: '15px',
-							right: '14px'
-						}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8"/></g></svg>
-						: null
-				}
+			<div className={"content "+primaryType+"Tile "+type+ (props.archive===true ? " archive": "")}>
 
 				<div>
-					<h3 className="content-title">{props.title}</h3>
-					<p className="type">{type}</p>
+					<span className="contentTitle">{props.title}</span>
+					<span className='dot'>--</span>
+					<span className='contentDesc'>{props.description}</span>
 				</div>
+
 				<div className='projectIcons'>
 
 					{/* open externally */}
@@ -62,6 +49,16 @@ export default function ProjectIcon(props) {
 							</svg>
 						</a>
 						: null
+					}
+
+					{/* archive icon */}
+					{
+						props.archive
+							? <svg className='archiveIcon' style={{
+								bottom: '15px',
+								right: '14px'
+							}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" strokeWidth="3"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8" /></g></svg>
+							: null
 					}
 
 				</div>
