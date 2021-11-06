@@ -3,7 +3,8 @@
 		"title": "Minecraft Modifications",
 		"date": "April 20, 2020",
 		"type": "--",
-		"archive": true
+		"archive": true,
+		"description": "Minecraft resource packs and datapacks."
 	},
 	"blocks": [
 		{

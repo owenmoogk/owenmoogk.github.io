@@ -3,7 +3,8 @@
 		"title": "Grocery List App",
 		"date": "March 8, 2021",
 		"type": "Django Javascript",
-		"archive": true
+		"archive": true,
+		"description": "Grocery list app to learn Django."
 	},
 	"blocks": [
 		{

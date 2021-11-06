@@ -3,7 +3,8 @@
 		"title": "NHL Fantasy App",
 		"date": "March 24, 2021",
 		"type": "Django",
-		"archive": true
+		"archive": true,
+		"description": "Fantasy sports app, built using an NHL API and Django backend."
 	},
 	"blocks": [
 		{

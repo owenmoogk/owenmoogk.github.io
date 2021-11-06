@@ -3,7 +3,8 @@
 		"title": "Pendulum Physics Simulator",
 		"date": "February 26, 2021",
 		"type": "Python Matplotlib Pygame",
-		"archive": true
+		"archive": true,
+		"description": "Physics simulation of a pendulum, with adjustable settings."
 	},
 	"blocks": [
 		{

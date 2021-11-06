@@ -3,7 +3,8 @@
 		"title": "LAN Messenger",
 		"date": "March 14, 2021",
 		"type": "Django Javascript",
-		"archive": true
+		"archive": true,
+		"description": "LAN Messaging app using Django."
 	},
 	"blocks": [
 		{

@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Typeracer",
 		"date": "June 30, 2021",
-		"type": "Python"
+		"type": "Python",
+		"description": "Python script to crush opponents in Typeracer."
 	},
 	"blocks": [
 		{

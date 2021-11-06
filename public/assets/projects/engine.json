@@ -4,7 +4,8 @@
 		"date": "March 16, 2020",
 		"githubLink": "",
 		"type": "Mechanical",
-		"archive": true
+		"archive": true,
+		"description": "1 cylinder, 4-stroke lawnmower engine assembly."
 	},
 	"blocks": [
 		{

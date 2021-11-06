@@ -3,7 +3,8 @@
 		"title": "Space Invaders",
 		"date": "November 6, 2020",
 		"type": "Python Pygame",
-		"archive": true
+		"archive": true,
+		"description": "Space invaders game made in Pygame."
 	},
 	"blocks": [
 		{

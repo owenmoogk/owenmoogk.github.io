@@ -3,7 +3,8 @@
 		"title": "Sticky Caps",
 		"date": "June 30, 2021",
 		"type": "Python",
-		"archive": true
+		"archive": true,
+		"description": "Python script to simplify 'sArCaSm CaPs'."
 	},
 	"blocks": [
 		{

@@ -3,7 +3,8 @@
 		"title": "Color Picker",
 		"date": "February 15, 2021",
 		"externalLink": "https://owenmoogk.github.io/color-picker/",
-		"type": "Javascript"
+		"type": "Javascript",
+		"description": "Web app for getting pixel data of an image."
 	},
 	"blocks": [
 		{

@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Eco Flow",
 		"date": "July 30, 2020",
-		"type": "Solidworks C++"
+		"type": "Solidworks C++",
+		"description": "SHAD 2021 Project, designing a system to reduce water usage."
 	},
 	"blocks": [
 		{

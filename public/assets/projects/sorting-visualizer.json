@@ -3,7 +3,8 @@
 		"title": "Sorting Visualizer",
 		"date": "January 31, 2021",
 		"externalLink": "https://owenmoogk.github.io/sorting-visualizer/",
-		"type": "Javascript"
+		"type": "Javascript",
+		"description": "Website to visualize sorting algorithms in action."
 	},
 	"blocks": [
 		{
