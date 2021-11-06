@@ -1,5 +1,3 @@
-add blog with nice formatting
-
 fix the css to sort the projects (sidebar)
 	add archive viewing
 	add:
@@ -8,3 +6,9 @@ fix the css to sort the projects (sidebar)
 		covid scraper
 
 add snake ai to page
+
+add stl viewer to applicable pages
+
+add project page for my passion project (or add it to work)
+
+add img slider like janik (hes my hero :)))
