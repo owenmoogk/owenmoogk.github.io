@@ -3,7 +3,8 @@
 		"title": "Hydraulic Arm",
 		"date": "November 7, 2020",
 		"type": "Solidworks",
-		"archive": true
+		"archive": true,
+		"description": "Hydraulic powered arm, with 3D printed claw."
 	},
 	"blocks": [
 		{

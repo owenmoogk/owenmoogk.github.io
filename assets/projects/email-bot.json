@@ -3,7 +3,8 @@
 		"title": "Email Bot",
 		"date": "January 6, 2021",
 		"type": "Python",
-		"archive": true
+		"archive": true,
+		"description": "App designed to send emails automatically, to the masses."
 	},
 	"blocks": [
 		{

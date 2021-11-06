@@ -2,7 +2,8 @@
 	"meta": {
 		"title": "Pathfinding Visualizer",
 		"date": "February 20, 2021",
-		"type": "Python Pygame"
+		"type": "Python Pygame",
+		"description": "Pathfinding algorithms visualization built using Pygame."
 	},
 	"blocks": [
 		{

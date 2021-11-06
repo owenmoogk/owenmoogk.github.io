@@ -3,7 +3,8 @@
 		"title": "React Github Card",
 		"date": "June 30, 2021",
 		"type": "React",
-		"externalLink": "https://owenmoogk.github.io/github-card"
+		"externalLink": "https://owenmoogk.github.io/github-card",
+		"description": "The github card, in a React component."
 	},
 	"blocks": [
 		{

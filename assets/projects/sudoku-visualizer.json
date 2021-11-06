@@ -3,7 +3,8 @@
 		"title": "Sudoku Visualizer",
 		"date": "February 18, 2021",
 		"externalLink": "https://owenmoogk.github.io/sudoku-visualizer/",
-		"type": "Javascript"
+		"type": "Javascript",
+		"description": "A sudoku solver website, which can visualize the algorithm."
 	},
 	"blocks": [
 		{

@@ -3,7 +3,8 @@
 		"title": "Snake",
 		"date": "January 6, 2021",
 		"type": "Python Pygame",
-		"archive": true
+		"archive": true,
+		"description": "Classic snake game in Pygame."
 	},
 	"blocks": [
 		{
