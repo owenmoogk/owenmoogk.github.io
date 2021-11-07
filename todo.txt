@@ -1,14 +1,10 @@
-fix the css to sort the projects (sidebar)
-	add archive viewing
-	add:
-		geom calculator
-		covid website
-		covid scraper
+projects to add:
+	geom calculator
+	covid website
+	covid scraper
+	snake ai to page
+	passion project (or add it to work)
 
-add snake ai to page
-
-add stl viewer to applicable pages
-
-add project page for my passion project (or add it to work)
-
-add img slider like janik (hes my hero :)))
+project pages:
+	add stl viewer to applicable pages
+	add img slider like janik (hes my hero :)))
