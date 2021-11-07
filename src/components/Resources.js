@@ -16,11 +16,11 @@ export default function Resources() {
 			<p className='subtitle'>Extra bits, for storage (and a little brag)</p>
 			{data ?
 				<ul>
-					{data.map((item) => {
+					{data.map((item, key) => {
 						var itemName = Object.keys(item)
 						var link = item[itemName]
 						return (
-							<li><a href={link}>{itemName}</a></li>
+							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
 						)
 					})}
 				</ul>
