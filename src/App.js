@@ -34,8 +34,9 @@ export default function App(props) {
 						--primaryColor: #FF69B4;
 						--grey: grey;
 						--lightgrey: rgb(44,44,44);
+						--superLightGrey: rgb(20,20,20);
 					}`
-						: `:root {
+					: `:root {
 						--cardColor: rgb(245,245,245);
 						--textColor: black;
 						--backgroundColor: white;
@@ -43,6 +44,7 @@ export default function App(props) {
 						--primaryColor: blue;
 						--grey: grey;
 						--lightgrey: lightgrey;
+						--superLightGrey: rgb(235,235,235);
 					}`
 			}} />
 			<Nav toggleDarkMode={toggleDarkMode} />

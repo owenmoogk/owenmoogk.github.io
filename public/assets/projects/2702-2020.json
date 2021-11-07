@@ -4,7 +4,8 @@
 		"date": "March 24, 2020",
 		"githubLink": "",
 		"type": "Mechanical Solidworks",
-		"description": "2020 FIRST Robotics season with the 2702 Rebels Team."
+		"description": "2020 FIRST Robotics season with the 2702 Rebels Team.",
+		"featured": true
 	},
 	"blocks": [
 		{
