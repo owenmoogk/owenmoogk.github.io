@@ -44,7 +44,7 @@ export default function Workpage() {
 	return (
 		<div className="main" id='workPage'>
 			<p className="title">Work</p>
-			<p className='subtitle'>Connect with me on <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href='/assets/resume.pdf' target='_blank' rel='noreferrer'>Resume</a></p>
+			<p className='subtitle'>Connect with me on <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href='https://owenmoogk.github.io/owenmoogk/resume.pdf' target='_blank' rel='noreferrer'>Resume</a></p>
 			{workData
 				? <div id='workItems'>
 
