@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectIcon from './ProjectIcon'
 import { search } from './projectSorting'
-import ProjectButton from './ProjectButton';
+// import ProjectButton from './ProjectButton';
 import ArchiveButton from './ArchiveButton';
 import FeaturedIcon from './FeaturedIcon';
 
