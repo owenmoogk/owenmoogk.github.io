@@ -3,7 +3,8 @@
 		"title": "Model Rocket",
 		"date": "January 8, 2021",
 		"type": "Solidworks",
-		"description": "3D printed model rocket, with semi-functioning parachute :P"
+		"description": "3D printed model rocket, with semi-functioning parachute :P",
+		"featured": true
 	},
 	"blocks": [
 		{
