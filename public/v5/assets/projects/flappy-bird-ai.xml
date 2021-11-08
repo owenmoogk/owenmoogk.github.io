@@ -1,0 +1,26 @@
+<page>
+    <page-head> 
+        <page-title>Flappy Bird AI</page-title>
+        <date>January 7, 2021</date>
+    </page-head>
+    <block>
+        <title>Overview</title>
+        <text> 
+            I wanted to learn how to use the NEAT library in python to implement machine learning. It really interests me and I find it so facsiniating. I decided to do flappy bird when I saw a youtube video from TechWithTim, so I could have some guidance along the way.
+        </text>
+    </block>
+    <block>
+        <title>Screenshots</title>
+    </block>
+    <block>
+        <render>/img/projects/flappy-bird-ai.png</render>
+    </block>
+    <block>
+        <title>Downloads</title>
+        <text>
+            <ul>
+                <li><a href="https://github.com/owenmoogk/flappy-bird-ai" class="blinks" target="_blank">Code</a></li>
+            </ul>
+        </text>
+    </block>
+</page>

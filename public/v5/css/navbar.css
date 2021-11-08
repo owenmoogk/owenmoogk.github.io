@@ -1,0 +1,79 @@
+/* css for all */
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+
+/* highlights */
+::selection{
+    background: grey;
+    color: black;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: grey; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: lightslategrey; 
+}
+
+body{
+    margin: 0px;
+    background-color: rgba(30, 30, 30, 1);
+}
+
+/* for all pages, not really a nav thing */
+.title{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: white;
+    text-align: center;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+}
+
+/* nav display */
+#nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 20px;
+}
+.navlinks{
+	text-decoration: none;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.navlinks p{
+	border-bottom: 2px solid transparent;
+}
+.navlinks:hover p{
+	border-bottom: 2px solid white;
+}
+
+@media only screen and (max-width: 800px) {
+    .navlinks {
+        display: none;
+    }
+    #nav-button{
+        display: block;
+    }
+    #nav{
+        width: 100%;
+        margin-left: 25px;
+    }
+    #github-corner{
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+@media screen and (max-width: 480px) {
+	html, body {
+		min-width: 320px;
+	}
+}
+html {
+	box-sizing: border-box;
+}
+
+hr {
+	border: 0;
+	border-bottom: solid 2px #e5e5e5;
+	margin: 2em 0;
+}
+
+/* Container */
+
+.container {
+	margin: 0 auto;
+	max-width: calc(100% - 5em);
+	width: 60em;
+}
+
+@media screen and (max-width: 840px) {
+	.container {
+		width: 100% !important;
+	}
+}
+@media screen and (max-width: 736px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+/* Box */
+
+#blogs {
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 0 0 #e5e5e5;
+	margin: 0 0 2em 0;
+	padding: 3em;
+}
+.blog-title{
+    font-size: 30px;
+    width: fit-content;
+    margin: none;
+    font-weight: bold;
+}
+.date{
+    font-size: 17px;
+    color: grey;
+    width: fit-content;
+    padding-bottom: 15px;
+    margin: none;
+    font-weight: bold;
+}
+.content{
+    color: black;
+    font-size: 20px;
+	font-weight: normal;
+}
+
+/* search */
+.search{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+#searchBar{
+    color: white;
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding-left: 10px;
+    backdrop-filter: blur(50px);
+    background-color: rgb(30, 30, 30);
+    border: 2px solid white;
+}
+#searchBar::placeholder{
+    color: lightgrey;
+}
+#dropdown{
+    width: 100px;
+    height: 38px;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+select option{
+    color: white;
+}

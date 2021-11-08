@@ -1,0 +1,15 @@
+<page>
+    <page-head> 
+        <page-title>The Compiler</page-title>
+        <date>October 19. 2020</date>
+    </page-head>
+    <block>
+        <!-- blank for proper divs ¯\_(ツ)_/¯ -->
+        <title></title>
+        <text> 
+            I just finished the first version of The Compiler. It was heavily inspired by Janik's <a href="https://repository.tools/" class="blinks" target='_blank'>Repository</a>.
+            I wanted to mess around with it and learning a bit about dark mode and that sort of thing. I'm going to be honest, it is really ugly.
+            Will I make another version? Maybe. Anyway, it is now up live at <a href="http://thecompiler.cf" class="blinks" target='_blank'>thecompiler.cf</a>. Feel free to check it out!
+        </text>
+    </block>
+</page>
