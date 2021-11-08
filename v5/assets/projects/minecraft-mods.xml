@@ -1,0 +1,107 @@
+<page>
+    <page-head> 
+        <page-title>Minecraft Modifications</page-title>
+        <date>April 20, 2020</date>
+    </page-head>
+    <block>
+        <title>Overview</title>
+        <text>
+            I am a <a href="https://www.minecraft.net/en-us/" class="blinks" target="_blank">Minecraft</a> player, who has logged many hours on the game. 
+            I recently discovered resource packs and datapacks, 
+            and I wanted to encorperate them into my gameplay.
+            After doing some research and looking at others, I created my own resource packs and also have my own mix of datapacks.
+            I have all files avalible for download on my GitHub, as you can find at the bottom. Enjoy!
+        </text>
+    </block>
+    <block>
+        <title>Resource Packs</title>
+        <text>
+            In the downloads found here, you can find some resource packs. One is the custom texture pack, one is an X-ray pack,
+            and the others are small are customizations.
+            The main pack has changes to some plants for easier identification of growth stages,
+            as well as changes to the textures of many redstone components for ease of use.
+            This includes on and off specific textures on pistons and levers, as well as arrows for hoppers,
+            observers, and dispensers/droppers. The goal of this is to let for easier redstone and technical gaming
+            while still keeping the basic feel of vanilla Minecraft.
+            ~~~~
+            The other two resource packs are soley for redstone wires. One displays the wires as bars stretching across
+            the blocks, as commenly used by many (Codecrafted, Faithful, etc.). The other is less visually appealing, with
+            the signal strength on the wire. There are two seperate packs for the reason of toggling between the two packs.
+        </text>
+        <image>img/highlightedores.png</image>
+    </block>
+    <block>
+        <title>Resource Pack Specific Changes</title>
+        <text>
+            The following is an outline of all changes (Ignoring the redstone dust changes mentioned above):
+            ~~~~
+            <h3>Blocks</h3>
+            <ul>
+                <li>Observer Arrow and pulse indicator</li>
+                <li>Sticky piston indicator on back</li>
+                <li>Mock LED indicators for extension and retraction (different colors for different types of pistons)</li>
+                <li>Additional arrows on hoppers</li>
+                <li>Arrows on dispensers and droppers (white and black accordingly)</li>
+                <li>Rails more animated</li>
+                <li>Pumpkin and melon stem differentiation</li>
+                <li>Added functional side textures to repeaters and comparators</li>
+                <li>Scaffolding is now somewhat clear</li>
+                <li>Cauldron shows level on side</li>
+                <li>All ores are highlighted</li>
+                <li>Lever has glowing texture when activated</li>
+                <li>Added colored cobble like textures for granite, andesite, and diorite</li>
+                <li>Emerald block now more similar to iron block</li>
+                <li>Removed white pixels from all flavours of ice</li>
+                <li>Updated glass to have a cleaner texture</li>
+                <li>Updated wool and carpets to be a solid color with border</li>
+                <li>Nether wart turns green when fully grown</li>
+                <li>Added colored particles to the enchanting table</li>
+                <li>Jukeboxes have a different top texture when containing a disc</li>
+                <li>End rods do not have a base</li>
+            </ul>
+            <h3>GUI</h3>
+            <ul>
+                <li>Rainbow XP bar</li>
+                <li>Colored connection symbol</li>
+                <li>Title screen backgroun includes iron farm</li>
+                <li>Custom splashes ;)</li>
+                <li>Custom paintings (Including brewing stand chart)</li>
+            </ul>
+            <h3>Sounds</h3>
+            <ul>
+                <li>Quieter minecarts, cows, pistons, droppers/dispensers, nether portals</li>
+                <li>Classic "OOF" damage sounds</li>
+                <li>Custom Andrew Applepie and Kasey Andre songs on music discs, which look like Celeste B-Side tapes.</li>
+            </ul>
+        </text>
+        <image>img/demo.png</image>
+    </block>
+    <block>
+        <title>Datapack</title>
+        <text>
+            My custom datapack includes custom crafting recipies to return blocks (such as half slabs, doors, fencegates, etc.)
+            to their original material. It also has increased drop loot from both shulkers and wither skeletons. The goal of this is again to keep
+            the vanilla feel of Minecraft while allowing for recipies that some players may find convienient. The drop
+            rate increase is designed for servers where resources are limited.
+        </text>
+        <image>img/shulker.png</image>
+    </block>
+    <block>
+        <title>Downloads</title>
+        <text>  
+            <ul>
+                <li>All files avalible on <a href="https://github.com/owenmoogk/minecraft_modifications" class="blinks" target="_blank">GitHub</a></li>
+            </ul>
+        </text>
+    </block>
+    <block>
+        <title>Resources</title>
+        <text>
+            <ul>
+                <li><a href="https://vanillatweaks.net/" class="blinks" target="_blank">Vanilla Tweaks</a></li>
+                <li><a href="https://crafting.thedestruc7i0n.ca/" class="blinks" target="_blank">Crafting Generator</a></li>
+                <li><a href="https://www.planetminecraft.com/" class="blinks" target="_blank">Planet Minecraft</a></li>
+            </ul>
+        </text>
+    </block>
+</page>

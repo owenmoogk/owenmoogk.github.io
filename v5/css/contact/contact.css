@@ -1,0 +1,54 @@
+/* CONTACT */
+*{
+    text-decoration: none;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#main{
+    line-height: 40px;
+    font-size: 23px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: center;
+}
+.link{
+    margin: 20px;
+    border: 3px solid white;
+    text-align: center;
+    font-weight: bolder;
+    width: 175px;
+    transition: 0.5s;
+    padding: .21em 0px;
+}
+.text{
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    transition: 0.5s;
+}
+.link:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.link:hover .text{
+    color: black;
+    transition: 0.5s;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .link{
+        width: 250px;
+    }
+    #main{
+        font-size: 30px;
+        max-width: 1000px;
+    }
+}
+  

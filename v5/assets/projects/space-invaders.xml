@@ -1,0 +1,39 @@
+<page>
+    <page-head> 
+        <page-title>Space Invaders</page-title>
+        <date>November 6, 2020</date>
+    </page-head>
+    <block>
+        <title>Overview</title>
+        <text> 
+            I wanted to learn more about coding in python, as well as get out of just coding in the console. This is the first game I made with Pygame, and it's pretty cool.
+            I plan to do more with this sort of thing in the future. As always, all files on my Github, and the links are at the bottom.
+        </text>
+    </block>
+    <block>
+        <title>Play</title>
+        <text> 
+            To play, follow these steps. First, download <a href="space-invaders.zip" class="blinks">this</a> file. Extract the contents into a folder, then go into the folder and click run!
+            Have fun! Not to brag, but my highscore is 720 :P
+            ~~~~
+            By the way, if you go and download the source files from the Github and open up main.py, you can change the settings at the top of the file to make it harder (or easier).
+            If you want to run your custom file, you'll have to have Pygame already installed.
+        </text>
+    </block>
+    <block>
+        <title>Screenshots</title>
+    </block>
+    <block>
+        <render>img/demo1.png</render>
+        <render>img/demo2.png</render>
+    </block>
+    <block>
+        <title>Downloads</title>
+        <text>
+            <ul>
+                <li><a href="https://github.com/owenmoogk/space-invaders" class="blinks" target="_blank">Code</a></li>
+                <li><a href="space-invaders.zip" class="blinks">Game Download</a> (follow steps outlined above)</li>
+            </ul>
+        </text>
+    </block>
+</page>

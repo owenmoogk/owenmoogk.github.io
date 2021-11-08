@@ -1,0 +1,13 @@
+add icon
+
+portfolio
+    car engine
+    honor roll
+    robots
+    coding
+    volunteering/work
+    cad
+    arduino
+    other softwares
+
+link home page images to portfolio pages

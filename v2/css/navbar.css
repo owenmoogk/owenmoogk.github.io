@@ -1,0 +1,27 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+.subnav{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    float: left;
+    overflow-x: hidden;
+    padding-left: 20px;
+}
+.navlinks{
+    text-decoration: none;
+    color: black;
+}
+.navlinks:hover{
+    border-bottom: 6px solid lightgray;
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+.pnav{
+    line-height: 45px;
+    text-align: left;
+}

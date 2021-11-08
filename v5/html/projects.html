@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Owen Moogk - Projects</title>
+        <meta name="author" content="Owen Moogk">
+        <meta name="keywords" content="Owen, Moogk, Owenmoogk">
+        <meta name="description" content="Just a little bit about me :)">
+        <link rel="stylesheet" href="/v5/css/projects/projects.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+        <link rel="stylesheet" href="/v5/css/navbar.css">
+        <link rel="stylesheet" href="/v5/css/projects/sort.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/v5/js/navbar.js"></script>
+        <script src="/v5/js/projects/projects.js"></script>
+    </head>
+    <body>
+        <div id="nav"></div>
+        <div class="main">
+            <div class="page">
+                <p class="title">Projects</p>
+                <br>
+                <div class="sorting">
+					<div class="buttons">
+						<span class="sort_all btn active"><p>All</p></span>
+						<span class="sort_cad btn"><p>CAD</p></span>
+						<span class="sort_coding btn"><p>Coding</p></span>
+						<span class="sort_mechanical btn"><p>Mechanical</p></span>
+						<span class="sort_web-dev btn"><p>Web-Dev</p></span>
+					</div>
+					<div class="sort">
+						<label>Sort by: &nbsp</label>
+						<select id="mySort" onchange="sortProjects()">
+							<option value="">--</option>
+							<option value="alpha-desc">A-Z</option>
+							<option value="alpha-asc">Z-A</option>
+						</select>
+					</div>
+				</div>
+            </div>
+            <br><br><br><br>
+            <div id="projectsGoHere"></div>
+        </div>
+    </body>
+    <script>loadMenuItems()</script>
+    <script>loadProjects()</script>
+</html>

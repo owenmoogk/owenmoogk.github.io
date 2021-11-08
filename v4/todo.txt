@@ -1,0 +1,7 @@
+dark mode??
+
+modal needs work (mobile nav)
+
+fix project page
+
+make stl file viewer

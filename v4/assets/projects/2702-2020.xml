@@ -1,0 +1,86 @@
+<page>
+    <page-head> 
+        <page-title>2702 Rebels 2020 Robot</page-title>
+        <date>March 24, 2020</date>
+    </page-head>
+    <block>
+        <title>Overview</title>
+        <text>
+            I am a part of the <a href="https://2702rebels.com" class="blinks" target="_blank">2702 Rebels</a> FIRST Robotics team,
+            and we just finished our 2020 robot, designed to compete in the <a href="https://www.youtube.com/watch?v=gmiYWTmFRVE" class="blinks" target="_blank">2020 Infinite Recharge</a>
+            robotics competition. This page goes in depth into our robot, with some of the specs.
+            I was the lead student on the feeder subsystem, and also worked on the intake. 
+            Check it out in action in our <a href="https://www.youtube.com/watch?v=tN_Rt3pt054" class="blinks" target="_blank">reveal video</a>. Unfortunatley, due to COVID-19, this robot
+            has not been able to compete yet.
+        </text>
+        <image>img/robot.png</image>
+    </block>
+    <block>
+        <title>Competition</title>
+        <text>Cancelled due to COVID-19</text>
+    </block>
+    <block>
+        <title>Intake</title>
+        <text>
+            This intake on our robot was designed to both pickup the balls, and center them in a specific location to
+            handoff to the feeder. It is made up of three shafts, an ABS roller, a vectored intake roller made up of 3D printed mecanum wheels, and a shaft
+            with two wheels to handoff into the feeder. All three are driven by a 775 Pro attatched to a Versa Planetary gearbox.
+            The intake is deployed by two 6" pneumatic pistons.
+        </text>
+        <image>img/intake.png</image>
+    </block>
+    <block>
+        <title>Feeder</title>
+        <text>
+            The feeder was designed with the sole intention of getting the balls from the intake to the shooter. It is made up of
+            3D printer rollers and spacers running polycord between the shafts. It is run off of four RS550 motors.
+        </text>
+        <image>img/feed.png</image>
+    </block>
+    <block>
+        <title>Shooter</title>
+        <text>
+            The shooter on our robot is based upon two 6" flywheels spinning to propel the ball.
+            The flywheels are powered by a Falcon 500. The hood over the flywheels guides the balls, and can
+            change its angle based on the distance of the target. It is attatched to a worm gear powered by an
+            AM-2235 Snowblower motor. The entire shooter is mounted on a turret that can pivot 270°, powered by a
+            775 Pro motor.
+        </text>
+        <image>img/shooter.png</image>
+    </block>
+    <block>
+        <title>Climber/Control Panel</title>
+        <text>
+            The climber arm is designed to ascend the robot onto the endgame hang bar. It has a hook at the top,
+            and is powered by two 775 Pro motors. It also doubles as our control panel mechanism, as it has two compliant wheels mounted on it.
+            The mechanism is deployed using a pneumatic cylinder.
+        </text>
+        <image>img/climb.png</image>
+    </block>
+    <block>
+        <title>Drivetrain</title>
+        <text> 
+            Lastly, the drivetrain of the robot is manufactured out of aluminum, and was welded together. It has six 6"
+            SmoothGrip wheels in a tank drive formation, and is powered by four NEO motors, two on each side.
+        </text>
+        <image>img/drive.png</image>
+    </block>
+    <block>
+        <title>Downloads</title>
+        <text>
+            <ul>
+                <li><a href="https://github.com/owenmoogk/renders/tree/master/images/2020%20Robot" class="blinks" target="_blank">Renders</a></li>
+            </ul>
+        </text>
+    </block>
+    <block>
+        <title>Resources</title>
+        <text>
+            <ul>
+                <li><a href="https://2702rebels.com" class="blinks" target="_blank">2702 Rebels</a></li>
+                <li><a href="https://firstinspires.org" class="blinks" target="_blank">FIRST</a></li>
+                <li><a href="https://thebluealliance.com" class="blinks" target="_blank">The Blue Alliance</a></li>
+            </ul>
+        </text>
+    </block>
+</page>
