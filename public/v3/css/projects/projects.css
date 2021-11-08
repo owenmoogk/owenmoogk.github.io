@@ -1,0 +1,40 @@
+/*PROJECTS*/
+
+*{
+    font-size: 25px;
+}
+
+#projects{
+    width: 100%;
+    display: flex; /*flex stuff*/
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+}
+#list-items{
+    width: 80%;
+}
+
+.item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.item a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+}
+.item a:hover{
+    border-bottom: 3px solid black;
+}
+.list-seperate{
+    width: 20%;
+    text-align: left;
+    margin-left: 0;
+    background-color: grey;
+    border: 1px solid grey;
+}
