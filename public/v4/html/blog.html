@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Owen Moogk - Blog</title>
+        <meta name="author" content="Owen Moogk">
+        <meta name="keywords" content="Owen, Moogk, Owenmoogk">
+        <meta name="description" content="Just a little bit about me :)">
+        <link rel="stylesheet" href="/v4/css/blog/blog.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap">
+        <link rel="stylesheet" href="/v4/css/navbar.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/v4/js/navbar.js"></script>
+        <script src="/v4/js/blog/blog.js"></script>
+    </head>
+    <body>
+        <div id="nav"></div>
+        <div class="main">
+            <p class="title">Blog</p>
+            <br><br>
+            <div class="search">
+                <input type="text" id="searchBar" onkeyup="search()" placeholder="Search by Date, Title, or Text" title="Type to search">
+                <select id = "dropdown" onChange="sortBlog(this.value);">
+                    <option value="date-desc">Newest</option>
+                    <option value="date-asc">Oldest</option>
+                    <option value="blog-title">Title</option>
+                </select>
+            </div>
+            <div id="blogs"></div>
+        </div>
+        <br><br>
+    </body>
+    <script>loadMenuItems()</script>
+    <script>loadBlog()</script>
+</html>
