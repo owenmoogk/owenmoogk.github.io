@@ -11,6 +11,12 @@ if (window.location.pathname === '/v1') {
 			console.log(body);
 		});
 }
+else if (window.location.pathname === '/v2') {
+	ReactDOM.render(
+		<h1>testing testing</h1>,
+		document.getElementById('root')
+	)
+}
 else {
 	ReactDOM.render(
 		<React.StrictMode>
