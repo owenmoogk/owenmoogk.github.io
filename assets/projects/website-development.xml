@@ -9,7 +9,7 @@
             I recently made this website as a place to tell a little bit about me, show off some of my projects,
             and to have a "one stop shop" for all my files that people might find useful. The links and downloads to the
             source files are found below.
-            if you have any suggestions please feel free to <a href="/html/contact.html" class="blinks">contact me</a>.
+            if you have any suggestions please feel free to <a href="./html/contact.html" class="blinks">contact me</a>.
         </text>
     </block>
     <block>

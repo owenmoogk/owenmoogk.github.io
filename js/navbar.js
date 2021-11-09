@@ -5,7 +5,7 @@ function loadMenuItems() {
 			menuItems(this);
 		}
     };
-    xmlhttp.open("GET", "/assets/menu-items.xml", true);
+    xmlhttp.open("GET", "../assets/menu-items.xml", true);
     xmlhttp.send();
 }
 function menuItems(xml) {
@@ -23,7 +23,7 @@ function menuItems(xml) {
     for (i = 0; i < titles.length; i++) { 
         txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
-    txt = txt+'<div id="nav-button" onclick="modalOpen()"><img class="nav-img" src="/img/open-nav-button.png"></div>'
+    txt = txt+'<div id="nav-button" onclick="modalOpen()"><img class="nav-img" src="./img/open-nav-button.png"></div>'
     
     // modal txt
     txt += '<div id="myModal" class="modal"><div class="modal-content">'
