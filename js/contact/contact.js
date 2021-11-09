@@ -5,7 +5,7 @@ function loadContacts() {
 			contacts(this);
 		}
     };
-    xmlhttp.open("GET", "/assets/contact.xml", true);
+    xmlhttp.open("GET", "assets/contact.xml", true);
     xmlhttp.send();
 }
 function contacts(xml) {
