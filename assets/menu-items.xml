@@ -17,6 +17,6 @@
     </item>
     <item>
         <title>Resume</title>
-        <link>assets/resume.pdf" target = "_blank</link> <!--opens in new tab-->
+        <link>assets/resume.pdf" target = "_blank"</link> <!--opens in new tab-->
     </item>
 </menu>
