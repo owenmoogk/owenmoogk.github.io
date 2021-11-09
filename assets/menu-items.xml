@@ -1,18 +1,18 @@
 <menu>
     <item>
         <title>Home</title>
-        <link>"/index.html"</link>
+        <link>"index.html"</link>
     </item>
     <item>
         <title>Projects</title>
-        <link>"/html/projects.html"</link>
+        <link>"html/projects.html"</link>
     </item>
     <item>
         <title>Contact</title>
-        <link>"/html/contact.html"</link>
+        <link>"html/contact.html"</link>
     </item>
     <item>
         <title>Resume</title>
-        <link>"/assets/resume.pdf" target = "_blank"</link> <!--opens in new tab-->
+        <link>"assets/resume.pdf" target = "_blank"</link> <!--opens in new tab-->
     </item>
 </menu>
