@@ -1,7 +1,7 @@
 
 function loadSplash(){
     $.ajax({
-        url: '/assets/splashes.txt',
+        url: './assets/splashes.txt',
         dataType: 'text',
     }).done(CSVSuccess);
 }
