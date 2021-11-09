@@ -9,6 +9,11 @@ function loadMenuItems() {
     xmlhttp.send();
 }
 function menuItems(xml) {
+
+    console.log("Page path is " + window.location.pathname)
+
+    // console.log((temp.match(/is/g) || []).length)
+    depth = (window.location.pathname.match(/\//g) || []).length - 1
     var titles, links, i, xmlDoc; 
     
     // text that is appended to elements
@@ -27,8 +32,16 @@ function menuItems(xml) {
     
     // modal txt
     txt += '<div id="myModal" class="modal"><div class="modal-content">'
+    prefaceLinks = ""
+    for(let i = 0; i < depth; i++){
+        prefaceLinks += '../'
+    }
+    if (depth == 0){
+        prefaceLinks = './'
+    }
+    console.log(prefaceLinks)
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "modalLinks">'+titles[i].childNodes[0].nodeValue+'</a>';
+        txt += '<a href = "'+prefaceLinks+links[i].childNodes[0].nodeValue+'" class = "modalLinks">'+titles[i].childNodes[0].nodeValue+'</a>';
     }
     txt += '<span class="close" onclick="modalClose()">&times;</span></div></div>'
 
