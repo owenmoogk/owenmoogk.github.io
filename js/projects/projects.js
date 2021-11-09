@@ -43,7 +43,7 @@ function loadEntries(xml) {
         type = pulledData[i].getElementsByTagName("type")[0].childNodes[0].nodeValue.toLowerCase()
         console.log(type)
         // put it all together
-        loaded += '<div class="content"><a href="'+ link + '"><div class="content-overlay" style="background-color: #'+colors[type]+';"></div><img class="content-image" src="' + image + '"><div class="content-details" style="background-color: #'+ colors[type] +';"><h3 class="content-title">' + title + '</h3><p class="type">' + type.toUpperCase() + '</div></a></div>';
+        loaded += '<div class="content"><a href="../'+ link + '"><div class="content-overlay" style="background-color: #'+colors[type]+';"></div><img class="content-image" src="' + image + '"><div class="content-details" style="background-color: #'+ colors[type] +';"><h3 class="content-title">' + title + '</h3><p class="type">' + type.toUpperCase() + '</div></a></div>';
     }
     
     document.getElementById("projectsGoHere").innerHTML += loaded;
