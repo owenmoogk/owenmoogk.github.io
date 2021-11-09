@@ -6,7 +6,7 @@
 body{
 	background-position: center;
 	background-size: cover;
-    background-image: url('/img/backgrounds/color-clouds.jpg');
+    background-image: url('../../img/backgrounds/color-clouds.jpg');
     backdrop-filter: blur(10px);
     background-attachment: fixed;
     overflow: hidden;

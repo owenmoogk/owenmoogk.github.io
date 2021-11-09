@@ -6,7 +6,7 @@
 body{
 	background-position: center;
 	background-size: cover;
-    background-image: url('/img/backgrounds/plant.jpg');
+    background-image: url('../../img/backgrounds/plant.jpg');
     backdrop-filter: blur(10px);
     background-attachment: fixed;
     overflow-x: hidden;
