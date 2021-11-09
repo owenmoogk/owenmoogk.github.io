@@ -20,7 +20,7 @@ function menuItems(xml) {
     links = xmlDoc.getElementsByTagName('link');
     
     // loading text variables
-    depth = (window.location.pathname.match(/\//g) || []).length - 1
+    depth = (window.location.pathname.match(/\//g) || []).length - 2
     prefaceLinks = ""
     for(let i = 0; i < depth; i++){
         prefaceLinks += '../'
@@ -28,6 +28,7 @@ function menuItems(xml) {
     if (depth == 0){
         prefaceLinks = './'
     }
+    console.log(prefaceLinks)
     for (i = 0; i < titles.length; i++) { 
         txt += '<a href = "'+prefaceLinks+links[i].childNodes[0].nodeValue+'" class = "navlinks"><p>'+titles[i].childNodes[0].nodeValue+'</p></a>';
     }
