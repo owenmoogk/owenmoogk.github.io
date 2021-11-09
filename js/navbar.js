@@ -5,7 +5,7 @@ function loadMenuItems() {
 			menuItems(this);
 		}
     };
-    xmlhttp.open("GET", "assets/menu-items.xml", true);
+    xmlhttp.open("GET", "../assets/menu-items.xml", true);
     xmlhttp.send();
 }
 function menuItems(xml) {

@@ -5,7 +5,7 @@ function loadProjects() {
 			projects(this);
 		}
     };
-    xmlhttp.open("GET", "assets/projects.xml", true);
+    xmlhttp.open("GET", "../assets/projects.xml", true);
     xmlhttp.send();
 }
 function projects(xml) {
