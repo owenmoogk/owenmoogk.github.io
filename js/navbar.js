@@ -20,8 +20,16 @@ function menuItems(xml) {
     links = xmlDoc.getElementsByTagName('link');
     
     // loading text variables
+    depth = (window.location.pathname.match(/\//g) || []).length - 1
+    prefaceLinks = ""
+    for(let i = 0; i < depth; i++){
+        prefaceLinks += '../'
+    }
+    if (depth == 0){
+        prefaceLinks = './'
+    }
     for (i = 0; i < titles.length; i++) { 
-        txt += '<a href = '+links[i].childNodes[0].nodeValue+' class = "navlinks"><p>'+titles[i].childNodes[0].nodeValue+'</p></a>';
+        txt += '<a href = "'+prefaceLinks+links[i].childNodes[0].nodeValue+'" class = "navlinks"><p>'+titles[i].childNodes[0].nodeValue+'</p></a>';
     }
 
     // implement
