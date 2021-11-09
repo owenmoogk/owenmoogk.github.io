@@ -6,7 +6,7 @@ function loadBlog() {
 			blog(this);
 		}
     };
-    xmlhttp.open("GET", "./assets/blog.xml", true);
+    xmlhttp.open("GET", "../assets/blog.xml", true);
     xmlhttp.send();
 }
 
