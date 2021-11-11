@@ -4,8 +4,8 @@
 		"date": "Oct 22, 2020",
 		"type": "Javascript",
 		"externalLink": "https://owenmoogk.github.io/the-compiler",
-		"archive": true,
-		"description": "Compilation of useful data and websites."
+		"description": "Compilation of useful data and websites.",
+		"featured": true
 	},
 	"blocks": [
 		{
