@@ -13,6 +13,7 @@
 	"music-bot",
 	"nhl-fantasy",
 	"pathfinding-visualizer",
+	"path-to-google",
 	"sorting-visualizer",
 	"simplelib",
 	"outbreak-simulator",
@@ -29,8 +30,9 @@
 	"covid-scraper",
 	"covid-website",
 	"geometry-calculator",
-	"snake",
+	"snake-ai",
 	"model-rocket",
+	"rocket-calculator",
 	"hydraulic-arm",
 	"the-compiler",
 	"web-development",
@@ -42,5 +44,12 @@
 	"space-invaders",
 	"unix-time",
 	"password-manager",
-	"minecraft-modifications"
+	"minecraft-modifications",
+	"passion-project",
+	"pomodoro-timer-extension",
+	"emoji-machine-learning",
+	"computer-website",
+	"frc-website",
+	"revit-house",
+	"elastic-car"
 ]
