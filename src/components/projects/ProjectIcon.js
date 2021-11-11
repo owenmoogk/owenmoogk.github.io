@@ -7,19 +7,19 @@ export default function ProjectIcon(props) {
 	let type = props.type
 	let primaryType = type.split(' ')[0].toLowerCase()
 
-	// if we want to show the archives, then the others are hidden
-	var hide = props.showArchive !== (props.archive === true)
-
 	return (
-		<a href={link} style={{ display: hide ? 'none' : '' }}>
+		<a href={link}>
 
 			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
-			<div className={"content "+primaryType+"Tile "+type+ (props.archive===true ? " archive": "")}>
+			<div className={"content "+primaryType+"Tile "+type}>
 
 				<div>
 					<span className="contentTitle">{props.title}</span>
 					<span className='dot'>--</span>
 					<span className='contentDesc'>{props.description}</span>
+
+					{/* this is just for sorting, not display */}
+					<span className='type' style={{display: "none"}}>{type}</span>
 				</div>
 
 				<div className='projectIcons'>
@@ -49,17 +49,6 @@ export default function ProjectIcon(props) {
 						</a>
 						: null
 					}
-
-					{/* archive icon */}
-					{
-						props.archive
-							? <svg className='archiveIcon' style={{
-								bottom: '15px',
-								right: '14px'
-							}} width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" strokeWidth="3"><path d="M4 10v18h24V10M2 4v6h28V4zm10 11h8" /></g></svg>
-							: null
-					}
-
 				</div>
 			</div>
 		</a>

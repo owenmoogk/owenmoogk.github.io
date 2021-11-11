@@ -4,8 +4,9 @@ import {
 	Switch,
 	Route
 } from 'react-router-dom';
-import Projects from  'components/projects/Projects.js'
+import Projects from 'components/projects/Projects.js'
 import ProjectPage from 'components/projects/ProjectPage.js'
+import ProjectDirectory from 'components/projects/ProjectDirectory.js'
 
 function App() {
 
@@ -13,12 +14,15 @@ function App() {
 		<Router>
 			<Switch>
 				<Route exact path='/projects'>
-					<Projects/>
+					<Projects />
 				</Route>
-				<Route path='/projects/:name' children={<ProjectPage/>} />
+				<Route exact path='/projects/directory'>
+					<ProjectDirectory />
+				</Route>
+				<Route path='/projects/:name' children={<ProjectPage />} />
 			</Switch>
 		</Router>
-		
+
 	);
 }
 

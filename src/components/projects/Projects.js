@@ -1,14 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import ProjectIcon from './ProjectIcon'
-import { search } from './projectSorting'
-// import ProjectButton from './ProjectButton';
-import ArchiveButton from './ArchiveButton';
+import ProjectButton from './ProjectButton';
 import FeaturedIcon from './FeaturedIcon';
 
 export default function ProjectPage() {
 
 	const [projectData, setProjectData] = useState()
-	const [showArchive, setShowArchive] = useState(false)
+
+	function search(filter) {
+
+		filter = filter.toLowerCase()
+		var projectItems = document.getElementsByClassName("featuredIcon");
+
+		// will run through all the rows
+		for (const tile of projectItems) {
+
+			// get the title and type
+			var title = tile.getElementsByClassName("contentTitle")[0].innerText;
+			var type = tile.getElementsByClassName("type")[0].innerText;
+			var desc = tile.getElementsByClassName('contentDesc')[0].innerText;
+
+			if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter) || desc.toLowerCase().includes(filter)) {
+				tile.style.display = "";
+			}
+			else {
+				tile.style.display = "none";
+			}
+		}
+	}
+
+	// function that filters by the type of entry
+	function filterProjects(filter) {
+
+		var projectItems = document.getElementsByClassName("featuredIcon");
+
+		// make the button active
+		var currentButton = document.getElementsByClassName("active")[0]
+		currentButton.classList.remove('active')
+		var currentButtonClass = "sort_" + filter
+		var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
+		chosenButton.classList.add('active')
+
+		// will run through all the elements
+		for (const tile of projectItems) {
+			var type = tile.getElementsByClassName('type')[0].innerText;
+
+			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all'){
+				tile.style.display = ''
+			}
+			else{
+				tile.style.display = 'none'
+			}
+		}
+	}
 
 	function fetchProjects() {
 		var tmpProjectData = []
@@ -45,14 +88,24 @@ export default function ProjectPage() {
 		<div className='main' id='projectPage'>
 			<p className="title" id='projectTitle'>Projects</p>
 
+			<div id="sortingContainer">
+				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
+				<ProjectButton name='All' filterProjects={filterProjects} />
+				<ProjectButton name='Python' filterProjects={filterProjects} />
+				<ProjectButton name='Javascript' filterProjects={filterProjects} />
+				<ProjectButton name='React' filterProjects={filterProjects} />
+				<ProjectButton name='Django' filterProjects={filterProjects} />
+				<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+				<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+			</div>
+
 			<div id='featuredProjects'>
-				<h2>Featured Projects (some of my favorites)</h2>
 				<div id='featuredContainer'>
 					{projectData
 						? projectData.map((data, key) => {
 							if (data.featured) {
 								return (
-									<FeaturedIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} githubLink={data.githubLink} showArchive={showArchive} description={data.description} />
+									<FeaturedIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} description={data.description} />
 								)
 							}
 							return (null)
@@ -61,28 +114,8 @@ export default function ProjectPage() {
 					}
 				</div>
 			</div>
-			
-			<h2 style={{marginBottom: '0px'}}>All Projects</h2>
-			<div id="sortingContainer">
-				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
 
-				<ArchiveButton showArchive={showArchive} setShowArchive={setShowArchive} />
-				{/* <ProjectButton name='All' /> */}
-				{/* <ProjectButton name='Python' />
-				<ProjectButton name='Javascript' />
-				<ProjectButton name='React' />
-				<ProjectButton name='Django' />
-				<ProjectButton name='Solidworks' />
-				<ProjectButton name='Mechanical' /> */}
-			</div>
-			<div id='projectIcons'>
-				{projectData
-					? projectData.map((data, key) =>
-						<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} archive={data.archive} githubLink={data.githubLink} showArchive={showArchive} description={data.description} />)
-					: null
-				}
-			</div>
-
+			<p className='subtitle'>For a complete list of projects, click <a href='projects/directory'>here</a>.</p>
 		</div>
 	);
 }

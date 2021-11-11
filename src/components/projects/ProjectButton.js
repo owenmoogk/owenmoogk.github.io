@@ -1,11 +1,10 @@
 import React from 'react'
-import { filterProjects } from './projectSorting'
 
 export default function ProjectButton(props) {
 	var name = props.name.toLowerCase()
 
 	return (
-		<span className={"sort_" + name + " btn " + (props.name === 'All' ? 'active' : '')} onClick={() => filterProjects(name)} style={{
+		<span className={"sort_" + name + " btn " + (props.name === 'All' ? 'active' : '')} onClick={() => props.filterProjects(name)} style={{
 			border: '2px solid var(--' + name + ')',
 			color: 'var(--' + name + ')',
 		}}
