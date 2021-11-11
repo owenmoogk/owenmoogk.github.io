@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProjectIcon from './ProjectIcon'
+import ProjectIcon from './ProjectIcon';
+import ProjectButton from './ProjectButton';
 
 export default function ProjectDirectory() {
 
@@ -23,6 +24,30 @@ export default function ProjectDirectory() {
 			}
 			else {
 				tile.style.display = "none";
+			}
+		}
+	}
+
+	function filterProjects(filter) {
+
+		var projectItems = document.getElementsByClassName("content");
+
+		// make the button active
+		var currentButton = document.getElementsByClassName("active")[0]
+		currentButton.classList.remove('active')
+		var currentButtonClass = "sort_" + filter
+		var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
+		chosenButton.classList.add('active')
+
+		// will run through all the elements
+		for (const tile of projectItems) {
+			var type = tile.getElementsByClassName('type')[0].innerText;
+
+			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all'){
+				tile.style.display = ''
+			}
+			else{
+				tile.style.display = 'none'
 			}
 		}
 	}
@@ -64,6 +89,13 @@ export default function ProjectDirectory() {
 			<p className='subtitle'>All my other projects. A lot of them are old, simple and not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
+				<ProjectButton name='All' filterProjects={filterProjects} />
+				<ProjectButton name='Python' filterProjects={filterProjects} />
+				<ProjectButton name='Javascript' filterProjects={filterProjects} />
+				<ProjectButton name='React' filterProjects={filterProjects} />
+				<ProjectButton name='Django' filterProjects={filterProjects} />
+				<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+				<ProjectButton name='Mechanical' filterProjects={filterProjects} />
 			</div>
 			<div id='projectIcons'>
 				{projectData
