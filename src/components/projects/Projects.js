@@ -87,7 +87,7 @@ export default function ProjectPage() {
 	return (
 		<div className='main' id='projectPage'>
 			<p className="title" id='projectTitle'>Projects</p>
-
+			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
 				<ProjectButton name='All' filterProjects={filterProjects} />
@@ -114,8 +114,6 @@ export default function ProjectPage() {
 					}
 				</div>
 			</div>
-
-			<p className='subtitle'>For a complete list of projects, click <a href='projects/directory'>here</a>.</p>
 		</div>
 	);
 }
