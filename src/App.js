@@ -32,7 +32,7 @@ export default function App(props) {
 						--cardColor: rgb(30,30,30);
 						--overlayColor: rgba(0,0,0,0.6);
 						--primaryColor: #FF69B4;
-						--grey: grey;
+						--grey: lightgrey;
 						--lightgrey: rgb(44,44,44);
 						--superLightGrey: rgb(20,20,20);
 					}`

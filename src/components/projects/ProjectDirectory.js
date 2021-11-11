@@ -86,7 +86,7 @@ export default function ProjectDirectory() {
 	return (
 		<div className='main' id='projectPage'>
 			<p className="title" id='projectTitle'>Project Directory</p>
-			<p className='subtitle'>All my other projects. A lot of them are old, simple and not worth showing off. But we all start somewhere.</p>
+			<p className='subtitle'>All my other projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
 				<ProjectButton name='All' filterProjects={filterProjects} />
