@@ -3,7 +3,6 @@
 		"title": "Firefly Simulator",
 		"date": "March 31, 2021",
 		"type": "Python Pygame",
-		"archive": true,
 		"description": "Pygame simulation of firefly behavior."
 	},
 	"blocks": [

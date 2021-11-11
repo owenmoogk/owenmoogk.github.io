@@ -4,8 +4,8 @@
 		"date": "April 21, 2020",
 		"githubLink": "https://github.com/owenmoogk/personal-website",
 		"type": "React",
-		"archive": true,
-		"description": "Showcase of my website development projects."
+		"description": "Showcase of my website development projects.",
+		"featured": true
 	},
 	"blocks": [
 		{
