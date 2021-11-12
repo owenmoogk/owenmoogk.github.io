@@ -19,7 +19,7 @@
 		},
 		{
 			"title": "Intake",
-			"text": "This intake on our robot was designed to both pickup the balls, and center them in a specific location to handoff to the feeder. It is made up of three shafts, an ABS roller, a vectored intake roller made up of 3D printed mecanum wheels, and a shaft with two wheels to handoff into the feeder. All three are driven by a 775 Pro attatched to a Versa Planetary gearbox. The intake is deployed by two 6\" pneumatic pistons.",
+			"text": "This intake on our robot was designed to both pickup the balls, and center them in a specific location to handoff to the feeder. It is made up of three shafts, an ABS roller, a vectored intake roller made up of 3D printed mecanum wheels, and a shaft with two wheels to handoff into the feeder. All three are driven by a 775 Pro attached to a Versa Planetary gearbox. The intake is deployed by two 6\" pneumatic pistons.",
 			"image": "intake.png"
 		},
 		{
@@ -29,7 +29,7 @@
 		},
 		{
 			"title": "Shooter",
-			"text": "The shooter on our robot is based upon two 6\" flywheels spinning to propel the ball. The flywheels are powered by a Falcon 500. The hood over the flywheels guides the balls, and can change its angle based on the distance of the target. It is attatched to a worm gear powered by an AM-2235 Snowblower motor. The entire shooter is mounted on a turret that can pivot 270°, powered by a 775 Pro motor.",
+			"text": "The shooter on our robot is based upon two 6\" flywheels spinning to propel the ball. The flywheels are powered by a Falcon 500. The hood over the flywheels guides the balls, and can change its angle based on the distance of the target. It is attached to a worm gear powered by an AM-2235 Snowblower motor. The entire shooter is mounted on a turret that can pivot 270°, powered by a 775 Pro motor.",
 			"image": "shooter.png"
 		},
 		{
