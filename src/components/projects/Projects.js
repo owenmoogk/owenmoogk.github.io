@@ -55,12 +55,12 @@ export default function ProjectPage() {
 
 	function fetchProjects() {
 		var tmpProjectData = []
-		fetch(process.env.PUBLIC_URL + 'assets/projectDirectory.json')
+		fetch(process.env.PUBLIC_URL + '/assets/projectDirectory.json')
 			.then(response => response.json())
 			.then(projectUrls => {
 				var requests = []
 				for (const projectUrl of projectUrls) {
-					requests.push(fetch(process.env.PUBLIC_URL + 'assets/projects/' + projectUrl + '.json')
+					requests.push(fetch(process.env.PUBLIC_URL + '/assets/projects/' + projectUrl + '.json')
 						.then(response => response.json())
 						.then(currentProjectData => {
 							tmpProjectData.push({ ...currentProjectData.meta, name: projectUrl })
@@ -87,7 +87,7 @@ export default function ProjectPage() {
 	return (
 		<div className='main' id='projectPage'>
 			<p className="title" id='projectTitle'>Projects</p>
-			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='projects/directory'>here</a>.</p>
+			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
 				<ProjectButton name='All' filterProjects={filterProjects} />
