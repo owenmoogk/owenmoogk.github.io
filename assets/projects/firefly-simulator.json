@@ -3,7 +3,8 @@
 		"title": "Firefly Simulator",
 		"date": "March 31, 2021",
 		"type": "Python Pygame",
-		"description": "Pygame simulation of firefly behavior."
+		"description": "Pygame simulation of firefly behavior.",
+		"githubLink": "https://github.com/owenmoogk/gists/tree/main/fireflies"
 	},
 	"blocks": [
 		{
