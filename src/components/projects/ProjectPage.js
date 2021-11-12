@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
+import ReactCompareImage from 'react-compare-image'
 
 export default function ProjectPage() {
 
@@ -21,9 +22,9 @@ export default function ProjectPage() {
 		// going through blocks and loading them
 		var html = blocks.map((block, key) => {
 
-			if (block.ul){
+			if (block.ul) {
 				var newArray = []
-				for (let num = 0; num < block.ul.length; num++){
+				for (let num = 0; num < block.ul.length; num++) {
 					newArray.push(block.ul[num].replaceAll('<a', "<a target='_blank' rel='noreferrer'"))
 				}
 				block.ul = newArray
@@ -43,7 +44,7 @@ export default function ProjectPage() {
 							: null
 						}
 					</div>
-					
+
 					{block.ul
 						? <ul>
 							{block.ul.map((li, key) => {
@@ -64,7 +65,7 @@ export default function ProjectPage() {
 
 					{block.render
 						? Array.isArray(block.render)
-							? <div style={{display: 'flex', flexDirection: 'column'}}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)}</div>
+							? <div style={{ display: 'flex', flexDirection: 'column' }}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)}</div>
 							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} alt='' />
 						: null
 					}
@@ -76,6 +77,23 @@ export default function ProjectPage() {
 
 					{block.iframe
 						? block.iframe
+						: null
+					}
+
+					{block.slider ? console.log("/img/projects" + name + "/" + block.slider[0]) : null}
+					{block.slider
+						? <div className='sliderContainer'>
+							<ReactCompareImage leftImage={"/img/projects/" + name + "/" + block.slider[0]} rightImage={"/img/projects/" + name + "/" + block.slider[1]} aspectRatio='taller' handle={
+								<button style={{
+									height: '50px',
+									outline: 'none',
+									width: '10px',
+									border: 'none',
+									borderRadius: '5px',
+								}}></button>
+							} />
+							<span className='subtitle'>Move the slider to see inside.</span>
+						</div>
 						: null
 					}
 
@@ -92,7 +110,8 @@ export default function ProjectPage() {
 		return (
 			<div id='projectBody' className='main'>
 
-					<style dangerouslySetInnerHTML={{__html: `
+				<style dangerouslySetInnerHTML={{
+					__html: `
 						html, body{
 							max-width: 100%;
 							overflow-x: hidden;
@@ -101,7 +120,7 @@ export default function ProjectPage() {
 
 				<div className="title">
 					{xmlContent.meta.title}
-					<div id='hr'/>
+					<div id='hr' />
 				</div>
 
 				<div id='icons'>
@@ -141,7 +160,7 @@ export default function ProjectPage() {
 				</div>
 			</div>
 		)
-	}	
+	}
 
 	return (
 		xmlContent
