@@ -3,7 +3,8 @@
 		"title": "Notes App",
 		"date": "February 10, 2021",
 		"type": "Javascript Flask",
-		"description": "Simple notes app created using Flask."
+		"description": "Simple notes app created using Flask.",
+		"githubLink": ""
 	},
 	"blocks": [
 		{

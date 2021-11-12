@@ -17,12 +17,6 @@
 		{
 			"title": "Technical",
 			"text": "This project was my first introduction to neural networks. The python NEAT library does a lot of the heavy lifting for me, but was a great introduction to the basics. It was helpful to have a tutorial to look at when working on something completely new, but I was weary of copying things line for line as it's not a good way to learn. I will be looking at doing something of my own with the NEAT library soon, so look out :)"
-		},
-		{
-			"title": "Downloads",
-			"ul": [
-				"<a href='https://github.com/owenmoogk/flappy-bird'>Play the game</a>"
-			]
 		}
 	]
 }
