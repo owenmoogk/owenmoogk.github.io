@@ -120,9 +120,9 @@ export default function ProjectPage() {
 
 				<div className="title">
 					{xmlContent.meta.title}
-					<div id='hr' />
 				</div>
-
+				<p className='subtitle'>{xmlContent.meta.date}</p>
+				
 				<div id='icons'>
 
 					{xmlContent.meta.githubLink === ""
