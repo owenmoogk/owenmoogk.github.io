@@ -15,7 +15,7 @@
 		},
 		{
 			"title": "Technical",
-			"text": "This was a visualization of the NEAT algorithm at work, learning how to play the infamous Dino Game. It was all coded in python, and shown using pygame. It is using the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT-Python</a> module, which does most of the heavy lifting for me, but gives a great introduction to the basics of neural networks."
+			"text": "This was a visualization of the NEAT algorithm at work, learning how to play the infamous Dino Game. It was all coded in python, and shown using Pygame. It is using the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT-Python</a> module, which does most of the heavy lifting for me, but gives a great introduction to the basics of neural networks."
 		}
 	]
 }
