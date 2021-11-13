@@ -7,4 +7,3 @@ projects to add:
 
 project pages:
 	add stl viewer to applicable pages
-	add img slider like janik (hes my hero :)))
