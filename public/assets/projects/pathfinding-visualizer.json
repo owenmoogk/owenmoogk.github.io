@@ -4,7 +4,8 @@
 		"date": "February 20, 2021",
 		"type": "Python Pygame",
 		"description": "Pathfinding algorithms visualization built using Pygame.",
-		"featured": true
+		"featured": true,
+		"externalLink": "https://owenmoogk.tk/pathfinding-visualizer"
 	},
 	"blocks": [
 		{
