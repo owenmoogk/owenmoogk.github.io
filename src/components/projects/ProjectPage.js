@@ -80,7 +80,6 @@ export default function ProjectPage() {
 						: null
 					}
 
-					{block.slider ? console.log("/img/projects" + name + "/" + block.slider[0]) : null}
 					{block.slider
 						? <div className='sliderContainer'>
 							<ReactCompareImage leftImage={"/img/projects/" + name + "/" + block.slider[0]} rightImage={"/img/projects/" + name + "/" + block.slider[1]} aspectRatio='taller' handle={
