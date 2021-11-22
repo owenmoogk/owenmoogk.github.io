@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
-	Route
+	Route,
+	Redirect
 } from 'react-router-dom';
 import Nav from "components/Nav.js"
 import Homepage from 'components/homepage/Homepage.js'
@@ -11,6 +12,7 @@ import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
 import Resources from 'components/Resources.js'
 import 'styles.css'
+import NotFoundPage from './components/NotFoundPage'
 
 export default function App(props) {
 
@@ -64,6 +66,10 @@ export default function App(props) {
 				<Route exact path='/'>
 					<Homepage />
 				</Route>
+				<Route path='/404'>
+					<NotFoundPage/>
+				</Route>
+				<Redirect to='/404' />
 			</Switch>
 
 		</Router>
