@@ -1,0 +1,19 @@
+{
+	"meta": {
+		"title": "Simplelib",
+		"date": "January 23, 2021",
+		"externalLink": "https://owenmoogk.github.io/simplelib-documentation/",
+		"type": "Python Javascript",
+		"description": "A python library for dealing with complex data structures and algorithms.",
+		"featured": true
+	},
+	"blocks": [
+		{
+			"render": "main.png"
+		},
+		{
+			"title": "Overview",
+			"text": "Simplelib. The all in one python library. I designed this for ease of implementation of advanced data structures and algorithms in python. It implements custom hashmaps, binary search trees, advanced array support, linked lists, graphs, and much more. Check it out the documentation <a href='https://owenmoogk.github.io/simplelib-documentation'>here</a>."
+		}
+	]
+}

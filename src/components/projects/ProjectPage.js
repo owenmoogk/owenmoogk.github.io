@@ -6,7 +6,7 @@ export default function ProjectPage() {
 
 	const [xmlContent, setXmlContent] = useState()
 	var { name } = useParams()
-	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/' + name + ".json"
+	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/' + name +'/' + name + ".json"
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
@@ -58,31 +58,26 @@ export default function ProjectPage() {
 
 					{block.image
 						? Array.isArray(block.image)
-							? block.image.map((image, key) => <img key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + image} className="img" alt='' />)
-							: <img src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.image} className="img" alt='' />
+							? block.image.map((image, key) => <img key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + image} className="img" alt='' />)
+							: <img src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.image} className="img" alt='' />
 						: null
 					}
 
 					{block.render
 						? Array.isArray(block.render)
-							? <div style={{ display: 'flex', flexDirection: 'column' }}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + render} alt='' />)}</div>
-							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.render} alt='' />
+							? <div style={{ display: 'flex', flexDirection: 'column' }}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + render} alt='' />)}</div>
+							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.render} alt='' />
 						: null
 					}
 
 					{block.video
-						? <video src={process.env.PUBLIC_URL + "/img/projects/" + name + "/" + block.video} controls></video>
-						: null
-					}
-
-					{block.iframe
-						? block.iframe
+						? <video src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.video} controls></video>
 						: null
 					}
 
 					{block.slider
 						? <div className='sliderContainer'>
-							<ReactCompareImage leftImage={"/img/projects/" + name + "/" + block.slider[0]} rightImage={"/img/projects/" + name + "/" + block.slider[1]} aspectRatio='taller' handle={
+							<ReactCompareImage leftImage={"/assets/projects/" + name + "/" + block.slider[0]} rightImage={"/assets/projects/" + name + "/" + block.slider[1]} aspectRatio='taller' handle={
 								<button style={{
 									height: '50px',
 									outline: 'none',

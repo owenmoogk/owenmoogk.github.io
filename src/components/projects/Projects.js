@@ -60,7 +60,7 @@ export default function ProjectPage() {
 			.then(projectUrls => {
 				var requests = []
 				for (const projectUrl of projectUrls) {
-					requests.push(fetch(process.env.PUBLIC_URL + '/assets/projects/' + projectUrl + '.json')
+					requests.push(fetch(process.env.PUBLIC_URL + '/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
 						.then(response => response.json())
 						.then(currentProjectData => {
 							tmpProjectData.push({ ...currentProjectData.meta, name: projectUrl })

@@ -59,7 +59,7 @@ export default function ProjectDirectory() {
 			.then(projectUrls => {
 				var requests = []
 				for (const projectUrl of projectUrls) {
-					requests.push(fetch('/assets/projects/' + projectUrl + '.json')
+					requests.push(fetch('/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
 						.then(response => response.json())
 						.then(currentProjectData => {
 							tmpProjectData.push({ ...currentProjectData.meta, name: projectUrl })
