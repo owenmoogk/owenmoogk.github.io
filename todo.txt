@@ -4,3 +4,5 @@ projects to add:
 	covid scraper
 	snake ai to page
 	passion project (or add it to work)
+	emoji machine learning
+	jwt fullstack boilerplate
