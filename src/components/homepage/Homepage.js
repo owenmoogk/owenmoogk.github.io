@@ -5,22 +5,33 @@ import FeaturedIcon from "components/projects/FeaturedIcon";
 export default function Homepage() {
 
 	const [skillsLoaded, setSkillsLoaded] = useState(false)
-
-	function isElementInViewport (el) {
-		var rect = el.getBoundingClientRect();
-		return(
-			rect.top-window.innerHeight < 0
-		)
-	}
+	const [splash, setSplash] = useState("Aspiring Software Developer")
 	
 	function animateSkills() {
-		var el = document.getElementById('skillsTable')
-		if (isElementInViewport(el)) {
+		var table = document.getElementById('skillsTable')
+		if (table.getBoundingClientRect().top - window.innerHeight < 0) {
 			setSkillsLoaded(true)
 		}
 		else {
 			setSkillsLoaded(false)
 		}
+	}
+
+	function loadSplash(){
+		fetch('/assets/splashes.json')
+		.then(response => response.json())
+		.then(json => {
+			let index = getRandomInt(0, json.length-1)
+			let item = json[index]
+			setSplash(item)
+  		});
+	}
+	
+	// from https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
+	function getRandomInt(min, max) {
+		min = Math.ceil(min)
+		max = Math.floor(max)
+		return (Math.floor(Math.random() * (max - min + 1)) + min)
 	}
 
 	useEffect(() => {
@@ -36,7 +47,7 @@ export default function Homepage() {
 						<br />
 						<span className='special'>Owen Moogk</span>
 					</div>
-					<p className='subtitle'>Aspiring Software Developer</p>
+					<p className='subtitle' id='splash' onClick={() => loadSplash()}>{splash}</p>
 				</div>
 				<div className='photo'>
 					<img src='/assets/pfp-bw.png' />

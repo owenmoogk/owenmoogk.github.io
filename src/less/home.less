@@ -34,11 +34,15 @@
 			}
 		}
 
-		#downArrow{
-			position: absolute;
-			bottom: 20px;
-			right: 50%;
-			transform: translate(50%);
+		#splash{
+			user-select: none;
+			width: fit-content;
+			transition: 0.3s;
+			transform-origin: left top;
+
+			&:hover{
+				transform: scale(1.1);
+			}
 		}
 	}
 
