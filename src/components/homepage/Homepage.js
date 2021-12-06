@@ -62,12 +62,11 @@ export default function Homepage() {
 				<h1>Featured Projects</h1>
 
 				<div id='featuredProjectContainer'>
-					<FeaturedIcon title={"2702 Rebels 2020 Robot"} name={"2702-2020"} type={''} link={''} />
-					<FeaturedIcon title={"Pathfinding Visualizer"} name={"pathfinding-visualizer"} type={''} link={''} />
+					<FeaturedIcon title={"2702 Rebels 2020 Robot"} name={"2702-2020"} type={'Mechanical Solidworks'} link={''} />
+					<FeaturedIcon title={"Pathfinding Visualizer"} name={"pathfinding-visualizer"} type={'Python React'} link={''} />
 				</div>
 			</div>
 			<div>
-
 				<p>
 					<i>Wait, you want to know about me?</i> In that case, I am currently a highschool student in Grade 12 at <a href="https://bci.wrdsb.ca" target="_blank" rel='noreferrer'>Bluevale Collegiate Institute</a>,
 					who is quite passionate about engineering and design. Check out my <a href="projects">projects</a> page for details on personal endeavors with coding, hardware, web development, and 3D printing.
