@@ -132,23 +132,27 @@
         justify-content: center;
     }
 
-}
+    // home
+    #pfp{
+        display: none;
+    }
+    .larger{
+        text-align: center;
+    }
+    #homePage{
+        padding: 50px 10% 0 10% !important;
+    }
+    #homepageTitle{
+        justify-content: center !important;
+    }
 
-// HOMEPAGE SPLITSCREEN (SKILLS)
-@media only screen and (max-width: 1200px) {
-	#homepageSplitscreen{
-		flex-direction: column !important;
-		
-		& > *{
-			max-width: 700px;
-			margin-bottom: 0px !important;
-			margin-top: 0px !important;
-		}
-	}
+    #splash:hover{
+        transform: scale(1) !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .bar{
-        display: none;
-    }
+    // .bar{
+    //     display: none;
+    // }
 }

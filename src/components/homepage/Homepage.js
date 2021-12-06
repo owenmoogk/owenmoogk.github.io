@@ -49,7 +49,7 @@ export default function Homepage() {
 					</div>
 					<p className='subtitle' id='splash' onClick={() => loadSplash()}>{splash}</p>
 				</div>
-				<div className='photo'>
+				<div className='photo' id='pfp'>
 					<img src='/assets/pfp.png' />
 				</div>
 			</div>
@@ -61,7 +61,7 @@ export default function Homepage() {
 			<div>
 				<h1>Featured Projects</h1>
 
-				<div id='featuredProjectContainer'>
+				<div id='featuredContainer'>
 					<FeaturedIcon title={"2702 Rebels 2020 Robot"} name={"2702-2020"} type={'Mechanical Solidworks'} link={''} />
 					<FeaturedIcon title={"Pathfinding Visualizer"} name={"pathfinding-visualizer"} type={'Python React'} link={''} />
 				</div>
