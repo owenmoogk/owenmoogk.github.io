@@ -2,7 +2,7 @@
 	"meta": {
 		"title": "Pathfinding Visualizer",
 		"date": "February 20, 2021",
-		"type": "Python Pygame",
+		"type": "Python React",
 		"description": "Pathfinding algorithms visualization built using Pygame.",
 		"featured": true,
 		"externalLink": "https://owenmoogk.tk/pathfinding-visualizer"
