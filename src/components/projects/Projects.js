@@ -20,10 +20,10 @@ export default function ProjectPage() {
 			var desc = tile.getElementsByClassName('contentDesc')[0].innerText;
 
 			if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter) || desc.toLowerCase().includes(filter)) {
-				tile.style.display = "";
+				tile.parentNode.style.display = "";
 			}
 			else {
-				tile.style.display = "none";
+				tile.parentNode.style.display = "none";
 			}
 		}
 	}
@@ -45,10 +45,10 @@ export default function ProjectPage() {
 			var type = tile.getElementsByClassName('type')[0].innerText;
 
 			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
-				tile.style.display = ''
+				tile.parentNode.style.display = ''
 			}
 			else {
-				tile.style.display = 'none'
+				tile.parentNode.style.display = 'none'
 			}
 		}
 	}
