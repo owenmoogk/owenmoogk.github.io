@@ -16,7 +16,7 @@ import NotFoundPage from './components/NotFoundPage'
 
 export default function App(props) {
 
-	const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === 'true' ? true : false)
+	const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === 'false' ? false : true)
 
 	function toggleDarkMode() {
 		localStorage.setItem('darkmode', darkMode ? false : true)
