@@ -33,12 +33,12 @@ export default function App(props) {
 						--textColor: white;
 						--cardColor: rgb(30,30,30);
 						--overlayColor: rgba(0,0,0,0.6);
-						--primaryColor: #FF69B4;
+						--primaryColor: skyblue;
 						--grey: lightgrey;
 						--lightgrey: rgb(44,44,44);
 						--superLightGrey: rgb(20,20,20);
 					}`
-					: `:root {
+						: `:root {
 						--cardColor: rgb(245,245,245);
 						--textColor: black;
 						--backgroundColor: white;
