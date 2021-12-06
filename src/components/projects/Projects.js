@@ -44,10 +44,10 @@ export default function ProjectPage() {
 		for (const tile of projectItems) {
 			var type = tile.getElementsByClassName('type')[0].innerText;
 
-			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all'){
+			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
 				tile.style.display = ''
 			}
-			else{
+			else {
 				tile.style.display = 'none'
 			}
 		}
@@ -90,13 +90,15 @@ export default function ProjectPage() {
 			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
-				<ProjectButton name='All' filterProjects={filterProjects} />
-				<ProjectButton name='Python' filterProjects={filterProjects} />
-				<ProjectButton name='Javascript' filterProjects={filterProjects} />
-				<ProjectButton name='React' filterProjects={filterProjects} />
-				<ProjectButton name='Django' filterProjects={filterProjects} />
-				<ProjectButton name='Solidworks' filterProjects={filterProjects} />
-				<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+				<div id='buttonContainer'>
+					<ProjectButton name='All' filterProjects={filterProjects} />
+					<ProjectButton name='Python' filterProjects={filterProjects} />
+					<ProjectButton name='Javascript' filterProjects={filterProjects} />
+					<ProjectButton name='React' filterProjects={filterProjects} />
+					<ProjectButton name='Django' filterProjects={filterProjects} />
+					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+				</div>
 			</div>
 
 			<div id='featuredProjects'>

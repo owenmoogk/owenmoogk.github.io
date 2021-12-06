@@ -89,13 +89,15 @@ export default function ProjectDirectory() {
 			<p className='subtitle'>All my other projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
-				<ProjectButton name='All' filterProjects={filterProjects} />
-				<ProjectButton name='Python' filterProjects={filterProjects} />
-				<ProjectButton name='Javascript' filterProjects={filterProjects} />
-				<ProjectButton name='React' filterProjects={filterProjects} />
-				<ProjectButton name='Django' filterProjects={filterProjects} />
-				<ProjectButton name='Solidworks' filterProjects={filterProjects} />
-				<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+				<div id='buttonContainer'>
+					<ProjectButton name='All' filterProjects={filterProjects} />
+					<ProjectButton name='Python' filterProjects={filterProjects} />
+					<ProjectButton name='Javascript' filterProjects={filterProjects} />
+					<ProjectButton name='React' filterProjects={filterProjects} />
+					<ProjectButton name='Django' filterProjects={filterProjects} />
+					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+				</div>
 			</div>
 			<div id='projectIcons'>
 				{projectData

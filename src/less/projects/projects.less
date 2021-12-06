@@ -69,15 +69,22 @@
 
 	#sortingContainer{
 
-		margin: 20px 0;
-		display: flex;
-        flex-wrap: wrap;
-
 		input{
 			color: var(--textColor);
 			background-color: var(--backgroundColor);
 			border: 2px solid var(--textColor);
 			font-weight: normal !important;
+			height: 30px;
+		}
+		margin: 20px 0;
+		display: flex;
+        flex-wrap: wrap;
+
+		#buttonContainer{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 		
 		p{
@@ -141,7 +148,6 @@
 			.projectIcons{
 				display: flex;
 				align-items: center;
-				// padding: 10px;
 				
 				a{
 					height: fit-content;
