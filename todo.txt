@@ -4,7 +4,3 @@ projects to add:
 	covid scraper
 	snake ai to page
 	passion project (or add it to work)
-
-project pages:
-	add stl viewer to applicable pages
-		i couldn't find a good react stl viewer, so idk man
