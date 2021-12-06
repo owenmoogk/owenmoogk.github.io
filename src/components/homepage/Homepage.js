@@ -50,7 +50,7 @@ export default function Homepage() {
 					<p className='subtitle' id='splash' onClick={() => loadSplash()}>{splash}</p>
 				</div>
 				<div className='photo'>
-					<img src='/assets/pfp-bw.png' />
+					<img src='/assets/pfp.png' />
 				</div>
 			</div>
 			<div>
