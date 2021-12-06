@@ -67,8 +67,12 @@ export default function App(props) {
 					<Homepage />
 				</Route>
 				<Route path='/404'>
-					<NotFoundPage/>
+					<NotFoundPage />
 				</Route>
+				<Route path='/github' component={() => {
+					window.location.href = 'https://github.com/owenmoogk?tab=repositories';
+					return null;
+				}} />
 				<Redirect to='/404' />
 			</Switch>
 
