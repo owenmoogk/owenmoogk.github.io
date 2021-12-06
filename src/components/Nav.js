@@ -15,7 +15,6 @@ export default function Nav(props) {
 		<>
 			<svg id="navButton" onClick={()=>setShown(!shown)} preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M7.95 11.95h32"/><path d="M7.95 23.95h32"/><path d="M7.95 35.95h32"/></g></svg>
 			<div id="navBox" style={{display: shown ? "flex" : ''}}>
-				<div className='navTitle'><a href='/'>Owen Moogk</a></div>
 				<div id='navLinks'>
 					<a href="/" className="navlink">Home</a>
 					<a href="/projects" className="navlink">Projects</a>
