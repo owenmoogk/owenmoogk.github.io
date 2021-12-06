@@ -26,7 +26,7 @@ export default function FeaturedIcon(props) {
 	console.log(borderColor)
 	
 	return (
-		<a href={link}>
+		<a href={link} style={{margin: '20px'}}>
 
 			<div className='featuredIcon' style={{
 				backgroundImage: borderColor
