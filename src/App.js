@@ -31,14 +31,12 @@ export default function App(props) {
 						? `:root{
 						--backgroundColor: black;
 						--textColor: white;
-						--cardColor: rgb(30,30,30);
 						--overlayColor: rgba(0,0,0,0.6);
 						--primaryColor: skyblue;
 						--grey: lightgrey;
 						--lightgrey: rgb(44,44,44);
 					}`
 						: `:root {
-						--cardColor: rgb(245,245,245);
 						--textColor: black;
 						--backgroundColor: white;
 						--overlayColor: rgba(255,255,255,0.6);
