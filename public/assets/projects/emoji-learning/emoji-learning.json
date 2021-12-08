@@ -1,0 +1,19 @@
+{
+	"meta": {
+		"title": "Emoji Machine Learning",
+		"date": "May 16, 2021",
+		"type": "React Django",
+		"description": "AI designed to recognize hand drawn emojis.",
+		"githubLink": "https://github.com/owenmoogk/emoji-machine-learning"
+	},
+	"blocks": [
+		{
+			"title": "Overview",
+			"text": "Inspired by a small application that I saw during a Hackathon, I wanted to create an app using machine learning combined with a frontend. I am aware of people who have done something of the sort before, however I still wanted to give it a shot. On the frontend, the user is given a canvas to draw on, and can submit drawings with a label as an emoji. With this data, we can train a model on the backend and start predicting what emoji a drawing represents."
+		},
+		{
+			"title": "Technical",
+			"text": "I built this using Django as a framework for the backend, and React for the frontend. Most of it is pretty straightforward, the main and most importnat peice is the AI. For the AI, I actually didn't code this myself, although that may be a next step. I used a library called SKLearn, a library for python that can implement neural networks. This was made at the start of my venture into neural networks, and I was not familiar enough to create my own. Nevertheless, it was a very fun and educational project, and if you are looking to see the code it can be found on Github, linked above."
+		}
+	]
+}
