@@ -14,10 +14,6 @@
 			"image": "robot.png"
 		},
 		{
-			"title": "Competition",
-			"text": "Cancelled due to COVID-19."
-		},
-		{
 			"title": "Intake",
 			"text": "This intake on our robot was designed to both pickup the balls, and center them in a specific location to handoff to the feeder. It is made up of three shafts, an ABS roller, a vectored intake roller made up of 3D printed mecanum wheels, and a shaft with two wheels to handoff into the feeder. All three are driven by a 775 Pro attached to a Versa Planetary gearbox. The intake is deployed by two 6\" pneumatic pistons.",
 			"image": "intake.png"
@@ -43,10 +39,8 @@
 			"image": "drive.png"
 		},
 		{
-			"title": "Downloads",
-			"ul": [
-				"<a href='https://github.com/owenmoogk/renders/tree/master/2020robot/img'>Renders</a>"
-			]
+			"title": "My Contribution",
+			"text": "As this was my second year on the team, I evolved into a more senior leadership role. I was the feeder subsystem design lead, working to design and fabricate the system. I worked with younger students, teaching CAD and manufacturing skills. <br><br> In addition to this, I also worked as the sponsorship lead. I worked to attract, recruit, and connect with current sponsors of the team. I onboarded new sponsors and maintained relationships with over 20 sponsors, working to increase funding for the team and STEM endeavour in the community. <br><br> I also worked on the business team. On this team, I worked to plan community events, working to not only raise awareness of the first program but also bring STEM activities to the community. <br><br> One goal of the team is to bring Science and Engineering to underprivileged communities who do not have access to these resources and education. Working towards this goal, I volunteered in two different positions, mentoring a <a href='https://www.firstinspires.org/robotics/fll'>FLL</a> robotics team, as well as a FLL Jr team. In these roles, I strived to teach younger students interested in engineering the design process, while fostering an environment for teamwork, cooperation, and creation."
 		},
 		{
 			"title": "Resources",
