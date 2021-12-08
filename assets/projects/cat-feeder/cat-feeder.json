@@ -22,7 +22,18 @@
 		},
 		{
 			"title": "Technical",
-			"text": "This machine uses an arduino with a bit of C++ code that Janik wrote. I worked on the image detection, written in Python. I attempted many things, such as training my own HAAR cascade model, but ended up just going with a model that I found online. The machine has 3 preset 'feeding times', in which the live feed will run and look for cats. After a cat has been found, it sends a signal to the arduino to move a servo and open the feeding door."
+			"text": "This machine uses an arduino with a bit of C++ code that Janik wrote. I worked on the image detection, written in Python. I attempted many things, such as training my own HAAR cascade model, but ended up just going with a model that I found online. The machine has 3 preset 'feeding times', in which the live feed will run and look for cats. After a cat has been found, it sends a signal to the arduino to move a servo and open the feeding door. <br><br> The image detection is performed using a python library called CV2, getting a frame by frame input from the camera. In each frame, we run the deep neural network to detect cats, and from there send a serial message to the arduino. In addition to this technology, we also have a limit switch on the inside of the cat food tank, and this will detect when the amount of food in the tank is low. From here, the arduino will send a signal back to the python script, which will use SMPTLib to send an email to the user, alerting them that they are out of food."
+		},
+		{
+			"title": "Materials",
+			"ul": [
+				"PLA 3D-printing filament",
+				"Limit Switch (x1)",
+				"Servo",
+				"<a href='https://store.arduino.cc/products/arduino-uno-rev3/'>Arduino Uno</a>",
+				"Leds (x3)",
+				"Camera (any webcam)"
+			]
 		},
 		{
 			"render": "cat.png"

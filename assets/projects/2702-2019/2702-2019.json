@@ -40,18 +40,16 @@
 			"image": "drive.png"
 		},
 		{
-			"title": "Downloads",
-			"ul": [
-				"<a href='https://github.com/owenmoogk/renders/tree/master/2019robot/img'>Renders</a>",
-				"<a href='https://2702rebels.com/resource/resource-2019/'>Robot Code</a>"
-			]
+			"title": "My Contributions",
+			"text": "As a freshman on the team, I worked with senior design groups to design and manufacture parts for the robot. Although I did not participate on a specific subsystem, I learned many skills such as machining, CAD design, and fabrication. In addition to this, I worked on the business team as well, recruiting and retaining sponsors. <br><br> One of my more important roles was to work in the Pits at competition. In this role, I was actively making design decisions to work around problems that we came across, as well as repairing broken parts on the robot. I also was a team spokesperson, interacting with other teams and judges, discussing technical aspects of the robot. It was this work that led the team to win multiple design awards at competitions."
 		},
 		{
 			"title": "Resources",
 			"ul": [
 				"<a href='https://2702rebels.com'>2702 Rebels</a>",
 				"<a href='https://firstinspires.org'>FIRST</a>",
-				"<a href='https://thebluealliance.com'>The Blue Alliance</a>"
+				"<a href='https://thebluealliance.com'>The Blue Alliance</a>",
+				"<a href='https://2702rebels.com/resource/resource-2019/'>Robot Code</a>"
 			]
 		}
 		

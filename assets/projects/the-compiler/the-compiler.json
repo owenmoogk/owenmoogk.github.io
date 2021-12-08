@@ -5,7 +5,7 @@
 		"type": "React",
 		"externalLink": "https://owenmoogk.github.io/the-compiler",
 		"description": "Compilation of useful data and websites.",
-		"featured": true
+		"featured": false
 	},
 	"blocks": [
 		{
