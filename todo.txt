@@ -1,7 +1,4 @@
 projects to add:
 	geom calculator
-	covid website
-	covid scraper
 	snake ai to page
 	passion project (or add it to work)
-	jwt fullstack boilerplate
