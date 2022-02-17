@@ -23,6 +23,7 @@ export default function App(props) {
 		setDarkMode(darkMode ? false : true)
 	}
 
+	
 	return (
 		<Router>
 			<style dangerouslySetInnerHTML={{
