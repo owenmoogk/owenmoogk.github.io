@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Helmet from "react-helmet";
 
 export default function Resources() {
 
@@ -12,6 +13,9 @@ export default function Resources() {
 
 	return (
 		<div className="main" id='resourcePage'>
+			<Helmet>
+				<title>Assets - Owen Moogk</title>
+			</Helmet>
 			<p className="title">Assets</p>
 			<p className='subtitle'>Extra bits, for storage (and a little brag)</p>
 			{data ?

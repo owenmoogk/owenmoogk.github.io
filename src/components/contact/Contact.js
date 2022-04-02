@@ -1,9 +1,13 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 export default function ContactPage() {
 
 	return (
 		<div className="main">
+			<Helmet>
+				<title>Contact - Owen Moogk</title>
+			</Helmet>
 			<p className="title">Contact</p>
 			<div id='contactPage'>
 				<div className='contactCard'>

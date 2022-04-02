@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactCompareImage from 'react-compare-image'
+import Helmet from "react-helmet"
 
 export default function ProjectPage() {
 
@@ -103,6 +104,10 @@ export default function ProjectPage() {
 	function buildProjectPage() {
 		return (
 			<div id='projectBody' className='main'>
+
+				<Helmet>
+					<title>{xmlContent.meta.title} - Owen Moogk</title>
+				</Helmet>
 
 				<style dangerouslySetInnerHTML={{
 					__html: `

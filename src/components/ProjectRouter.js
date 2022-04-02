@@ -7,11 +7,15 @@ import {
 import Projects from 'components/projects/Projects.js'
 import ProjectPage from 'components/projects/ProjectPage.js'
 import ProjectDirectory from 'components/projects/ProjectDirectory.js'
+import Helmet from 'react-helmet';
 
 function App() {
 
 	return (
 		<Router>
+			<Helmet>
+				<title>Projects - Owen Moogk</title>
+			</Helmet>
 			<Switch>
 				<Route exact path='/projects'>
 					<Projects />
