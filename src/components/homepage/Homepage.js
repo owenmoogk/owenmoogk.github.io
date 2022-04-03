@@ -1,21 +1,9 @@
 import { useEffect, useState } from "react";
-import SkillIcon from "./SkillIcon";
 import FeaturedIcon from "components/projects/FeaturedIcon";
 
 export default function Homepage() {
 
-	const [skillsLoaded, setSkillsLoaded] = useState(false)
 	const [splash, setSplash] = useState("Aspiring Software Developer")
-	
-	function animateSkills() {
-		var table = document.getElementById('skillsTable')
-		if (table.getBoundingClientRect().top - window.innerHeight < 0) {
-			setSkillsLoaded(true)
-		}
-		else {
-			setSkillsLoaded(false)
-		}
-	}
 
 	function loadSplash(){
 		fetch('/assets/splashes.json')
@@ -33,10 +21,6 @@ export default function Homepage() {
 		max = Math.floor(max)
 		return (Math.floor(Math.random() * (max - min + 1)) + min)
 	}
-
-	useEffect(() => {
-		// window.addEventListener('scroll', animateSkills)
-	}, [])
 
 	return (
 		<div id='homePage'>
@@ -72,27 +56,6 @@ export default function Homepage() {
 					<FeaturedIcon title={"Pathfinding Visualizer"} name={"pathfinding-visualizer"} type={'Python React'} link={''} />
 				</div>
 			</div>
-
-			{/* <div id='skills'>
-				<p>Lastly, these are some skills I've been working to refine over the last few years. To see them in action check out my <a href='https://github.com/owenmoogk' target='_blank' rel='noreferrer'>Github</a>.</p>
-				<table id='skillsTable'>
-					<h3>Web Development</h3>
-					<SkillIcon name='ReactJS' percent={80} doLoad={skillsLoaded}/>
-					<SkillIcon name='Javascript' percent={90} doLoad={skillsLoaded}/>
-					<SkillIcon name='HTML / DOM' percent={90} doLoad={skillsLoaded}/>
-					<SkillIcon name='CSS' percent={75} doLoad={skillsLoaded}/>
-
-					<h3>Coding</h3>
-					<SkillIcon name='Python' percent={90} doLoad={skillsLoaded}/>
-					<SkillIcon name='Django' percent={40} doLoad={skillsLoaded}/>
-					<SkillIcon name='C++ / Arduino' percent={30} doLoad={skillsLoaded}/>
-					<SkillIcon name='Git' percent={50} doLoad={skillsLoaded}/>
-
-					<h3>Mechanical</h3>
-					<SkillIcon name='Solidworks' percent={60} doLoad={skillsLoaded}/>
-					<SkillIcon name='3D Printing' percent={70} doLoad={skillsLoaded}/>
-				</table>
-			</div> */}
 		</div>
 	);
 }
