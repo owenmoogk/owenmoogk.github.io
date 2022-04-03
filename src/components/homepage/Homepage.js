@@ -55,13 +55,13 @@ export default function Homepage() {
 			</div>			
 			<div>
 				<p>
-					I'm currently a Grade 12 Student who is quite passionate about engineering and design. I am planning on studying <a href='https://uwaterloo.ca/future-students/programs/mechatronics-engineering'>Mechatronics Engineering</a> at the <a href='https://uwaterloo.ca/'>University of Waterloo</a> next year. I made this website to work on my web development skills as well as showcase some work. Check out my <a href="projects">projects</a> page for details on personal endeavors with coding, hardware, web development, and 3D printing.
+					I'm currently a Grade 12 Student who is quite passionate about engineering and design. Next year I will be studying <a href='https://uwaterloo.ca/future-students/programs/mechatronics-engineering'>Mechatronics Engineering</a> at the <a href='https://uwaterloo.ca/'>University of Waterloo</a>. I made this website to work on my web development skills as well as showcase some work. Check out my <a href="projects">projects</a> page for details on personal endeavors with coding, hardware, web development, and 3D printing.
 				</p>
 			</div>
 			<div>
 				<p>
 
-					In my spare time, I've worked as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involved myself in the <a href="https://dukeofed.org" target="_blank" rel='noreferrer'>Duke of Edinburgh's Award</a>, and attended the prestigious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. For more info check out my <a href='work'>work</a> page.
+					Outside of school, I've worked as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involved myself in the <a href="https://dukeofed.org" target="_blank" rel='noreferrer'>Duke of Edinburgh's Award</a>, and attended the prestigious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. For more info check out my <a href='work'>work</a> page.
 				</p>
 			</div>
 			<div>
