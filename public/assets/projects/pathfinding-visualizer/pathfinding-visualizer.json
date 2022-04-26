@@ -5,7 +5,7 @@
 		"type": "Python React",
 		"description": "Pathfinding algorithms visualization built using Pygame.",
 		"featured": true,
-		"externalLink": "https://owenmoogk.tk/pathfinding-visualizer"
+		"externalLink": "https://owenmoogk.github.io/pathfinding-visualizer"
 	},
 	"blocks": [
 		{
