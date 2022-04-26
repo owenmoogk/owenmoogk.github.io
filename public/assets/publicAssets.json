@@ -7,5 +7,6 @@
     {"Headshot": "pfp.png"},
     {"Background": "background.jpg"},
     {"Background Blurred": "background-blur.jpg"},
-    {"Canadian Computing Competition Certificate": "ccc-certificate.jpg"}
+    {"Canadian Computing Competition Certificate": "ccc-certificate.pdf"},
+    {"Sustainable Engineering Design Challenge": "engineering-design-challenge.pdf"}
 ]
