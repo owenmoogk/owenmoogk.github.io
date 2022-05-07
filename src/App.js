@@ -30,10 +30,11 @@ export default function App(props) {
 				__html:
 					darkMode
 						? `:root{
-						--backgroundColor: rgb(20,20,20);
+						--backgroundColor: rgb(35,35,35);
 						--textColor: white;
 						--overlayColor: rgba(0,0,0,0.6);
-						--primaryColor: skyblue;
+						--primaryColor: rgb(135, 206, 235);
+						--fade: rgb(189, 238, 255);
 						--grey: lightgrey;
 						--lightgrey: rgb(44,44,44);
 					}`
@@ -42,6 +43,7 @@ export default function App(props) {
 						--backgroundColor: white;
 						--overlayColor: rgba(255,255,255,0.6);
 						--primaryColor: blue;
+						--fade: rgb(100, 100, 255);
 						--grey: grey;
 						--lightgrey: lightgrey;
 					}`
