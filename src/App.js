@@ -10,7 +10,7 @@ import Homepage from 'components/homepage/Homepage.js'
 import Workpage from 'components/work/Workpage.js'
 import ContactPage from 'components/contact/Contact.js';
 import ProjectRouter from 'components/ProjectRouter.js';
-import Resources from 'components/Resources.js'
+import Resources from 'components/Assets.js'
 import 'styles.css'
 import NotFoundPage from './components/NotFoundPage'
 

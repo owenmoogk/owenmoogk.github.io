@@ -22,7 +22,7 @@ export default function Resources() {
 				<ul>
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
-						var link = item[itemName]
+						var link = '/asset/'+item[itemName]
 						return (
 							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
 						)
