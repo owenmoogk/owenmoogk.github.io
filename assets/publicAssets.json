@@ -7,5 +7,19 @@
     {"Headshot": "pfp.png"},
     {"Background Blurred": "background-blur.jpg"},
     {"Canadian Computing Competition Certificate": "ccc-certificate.pdf"},
-    {"Sustainable Engineering Design Challenge": "engineering-design-challenge.pdf"}
+    {"Sustainable Engineering Design Challenge": "engineering-design-challenge.pdf"},
+    {"university": [
+        {"Waterloo Mechatronics Offer": "university/admissions/uw-tron.pdf"},
+        {"Waterloo CS Offer": "university/admissions/uw-cs.pdf"},
+        {"Waterloo CS-BBA Offer": "university/admissions/uw-bba-cs.pdf"},
+        {"Carleton Offer": "university/admissions/carleton.pdf"},
+        {"Laurier Offer": "university/admissions/laurier.pdf"},
+        {"UBC Offer": "university/admissions/ubc.pdf"},
+        {"Western Offer": "university/admissions/western.pdf"},
+        "",
+        {"Waterloo Mechatronics Scholarship": "university/scholarships/uw-tron.pdf"},
+        {"Waterloo CS Scholarship": "university/scholarships/uw-cs.pdf"},
+        {"Waterloo CS-BBA Scholarship": "university/scholarships/uw-cs-bba.pdf"},
+        {"Western Scholarship": "university/scholarships/western.pdf"}
+    ]}
 ]
