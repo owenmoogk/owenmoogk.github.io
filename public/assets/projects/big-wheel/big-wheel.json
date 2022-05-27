@@ -1,0 +1,25 @@
+{
+	"meta": {
+		"title": "Big Wheel",
+		"date": "May 28, 2022",
+		"githubLink": "",
+		"type": "Mechanical",
+		"description": "2022 Bluevale Collegiate Electric Car",
+		"featured": true
+	},
+	"blocks": [
+		{
+			"title": "Overview",
+			"text": "I am a part of the Bluevale Collegiate Electric Car Team, where I work with a small team to develop and build electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system."
+		},
+		{
+			"title": "Images",
+			"image": ["big-wheel.JPG", "red-car.JPG"]
+		},
+		{
+			"title": "Competition",
+			"text": "This car was designed to compete in the University of Waterloo Electric Vehicle Challenge. It is an endurance race where teams compete to complete the most laps in a set amount of time. There are two categories, 12V and 24V, with the winner of the 24V winning the oppertunity of showing the car at the Toronto Auto Show.",
+			"image": "feed.png"
+		}
+	]
+}
