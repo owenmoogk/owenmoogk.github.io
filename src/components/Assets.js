@@ -9,7 +9,7 @@ export default function Resources() {
 		fetch('./publicAssets.json')
 			.then(response => response.json())
 			.then(json => setData(json))
-	})
+	}, [])
 
 	return (
 		<div className="main" id='resourcePage'>
@@ -23,6 +23,9 @@ export default function Resources() {
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
 						var link = '/asset/'+item[itemName]
+						if (itemName == 'university'){
+							return
+						}
 						return (
 							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
 						)
@@ -30,7 +33,33 @@ export default function Resources() {
 				</ul>
 				: null
 			}
-
+			<p className='subtitle'>Universities</p>
+			{data ?
+				<ul>
+					{data.map((item, key) => {
+						var itemName = Object.keys(item)
+						if (itemName == 'university'){
+							return(
+								item.university.map((uniItem, key) => {
+									if (!uniItem){
+										return(
+											<br/>
+										)
+									}
+									var itemName = Object.keys(uniItem)
+									console.log(itemName)
+									var link = '/asset/'+uniItem[itemName]
+									return (
+										<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
+									)
+								})
+							)
+						}						
+					})}
+				</ul>
+				: null
+			}
+			
 		</div>
 	);
 }

@@ -34,7 +34,7 @@ export default function Homepage() {
 					<p className='subtitle' id='splash' onClick={() => loadSplash()}>{splash}</p>
 				</div>
 				<div className='photo' id='pfp'>
-					<img src='/asset/pfp.png' />
+					<img src='/assets/pfp.png' />
 				</div>
 			</div>			
 			<div>
