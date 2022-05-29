@@ -2,3 +2,5 @@ projects to add:
 	geom calculator
 	snake ai to page
 	passion project (or add it to work)
+
+bullet font size is too small (smaller than paragraph text size)
