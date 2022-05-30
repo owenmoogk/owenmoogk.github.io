@@ -41,6 +41,9 @@
 		{
 			"title": "Functionality",
 			"text": "In the end, am I using it? No. I thought it would be wonderful to have additional programmable keys on my keyboard but it turns out it was more of a hassle than it was worth. I do believe that this is very practical, as being able to activate a python script with a keypress has limitless potential. I also had a bit of trouble configuring the input pullups, which would trigger multiple keys on one keypress. After consulting an electrical engineer about the problem still no solution was found, I am concluding that it results from buying cheap Arduino's off of Aliexpress. Nevertheless, a very fun project that has a lot of potential."
+		},
+		{
+			"text": "Update: I have since taken all the electronics out of the box again and after some troubleshooting got it to work. I am now using it and it is awesome. Have a look at the pictures above for it connected to my keyboard."
 		}
 	]
 }
