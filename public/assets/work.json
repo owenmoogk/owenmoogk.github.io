@@ -101,6 +101,15 @@
 				"<a href='https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design' target='_blank'>Certification</a>"
 			],
 			"img": "<img src='/img/work/free-code-camp.png'>"
+		},
+		{
+			"title": "SmartServe",
+			"subtitle": "AGCO Ontario",
+			"date": "July 2022",
+			"description": "Completed the SmartServe alcohol training program. ",
+			"ul": [
+				"<a href='/asset/smartserve.pdf' target='_blank'>Certification</a>"
+			]
 		}
 	]
 }
