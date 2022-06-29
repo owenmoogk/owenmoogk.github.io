@@ -22,7 +22,7 @@ export default function Resources() {
 				<ul>
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
-						var link = '/asset/'+item[itemName]
+						var link = 'https://owenmoogk.github.io/owenmoogk/'+item[itemName]
 						if (itemName == 'university'){
 							return
 						}
@@ -48,7 +48,7 @@ export default function Resources() {
 									}
 									var itemName = Object.keys(uniItem)
 									console.log(itemName)
-									var link = '/asset/'+uniItem[itemName]
+									var link = 'https://owenmoogk.github.io/owenmoogk/'+uniItem[itemName]
 									return (
 										<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
 									)
