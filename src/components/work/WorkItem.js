@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 export default function WorkItem(props) {
 
+	const [collapsed, setCollapsed] = useState(true)
 	var data = props.data
 
 	return (
@@ -12,7 +15,7 @@ export default function WorkItem(props) {
 				</div>
 
 				<div className='text'>
-					<div className="titleBlock">
+					<div className="titleBlock" onClick={() => setCollapsed(!collapsed)}>
 						<div className='workTitle'>{data.title}</div>
 						{data.subtitle
 							? <div>{data.subtitle} • {data.date}</div>
@@ -20,7 +23,7 @@ export default function WorkItem(props) {
 						}
 					</div>
 					{data.description
-						? <div className='content'>
+						? <div className='content' style={{height: collapsed ? '0' : ''}}>
 							<p dangerouslySetInnerHTML={{ __html: data.description }} />
 							<div>
 								{data.ul

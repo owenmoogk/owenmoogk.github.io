@@ -1,89 +1,82 @@
-#workPage{
+#workPage {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 30px;
 }
 
-#workItems{
+#workItems {
 	width: max(450px, 70%);
 	border-radius: 20px;
 	padding-bottom: 20px;
 
-	h1{
-		padding-top: 20px;
-		width: fit-content;
-		margin-top: 0;
-		font-size: 25px;
-	}
-
-	h1:hover{
-		cursor: pointer;
-	}
-
-	.workDisplayer{
-		transition: 0.6s;
-		height: 0;
+	.workCategory{
 		overflow: hidden;
 	}
 
-	.measureDiv{
-		width: 90%
+	h1 {
+		padding: 20px 0 10px;
+		margin-top: 0;
+		font-size: 25px;
+		border-bottom: 2px solid var(--grey);
+		width: 100%;
 	}
 
-	.workItem{
-
+	.workItem {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-left: 20px;
 		width: 100%;
 
-		.graphics{
+		.graphics {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-		}
+			transform: translate(0, 6px);
 
-		.svg{
-			width: 16px;
-			height: 16px;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: var(--grey);
-			margin-top: 8px;
-
-			.innerSvg{
-				width: 10px;
-				height: 10px;
+			.svg {
+				width: 20px;
+				height: 20px;
 				border-radius: 50%;
-				background: var(--backgroundColor);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: var(--grey);
+
+				.innerSvg {
+					width: 13px;
+					height: 13px;
+					border-radius: 50%;
+					background: var(--backgroundColor);
+				}
+			}
+
+			.line {
+				width: 2px;
+				height: calc(100% - 20px);
+				background-color: var(--grey);
 			}
 		}
 
-		.line{
-			width: 2px;
-			height: calc(100% - 60px);
-			background-color: var(--grey);
-		}
-
-		.text{
-
-			.titleBlock{
-				height: 50px;
-			}
-
+		.text {
 			margin-left: 20px;
 
-			.workTitle{
-				font-weight: bold;
-				font-size: 20px;
+			.titleBlock {
+				height: 50px;
+				margin-bottom: 10px;
+
+				.workTitle {
+					font-weight: bold;
+					font-size: 20px;
+				}
+
+				:hover {
+					cursor: pointer;
+				}
 			}
 
-			.content{
-				margin-top: 10px;
-				margin-bottom: 40px;
-				color: var(--textColor);
+			.content {
+				overflow: hidden;
 			}
 
 		}
