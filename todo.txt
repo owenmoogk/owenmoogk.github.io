@@ -6,3 +6,5 @@ projects to add:
 bullet font size is too small (smaller than paragraph text size)
 
 add svgs to work page (from resume)
+
+buy me a coffee??
