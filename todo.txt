@@ -4,3 +4,5 @@ projects to add:
 	passion project (or add it to work)
 
 bullet font size is too small (smaller than paragraph text size)
+
+add svgs to work page (from resume)
