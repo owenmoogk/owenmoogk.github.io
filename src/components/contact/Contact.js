@@ -12,8 +12,13 @@ export default function ContactPage() {
 			<div id='contactPage'>
 				<div className='contactCard'>
 					<h2>Say hi...</h2>
+					<p>
+						<a href='mailto:owenmoogk@gmail.com'>owenmoogk@gmail.com</a>
+						<br/>
+						<a href='https://www.linkedin.com/in/owenmoogk/'>linkedin.com/in/owenmoogk/</a>
+					</p>
 
-					<form action="https://send.pageclip.co/4Ru6GZ2T8CCE5mMgwxPGYhtn955GxAIj" className="pageclip-form" method="post">
+					{/* <form action="https://send.pageclip.co/4Ru6GZ2T8CCE5mMgwxPGYhtn955GxAIj" className="pageclip-form" method="post">
 						<div id='name'>
 							<input type='text' placeholder='First Name' name='firstname' className='nameInput' />
 							<input type='text' placeholder='Last Name' name='lastname' className='nameInput' />
@@ -24,7 +29,7 @@ export default function ContactPage() {
 						<button type="submit" className="pageclip-form__submit">
 							<span>Send</span>
 						</button>
-					</form>
+					</form> */}
 
 				</div>
 
@@ -32,18 +37,13 @@ export default function ContactPage() {
 					<h2>...or find me here</h2>
 
 					<div id='contactLinks'>
-						<a href='mailto:owenmoogk@gmail.com'>
-							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-								<path d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 0 0 1.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z" /><path d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z" />
-							</svg>
-						</a>
-						<a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>
+						{/* <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
 									<path fillRule="evenodd" clipRule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0z" />
 								</g>
 							</svg>
-						</a>
+						</a> */}
 						<a href='https://github.com/owenmoogk' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
