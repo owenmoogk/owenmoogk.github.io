@@ -23,8 +23,8 @@ export default function Resources() {
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
 						var link = 'https://owenmoogk.github.io/owenmoogk/'+item[itemName]
-						if (itemName == 'university'){
-							return
+						if (itemName === 'university'){
+							return null
 						}
 						return (
 							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
@@ -38,7 +38,7 @@ export default function Resources() {
 				<ul>
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
-						if (itemName == 'university'){
+						if (itemName === 'university'){
 							return(
 								item.university.map((uniItem, key) => {
 									if (!uniItem){
@@ -54,7 +54,8 @@ export default function Resources() {
 									)
 								})
 							)
-						}						
+						}
+						return null					
 					})}
 				</ul>
 				: null

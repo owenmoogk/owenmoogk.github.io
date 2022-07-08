@@ -31,7 +31,7 @@ export default function FeaturedIcon(props) {
 				backgroundImage: borderColor
 			}}>
 				<div className='featuredImage'>
-					<img src={'/assets/projects/' + props.name + '/main.png'}></img>
+					<img src={'/assets/projects/' + props.name + '/main.png'} alt=''></img>
 				</div>
 				<div className='featuredText'>
 					<span className="contentTitle">{props.title}</span>
