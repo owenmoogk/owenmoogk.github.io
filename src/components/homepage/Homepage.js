@@ -3,7 +3,7 @@ import FeaturedIcon from "components/projects/FeaturedIcon";
 
 export default function Homepage() {
 
-	const [splash, setSplash] = useState("Aspiring Software Developer")
+	const [splash, setSplash] = useState("Mechatronics Engineering Student")
 
 	function loadSplash(){
 		fetch('/assets/splashes.json')
