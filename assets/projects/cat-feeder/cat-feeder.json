@@ -14,7 +14,7 @@
 		},
 		{
 			"title": "Overview",
-			"text": "Me and my good friend Janik made a automated machine to assist with feeding cats. This was designed for a the <a href='https://jamhacks.ca/'>JamhacksV</a> hackathon. Although I don't own a cat, Janik does, and as a very busy person he doesn't always have the time. Through 3D printing, engineering, an arduino, and some code (written in python and C++), the Cat Feeder was born. <br><br> This was the most fun I've had working on a project in a while, and we ended up winning the prize for the best hardware hack. <br><br> For technical information, we have a website currently up <a href='https://owenmoogk.github.io/cat-feeder-website'>here</a>, and the Github page is linked at the top.",
+			"text": "Me and my good friend Janik made a automated machine to assist with feeding cats. This was designed for a the <a href='https://jamhacks.ca/'>JamhacksV</a> hackathon. Although I don't own a cat, Janik does, and as a very busy person he doesn't always have the time. Through 3D printing, engineering, an arduino, and some code (written in python and C++), the Cat Feeder was born. <br><br> This was the most fun I've had working on a project in a while, and we ended up winning the prize for the best hardware hack. <br><br> For technical information the Github page is linked at the top.",
 			"slider": [
 				"overlay1.png",
 				"overlay2.png"
