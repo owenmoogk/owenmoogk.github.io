@@ -6,7 +6,7 @@
 		"githubLink": "https://github.com/JanikThePanic/JAMHacksV_CatFeeder",
 		"type": "Python C++ Solidworks",
 		"description": "AI powered cat feeding robot, powered by Arduino.",
-		"featured": true
+		"featured": false
 	},
 	"blocks": [
 		{

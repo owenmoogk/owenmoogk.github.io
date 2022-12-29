@@ -4,7 +4,7 @@
 		"date": "April 15, 2021",
 		"type": "React Django",
 		"description": "React and Django fullstack app integrating Spotify API.",
-		"featured": true
+		"featured": false
 	},
 	"blocks": [
 		{
