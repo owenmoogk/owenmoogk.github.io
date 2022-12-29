@@ -34,7 +34,7 @@ export default function Resources() {
 				</ul>
 				: null
 			}
-			<p className='subtitle'>Universities</p>
+			{/* <p className='subtitle'>Universities</p>
 			{data ?
 				<ul>
 					{data.map((item, key) => {
@@ -60,7 +60,7 @@ export default function Resources() {
 					})}
 				</ul>
 				: null
-			}
+			} */}
 			
 		</div>
 	);
