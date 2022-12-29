@@ -5,7 +5,7 @@
 		"externalLink": "https://owenmoogk.github.io/github-profile/",
 		"type": "React",
 		"description": "Website to retrieve and implement github API data.",
-		"featured": true
+		"featured": false
 	},
 	"blocks": [
 		{
