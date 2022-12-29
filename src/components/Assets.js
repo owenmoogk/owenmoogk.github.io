@@ -17,15 +17,23 @@ export default function Resources() {
 				<title>Assets - Owen Moogk</title>
 			</Helmet>
 			<p className="title">Assets</p>
-			<p className='subtitle'>Extra bits, for storage (and a little brag)</p>
+			<p className='subtitle'>Extra bits, for storage.</p>
 			{data ?
 				<ul>
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
-						console.log(itemName)
-						var link = 'https://owenmoogk.github.io/owenmoogk/'+item[itemName]
 						if (itemName[0] === 'university'){
 							return null
+						}
+						if (itemName.length == 0)
+						{
+							return <br/>
+						}
+						if(!item[itemName].startsWith("http", 0)){
+							var link = 'https://owenmoogk.github.io/owenmoogk/'+item[itemName]
+						}
+						else{
+							link = item[itemName]
 						}
 						return (
 							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
