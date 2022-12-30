@@ -3,7 +3,3 @@ projects to add:
 	snake ai to page
 	passion project (or add it to work)
 	wave function collapse
-
-add svgs to work page (from resume)
-
-dropdown arrows to work (so it's intuitive to click on the things)
