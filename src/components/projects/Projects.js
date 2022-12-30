@@ -67,6 +67,7 @@ export default function ProjectPage() {
 			<p className="title" id='projectTitle'>Projects</p>
 			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
+				<div id='buttonContainer'>
 					<ProjectButton name='All' filterProjects={filterProjects} />
 					<ProjectButton name='Python' filterProjects={filterProjects} />
 					<ProjectButton name='Javascript' filterProjects={filterProjects} />
@@ -74,6 +75,7 @@ export default function ProjectPage() {
 					<ProjectButton name='Django' filterProjects={filterProjects} />
 					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
 					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+				</div>
 			</div>
 
 			<div id='featuredProjects'>

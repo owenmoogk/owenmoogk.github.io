@@ -71,13 +71,26 @@
 
 	#sortingContainer {
 
-		margin: 20px 0;
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		flex-direction: column;
+		margin-top: 20px;
+
+		#buttonContainer{
+			margin-bottom: 20px;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: fit-content;
+		}
 
 		p {
 			margin: 0;
+		}
+
+		input{
+			width: min(200px, 90%);
+			height: 25px;
 		}
 
 		.btn,
