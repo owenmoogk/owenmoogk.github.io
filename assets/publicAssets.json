@@ -1,5 +1,8 @@
 [
     {"Resume": "resume/resume.pdf"},
+    {"Hardware Resume": "resume/Resume%20-%20Hardware.pdf"},
+    {"Software Resume": "resume/Resume%20-%20Software.pdf"},
+    "",
     {"Term 1A Transcript (95.36%)": "1a-transcript.pdf"},
     {"High School Transcript (94.63%)": "hs-transcript.pdf"},
     {"AP Exams / AP Scholars Award": "ap-scores.pdf"},
