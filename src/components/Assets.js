@@ -25,7 +25,7 @@ export default function Resources() {
 						if (itemName[0] === 'university'){
 							return null
 						}
-						if (itemName.length == 0)
+						if (itemName.length === 0)
 						{
 							return <br/>
 						}
