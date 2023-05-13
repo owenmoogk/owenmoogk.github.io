@@ -41,35 +41,7 @@ export default function Resources() {
 					})}
 				</ul>
 				: null
-			}
-			{/* <p className='subtitle'>Universities</p>
-			{data ?
-				<ul>
-					{data.map((item, key) => {
-						var itemName = Object.keys(item)
-						if (itemName[0] === 'university'){
-							return(
-								item.university.map((uniItem, key) => {
-									if (!uniItem){
-										return(
-											<br/>
-										)
-									}
-									var itemName = Object.keys(uniItem)
-									console.log(itemName)
-									var link = 'https://owenmoogk.github.io/owenmoogk/'+uniItem[itemName]
-									return (
-										<li key={key}><a href={link} target='_blank' rel='noreferrer'>{itemName}</a></li>
-									)
-								})
-							)
-						}
-						return null					
-					})}
-				</ul>
-				: null
-			} */}
-			
+			}			
 		</div>
 	);
 }

@@ -10,40 +10,22 @@ export default function ContactPage() {
 			</Helmet>
 			<p className="title">Contact</p>
 			<div id='contactPage'>
-				<div className='contactCard'>
 					<h2>Say hi...</h2>
 					<p>
 						<a href='mailto:owenmoogk@gmail.com'>owenmoogk@gmail.com</a>
 						<br/>
 						<a href='https://www.linkedin.com/in/owenmoogk/'>linkedin.com/in/owenmoogk/</a>
 					</p>
-
-					{/* <form action="https://send.pageclip.co/4Ru6GZ2T8CCE5mMgwxPGYhtn955GxAIj" className="pageclip-form" method="post">
-						<div id='name'>
-							<input type='text' placeholder='First Name' name='firstname' className='nameInput' />
-							<input type='text' placeholder='Last Name' name='lastname' className='nameInput' />
-						</div>
-							<input type='text' placeholder='Email' name='email' id='emailInput' />
-						<input type='text' placeholder='Subject' name='subject' id='subjectInput' />
-						<textarea type='text' placeholder='Message' name='message' id='messageInput' />
-						<button type="submit" className="pageclip-form__submit">
-							<span>Send</span>
-						</button>
-					</form> */}
-
-				</div>
-
-				<div className='contactCard'>
 					<h2>...or find me here</h2>
 
 					<div id='contactLinks'>
-						{/* <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>
+						<a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
 									<path fillRule="evenodd" clipRule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0z" />
 								</g>
 							</svg>
-						</a> */}
+						</a>
 						<a href='https://github.com/owenmoogk' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
@@ -58,13 +40,14 @@ export default function ContactPage() {
 								</g>
 							</svg>
 						</a>
-						<a href='https://twitter.com/owen_moogk' target='_blank' rel='noreferrer'>
+						{/* probably don't need twitter (I don't use it) */}
+						{/* <a href='https://twitter.com/owen_moogk' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
 									<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" />
 								</g>
 							</svg>
-						</a>
+						</a> */}
 						<a href='https://open.spotify.com/user/uoxjt33b2c9axd2h9d74l3wag?si=R-cfHOGkSvGN-Ru5N81miQ' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
 								<g>
@@ -72,13 +55,6 @@ export default function ContactPage() {
 								</g>
 							</svg>
 						</a>
-						{/* <a href='https://www.facebook.com/people/Owen-Moogk/100017665273227' target='_blank' rel='noreferrer'>
-							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-								<g>
-									<path fillRule="evenodd" clipRule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067z" />
-								</g>
-							</svg>
-						</a> */}
 						<a href='https://www.thingiverse.com/owen_moogk' target='_blank' rel='noreferrer'>
 							<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M11.955.005C5.425-.152-.091 5.485.007 11.805c-.235 6.756 5.537 12.25 12.052 12.196C18.621 23.9 23.912 18.595 24 12.03C24.031 5.483 18.505-.18 11.955.005zm-.047 1.701a10.276 10.276 0 0 1 7.36 17.529a10.275 10.275 0 0 1-17.556-7.287C1.71 6.308 6.268 1.728 11.907 1.706zm-5.55 4.781c-.322 0-.358.033-.358.361v2.248c0 .351.04.391.398.391h3.823c.274 0 .274.004.274.265v9.736a.176.176 0 0 0 .051.146c.04.038.093.059.148.053h2.555c.247-.003.283-.035.283-.28v-9.32c0-.124.004-.239 0-.39s.055-.21.218-.21h3.9c.319.004.35-.032.35-.344V6.855c0-.34-.024-.363-.37-.363h-5.626z" /></svg>
 						</a>
@@ -88,6 +64,5 @@ export default function ContactPage() {
 					</div>
 				</div>
 			</div>
-		</div>
 	);
 }
