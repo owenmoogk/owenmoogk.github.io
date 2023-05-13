@@ -37,6 +37,7 @@ export default function App(props) {
 									--overlayColor: rgba(0,0,0,0.6);
 									--primaryColor: rgb(135, 206, 235);
 									--linkColor: skyblue;
+									--linkHover: pink;
 									--fade: rgb(189, 238, 255);
 									--grey: lightgrey;
 									--lightgrey: rgb(44,44,44);
@@ -52,7 +53,7 @@ export default function App(props) {
 									--linkColor: #266596;
 									--linkHover: #388ed1;
 									--fade: rgb(100, 100, 255);
-									--grey: grey;
+									--grey: rgb(72,72,72);
 									--lightgrey: lightgrey;
 									--gradient: linear-gradient(45deg, skyblue, pink);
 									--navBackground: rgba(255, 255, 255, 0.4);
