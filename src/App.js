@@ -23,58 +23,70 @@ export default function App(props) {
 		setDarkMode(darkMode ? false : true)
 	}
 
-	
-	return (
-		<Router>
-			<style dangerouslySetInnerHTML={{
-				__html:
-					darkMode
-						? `:root{
-						--backgroundColor: rgb(35,35,35);
-						--textColor: white;
-						--overlayColor: rgba(0,0,0,0.6);
-						--primaryColor: rgb(135, 206, 235);
-						--fade: rgb(189, 238, 255);
-						--grey: lightgrey;
-						--lightgrey: rgb(44,44,44);
-					}`
-						: `:root {
-						--textColor: black;
-						--backgroundColor: white;
-						--overlayColor: rgba(255,255,255,0.6);
-						--primaryColor: blue;
-						--fade: rgb(100, 100, 255);
-						--grey: grey;
-						--lightgrey: lightgrey;
-					}`
-			}} />
-			<Nav toggleDarkMode={toggleDarkMode} />
-			<Switch>
-				<Route path='/projects'>
-					<ProjectRouter />
-				</Route>
-				<Route path='/work'>
-					<Workpage />
-				</Route>
-				<Route path='/contact'>
-					<ContactPage />
-				</Route>
-				<Route path='/assets'>
-					<Resources />
-				</Route>
-				<Route exact path='/'>
-					<Homepage />
-				</Route>
-				<Route path='/404'>
-					<NotFoundPage />
-				</Route>
-				<Route path='/github' component={() => {
-					window.location.href = 'https://github.com/owenmoogk?tab=repositories';
-					return null;
-				}} />
-				<Redirect to='/404' />
-			</Switch>
 
-		</Router>
+	return (
+		<>
+			<div id='backgroundDiv' />
+			<Router>
+				<style dangerouslySetInnerHTML={{
+					__html:
+						darkMode
+							? `:root{
+									--backgroundColor: rgb(35,35,35);
+									--textColor: white;
+									--overlayColor: rgba(0,0,0,0.6);
+									--primaryColor: rgb(135, 206, 235);
+									--linkColor: skyblue;
+									--fade: rgb(189, 238, 255);
+									--grey: lightgrey;
+									--lightgrey: rgb(44,44,44);
+									--gradient: linear-gradient(45deg, 	
+										#332024, #001633, #332024);
+									--navBackground: rgba(50, 50, 50, 0.4);
+								}`
+							: `:root {
+									--textColor: black;
+									--backgroundColor: white;
+									--overlayColor: rgba(255,255,255,0.6);
+									--primaryColor: #266596;
+									--linkColor: #266596;
+									--linkHover: #388ed1;
+									--fade: rgb(100, 100, 255);
+									--grey: grey;
+									--lightgrey: lightgrey;
+									--gradient: linear-gradient(45deg, skyblue, pink);
+									--navBackground: rgba(255, 255, 255, 0.4);
+								}`
+				}} />
+				<Nav toggleDarkMode={toggleDarkMode} />
+				<Switch>
+					<Route path='/projects'>
+						<ProjectRouter />
+					</Route>
+					<Route path='/work'>
+						<Workpage />
+					</Route>
+					<Route path='/contact'>
+						<ContactPage />
+					</Route>
+					<Route path='/assets'>
+						<Resources />
+					</Route>
+					<Route exact path='/'>
+						<Homepage />
+					</Route>
+					<Route path='/404'>
+						<NotFoundPage />
+					</Route>
+					{/* /github redirects to my github */}
+					<Route path='/github' component={() => {
+						window.location.href = 'https://github.com/owenmoogk?tab=repositories';
+						return null;
+					}} />
+					<Redirect to='/404' />
+				</Switch>
+
+			</Router>
+		</>
 	);
 }

@@ -5,10 +5,25 @@ html{
 
 body {
 	margin: 0;
-	background-color: var(--backgroundColor);
 	color: var(--textColor);
 	min-height: 100vh;
 }
+
+#root{
+	width: 100%;
+	height: 100%;
+}
+
+#backgroundDiv{
+	background-image: var(--gradient);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
 p:not([class]){
 	line-height: 30px;
 }
@@ -45,16 +60,21 @@ a{
 	transition: 0.3s;
 }
 p a{
-	color: var(--primaryColor);
+	font-weight: bold;
+	background: var(--linkColor);
+	background-clip: text;
+  -webkit-text-fill-color: transparent;
 	&:hover{
-		color: var(--fade)
+		background: var(--linkHover);
+		background-clip: text;
+  	-webkit-text-fill-color: transparent;
 	}
 }
 
 li a{
-	color: var(--primaryColor);
+	color: var(--linkColor);
 	&:hover{
-		color: var(--fade)
+		color: var(--linkHover)
 	}
 }
 
