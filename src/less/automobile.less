@@ -6,7 +6,6 @@
 
 @media only screen and (max-width: 875px) {
 
-
     // INDEX
     .main{
 		max-width: 100%;
@@ -33,19 +32,13 @@
     #navBox{
         flex-direction: column;
         display: none;
-        height: fit-content;
-        margin-top: 50px;
-        padding-top: 50px;
-        margin-bottom: 50px;
-        padding-bottom: 50px;
+        height: 100vh;
         width: 100vw;
         background-color: var(--overlayColor);
-        justify-content: center;
-        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        border-radius: 0 !important;
 
-        .navTitle{
-            padding-left: 0;
-        }
         #navLinks {
             flex-direction: column;
             margin: 0;
@@ -57,13 +50,14 @@
         }
         #darkmode{
             height: 40px;
-            width: 40px;
             margin: 20px;
-
             display: flex;
-            justify-content: center;
-            align-items: center;
         }
+    }
+
+    #links{
+        display: none;
+        z-index: 20;
     }
 
     // WORK
@@ -79,14 +73,6 @@
         }
     }
 
-    // CONTACT
-    .contactCard{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin: auto;
-        text-align: center;
-    }
     #contactLinks{
 		justify-content: center;
 	}
@@ -164,10 +150,4 @@
     #splash:hover{
         transform: scale(1) !important;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    // .bar{
-    //     display: none;
-    // }
 }

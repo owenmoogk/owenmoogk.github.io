@@ -26,7 +26,7 @@ export default function Nav(props) {
 					</div>
 				</div>
 			</div>
-			<Links />
+			<Links shown={shown}/>
 		</div>
 	);
 }
