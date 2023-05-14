@@ -6,18 +6,21 @@ export default function WorkItem(props) {
 	var data = props.data
 
 	return (
-		<div className="workItem" onClick={() => setCollapsed(!collapsed)}>
+		<div className="workItem">
 
-			<div className='graphics'>
+			<div className='graphics' onClick={() => setCollapsed(!collapsed)}>
 				<div className='svg'><svg style={{transition: '0.3s', transform: !collapsed ? 'rotate(90deg)' : 'rotate(0deg'}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg></div>
 			</div>
 
 			<div className='text'>
-				<div className="titleBlock">
-					<div className='workTitle'>{data.title}</div>
+				<div className="titleBlock" onClick={() => setCollapsed(!collapsed)}>
+					<div className='workTitle'>
+						<span>{data.title}</span>
+						<span className='workTitleDate'>{data.date}</span>
+					</div>
 					{data.subtitle
-						? <div>{data.subtitle} • {data.date}</div>
-						: <div>{data.date}</div>
+						? <div>{data.subtitle}</div>
+						: <div>--</div>
 					}
 				</div>
 				{data.description
