@@ -19,6 +19,7 @@ export default function Resources() {
 			<p className="title">Assets</p>
 			<p className='subtitle'>Extra bits, for storage.</p>
 			{data ?
+			<div className='assets'>
 				<ul>
 					{data.map((item, key) => {
 						var itemName = Object.keys(item)
@@ -40,6 +41,7 @@ export default function Resources() {
 						)
 					})}
 				</ul>
+				</div>
 				: null
 			}			
 		</div>
