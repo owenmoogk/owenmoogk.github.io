@@ -84,7 +84,7 @@ export default function ProjectDirectory() {
 	}, [])
 
 	return (
-		<div className='main' id='projectPage'>
+		<div className='main projectDirectoryPage' id='projectPage'>
 			<p className="title" id='projectTitle'>Project Directory</p>
 			<p className='subtitle'>All my other projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
