@@ -1,6 +1,12 @@
 {
 	"experience": [
 		{
+			"title": "Software Developer",
+			"subtitle": "BusPlanner Inc.",
+			"date": "2023 - Present",
+			"description": "Working as a co-op student on the advanced BusPlanner student transportation suite. Working on front-end testing and development, as well as SQL database solutions. Looking forward to contributing to the team and learning as much as possible!"
+		},
+		{
 			"title": "Powertrain Member",
 			"subtitle": "University of Waterloo Formula Motorsports",
 			"date": "2022 - Present",
