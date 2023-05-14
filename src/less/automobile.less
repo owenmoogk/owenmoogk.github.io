@@ -6,30 +6,27 @@
 
 @media only screen and (max-width: 875px) {
 
-    // INDEX
-    .main{
-		max-width: 100%;
-		margin: 0%;
-		padding-top: 50px;
-	}
-	h2{
-		text-align: center;
-	}
-    .title{
-        margin: 0 !important;
-        width: 100% !important;
-        text-align: center !important;
+    .main {
+        max-width: 100%;
+        margin: 0%;
+        padding-top: 50px;
     }
-    .subtitle{
-        text-align: center;
+
+    #workItems {
+        width: min(450, 90%);
+
+        h1 {
+            font-size: 25px;
+        }
     }
 
     // NAV
-    #navButton{
+    #navButton {
         z-index: 10;
         display: flex;
     }
-    #navBox{
+
+    #navBox {
         flex-direction: column;
         display: none;
         height: 100vh;
@@ -42,112 +39,44 @@
         #navLinks {
             flex-direction: column;
             margin: 0;
-            
-            .navlink{
+
+            .navlink {
                 margin-top: 10px;
                 font-size: 40px;
             }
         }
-        #darkmode{
+
+        #darkmode {
             height: 40px;
             margin: 20px;
             display: flex;
         }
     }
 
-    #links{
+    // links only show up on navbar
+    #links {
         display: none;
         z-index: 20;
     }
 
-    // WORK
-    #workPage{
-        align-items: center;
-        
-        #workItems{
-            width: 90%;
-
-            h1{
-                font-size: 25px;
-            }
-        }
-    }
-
-    #contactLinks{
-		justify-content: center;
-	}
-
-    // PROJECT PAGES
-    #projectBody{
-		margin-left: 5%;
-        margin-right: 5%;
-
-		// everything is centered except for p
-		text-align: center;
-		p{
-			text-align: left;
-		}
-
-        p.subtitle{
-            text-align: center;
-        }
-
-        .type{
-            margin-right: 5px !important;
-            margin-left: 5px !important;
-        }
-
-		.img{
-			margin: 0 !important;
-		}
-
-		#hr{
-			margin: auto;
-		}
-
-		#icons{
-			justify-content: center;
-		}
-
-		.text{
-			max-width: 1000px;
-		}
-
-		li{
-			width: fit-content;
-		}
-
-        .render{
-            max-width: calc(100% - 10px) !important;
-        }
-	}
-
-    // PROJECTS
-    #sortingContainer{
-        width: 95%;
-        margin: auto;
-		justify-content: center;
-        align-items: center;
-	}
-    #featuredContainer{
-        justify-content: center;
-    }
-
-    // home
-    #pfp{
+    // homepage
+    #pfp {
         display: none;
     }
-    .larger{
+
+    .larger {
         text-align: center;
     }
-    #homePage{
+
+    #homePage {
         padding: 50px 10% 0 10% !important;
     }
-    #homepageTitle{
+
+    #homepageTitle {
         justify-content: center !important;
     }
 
-    #splash:hover{
-        transform: scale(1) !important;
+    #splash {
+        display: none;
     }
 }

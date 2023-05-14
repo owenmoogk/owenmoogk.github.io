@@ -49,9 +49,9 @@ export default function App(props) {
 									--textColor: black;
 									--backgroundColor: white;
 									--overlayColor: rgba(255,255,255,0.6);
-									--primaryColor: #266596;
-									--linkColor: #266596;
-									--linkHover: #388ed1;
+									--primaryColor: #388ed1;
+									--linkHover: rgb(60,60,60);
+									--linkColor: #388ed1;
 									--fade: rgb(100, 100, 255);
 									--grey: rgb(72,72,72);
 									--lightgrey: lightgrey;

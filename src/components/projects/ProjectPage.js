@@ -44,18 +44,18 @@ export default function ProjectPage() {
 							? <p dangerouslySetInnerHTML={{ __html: block.text }}></p>
 							: null
 						}
+						{block.ul
+							? <ul>
+								{block.ul.map((li, key) => {
+									return (
+										<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
+									)
+								})}
+							</ul>
+							: null
+						}
 					</div>
 
-					{block.ul
-						? <ul>
-							{block.ul.map((li, key) => {
-								return (
-									<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
-								)
-							})}
-						</ul>
-						: null
-					}
 
 					{block.image
 						? Array.isArray(block.image)
