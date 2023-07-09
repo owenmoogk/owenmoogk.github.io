@@ -3,7 +3,7 @@ import React from 'react';
 export default function FeaturedIcon(props) {
 
 	let link = '/projects/' + props.name
-	var types = props.type.toLowerCase().split(' ')
+	// var types = props.type.toLowerCase().split(' ')
 
 	// ok so c++ gives an error when put into a variable, so we just change it for the filtering stuff, display still says C++
 	// for (var i = 0; i < types.length; i++){
