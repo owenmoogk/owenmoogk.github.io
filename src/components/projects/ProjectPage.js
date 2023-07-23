@@ -7,13 +7,14 @@ export default function ProjectPage() {
 
 	const [xmlContent, setXmlContent] = useState()
 	var { name } = useParams()
-	var xmlFileLink = process.env.PUBLIC_URL + '/assets/projects/' + name +'/' + name + ".json"
+	var projectJson = process.env.PUBLIC_URL + '/assets/projects/' + name +'/' + name + ".json"
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		fetch(xmlFileLink)
+		fetch(projectJson)
 			.then(response => response.json())
 			.then(json => setXmlContent(json))
+			.catch(error => setXmlContent(true))
 	}, [])
 
 	function loadBlocks() {
@@ -102,6 +103,16 @@ export default function ProjectPage() {
 
 	// actual loading process
 	function buildProjectPage() {
+
+		if (xmlContent === true){
+			return (
+				<div id='projectBody' className='main'>
+					<div className="title">Could not load page :/</div>
+					<p className='subtitle'>Probably still in development</p>
+				</div>
+			)
+		}
+		
 		return (
 			<div id='projectBody' className='main'>
 
@@ -164,8 +175,6 @@ export default function ProjectPage() {
 	return (
 		xmlContent
 			? buildProjectPage()
-			: <div><h1 style={{ paddingTop: '100px' }}>Could not load page :/</h1>
-				<p>Probably still in development</p>
-			</div>
+			: null
 	);
 }
