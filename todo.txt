@@ -1,6 +1,23 @@
 projects to add:
-	geom calculator
+	rectangle calculator
 	snake ai to page
 	passion project (or add it to work)
 	wave function collapse
 	new tab
+	hack the globe
+	conway's game of life
+	towers of hanoi
+	django twitter
+	frc website
+	elastic car
+	revit-house
+	pomodoro-timer-extension
+	computer website
+	gists?
+	arm project (torque minimizer)
+	covid health app??
+	github rooms?
+	
+
+
+	rework email bot page
