@@ -21,3 +21,14 @@ projects to add:
 
 
 	rework email bot page
+
+
+From todoist:
+	toyota innovation challenge
+	stats project
+	trip prices
+	f1 stats
+	torque optimizer
+	conways game of life
+	email bot
+	busplanner
