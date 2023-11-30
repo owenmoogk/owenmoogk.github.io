@@ -1,9 +1,11 @@
 import React from 'react';
 
 export default function FeaturedIcon(props) {
-
-	let link = '/projects/' + props.name
-	// var types = props.type.toLowerCase().split(' ')
+	
+	var data = props.data
+	let link = '/projects/' + data.name
+	var types = data.type.toLowerCase().split(' ')
+	console.log(types)
 
 	// ok so c++ gives an error when put into a variable, so we just change it for the filtering stuff, display still says C++
 	// for (var i = 0; i < types.length; i++){
@@ -25,7 +27,7 @@ export default function FeaturedIcon(props) {
 	// }
 
 	var borderColor = 'linear-gradient(white, white), linear-gradient(var(--textColor), var(--textColor))'
-	
+
 	return (
 		<a href={link} style={{margin: '20px'}} className='featuredIconLink'>
 
@@ -33,12 +35,21 @@ export default function FeaturedIcon(props) {
 				backgroundImage: borderColor
 			}}>
 				<div className='featuredImage'>
-					<img src={'/assets/projects/' + props.name + '/main.png'} alt=''></img>
+					<img src={'/assets/projects/' + data.name + '/main.png'} alt=''></img>
 				</div>
 				<div className='featuredText'>
-					<span className="contentTitle">{props.title}</span>
-					<span className='contentDesc' style={{display: "none"}}>{props.description}</span>
-					<span className='type' style={{display: 'none'}}>{props.type}</span>
+					<span className="contentTitle">{data.title}</span>
+					<span className="contentDate">
+						{data.date}
+						{/* <span className='circleContainer'>
+							{types.map((type) => 
+								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)", width: "100px !important" }}></span>
+							)
+							}
+						</span> */}
+					</span>
+					<span className='contentDesc' style={{display: "none"}}>{data.description}</span>
+					<span className='type' style={{display: 'none'}}>{data.type}</span>
 				</div>
 			</div>
 		</a>

@@ -72,9 +72,7 @@ export default function ProjectPage() {
 					<ProjectButton name='Python' filterProjects={filterProjects} />
 					<ProjectButton name='Javascript' filterProjects={filterProjects} />
 					<ProjectButton name='React' filterProjects={filterProjects} />
-					<ProjectButton name='Django' filterProjects={filterProjects} />
 					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
-					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
 				</div>
 			</div>
 
@@ -84,7 +82,7 @@ export default function ProjectPage() {
 						? projectData.map((data, key) => {
 							if (data.featured) {
 								return (
-									<FeaturedIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} description={data.description} />
+									<FeaturedIcon data={data} />
 								)
 							}
 							return (null)
