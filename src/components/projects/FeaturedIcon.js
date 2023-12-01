@@ -5,7 +5,6 @@ export default function FeaturedIcon(props) {
 	var data = props.data
 	let link = '/projects/' + data.name
 	var types = data.type.toLowerCase().split(' ')
-	console.log(types)
 
 	// ok so c++ gives an error when put into a variable, so we just change it for the filtering stuff, display still says C++
 	// for (var i = 0; i < types.length; i++){

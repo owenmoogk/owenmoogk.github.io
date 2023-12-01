@@ -51,8 +51,8 @@ export default function Homepage() {
 				<h1>Featured Projects</h1>
 				<p>Some of the most interesting <a href='projects'>projects</a> that I've worked on:</p>
 				<div id='featuredContainer'>
-					<FeaturedIcon title={"2702 Rebels 2020 Robot"} name={"2702-2020"} type={'Mechanical Solidworks'} link={''} />
-					<FeaturedIcon title={"Pathfinding Visualizer"} name={"pathfinding-visualizer"} type={'Python React'} link={''} />
+					<FeaturedIcon data={{title:"2702 Rebels 2020 Robot", name:"2702-2020", type:'Mechanical Solidworks', link:''}} />
+					<FeaturedIcon data={{title:"Pathfinding Visualizer", name:"pathfinding-visualizer", type:'Python React', link:''}} />
 				</div>
 			</div>
 		</div>
