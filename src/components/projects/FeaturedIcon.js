@@ -36,20 +36,23 @@ export default function FeaturedIcon(props) {
 				<div className='featuredImage'>
 					<img src={'/assets/projects/' + data.name + '/main.png'} alt=''></img>
 				</div>
-				<div className='featuredText'>
-					<span className="contentTitle">{data.title}</span>
-					<span className="contentDate">
-						{data.date}
-						{/* <span className='circleContainer'>
+				<div className='featuredLabel'>
+					<div style={{display: 'flex', justifyContent: "space-between", margin: "0 20px"}}>
+						<div className='featuredText'>
+							<span className="contentTitle">{data.title}</span>
+							<span className="contentDate">{data.date}</span>
+							<span className='contentDesc' style={{display: "none"}}>{data.description}</span>
+							<span className='type' style={{display: 'none'}}>{data.type}</span>
+						</div>
+						<span className='iconContainer'>
 							{types.map((type) => 
-								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)", width: "100px !important" }}></span>
-							)
-							}
-						</span> */}
-					</span>
-					<span className='contentDesc' style={{display: "none"}}>{data.description}</span>
-					<span className='type' style={{display: 'none'}}>{data.type}</span>
+								<img src={"/assets/icons/"+type.toLowerCase().replace(/[^a-z]/gi, '')+".svg"}className='iconImage' onError={(e) => e.target.style.display = "none"}></img>
+							)}
+						</span>
+						
+					</div>
 				</div>
+
 			</div>
 		</a>
 	);
