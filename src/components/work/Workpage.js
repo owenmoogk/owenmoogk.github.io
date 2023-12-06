@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import WorkItem from './WorkItem'
+import links from "global/links"
 
 export default function Workpage() {
 
@@ -18,7 +19,7 @@ export default function Workpage() {
 				<title>Work - Owen Moogk</title>
 			</Helmet>
 			<p className="title">Work</p>
-			<p className='subtitle'>Connect with me on <a href='https://www.linkedin.com/in/owen-moogk-1ab9371b8/' target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href='https://owenmoogk.github.io/owenmoogk/resume/resume.pdf' target='_blank' rel='noreferrer'>Resume</a></p>
+			<p className='subtitle'>Connect with me on <a href={links.linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href='https://owenmoogk.github.io/owenmoogk/resume/resume.pdf' target='_blank' rel='noreferrer'>Resume</a></p>
 			{workData
 				? <div id='workItems'>
 
