@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Helmet from "react-helmet";
+import global from "global/global"
 
 export default function Resources() {
 
@@ -31,7 +32,7 @@ export default function Resources() {
 							return <br/>
 						}
 						if(!item[itemName].startsWith("http", 0)){
-							var link = 'https://owenmoogk.github.io/owenmoogk/'+item[itemName]
+							var link = global.assets+item[itemName]
 						}
 						else{
 							link = item[itemName]

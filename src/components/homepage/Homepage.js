@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FeaturedIcon from "components/projects/FeaturedIcon";
+import global from "global/global"
 
 export default function Homepage() {
 
@@ -34,7 +35,7 @@ export default function Homepage() {
 					<p className='subtitle' id='splash' onClick={() => loadSplash()}>{splash}</p>
 				</div>
 				<div className='photo' id='pfp'>
-					<img src='https://owenmoogk.github.io/owenmoogk/pfps/suit-edited-square.png' alt=''/>
+					<img src={global.assets+'pfps/suit-edited-square.png'} alt=''/>
 				</div>
 			</div>			
 			<div>
