@@ -62,33 +62,60 @@ export default function ProjectPage() {
 		fetchProjects()
 	}, [])
 
+
+	function handleResize() {
+		var computedStyle = function (el,style) {
+			var cs;
+			if (typeof el.currentStyle != 'undefined'){
+					cs = el.currentStyle;
+			}
+			else {
+					cs = document.defaultView.getComputedStyle(el,null);
+			}
+			return  cs[style];
+		}
+		
+		document.getElementById("sortingContainer").style.width = computedStyle(document.getElementById("tileContainer"), "width")
+	}
+
+	window.addEventListener('resize', handleResize);
+
 	return (
 		<div className='main' id='projectPage'>
 			<p className="title" id='projectTitle'>Projects</p>
 			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
-			<div id="sortingContainer">
-				<div id='buttonContainer'>
-					<ProjectButton name='All' filterProjects={filterProjects} />
-					<ProjectButton name='Python' filterProjects={filterProjects} />
-					<ProjectButton name='Javascript' filterProjects={filterProjects} />
-					<ProjectButton name='React' filterProjects={filterProjects} />
-					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
-				</div>
-			</div>
-
 			<div id='featuredProjects'>
-				<div id='featuredContainer'>
-					{projectData
-						? projectData.map((data, key) => {
-							if (data.featured) {
-								return (
-									<FeaturedIcon data={data} />
-								)
-							}
-							return (null)
-						})
-						: null
-					}
+				<div id="sortingContainer">
+					<div id='buttonContainer'>
+						<ProjectButton name='All' filterProjects={filterProjects} />
+						<ProjectButton name='Python' filterProjects={filterProjects} />
+						<ProjectButton name='Javascript' filterProjects={filterProjects} />
+						<ProjectButton name='React' filterProjects={filterProjects} />
+						<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+					</div>
+					<div id="searchContainer">
+						{/* <input type="text" placeholder="Search" title="Type to search" /> */}
+							Sort By: 
+							<select>
+								<option>Coolness 🕶️</option>
+								<option>Date 📆</option>
+							</select>
+					</div>
+				</div>
+				<div id="outer">
+					<div id='tileContainer'>
+						{projectData
+							? projectData.map((data, key) => {
+								if (data.featured) {
+									return (
+										<FeaturedIcon data={data} />
+									)
+								}
+								return (null)
+							})
+							: null
+						}
+					</div>
 				</div>
 			</div>
 		</div>

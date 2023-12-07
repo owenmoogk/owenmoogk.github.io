@@ -9,16 +9,16 @@ export default function ProjectButton(props) {
 			color: 'var(--' + name + ')',
 		}}
 		>
-			<p>{props.name}</p>
+			{props.name}
 			<style dangerouslySetInnerHTML={{
 				__html: `
 				.sort_${name}.active{
 					background-color: var(--${name}) !important;
-					color: var(--textColor) !important
+					color: var(--${props.name == "All" ? "backgroundColor" : "textColor"}) !important
 				}
 				.sort_${name}:hover{
 					background-color: var(--${name}) !important;
-					color: var(--textColor) !important
+					color: var(--${props.name == "All" ? "backgroundColor" : "textColor"}) !important
 				}
 			`}} />
 		</span>

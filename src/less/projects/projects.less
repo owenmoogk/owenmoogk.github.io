@@ -1,5 +1,5 @@
 :root {
-	--all: grey;
+	--all: var(--textColor);
 	--solidworks: #B24C63;
 	--python: #53B3CB;
 	--mechanical: #F08A4B;
@@ -92,29 +92,37 @@
 
 #projectPage {
 
+	#featuredProjects{
+		display: flex;
+		flex-direction: column;
+		// max-width: max-content;
+	}
+
 	margin-bottom: 70px;
 
 	#sortingContainer {
-
-		width: 95%;
+		height: fit-content;
+		width: 100%;
 		margin: auto;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex: 0 0 100%;
 		margin-top: 20px;
+		margin-bottom: 20px;
 
 		#buttonContainer {
-			margin-bottom: 20px;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content: center;
+			// justify-content: space-between;
 			width: fit-content;
 		}
 
-		p {
-			margin: 0;
+		#searchContainer{
+			display: flex;
+			width: fit-content;
 		}
 
 		input {
@@ -123,26 +131,35 @@
 		}
 
 		.btn,
-		input {
-			font-size: 16px;
+		input,
+		select {
 			float: left;
-			padding: 4px 6px;
+			padding: 6px 10px;
 			margin: 0 5px 5px 0;
 			border-radius: 4px;
 			font-weight: 600;
+			font-size: 18px;
 			cursor: pointer;
 			transition: 0.3s;
+			background-color: rgba(0, 0, 0, 0);
+			border: 2px solid var(--all);
+			color: var(--all);
 		}
 	}
 
-	#featuredContainer {
+	#tileContainer {
 		justify-content: center;
 		display: flex;
 		flex-direction: row;
-		width: calc(100% + 40px);
 		flex-wrap: wrap;
-		margin-left: -20px;
+		width: min-;
+		
 	}
+
+
+
+	// EVERYTHING HERE IS FOR DIRECTORY
+
 
 	#projectIcons {
 
