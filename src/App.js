@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import {
 	BrowserRouter as Router,
-	Switch,
+	Routes,
 	Route,
-	Redirect
+	Navigate
 } from 'react-router-dom';
-import Nav from "components/Nav.js"
-import Homepage from 'components/homepage/Homepage.js'
-import Workpage from 'components/work/Workpage.js'
-import ContactPage from 'components/contact/Contact.js';
-import ProjectRouter from 'components/ProjectRouter.js';
-import Resources from 'components/Assets.js'
-import 'styles.css'
+import Nav from "./components/Nav.js"
+import Homepage from './components/homepage/Homepage.js'
+import Workpage from './components/work/Workpage.js';
+import ContactPage from './components/contact/Contact.js';
+import ProjectRouter from './components/ProjectRouter.js';
+import Assets from './components/Assets.js'
+import './styles.css'
 import NotFoundPage from './components/NotFoundPage'
 
 export default function App(props) {
@@ -22,7 +22,6 @@ export default function App(props) {
 		localStorage.setItem('darkmode', darkMode ? false : true)
 		setDarkMode(darkMode ? false : true)
 	}
-
 
 	return (
 		<>
@@ -60,32 +59,20 @@ export default function App(props) {
 								}`
 				}} />
 				<Nav toggleDarkMode={toggleDarkMode} />
-				<Switch>
-					<Route path='/projects'>
-						<ProjectRouter />
-					</Route>
-					<Route path='/work'>
-						<Workpage />
-					</Route>
-					<Route path='/contact'>
-						<ContactPage />
-					</Route>
-					<Route path='/assets'>
-						<Resources />
-					</Route>
-					<Route exact path='/'>
-						<Homepage />
-					</Route>
-					<Route path='/404'>
-						<NotFoundPage />
-					</Route>
-					{/* /github redirects to my github */}
+				<Routes>
+					<Route path='/projects/*' element={<ProjectRouter />} />
+					<Route path='/work' element={<Workpage />} />
+					<Route path='/contact' element={<ContactPage />} />
+					<Route path='/assets' element={<Assets />} />
+					<Route exact path='/' element={<Homepage />} />
+					<Route path='/404' element={<NotFoundPage />} />
+					{/* /github Navigates to my github */}
 					<Route path='/github' component={() => {
 						window.location.href = 'https://github.com/owenmoogk?tab=repositories';
 						return null;
 					}} />
-					<Redirect to='/404' />
-				</Switch>
+					<Route path='*' element={<Navigate to='/404' />} />				
+				</Routes>
 
 			</Router>
 		</>

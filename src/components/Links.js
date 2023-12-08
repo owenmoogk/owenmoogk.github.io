@@ -1,5 +1,5 @@
 import React from 'react';
-import links from "global/links"
+import links from "../global/links"
 
 export default function Links(props) {
 	return (

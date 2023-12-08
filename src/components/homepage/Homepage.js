@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FeaturedIcon from "components/projects/FeaturedIcon";
-import global from "global/global"
+import FeaturedIcon from "../projects/FeaturedIcon";
+import global from "../../global/global"
 
 export default function Homepage() {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import links from 'global/links'
+import links from '../../global/links.json'
 
 export default function ContactPage() {
 

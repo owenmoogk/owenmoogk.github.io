@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import WorkItem from './WorkItem'
-import links from "global/links"
-import global from "global/global"
+import links from "../../global/links"
+import global from "../../global/global"
+
 
 export default function Workpage() {
 

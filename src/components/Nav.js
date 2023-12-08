@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Links from 'components/Links'
-import global from "global/global"
+import Links from './Links'
+import global from "../global/global"
 
 export default function Nav(props) {
 

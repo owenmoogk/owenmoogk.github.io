@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Helmet from "react-helmet";
-import global from "global/global"
+import global from "../global/global"
 
-export default function Resources() {
+export default function Assets() {
 
 	const [data, setData] = useState()
 
