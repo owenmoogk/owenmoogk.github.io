@@ -105,7 +105,7 @@ export default function ProjectDirectory() {
 					? projectData.map((data, key) => {
 						if (!data.featured) {
 							return (
-								<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} githubLink={data.githubLink} description={data.description} />
+								<ProjectIcon data={data} key={key}/>
 							)
 						}
 						else {

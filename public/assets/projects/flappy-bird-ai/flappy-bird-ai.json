@@ -1,7 +1,7 @@
 {
 	"title": "Flappy Bird AI",
 	"date": "January 7, 2021",
-	"type": "Python NEAT",
+	"types": ["Python", "NEAT"],
 	"description": "Artificial intelligence used to play flappy bird, using NEAT Python.",
 	"featured": false,
 	"blocks": [

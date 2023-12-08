@@ -1,7 +1,7 @@
 {
 	"title": "Snake AI",
 	"date": "January 6, 2021",
-	"type": "Python Pygame",
+	"types": ["Python", "Pygame"],
 	"description": "Classic snake game in Pygame.",
 	"blocks": [
 		{

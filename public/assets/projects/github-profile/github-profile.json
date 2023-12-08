@@ -2,7 +2,7 @@
 	"title": "Github Profile",
 	"date": "June 9, 2021",
 	"externalLink": "https://owenmoogk.github.io/github-profile/",
-	"type": "React",
+	"types": ["React"],
 	"description": "Website to retrieve and implement github API data.",
 	"featured": false,
 	"blocks": [

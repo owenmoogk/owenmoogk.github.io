@@ -1,8 +1,16 @@
-export default function FeaturedIcon(props: any) {
+export default function FeaturedIcon(props: {
+	data: {
+		name: string;
+		types: string[];
+		title: string;
+		date?: string;
+		description?: string;
+	};
+}) {
 
 	var data = props.data
 	let link = '/projects/' + data.name
-	var types = data.type.toLowerCase().split(' ')
+	var types = data.types.map((x: string) => x.toLowerCase())
 
 	// ok so c++ gives an error when put into a variable, so we just change it for the filtering stuff, display still says C++
 	// for (var i = 0; i < types.length; i++){
@@ -42,8 +50,11 @@ export default function FeaturedIcon(props: any) {
 								<span className="contentDate">{data.date}</span>
 								: null
 							}
+
+							{/* these are here for sorting, we still want them to be searchable */}
 							<span className='contentDesc' style={{ display: "none" }}>{data.description}</span>
-							<span className='type' style={{ display: 'none' }}>{data.type}</span>
+							<span className='type' style={{ display: 'none' }}>{data.types}</span>
+
 						</div>
 						<span className='iconContainer'>
 							{types.map((type: any) =>

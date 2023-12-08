@@ -15,6 +15,9 @@ export default function ProjectPage() {
 		fetch(projectJson)
 			.then(response => response.json())
 			.then(json => setProjectData(json))
+			.catch(error => {
+				(document.getElementById("projectBody") as HTMLElement).innerHTML = "<div class='title'>Could not load page :/</div><p class='subtitle'>Probably still in development</p>"
+			})
 	}, [])
 
 	function loadBlocks() {
@@ -106,16 +109,7 @@ export default function ProjectPage() {
 	// actual loading process
 	function buildProjectPage() {
 
-		// if (projectData){
-		// 	return (
-		// 		<div id='projectBody' className='main'>
-		// 			<div className="title">Could not load page :/</div>
-		// 			<p className='subtitle'>Probably still in development</p>
-		// 		</div>
-		// 	)
-		// }
-
-		if (!projectData) return <></>;
+		if (!projectData) return 	<></>;
 
 		return (
 			<div id='projectBody' className='main'>
@@ -159,7 +153,7 @@ export default function ProjectPage() {
 						: null
 					}
 
-					{projectData.type?.split(' ').map((type, key) => {
+					{projectData.types.map((type, key) => {
 						return (
 							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}>
 								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}></span>
@@ -179,6 +173,7 @@ export default function ProjectPage() {
 	return (
 		projectData
 			? buildProjectPage()
-			: <></>
+			// will put errors here if there are any
+			: <div id='projectBody' className='main'></div>
 	);
 }

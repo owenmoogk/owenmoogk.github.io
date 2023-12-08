@@ -1,7 +1,7 @@
 {
 	"title": "The Compiler",
 	"date": "Oct 22, 2020",
-	"type": "React",
+	"types": ["React"],
 	"externalLink": "https://owenmoogk.github.io/the-compiler",
 	"description": "Compilation of useful data and websites.",
 	"featured": false,

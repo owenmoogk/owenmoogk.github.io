@@ -4,7 +4,7 @@ export default interface Project {
   title: string;
   date: string;
 
-  type: string;
+  types: string[];
   featured: boolean;
 
   githubLink: string;

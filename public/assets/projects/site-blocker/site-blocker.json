@@ -1,7 +1,7 @@
 {
 	"title": "Site Blocker",
 	"date": "June 5, 2021",
-	"type": "Javascript",
+	"types": ["Javascript"],
 	"description": "Chrome extension to manipulate and block websites.",
 	"blocks": [
 		{

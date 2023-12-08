@@ -1,33 +1,42 @@
-import Project from "./ProjectInterface"
+export default function ProjectIcon(props: {
+	data: {
+		name: string;
+		githubLink: string;
+		types: string[];
+		title: string;
+		externalLink: string;
+		description: string;
+	}
+}) {
 
-export default function ProjectIcon(props: any) {
+	var data = props.data
 
-	let link = '/projects/' + props.name
-	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name
-	let type = props.type
-	let primaryType = type.split(' ')[0].toLowerCase()
+	let link = '/projects/' + data.name
+	let githubLink = data.githubLink !== undefined ? data.githubLink : 'https://github.com/owenmoogk/' + data.name
+	let types = data.types.map((x: string) => x.toLowerCase())
+	let primaryType = types[0] ?? "";
 
 	return (
 		<a href={link}>
 
 			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
-			<div className={"content " + primaryType + "Tile " + type}>
+			<div className={"content " + primaryType + "Tile " + types}>
 
 				<div>
-					<span className="contentTitle">{props.title}</span>
+					<span className="contentTitle">{data.title}</span>
 					<span className='dot'>--</span>
-					<span className='contentDesc'>{props.description}</span>
+					<span className='contentDesc'>{data.description}</span>
 
 					{/* this is just for sorting, not display */}
-					<span className='type' style={{ display: "none" }}>{type}</span>
+					<span className='type' style={{ display: "none" }}>{types.map((x: string) => <>{x}</>)}</span>
 				</div>
 
 				<div className='projectIcons'>
 
 					{/* open externally */}
-					{props.link
-						? <a href={props.link} target='_blank' rel='noreferrer'>
-							<svg width="25px" height="25px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" className={type}>
+					{data.externalLink
+						? <a href={data.externalLink} target='_blank' rel='noreferrer'>
+							<svg width="25px" height="25px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" className={types.join(" ")}>
 								<g fill="none">
 									<path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 								</g>

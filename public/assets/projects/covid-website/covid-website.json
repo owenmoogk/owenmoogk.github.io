@@ -2,7 +2,7 @@
 	"title": "COVID Health App",
 	"date": "May 22, 2021",
 	"githubLink": "https://github.com/owenmoogk/covid-health-app",
-	"type": "Python C++ Solidworks",
+	"types": ["Python", "C++", "Solidworks"],
 	"description": "AI powered cat feeding robot, powered by Arduino.",
 	"featured": false,
 	"blocks": [

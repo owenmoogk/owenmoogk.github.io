@@ -1,7 +1,7 @@
 {
 	"title": "Mecanum Drive",
 	"date": "December 21, 2020",
-	"type": "Solidworks",
+	"types": ["Solidworks"],
 	"description": "Mecanum drive powered robot, 3D printed.",
 	"blocks": [
 		{
