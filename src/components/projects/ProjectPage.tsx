@@ -14,7 +14,7 @@ export default function ProjectPage() {
 	useEffect(() => {
 		fetch(projectJson)
 			.then(response => response.json())
-			.then(json =>	setProjectData({...json.meta, "blocks": json.blocks}))
+			.then(json => setProjectData(json))
 	}, [])
 
 	function loadBlocks() {

@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Color Picker",
-		"date": "February 15, 2021",
-		"externalLink": "https://owenmoogk.github.io/color-picker/",
-		"type": "Javascript",
-		"description": "Web app for getting pixel data of an image.",
-		"featured": true
-	},
+	"title": "Color Picker",
+	"date": "February 15, 2021",
+	"externalLink": "https://owenmoogk.github.io/color-picker/",
+	"type": "Javascript",
+	"description": "Web app for getting pixel data of an image.",
+	"featured": true,
 	"blocks": [
 		{
 			"render": "main.png"

@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Shockingly Moral",
-		"date": "May 28, 2022",
-		"githubLink": "https://github.com/owenmoogk/shocking",
-		"type": "MIT-AI C++ Arduino",
-		"description": "Shocking project, made at Jamhacks 6",
-		"featured": true
-	},
+	"title": "Shockingly Moral",
+	"date": "May 28, 2022",
+	"githubLink": "https://github.com/owenmoogk/shocking",
+	"type": "MIT-AI C++ Arduino",
+	"description": "Shocking project, made at Jamhacks 6",
+	"featured": true,
 	"blocks": [
 		{
 			"title": "Overview",

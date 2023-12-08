@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Emoji Machine Learning",
-		"date": "May 16, 2021",
-		"type": "React Django",
-		"description": "AI designed to recognize hand drawn emojis.",
-		"githubLink": "https://github.com/owenmoogk/emoji-machine-learning"
-	},
+	"title": "Emoji Machine Learning",
+	"date": "May 16, 2021",
+	"type": "React Django",
+	"description": "AI designed to recognize hand drawn emojis.",
+	"githubLink": "https://github.com/owenmoogk/emoji-machine-learning",
 	"blocks": [
 		{
 			"title": "Overview",

@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Simplelib",
-		"date": "January 23, 2021",
-		"externalLink": "https://owenmoogk.github.io/simplelib/",
-		"type": "Python Javascript",
-		"description": "A python library for dealing with complex data structures and algorithms.",
-		"featured": true
-	},
+	"title": "Simplelib",
+	"date": "January 23, 2021",
+	"externalLink": "https://owenmoogk.github.io/simplelib/",
+	"type": "Python Javascript",
+	"description": "A python library for dealing with complex data structures and algorithms.",
+	"featured": true,
 	"blocks": [
 		{
 			"render": "main.png"

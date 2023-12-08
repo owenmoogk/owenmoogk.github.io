@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Pathfinding Visualizer",
-		"date": "February 20, 2021",
-		"type": "Python React",
-		"description": "Pathfinding algorithms visualization built using Pygame.",
-		"featured": true,
-		"externalLink": "https://owenmoogk.github.io/pathfinding-visualizer"
-	},
+	"title": "Pathfinding Visualizer",
+	"date": "February 20, 2021",
+	"type": "Python React",
+	"description": "Pathfinding algorithms visualization built using Pygame.",
+	"featured": true,
+	"externalLink": "https://owenmoogk.github.io/pathfinding-visualizer",
 	"blocks": [
 		{
 			"render": "main.png"

@@ -44,7 +44,7 @@ export default function ProjectPage() {
 					requests.push(fetch(process.env.PUBLIC_URL + '/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
 						.then(response => response.json())
 						.then(currentProjectData => {
-							tmpProjectData.push({...currentProjectData.meta, name: projectUrl})
+							tmpProjectData.push({ ...currentProjectData, name: projectUrl })
 						})
 						.catch(error => console.log(projectUrl))
 					)

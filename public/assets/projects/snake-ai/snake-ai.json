@@ -1,10 +1,8 @@
 {
-	"meta": {
-		"title": "Snake AI",
-		"date": "January 6, 2021",
-		"type": "Python Pygame",
-		"description": "Classic snake game in Pygame."
-	},
+	"title": "Snake AI",
+	"date": "January 6, 2021",
+	"type": "Python Pygame",
+	"description": "Classic snake game in Pygame.",
 	"blocks": [
 		{
 			"render": "main.png"

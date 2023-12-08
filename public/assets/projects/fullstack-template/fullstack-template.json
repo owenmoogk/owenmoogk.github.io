@@ -1,10 +1,8 @@
 {
-	"meta": {
-		"title": "Fullstack Template",
-		"date": "April 15, 2021",
-		"type": "React Django",
-		"description": "React and Django fullstack outline with user authentication, using JWT"
-	},
+	"title": "Fullstack Template",
+	"date": "April 15, 2021",
+	"type": "React Django",
+	"description": "React and Django fullstack outline with user authentication, using JWT",
 	"blocks": [
 		{
 			"title": "Overview",

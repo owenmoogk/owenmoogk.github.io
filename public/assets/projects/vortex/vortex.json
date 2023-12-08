@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Vortex",
-		"date": "April 15, 2020",
-		"type": "Solidworks",
-		"description": "A swerve-drive robot I designed for a CADathon.",
-		"featured": true
-	},
+	"title": "Vortex",
+	"date": "April 15, 2020",
+	"type": "Solidworks",
+	"description": "A swerve-drive robot I designed for a CADathon.",
+	"featured": true,
 	"blocks": [
 		{
 			"title": "Overview",

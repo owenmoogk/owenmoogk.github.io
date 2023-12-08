@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Macropad",
-		"date": "November 30, 2021",
-		"type": "Python C++ Solidworks",
-		"description": "AI powered cat feeding robot, powered by Arduino.",
-		"featured": true
-	},
+	"title": "Macropad",
+	"date": "November 30, 2021",
+	"type": "Python C++ Solidworks",
+	"description": "AI powered cat feeding robot, powered by Arduino.",
+	"featured": true,
 	"blocks": [
 		{
 			"slider": [
@@ -25,7 +23,10 @@
 		{
 			"title": "Electrical",
 			"text": "I used EasyEDA to design a schematic and an PCB, which I ordered using JLCPCB. It was an awesome experience learning how to make a PCB, and I think that I will use this skill for future projects. Check it out below, or open it on <a href='https://easyeda.com/editor#id=53ef828834a34f2d87e6da74e034d6bf'>EasyEDA</a>.",
-			"image": ["electronics.png", "pcb.jpg"]
+			"image": [
+				"electronics.png",
+				"pcb.jpg"
+			]
 		},
 		{
 			"title": "Materials",

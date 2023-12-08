@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "2702 Rebels 2020 Robot",
-		"date": "March 24, 2020",
-		"githubLink": "",
-		"type": "Mechanical Solidworks",
-		"description": "2020 FIRST Robotics season with the 2702 Rebels Team.",
-		"featured": true
-	},
+	"title": "2702 Rebels 2020 Robot",
+	"date": "March 24, 2020",
+	"githubLink": "",
+	"type": "Mechanical Solidworks",
+	"description": "2020 FIRST Robotics season with the 2702 Rebels Team.",
+	"featured": true,
 	"blocks": [
 		{
 			"title": "Overview",

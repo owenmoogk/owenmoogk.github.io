@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Grocery List App",
-		"date": "March 8, 2021",
-		"type": "Django Javascript",
-		"description": "Grocery list app to learn Django.",
-		"githubLink": ""
-	},
+	"title": "Grocery List App",
+	"date": "March 8, 2021",
+	"type": "Django Javascript",
+	"description": "Grocery list app to learn Django.",
+	"githubLink": "",
 	"blocks": [
 		{
 			"render": "main.png"

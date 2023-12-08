@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Dino Game AI",
-		"date": "January 26, 2021",
-		"type": "Python NEAT",
-		"description": "Artificial Intelligence used to beat the infamous dinosaur game.",
-		"featured": false
-	},
+	"title": "Dino Game AI",
+	"date": "January 26, 2021",
+	"type": "Python NEAT",
+	"description": "Artificial Intelligence used to beat the infamous dinosaur game.",
+	"featured": false,
 	"blocks": [
 		{
 			"render": "main.png"

@@ -1,10 +1,8 @@
 {
-	"meta": {
-		"title": "Mecanum Drive",
-		"date": "December 21, 2020",
-		"type": "Solidworks",
-		"description": "Mecanum drive powered robot, 3D printed."
-	},
+	"title": "Mecanum Drive",
+	"date": "December 21, 2020",
+	"type": "Solidworks",
+	"description": "Mecanum drive powered robot, 3D printed.",
 	"blocks": [
 		{
 			"title": "Overview",
@@ -25,9 +23,12 @@
 				"L298N Motor Driver Board",
 				"4x Motor",
 				"Battery",
-				"Mecanum Wheels"	
+				"Mecanum Wheels"
 			],
-			"render": ["bot1.png", "bot2.png"]
+			"render": [
+				"bot1.png",
+				"bot2.png"
+			]
 		}
 	]
 }

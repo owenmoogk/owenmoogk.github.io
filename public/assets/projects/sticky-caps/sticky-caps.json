@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Sticky Caps",
-		"date": "June 30, 2021",
-		"type": "Python",
-		"description": "Python script to simplify 'sArCaSm CaPs'.",
-		"githubLink": "https://github.com/owenmoogk/gists/tree/main/sticky-caps"
-	},
+	"title": "Sticky Caps",
+	"date": "June 30, 2021",
+	"type": "Python",
+	"description": "Python script to simplify 'sArCaSm CaPs'.",
+	"githubLink": "https://github.com/owenmoogk/gists/tree/main/sticky-caps",
 	"blocks": [
 		{
 			"title": "Overview",

@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Space Invaders",
-		"date": "November 6, 2020",
-		"type": "Python Pygame",
-		"description": "Space invaders game made in Pygame.",
-		"githubLink": "https://github.com/owenmoogk/gists/tree/main/space-invaders"
-	},
+	"title": "Space Invaders",
+	"date": "November 6, 2020",
+	"type": "Python Pygame",
+	"description": "Space invaders game made in Pygame.",
+	"githubLink": "https://github.com/owenmoogk/gists/tree/main/space-invaders",
 	"blocks": [
 		{
 			"title": "Overview",

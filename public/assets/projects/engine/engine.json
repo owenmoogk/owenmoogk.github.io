@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Engine Assembly",
-		"date": "March 16, 2020",
-		"githubLink": "",
-		"type": "Mechanical",
-		"description": "1 cylinder, 4-stroke lawnmower engine assembly."
-	},
+	"title": "Engine Assembly",
+	"date": "March 16, 2020",
+	"githubLink": "",
+	"type": "Mechanical",
+	"description": "1 cylinder, 4-stroke lawnmower engine assembly.",
 	"blocks": [
 		{
 			"title": "Overview",

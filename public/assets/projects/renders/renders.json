@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Renders / Graphic Design",
-		"date": "April 22, 2020",
-		"type": "Solidworks",
-		"description": "Me messing around with Solidworks and Blender.",
-		"githubLink": ""
-	},
+	"title": "Renders / Graphic Design",
+	"date": "April 22, 2020",
+	"type": "Solidworks",
+	"description": "Me messing around with Solidworks and Blender.",
+	"githubLink": "",
 	"blocks": [
 		{
 			"title": "Overview",

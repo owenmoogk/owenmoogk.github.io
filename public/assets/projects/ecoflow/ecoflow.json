@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Eco Flow",
-		"date": "July 30, 2020",
-		"type": "Solidworks C++",
-		"description": "SHAD 2021 Project, designing a system to reduce water usage.",
-		"externalLink": "https://owenmoogk.github.io/ecoflow/",
-		"featured": true
-	},
+	"title": "Eco Flow",
+	"date": "July 30, 2020",
+	"type": "Solidworks C++",
+	"description": "SHAD 2021 Project, designing a system to reduce water usage.",
+	"externalLink": "https://owenmoogk.github.io/ecoflow/",
+	"featured": true,
 	"blocks": [
 		{
 			"render": "apperatus-2.jpg"
@@ -22,7 +20,10 @@
 		{
 			"title": "Components",
 			"text": "This was designed with an Arduino Uno, connected to an ultrasonic sensor. I had to take the ultrasonic sensor and de-solder the transmitter. This left two separate modules that could communicate with each-other. This was then attached to some 3D printed housing (see below), which allowed it to be clamped onto the pipe.",
-			"image": ["housing.jpg", "Components.jpg"]
+			"image": [
+				"housing.jpg",
+				"Components.jpg"
+			]
 		},
 		{
 			"video": "desc.mp4"

@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Rocket Calculator",
-		"date": "May 26, 2021",
-		"type": "Python C++ Solidworks",
-		"description": "AI powered cat feeding robot, powered by Arduino.",
-		"externalLink": "https://owenmoogk.github.io/rocket-calculator",
-		"featured": false
-	},
+	"title": "Rocket Calculator",
+	"date": "May 26, 2021",
+	"type": "Python C++ Solidworks",
+	"description": "AI powered cat feeding robot, powered by Arduino.",
+	"externalLink": "https://owenmoogk.github.io/rocket-calculator",
+	"featured": false,
 	"blocks": [
 		{
 			"title": "Overview",

@@ -1,18 +1,16 @@
 {
-	"meta": {
-		"title": "Flappy Bird AI",
-		"date": "January 7, 2021",
-		"type": "Python NEAT",
-		"description": "Artificial intelligence used to play flappy bird, using NEAT Python.",
-		"featured": false
-	},
+	"title": "Flappy Bird AI",
+	"date": "January 7, 2021",
+	"type": "Python NEAT",
+	"description": "Artificial intelligence used to play flappy bird, using NEAT Python.",
+	"featured": false,
 	"blocks": [
 		{
 			"render": "main.png"
 		},
 		{
 			"title": "Overview",
-			"text": "This project uses the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT</a> library in python. It really interests me and I find it quite fascinating. I decided to create a flappy bird game when I saw a YouTube video from <a href='https://youtube.com/techwithtim'>TechWithTim</a>, so I used that as an assistance when needed but wrote most of the code myself."
+			"text": "This project uses the <a href='https://neat-python.readthedocs.io/en/latest/neat_overview.html'>NEAT</a> library in python. It really interests me and I find it quite fascinating. I decided to create a flappy bird game when I dsaw a YouTube video from <a href='https://youtube.com/techwithtim'>TechWithTim</a>, so I used that as an assistance when needed but wrote most of the code myself."
 		},
 		{
 			"title": "Technical",

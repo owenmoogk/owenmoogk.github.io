@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Music Bot",
-		"date": "April 15, 2021",
-		"type": "React Django",
-		"description": "React and Django fullstack app integrating Spotify API.",
-		"featured": false
-	},
+	"title": "Music Bot",
+	"date": "April 15, 2021",
+	"type": "React Django",
+	"description": "React and Django fullstack app integrating Spotify API.",
+	"featured": false,
 	"blocks": [
 		{
 			"render": "main.png"

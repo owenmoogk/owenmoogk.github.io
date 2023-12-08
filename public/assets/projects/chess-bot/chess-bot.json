@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "Chess Robot",
-		"date": "December 2, 2022",
-		"githubLink": "https://github.com/owenmoogk/carl-bot",
-		"type": "C++ EV3",
-		"description": "Chess Playing Robot",
-		"featured": true
-	},
+	"title": "Chess Robot",
+	"date": "December 2, 2022",
+	"githubLink": "https://github.com/owenmoogk/carl-bot",
+	"type": "C++ EV3",
+	"description": "Chess Playing Robot",
+	"featured": true,
 	"blocks": [
 		{
 			"render": "main.png"
@@ -46,7 +44,9 @@
 		{
 			"title": "Axis Positioning",
 			"text": "The axis additionally use an intelligent system to control its positioning. The x-axis uses a color sensor to locate its position relative to the board, with red paper as an indicator, shown below. The y-axis uses a motor encoder value to determine its distance from the initial, 'A' cell.",
-			"image": ["color.png"]
+			"image": [
+				"color.png"
+			]
 		},
 		{
 			"title": "Claw System",

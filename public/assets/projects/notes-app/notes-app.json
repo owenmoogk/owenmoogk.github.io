@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Notes App",
-		"date": "February 10, 2021",
-		"type": "Javascript Flask",
-		"description": "Simple notes app created using Flask.",
-		"githubLink": ""
-	},
+	"title": "Notes App",
+	"date": "February 10, 2021",
+	"type": "Javascript Flask",
+	"description": "Simple notes app created using Flask.",
+	"githubLink": "",
 	"blocks": [
 		{
 			"render": "main.png"

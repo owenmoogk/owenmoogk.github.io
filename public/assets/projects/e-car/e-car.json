@@ -1,12 +1,10 @@
 {
-	"meta": {
-		"title": "E-Car 2022",
-		"date": "May 28, 2022",
-		"githubLink": "",
-		"type": "Mechanical",
-		"description": "2022 Bluevale Collegiate Electric Car",
-		"featured": true
-	},
+	"title": "E-Car 2022",
+	"date": "May 28, 2022",
+	"githubLink": "",
+	"type": "Mechanical",
+	"description": "2022 Bluevale Collegiate Electric Car",
+	"featured": true,
 	"blocks": [
 		{
 			"title": "Overview",
@@ -14,12 +12,18 @@
 		},
 		{
 			"title": "Images",
-			"image": ["big-wheel.JPG", "red-car.JPG"]
+			"image": [
+				"big-wheel.JPG",
+				"red-car.JPG"
+			]
 		},
 		{
 			"title": "Competition",
 			"text": "This car was designed to compete in the University of Waterloo Electric Vehicle Challenge. It is an endurance race where teams compete to complete the most laps in a set amount of time. There are two categories, 12V and 24V, with the winner of the 24V winning the opportunity of showing the car at the Toronto Auto Show. In the 12V race, our team finished first and second with the two cars that we entered, and in the 24V race we came first.",
-			"image": ["driving.jpg", "janik.jpg"]
+			"image": [
+				"driving.jpg",
+				"janik.jpg"
+			]
 		},
 		{
 			"image": "winner.jpg"

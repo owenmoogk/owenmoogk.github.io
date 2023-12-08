@@ -1,11 +1,9 @@
 {
-	"meta": {
-		"title": "Typeracer",
-		"date": "June 30, 2021",
-		"type": "Python",
-		"description": "Python script to crush opponents in Typeracer.",
-		"githubLink": "https://github.com/owenmoogk/gists/tree/main/typeracer"
-	},
+	"title": "Typeracer",
+	"date": "June 30, 2021",
+	"type": "Python",
+	"description": "Python script to crush opponents in Typeracer.",
+	"githubLink": "https://github.com/owenmoogk/gists/tree/main/typeracer",
 	"blocks": [
 		{
 			"render": "main.png"
