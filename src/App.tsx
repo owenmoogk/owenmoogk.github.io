@@ -14,9 +14,9 @@ import Assets from './components/Assets'
 import './styles.css'
 import NotFoundPage from './components/NotFoundPage'
 
-function Redirect(){
+function Redirect() {
 	window.location.replace("https://github.com/owenmoogk/")
-	return(<></>)
+	return (<></>)
 }
 
 export default function App() {
@@ -72,7 +72,7 @@ export default function App() {
 					<Route path='/' element={<Homepage />} />
 					<Route path='/404' element={<NotFoundPage />} />
 					<Route path='/github' element={<Redirect />} />
-					<Route path='*' element={<Navigate to='/404' />} />				
+					<Route path='*' element={<Navigate to='/404' />} />
 				</Routes>
 
 			</Router>

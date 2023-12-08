@@ -3,11 +3,11 @@ import Helmet from 'react-helmet';
 import WorkItem from './WorkItem'
 import links from "../../global/links.json"
 import global from "../../global/global.json"
-import {WorkItem as IWorkItem} from './WorkInterface';
+import { WorkItem as IWorkItem } from './WorkInterface';
 
 export default function Workpage() {
 
-	interface WorkData{
+	interface WorkData {
 		experience: IWorkItem[]
 		education: IWorkItem[]
 		volunteer: IWorkItem[]

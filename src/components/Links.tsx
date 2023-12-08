@@ -2,10 +2,10 @@ import React from 'react';
 import links from "../global/links.json"
 
 export default function Links(props: {
-		shown: boolean
-	}) {
+	shown: boolean
+}) {
 	return (
-		<div id="links" style={{display: props.shown ? 'flex' : ''}}>
+		<div id="links" style={{ display: props.shown ? 'flex' : '' }}>
 			<a href="https://github.com/owenmoogk" target="_blank" rel="noreferrer" >
 				<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="lightblue" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
 					<title>GitHub</title>

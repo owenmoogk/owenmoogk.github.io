@@ -1,6 +1,6 @@
-export default interface Project{
+export default interface Project {
   name: string;
-  
+
   title: string;
   date: string;
 
@@ -15,7 +15,7 @@ export default interface Project{
   blocks: ProjectBlock[];
 }
 
-interface ProjectBlock{
+interface ProjectBlock {
   title: string;
   text: string;
   ul: string[];

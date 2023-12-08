@@ -8,18 +8,18 @@ export default function ProjectDirectory() {
 	const [projectData, setProjectData] = useState<Project[]>()
 
 	function search(filter: string) {
-	
+
 		filter = filter.toLowerCase()
 		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
-	
+
 		// will run through all the rows
 		for (const tile of projectItems) {
-	
+
 			// get the title and type
 			var title = (tile.getElementsByClassName("contentTitle")[0] as HTMLElement).innerText;
 			var type = (tile.getElementsByClassName("type")[0] as HTMLElement).innerText;
 			var desc = (tile.getElementsByClassName('contentDesc')[0] as HTMLElement).innerText;
-	
+
 			if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter) || desc.toLowerCase().includes(filter)) {
 				tile.style.display = "";
 			}
@@ -44,10 +44,10 @@ export default function ProjectDirectory() {
 		for (const tile of projectItems) {
 			var type = (tile.getElementsByClassName('type')[0] as HTMLElement).innerText;
 
-			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all'){
+			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
 				tile.style.display = ''
 			}
-			else{
+			else {
 				tile.style.display = 'none'
 			}
 		}
@@ -103,13 +103,13 @@ export default function ProjectDirectory() {
 			<div id='projectIcons'>
 				{projectData
 					? projectData.map((data, key) => {
-						if (!data.featured){
-							return(
+						if (!data.featured) {
+							return (
 								<ProjectIcon title={data.title} name={data.name} type={data.type} link={data.externalLink} key={key} githubLink={data.githubLink} description={data.description} />
 							)
 						}
-						else{
-							return(null)
+						else {
+							return (null)
 						}
 					})
 					: null

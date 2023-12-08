@@ -85,7 +85,7 @@ export default function ProjectPage() {
 						? projectData.map((data, key) => {
 							if (data.featured) {
 								return (
-									<FeaturedIcon data={data} key={key}/>
+									<FeaturedIcon data={data} key={key} />
 								)
 							}
 							return (null)

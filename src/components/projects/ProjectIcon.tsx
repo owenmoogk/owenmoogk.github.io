@@ -11,7 +11,7 @@ export default function ProjectIcon(props: any) {
 		<a href={link}>
 
 			{/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
-			<div className={"content "+primaryType+"Tile "+type}>
+			<div className={"content " + primaryType + "Tile " + type}>
 
 				<div>
 					<span className="contentTitle">{props.title}</span>
@@ -19,7 +19,7 @@ export default function ProjectIcon(props: any) {
 					<span className='contentDesc'>{props.description}</span>
 
 					{/* this is just for sorting, not display */}
-					<span className='type' style={{display: "none"}}>{type}</span>
+					<span className='type' style={{ display: "none" }}>{type}</span>
 				</div>
 
 				<div className='projectIcons'>

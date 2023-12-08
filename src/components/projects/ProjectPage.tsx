@@ -8,7 +8,7 @@ export default function ProjectPage() {
 
 	const [projectData, setProjectData] = useState<Project>()
 	var { name } = useParams()
-	var projectJson = process.env.PUBLIC_URL + '/assets/projects/' + name +'/' + name + ".json"
+	var projectJson = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".json"
 
 	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
@@ -116,7 +116,7 @@ export default function ProjectPage() {
 		// }
 
 		if (!projectData) return <></>;
-		
+
 		return (
 			<div id='projectBody' className='main'>
 
@@ -136,7 +136,7 @@ export default function ProjectPage() {
 					{projectData.title}
 				</div>
 				<p className='subtitle'>{projectData.date}</p>
-				
+
 				<div id='icons'>
 
 					{projectData.githubLink === ""

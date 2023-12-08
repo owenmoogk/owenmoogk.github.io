@@ -4,7 +4,7 @@ import global from "../global/global.json"
 
 export default function Assets() {
 
-	interface Asset{
+	interface Asset {
 		name: string;
 		link: string;
 	}
@@ -34,26 +34,26 @@ export default function Assets() {
 			<p className="title">Assets</p>
 			<p className='subtitle'>Extra bits, for storage.</p>
 			{data ?
-			<div className='assets'>
-				<ul>
-					{data.map((asset, key) => {
-						if (asset.name === 'university'){
-							return null
-						}
-						if(!asset.link.startsWith("http", 0)){
-							var link = global.assets + asset.link
-						}
-						else{
-							link = asset.link
-						}
-						return (
-							<li key={key}><a href={link} target='_blank' rel='noreferrer'>{asset.name}</a></li>
-						)
-					})}
-				</ul>
+				<div className='assets'>
+					<ul>
+						{data.map((asset, key) => {
+							if (asset.name === 'university') {
+								return null
+							}
+							if (!asset.link.startsWith("http", 0)) {
+								var link = global.assets + asset.link
+							}
+							else {
+								link = asset.link
+							}
+							return (
+								<li key={key}><a href={link} target='_blank' rel='noreferrer'>{asset.name}</a></li>
+							)
+						})}
+					</ul>
 				</div>
 				: null
-			}			
+			}
 		</div>
 	);
 }

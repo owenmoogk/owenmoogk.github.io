@@ -7,17 +7,17 @@ export default function Nav(props: {
 }) {
 
 	const [shown, setShown] = useState(false);
-	
-	window.addEventListener('click', (e)=>{
-		if (shown && e.target === document.getElementById('navBox')){
+
+	window.addEventListener('click', (e) => {
+		if (shown && e.target === document.getElementById('navBox')) {
 			setShown(false)
 		}
 	})
 
 	return (
 		<div id="navContainer">
-			<svg id="navButton" onClick={()=>setShown(!shown)} preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M7.95 11.95h32"/><path d="M7.95 23.95h32"/><path d="M7.95 35.95h32"/></g></svg>
-			<div id="navBox" style={{display: shown ? "flex" : ''}}>
+			<svg id="navButton" onClick={() => setShown(!shown)} preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="none" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M7.95 11.95h32" /><path d="M7.95 23.95h32" /><path d="M7.95 35.95h32" /></g></svg>
+			<div id="navBox" style={{ display: shown ? "flex" : '' }}>
 				<div id='navLinks'>
 					<a href="/" className="navlink">Home</a>
 					<a href="/projects" className="navlink">Projects</a>
@@ -29,7 +29,7 @@ export default function Nav(props: {
 					</div>
 				</div>
 			</div>
-			<Links shown={shown}/>
+			<Links shown={shown} />
 		</div>
 	);
 }

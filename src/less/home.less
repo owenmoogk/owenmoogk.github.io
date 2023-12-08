@@ -1,11 +1,11 @@
-#homePage{
+#homePage {
 	padding: 100px 10% 0 10%;
 	margin: 0 auto 50px auto;
 	max-width: min(calc(100% - 100px), 800px);
 	display: flex;
 	flex-direction: column;
 
-	#homepageTitle{
+	#homepageTitle {
 		font-size: 20px;
 		color: grey;
 		display: flex;
@@ -14,39 +14,40 @@
 		align-items: center;
 		margin-bottom: 30px;
 
-		.photo{
+		.photo {
 			height: 175px;
 			width: 175px;
-			img{
+
+			img {
 				height: 100%;
 				width: 100%;
 				border-radius: 50%;
 			}
 		}
-		
-		.larger{
+
+		.larger {
 			font-weight: bold;
 			font-size: 40px;
 			color: var(--textColor);
 
-			.special{
+			.special {
 				font-size: 60px;
 			}
 		}
 
-		#splash{
+		#splash {
 			user-select: none;
 			transition: 0.3s;
 			transform-origin: left top;
 			text-align: left;
 
-			&:hover{
+			&:hover {
 				transform: scale(1.1);
 			}
 		}
 	}
 
-	#featuredContainer{
+	#featuredContainer {
 		display: flex;
 		flex-direction: row;
 		width: calc(100% + 40px);
@@ -54,5 +55,3 @@
 		margin-left: -20px;
 	}
 }
-
-
