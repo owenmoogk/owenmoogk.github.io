@@ -7,7 +7,7 @@ export default function ContactPage() {
 	return (
 		<div className="main">
 			<Helmet>
-				<title>Contact - Owen Moogk</title>
+				<title>{"Contact - Owen Moogk"}</title>
 			</Helmet>
 			<p className="title">Contact</p>
 			<div id='contactPage'>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Links from './Links'
-import global from "../global/global"
+import global from "../global/global.json"
 
-export default function Nav(props) {
+export default function Nav(props: {
+	toggleDarkMode: () => void;
+}) {
 
 	const [shown, setShown] = useState(false);
 	

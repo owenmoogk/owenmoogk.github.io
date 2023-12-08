@@ -1,7 +1,9 @@
 import React from 'react';
-import links from "../global/links"
+import links from "../global/links.json"
 
-export default function Links(props) {
+export default function Links(props: {
+		shown: boolean
+	}) {
 	return (
 		<div id="links" style={{display: props.shown ? 'flex' : ''}}>
 			<a href="https://github.com/owenmoogk" target="_blank" rel="noreferrer" >

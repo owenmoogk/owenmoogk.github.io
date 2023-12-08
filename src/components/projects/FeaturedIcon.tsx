@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function FeaturedIcon(props) {
+export default function FeaturedIcon(props: any) {
 	
 	var data = props.data
 	let link = '/projects/' + data.name
@@ -40,13 +38,16 @@ export default function FeaturedIcon(props) {
 					<div style={{display: 'flex', justifyContent: "space-between", margin: "0 20px"}}>
 						<div className='featuredText'>
 							<span className="contentTitle">{data.title}</span>
-							<span className="contentDate">{data.date}</span>
+							{data.date ?
+								<span className="contentDate">{data.date}</span>
+								: null
+							}
 							<span className='contentDesc' style={{display: "none"}}>{data.description}</span>
 							<span className='type' style={{display: 'none'}}>{data.type}</span>
 						</div>
 						<span className='iconContainer'>
-							{types.map((type) => 
-								<img src={"/assets/icons/"+type.toLowerCase().replace(/[^a-z]/gi, '')+".svg"}className='iconImage' onError={(e) => e.target.style.display = "none"}></img>
+							{types.map((type: any) => 
+								<img src={"/assets/icons/"+type.toLowerCase().replace(/[^a-z]/gi, '')+".svg"}className='iconImage' onError={(e) => (e.target as HTMLElement).style.display = "none"}></img>
 							)}
 						</span>
 						

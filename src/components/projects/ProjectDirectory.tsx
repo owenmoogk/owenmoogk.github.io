@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectIcon from './ProjectIcon';
 import ProjectButton from './ProjectButton';
+import Project from './ProjectInterface';
 
 export default function ProjectDirectory() {
 
-	const [projectData, setProjectData] = useState()
+	const [projectData, setProjectData] = useState<Project[]>()
 
-	function search(filter) {
+	function search(filter: string) {
 	
 		filter = filter.toLowerCase()
-		var projectItems = document.getElementsByClassName("content");
+		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
 	
 		// will run through all the rows
 		for (const tile of projectItems) {
 	
 			// get the title and type
-			var title = tile.getElementsByClassName("contentTitle")[0].innerText;
-			var type = tile.getElementsByClassName("type")[0].innerText;
-			var desc = tile.getElementsByClassName('contentDesc')[0].innerText;
+			var title = (tile.getElementsByClassName("contentTitle")[0] as HTMLElement).innerText;
+			var type = (tile.getElementsByClassName("type")[0] as HTMLElement).innerText;
+			var desc = (tile.getElementsByClassName('contentDesc')[0] as HTMLElement).innerText;
 	
 			if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter) || desc.toLowerCase().includes(filter)) {
 				tile.style.display = "";
@@ -28,9 +29,9 @@ export default function ProjectDirectory() {
 		}
 	}
 
-	function filterProjects(filter) {
+	function filterProjects(filter: string) {
 
-		var projectItems = document.getElementsByClassName("content");
+		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
 
 		// make the button active
 		var currentButton = document.getElementsByClassName("active")[0]
@@ -41,7 +42,7 @@ export default function ProjectDirectory() {
 
 		// will run through all the elements
 		for (const tile of projectItems) {
-			var type = tile.getElementsByClassName('type')[0].innerText;
+			var type = (tile.getElementsByClassName('type')[0] as HTMLElement).innerText;
 
 			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all'){
 				tile.style.display = ''
@@ -53,7 +54,7 @@ export default function ProjectDirectory() {
 	}
 
 	function fetchProjects() {
-		var tmpProjectData = []
+		var tmpProjectData: Project[];
 		fetch('/assets/projectDirectory.json')
 			.then(response => response.json())
 			.then(projectUrls => {
@@ -97,7 +98,7 @@ export default function ProjectDirectory() {
 					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
 					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
 				</div>
-				<input type="text" onKeyUp={(e) => search(e.target.value)} placeholder="Search" title="Type to search" />
+				<input type="text" onKeyUp={(e) => search((e.target as HTMLInputElement).value)} placeholder="Search" title="Type to search" />
 			</div>
 			<div id='projectIcons'>
 				{projectData

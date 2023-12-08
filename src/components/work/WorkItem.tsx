@@ -1,6 +1,15 @@
 import { useState } from "react";
+import { StringLiteral } from "typescript";
 
-export default function WorkItem(props) {
+export default function WorkItem(props: {
+	data: {
+		title: string;
+		date: string;
+		subtitle: string;
+		description: string;
+		ul: string[];
+	}
+}) {
 
 	const [collapsed, setCollapsed] = useState(true)
 	var data = props.data

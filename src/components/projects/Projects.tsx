@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectButton from './ProjectButton';
 import FeaturedIcon from './FeaturedIcon';
+import Project from "./ProjectInterface"
 
 export default function ProjectPage() {
 
-	const [projectData, setProjectData] = useState()
+	const [projectData, setProjectData] = useState<Project[]>()
 
 	// function that filters by the type of entry
-	function filterProjects(filter) {
+	function filterProjects(filter: string) {
 
-		var projectItems = document.getElementsByClassName("featuredIcon");
+		var projectItems = document.getElementsByClassName("featuredIcon") as HTMLCollectionOf<HTMLElement>;
 
 		// make the button active
 		var currentButton = document.getElementsByClassName("active")[0]
@@ -20,19 +21,21 @@ export default function ProjectPage() {
 
 		// will run through all the elements
 		for (const tile of projectItems) {
-			var type = tile.getElementsByClassName('type')[0].innerText;
+			var type = (tile.getElementsByClassName('type')[0] as HTMLElement).innerText;
 
 			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
-				tile.parentNode.style.display = ''
+				(tile.parentNode as HTMLElement).style.display = ''
 			}
 			else {
-				tile.parentNode.style.display = 'none'
+				(tile.parentNode as HTMLElement).style.display = 'none'
 			}
 		}
 	}
 
 	function fetchProjects() {
-		var tmpProjectData = []
+
+		var tmpProjectData: Project[] = []
+
 		fetch(process.env.PUBLIC_URL + '/assets/projectDirectory.json')
 			.then(response => response.json())
 			.then(projectUrls => {
@@ -41,7 +44,7 @@ export default function ProjectPage() {
 					requests.push(fetch(process.env.PUBLIC_URL + '/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
 						.then(response => response.json())
 						.then(currentProjectData => {
-							tmpProjectData.push({ ...currentProjectData.meta, name: projectUrl })
+							tmpProjectData.push({...currentProjectData.meta, name: projectUrl})
 						})
 						.catch(error => console.log(projectUrl))
 					)
@@ -82,7 +85,7 @@ export default function ProjectPage() {
 						? projectData.map((data, key) => {
 							if (data.featured) {
 								return (
-									<FeaturedIcon data={data} />
+									<FeaturedIcon data={data} key={key}/>
 								)
 							}
 							return (null)

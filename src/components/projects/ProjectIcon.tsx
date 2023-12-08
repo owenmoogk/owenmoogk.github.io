@@ -1,6 +1,6 @@
-import React from 'react';
+import Project from "./ProjectInterface"
 
-export default function ProjectIcon(props) {
+export default function ProjectIcon(props: any) {
 
 	let link = '/projects/' + props.name
 	let githubLink = props.githubLink !== undefined ? props.githubLink : 'https://github.com/owenmoogk/' + props.name

@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default function ProjectButton(props) {
+export default function ProjectButton(props: {
+	name: string;
+	filterProjects: (name: any) => any;
+}) {
 	var name = props.name.toLowerCase()
 
 	return (

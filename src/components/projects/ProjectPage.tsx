@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactCompareImage from 'react-compare-image'
 import Helmet from "react-helmet"
+import Project from './ProjectInterface';
 
 export default function ProjectPage() {
 
-	const [xmlContent, setXmlContent] = useState()
+	const [projectData, setProjectData] = useState<Project>()
 	var { name } = useParams()
 	var projectJson = process.env.PUBLIC_URL + '/assets/projects/' + name +'/' + name + ".json"
 
@@ -13,13 +14,14 @@ export default function ProjectPage() {
 	useEffect(() => {
 		fetch(projectJson)
 			.then(response => response.json())
-			.then(json => setXmlContent(json))
-			.catch(error => setXmlContent(true))
+			.then(json =>	setProjectData({...json.meta, "blocks": json.blocks}))
 	}, [])
 
 	function loadBlocks() {
 
-		var blocks = xmlContent.blocks;
+		if (!projectData) return;
+
+		var blocks = projectData.blocks;
 
 		// going through blocks and loading them
 		var html = blocks.map((block, key) => {
@@ -31,7 +33,7 @@ export default function ProjectPage() {
 				}
 				block.ul = newArray
 			}
-			block.text = block.text ? block.text.replaceAll('<a', "<a target='_blank' rel='noreferrer'") : null
+			block.text = block.text ? block.text.replaceAll('<a', "<a target='_blank' rel='noreferrer'") : ""
 
 			return (
 				<div className='block' key={key}>
@@ -104,20 +106,22 @@ export default function ProjectPage() {
 	// actual loading process
 	function buildProjectPage() {
 
-		if (xmlContent === true){
-			return (
-				<div id='projectBody' className='main'>
-					<div className="title">Could not load page :/</div>
-					<p className='subtitle'>Probably still in development</p>
-				</div>
-			)
-		}
+		// if (projectData){
+		// 	return (
+		// 		<div id='projectBody' className='main'>
+		// 			<div className="title">Could not load page :/</div>
+		// 			<p className='subtitle'>Probably still in development</p>
+		// 		</div>
+		// 	)
+		// }
+
+		if (!projectData) return <></>;
 		
 		return (
 			<div id='projectBody' className='main'>
 
 				<Helmet>
-					<title>{xmlContent.meta.title} - Owen Moogk</title>
+					<title>{projectData.title + " - Owen Moogk"}</title>
 				</Helmet>
 
 				<style dangerouslySetInnerHTML={{
@@ -129,23 +133,23 @@ export default function ProjectPage() {
 					`}}></style>
 
 				<div className="title">
-					{xmlContent.meta.title}
+					{projectData.title}
 				</div>
-				<p className='subtitle'>{xmlContent.meta.date}</p>
+				<p className='subtitle'>{projectData.date}</p>
 				
 				<div id='icons'>
 
-					{xmlContent.meta.githubLink === ""
+					{projectData.githubLink === ""
 						? null
-						: <a href={xmlContent.meta.githubLink ? xmlContent.meta.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
+						: <a href={projectData.githubLink ? projectData.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
 							<svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 								<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
 							</svg>
 						</a>
 					}
 
-					{xmlContent.meta.externalLink
-						? <a href={xmlContent.meta.externalLink} target='_blank' rel='noreferrer'>
+					{projectData.externalLink
+						? <a href={projectData.externalLink} target='_blank' rel='noreferrer'>
 							<svg viewBox="0 0 24 24" className='projectSvg'>
 								<g fill="none">
 									<path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -155,7 +159,7 @@ export default function ProjectPage() {
 						: null
 					}
 
-					{xmlContent.meta.type.split(' ').map((type, key) => {
+					{projectData.type?.split(' ').map((type, key) => {
 						return (
 							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}>
 								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}></span>
@@ -173,8 +177,8 @@ export default function ProjectPage() {
 	}
 
 	return (
-		xmlContent
+		projectData
 			? buildProjectPage()
-			: null
+			: <></>
 	);
 }

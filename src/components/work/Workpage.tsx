@@ -1,13 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import WorkItem from './WorkItem'
-import links from "../../global/links"
-import global from "../../global/global"
-
+import links from "../../global/links.json"
+import global from "../../global/global.json"
+import {WorkItem as IWorkItem} from './WorkInterface';
 
 export default function Workpage() {
 
-	const [workData, setWorkData] = useState()
+	interface WorkData{
+		experience: IWorkItem[]
+		education: IWorkItem[]
+		volunteer: IWorkItem[]
+		certifications: IWorkItem[]
+	}
+
+	const [workData, setWorkData] = useState<WorkData>()
 
 	useEffect(() => {
 		fetch(process.env.PUBLIC_URL + "/assets/work.json")
