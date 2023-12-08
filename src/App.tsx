@@ -5,21 +5,26 @@ import {
 	Route,
 	Navigate
 } from 'react-router-dom';
-import Nav from "./components/Nav.js"
-import Homepage from './components/homepage/Homepage.js'
-import Workpage from './components/work/Workpage.js';
-import ContactPage from './components/contact/Contact.js';
-import ProjectRouter from './components/ProjectRouter.js';
-import Assets from './components/Assets.js'
+import Nav from "./components/Nav"
+import Homepage from './components/homepage/Homepage'
+import Workpage from './components/work/Workpage';
+import ContactPage from './components/contact/Contact';
+import ProjectRouter from './components/ProjectRouter';
+import Assets from './components/Assets'
 import './styles.css'
 import NotFoundPage from './components/NotFoundPage'
 
-export default function App(props) {
+function Redirect(){
+	window.location.replace("https://github.com/owenmoogk/")
+	return(<></>)
+}
+
+export default function App() {
 
 	const [darkMode, setDarkMode] = useState(localStorage.getItem('darkmode') === 'false' ? false : true)
 
 	function toggleDarkMode() {
-		localStorage.setItem('darkmode', darkMode ? false : true)
+		localStorage.setItem('darkmode', darkMode ? "false" : "true")
 		setDarkMode(darkMode ? false : true)
 	}
 
@@ -64,13 +69,9 @@ export default function App(props) {
 					<Route path='/work' element={<Workpage />} />
 					<Route path='/contact' element={<ContactPage />} />
 					<Route path='/assets' element={<Assets />} />
-					<Route exact path='/' element={<Homepage />} />
+					<Route path='/' element={<Homepage />} />
 					<Route path='/404' element={<NotFoundPage />} />
-					{/* /github Navigates to my github */}
-					<Route path='/github' component={() => {
-						window.location.href = 'https://github.com/owenmoogk?tab=repositories';
-						return null;
-					}} />
+					<Route path='/github' element={<Redirect />} />
 					<Route path='*' element={<Navigate to='/404' />} />				
 				</Routes>
 
