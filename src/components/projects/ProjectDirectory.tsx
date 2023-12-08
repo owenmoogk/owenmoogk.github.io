@@ -54,7 +54,7 @@ export default function ProjectDirectory() {
 	}
 
 	function fetchProjects() {
-		var tmpProjectData: Project[];
+		var tmpProjectData: Project[] = [];
 		fetch('/assets/projectDirectory.json')
 			.then(response => response.json())
 			.then(projectUrls => {
