@@ -7,6 +7,7 @@ export default function Assets() {
 	interface Asset {
 		name: string;
 		link: string;
+		break: boolean;
 	}
 
 	const [data, setData] = useState<Asset[]>()
@@ -19,7 +20,8 @@ export default function Assets() {
 				json.forEach((item: any) => {
 					parsedData.push({
 						name: Object.keys(item)[0],
-						link: item[Object.keys(item)[0]]
+						link: item[Object.keys(item)[0]],
+						break: (item === "")
 					})
 				})
 				setData(parsedData)
@@ -37,6 +39,9 @@ export default function Assets() {
 				<div className='assets'>
 					<ul>
 						{data.map((asset, key) => {
+							if (asset.break){
+								return <br />
+							}
 							if (asset.name === 'university') {
 								return null
 							}
