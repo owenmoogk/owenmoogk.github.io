@@ -13,6 +13,7 @@ import ProjectRouter from './components/ProjectRouter';
 import Assets from './components/Assets'
 import './styles.css'
 import NotFoundPage from './components/NotFoundPage'
+import Sitemap from './components/Sitemap';
 
 function Redirect() {
 	window.location.replace("https://github.com/owenmoogk/")
@@ -69,6 +70,7 @@ export default function App() {
 					<Route path='/work' element={<Workpage />} />
 					<Route path='/contact' element={<ContactPage />} />
 					<Route path='/assets' element={<Assets />} />
+					<Route path='/sitemap' element={<Sitemap />} />
 					<Route path='/' element={<Homepage />} />
 					<Route path='/404' element={<NotFoundPage />} />
 					<Route path='/github' element={<Redirect />} />
