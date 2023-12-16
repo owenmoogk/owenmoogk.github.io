@@ -7,9 +7,26 @@ export default function ProjectDirectory() {
 
 	const [projectData, setProjectData] = useState<Project[]>()
 
-	function search(filter: string) {
+	function search(filter: string, buttonPressed?: boolean) {
+		
+		var searchString = (document.getElementById("projectSearchBox") as HTMLInputElement).value;
+
+		if (buttonPressed){
+			// make the button active
+			var currentButton = document.getElementsByClassName("active")[0]
+			currentButton.classList.remove('active')
+			var currentButtonClass = "sort_" + filter
+			var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
+			chosenButton.classList.add('active')
+		}
+
+		if (filter == ""){
+			var filter = (document.getElementsByClassName("active")[0].getElementsByTagName("p")[0] as HTMLElement).innerText
+		}
 
 		filter = filter.toLowerCase()
+		if (filter == "all") filter = ""
+		
 		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
 
 		// will run through all the rows
@@ -20,35 +37,13 @@ export default function ProjectDirectory() {
 			var type = (tile.getElementsByClassName("type")[0] as HTMLElement).innerText;
 			var desc = (tile.getElementsByClassName('contentDesc')[0] as HTMLElement).innerText;
 
-			if (title.toLowerCase().includes(filter) || type.toLowerCase().includes(filter) || desc.toLowerCase().includes(filter)) {
+			if (
+				(title.toLowerCase().includes(searchString) || type.toLowerCase().includes(searchString) || desc.toLowerCase().includes(searchString)) && type.toLowerCase().includes(filter)
+			) {
 				tile.style.display = "";
 			}
 			else {
 				tile.style.display = "none";
-			}
-		}
-	}
-
-	function filterProjects(filter: string) {
-
-		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
-
-		// make the button active
-		var currentButton = document.getElementsByClassName("active")[0]
-		currentButton.classList.remove('active')
-		var currentButtonClass = "sort_" + filter
-		var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
-		chosenButton.classList.add('active')
-
-		// will run through all the elements
-		for (const tile of projectItems) {
-			var type = (tile.getElementsByClassName('type')[0] as HTMLElement).innerText;
-
-			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
-				tile.style.display = ''
-			}
-			else {
-				tile.style.display = 'none'
 			}
 		}
 	}
@@ -90,15 +85,15 @@ export default function ProjectDirectory() {
 			<p className='subtitle'>All my projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<div id='buttonContainer'>
-					<ProjectButton name='All' filterProjects={filterProjects} />
-					<ProjectButton name='Python' filterProjects={filterProjects} />
-					<ProjectButton name='Javascript' filterProjects={filterProjects} />
-					<ProjectButton name='React' filterProjects={filterProjects} />
-					<ProjectButton name='Django' filterProjects={filterProjects} />
-					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
-					<ProjectButton name='Mechanical' filterProjects={filterProjects} />
+					<ProjectButton name='All' search={search} />
+					<ProjectButton name='Python' search={search} />
+					<ProjectButton name='Javascript' search={search} />
+					<ProjectButton name='React' search={search} />
+					<ProjectButton name='Django' search={search} />
+					<ProjectButton name='Solidworks' search={search} />
+					<ProjectButton name='Mechanical' search={search} />
 				</div>
-				<input type="text" onKeyUp={(e) => search((e.target as HTMLInputElement).value)} placeholder="Search" title="Type to search" />
+				<input type="text" onKeyUp={() => search("")} placeholder="Search" title="Type to search" id="projectSearchBox" />
 			</div>
 			<div id='projectIcons'>
 				{projectData

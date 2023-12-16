@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function ProjectButton(props: {
 	name: string;
-	filterProjects: (name: any) => any;
+	search: (filter: string, buttonPressed: boolean) => void;
 }) {
 	var name = props.name.toLowerCase()
 
 	return (
-		<span className={"sort_" + name + " btn " + (props.name === 'All' ? 'active' : '')} onClick={() => props.filterProjects(name)} style={{
+		<span className={"sort_" + name + " btn " + (props.name === 'All' ? 'active' : '')} onClick={() => props.search(name, true)} style={{
 			border: '2px solid var(--' + name + ')',
 			color: 'var(--' + name + ')',
 		}}

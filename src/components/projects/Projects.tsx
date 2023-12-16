@@ -8,7 +8,7 @@ export default function ProjectPage() {
 	const [projectData, setProjectData] = useState<Project[]>()
 
 	// function that filters by the type of entry
-	function filterProjects(filter: string) {
+	function search(filter: string) {
 
 		var projectItems = document.getElementsByClassName("featuredIcon") as HTMLCollectionOf<HTMLElement>;
 
@@ -71,11 +71,11 @@ export default function ProjectPage() {
 			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
 				<div id='buttonContainer'>
-					<ProjectButton name='All' filterProjects={filterProjects} />
-					<ProjectButton name='Python' filterProjects={filterProjects} />
-					<ProjectButton name='Javascript' filterProjects={filterProjects} />
-					<ProjectButton name='React' filterProjects={filterProjects} />
-					<ProjectButton name='Solidworks' filterProjects={filterProjects} />
+					<ProjectButton name='All' search={search} />
+					<ProjectButton name='Python' search={search} />
+					<ProjectButton name='Javascript' search={search} />
+					<ProjectButton name='React' search={search} />
+					<ProjectButton name='Solidworks' search={search} />
 				</div>
 			</div>
 
