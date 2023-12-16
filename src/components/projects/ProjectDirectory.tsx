@@ -87,7 +87,7 @@ export default function ProjectDirectory() {
 	return (
 		<div className='main projectDirectoryPage' id='projectPage'>
 			<p className="title" id='projectTitle'>Project Directory</p>
-			<p className='subtitle'>All my other projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
+			<p className='subtitle'>All my projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<div id='buttonContainer'>
 					<ProjectButton name='All' filterProjects={filterProjects} />
@@ -102,16 +102,7 @@ export default function ProjectDirectory() {
 			</div>
 			<div id='projectIcons'>
 				{projectData
-					? projectData.map((data, key) => {
-						if (!data.featured) {
-							return (
-								<ProjectIcon data={data} key={key}/>
-							)
-						}
-						else {
-							return (null)
-						}
-					})
+					? projectData.map((data, key) => <ProjectIcon data={data} key={key}/>)
 					: null
 				}
 			</div>
