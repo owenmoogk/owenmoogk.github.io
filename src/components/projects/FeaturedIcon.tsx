@@ -58,7 +58,7 @@ export default function FeaturedIcon(props: {
 						</div>
 						<span className='iconContainer'>
 							{types.map((type: any) =>
-								<img src={"/assets/icons/" + type.toLowerCase().replace(/[^a-z]/gi, '') + ".svg"} className='iconImage' onError={(e) => (e.target as HTMLElement).style.display = "none"}></img>
+								<img src={"/assets/icons/" + type.toLowerCase().replace(/[^a-z]/gi, '') + ".svg"} className='iconImage' onError={(e) => (e.target as HTMLElement).style.display = "none"} alt=""></img>
 							)}
 						</span>
 

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { StringLiteral } from "typescript";
 
 export default function WorkItem(props: {
 	data: {
