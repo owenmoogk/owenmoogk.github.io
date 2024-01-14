@@ -11,33 +11,11 @@ export default function FeaturedIcon(props: {
 	var data = props.data
 	let link = '/projects/' + data.name
 	var types = data.types.map((x: string) => x.toLowerCase())
-
-	// ok so c++ gives an error when put into a variable, so we just change it for the filtering stuff, display still says C++
-	// for (var i = 0; i < types.length; i++){
-	// 	if (types[i] === 'c++'){
-	// 		types[i] = 'c'
-	// 	}
-	// }
-
-	// var borderColor;
-
-	// if (types.length === 1){
-	// 	borderColor = 'linear-gradient(white, white), linear-gradient(45deg, var(--'+types[0]+', gray), var(--'+types[0]+', gray))'
-	// }
-	// else if (types.length === 2){
-	// 	borderColor = 'linear-gradient(white, white), linear-gradient(45deg, var(--'+types[0]+', gray) 40%, var(--'+types[1]+', gray) 60%)'
-	// }
-	// else if (types.length === 3){
-	// 	borderColor = 'linear-gradient(white, white), linear-gradient(45deg, var(--'+types[0]+', gray) 30%, var(--'+types[1]+', gray) 40%, var(--'+types[1]+', gray) 60%, var(--'+types[2]+', gray) 70%)'
-	// }
-
-	var borderColor = 'linear-gradient(white, white), linear-gradient(var(--textColor), var(--textColor))'
-
 	return (
 		<a href={link} style={{ margin: '20px' }} className='featuredIconLink'>
 
 			<div className='featuredIcon' style={{
-				backgroundImage: borderColor
+				backgroundColor: "white"
 			}}>
 				<div className='featuredImage'>
 					<img src={'/assets/projects/' + data.name + '/main.png'} alt=''></img>
@@ -57,8 +35,8 @@ export default function FeaturedIcon(props: {
 
 						</div>
 						<span className='iconContainer'>
-							{types.map((type: any) =>
-								<img src={"/assets/icons/" + type.toLowerCase().replace(/[^a-z]/gi, '') + ".svg"} className='iconImage' onError={(e) => (e.target as HTMLElement).style.display = "none"} alt=""></img>
+							{types.map((type: any, key) =>
+								<img src={"/assets/icons/" + type.toLowerCase().replace(/[^a-z]/gi, '') + ".svg"} className='iconImage' onError={(e) => (e.target as HTMLElement).style.display = "none"} key={key} alt=""></img>
 							)}
 						</span>
 
