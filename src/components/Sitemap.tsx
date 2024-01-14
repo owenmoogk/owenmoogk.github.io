@@ -48,6 +48,9 @@ export default function Sitemap(){
       {projectData ?
         <div className="assets">
           <ul>
+            <li><a href="/assets">/assets</a></li>
+            <li><a href="/projects/directory">/projects/directory</a></li>
+            <br />
             {projectData.map((project, key) => {
               if (project.externalLink?.includes("https://owenmoogk.github.io")){
                 var link = project.externalLink.replace("https://owenmoogk.github.io", "")
