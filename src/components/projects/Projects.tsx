@@ -53,7 +53,8 @@ export default function ProjectPage() {
 				Promise.all(requests).then(function () {
 					// make sure they are in the proper order, sort by name
 					tmpProjectData.sort((a, b) => {
-						return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name))
+						// return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name))
+						return new Date(b.date).valueOf() - new Date(a.date).valueOf()
 					})
 
 					setProjectData(tmpProjectData)
