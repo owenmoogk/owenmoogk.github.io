@@ -7,7 +7,7 @@ import ProjectPage from './projects/ProjectPage'
 import ProjectDirectory from './projects/ProjectDirectory'
 import Helmet from 'react-helmet';
 
-function App() {
+export default function ProjectRouter() {
 
 	return (
 		<>
@@ -22,5 +22,3 @@ function App() {
 		</>
 	);
 }
-
-export default App;
