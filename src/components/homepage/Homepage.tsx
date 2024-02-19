@@ -44,7 +44,7 @@ export default function Homepage() {
 					<br /><br />
 					I've recently completed a internship as a Software Developer at <a href="https://busplanner.com" target="_blank" rel='noreferrer'>BusPlanner</a>, where I worked to develop a fullstack application for the BusPlanner Student Transportation Suite, allowing clients to easily plan and implement transportation solutions.
 					<br /><br />
-					This winter, I have accepted a internship in a Research and Development engineering role at the <a href="https://uleth.ca" target="_blank" rel='noreferrer'>University of Lethbridge</a> <a href="http://neurocage.com/" target="_blank" rel='noreferrer'>Neuroengineering Hub</a>, and am very excited to spend the winter in Alberta, working and learning more about hardware development and project development.
+					This winter, I have accepted a internship in a Research and Development engineering role at the <a href="https://uleth.ca" target="_blank" rel='noreferrer'>University of Lethbridge</a> <a href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions" target="_blank" rel='noreferrer'>Neuroengineering Hub</a>, and am very excited to spend the winter in Alberta, working and learning more about hardware development and project development.
 					<br /><br />
 					In high school, I worked as a student on the FRC robotics team <a href="https://2702rebels.com" target="_blank" rel='noreferrer'>2702 Rebels</a>, involved myself in the <a href="https://dukeofed.org" target="_blank" rel='noreferrer'>Duke of Edinburgh's Award</a>, and attended the prestigious month-long <a href="https://shad.ca" target="_blank" rel='noreferrer'>SHAD</a> program. For more info, check out my <a href='work'>work</a> page.
 				</p>
