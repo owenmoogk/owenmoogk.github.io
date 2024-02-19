@@ -14,6 +14,7 @@
     "@types/react-dom": "^18.2.17",
     "concurrently": "^8.2.2",
     "gh-pages": "^6.1.0",
+    "jquery": "^3.7.1",
     "npm-check-updates": "^16.14.12",
     "react": "^18.2.0",
     "react-compare-image": "^3.4.0",
@@ -22,6 +23,7 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
+    "rss-parser": "^3.13.0",
     "typescript": "^5.3.3",
     "web-vitals": "^3.5.0"
   },
