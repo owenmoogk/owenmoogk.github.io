@@ -6,7 +6,7 @@ Me and my good friend Janik made a automated machine to assist with feeding cats
 
 This was the most fun I've had working on a project in a while, and we ended up winning the prize for the best hardware hack.
 
-For technical information the Github page is linked at the top.
+For technical information the GitHub page is linked at the top.
 
 #### overlay1.png,overlay2.png
 

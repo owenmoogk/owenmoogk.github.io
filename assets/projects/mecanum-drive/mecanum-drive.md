@@ -12,7 +12,7 @@ Mecanum wheels are super cool as the wheels have rollers on them, angled at 45 d
 
 # My Robot
 
-I used an Elegoo Kit for this as I had one on hand from another project. I made adapters for the wheels and all of that was 3D printed. All the CAD (some incomplete), is on Github, linked at the top. Components include:
+I used an Elegoo Kit for this as I had one on hand from another project. I made adapters for the wheels and all of that was 3D printed. All the CAD (some incomplete), is on GitHub, linked at the top. Components include:
 
 ![My Robot Image](bot1.png)
 

@@ -11,7 +11,7 @@
 		},
 		{
 			"title": "Technical",
-			"text": "I built this using Django as a framework for the backend, and React for the frontend. Most of it is pretty straightforward, the main and most importnat peice is the AI. For the AI, I actually didn't code this myself, although that may be a next step. I used a library called SKLearn, a library for python that can implement neural networks. This was made at the start of my venture into neural networks, and I was not familiar enough to create my own. Nevertheless, it was a very fun and educational project, and if you are looking to see the code it can be found on Github, linked above."
+			"text": "I built this using Django as a framework for the backend, and React for the frontend. Most of it is pretty straightforward, the main and most importnat peice is the AI. For the AI, I actually didn't code this myself, although that may be a next step. I used a library called SKLearn, a library for python that can implement neural networks. This was made at the start of my venture into neural networks, and I was not familiar enough to create my own. Nevertheless, it was a very fun and educational project, and if you are looking to see the code it can be found on GitHub, linked above."
 		}
 	]
 }
