@@ -1,17 +1,11 @@
 {
-	"title": "Game of Life",
-	"date": "June 4, 2023",
-	"externalLink": "https://owenmoogk.github.io/game-of-life/",
-	"types": ["React", "Javascript"],
-	"description": "An implementation of Conway's game of life.",
-	"featured": true,
-	"blocks": [
-		{
-			"render": "main.png"
-		},
-		{
-			"title": "Overview",
-			"text": "Conway's game of life is a game with some simple rules, that dictate the birth and death of cells. This interested me however, because this simple simulation is Turing complete, meaning that it can simulate anything that a typical computer can (even being able to simulate the game within itself). I built this as a way to familiarize myself with the game, and also have a way to mess around and try some things. <br><br> It's linked above, so anyone can play around with it!"
-		}
-	]
+    "title": "Game of Life",
+    "date": "June 4, 2023",
+    "externalLink": "https://owenmoogk.github.io/game-of-life/",
+    "types": [
+        "React",
+        "Javascript"
+    ],
+    "description": "An implementation of Conway's game of life.",
+    "featured": true
 }

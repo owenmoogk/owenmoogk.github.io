@@ -1,14 +1,10 @@
 {
-	"title": "The Compiler",
-	"date": "Oct 22, 2020",
-	"types": ["React"],
-	"externalLink": "https://owenmoogk.github.io/the-compiler",
-	"description": "Compilation of useful data and websites.",
-	"featured": false,
-	"blocks": [
-		{
-			"title": "Overview",
-			"text": "The Compiler is an older project of mine, and although simply built it is very useful for me to keep track of very useful resources. It is a grand bookmark that can be accessed anywhere."
-		}
-	]
+    "title": "The Compiler",
+    "date": "Oct 22, 2020",
+    "types": [
+        "React"
+    ],
+    "externalLink": "https://owenmoogk.github.io/the-compiler",
+    "description": "Compilation of useful data and websites.",
+    "featured": false
 }

@@ -1,31 +1,9 @@
 {
-	"title": "Renders / Graphic Design",
-	"date": "April 22, 2020",
-	"types": ["Solidworks"],
-	"description": "Me messing around with Solidworks and Blender.",
-	"githubLink": "",
-	"blocks": [
-		{
-			"title": "Overview",
-			"text": "I have recently been doing renders and graphical design with <a href='https://www.solidworks.com'>Solidworks</a> and <a href='https://www.blender.org'>Blender</a>. Some of my renders include sticky notes, donuts (which I am particularly proud of), and futuristic cell phones (not shown here). All the source files and some more renders are on Github, so feel free to have a look."
-		},
-		{
-			"title": "Donut",
-			"render": [
-				"donut/donut7.png",
-				"donut/donut1.png"
-			]
-		},
-		{
-			"title": "Sticky Notes",
-			"render": [
-				"sticky_notes/stickynotes.png",
-				"sticky_notes/stickynotes2.png"
-			]
-		},
-		{
-			"title": "Balls",
-			"video": "balls/balls.mp4"
-		}
-	]
+    "title": "Renders / Graphic Design",
+    "date": "April 22, 2020",
+    "types": [
+        "Solidworks"
+    ],
+    "description": "Me messing around with Solidworks and Blender.",
+    "githubLink": ""
 }

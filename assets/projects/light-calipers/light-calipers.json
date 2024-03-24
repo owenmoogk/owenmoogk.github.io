@@ -1,24 +1,10 @@
 {
-	"title": "Light Calipers",
-	"date": "November 15, 2023",
-	"types": ["Solidworks", "Python"],
-	"description": "Convoluted caliper for stats class.",
-	"featured": true,
-	"blocks": [
-		{
-			"render": "main.png"
-		},
-		{
-			"title": "Overview",
-			"text": "For my statistics class, myself and my peers were tasked with creating a custom measurement system (without using any COTS components that could do so). We decided to make a caliper-type device that could measure distance, using and LED and a photoresistor. The principles of operation are fairly simple, the light intensity dissipates at further distance, which can be converted into a distance."
-		},
-		{
-			"title": "Learning",
-			"text": "The main learnings from this were the calibration process, collecting data and finding the best fit for our data, while also identifying systematic and random error from the system. Our group created a report detailing this process that can be found <a href='/assets/projects/light-calipers/report.pdf'>here</a>."
-		},
-		{
-			"title": "Images",
-			"image": ["all.png", "measurement.png", "electronics.png"]
-		}
-	]
+    "title": "Light Calipers",
+    "date": "November 15, 2023",
+    "types": [
+        "Solidworks",
+        "Python"
+    ],
+    "description": "Convoluted caliper for stats class.",
+    "featured": true
 }
