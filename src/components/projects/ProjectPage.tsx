@@ -32,23 +32,19 @@ export default function ProjectPage() {
 	// showdown doesn't handle videos properly so its not my fault, ok...?
 	// TLDR: Giving the videos controls because showdown removes them.
 	useEffect(() => {
-		//Implementing the setInterval method
+		
 		const interval = setInterval(() => {
 			document.querySelectorAll("video").forEach(video => {
 				video.setAttribute("controls", "true")
 			})
 		}, 100);
 
-		//Clearing the interval
 		return () => clearInterval(interval);
 	}, []);
 
 	function parseMarkdown(data: string) {
 
 		if (!data) return "";
-
-		// make all links open in seperate tabs
-		data = data.replaceAll('<a', "<a target='_blank' rel='noreferrer'")
 
 		// this replaces the image paths to point to the proper project directory
 		// https://stackoverflow.com/questions/52852425/change-image-source-in-markdown-text-using-node-js
@@ -63,7 +59,6 @@ export default function ProjectPage() {
 		return (data)
 	}
 
-	// actual loading process
 	function buildProjectPage() {
 
 		if (!metaData) return <></>;
