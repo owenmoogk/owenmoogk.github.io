@@ -8,7 +8,7 @@ Farming is becoming very data driven in current times, which can be used to opti
 
 # Solution
 
-Our solution consisted of a two part information system, making complex information and datasets easily accessible and actionable. The first part was a website which gave users insightful data about their soil composition, as well as recommended fertilizers and irrigation techniques. This allows farmers with a variety of resources to optimized their setups. The second part of the system consisted of an integrated SMS platform (built with Twilio, code on Github above), allowing accessibility in all areas of the world.
+Our solution consisted of a two part information system, making complex information and datasets easily accessible and actionable. The first part was a website which gave users insightful data about their soil composition, as well as recommended fertilizers and irrigation techniques. This allows farmers with a variety of resources to optimized their setups. The second part of the system consisted of an integrated SMS platform (built with Twilio, code on GitHub above), allowing accessibility in all areas of the world.
 
 The demo of the web app can be found here:
 

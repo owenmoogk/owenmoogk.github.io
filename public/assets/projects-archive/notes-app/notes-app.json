@@ -10,7 +10,7 @@
 		},
 		{
 			"title": "Overview",
-			"text": "This is a really simple note taking app created in Flask. I have since moved on to using Django as it is far more powerful, but this was my first introduction to backend software, and was lots of fun to make. Flask was great at making user authentication and database storage easy. It was great to learn backend software development, and once spiced up with a little bootstrap it turned out pretty well. It is currently not active, but you are welcome to use it locally, with the Github link above."
+			"text": "This is a really simple note taking app created in Flask. I have since moved on to using Django as it is far more powerful, but this was my first introduction to backend software, and was lots of fun to make. Flask was great at making user authentication and database storage easy. It was great to learn backend software development, and once spiced up with a little bootstrap it turned out pretty well. It is currently not active, but you are welcome to use it locally, with the GitHub link above."
 		}
 	]
 }
