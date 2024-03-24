@@ -11,18 +11,4 @@ export default interface Project {
   externalLink: string;
 
   description: string;
-
-  blocks: ProjectBlock[];
-}
-
-interface ProjectBlock {
-  title: string;
-  text: string;
-  ul: string[];
-
-  image: string;
-  slider: string[];
-  video: string[];
-  render: string[];
-  iframe: string[];
 }

@@ -1,121 +1,78 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactCompareImage from 'react-compare-image'
 import Helmet from "react-helmet"
 import Project from './ProjectInterface';
+import MarkdownView from 'react-showdown';
+
 
 export default function ProjectPage() {
 
-	const [projectData, setProjectData] = useState<Project>()
-	var { name } = useParams()
-	var projectJson = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".json"
+	const [projectData, setProjectData] = useState<string>()
+	const [metaData, setMetaData] = useState<Project>()
+	const { name } = useParams()
+	var jsonLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".json"
+	var mdLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".md"
 
-	/* eslint-disable react-hooks/exhaustive-deps */
 	useEffect(() => {
-		fetch(projectJson)
+		fetch(jsonLink)
 			.then(response => response.json())
-			.then(json => setProjectData(json))
+			.then(json => setMetaData(json))
 			.catch(error => {
 				(document.getElementById("projectBody") as HTMLElement).innerHTML = "<div class='title'>Could not load page :/</div><p class='subtitle'>Probably still in development</p>"
 			})
+
+		fetch(mdLink)
+			.then(response => response.text())
+			.then(text => setProjectData(text))
 	}, [])
 
-	function loadBlocks() {
+	// this is really stupid and is fully bad practice,
+	// but......
+	// showdown doesn't handle videos properly so its not my fault, ok...?
+	// TLDR: Giving the videos controls because showdown removes them.
+	useEffect(() => {
+		//Implementing the setInterval method
+		const interval = setInterval(() => {
+			document.querySelectorAll("video").forEach(video => {
+				video.setAttribute("controls", "true")
+			})
+		}, 100);
 
-		if (!projectData) return;
+		//Clearing the interval
+		return () => clearInterval(interval);
+	}, []);
 
-		var blocks = projectData.blocks;
+	function parseMarkdown(data: string) {
 
-		// going through blocks and loading them
-		var html = blocks.map((block, key) => {
+		if (!data) return "";
 
-			if (block.ul) {
-				var newArray = []
-				for (let num = 0; num < block.ul.length; num++) {
-					newArray.push(block.ul[num].replaceAll('<a', "<a target='_blank' rel='noreferrer'"))
-				}
-				block.ul = newArray
-			}
-			block.text = block.text ? block.text.replaceAll('<a', "<a target='_blank' rel='noreferrer'") : ""
+		// make all links open in seperate tabs
+		data = data.replaceAll('<a', "<a target='_blank' rel='noreferrer'")
 
-			return (
-				<div className='block' key={key}>
+		// this replaces the image paths to point to the proper project directory
+		// https://stackoverflow.com/questions/52852425/change-image-source-in-markdown-text-using-node-js
+		// it's called a 'capture group' in regex
+		// however, it doesn't match anything with https:// because that means it's an external link
+		// also, it doesn't match anything that starts with a slash, because that means it wants the root directory (eg "contact me" is /contact, and not the project dir)
+		data = data.replaceAll(/\]\((?!https?:\/\/)(?!\/)(.+?)(?=(.+))/g, `](${process.env.PUBLIC_URL}/assets/projects/${name}/$1`)
 
-					<div className='text'>
-						{block.title
-							? <h1>{block.title}</h1>
-							: null
-						}
-						{block.text
-							? <p dangerouslySetInnerHTML={{ __html: block.text }}></p>
-							: null
-						}
-						{block.ul
-							? <ul>
-								{block.ul.map((li, key) => {
-									return (
-										<li key={key} dangerouslySetInnerHTML={{ __html: li }}></li>
-									)
-								})}
-							</ul>
-							: null
-						}
-					</div>
+		// replace the src on video tags
+		data = data.replaceAll(/<video src=("|')(.+?)\1><\/video>/g, `<video src=\"${process.env.PUBLIC_URL}/assets/projects/${name}/$2\" controls></video>`);
 
-
-					{block.image
-						? Array.isArray(block.image)
-							? block.image.map((image, key) => <img key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + image} className="img" alt='' />)
-							: <img src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.image} className="img" alt='' />
-						: null
-					}
-
-					{block.render
-						? Array.isArray(block.render)
-							? <div style={{ display: 'flex', flexDirection: 'column' }}>{block.render.map((render, key) => <img className="render" key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + render} alt='' />)}</div>
-							: <img className="render" key={key} src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.render} alt='' />
-						: null
-					}
-
-					{block.video
-						? <video src={process.env.PUBLIC_URL + "/assets/projects/" + name + "/" + block.video} controls></video>
-						: null
-					}
-
-					{block.slider
-						? <div className='sliderContainer'>
-							<ReactCompareImage leftImage={"/assets/projects/" + name + "/" + block.slider[0]} rightImage={"/assets/projects/" + name + "/" + block.slider[1]} aspectRatio='taller' handle={
-								<button style={{
-									height: '50px',
-									outline: 'none',
-									width: '10px',
-									border: 'none',
-									borderRadius: '5px',
-								}}></button>
-							} />
-							<span className='subtitle'>Move the slider to see inside.</span>
-						</div>
-						: null
-					}
-
-				</div>
-			)
-		})
-
-		return (html)
-
+		return (data)
 	}
 
 	// actual loading process
 	function buildProjectPage() {
 
-		if (!projectData) return 	<></>;
+		if (!metaData) return <></>;
 
 		return (
 			<div id='projectBody' className='main'>
 
 				<Helmet>
-					<title>{projectData.title + " - Owen Moogk"}</title>
+					<title>{metaData.title + " - Owen Moogk"}</title>
 				</Helmet>
 
 				<style dangerouslySetInnerHTML={{
@@ -127,23 +84,23 @@ export default function ProjectPage() {
 					`}}></style>
 
 				<div className="title">
-					{projectData.title}
+					{metaData.title}
 				</div>
-				<p className='subtitle'>{projectData.date}</p>
+				<p className='subtitle'>{metaData.date}</p>
 
 				<div id='icons'>
 
-					{projectData.githubLink === ""
+					{metaData.githubLink === ""
 						? null
-						: <a href={projectData.githubLink ? projectData.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
+						: <a href={metaData.githubLink ? metaData.githubLink : "https://github.com/owenmoogk/" + name} target="_blank" rel="noreferrer" >
 							<svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 								<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
 							</svg>
 						</a>
 					}
 
-					{projectData.externalLink
-						? <a href={projectData.externalLink} target='_blank' rel='noreferrer'>
+					{metaData.externalLink
+						? <a href={metaData.externalLink} target='_blank' rel='noreferrer'>
 							<svg viewBox="0 0 24 24" className='projectSvg'>
 								<g fill="none">
 									<path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -153,7 +110,7 @@ export default function ProjectPage() {
 						: null
 					}
 
-					{projectData.types.map((type, key) => {
+					{metaData.types.map((type: string, key: number) => {
 						return (
 							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}>
 								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}></span>
@@ -164,14 +121,41 @@ export default function ProjectPage() {
 				</div>
 
 				<div id='blocks'>
-					{loadBlocks()}
+					<MarkdownView
+						markdown={parseMarkdown(projectData ?? "")}
+						options={{ tables: true, emoji: true }}
+						components={{
+							h4(props) {
+								console.log(props.children[0].split(","))
+								var [image1, image2] = props.children[0].split(",")
+								return (
+									<div className='sliderContainer'>
+										<ReactCompareImage 
+											leftImage={"/assets/projects/" + name + "/" + image1} 
+											rightImage={"/assets/projects/" + name + "/" + image2} 
+											aspectRatio='taller' 
+											handle={
+												<button style={{
+													height: '50px',
+													outline: 'none',
+													width: '10px',
+													border: 'none',
+													borderRadius: '5px',
+												}}></button>
+										} />
+										<span className='subtitle'>Move the slider to see inside.</span>
+									</div>
+								)
+							}
+						}}
+					/>
 				</div>
 			</div>
 		)
 	}
 
 	return (
-		projectData
+		metaData && projectData
 			? buildProjectPage()
 			// will put errors here if there are any
 			: <div id='projectBody' className='main'></div>

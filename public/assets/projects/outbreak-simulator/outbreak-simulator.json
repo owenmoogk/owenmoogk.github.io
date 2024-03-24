@@ -1,20 +1,10 @@
 {
-	"title": "Outbreak Simulator",
-	"date": "February 16, 2021",
-	"types": ["Python", "Pygame"],
-	"description": "COVID-19 and other diseases simulator, with adjustable transmission rates, etc.",
-	"featured": true,
-	"blocks": [
-		{
-			"title": "Overview",
-			"text": "In the midst of COVID-19, I was looking at how computers can simulate disease outbreaks such as the one we are experiencing right now. I made this as a proof of concept simulating immunity, death, and contact tracing. It was cool to learn and try new things with this. I made it in python using Pygame. I also learned about graphing in Matplotlib and saving CSV data, which was cool. You can check out the code linked above."
-		},
-		{
-			"title": "Screenshots",
-			"render": [
-				"main.png",
-				"graph.png"
-			]
-		}
-	]
+    "title": "Outbreak Simulator",
+    "date": "February 16, 2021",
+    "types": [
+        "Python",
+        "Pygame"
+    ],
+    "description": "COVID-19 and other diseases simulator, with adjustable transmission rates, etc.",
+    "featured": true
 }

@@ -1,17 +1,10 @@
 {
-	"title": "Unix Time Converter",
-	"date": "June 30, 2021",
-	"types": ["Javascript"],
-	"externalLink": "https://owenmoogk.github.io/unix-time",
-	"description": "A cute little website for converting unix time to current time.",
-	"githubLink": "",
-	"blocks": [
-		{
-			"render": "main.png"
-		},
-		{
-			"title": "Overview",
-			"text": "This is a very simple web application to convert from Unix Time to regular time. This was made mostly just for myself. I often found myself using very sketchy, ad populated, and slow websites to convert to and from Unix Time, so this is great for me, and hopefully for others as well."
-		}
-	]
+    "title": "Unix Time Converter",
+    "date": "June 30, 2021",
+    "types": [
+        "Javascript"
+    ],
+    "externalLink": "https://owenmoogk.github.io/unix-time",
+    "description": "A cute little website for converting unix time to current time.",
+    "githubLink": ""
 }
