@@ -1,3 +1,6 @@
+import global from "../../global/global.json";
+const { homepage } = global
+
 export default function ProjectIcon(props: {
 	data: {
 		name: string;
@@ -15,6 +18,9 @@ export default function ProjectIcon(props: {
 	let githubLink = data.githubLink !== undefined ? data.githubLink : 'https://github.com/owenmoogk/' + data.name
 	let types = data.types.map((x: string) => x.toLowerCase())
 	let primaryType = types[0] ?? "";
+	let externalLink = data.externalLink?.includes("https://") ? data.externalLink : homepage + data.externalLink
+	// if it doesn't exist just leave it
+	externalLink = data.externalLink ? externalLink : data.externalLink
 
 	return (
 		<a href={link}>
@@ -34,8 +40,8 @@ export default function ProjectIcon(props: {
 				<div className='projectIcons'>
 
 					{/* open externally */}
-					{data.externalLink
-						? <a href={data.externalLink} target='_blank' rel='noreferrer'>
+					{externalLink
+						? <a href={externalLink} target='_blank' rel='noreferrer'>
 							<svg width="25px" height="25px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" className={types.join(" ")}>
 								<g fill="none">
 									<path d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

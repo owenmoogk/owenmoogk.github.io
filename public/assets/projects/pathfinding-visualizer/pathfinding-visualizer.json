@@ -7,5 +7,5 @@
     ],
     "description": "Pathfinding algorithms visualization built using Pygame.",
     "featured": true,
-    "externalLink": "https://owenmoogk.github.io/pathfinding-visualizer"
+    "externalLink": "pathfinding-visualizer"
 }

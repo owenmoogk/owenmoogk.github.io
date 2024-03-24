@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Project from './projects/ProjectInterface';
 import { Helmet } from "react-helmet";
+import global from "../global/global.json"
+const { homepage } = global
 
 export default function Sitemap(){
 
@@ -50,12 +52,16 @@ export default function Sitemap(){
           <ul>
             <li><a href="/assets">/assets</a></li>
             <li><a href="/projects/directory">/projects/directory</a></li>
+            <li><a href="/blog">/blog</a></li>
             <br />
             {projectData.map((project, key) => {
-              if (project.externalLink?.includes("https://owenmoogk.github.io")){
-                var link = project.externalLink.replace("https://owenmoogk.github.io", "")
-                if (link.endsWith("/")) link = link.slice(0,-1);
-                return(<li><a href={project.externalLink} target="_blank" rel="noreferrer">{link}</a></li>)
+              // don't include external links in sitemap (eg. Janik's Cat Feeder)
+              if (project.externalLink && !project.externalLink.includes("https://")){
+                var link = homepage + project.externalLink
+                var linkDisplay = project.externalLink
+                if (linkDisplay.endsWith("/")) linkDisplay = linkDisplay.slice(0,-1);
+                if (!linkDisplay.startsWith("/")) linkDisplay = "/" + linkDisplay
+                return(<li><a href={link} target="_blank" rel="noreferrer">{linkDisplay}</a></li>)
               }
             })}
           </ul>

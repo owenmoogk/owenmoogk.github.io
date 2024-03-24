@@ -4,6 +4,6 @@
     "types": [
         "React"
     ],
-    "externalLink": "https://owenmoogk.github.io/github-card",
+    "externalLink": "github-card",
     "description": "The github card, in a React component."
 }

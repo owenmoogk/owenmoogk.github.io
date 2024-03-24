@@ -1,7 +1,7 @@
 {
     "title": "Game of Life",
     "date": "June 4, 2023",
-    "externalLink": "https://owenmoogk.github.io/game-of-life/",
+    "externalLink": "game-of-life",
     "types": [
         "React",
         "Javascript"
