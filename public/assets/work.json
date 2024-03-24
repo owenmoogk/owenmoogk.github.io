@@ -1,137 +1,392 @@
 {
-	"experience": [
-		{
-			"title": "Software Developer",
-			"subtitle": "BusPlanner Inc.",
-			"date": "2023 - Present",
-			"description": "Working as a co-op student on the advanced BusPlanner student transportation suite. Working on front-end testing and development, as well as SQL database solutions. Looking forward to contributing to the team and learning as much as possible!"
-		},
-		{
-			"title": "Powertrain Member",
-			"subtitle": "University of Waterloo Formula Motorsports",
-			"date": "2022 - Present",
-			"description": "The Univesity of Waterloo Formula Motorsports team works to develop a competitive racecar each year. Although a new member of the team, I've worked to manufacture high-precision parts and used SolidWorks skills to develop 3D printed assembly aids."
-		},
-		{
-			"title": "Clubhouse Employee",
-			"subtitle": "Merry Hill Golf Club",
-			"date": "2020 - 2022",
-			"description": "I work to provide excellent customer experiences at Merry Hill Golf Club, and work to provide the best customer service. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results."
-		},
-		{
-			"title": "FIRST Robotics",
-			"subtitle": "FIRST Canada",
-			"date": "2018 - 2022",
-			"description": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills. <br><br> On top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
-			"ul": [
-				"<a href='https://2702rebels.com' target='_blank'>2702 Rebels Website</a>",
-				"<a href='https://www.youtube.com/watch?v=Qg6R_3o6a9M' target='_blank'>2019 Robot</a>",
-				"<a href='https://www.youtube.com/watch?v=tN_Rt3pt054' target='_blank'>2020 Robot</a>",
-				"<a href='https://www.firstinspires.org' target='_blank'>FIRST Program</a>"
-			]
-		},
-		{
-			"title": "Electric Racecar Team",
-			"subtitle": "Bluevale Collegiate Institute",
-			"date": "2021 - 2022",
-			"description": "I am a part of the Bluevale Collegiate Electric Car Team, where I work with a small team to develop and build electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system. <br><br> In the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race."
-		},
-		{
-			"title": "Choose to Lead",
-			"subtitle": "Bluevale Collegiate Institute",
-			"date": "2018 - 2022",
-			"description": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills. <br><br> Through this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are like minded and leadership-oriented, as well have learned and practiced leadership styles and management techniques. More information about the program can be found <a href='https://bci.wrdsb.ca/choose-to-lead/' target='_blank'>here</a>."
-		},
-		{
-			"title": "SHAD Fellow",
-			"subtitle": "SHAD Canada",
-			"date": "July 2020",
-			"description": "I was accepted to and participated in SHAD Canada, a month-long STEM-based summer program being held (virtually) from the University of PEI. I learned and conversed with Ph.D. professors and business professionals about many different topics, ranging from cryptography to geological issues and starting businesses. In the end, with a small team I designed and engineered an award-winning solution to Canadian water problems.",
-			"ul": [
-				"<a href='https://shad.ca' target='_blank'>SHAD Canada Website</a>",
-				"<a href='/projects/ecoflow/'>EcoFlow Water Project</a>",
-				"<a href='https://owenmoogk.github.io/owenmoogk/shad.pdf' target='_blank'>SHAD Certificate</a>"
-			]
-		},
-		{
-			"title": "Umpire",
-			"subtitle": "WMBA",
-			"date": "2017 - 2020",
-			"description": "As a paid umpire for the WMBA for 3 years I navigated difficult situations employing management and cooperation skills while promoting kindness, sportsmanship and fun."
-		},
-		{
-			"title": "DECA",
-			"subtitle": "DECA Business Competition",
-			"date": "2018 - 2019",
-			"description": "DECA is a global business competition, in which participants are given business case studies and must use both practical and personal skills to solve problems. <br><br> Category: Principles of Finance (PFN): Business situations associated with careers in Accounting, Banking Services, Business Finance, Insurance and Securities, and Investments. <br><br> Achieved:",
-			"ul": [
-				"Top 10% knowledge/written test",
-				"Top 10% roleplay/practical test",
-				"Advanced to provincial championship"
-			]
-		}
-	],
-	"education": [
-		{
-			"title": "Mechatronics Engineering Student",
-			"subtitle": "University of Waterloo",
-			"date": "2022 - 2027",
-			"description": "As a mechatronics engineering student, I've been given the opportunity to study among an elite group of students. Among such, I have maintained an average above 95% while involving myself in the university community. The most notable involvement is with the UW Formula Motorsports team, where I am working to develop and manufacture the powertrain of a competitive racecar."
-		},
-		{
-			"title": "High School - OSSD",
-			"subtitle": "Bluevale Collegiate Institute",
-			"date": "2018 - 2022",
-			"description": ""
-		}
-	],
-	"volunteer": [
-		{
-			"title": "Elderly Caregiver",
-			"subtitle": "Parkwood Mennonite Home",
-			"date": "2018 - 2020",
-			"description": "Serving coffee and facilitating the morning church services, while befriending and caring for elderly residents."
-		},
-		{
-			"title": "Team Mentor",
-			"subtitle": "FIRST Canada",
-			"date": "2018 - 2019",
-			"description": "I mentored a local FLL robotics team, teaching and assisting with engineering and teamwork skills, with students from Grade 4 to Grade 8. It was quite enjoyable to create an environment for learning and teaching with hands-on skills, and give back to the program that I learned a lot from as a kid."
-		}
-	],
-	"certifications": [
-		{
-			"title": "CS50 -- Intro to Computer science",
-			"subtitle": "Harvard University",
-			"date": "2020",
-			"description": "Completed Harvard CS50 Course online, to gain a better understanding of computer basics and the low level operating systems."
-		},
-		{
-			"title": "Responsive Web Design",
-			"subtitle": "freeCodeCamp",
-			"date": "July 2021",
-			"description": "Completed the 300 hour course on responsive web design, to further solidify my skills and expose myself to different techniques and ideas.",
-			"ul": [
-				"<a href='https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design' target='_blank'>Certification</a>"
-			]
-		},
-		{
-			"title": "SmartServe",
-			"subtitle": "AGCO Ontario",
-			"date": "July 2022",
-			"description": "Completed the SmartServe alcohol training program. ",
-			"ul": [
-				"<a href='https://owenmoogk.github.io/owenmoogk/smartserve.pdf' target='_blank'>Certification</a>"
-			]
-		},
-		{
-			"title": "First Aid",
-			"subtitle": "Red Cross",
-			"date": "July 2022",
-			"description": "Completed the Red Cross First Aid training program.",
-			"ul": [
-				"<a href='https://owenmoogk.github.io/owenmoogk/first-aid.pdf' target='_blank'>First Aid Certificate</a>"
-			]
-		}
-	]
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Owen Moogk",
+    "label": "Mechatronics Engineering Student at the University of Waterloo",
+    "image": "",
+    "email": "owenmoogk@gmail.com",
+    "phone": "2269890602",
+    "url": "",
+    "summary": "I am an aspiring engineer from Waterloo ON, Canada. My goal is to travel the world while working on the most advanced technologies. Passionate about motorsports, robotic systems, space travel, and AI.\n\nI am currently studying Mechatronics Engineering at the University of Waterloo. While maintaining an average above 95%, I have also involved myself in the UW Formula Motorsports team, working to develop and manufacture a competitive racecar.\n\nExperience in building websites with ReactJS and Django, having learned CSS and Javascript along the way. Have also indulged in robotics, owning a 3D printer and being a part of the 2702 Rebels FIRST Robotics Team.",
+    "location": {
+      "countryCode": "US",
+      "address": "Canada"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "owenmoogk",
+        "url": "https://www.linkedin.com/in/owenmoogk/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Hub for Neuroengineering Solutions",
+      "position": "R&D Development Engineering",
+      "startDate": "2024-01-31",
+      "endDate": "",
+      "highlights": [],
+      "summary": "As a research and development engineering student, I am responsible for designing mechanical and hardware systems for advanced neuroscience research devices. I look forward to my journey learning as much as possible while creating innovative solutions with the team.",
+      "url": "https://www.linkedin.com/company/hub-for-neuroengineering-solutions/",
+      "location": "Lethbridge, Alberta, Canada"
+    },
+    {
+      "name": "BusPlanner Inc.",
+      "position": "Software Developer",
+      "startDate": "2023-05-31",
+      "endDate": "2023-09-30",
+      "highlights": [],
+      "summary": "•\tDeveloped and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients.\n•\tImplemented and improved many web application features, directly affecting hundreds of clients across North America.\n•\tResolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n•\tDesigned SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation.\n•\tImproved codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n•\tUtilized TFS version control to manage source code and participate in code reviews among team members. \n•\tConducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
+      "url": "https://www.linkedin.com/company/georefsystems/",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "University of Waterloo Formula Motorsports",
+      "position": "Powertrain Member",
+      "startDate": "2022-09-30",
+      "endDate": "2023-04-30",
+      "highlights": [],
+      "summary": "The University of Waterloo Formula Motorsports team works to develop a competitive racecar each year. Although a new member of the team, I've worked to manufacture high-precision parts and used SolidWorks skills to develop 3D printed assembly aids.",
+      "url": "https://www.linkedin.com/company/university-of-waterloo-formula-motorsports/",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "Merry Hill Golf Club",
+      "position": "Clubhouse Employee",
+      "startDate": "2021-05-31",
+      "endDate": "2022-09-30",
+      "highlights": [],
+      "summary": "Worked to provide excellent customer experiences and services at Merry Hill Golf Club. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results.",
+      "url": "https://www.linkedin.com/company/merry-hill-golf-club/",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "Merry-Hill Golf Club",
+      "position": "Backshop Employee",
+      "startDate": "2020-05-31",
+      "endDate": "2021-05-31",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/merry-hill-golf-club/",
+      "location": "Breslau, Ontario, Canada"
+    },
+    {
+      "name": "FIRST",
+      "position": "First Robotics",
+      "startDate": "2018-08-31",
+      "endDate": "2022-09-30",
+      "highlights": [],
+      "summary": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills.\n\nOn top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
+      "url": "https://www.linkedin.com/company/first_2/",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "Bluevale Collegiate",
+      "position": "Electric Racecar Team",
+      "startDate": "2021-09-30",
+      "endDate": "2022-06-30",
+      "highlights": [],
+      "summary": "I am a part of the Bluevale Collegiate Electric Car Team, where I work with a small team to develop and build electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system.\n\nIn the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race.",
+      "url": "",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "C2L",
+      "position": "Leader / Student",
+      "startDate": "2018-09-30",
+      "endDate": "2022-06-30",
+      "highlights": [],
+      "summary": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills.\n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are likeminded and leadership-oriented, as well have learned and practiced leadership styles and management techniques.",
+      "url": "https://www.linkedin.com/company/c2l/",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "Shad Canada",
+      "position": "SHAD Fellow",
+      "startDate": "2021-07-31",
+      "endDate": "2021-07-31",
+      "highlights": [],
+      "summary": "Participated in the prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I am learning about many different topics, with a design project focused on solving water issues in the country. With my team, I designed an award-winning solution that tracks water usage from different appliances and provides meaningful insight to save water.",
+      "url": "https://www.linkedin.com/company/shadcanada/",
+      "location": "Prince Edward Island, Canada"
+    },
+    {
+      "name": "WMBA",
+      "position": "Umpire",
+      "startDate": "2017-05-31",
+      "endDate": "2020-05-31",
+      "highlights": [],
+      "summary": "As a paid umpire for the WMBA for 3 years I navigating difficult situations employing management and cooperation skills while promoting kindness, sportsmanship and fun.",
+      "url": "",
+      "location": "Waterloo, Ontario, Canada"
+    },
+    {
+      "name": "DECA Inc.",
+      "position": "DECA Competitor",
+      "startDate": "2018-09-30",
+      "endDate": "2019-11-30",
+      "highlights": [],
+      "summary": "DECA is a global business competition, in which participants are given business case studies and must use both practical and personal skills to solve problems.\n\nCategory: Principles of Finance (PFN): Business situations associated with careers in Accounting, Banking Services, Business Finance, Insurance and Securities, and Investments.\n\nAchieved:\n - Top 10% knowledge/written test\n - Top 10% roleplay/practical test\n - Advanced to provincial championship",
+      "url": "https://www.linkedin.com/company/deca-inc-/",
+      "location": "Toronto, Ontario, Canada"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Parkwood Mennonite Home",
+      "position": "Server / Caregiver",
+      "startDate": "2018-08-31",
+      "endDate": "2020-03-31",
+      "summary": "Serving coffee and facilitating the morning church services, while befriending and caring for elderly residents.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/9885120"
+    },
+    {
+      "organization": "FIRST",
+      "position": "Team Mentor",
+      "startDate": "2018-08-31",
+      "endDate": "2019-03-31",
+      "summary": "I mentored a local FLL robotics team, teaching and assisting with engineering and teamwork skills, with students from Grade 4 to Grade 8. It was quite enjoyable to create an environment for learning and teaching with hands-on skills, and give back to the program that I learned a lot from as a kid.",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/355664"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Waterloo",
+      "area": "Mechatronics Engineering",
+      "studyType": "Bachelor of Applied Science - BASc",
+      "startDate": "2022-09-30",
+      "endDate": "2027-04-30",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Bluevale Collegiate Institute",
+      "area": "",
+      "studyType": "OSSD",
+      "startDate": "2018-09-30",
+      "endDate": "2022-06-30",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "AP Scholars Award",
+      "date": "2022-06-30",
+      "awarder": "College Board",
+      "summary": "I was awarded the AP Scholars award for exceptional performance on 3 AP examinations. I achieved course qualifying scores on all three exams that I wrote, in Chemistry, Physics, and Economics."
+    },
+    {
+      "title": "Honors",
+      "date": "2022-06-30",
+      "awarder": "Waterloo Region District School Board",
+      "summary": "Have completed 4 years in high school with honors in all semesters."
+    },
+    {
+      "title": "First Place - Sustainable Engineering Design Challenge",
+      "date": "2022-03-31",
+      "awarder": "University of Waterloo",
+      "summary": "With my peers, I worked to create a sustainable solution for a growing education system, implementing a multitude of ideas into a fluid solution. We pitched it to judges and were awarded first place for meeting criteria such as sustainability, accessibility, and design efficiency."
+    },
+    {
+      "title": "First Place - Canadian Computing Competition",
+      "date": "2022-02-28",
+      "awarder": "Bluevale Collegiate Institute",
+      "summary": "Achieved first place at Bluevale Collegiate for my score in the Canadian Computing Competition."
+    },
+    {
+      "title": "Jamhacks V Winner",
+      "date": "2021-05-31",
+      "awarder": "Jamhacks V",
+      "summary": "I achieved an award for competing in the Jamhacks V hackathon. With my friend Janik, I engineered a cat feeding robot, which implemented computer vision AI, CAD, 3D Printing, and electronics to complete the finished product, which won the \"Best Hardware Hack\" award."
+    },
+    {
+      "title": "Duke of Edinburgh Silver Award",
+      "date": "2020-03-31",
+      "awarder": "Duke of Edinburgh",
+      "summary": "I achieved the Silver Duke of Edinburgh Award due to plenty of involvement with the community, volunteering, and skill development in multiple forms."
+    },
+    {
+      "title": "Duke of Edinburgh Bronze Award",
+      "date": "2019-10-31",
+      "awarder": "Duke of Edinburgh",
+      "summary": "I achieved the Bronze Duke of Edinburgh Award due to plenty of involvement with the community, volunteering, skill development, and physical activity."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "SHAD Certificate",
+      "issuer": "Shad Canada",
+      "startDate": "2021-07-31",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/shad.pdf"
+    },
+    {
+      "name": "Accessibility for Ontarians with Disabilities",
+      "issuer": "Ontario Government | Gouvernement de l’Ontario",
+      "startDate": "2022-07-31",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/aoda.pdf"
+    },
+    {
+      "name": "Smart Serve Ontario",
+      "issuer": "Smart Serve Ontario",
+      "startDate": "2022-06-30",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/smartserve.pdf"
+    },
+    {
+      "name": "CPR/AED/First Aid",
+      "issuer": "Canadian Red Cross",
+      "startDate": "2022-08-31",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/first-aid-certificate.pdf"
+    },
+    {
+      "name": "WHMIS 2015",
+      "issuer": "Canada Safety Training Centre",
+      "endDate": "2024-04-30",
+      "startDate": "2021-04-30",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/whmis.pdf"
+    },
+    {
+      "name": "Responsive Web Design",
+      "issuer": "freeCodeCamp",
+      "startDate": "2021-07-31",
+      "url": "https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design"
+    },
+    {
+      "name": "Worker Health and Safety Awareness",
+      "issuer": "Ontario Government | Gouvernement de l’Ontario",
+      "startDate": "2022-07-31",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/health-and-safety.pdf"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Raspberry Pi",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microcontrollers",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Hardware Engineering",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASP.NET MVC",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Onshape",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Django",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Python",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Bootstrap (Framework)",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "jQuery",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Solidworks",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Visual Studio",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SOLIDWORKS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Electronics",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "3D Printing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ReactJS",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native Speaker"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Personal Website",
+      "startDate": "2018-01-31",
+      "summary": "All of my personal projects and endevours have been documented on my website. I made it as a place to showcase my work and projects, as well as explore website development. I built it first using HTML, CSS, and JavaScript, and later upgraded to ReactJS.",
+      "url": "https://owenmoogk.github.io",
+      "endDate": "2018-01-31"
+    }
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
 }

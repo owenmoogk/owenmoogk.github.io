@@ -3,18 +3,18 @@ import Helmet from 'react-helmet';
 import WorkItem from './WorkItem'
 import links from "../../global/links.json"
 import global from "../../global/global.json"
-import { WorkItem as IWorkItem } from './WorkInterface';
 
 export default function Workpage() {
 
-	interface WorkData {
-		experience: IWorkItem[]
-		education: IWorkItem[]
-		volunteer: IWorkItem[]
-		certifications: IWorkItem[]
-	}
+	const [workData, setWorkData] = useState<any>()
 
-	const [workData, setWorkData] = useState<WorkData>()
+	const categories = [
+		"Work",
+		"Awards",
+		"Certificates",
+		"Volunteer",
+		"Education",
+	]
 
 	useEffect(() => {
 		fetch(process.env.PUBLIC_URL + "/assets/work.json")
@@ -31,27 +31,22 @@ export default function Workpage() {
 			<p className='subtitle'>Connect with me on <a href={links.linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a><br />or have a look at my <a href={global.resume} target='_blank' rel='noreferrer'>Resume</a></p>
 			{workData
 				? <div id='workItems'>
-
-					<h1>Experience</h1>
-					<div className='workCategory'>
-						{workData.experience.map((data, key) => <WorkItem key={key} data={data} />)}
-					</div>
-
-					<h1>Education</h1>
-					<div className='workCategory'>
-						{workData.education.map((data, key) => <WorkItem key={key} data={data} />)}
-					</div>
-
-					<h1>Volunteer Experience</h1>
-					<div className='workCategory'>
-						{workData.volunteer.map((data, key) => <WorkItem key={key} data={data} />)}
-					</div>
-
-					<h1>Certifications / Courses</h1>
-					<div className='workCategory'>
-						{workData.certifications.map((data, key) => <WorkItem key={key} data={data} />)}
-					</div>
-				</div>
+						{categories.map((category: string, key: number) => {
+							var sectionData = workData[category.toLowerCase()]
+							return(
+								<div key={key}>
+									<h1>{category}</h1>
+									<div className='workCategory' key={key}>
+										{sectionData.map((item: any, itemKey: number) => {
+											return(
+												<WorkItem key={itemKey} data={item} />
+											)
+										})}
+									</div>
+								</div>
+							)
+						})}
+						</div>
 				: null
 			}
 			<p className='subtitle'>A condensed version of my working documents can be found <a href='/assets'>here</a>.</p>
