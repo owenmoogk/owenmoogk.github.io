@@ -7,7 +7,7 @@
     "email": "owenmoogk@gmail.com",
     "phone": "2269890602",
     "url": "",
-    "summary": "I am an aspiring engineer from Waterloo ON, Canada. My goal is to travel the world while working on the most advanced technologies. Passionate about motorsports, robotic systems, space travel, and AI.\n\nI am currently studying Mechatronics Engineering at the University of Waterloo. While maintaining an average above 95%, I have also involved myself in the UW Formula Motorsports team, working to develop and manufacture a competitive racecar.\n\nExperience in building websites with ReactJS and Django, having learned CSS and Javascript along the way. Have also indulged in robotics, owning a 3D printer and being a part of the 2702 Rebels FIRST Robotics Team.",
+    "summary": "I am an aspiring engineering student from Waterloo, Canada, excited to travel the world while working on the most advanced technologies. I'm passionate about motorsports, robotic systems, space travel, and AI.\n\nI'm currently studying Mechatronics Engineering at the University of Waterloo, and am working in R&D Development Engineering at the Hub for Neuroengineering Solutions. Previously, I was employed as a Software Developer at Busplanner Inc.\n\nI'm excited about creating amazing tools with technology, whether it's DIY robotic systems or eye-catching websites. My personal website can be found at https://owenmoogk.github.io, where I document everything that gets me excited about engineering.",
     "location": {
       "countryCode": "US",
       "address": "Canada"
@@ -27,7 +27,7 @@
       "startDate": "2024-01-31",
       "endDate": "",
       "highlights": [],
-      "summary": "As a research and development engineering student, I am responsible for designing mechanical and hardware systems for advanced neuroscience research devices. I look forward to my journey learning as much as possible while creating innovative solutions with the team.",
+      "summary": "As a R&D development engineering student, I developed engineering solutions to create innovative neuroscience research devices, here at the University of Lethbridge.\n\nI built software tools using Django, Python, and ReactJS to process and relay recorded information to a user, and I developed embedded systems code in Python for Linux-based operating machines, optimizing speed and performance of data collection.\n\nI leveraged SolidWorks CAD tools to design mechanical components for 3D printed production and rapid iteration, and improved CNC tools for optimal speed and performance.\n\nI designed and built electrical circuitry with microprocessors, sensors, and actuators for ease of use and implementation, for which I created electrical schematics and printed circuit boards (PCBs) for mass production in Altium Designer.",
       "url": "https://www.linkedin.com/company/hub-for-neuroengineering-solutions/",
       "location": "Lethbridge, Alberta, Canada"
     },
@@ -37,7 +37,7 @@
       "startDate": "2023-05-31",
       "endDate": "2023-09-30",
       "highlights": [],
-      "summary": "•\tDeveloped and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients.\n•\tImplemented and improved many web application features, directly affecting hundreds of clients across North America.\n•\tResolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n•\tDesigned SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation.\n•\tImproved codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n•\tUtilized TFS version control to manage source code and participate in code reviews among team members. \n•\tConducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
+      "summary": "As a Software Developer, I developed and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients. I implemented and improved many web application features, directly affecting hundreds of clients across North America.\n\nI resolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n\nAdditionally, I designed SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation, as well as improving codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n\nI conducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
       "url": "https://www.linkedin.com/company/georefsystems/",
       "location": "Waterloo, Ontario, Canada"
     },
@@ -47,7 +47,7 @@
       "startDate": "2022-09-30",
       "endDate": "2023-04-30",
       "highlights": [],
-      "summary": "The University of Waterloo Formula Motorsports team works to develop a competitive racecar each year. Although a new member of the team, I've worked to manufacture high-precision parts and used SolidWorks skills to develop 3D printed assembly aids.",
+      "summary": "As a powertrain team member, I worked closely with the team to develop the powertrain for a competitive formula-style racecar.\n\nI created SolidWorks CAD designs for 3D printed tools to aid the manufacturing process, and machined high-precision mechanical components.",
       "url": "https://www.linkedin.com/company/university-of-waterloo-formula-motorsports/",
       "location": "Waterloo, Ontario, Canada"
     },
@@ -57,7 +57,7 @@
       "startDate": "2021-05-31",
       "endDate": "2022-09-30",
       "highlights": [],
-      "summary": "Worked to provide excellent customer experiences and services at Merry Hill Golf Club. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results.",
+      "summary": "As a Clubhouse Employee, I worked to provide excellent customer experiences and services at Merry Hill Golf Club. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results.",
       "url": "https://www.linkedin.com/company/merry-hill-golf-club/",
       "location": "Waterloo, Ontario, Canada"
     },
@@ -86,18 +86,18 @@
       "startDate": "2021-09-30",
       "endDate": "2022-06-30",
       "highlights": [],
-      "summary": "I am a part of the Bluevale Collegiate Electric Car Team, where I work with a small team to develop and build electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system.\n\nIn the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race.",
+      "summary": "As a part of the Bluevale Collegiate Electric Car Team, where worked with a small team to develop and build a fully electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system.\n\nIn the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race.",
       "url": "",
       "location": "Waterloo, Ontario, Canada"
     },
     {
-      "name": "C2L",
-      "position": "Leader / Student",
+      "name": "Bluevale Collegiate Institute",
+      "position": "C2L Student",
       "startDate": "2018-09-30",
       "endDate": "2022-06-30",
       "highlights": [],
-      "summary": "I was accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. It is structured around leadership in the community and building interpersonal skills.\n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more people who are likeminded and leadership-oriented, as well have learned and practiced leadership styles and management techniques.",
-      "url": "https://www.linkedin.com/company/c2l/",
+      "summary": "Accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. \n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more like-minded people who are leadership-oriented, and I have learned and practiced many different leadership styles and management techniques.",
+      "url": "https://www.linkedin.com/company/bluevale-collegiate-institute/",
       "location": "Waterloo, Ontario, Canada"
     },
     {
@@ -106,7 +106,7 @@
       "startDate": "2021-07-31",
       "endDate": "2021-07-31",
       "highlights": [],
-      "summary": "Participated in the prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I am learning about many different topics, with a design project focused on solving water issues in the country. With my team, I designed an award-winning solution that tracks water usage from different appliances and provides meaningful insight to save water.",
+      "summary": "Participated in the prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I learned about many different topics, with a design project focused on solving water issues in the country. \n\nWith my team, I designed an award-winning solution that tracks water usage from different appliances and provides meaningful insight to save water.",
       "url": "https://www.linkedin.com/company/shadcanada/",
       "location": "Prince Edward Island, Canada"
     },
@@ -116,7 +116,7 @@
       "startDate": "2017-05-31",
       "endDate": "2020-05-31",
       "highlights": [],
-      "summary": "As a paid umpire for the WMBA for 3 years I navigating difficult situations employing management and cooperation skills while promoting kindness, sportsmanship and fun.",
+      "summary": "Employed as an Umpire by the WMBA for 3 years, I navigated difficult situations employing management and cooperation skills while promoting kindness, sportsmanship, and fun.",
       "url": "",
       "location": "Waterloo, Ontario, Canada"
     },
@@ -126,7 +126,7 @@
       "startDate": "2018-09-30",
       "endDate": "2019-11-30",
       "highlights": [],
-      "summary": "DECA is a global business competition, in which participants are given business case studies and must use both practical and personal skills to solve problems.\n\nCategory: Principles of Finance (PFN): Business situations associated with careers in Accounting, Banking Services, Business Finance, Insurance and Securities, and Investments.\n\nAchieved:\n - Top 10% knowledge/written test\n - Top 10% roleplay/practical test\n - Advanced to provincial championship",
+      "summary": "Excelled in the DECA global business competition, in which I solved Financial problems in business case studies with practical and personal skills.\n\nI achieved within the top 10% on both the written knowledge test and the practical roleplay test competing in the Principles of Finance (PFN) category, qualifying for the provincial championship.",
       "url": "https://www.linkedin.com/company/deca-inc-/",
       "location": "Toronto, Ontario, Canada"
     }
