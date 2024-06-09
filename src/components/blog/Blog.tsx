@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { useEffect, useState } from 'react';
+import links from "../../global/links.json"
 
 export type BlogPost = {
 	title: string;
@@ -64,6 +65,9 @@ export default function Blog() {
 						</>
 					)
 				}
+				<br/>
+				<p style={{textAlign: "center"}}>... read more on <a href={links.medium} target="_blank" rel='noreferrer'>Medium</a></p>
+				<br/>
 			</div>
 		</div>
 	);
