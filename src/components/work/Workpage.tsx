@@ -50,6 +50,7 @@ export default function Workpage() {
 				: null
 			}
 			<p className='subtitle'>A condensed version of my working documents can be found <a href='/assets'>here</a>.</p>
+			<p className='subtitle'>And for anyone really curious: <a href={global.extracurriculars} target="_blank">everything I've ever done</a>.</p>
 		</div>
 	);
 }
