@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FeaturedIcon from "../projects/FeaturedIcon";
 import global from "../../global/global.json"
+import Background from "./Background";
 
 export default function Homepage() {
 
@@ -25,6 +26,7 @@ export default function Homepage() {
 
 	return (
 		<div id='homePage'>
+			<Background />
 			<div id='homepageTitle'>
 				<div id='text'>
 					<div className='larger'>

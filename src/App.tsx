@@ -37,6 +37,8 @@ export default function App() {
 				<style dangerouslySetInnerHTML={{
 					__html:
 						darkMode
+						// --gradient: linear-gradient(45deg, 	#332024, #001633, #332024);
+
 							? `:root{
 									--backgroundColor: rgb(35,35,35);
 									--textColor: white;
@@ -47,13 +49,12 @@ export default function App() {
 									--fade: rgb(189, 238, 255);
 									--grey: lightgrey;
 									--lightgrey: rgb(44,44,44);
-									--gradient: linear-gradient(45deg, 	
-										#332024, #001633, #332024);
+									--gradient: var(--backgroundColor)
 									--navBackground: rgba(50, 50, 50, 0.4);
 								}`
 							: `:root {
 									--textColor: black;
-									--backgroundColor: white;
+									--backgroundColor: rgb(35,35,35);
 									--overlayColor: rgba(255,255,255,0.6);
 									--primaryColor: #388ed1;
 									--linkHover: rgb(60,60,60);
