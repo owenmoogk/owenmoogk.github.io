@@ -64,6 +64,8 @@ export default function Blog() {
 							<hr />
 						</>
 					)
+					??
+					<p style={{textAlign: "center"}}>Loading blogs...</p>
 				}
 				<br/>
 				<p style={{textAlign: "center"}}>... read more on <a href={links.medium} target="_blank" rel='noreferrer'>Medium</a></p>
