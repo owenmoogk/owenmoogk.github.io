@@ -52,7 +52,7 @@ export default function Sitemap(){
           <ul>
             <li><a href="/assets">/assets</a></li>
             <li><a href="/projects/directory">/projects/directory</a></li>
-            <li><a href="/blog">/blog</a></li>
+            <li><a href="/contact">/contact</a></li>
             <br />
             {projectData.map((project, key) => {
               // don't include external links in sitemap (eg. Janik's Cat Feeder)
