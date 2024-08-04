@@ -16,7 +16,7 @@ body {
 
 body {
 	--textColor: black;
-	--backgroundColor: white;
+	--backgroundColor: rgb(233, 233, 233);
 	--overlayColor: rgba(255, 255, 255, 0.6);
 	--primaryColor: #388ed1;
 	--linkHover: rgb(60, 60, 60);
@@ -24,7 +24,7 @@ body {
 	--fade: rgb(100, 100, 255);
 	--grey: rgb(72, 72, 72);
 	--lightgrey: lightgrey;
-	--gradient: linear-gradient(45deg, skyblue, pink);
+	// --gradient: linear-gradient(45deg, skyblue, pink);
 	--navBackground: rgba(255, 255, 255, 0.4);
 }
 
@@ -38,11 +38,12 @@ body.dark {
 	--fade: rgb(189, 238, 255);
 	--grey: lightgrey;
 	--lightgrey: rgb(44, 44, 44);
-	--gradient: linear-gradient(45deg, #332024, #001633, #332024);
+	// --gradient: linear-gradient(45deg, #332024, #001633, #332024);
 	--navBackground: rgba(50, 50, 50, 0.4);
 }
 
 #backgroundDiv {
+	background-color: var(--backgroundColor);
 	background-image: var(--gradient);
 	height: 100%;
 	width: 100%;
