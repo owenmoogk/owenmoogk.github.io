@@ -21,6 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Less
+        run: npm install -g less
+
+      - name: Compile Less to CSS
+        run: lessc src/less/main.less src/css/main.css
+
       - name: Deploy
         run: npm run deploy
         # env:
