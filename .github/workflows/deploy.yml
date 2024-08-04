@@ -31,6 +31,7 @@ jobs:
         run: npx less-watch-compiler src/less src/css --run-once
 
       - name: Deploy
-        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: npm run deploy
