@@ -30,8 +30,11 @@ jobs:
       - name: Compile Less to CSS
         run: npx less-watch-compiler src/less src/css --run-once
 
-      - name: Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx gh-pages -d build -r https://$GITHUB_TOKEN@github.com/${{ github.repository }}.git
+      - name: Build
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
