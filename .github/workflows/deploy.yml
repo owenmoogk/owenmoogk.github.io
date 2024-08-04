@@ -25,7 +25,7 @@ jobs:
         run: npm install -g less
 
       - name: Compile Less to CSS
-        run: lessc src/less/main.less src/css/main.css
+        run: less-watch-compiler src/less src/css --run-once
 
       - name: Deploy
         run: npm run deploy
