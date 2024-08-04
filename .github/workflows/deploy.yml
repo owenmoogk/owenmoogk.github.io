@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install less-watch-compiler
-        run: npm install -g less-watch-compiler
-
       - name: Compile Less to CSS
         run: npx less-watch-compiler src/less src/css --run-once
 
