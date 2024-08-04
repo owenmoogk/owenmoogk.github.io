@@ -13,10 +13,11 @@ export default function ProjectPage() {
 	const [projectData, setProjectData] = useState<string>()
 	const [metaData, setMetaData] = useState<Project>()
 	const { name } = useParams()
-	var jsonLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".json"
-	var mdLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".md"
 
 	useEffect(() => {
+		const jsonLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".json"
+		const mdLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + ".md"
+
 		fetch(jsonLink)
 			.then(response => response.json())
 			.then(json => setMetaData(json))
@@ -27,7 +28,7 @@ export default function ProjectPage() {
 		fetch(mdLink)
 			.then(response => response.text())
 			.then(text => setProjectData(text))
-	}, [])
+	}, [name])
 
 	// this is really stupid and is fully bad practice,
 	// but......
@@ -56,7 +57,7 @@ export default function ProjectPage() {
 		data = data.replaceAll(/\]\((?!https?:\/\/)(?!\/)(.+?)(?=(.+))/g, `](${process.env.PUBLIC_URL}/assets/projects/${name}/$1`)
 
 		// replace the src on video tags
-		data = data.replaceAll(/<video src=("|')(.+?)\1><\/video>/g, `<video src=\"${process.env.PUBLIC_URL}/assets/projects/${name}/$2\" controls></video>`);
+		data = data.replaceAll(/<video src=("|')(.+?)\1><\/video>/g, `<video src="${process.env.PUBLIC_URL}/assets/projects/${name}/$2" controls></video>`);
 
 		return (data)
 	}

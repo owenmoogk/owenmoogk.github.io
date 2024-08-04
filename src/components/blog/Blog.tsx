@@ -1,7 +1,3 @@
-import {
-	Routes,
-	Route
-} from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { useEffect, useState } from 'react';
 import links from "../../global/links.json"
@@ -34,7 +30,7 @@ export default function Blog() {
 					}
 					// cut off the content at the end of a word, and add ...
 					var cutoffIndex = 300
-					while (postObject.content[cutoffIndex] != " ") {
+					while (postObject.content[cutoffIndex] !== " ") {
 						cutoffIndex -= 1
 					}
 					postObject.content = postObject.content.substring(0, cutoffIndex)

@@ -20,12 +20,12 @@ export default function ProjectDirectory() {
 			chosenButton.classList.add('active')
 		}
 
-		if (filter == ""){
-			var filter = (document.getElementsByClassName("active")[0].getElementsByTagName("p")[0] as HTMLElement).innerText
+		if (filter === ""){
+			filter = (document.getElementsByClassName("active")[0].getElementsByTagName("p")[0] as HTMLElement).innerText
 		}
 
 		filter = filter.toLowerCase()
-		if (filter == "all") filter = ""
+		if (filter === "all") filter = ""
 		
 		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
 

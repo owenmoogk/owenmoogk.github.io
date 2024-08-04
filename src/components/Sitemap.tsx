@@ -54,7 +54,7 @@ export default function Sitemap(){
             <li><a href="/projects/directory">/projects/directory</a></li>
             <li><a href="/contact">/contact</a></li>
             <br />
-            {projectData.map((project, key) => {
+            {projectData.map((project) => {
               // don't include external links in sitemap (eg. Janik's Cat Feeder)
               if (project.externalLink && !project.externalLink.includes("https://")){
                 var link = homepage + project.externalLink
@@ -63,6 +63,7 @@ export default function Sitemap(){
                 if (!linkDisplay.startsWith("/")) linkDisplay = "/" + linkDisplay
                 return(<li><a href={link} target="_blank" rel="noreferrer">{linkDisplay}</a></li>)
               }
+			  return null
             })}
           </ul>
         </div>
