@@ -14,6 +14,36 @@ body {
 	height: 100%;
 }
 
+* {
+	font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	letter-spacing: 0px;
+}
+
+/* highlights */
+
+::selection {
+	background: grey;
+	color: black;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: lightslategrey;
+}
+
+::-webkit-scrollbar-corner {
+	background: rgba(0, 0, 0, 0);
+}
+
 body {
 	--textColor: black;
 	--backgroundColor: rgb(233, 233, 233);
@@ -87,7 +117,6 @@ p {
 	color: var(--grey);
 	text-align: center;
 }
-
 
 a {
 	text-decoration: none;
