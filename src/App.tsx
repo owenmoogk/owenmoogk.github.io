@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -30,41 +30,19 @@ export default function App() {
 		setDarkMode(darkMode ? false : true)
 	}
 
+	function updateDarkMode(darkMode: boolean){
+		if (darkMode) document.body.classList.add('dark')
+		else document.body.classList.remove('dark')
+	}
+
+	useEffect(() => {updateDarkMode(darkMode)}, [darkMode])
+
+	updateDarkMode(darkMode)
+	
 	return (
 		<>
 			<div id='backgroundDiv' />
 			<Router>
-				<style dangerouslySetInnerHTML={{
-					__html:
-						darkMode
-							? `:root{
-									--backgroundColor: rgb(35,35,35);
-									--textColor: white;
-									--overlayColor: rgba(0,0,0,0.6);
-									--primaryColor: rgb(135, 206, 235);
-									--linkColor: skyblue;
-									--linkHover: pink;
-									--fade: rgb(189, 238, 255);
-									--grey: lightgrey;
-									--lightgrey: rgb(44,44,44);
-									--gradient: linear-gradient(45deg, 	
-										#332024, #001633, #332024);
-									--navBackground: rgba(50, 50, 50, 0.4);
-								}`
-							: `:root {
-									--textColor: black;
-									--backgroundColor: white;
-									--overlayColor: rgba(255,255,255,0.6);
-									--primaryColor: #388ed1;
-									--linkHover: rgb(60,60,60);
-									--linkColor: #388ed1;
-									--fade: rgb(100, 100, 255);
-									--grey: rgb(72,72,72);
-									--lightgrey: lightgrey;
-									--gradient: linear-gradient(45deg, skyblue, pink);
-									--navBackground: rgba(255, 255, 255, 0.4);
-								}`
-				}} />
 				<Nav toggleDarkMode={toggleDarkMode} />
 				<Routes>
 					<Route path='/projects/*' element={<ProjectRouter />} />
@@ -78,7 +56,6 @@ export default function App() {
 					<Route path='/github' element={<Redirect />} />
 					<Route path='*' element={<Navigate to='/404' />} />
 				</Routes>
-
 			</Router>
 		</>
 	);
