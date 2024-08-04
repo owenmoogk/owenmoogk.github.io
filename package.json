@@ -23,10 +23,10 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.21.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-showdown": "^2.3.1",
     "rss-parser": "^3.13.0",
-    "typescript": "^5.3.3",
+    "typescript": "^5.5.4",
     "web-vitals": "^3.5.0"
   },
   "scripts": {
