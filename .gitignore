@@ -28,3 +28,4 @@ src/css/
 # others
 .vscode/settings.json
 public/img/projects/ecoflow/demo.mp4
+src/main.css

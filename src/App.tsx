@@ -11,7 +11,7 @@ import Workpage from './components/work/Workpage';
 import ContactPage from './components/contact/Contact';
 import ProjectRouter from './components/ProjectRouter';
 import Assets from './components/Assets'
-import './styles.css'
+import './main.css'
 import NotFoundPage from './components/NotFoundPage'
 import Sitemap from './components/Sitemap';
 import Blog from './components/blog/Blog';

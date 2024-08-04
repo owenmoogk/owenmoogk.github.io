@@ -18,7 +18,7 @@
 		"react-showdown": "^2.3.1"
 	},
 	"scripts": {
-		"start": "concurrently --kill-others \"less-watch-compiler src/less src/css\" \"react-scripts start\"",
+		"start": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"react-scripts start\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
