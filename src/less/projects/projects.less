@@ -10,11 +10,13 @@
 
 	--projectBorderRadius: 10px;
 	--projectBorderThickness: 3px;
+
 }
 
 .featuredIcon {
 	height: 250px;
-	width: 300px;
+	min-width: 250px;
+	max-width: 350px;
 	border-radius: var(--projectBorderRadius);
 	transition: 0.3s;
 	border: var(--projectBorderThickness) solid var(--textColor);
@@ -27,8 +29,8 @@
 	.featuredLabel {
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
 		border-radius: calc(var(--projectBorderRadius) - var(--projectBorderThickness));
-		height: 250px;
-		width: 300px;
+		height: 100%;
+		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: column;
