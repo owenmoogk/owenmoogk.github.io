@@ -33,5 +33,5 @@ jobs:
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-        run: npm run deploy
+        run: |
+          npx gh-pages -d build -r https://$GITHUB_TOKEN@github.com/${{ github.repository }}.git
