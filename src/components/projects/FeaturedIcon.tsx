@@ -15,12 +15,11 @@ export default function FeaturedIcon(props: {
 		<a href={link} style={{ margin: '20px' }} className='featuredIconLink'>
 
 			<div className='featuredIcon' style={{
-				backgroundColor: "white"
+				backgroundImage: "url(\"/assets/projects/" + data.name + "/main.png\")",
+				backgroundSize: "cover",
+				backgroundPosition: "center"
 			}}>
-				<div className='featuredImage'>
-					<img src={'/assets/projects/' + data.name + '/main.png'} alt=''></img>
-				</div>
-				<div className='featuredLabel'>
+				<div className='featuredLabel' >
 					<div style={{ display: 'flex', justifyContent: "space-between", margin: "0 20px" }}>
 						<div className='featuredText'>
 							<span className="contentTitle">{data.title}</span>
