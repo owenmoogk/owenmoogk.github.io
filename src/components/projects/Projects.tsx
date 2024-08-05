@@ -1,36 +1,12 @@
 import { useState, useEffect } from 'react';
-import ProjectButton from './ProjectButton';
+import FilterButton from '../common/FilterButton';
 import FeaturedIcon from './FeaturedIcon';
 import Project from "./ProjectInterface"
 
 export default function ProjectPage() {
 
 	const [projectData, setProjectData] = useState<Project[]>()
-
-	// function that filters by the type of entry
-	function search(filter: string) {
-
-		var projectItems = document.getElementsByClassName("featuredIcon") as HTMLCollectionOf<HTMLElement>;
-
-		// make the button active
-		var currentButton = document.getElementsByClassName("active")[0]
-		currentButton.classList.remove('active')
-		var currentButtonClass = "sort_" + filter
-		var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
-		chosenButton.classList.add('active')
-
-		// will run through all the elements
-		for (const tile of projectItems) {
-			var type = (tile.getElementsByClassName('type')[0] as HTMLElement).innerText;
-
-			if (type.toLowerCase().includes(filter.toLowerCase()) || filter === 'all') {
-				(tile.parentNode as HTMLElement).style.display = ''
-			}
-			else {
-				(tile.parentNode as HTMLElement).style.display = 'none'
-			}
-		}
-	}
+	const [filter, setFilter] = useState<string>("")
 
 	function fetchProjects() {
 
@@ -72,11 +48,11 @@ export default function ProjectPage() {
 			<p className='subtitle'>These are some of my favorite projects. For a complete list, have a look <a href='/projects/directory'>here</a>.</p>
 			<div id="sortingContainer">
 				<div id='buttonContainer'>
-					<ProjectButton name='All' search={search} />
-					<ProjectButton name='Python' search={search} />
-					<ProjectButton name='Javascript' search={search} />
-					<ProjectButton name='React' search={search} />
-					<ProjectButton name='Solidworks' search={search} />
+					<FilterButton name='All' handle="" setFilter={setFilter} filter={filter} />
+					<FilterButton name='Python' setFilter={setFilter} filter={filter} />
+					<FilterButton name='Javascript' setFilter={setFilter} filter={filter} />
+					<FilterButton name='React' setFilter={setFilter} filter={filter} />
+					<FilterButton name='Solidworks' setFilter={setFilter} filter={filter} />
 				</div>
 			</div>
 
@@ -84,7 +60,8 @@ export default function ProjectPage() {
 				<div id='featuredContainer'>
 					{projectData
 						? projectData.map((data, key) => {
-							if (data.featured) {
+							var dataTypes = data.types.map(item => item.toLowerCase())
+							if (data.featured && (dataTypes.indexOf(filter) >= 0 || filter === "")) {
 								return (
 									<FeaturedIcon data={data} key={key} />
 								)

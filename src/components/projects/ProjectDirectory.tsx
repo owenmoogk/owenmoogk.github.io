@@ -1,53 +1,15 @@
 import { useState, useEffect } from 'react';
 import ProjectIcon from './ProjectIcon';
-import ProjectButton from './ProjectButton';
+import FilterButton from '../common/FilterButton';
 import Project from './ProjectInterface';
 
 export default function ProjectDirectory() {
 
 	const [projectData, setProjectData] = useState<Project[]>()
+	const [searchQuery, setSearchQuery] = useState<string>("")
+	const [filter, setFilter] = useState<string>("")
 
-	function search(filter: string, buttonPressed?: boolean) {
-		
-		var searchString = (document.getElementById("projectSearchBox") as HTMLInputElement).value;
-
-		if (buttonPressed){
-			// make the button active
-			var currentButton = document.getElementsByClassName("active")[0]
-			currentButton.classList.remove('active')
-			var currentButtonClass = "sort_" + filter
-			var chosenButton = document.getElementsByClassName(currentButtonClass)[0]
-			chosenButton.classList.add('active')
-		}
-
-		if (filter === ""){
-			filter = (document.getElementsByClassName("active")[0].getElementsByTagName("p")[0] as HTMLElement).innerText
-		}
-
-		filter = filter.toLowerCase()
-		if (filter === "all") filter = ""
-		
-		var projectItems = document.getElementsByClassName("content") as HTMLCollectionOf<HTMLElement>;
-
-		// will run through all the rows
-		for (const tile of projectItems) {
-
-			// get the title and type
-			var title = (tile.getElementsByClassName("contentTitle")[0] as HTMLElement).innerText;
-			var type = (tile.getElementsByClassName("type")[0] as HTMLElement).innerText;
-			var desc = (tile.getElementsByClassName('contentDesc')[0] as HTMLElement).innerText;
-
-			if (
-				(title.toLowerCase().includes(searchString) || type.toLowerCase().includes(searchString) || desc.toLowerCase().includes(searchString)) && type.toLowerCase().includes(filter)
-			) {
-				tile.style.display = "";
-			}
-			else {
-				tile.style.display = "none";
-			}
-		}
-	}
-
+	
 	function fetchProjects() {
 		var tmpProjectData: Project[] = [];
 		fetch('/assets/projectDirectory.json')
@@ -85,19 +47,33 @@ export default function ProjectDirectory() {
 			<p className='subtitle'>All my projects. A lot of them are old, simple or just not worth showing off. But we all start somewhere.</p>
 			<div id="sortingContainer">
 				<div id='buttonContainer'>
-					<ProjectButton name='All' search={search} />
-					<ProjectButton name='Python' search={search} />
-					<ProjectButton name='Javascript' search={search} />
-					<ProjectButton name='React' search={search} />
-					<ProjectButton name='Django' search={search} />
-					<ProjectButton name='Solidworks' search={search} />
-					<ProjectButton name='Mechanical' search={search} />
+					<FilterButton name='All' handle="" setFilter={setFilter} filter={filter}/>
+					<FilterButton name='Python' setFilter={setFilter} filter={filter}/>
+					<FilterButton name='Javascript' setFilter={setFilter} filter={filter}/>
+					<FilterButton name='React' setFilter={setFilter} filter={filter}/>
+					<FilterButton name='Django' setFilter={setFilter} filter={filter}/>
+					<FilterButton name='Solidworks' setFilter={setFilter} filter={filter}/>
+					<FilterButton name='Mechanical' setFilter={setFilter} filter={filter}/>
 				</div>
-				<input type="text" onKeyUp={() => search("")} placeholder="Search" title="Type to search" id="projectSearchBox" />
+				<input type="text" onChange={(e) => setSearchQuery(e.target.value)} value={searchQuery} placeholder="Search" title="Type to search" id="projectSearchBox" />
 			</div>
 			<div id='projectIcons'>
 				{projectData
-					? projectData.map((data, key) => <ProjectIcon data={data} key={key}/>)
+					? projectData.map((data, key) => {
+						var dataTypes = data.types.map(item => item.toLowerCase())
+							var searchQueryLower = searchQuery.toLowerCase()
+							var matchesSearchQuery = 
+								data.description.toLowerCase().indexOf(searchQueryLower) >= 0 ||
+								data.name.toLowerCase().indexOf(searchQueryLower) >= 0 ||
+								data.title.toLowerCase().indexOf(searchQueryLower) >= 0
+
+							if ((dataTypes.indexOf(filter) >= 0 || filter === "") && (matchesSearchQuery || searchQueryLower === "")) {
+								return (
+									<ProjectIcon data={data} key={key}/>
+								)
+							}
+							return null
+						})
 					: null
 				}
 			</div>
