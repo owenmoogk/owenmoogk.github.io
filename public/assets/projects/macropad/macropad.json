@@ -6,6 +6,6 @@
         "C++",
         "Solidworks"
     ],
-    "description": "AI powered cat feeding robot, powered by Arduino.",
+    "description": "A homemade macropad for custom keycommands.",
     "featured": true
 }
