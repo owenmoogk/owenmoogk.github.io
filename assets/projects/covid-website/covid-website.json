@@ -3,10 +3,9 @@
     "date": "May 22, 2021",
     "githubLink": "https://github.com/owenmoogk/covid-health-app",
     "types": [
-        "Python",
-        "C++",
-        "Solidworks"
+        "React",
+        "Javascript"
     ],
-    "description": "AI powered cat feeding robot, powered by Arduino.",
+    "description": "A COVID health tracking app, built for a hackathon.",
     "featured": false
 }
