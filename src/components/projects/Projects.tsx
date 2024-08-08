@@ -22,7 +22,7 @@ export default function ProjectPage() {
 						.then(currentProjectData => {
 							tmpProjectData.push({ ...currentProjectData, name: projectUrl })
 						})
-						.catch(error => console.log(projectUrl))
+						.catch(() => console.log(projectUrl))
 					)
 				}
 				// once all the loading is done
