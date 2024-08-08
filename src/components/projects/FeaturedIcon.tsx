@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function FeaturedIcon(props: {
 	data: {
 		name: string;
@@ -9,10 +11,9 @@ export default function FeaturedIcon(props: {
 }) {
 
 	var data = props.data
-	let link = '/projects/' + data.name
 	var types = data.types.map((x: string) => x.toLowerCase())
 	return (
-		<a href={link} style={{ margin: '20px' }} className='featuredIconLink'>
+		<Link to={data.name} style={{ margin: '20px' }} className='featuredIconLink'>
 
 			<div className='featuredIcon' style={{
 				backgroundImage: "url(\"/assets/projects/" + data.name + "/main.png\")",
@@ -43,6 +44,6 @@ export default function FeaturedIcon(props: {
 				</div>
 
 			</div>
-		</a>
+		</Link>
 	);
 }
