@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FeaturedIcon from "../projects/FeaturedIcon";
 import global from "../../global/global.json"
+import { Helmet } from "react-helmet";
 
 export default function Homepage() {
 
@@ -25,6 +26,9 @@ export default function Homepage() {
 
 	return (
 		<div id='homePage'>
+			<Helmet>
+				<title>{"Owen Moogk"}</title>
+			</Helmet>
 			<div id='homepageTitle'>
 				<div id='text'>
 					<div className='larger'>
