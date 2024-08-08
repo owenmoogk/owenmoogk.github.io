@@ -43,7 +43,7 @@ export default function Sitemap(){
   return (
     <div className="main" id='resourcePage'>
       <Helmet>
-        <title>{"Assets - Owen Moogk"}</title>
+        <title>{"Sitemap - Owen Moogk"}</title>
       </Helmet>
       <p className="title">Sitemap</p>
       <p className='subtitle'>All other subpages (that are worth looking at).</p>
