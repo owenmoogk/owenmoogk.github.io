@@ -5,6 +5,7 @@ import Helmet from "react-helmet"
 import Project from './ProjectInterface';
 import MarkdownView from 'react-showdown';
 import global from "../../global/global.json"
+import Tag from '../common/Tags';
 const { homepage } = global
 
 
@@ -21,7 +22,7 @@ export default function ProjectPage() {
 		fetch(jsonLink)
 			.then(response => response.json())
 			.then(json => setMetaData(json))
-			.catch(error => {
+			.catch(() => {
 				(document.getElementById("projectBody") as HTMLElement).innerHTML = "<div class='title'>Could not load page :/</div><p class='subtitle'>Probably still in development</p>"
 			})
 
@@ -114,10 +115,7 @@ export default function ProjectPage() {
 
 					{metaData.types.map((type: string, key: number) => {
 						return (
-							<span className='type' key={key} style={{ border: "2px solid var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}>
-								<span className='circle' style={{ backgroundColor: "var(--" + type.toLowerCase().replace(/[^a-z]/gi, '') + ",grey)" }}></span>
-								{type}
-							</span>
+							<Tag type={type} key={key}/>
 						)
 					})}
 				</div>
