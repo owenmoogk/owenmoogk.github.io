@@ -1,0 +1,45 @@
+#icons {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+	}
+
+	svg {
+		height: 30px;
+		stroke: var(--textColor);
+		transition: 0.3s;
+		fill: none;
+		margin-right: 5px;
+		margin-left: 5px;
+
+		&:hover {
+			stroke: var(--grey);
+		}
+	}
+
+	.type {
+		// inline block so i can change the dimensions
+		display: inline-flex;
+		border-radius: 10px;
+		margin-right: 5px;
+		margin-left: 5px;
+		padding-right: 5px;
+		align-items: center;
+
+		.circle {
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			margin: 5px;
+		}
+	}
+}
