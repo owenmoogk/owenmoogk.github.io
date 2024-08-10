@@ -46,7 +46,7 @@ body {
 
 body {
 	--textColor: black;
-	--backgroundColor: rgb(233, 233, 233);
+	--backgroundColor: white;
 	--overlayColor: rgba(255, 255, 255, 0.6);
 	--primaryColor: #388ed1;
 	--linkHover: rgb(60, 60, 60);
@@ -54,7 +54,11 @@ body {
 	--fade: rgb(100, 100, 255);
 	--grey: rgb(72, 72, 72);
 	--lightgrey: lightgrey;
-	// --gradient: linear-gradient(45deg, skyblue, pink);
+	// BLUE GRADIENT
+	// --gradient: linear-gradient(45deg, rgba(135, 206, 235, 0.3), rgba(135, 206, 235, 0.1), rgba(135, 206, 235, 0.3));
+	// GREY GRADIENT (EIDAN LIKES)
+	--gradient: linear-gradient(60deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+
 	--navBackground: rgba(255, 255, 255, 0.4);
 }
 
@@ -69,6 +73,7 @@ body.dark {
 	--grey: lightgrey;
 	--lightgrey: rgb(44, 44, 44);
 	// --gradient: linear-gradient(45deg, #332024, #001633, #332024);
+	--gradient: var(--backgroundColor);
 	--navBackground: rgba(50, 50, 50, 0.4);
 }
 
@@ -104,7 +109,7 @@ p {
 	font-weight: bold;
 	margin: 0;
 	width: 100%;
-	text-align: center !important;
+	text-align: center;
 }
 
 .special {
@@ -138,6 +143,10 @@ li a {
 	&:hover {
 		color: var(--linkHover);
 	}
+}
+
+a h3 {
+	color: var(--textColor);
 }
 
 li {
