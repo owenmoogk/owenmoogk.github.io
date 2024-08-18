@@ -1,68 +1,73 @@
-import { useState, useEffect } from "react";
-import Project from './projects/ProjectInterface';
-import { Helmet } from "react-helmet";
-import global from "../global/global.json"
-const { homepage } = global
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import type { Project } from '../api/types';
+import global from '../global/global.json';
+const { homepage } = global;
 
-export default function Sitemap(){
+export default function Sitemap() {
 
-	const [projectData, setProjectData] = useState<Project[]>()
+  const [ projectData, setProjectData ] = useState<Project[]>();
 
   function fetchProjects() {
-		var tmpProjectData: Project[] = [];
-		fetch('/assets/projectDirectory.json')
-			.then(response => response.json())
-			.then(projectUrls => {
-				var requests = []
-				for (const projectUrl of projectUrls) {
-					requests.push(fetch('/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
-						.then(response => response.json())
-						.then(currentProjectData => {
-							tmpProjectData.push({ ...currentProjectData, name: projectUrl })
-						})
-						.catch(error => console.log(projectUrl))
-					)
-				}
-				// once all the loading is done
-				Promise.all(requests).then(function () {
-					// make sure they are in the proper order, sort by name
-					tmpProjectData.sort((a, b) => {
-						return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name))
-					})
+    const tmpProjectData: Project[] = [];
+    fetch('/assets/projectDirectory.json')
+      .then(async response => response.json())
+      .then(projectUrls => {
+        const requests = [];
+        for (const projectUrl of projectUrls) {
+          requests.push(fetch('/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
+            .then(async response => response.json())
+            .then(currentProjectData => {
+              tmpProjectData.push({ ...currentProjectData, name: projectUrl });
+            })
+            .catch(() => console.log(projectUrl)));
+        }
+        // once all the loading is done
+        Promise.all(requests)
+          .then(function () {
+          // make sure they are in the proper order, sort by name
+            tmpProjectData.sort((a, b) => {
+              return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name));
+            });
 
-					setProjectData(tmpProjectData)
-				})
-			})
-	}
+            setProjectData(tmpProjectData);
+          })
+          .catch(() => null);
+      })
+      .catch(() => null);
+  }
 
   useEffect(() => {
-    fetchProjects()
-  }, [])
-
+    fetchProjects();
+  }, []);
 
   return (
-    <div className="main" id='resourcePage'>
+    <div className="main" id="resourcePage">
       <Helmet>
-        <title>{"Sitemap - Owen Moogk"}</title>
+        <title>{'Sitemap - Owen Moogk'}</title>
       </Helmet>
       <p className="title">Sitemap</p>
-      <p className='subtitle'>All other subpages (that are worth looking at).</p>
+      <p className="subtitle">All other subpages (that are worth looking at).</p>
       {projectData ?
         <div className="assets">
           <ul>
             <li><a href="/assets">/assets</a></li>
             <li><a href="/projects/directory">/projects/directory</a></li>
             <br />
-            {projectData.map((project) => {
+            {projectData.map((project, key) => {
               // don't include external links in sitemap (eg. Janik's Cat Feeder)
-              if (project.externalLink && !project.externalLink.includes("https://")){
-                var link = homepage + project.externalLink
-                var linkDisplay = project.externalLink
-                if (linkDisplay.endsWith("/")) linkDisplay = linkDisplay.slice(0,-1);
-                if (!linkDisplay.startsWith("/")) linkDisplay = "/" + linkDisplay
-                return(<li><a href={link} target="_blank" rel="noreferrer">{linkDisplay}</a></li>)
+              if (project.externalLink && !project.externalLink.includes('https://')) {
+                const link = homepage + project.externalLink;
+                let linkDisplay = project.externalLink;
+                if (linkDisplay.endsWith('/')) { linkDisplay = linkDisplay.slice(0, -1); }
+                if (!linkDisplay.startsWith('/')) { linkDisplay = '/' + linkDisplay; }
+                return (
+                  <li key={key}>
+                    <a href={link} target="_blank" rel="noreferrer">{linkDisplay}</a>
+                  </li>
+                );
               }
-			  return null
+              return null;
             })}
           </ul>
         </div>
