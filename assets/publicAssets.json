@@ -1,43 +1,86 @@
 [
-	{"Resume": "resume/resume.pdf"},
-	{"Mechanical Resume": "resume/Mechanical/Resume.pdf"},
-	{"Software Resume": "resume/Software/Resume.pdf"},
-	"",
-	{"Extracurricular List": "extracurriculars.pdf"},
-	{"Transcript (95%)": "transcript.pdf"},
-	{"High School Transcript (95%)": "hs-transcript.pdf"},
-	{"AP Exams / AP Scholars Award": "ap-scores.pdf"},
-	"",
-	{"Headshot": "pfps/suit-edited.png"},
-	{"Business Card": "business-card.pdf"},
-	"",
-	{"Shad Certificate": "certifications/shad.pdf"},
-	{"Duke of Edinburgh Bronze Award": "certifications/dukeofed-bronze.pdf"},
-	{"Duke of Edinburgh Silver Award": "certifications/dukeofed-silver.pdf"},
-	{"Responsive Web Design Certificate": "https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design"},
-	{"Canadian Computing Competition Certificate": "certifications/ccc-certificate.pdf"},
-	{"Sustainable Engineering Design Challenge": "certifications/engineering-design-challenge.pdf"},
-	"",
-	{"First Aid": "certifications/first-aid-certificate.pdf"},
-	{"SmartServe": "certifications/smartserve.pdf"},
-	{"WHMIS": "certifications/whmis.pdf"},
-	{"AODA Certificate": "certifications/aoda.pdf"},
-	{"Ontario Health and Safety Certification": "certifications/health-and-safety.pdf"},
-	
-	
-	{"university": [
-		{"Waterloo Mechatronics Offer": "university/admissions/uw-tron.pdf"},
-		{"Waterloo CS Offer": "university/admissions/uw-cs.pdf"},
-		{"Waterloo CS-BBA Offer": "university/admissions/uw-bba-cs.pdf"},
-		{"Carleton Offer": "university/admissions/carleton.pdf"},
-		{"Laurier Offer": "university/admissions/laurier.pdf"},
-		{"UBC Offer": "university/admissions/ubc.pdf"},
-		{"Western Offer": "university/admissions/western.pdf"},
-		"",
-		{"Waterloo Mechatronics Scholarship": "university/scholarships/uw-tron.pdf"},
-		{"Waterloo CS Scholarship": "university/scholarships/uw-cs.pdf"},
-		{"Waterloo CS-BBA Scholarship": "university/scholarships/uw-cs-bba.pdf"},
-		{"Western Scholarship": "university/scholarships/western.pdf"},
-		{"Kinsman Community Scholarship": "university/scholarships/kinsman.pdf"}
-	]}
+	{
+		"name": "Resume",
+		"link": "resume/resume.pdf"
+	},
+	{
+		"name": "Mechanical Resume",
+		"link": "resume/Mechanical/Resume.pdf"
+	},
+	{
+		"name": "Software Resume",
+		"link": "resume/Software/Resume.pdf"
+	},
+	{},
+	{
+		"name": "Extracurricular List",
+		"link": "extracurriculars.pdf"
+	},
+	{
+		"name": "Transcript (95%)",
+		"link": "transcript.pdf"
+	},
+	{
+		"name": "High School Transcript (95%)",
+		"link": "hs-transcript.pdf"
+	},
+	{
+		"name": "AP Exams / AP Scholars Award",
+		"link": "ap-scores.pdf"
+	},
+	{},
+	{
+		"name": "Headshot",
+		"link": "pfps/suit-edited.png"
+	},
+	{
+		"name": "Business Card",
+		"link": "business-card.pdf"
+	},
+	{},
+	{
+		"name": "Shad Certificate",
+		"link": "certifications/shad.pdf"
+	},
+	{
+		"name": "Duke of Edinburgh Bronze Award",
+		"link": "certifications/dukeofed-bronze.pdf"
+	},
+	{
+		"name": "Duke of Edinburgh Silver Award",
+		"link": "certifications/dukeofed-silver.pdf"
+	},
+	{
+		"name": "Responsive Web Design Certificate",
+		"link": "https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design"
+	},
+	{
+		"name": "Canadian Computing Competition Certificate",
+		"link": "certifications/ccc-certificate.pdf"
+	},
+	{
+		"name": "Sustainable Engineering Design Challenge",
+		"link": "certifications/engineering-design-challenge.pdf"
+	},
+	{},
+	{
+		"name": "First Aid",
+		"link": "certifications/first-aid-certificate.pdf"
+	},
+	{
+		"name": "SmartServe",
+		"link": "certifications/smartserve.pdf"
+	},
+	{
+		"name": "WHMIS",
+		"link": "certifications/whmis.pdf"
+	},
+	{
+		"name": "AODA Certificate",
+		"link": "certifications/aoda.pdf"
+	},
+	{
+		"name": "Ontario Health and Safety Certification",
+		"link": "certifications/health-and-safety.pdf"
+	}
 ]
