@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import global from '../../global/global.json';
+import global from '@global/global.json';
 
 const { homepage } = global;
 

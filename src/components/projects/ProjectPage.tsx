@@ -3,10 +3,10 @@ import ReactCompareImage from 'react-compare-image';
 import Helmet from 'react-helmet';
 import { useNavigate, useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
-import global from '../../global/global.json';
 import Tag from '../common/Tags';
 import type { Project } from '@api/projects';
 import { fetchProjectJSON, fetchProjectMarkdown } from '@api/projects';
+import global from '@global/global.json';
 
 const { homepage } = global;
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
-import global from '../../global/global.json';
-import links from '../../global/links.json';
 import WorkItem from './WorkItem';
 import type { UnknownDictionary } from '@api/work';
 import { fetchWorkData } from '@api/work';
+import global from '@global/global.json';
+import links from '@global/links.json';
 
 export default function Workpage() {
 

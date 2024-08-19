@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
-import links from '../../global/links.json';
 import type { BlogPost} from '@api/blogs';
 import { getBlogs } from '@api/blogs';
+import links from '@global/links.json';
 
 export default function Blog() {
 

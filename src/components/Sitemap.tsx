@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
-import global from '../global/global.json';
 import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
+import global from '@global/global.json';
 const { homepage } = global;
 
 export default function Sitemap() {

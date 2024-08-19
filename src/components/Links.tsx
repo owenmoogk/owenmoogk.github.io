@@ -1,5 +1,5 @@
 import React from 'react';
-import links from '../global/links.json';
+import links from '@global/links.json';
 
 export default function Links(props: {
   shown: boolean;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
-import global from '../global/global.json';
 import { type Asset, fetchAssets } from '@api/assets';
+import global from '@global/global.json';
 
 export default function Assets() {
 
