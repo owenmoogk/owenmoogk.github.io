@@ -8,13 +8,14 @@ export default function FeaturedIcon(props: {
     title: string;
     date?: string;
     description?: string;
+    link?: string;
   };
 }) {
 
   const data = props.data;
   const types = data.types.map((x: string) => x.toLowerCase());
   return (
-    <Link to={data.name} style={{ margin: '20px' }} className="featuredIconLink">
+    <Link to={data.link ?? data.name} style={{ margin: '20px' }} className="featuredIconLink">
 
       <div
         className="featuredIcon" style={{
