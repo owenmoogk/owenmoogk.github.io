@@ -1,25 +1,132 @@
-.blogPost{
+:root {
+	--all:rgb(135, 206, 235);
+	--internet:rgb(135, 206, 235);
+	--tech:rgb(135, 206, 235);
+	--personal:rgb(135, 206, 235);
+}
+
+.blogPost {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: start;
 	text-align: left;
-	margin-top: 30px;
-	
-	.blogContent{
-		line-height: 1.5em;
+	margin: 20px 0;
+	padding: 15px 20px;
+	justify-content: space-between;
+	transition: 0.3s;
+	border-radius: 20px;
+
+	&:hover{
+		background-color: rgba(255,255,255,0.1)
 	}
 
-	h3{
-		margin: 0;
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		flex: 1;
+		min-height: 100px;
+
+		h3 {
+			margin: 0;
+			margin-right: 50px;
+			margin-bottom: 5px;
+			font-size: 23px;
+		}
+
+		.postTitle {
+			color: var(--text-color);
+		}
 	}
 
-	.postTitle{
-		color: var(--text-color);
-
+	.image {
+		height: 120px;
+		max-width: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		img {	
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			border-radius: 10px;
+		}
 	}
 }
 
-#blogPage{
+
+#blogPage {
 	width: min(700px, 90%);
 	margin: auto;
+
+	.title {
+		font-size: 35px;
+		text-align: left;
+	}
+
+	.tags {
+		display: flex;
+		justify-content: left;
+
+		span {
+			margin-left: 0;
+			margin-right: 10px;
+		}
+	}
+
+	.meta {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
+
+		.author {
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: fit-content;
+			height: fit-content;
+			margin: 20px 0;
+
+			.headshot {
+				border-radius: 50%;
+				height: 40px;
+				width: 40px;
+				margin: 0;
+			}
+
+			.text {
+				display: flex;
+				flex-direction: column;
+				margin: 0 10px;
+
+				p {
+					margin: 0;
+					font-style: italic;
+
+				}
+
+				.date {
+					color: var(--grey);
+					font-size: 12px;
+				}
+			}
+		}
+
+	}
+
+	
+}
+
+.blogPostPage{
+	img {
+		max-width: min(100%, 500px);
+		max-height: 500px;
+		border-radius: 30px;
+		margin: 25px auto;
+		display: block;
+	}
 }

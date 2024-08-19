@@ -1,35 +1,105 @@
+import { load as ymlLoad } from 'js-yaml';
+import links from '@global/links.json';
+
 export type BlogPost = {
   title: string;
-  link: string;
+  file_name: string;
+  markdownLink: string;
   date: Date;
-  content: string;
-};
+  tags: string[];
+  image: string;
+}
 
-const corsProxy = 'https://cors.eu.org/';
-const url = 'https://medium.com/feed/@owenmoogk';
+type APIBlogPost = {
+  date: string;
+  title: string;
+  tags: string[];
+  image: string;
+  file_path: string;
+  file_name: string;
+}
 
 export async function getBlogs() {
-  const response = await fetch(corsProxy + url);
-  const text = await response.text();
-  const xml = new window.DOMParser().parseFromString(text, 'text/xml');
-
+  const response = await fetch(links.blogs + '/metadata.json');
+  const json = await response.json() as APIBlogPost[];
   const posts: BlogPost[] = [];
-  for (const post of xml.getElementsByTagName('item')) {
-    const postObject: BlogPost = {
-      title: post.getElementsByTagName('title')[0].textContent ?? '',
-      link: post.getElementsByTagName('link')[0].textContent ?? '',
-      date: new Date(Date.parse((post.getElementsByTagName('pubDate')[0] as HTMLElement).textContent ?? '')),
-      content: new window.DOMParser().parseFromString((post.getElementsByTagName('content:encoded')[0] as HTMLElement).textContent?.replaceAll('<br>', ' ').replaceAll('</p><p>', ' ') ?? '', 'text/html').body.innerText,
-    };
-    // cut off the content at the end of a word, and add ...
-    let cutoffIndex = 300;
-    while (postObject.content[cutoffIndex] !== ' ') {
-      cutoffIndex -= 1;
-    }
-    postObject.content = postObject.content.substring(0, cutoffIndex);
-    postObject.content += '...';
+  json.forEach(post => {
 
-    posts.push(postObject);
+    const {file_path, date, ...postData} = post;
+    const newPost = {
+      ...postData,
+      // eslint-disable-next-line camelcase
+      markdownLink: file_path,
+      date: new Date(date)
+    };
+    posts.push(newPost);
+  });
+  // sorting so newest are first
+  posts.sort((a, b) => b.date.getTime() - a.date.getTime());
+  return (posts);
+}
+
+export async function getBlog(name: string) {
+  const response = await fetch('https://owenmoogk.github.io/blogs/blogs/' + name + '.md');
+  const text = await response.text();
+  const { frontmatter, content } = extractFrontmatter(text);
+  const blog = frontmatter as unknown as BlogPost;
+  return {content, blog};
+}
+
+function extractFrontmatter(markdown: string) {
+  const frontmatterMatch = markdown.match(/^---[\s\S]*?---/);
+  const json: { [key: string]: unknown } = {}; // Use `any` to accommodate various data types
+  if (frontmatterMatch) {
+    const frontmatter = frontmatterMatch[0];
+    const content = markdown.slice(frontmatter.length).trim();
+
+    // Extract frontmatter content
+    const frontmatterContent = frontmatter
+      .replace(/^---\n/, '')
+      .replace(/\n---$/, '');
+
+    try {
+      // Parse YAML frontmatter to JSON
+      const parsedFrontmatter = ymlLoad(frontmatterContent);
+      Object.assign(json, parsedFrontmatter);
+    } catch (e) {
+      console.error('Error parsing YAML frontmatter:', e);
+    }
+
+    return { frontmatter: json, content };
   }
-  return posts;
+  // No frontmatter found
+  return { frontmatter: null, content: markdown };
+
+}
+
+export function parseMarkdown(content: string) {
+
+  function removeFirstLine(content: string) {
+    const lines = content.split('\n');
+    lines.shift(); // Remove the first line (the title is already displayed)
+    return lines.join('\n');
+  }
+
+  function fixRelativeLinks(content: string) {
+    const imageRegex = /!\[.*?\]\(([^)]+)\)/g;
+
+    // Replace the relative image links with absolute URLs
+    content = content.replace(imageRegex, (match, p1) => {
+      // Check if the link is already absolute
+      if (p1.startsWith('http') || p1.startsWith('https')) {
+        return match; // Return as is if it's already absolute
+      }
+      // Otherwise, prepend the base URL
+      return match.replace(p1, links.blogs + p1);
+    });
+    content = content.replaceAll('..', '');
+    return content;
+
+  }
+  content = removeFirstLine(content);
+  content = fixRelativeLinks(content);
+  console.log(content);
+  return content;
 }

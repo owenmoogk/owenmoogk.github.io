@@ -1,13 +1,15 @@
+import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
+import links from '../../global/links.json';
+import FilterButton from '../common/FilterButton';
 import type { BlogPost} from '@api/blogs';
 import { getBlogs } from '@api/blogs';
-import links from '@global/links.json';
 
 export default function Blog() {
 
   const [ blogData, setBlogData ] = useState<BlogPost[]>();
+  const [ filter, setFilter ] = useState<string>('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,21 +20,27 @@ export default function Blog() {
 
   return (
     <div className="main">
-      <Helmet>
-        <title>{'Blog - Owen Moogk'}</title>
-      </Helmet>
-      <p className="title">Blog</p>
+      <p className="title">Notes</p>
+      <p className="subtitle">For everything goin' on up there.</p>
+      <div id="sortingContainer">
+        <div id="buttonContainer">
+          <FilterButton name="Personal" displayName="Personal Reflections" setFilter={setFilter} filter={filter} />
+          <FilterButton name="internet" displayName="Internet Bits" setFilter={setFilter} filter={filter} />
+          <FilterButton name="Tech" displayName="Technology" setFilter={setFilter} filter={filter} />
+          <FilterButton name="All" handle="" setFilter={setFilter} filter={filter} />
+        </div>
+      </div>
       <div id="blogPage">
         {
-          blogData?.map((post, key) => <>
-            <BlogItem post={post} key={key} />
-            <hr />
-          </>)
-          ??
-            <p style={{ textAlign: 'center' }}>Loading blogs...</p>
+          blogData?.map((post, key) => {
+            const postTags = post.tags.map(item => item.replace(' ', '_').toLowerCase());
+            if (postTags.includes(filter) || filter === '') {
+              return (<BlogItem post={post} key={key} />);
+            }
+            return null;
+          })
+          ?? <p style={{ textAlign: 'center' }}>Loading blogs...</p>
         }
-        <br />
-        <p style={{ textAlign: 'center' }}>... read more on <a href={links.medium} target="_blank" rel="noreferrer">Medium</a></p>
         <br />
       </div>
     </div>
@@ -42,41 +50,19 @@ export default function Blog() {
 function BlogItem(props: {
   post: BlogPost;
 }) {
-
-  function formatDate(date: Date) {
-    // Define months array for formatting
-    const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ];
-
-    // Extract date components
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-
-    // Format the date string
-    const formattedDate = month + ' ' + day + ', ' + year;
-
-    return formattedDate;
-  }
-
   const post = props.post;
   return (
-    <div className="blogPost">
-      <h3><a href={post.link} className="postTitle" target="_blank" rel="noreferrer">{post.title}</a></h3>
-      <p className="subtitle">{formatDate(post.date)}</p>
-      <p className="blogContent">{post.content} &nbsp; <a href={post.link} target="_blank" rel="noreferrer">continue on Medium</a></p>
-    </div>
+    <Link to={post.file_name}>
+      <div className="blogPost">
+        <div className="text">
+          <h3>{post.title}</h3>
+          <p className="subtitle">{format(post.date, 'MMMM d, yyyy')}</p>
+        </div>
+        <div className="image">
+          <img src={links.blogs+ '/' + post.image} alt="" />
+        </div>
+
+      </div>
+    </Link>
   );
 }

@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import {
   Navigate,
+  Outlet,
   Route,
   BrowserRouter as Router,
   Routes,
 } from 'react-router-dom';
 import Assets from './components/Assets';
 import Blog from './components/blog/Blog';
+import BlogPost from './components/blog/BlogPost';
 import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
 import Nav from './components/Nav';
 import NotFoundPage from './components/NotFoundPage';
-import ProjectRouter from './components/ProjectRouter';
 import './main.css';
+import ProjectDirectory from './components/projects/ProjectDirectory';
+import ProjectPage from './components/projects/ProjectPage';
 import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
+import Projects from '@components/projects/Projects';
 
 function Redirect() {
   window.location.replace('https://github.com/owenmoogk/');
@@ -44,8 +49,15 @@ export default function App() {
       <Router>
         <Nav toggleDarkMode={toggleDarkMode} />
         <Routes>
-          <Route path="/projects/*" element={<ProjectRouter />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/projects" element={<HelmetTitle name="Projects" />}>
+            <Route index element={<Projects />} />
+            <Route path="directory" element={<ProjectDirectory />} />
+            <Route path=":name" element={<ProjectPage />} />
+          </Route>
+          <Route path="/notes" element={<HelmetTitle name="Notes" />}>
+            <Route index element={<Blog />} />
+            <Route path=":name" element={<BlogPost />} />
+          </Route>
           <Route path="/work" element={<Workpage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/assets" element={<Assets />} />
@@ -56,6 +68,19 @@ export default function App() {
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
       </Router>
+    </>
+  );
+}
+
+function HelmetTitle(props: {
+  name: string;
+}) {
+  return (
+    <>
+      <Helmet>
+        <title>{props.name + ' - Owen Moogk'}</title>
+      </Helmet>
+      <Outlet />
     </>
   );
 }
