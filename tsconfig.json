@@ -9,10 +9,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
       "@components/*": [
-        "src/components/*"
+        "components/*"
+      ],
+      "@api/*": [
+        "api/*"
       ]
     }
   },

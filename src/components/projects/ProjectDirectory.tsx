@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { fetchProjects } from '../../api/projects';
-import type { Project } from '../../api/types';
 import FilterButton from '../common/FilterButton';
 import ProjectIcon from './ProjectIcon';
+import type { Project } from '@api/projects';
+import { fetchProjects } from '@api/projects';
 
 export default function ProjectDirectory() {
 

@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { getBlogs } from '../../api/blogs';
+import { useNavigate } from 'react-router';
 import links from '../../global/links.json';
-
-export type BlogPost = {
-  title: string;
-  link: string;
-  date: Date;
-  content: string;
-};
+import type { BlogPost} from '@api/blogs';
+import { getBlogs } from '@api/blogs';
 
 export default function Blog() {
 
   const [ blogData, setBlogData ] = useState<BlogPost[]>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getBlogs()
       .then(posts => setBlogData(posts))
-      .catch(e => console.log(e));
-  }, []);
+      .catch(() => navigate('/404'));
+  }, [ navigate ]);
 
   return (
     <div className="main">

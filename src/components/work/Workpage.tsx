@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
-import type { UnknownDictionary } from '../../api/types';
 import global from '../../global/global.json';
 import links from '../../global/links.json';
 import WorkItem from './WorkItem';
+import type { UnknownDictionary } from '@api/work';
+import { fetchWorkData } from '@api/work';
 
 export default function Workpage() {
 
@@ -20,10 +21,9 @@ export default function Workpage() {
   ];
 
   useEffect(() => {
-    fetch('/assets/work.json')
-      .then(response => response.json() as unknown as UnknownDictionary)
-      .then(json => setWorkData(json))
-      .catch(() => console.log('error'));
+    fetchWorkData()
+      .then(response => setWorkData(response))
+      .catch(() => navigate('/404'));
   }, [ navigate ]);
 
   return (

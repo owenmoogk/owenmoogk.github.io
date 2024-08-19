@@ -1,4 +1,9 @@
-import type { BlogPost } from '@components/blog/Blog';
+export type BlogPost = {
+  title: string;
+  link: string;
+  date: Date;
+  content: string;
+};
 
 const corsProxy = 'https://cors.eu.org/';
 const url = 'https://medium.com/feed/@owenmoogk';

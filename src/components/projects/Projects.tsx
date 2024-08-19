@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { fetchProjects } from '../../api/projects';
-import type { Project } from '../../api/types';
 import FilterButton from '../common/FilterButton';
 import FeaturedIcon from './FeaturedIcon';
+import type { Project } from '@api/projects';
+import { fetchProjects } from '@api/projects';
 
 export default function ProjectPage() {
 
@@ -14,7 +14,7 @@ export default function ProjectPage() {
   useEffect(() => {
     fetchProjects()
       .then(data => setProjectData(data))
-      .catch(e => console.log(e));
+      .catch(() => navigate('/404'));
   }, [ navigate ]);
 
   return (

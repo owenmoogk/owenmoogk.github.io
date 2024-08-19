@@ -2,22 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
 import global from '../global/global.json';
+import { type Asset, fetchAssets } from '@api/assets';
 
 export default function Assets() {
-
-  type Asset = {
-    name?: string;
-    link?: string;
-  };
 
   const [ data, setData ] = useState<Asset[]>();
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('./publicAssets.json')
-      .then(response => response.json() as unknown as Asset[])
-      .then((json: Asset[]) => setData(json))
-      .catch(() => console.log('error'));
+    fetchAssets()
+      .then(response => setData(response))
+      .catch(() => navigate('/404'));
   }, [ navigate ]);
 
   return (

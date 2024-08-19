@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { getRandomInt, loadSplashes } from '../../api/homepage';
 import global from '../../global/global.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
+import { getRandomInt, loadSplashes } from '@api/homepage';
 
 export default function Homepage() {
 

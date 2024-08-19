@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { StringDictionary } from '../../api/types';
+import type { StringDictionary } from '@api/work';
 
 export default function WorkItem(props: {
   data: StringDictionary;

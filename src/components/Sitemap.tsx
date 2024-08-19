@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { fetchProjects } from '../api/projects';
-import type { Project } from '../api/types';
+import { useNavigate } from 'react-router';
 import global from '../global/global.json';
+import type { Project } from '@api/projects';
+import { fetchProjects } from '@api/projects';
 const { homepage } = global;
 
 export default function Sitemap() {
 
   const [ projectData, setProjectData ] = useState<Project[]>();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchProjects()
       .then(response => setProjectData(response))
-      .catch(() => null);
-  }, []);
+      .catch(() => navigate('/404'));
+  }, [ navigate ]);
 
   return (
     <div className="main" id="resourcePage">

@@ -1,4 +1,17 @@
-import type { Project } from './types';
+export type Project = {
+  name: string;
+
+  title: string;
+  date: string;
+
+  types: string[];
+  featured: boolean;
+
+  githubLink: string;
+  externalLink: string;
+
+  description: string;
+};
 
 export async function fetchProjects() {
 
