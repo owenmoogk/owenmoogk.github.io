@@ -96,7 +96,13 @@
 		],
 		"block-spacing": "error",
 		"brace-style": "off",
-		"camelcase": "error",
+		"camelcase": [
+			"error",
+			{
+				"properties": "never",
+				"ignoreDestructuring": true
+			}
+		],
 		"comma-dangle": "off",
 		"comma-style": "error",
 		"computed-property-spacing": "error",
