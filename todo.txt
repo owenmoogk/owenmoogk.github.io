@@ -32,3 +32,6 @@ From todoist:
 	conways game of life
 	email bot
 	busplanner
+
+
+nav has a bug on mobile where it doesn't close
