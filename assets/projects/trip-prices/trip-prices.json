@@ -1,0 +1,10 @@
+{
+    "title": "Trip Prices",
+    "date": "October 12, 2023",
+    "types": [
+        "React",
+        "Django"
+    ],
+    "description": "Trip price tracking application.",
+    "featured": true
+}

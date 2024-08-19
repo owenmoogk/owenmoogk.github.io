@@ -1,0 +1,11 @@
+{
+    "title": "Rocket Calculator",
+    "date": "May 26, 2021",
+    "types": [
+        "React",
+        "Javascript"
+    ],
+    "description": "A website to calculate a rocket's trajectory.",
+    "externalLink": "rocket-calculator",
+    "featured": false
+}

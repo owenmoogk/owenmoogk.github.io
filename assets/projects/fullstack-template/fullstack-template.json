@@ -1,0 +1,9 @@
+{
+    "title": "Fullstack Template",
+    "date": "April 15, 2021",
+    "types": [
+        "React",
+        "Django"
+    ],
+    "description": "React and Django fullstack outline with user authentication, using JWT"
+}

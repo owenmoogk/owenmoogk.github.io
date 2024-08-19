@@ -1,0 +1,10 @@
+{
+    "title": "Color Picker",
+    "date": "February 15, 2021",
+    "externalLink": "color-picker",
+    "types": [
+        "Javascript"
+    ],
+    "description": "Web app for getting pixel data of an image.",
+    "featured": true
+}

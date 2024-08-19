@@ -1,0 +1,8 @@
+{
+    "title": "Email Bot",
+    "date": "January 6, 2021",
+    "types": [
+        "Python"
+    ],
+    "description": "App designed to send emails automatically, to the masses."
+}

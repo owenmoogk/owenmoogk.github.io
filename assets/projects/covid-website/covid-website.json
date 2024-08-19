@@ -1,0 +1,11 @@
+{
+    "title": "COVID Health App",
+    "date": "May 22, 2021",
+    "githubLink": "https://github.com/owenmoogk/covid-health-app",
+    "types": [
+        "React",
+        "Javascript"
+    ],
+    "description": "A COVID health tracking app, built for a hackathon.",
+    "featured": false
+}

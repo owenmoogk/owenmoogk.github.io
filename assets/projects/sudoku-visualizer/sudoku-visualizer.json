@@ -1,0 +1,10 @@
+{
+    "title": "Sudoku Visualizer",
+    "date": "February 18, 2021",
+    "externalLink": "sudoku-visualizer",
+    "types": [
+        "Javascript"
+    ],
+    "description": "A sudoku solver website, which can visualize the algorithm.",
+    "featured": true
+}

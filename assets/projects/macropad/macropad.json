@@ -1,0 +1,11 @@
+{
+    "title": "Macropad",
+    "date": "November 30, 2021",
+    "types": [
+        "Python",
+        "C++",
+        "Solidworks"
+    ],
+    "description": "A homemade macropad for custom keycommands.",
+    "featured": true
+}

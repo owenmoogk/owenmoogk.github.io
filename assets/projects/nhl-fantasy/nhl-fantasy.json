@@ -1,0 +1,8 @@
+{
+    "title": "NHL Fantasy App",
+    "date": "March 24, 2021",
+    "types": [
+        "Django"
+    ],
+    "description": "Fantasy sports app, built using an NHL API and Django backend."
+}

@@ -1,0 +1,12 @@
+{
+    "title": "Eco Flow",
+    "date": "July 30, 2020",
+    "types": [
+        "React",
+        "Solidworks",
+        "C++"
+    ],
+    "description": "SHAD 2021 Project, designing a system to reduce water usage.",
+    "externalLink": "ecoflow",
+    "featured": true
+}
