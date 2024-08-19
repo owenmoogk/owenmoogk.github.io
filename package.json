@@ -1,5 +1,5 @@
 {
-  "homepage": "https://owenmoog.github.io/",
+  "homepage": "https://owenmoogk.github.io/",
   "name": "owenmoogk.github.io",
   "private": true,
   "version": "0.0.0",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@types/react-helmet": "^6.1.11",
+    "js-yaml": "^4.1.0",
     "react": "^18.3.1",
     "react-compare-image": "^3.4.0",
     "react-dom": "^18.3.1",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
