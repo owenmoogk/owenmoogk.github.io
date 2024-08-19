@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { fetchProjects } from '../api/projects';
 import type { Project } from '../api/types';
 import global from '../global/global.json';
 const { homepage } = global;
@@ -8,37 +9,10 @@ export default function Sitemap() {
 
   const [ projectData, setProjectData ] = useState<Project[]>();
 
-  function fetchProjects() {
-    const tmpProjectData: Project[] = [];
-    fetch('/assets/projectDirectory.json')
-      .then(async response => response.json())
-      .then(projectUrls => {
-        const requests = [];
-        for (const projectUrl of projectUrls) {
-          requests.push(fetch('/assets/projects/' + projectUrl + '/' + projectUrl + '.json')
-            .then(async response => response.json())
-            .then(currentProjectData => {
-              tmpProjectData.push({ ...currentProjectData, name: projectUrl });
-            })
-            .catch(() => console.log(projectUrl)));
-        }
-        // once all the loading is done
-        Promise.all(requests)
-          .then(function () {
-          // make sure they are in the proper order, sort by name
-            tmpProjectData.sort((a, b) => {
-              return (projectUrls.indexOf(a.name) - projectUrls.indexOf(b.name));
-            });
-
-            setProjectData(tmpProjectData);
-          })
-          .catch(() => null);
-      })
-      .catch(() => null);
-  }
-
   useEffect(() => {
-    fetchProjects();
+    fetchProjects()
+      .then(response => setProjectData(response))
+      .catch(() => null);
   }, []);
 
   return (

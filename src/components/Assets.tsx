@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
 import global from '../global/global.json';
@@ -15,9 +15,9 @@ export default function Assets() {
 
   useEffect(() => {
     fetch('./publicAssets.json')
-      .then(async response => response.json())
+      .then(response => response.json() as unknown as Asset[])
       .then((json: Asset[]) => setData(json))
-      .catch(() => navigate('/404'));
+      .catch(() => console.log('error'));
   }, [ navigate ]);
 
   return (

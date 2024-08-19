@@ -1,5 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import global from '../../global/global.json';
+
 const { homepage } = global;
 
 export default function ProjectIcon(props: {
@@ -14,7 +16,7 @@ export default function ProjectIcon(props: {
 }) {
 
   const data = props.data;
-  const githubLink = data.githubLink !== undefined ? data.githubLink : 'https://github.com/owenmoogk/' + data.name;
+  const githubLink = data.githubLink ?? 'https://github.com/owenmoogk/' + data.name;
   const types = data.types.map((x: string) => x.toLowerCase());
   const primaryType = types[0] ?? '';
   let externalLink = data.externalLink?.includes('https://') ? data.externalLink : homepage + data.externalLink;
@@ -25,7 +27,7 @@ export default function ProjectIcon(props: {
     <Link to={'../' + data.name}>
 
       {/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
-      <div className={'content ' + primaryType + 'Tile ' + types}>
+      <div className={'content ' + primaryType + 'Tile ' + types.join(' ')}>
 
         <div>
           <span className="contentTitle">{data.title}</span>

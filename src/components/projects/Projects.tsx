@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { fetchProjects } from '../../api/projects';
 import type { Project } from '../../api/types';
@@ -14,7 +14,7 @@ export default function ProjectPage() {
   useEffect(() => {
     fetchProjects()
       .then(data => setProjectData(data))
-      .catch(() => navigate('/404'));
+      .catch(e => console.log(e));
   }, [ navigate ]);
 
   return (

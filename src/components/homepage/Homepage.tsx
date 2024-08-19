@@ -1,28 +1,23 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { getRandomInt, loadSplashes } from '../../api/homepage';
 import global from '../../global/global.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
 
 export default function Homepage() {
 
-  const [ splash, setSplash ] = useState('Mechatronics Engineering Student');
+  const defaultSplash = 'Mechatronics Engineering Student';
+  const [ splash, setSplash ] = useState(defaultSplash);
+  const [ splashes, setSplashes ] = useState<string[]>();
 
-  function loadSplash() {
-    fetch('/assets/splashes.json')
-      .then(async response => response.json())
-      .then(json => {
-        const index = getRandomInt(0, json.length - 1);
-        const item = json[index];
-        setSplash(item);
-      })
-      .catch(() => null); // do nothing, it's not that important
-  }
+  useEffect(() => {
+    loadSplashes()
+      .then(response => setSplashes(response))
+      .catch(() => null);
+  }, []);
 
-  // from https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
-  function getRandomInt(min: number, max: number) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return (Math.floor(Math.random() * (max - min + 1)) + min);
+  function changeSplash() {
+    setSplash(splashes ? splashes[getRandomInt(0, splashes?.length)] : defaultSplash);
   }
 
   return (
@@ -37,7 +32,7 @@ export default function Homepage() {
             <br />
             <span className="special">Owen Moogk</span>
           </div>
-          <p className="subtitle" id="splash" onClick={() => loadSplash()}>{splash}</p>
+          <p className="subtitle" id="splash" onClick={() => changeSplash()}>{splash}</p>
         </div>
         <div className="photo" id="pfp">
           <img src={global.assets + 'pfps/suit-edited-square.png'} alt="" />

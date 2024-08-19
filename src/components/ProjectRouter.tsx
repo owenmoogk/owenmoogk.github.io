@@ -1,3 +1,4 @@
+import React from 'react';
 import Helmet from 'react-helmet';
 import {
   Route,
@@ -8,7 +9,6 @@ import ProjectPage from './projects/ProjectPage';
 import Projects from './projects/Projects';
 
 export default function ProjectRouter() {
-
   return (
     <>
       <Helmet>

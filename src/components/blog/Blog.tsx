@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import Helmet from 'react-helmet';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { getBlogs } from '../../api/blogs';
 import links from '../../global/links.json';
-import { getBlogs } from 'src/api/blogs';
 
 export type BlogPost = {
   title: string;

@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import Helmet from 'react-helmet';
 import { useNavigate, useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
+import { fetchProjectJSON, fetchProjectMarkdown } from '../../api/projects';
 import type { Project } from '../../api/types';
 import global from '../../global/global.json';
 import Tag from '../common/Tags';
+
 const { homepage } = global;
 
 export default function ProjectPage() {
@@ -16,20 +18,15 @@ export default function ProjectPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const jsonLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + '.json';
-    const mdLink = process.env.PUBLIC_URL + '/assets/projects/' + name + '/' + name + '.md';
 
-    fetch(jsonLink)
-      .then(async response => response.json())
-      .then(json => setMetaData(json))
-      .catch(() => {
-        (document.getElementById('projectBody') as HTMLElement).innerHTML = "<div class='title'>Could not load page :/</div><p class='subtitle'>Probably still in development</p>";
-      });
+    fetchProjectJSON(name ?? '')
+      .then(response => setMetaData(response))
+      .catch(() => null);
 
-    fetch(mdLink)
-      .then(async response => response.text())
-      .then(text => setProjectData(text))
-      .catch(() => navigate('/404'));
+    fetchProjectMarkdown(name ?? '')
+      .then(response => setProjectData(response))
+      .catch(() => null);
+
   }, [ name, navigate ]);
 
   // this is really stupid and is fully bad practice,
@@ -56,10 +53,10 @@ export default function ProjectPage() {
     // it's called a 'capture group' in regex
     // however, it doesn't match anything with https:// because that means it's an external link
     // also, it doesn't match anything that starts with a slash, because that means it wants the root directory (eg "contact me" is /contact, and not the project dir)
-    data = data.replaceAll(/\]\((?!https?:\/\/)(?!\/)(.+?)(?=(.+))/g, `](${process.env.PUBLIC_URL}/assets/projects/${name}/$1`);
+    data = data.replaceAll(/\]\((?!https?:\/\/)(?!\/)(.+?)(?=(.+))/g, `](/assets/projects/${name}/$1`);
 
     // replace the src on video tags
-    data = data.replaceAll(/<video src=("|')(.+?)\1><\/video>/g, `<video src="${process.env.PUBLIC_URL}/assets/projects/${name}/$2" controls></video>`);
+    data = data.replaceAll(/<video src=("|')(.+?)\1><\/video>/g, `<video src="/assets/projects/${name}/$2" controls></video>`);
 
     return (data);
   }

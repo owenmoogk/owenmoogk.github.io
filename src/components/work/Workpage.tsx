@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router';
 import type { UnknownDictionary } from '../../api/types';
@@ -20,10 +20,10 @@ export default function Workpage() {
   ];
 
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + '/assets/work.json')
-      .then(async response => response.json())
-      .then((json: UnknownDictionary) => setWorkData(json))
-      .catch(() => navigate('/404'));
+    fetch('/assets/work.json')
+      .then(response => response.json() as unknown as UnknownDictionary)
+      .then(json => setWorkData(json))
+      .catch(() => console.log('error'));
   }, [ navigate ]);
 
   return (
