@@ -1,53 +1,43 @@
 {
-	"homepage": "https://owenmoogk.github.io/",
-	"name": "personal-website",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@types/js-yaml": "^4.0.9",
-		"@types/react": "^18.3.3",
-		"@types/react-dom": "^18.3.0",
-		"@types/react-helmet": "^6.1.11",
-		"concurrently": "^8.2.2",
-		"gh-pages": "^6.1.1",
-		"js-yaml": "^4.1.0",
-		"less-watch-compiler": "^1.16.3",
-		"react": "^18.3.1",
-		"react-compare-image": "^3.4.0",
-		"react-helmet": "^6.1.0",
-		"react-router": "^6.26.0",
-		"react-router-dom": "^6.26.0",
-		"react-scripts": "^5.0.1",
-		"react-showdown": "^2.3.1"
-	},
-	"scripts": {
-		"start": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"react-scripts start\"",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"eslint-import-resolver-typescript": "^3.6.1",
-		"eslint-plugin-import": "^2.29.1"
-	}
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@types/react-helmet": "^6.1.11",
+    "concurrently": "^8.2.2",
+    "eslint-define-config": "^2.1.0",
+    "react": "^18.3.1",
+    "react-compare-image": "^3.4.0",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.26.1",
+    "react-router-dom": "^6.26.1",
+    "react-showdown": "^2.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1",
+    "vite-plugin-eslint": "^1.8.1"
+  }
 }
