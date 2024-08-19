@@ -22,10 +22,9 @@
 	"rules": {
 		"no-console": "warn",
 		"@typescript-eslint/no-unused-vars": [
-			"error"
+			"error",
+			{}
 		],
-		"react/prop-types": "off",
-		"react/react-in-jsx-scope": "off",
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"array-callback-return": "error",
