@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
+
 import WorkItem from './WorkItem';
-import type { UnknownDictionary } from '@api/work';
+import type { StringDictionary, UnknownDictionary } from '@api/work';
 import { fetchWorkData } from '@api/work';
 import global from '@global/global.json';
 import links from '@global/links.json';
 
 export default function Workpage() {
-
-  const [ workData, setWorkData ] = useState<UnknownDictionary>({});
+  const [workData, setWorkData] = useState<UnknownDictionary>({});
   const navigate = useNavigate();
 
   const categories = [
@@ -22,9 +22,9 @@ export default function Workpage() {
 
   useEffect(() => {
     fetchWorkData()
-      .then(response => setWorkData(response))
+      .then((response) => setWorkData(response))
       .catch(() => navigate('/404'));
-  }, [ navigate ]);
+  }, [navigate]);
 
   return (
     <div className="main" id="workPage">
@@ -32,26 +32,44 @@ export default function Workpage() {
         <title>Work - Owen Moogk</title>
       </Helmet>
       <p className="title">Work</p>
-      <p className="subtitle">Connect with me on <a href={links.linkedIn} target="_blank" rel="noreferrer">LinkedIn</a><br />or have a look at my <a href={global.resume} target="_blank" rel="noreferrer">Resume</a></p>
+      <p className="subtitle">
+        Connect with me on{' '}
+        <a href={links.linkedIn} target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
+        <br />
+        or have a look at my{' '}
+        <a href={global.resume} target="_blank" rel="noreferrer">
+          Resume
+        </a>
+      </p>
       <div id="workItems">
         {categories.map((category, key) => {
           const sectionData = workData[category.toLowerCase()];
-          return(
+          return (
             <div key={key}>
               <h1>{category}</h1>
               <div className="workCategory" key={key}>
-                {Array.isArray(sectionData) ? sectionData.map((item, itemKey) => {
-                  return(
-                    <WorkItem key={itemKey} data={item} />
-                  );
-                }) : null}
+                {Array.isArray(sectionData) &&
+                  sectionData.map((item: StringDictionary, itemKey) => {
+                    return <WorkItem key={itemKey} data={item} />;
+                  })}
               </div>
             </div>
           );
         })}
       </div>
-      <p className="subtitle">A condensed version of my working documents can be found <a href="/assets">here</a>.</p>
-      <p className="subtitle">And for anyone really curious: <a href={global.extracurriculars} target="_blank" rel="noreferrer">everything I've ever done</a>.</p>
+      <p className="subtitle">
+        A condensed version of my working documents can be found{' '}
+        <a href="/assets">here</a>.
+      </p>
+      <p className="subtitle">
+        And for anyone really curious:{' '}
+        <a href={global.extracurriculars} target="_blank" rel="noreferrer">
+          everything I've ever done
+        </a>
+        .
+      </p>
     </div>
   );
 }

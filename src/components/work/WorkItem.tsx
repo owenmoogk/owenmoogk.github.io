@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
+
 import type { StringDictionary } from '@api/work';
 
-export default function WorkItem(props: {
-  data: StringDictionary;
-}) {
-
-  const [ collapsed, setCollapsed ] = useState(true);
+export default function WorkItem(props: { data: StringDictionary }) {
+  const [collapsed, setCollapsed] = useState(true);
   const data = props.data;
 
   // parse the dates
@@ -61,14 +59,22 @@ export default function WorkItem(props: {
     if (data.summary) {
       return (
         <div className="content" style={{ height: collapsed ? '0' : '' }}>
-          <p dangerouslySetInnerHTML={{ __html: data.summary.replaceAll('\n', '<br>').replaceAll('\t', '&nbsp&nbsp') }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.summary
+                .replaceAll('\n', '<br>')
+                .replaceAll('\t', '&nbsp&nbsp'),
+            }}
+          />
         </div>
       );
     }
     if (data.url) {
       return (
         <div className="content" style={{ height: collapsed ? '0' : '' }}>
-          <p><a href={data.url}>Certification</a></p>
+          <p>
+            <a href={data.url}>Certification</a>
+          </p>
         </div>
       );
     }
@@ -77,15 +83,28 @@ export default function WorkItem(props: {
 
   return (
     <div className="workItem">
-
-      {data.summary || data.url
-        ? <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
-          <div className="svg"><svg style={{ transition: '0.3s', transform: !collapsed ? 'rotate(90deg)' : 'rotate(0deg' }} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" /></svg></div>
+      {data.summary || data.url ? (
+        <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
+          <div className="svg">
+            <svg
+              style={{
+                transition: '0.3s',
+                transform: !collapsed ? 'rotate(90deg)' : 'rotate(0deg',
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+            </svg>
+          </div>
         </div>
-        : <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
+      ) : (
+        <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
           <div className="svg" />
         </div>
-      }
+      )}
 
       <div className="text">
         <div className="titleBlock" onClick={() => setCollapsed(!collapsed)}>

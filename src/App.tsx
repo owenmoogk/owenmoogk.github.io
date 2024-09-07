@@ -7,6 +7,7 @@ import {
   BrowserRouter as Router,
   Routes,
 } from 'react-router-dom';
+
 import Assets from './components/Assets';
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
@@ -14,21 +15,22 @@ import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
 import Nav from './components/Nav';
 import NotFoundPage from './components/NotFoundPage';
-import './main.css';
 import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';
 import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
+import './main.css';
 import Projects from '@components/projects/Projects';
 
 function Redirect() {
   window.location.replace('https://github.com/owenmoogk/');
-  return (<></>);
+  return null;
 }
 
 export default function App() {
-
-  const [ darkMode, setDarkMode ] = useState(localStorage.getItem('darkmode') !== 'false');
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem('darkmode') !== 'false'
+  );
 
   function toggleDarkMode() {
     localStorage.setItem('darkmode', darkMode ? 'false' : 'true');
@@ -36,10 +38,16 @@ export default function App() {
   }
 
   function updateDarkMode(darkMode: boolean) {
-    if (darkMode) { document.body.classList.add('dark'); } else { document.body.classList.remove('dark'); }
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
   }
 
-  useEffect(() => { updateDarkMode(darkMode); }, [ darkMode ]);
+  useEffect(() => {
+    updateDarkMode(darkMode);
+  }, [darkMode]);
 
   updateDarkMode(darkMode);
 
@@ -72,9 +80,7 @@ export default function App() {
   );
 }
 
-function HelmetTitle(props: {
-  name: string;
-}) {
+function HelmetTitle(props: { name: string }) {
   return (
     <>
       <Helmet>

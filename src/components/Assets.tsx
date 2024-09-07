@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
+
 import { type Asset, fetchAssets } from '@api/assets';
 import global from '@global/global.json';
 
 export default function Assets() {
-
-  const [ data, setData ] = useState<Asset[]>();
+  const [data, setData] = useState<Asset[]>();
   const navigate = useNavigate();
 
   useEffect(() => {
     fetchAssets()
-      .then(response => setData(response))
+      .then((response) => setData(response))
       .catch(() => navigate('/404'));
-  }, [ navigate ]);
+  }, [navigate]);
 
   return (
     <div className="main" id="resourcePage">
@@ -22,7 +22,7 @@ export default function Assets() {
       </Helmet>
       <p className="title">Assets</p>
       <p className="subtitle">Extra bits, for storage.</p>
-      {data ?
+      {data && (
         <div className="assets">
           <ul>
             {data.map((asset, key) => {
@@ -36,13 +36,16 @@ export default function Assets() {
                 link = asset.link;
               }
               return (
-                <li key={key}><a href={link} target="_blank" rel="noreferrer">{asset.name}</a></li>
+                <li key={key}>
+                  <a href={link} target="_blank" rel="noreferrer">
+                    {asset.name}
+                  </a>
+                </li>
               );
             })}
           </ul>
         </div>
-        : null
-      }
+      )}
     </div>
   );
 }

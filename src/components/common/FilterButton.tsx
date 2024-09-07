@@ -15,14 +15,19 @@ export default function FilterButton(props: {
 
   return (
     <span
-      className={'sort_' + nameLower + ' btn ' + (filter === handle ? 'active' : '')} onClick={() => props.setFilter(handle)} style={{
+      className={
+        'sort_' + nameLower + ' btn ' + (filter === handle ? 'active' : '')
+      }
+      onClick={() => props.setFilter(handle)}
+      style={{
         border: '2px solid var(--' + nameLower + ')',
         color: 'var(--' + nameLower + ')',
       }}
     >
       <p>{displayName}</p>
       <style
-        dangerouslySetInnerHTML={{ __html: `
+        dangerouslySetInnerHTML={{
+          __html: `
         .sort_${nameLower}.active{
           background-color: var(--${nameLower}) !important;
           color: var(--textColor) !important
@@ -31,7 +36,8 @@ export default function FilterButton(props: {
           background-color: var(--${nameLower}) !important;
           color: var(--textColor) !important
         }
-      ` }}
+      `,
+        }}
       />
     </span>
   );

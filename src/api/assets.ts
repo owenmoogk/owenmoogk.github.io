@@ -5,6 +5,6 @@ export type Asset = {
 
 export async function fetchAssets() {
   const response = await fetch('./publicAssets.json');
-  const json = await response.json() as Asset[];
+  const json = (await response.json()) as Asset[];
   return json;
 }

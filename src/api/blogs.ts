@@ -1,4 +1,5 @@
 import { load as ymlLoad } from 'js-yaml';
+
 import links from '@global/links.json';
 
 export type BlogPost = {
@@ -8,7 +9,7 @@ export type BlogPost = {
   date: Date;
   tags: string[];
   image: string;
-}
+};
 
 type APIBlogPost = {
   date: string;
@@ -17,34 +18,35 @@ type APIBlogPost = {
   image: string;
   file_path: string;
   file_name: string;
-}
+};
 
 export async function getBlogs() {
   const response = await fetch(links.blogs + '/metadata.json');
-  const json = await response.json() as APIBlogPost[];
+  const json = (await response.json()) as APIBlogPost[];
   const posts: BlogPost[] = [];
-  json.forEach(post => {
-
-    const {file_path, date, ...postData} = post;
+  json.forEach((post) => {
+    const { file_path, date, ...postData } = post;
     const newPost = {
       ...postData,
       // eslint-disable-next-line camelcase
       markdownLink: file_path,
-      date: new Date(date)
+      date: new Date(date),
     };
     posts.push(newPost);
   });
   // sorting so newest are first
   posts.sort((a, b) => b.date.getTime() - a.date.getTime());
-  return (posts);
+  return posts;
 }
 
 export async function getBlog(name: string) {
-  const response = await fetch('https://owenmoogk.github.io/blogs/blogs/' + name + '.md');
+  const response = await fetch(
+    'https://owenmoogk.github.io/blogs/blogs/' + name + '.md'
+  );
   const text = await response.text();
   const { frontmatter, content } = extractFrontmatter(text);
   const blog = frontmatter as unknown as BlogPost;
-  return {content, blog};
+  return { content, blog };
 }
 
 function extractFrontmatter(markdown: string) {
@@ -59,23 +61,17 @@ function extractFrontmatter(markdown: string) {
       .replace(/^---\n/, '')
       .replace(/\n---$/, '');
 
-    try {
-      // Parse YAML frontmatter to JSON
-      const parsedFrontmatter = ymlLoad(frontmatterContent);
-      Object.assign(json, parsedFrontmatter);
-    } catch (e) {
-      console.error('Error parsing YAML frontmatter:', e);
-    }
+    // Parse YAML frontmatter to JSON
+    const parsedFrontmatter = ymlLoad(frontmatterContent);
+    Object.assign(json, parsedFrontmatter);
 
     return { frontmatter: json, content };
   }
   // No frontmatter found
   return { frontmatter: null, content: markdown };
-
 }
 
 export function parseMarkdown(content: string) {
-
   function removeFirstLine(content: string) {
     const lines = content.split('\n');
     lines.shift(); // Remove the first line (the title is already displayed)
@@ -86,7 +82,7 @@ export function parseMarkdown(content: string) {
     const imageRegex = /!\[.*?\]\(([^)]+)\)/g;
 
     // Replace the relative image links with absolute URLs
-    content = content.replace(imageRegex, (match, p1) => {
+    content = content.replace(imageRegex, (match, p1: string) => {
       // Check if the link is already absolute
       if (p1.startsWith('http') || p1.startsWith('https')) {
         return match; // Return as is if it's already absolute
@@ -96,10 +92,8 @@ export function parseMarkdown(content: string) {
     });
     content = content.replaceAll('..', '');
     return content;
-
   }
   content = removeFirstLine(content);
   content = fixRelativeLinks(content);
-  console.log(content);
   return content;
 }
