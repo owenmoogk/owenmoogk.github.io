@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router';
 import WorkItem from './WorkItem';
 import type { StringDictionary, UnknownDictionary } from '@api/work';
 import { fetchWorkData } from '@api/work';
-import global from '@global/global.json';
-import links from '@global/links.json';
+import { extracurricularsLink, linkedIn, resumeLink } from '@global/global';
 
 export default function Workpage() {
   const [workData, setWorkData] = useState<UnknownDictionary>({});
@@ -34,12 +33,12 @@ export default function Workpage() {
       <p className="title">Work</p>
       <p className="subtitle">
         Connect with me on{' '}
-        <a href={links.linkedIn} target="_blank" rel="noreferrer">
+        <a href={linkedIn} target="_blank" rel="noreferrer">
           LinkedIn
         </a>
         <br />
         or have a look at my{' '}
-        <a href={global.resume} target="_blank" rel="noreferrer">
+        <a href={resumeLink} target="_blank" rel="noreferrer">
           Resume
         </a>
       </p>
@@ -65,7 +64,7 @@ export default function Workpage() {
       </p>
       <p className="subtitle">
         And for anyone really curious:{' '}
-        <a href={global.extracurriculars} target="_blank" rel="noreferrer">
+        <a href={extracurricularsLink} target="_blank" rel="noreferrer">
           everything I've ever done
         </a>
         .

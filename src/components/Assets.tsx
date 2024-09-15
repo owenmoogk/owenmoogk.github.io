@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
 
 import { type Asset, fetchAssets } from '@api/assets';
-import global from '@global/global.json';
+import { assetUrl } from '@global/global';
 
 export default function Assets() {
   const [data, setData] = useState<Asset[]>();
@@ -31,7 +31,7 @@ export default function Assets() {
                 return <br key={key} />;
               }
               if (!asset.link.startsWith('http', 0)) {
-                link = global.assets + asset.link;
+                link = assetUrl + asset.link;
               } else {
                 link = asset.link;
               }

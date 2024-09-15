@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router';
 
 import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
-import global from '@global/global.json';
-const { homepage } = global;
+import { homepageUrl } from '@global/global';
 
 export default function Sitemap() {
   const [projectData, setProjectData] = useState<Project[]>();
@@ -35,6 +34,9 @@ export default function Sitemap() {
             <li>
               <a href="/projects/directory">/projects/directory</a>
             </li>
+            <li>
+              <a href="/memories">/memories</a>
+            </li>
             <br />
             {projectData.map((project, key) => {
               // don't include external links in sitemap (eg. Janik's Cat Feeder)
@@ -42,7 +44,7 @@ export default function Sitemap() {
                 project.externalLink &&
                 !project.externalLink.includes('https://')
               ) {
-                const link = homepage + project.externalLink;
+                const link = homepageUrl + project.externalLink;
                 let linkDisplay = project.externalLink;
                 if (linkDisplay.endsWith('/')) {
                   linkDisplay = linkDisplay.slice(0, -1);

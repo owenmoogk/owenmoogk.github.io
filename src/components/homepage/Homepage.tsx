@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import FeaturedIcon from '../projects/FeaturedIcon';
 import { getRandomInt, loadSplashes } from '@api/homepage';
-import global from '@global/global.json';
+import { assetUrl } from '@global/global';
 
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
@@ -39,7 +39,7 @@ export default function Homepage() {
           </p>
         </div>
         <div className="photo" id="pfp">
-          <img src={global.assets + 'pfps/suit-edited-square.png'} alt="" />
+          <img src={assetUrl + 'pfps/suit-edited-square.png'} alt="" />
         </div>
       </div>
       <div>

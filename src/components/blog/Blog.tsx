@@ -2,10 +2,10 @@ import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import links from '../../global/links.json';
 import FilterButton from '../common/FilterButton';
 import type { BlogPost } from '@api/blogs';
 import { getBlogs } from '@api/blogs';
+import { blogLink } from '@global/global';
 
 export default function Blog() {
   const [blogData, setBlogData] = useState<BlogPost[]>();
@@ -76,7 +76,7 @@ function BlogItem(props: { post: BlogPost }) {
           <p className="subtitle">{format(post.date, 'MMMM d, yyyy')}</p>
         </div>
         <div className="image">
-          <img src={links.blogs + '/' + post.image} alt="" />
+          <img src={blogLink + '/' + post.image} alt="" />
         </div>
       </div>
     </Link>

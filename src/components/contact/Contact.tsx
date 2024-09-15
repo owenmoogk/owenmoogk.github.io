@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import links from '@global/links.json';
+import { instagram, linkedIn } from '@global/global';
 
 export default function ContactPage() {
   return (
@@ -15,12 +15,12 @@ export default function ContactPage() {
         <p>
           <a href="mailto:owenmoogk@gmail.com">owenmoogk@gmail.com</a>
           <br />
-          <a href={links.linkedIn}>{links.linkedIn.replace('https://', '')}</a>
+          <a href={linkedIn}>{linkedIn.replace('https://', '')}</a>
         </p>
         <h2>...or find me here</h2>
 
         <div id="contactLinks">
-          <a href={links.linkedIn} target="_blank" rel="noreferrer">
+          <a href={linkedIn} target="_blank" rel="noreferrer">
             <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
               <g>
                 <path
@@ -46,7 +46,7 @@ export default function ContactPage() {
               </g>
             </svg>
           </a>
-          <a href={links.instagram} target="_blank" rel="noreferrer">
+          <a href={instagram} target="_blank" rel="noreferrer">
             <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
               <g>
                 <path

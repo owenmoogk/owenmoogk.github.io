@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import global from '@global/global.json';
-
-const { homepage } = global;
+import { homepageUrl } from '@global/global';
 
 export default function ProjectIcon(props: {
   data: {
@@ -22,7 +20,7 @@ export default function ProjectIcon(props: {
   const primaryType = types[0] ?? '';
   let externalLink = data.externalLink?.includes('https://')
     ? data.externalLink
-    : homepage + data.externalLink;
+    : homepageUrl + data.externalLink;
   // if it doesn't exist just leave it
   externalLink = data.externalLink ? externalLink : data.externalLink;
 

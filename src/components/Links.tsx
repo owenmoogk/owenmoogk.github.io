@@ -1,6 +1,6 @@
 import React from 'react';
 
-import links from '@global/links.json';
+import { instagram, linkedIn } from '@global/global';
 
 export default function Links(props: { shown: boolean }) {
   return (
@@ -22,7 +22,7 @@ export default function Links(props: { shown: boolean }) {
         </svg>
       </a>
       <a
-        href={links.instagram}
+        href={instagram}
         aria-label="Instagram"
         target="_blank"
         rel="noreferrer"
@@ -44,12 +44,7 @@ export default function Links(props: { shown: boolean }) {
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
         </svg>
       </a>
-      <a
-        href={links.linkedIn}
-        aria-label="Linkedin"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href={linkedIn} aria-label="Linkedin" target="_blank" rel="noreferrer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="img"

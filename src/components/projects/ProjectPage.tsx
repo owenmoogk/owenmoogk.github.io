@@ -7,9 +7,7 @@ import MarkdownView from 'react-showdown';
 import Tag from '../common/Tags';
 import type { Project } from '@api/projects';
 import { fetchProjectJSON, fetchProjectMarkdown } from '@api/projects';
-import global from '@global/global.json';
-
-const { homepage } = global;
+import { homepageUrl } from '@global/global';
 
 export default function ProjectPage() {
   const [projectData, setProjectData] = useState<string>();
@@ -72,7 +70,7 @@ export default function ProjectPage() {
 
     let externalLink = metaData.externalLink?.includes('https://')
       ? metaData.externalLink
-      : homepage + metaData.externalLink;
+      : homepageUrl + metaData.externalLink;
     // if it doesn't exist just leave it
     externalLink = metaData.externalLink ? externalLink : metaData.externalLink;
 

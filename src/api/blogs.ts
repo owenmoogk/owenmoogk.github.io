@@ -1,6 +1,6 @@
 import { load as ymlLoad } from 'js-yaml';
 
-import links from '@global/links.json';
+import { blogLink } from '@global/global';
 
 export type BlogPost = {
   title: string;
@@ -21,7 +21,7 @@ type APIBlogPost = {
 };
 
 export async function getBlogs() {
-  const response = await fetch(links.blogs + '/metadata.json');
+  const response = await fetch(blogLink + '/metadata.json');
   const json = (await response.json()) as APIBlogPost[];
   const posts: BlogPost[] = [];
   json.forEach((post) => {
@@ -88,7 +88,7 @@ export function parseMarkdown(content: string) {
         return match; // Return as is if it's already absolute
       }
       // Otherwise, prepend the base URL
-      return match.replace(p1, links.blogs + p1);
+      return match.replace(p1, blogLink + p1);
     });
     content = content.replaceAll('..', '');
     return content;

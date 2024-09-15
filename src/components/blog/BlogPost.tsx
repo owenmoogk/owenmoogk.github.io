@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
 
-import links from '../../global/links.json';
 import Tag from '../common/Tags';
 import type { BlogPost as BlogType } from '@api/blogs';
 import { getBlog, parseMarkdown } from '@api/blogs';
+import { headshot } from '@global/global';
 
 export default function BlogPost() {
   const [content, setContent] = useState<string>();
@@ -41,7 +41,7 @@ export default function BlogPost() {
             </div>
             <div className="meta">
               <div className="author">
-                <img src={links.headshot} className="headshot" alt="" />
+                <img src={headshot} className="headshot" alt="" />
                 <div className="text">
                   <p className="authorText">Owen Moogk</p>
                   <p className="date">{blogData.date.toString()}</p>
