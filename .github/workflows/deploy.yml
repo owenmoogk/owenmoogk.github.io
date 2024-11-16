@@ -27,14 +27,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Compile Less to CSS
+      run: npx less-watch-compiler src/less src main.less --run-once
+
     - name: Run ESLint
       run: npm run lint
 
     - name: Type Check
       run: npx tsc --noEmit
-
-    - name: Compile Less to CSS
-      run: npx less-watch-compiler src/less src main.less --run-once
 
     - name: Build
       run: npm run build
