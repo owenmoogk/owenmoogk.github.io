@@ -1,11 +1,12 @@
-name: Build and Deploy Website
+name: Build, Test, and Deploy
 
 on:
   push:
     branches: ["main"]
+  release:
+    types: [published]
 
 permissions:
-  contents: write
   pages: write
   id-token: write
 
@@ -61,6 +62,7 @@ jobs:
         run: npx tsc --noEmit
 
   deploy:
+    if: github.event_name == 'release'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
