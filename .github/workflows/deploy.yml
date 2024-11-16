@@ -34,7 +34,6 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: dist
           path: dist/
 
   test:
