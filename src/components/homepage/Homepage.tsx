@@ -7,7 +7,7 @@ import { assetUrl } from '@global/global';
 
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
-  const [splash, setSplash] = useTest(defaultSplash);
+  const [splash, setSplash] = useState(defaultSplash);
   const [splashes, setSplashes] = useState<string[]>();
 
   useEffect(() => {
