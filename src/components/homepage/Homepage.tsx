@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import FeaturedIcon from '../projects/FeaturedIcon';
-import { getRandomInt, loadSplashes } from '@api/homepage';
 import { assetUrl } from '@global/global';
+import { getRandomInt, loadSplashes } from '@api/homepage';
 
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
