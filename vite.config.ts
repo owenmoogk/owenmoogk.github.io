@@ -17,6 +17,12 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'src/components/homepage/splashes.json', dest: 'assets' },
+        { src: 'src/components/work/work.json', dest: 'assets' },
+        { src: 'src/components/assets/publicAssets.json', dest: 'assets' },
+        {
+          src: 'src/components/projects/projectDirectory.json',
+          dest: 'assets',
+        },
       ],
     }),
   ],

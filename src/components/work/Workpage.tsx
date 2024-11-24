@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router';
 
+import workData from './work.json';
+import type { StringDictionary } from './WorkItem';
 import WorkItem from './WorkItem';
-import type { StringDictionary, UnknownDictionary } from '@api/work';
-import { fetchWorkData } from '@api/work';
 import { extracurricularsLink, linkedIn, resumeLink } from '@global/global';
 
 export default function Workpage() {
-  const [workData, setWorkData] = useState<UnknownDictionary>({});
-  const navigate = useNavigate();
-
   const categories = [
     'Work',
     'Awards',
@@ -18,12 +14,6 @@ export default function Workpage() {
     'Volunteer',
     'Education',
   ];
-
-  useEffect(() => {
-    fetchWorkData()
-      .then((response) => setWorkData(response))
-      .catch(() => void navigate('/404'));
-  }, [navigate]);
 
   return (
     <div className="main" id="workPage">
@@ -44,7 +34,8 @@ export default function Workpage() {
       </p>
       <div id="workItems">
         {categories.map((category, key) => {
-          const sectionData = workData[category.toLowerCase()];
+          const sectionData =
+            workData[category.toLowerCase() as keyof typeof workData];
           return (
             <div key={key}>
               <h1>{category}</h1>

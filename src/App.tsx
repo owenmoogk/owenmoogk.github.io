@@ -8,7 +8,7 @@ import {
   Routes,
 } from 'react-router-dom';
 
-import Assets from './components/Assets';
+import Assets from './components/assets/Assets';
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
 import ContactPage from './components/contact/Contact';

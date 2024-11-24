@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import type { StringDictionary } from '@api/work';
+export type StringDictionary = Record<string, string>;
 
 export default function WorkItem(props: { data: StringDictionary }) {
   const [collapsed, setCollapsed] = useState(true);

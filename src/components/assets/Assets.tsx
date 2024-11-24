@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router';
 
-import { type Asset, fetchAssets } from '@api/assets';
+import data from './publicAssets.json';
 import { assetUrl } from '@global/global';
 
+export type Asset = {
+  name?: string;
+  link?: string;
+};
+
 export default function Assets() {
-  const [data, setData] = useState<Asset[]>();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetchAssets()
-      .then((response) => setData(response))
-      .catch(() => void navigate('/404'));
-  }, [navigate]);
-
   return (
     <div className="main" id="resourcePage">
       <Helmet>
