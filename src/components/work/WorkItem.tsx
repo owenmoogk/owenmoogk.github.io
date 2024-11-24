@@ -1,80 +1,33 @@
+import type { ReactNode } from 'react';
 import React, { useState } from 'react';
 
 export type StringDictionary = Record<string, string>;
 
-export default function WorkItem(props: { data: StringDictionary }) {
+type Props = {
+  title: string;
+  subtitle: string;
+  summary?: ReactNode;
+  dateString?: string;
+};
+
+export default function WorkItem(props: Props) {
   const [collapsed, setCollapsed] = useState(true);
-  const data = props.data;
 
-  // parse the dates
-  function formatDate(dateString: string) {
-    if (!dateString) {
-      return 'Present';
-    }
-    const date = new Date(dateString);
-    const month = date.toLocaleString('en-US', { month: 'short' });
-    const year = date.getFullYear();
-    return `${month} ${year}`;
-  }
-
-  function getDateString(data: StringDictionary) {
-    if ('startDate' in data && 'endDate' in data) {
-      const startDate = formatDate(data.startDate);
-      const endDate = formatDate(data.endDate);
-      return `${startDate} - ${endDate}`;
-    }
-    return formatDate(data.date ? data.date : data.startDate);
-  }
-
-  function getTitle(data: StringDictionary) {
-    if ('issuer' in data) {
-      return data.name;
-    }
-    if ('area' in data) {
-      return data.area ? data.area : data.studyType;
-    }
-    return data.position ? data.position : data.title;
-  }
-
-  function getSubtitle(data: StringDictionary) {
-    if ('issuer' in data) {
-      return data.issuer;
-    }
-    if ('name' in data) {
-      return data.name;
-    }
-    if ('awarder' in data) {
-      return data.awarder;
-    }
-    if ('organization' in data) {
-      return data.organization;
-    }
-    if ('institution' in data) {
-      return data.institution;
-    }
-    return '--';
-  }
-
-  function getSummary(data: StringDictionary) {
-    if (data.summary) {
+  function getSummary(summary?: ReactNode) {
+    if (summary) {
       return (
         <div className="content" style={{ height: collapsed ? '0' : '' }}>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: data.summary
-                .replaceAll('\n', '<br>')
-                .replaceAll('\t', '&nbsp&nbsp'),
-            }}
-          />
-        </div>
-      );
-    }
-    if (data.url) {
-      return (
-        <div className="content" style={{ height: collapsed ? '0' : '' }}>
-          <p>
-            <a href={data.url}>Certification</a>
-          </p>
+          {typeof summary === 'string' ? (
+            <p
+              dangerouslySetInnerHTML={{
+                __html: summary
+                  .replaceAll('\n', '<br>')
+                  .replaceAll('\t', '&nbsp&nbsp'),
+              }}
+            />
+          ) : (
+            summary
+          )}
         </div>
       );
     }
@@ -83,7 +36,7 @@ export default function WorkItem(props: { data: StringDictionary }) {
 
   return (
     <div className="workItem">
-      {data.summary || data.url ? (
+      {props.summary ? (
         <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
           <div className="svg">
             <svg
@@ -109,12 +62,12 @@ export default function WorkItem(props: { data: StringDictionary }) {
       <div className="text">
         <div className="titleBlock" onClick={() => setCollapsed(!collapsed)}>
           <div className="workTitle">
-            <span>{getTitle(data)}</span>
-            <span className="workTitleDate">{getDateString(data)}</span>
+            <span>{props.title}</span>
+            <span className="workTitleDate">{props.dateString}</span>
           </div>
-          {getSubtitle(data)}
+          {props.subtitle}
         </div>
-        {getSummary(data)}
+        {getSummary(props.summary)}
       </div>
     </div>
   );
