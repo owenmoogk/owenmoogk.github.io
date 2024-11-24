@@ -100,12 +100,22 @@ export default [
 
             // Import rules
             "import/order": ["error", {
-                groups: [["builtin", "external"], ["internal", "sibling", "parent", "index"]],
-                pathGroups: [{
-                    pattern: "react",
-                    group: "builtin",
-                    position: "before",
-                }],
+                groups: [
+                    ["builtin", "external"],
+                    ["internal", "sibling", "parent", "index", "object"]
+                ],
+                pathGroups: [
+                    {
+                        pattern: "react",
+                        group: "builtin",
+                        position: "before",
+                    },
+                    {
+                        pattern: "**/*.json",
+                        group: "object",
+                        position: "after",
+                    }
+                ],
                 alphabetize: {
                     order: "asc",
                     caseInsensitive: true,

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
+import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
 import { getRandomInt } from '@api/homepage';
 import { assetUrl } from '@global/global';
-import splashes from './splashes.json';
 
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
