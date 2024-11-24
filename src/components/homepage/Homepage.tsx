@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import FeaturedIcon from '../projects/FeaturedIcon';
-import { getRandomInt, loadSplashes } from '@api/homepage';
+import { getRandomInt } from '@api/homepage';
 import { assetUrl } from '@global/global';
+import splashes from './splashes.json';
 
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
   const [splash, setSplash] = useState(defaultSplash);
-  const [splashes, setSplashes] = useState<string[]>();
-
-  useEffect(() => {
-    loadSplashes()
-      .then((response) => setSplashes(response))
-      .catch(() => null);
-  }, []);
 
   function changeSplash() {
     setSplash(
-      splashes ? splashes[getRandomInt(0, splashes?.length)] : defaultSplash
+      splashes ? splashes[getRandomInt(0, splashes.length)] : defaultSplash
     );
   }
 

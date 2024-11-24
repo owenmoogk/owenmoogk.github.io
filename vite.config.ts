@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   plugins: [
@@ -12,6 +13,11 @@ export default defineConfig({
       emitError: false, // error doesn't block compilation
       failOnWarning: false,
       failOnError: false, // error doesn't block compilation
+    }),
+    viteStaticCopy({
+      targets: [
+        { src: 'src/components/homepage/splashes.json', dest: 'assets' },
+      ],
     }),
   ],
   server: {
