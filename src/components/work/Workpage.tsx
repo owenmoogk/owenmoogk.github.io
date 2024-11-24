@@ -22,7 +22,7 @@ export default function Workpage() {
   useEffect(() => {
     fetchWorkData()
       .then((response) => setWorkData(response))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

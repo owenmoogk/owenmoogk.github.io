@@ -13,7 +13,7 @@ export default function Sitemap() {
   useEffect(() => {
     fetchProjects()
       .then((response) => setProjectData(response))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

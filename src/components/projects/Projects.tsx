@@ -14,7 +14,7 @@ export default function ProjectPage() {
   useEffect(() => {
     fetchProjects()
       .then((data) => setProjectData(data))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

@@ -28,7 +28,6 @@ export async function getBlogs() {
     const { file_path, date, ...postData } = post;
     const newPost = {
       ...postData,
-      // eslint-disable-next-line camelcase
       markdownLink: file_path,
       date: new Date(date),
     };

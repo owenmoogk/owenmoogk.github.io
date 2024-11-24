@@ -15,7 +15,7 @@ export default function Blog() {
   useEffect(() => {
     getBlogs()
       .then((posts) => setBlogData(posts))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

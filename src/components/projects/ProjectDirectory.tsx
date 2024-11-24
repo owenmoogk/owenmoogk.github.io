@@ -15,7 +15,7 @@ export default function ProjectDirectory() {
   useEffect(() => {
     fetchProjects()
       .then((projects) => setProjectData(projects))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

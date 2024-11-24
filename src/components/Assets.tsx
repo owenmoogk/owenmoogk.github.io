@@ -12,7 +12,7 @@ export default function Assets() {
   useEffect(() => {
     fetchAssets()
       .then((response) => setData(response))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [navigate]);
 
   return (

@@ -18,11 +18,11 @@ export default function ProjectPage() {
   useEffect(() => {
     fetchProjectJSON(name ?? '')
       .then((response) => setMetaData(response))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
 
     fetchProjectMarkdown(name ?? '')
       .then((response) => setProjectData(response))
-      .catch(() => navigate('/404'));
+      .catch(() => void navigate('/404'));
   }, [name, navigate]);
 
   // this is really stupid and is fully bad practice,
