@@ -31,7 +31,11 @@ export default function Nav(props: { toggleDarkMode: () => void }) {
           <path d="M7.95 35.95h32" />
         </g>
       </svg>
-      <div id="navBox" style={{ display: shown ? 'flex' : '' }}>
+      <div
+        id="navBox"
+        style={{ display: shown ? 'flex' : '' }}
+        onClick={() => setShown(false)}
+      >
         <div id="navLinks">
           <NavLink link="" text="Home" />
           <NavLink link="projects" text="Projects" />
