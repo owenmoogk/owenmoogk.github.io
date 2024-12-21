@@ -40,7 +40,7 @@ export default function Nav(props: { toggleDarkMode: () => void }) {
           <NavLink link="" text="Home" />
           <NavLink link="projects" text="Projects" />
           <NavLink link="work" text="Work" />
-          <NavLink link="notes" text="Notes" />
+          {/* <NavLink link="notes" text="Notes" /> */}
           <NavLink link="contact" text="Contact" />
           <div id="darkmode" className="navlink" onClick={props.toggleDarkMode}>
             <svg
