@@ -1,0 +1,23 @@
+work/extra
+    work (1)
+        umpire
+        merryhill
+    volunteering (2)
+        look on myway, idk
+    extracurric (3)
+        shad
+        duke
+        c2l
+        etc etc
+
+
+
+projects
+    img for the compiler
+    img for cad challenge
+    minirobot
+    rc car?
+    3d printed rokcets (tinkercad learning for demo??)
+    the compiler
+    cad accessories
+        headphone mount, etx
