@@ -9,7 +9,7 @@
             I recently made this website as a place to tell a little bit about me, show off some of my projects,
             and to have a "one stop shop" for all my files that people might find useful. The links and downloads to the
             source files are found below.
-            if you have any suggestions please feel free to <a href="./html/contact.html" class="blinks">contact me</a>.
+            if you have any suggestions please feel free to <a href="/html/contact.html" class="blinks">contact me</a>.
         </text>
     </block>
     <block>
@@ -32,24 +32,15 @@
             </ul>
             <h3>Old Versions</h3>
             <ul>
-                <li><a href="http://website-v1.tk" class="blinks" target="_blank">Version 1</a></li>
-                <li><a href="http://website-v2.tk" class="blinks" target="_blank">Version 2</a></li>
-                <li><a href="http://website-v3.tk" class="blinks" target="_blank">Version 3</a></li>
+                <li><a href="http://owenmoogk-v1.tk" class="blinks" target="_blank">Version 1</a></li>
+                <li><a href="http://owenmoogk-v2.tk" class="blinks" target="_blank">Version 2</a></li>
+                <li><a href="http://owenmoogk-v3.tk" class="blinks" target="_blank">Version 3</a></li>
             </ul>
             <h3>Old Versions (Source Code)</h3>
             <ul>
                 <li><a href="https://github.com/owenmoogk/website-v1/" class="blinks" target="_blank">Version 1</a></li>
                 <li><a href="https://github.com/owenmoogk/website-v2/" class="blinks" target="_blank">Version 2</a></li>
                 <li><a href="https://github.com/owenmoogk/website-v3/" class="blinks" target="_blank">Version 3</a></li>
-            </ul>
-        </text>
-    </block>
-    <block>
-        <title>Resources</title>
-        <text>
-            <ul>
-                <li><a href="https://stackoverflow.com/" class="blinks" target="_blank">Stack Overflow</a></li>
-                <li><a href="https://www.w3schools.com/" class="blinks" target="_blank">W3Schools</a></li>
             </ul>
         </text>
     </block>

@@ -20,20 +20,22 @@
                 <p class="title">Projects</p>
                 <br>
                 <div class="sorting">
-                <div class="buttons">
-                    <span class="sort_all btn active"><p>All</p></span>
-                    <span class="sort_cad btn"><p>CAD</p></span>
-                    <span class="sort_coding btn"><p>Coding</p></span>
-                    <span class="sort_mechanical btn"><p>Mechanical</p></span>
-                    <span class="sort_web-dev btn"><p>Web-Dev</p></span>
-                </div>
-                <div class="sort">
-                    <label>Sort by: &nbsp</label>
-                    <select id="mySort" onchange="sortProjects()">
-                        <option value="alpha-desc">A-Z</option>
-                        <option value="alpha-asc">Z-A</option>
-                    </select>
-                </div>
+					<div class="buttons">
+						<span class="sort_all btn active"><p>All</p></span>
+						<span class="sort_cad btn"><p>CAD</p></span>
+						<span class="sort_coding btn"><p>Coding</p></span>
+						<span class="sort_mechanical btn"><p>Mechanical</p></span>
+						<span class="sort_web-dev btn"><p>Web-Dev</p></span>
+					</div>
+					<div class="sort">
+						<label>Sort by: &nbsp</label>
+						<select id="mySort" onchange="sortProjects()">
+							<option value="">--</option>
+							<option value="alpha-desc">A-Z</option>
+							<option value="alpha-asc">Z-A</option>
+						</select>
+					</div>
+				</div>
             </div>
             <br><br><br><br>
             <div id="projectsGoHere"></div>

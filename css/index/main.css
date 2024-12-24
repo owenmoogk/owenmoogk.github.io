@@ -1,38 +1,56 @@
 *{
     font-family: 'IBM Plex Sans', serif;
 }
+:root{
+	--textcolor: white;
+}
+
+/* highlights */
+::selection{
+    background: gray;
+    color: black;
+}
+
 /*INDEX*/
 body{
-	/*background image*/
 	height: 100vh;
-	overflow: hidden;
-	background-position: center;
-	background-size: cover;
-	background-image: url('../../img/backgrounds/index.png');
+	background-color: rgb(30, 30, 30);
+	margin: 0;
 }
 .title{
-	font-size: 100px;
 	width: 100%;
 	text-align: center;
-	color: white;
-	display: flex;
-	flex-direction: column;
 }
 #title{
-	margin-bottom: 10px;
+	font-size: 100px;
+	color: var(--textcolor);
+	padding-top: calc(calc(100vh / 2) - 200px);
+	margin: 0;
+}
+#subtitle{
+	color: var(--textcolor);
+	font-size: 20px;
+	width: fit-content;
+	margin: auto;
+}
+#hidden{
+	color: rgb(70,70,70);
 }
 #navBox{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	font-size: 30px;
+	font-size: 20px;
 }
 .navlinks{
 	text-decoration: none;
-	color: white;
+	color: var(--textcolor);
 	padding-left: 20px;
 	padding-right: 20px;
 }
+.navlinks p{
+	border-bottom: 2px solid transparent;
+}
 .navlinks:hover p{
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid var(--textcolor);
 }

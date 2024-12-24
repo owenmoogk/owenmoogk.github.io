@@ -1,7 +1,87 @@
 <projects>
     <entry>
+        <title>COVID Scraper</title>
+        <link>./projects/covid-scraper/covid-scraper.html</link>
+        <image>../img/projects/covid-scraper.png</image>
+        <date>February 6, 2021</date>
+        <type>Coding</type>
+        <description>A web scraper to scrape data from a website, and can be accessed using voice commands.</description>
+    </entry>
+    <entry>
+        <title>Sorting Visualizer</title>
+        <link>https://owenmoogk.github.io/sorting-visualizer/</link>
+        <image>../img/projects/sorting-visualizer.png</image>
+        <date>January 31, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>COVID Website</title>
+        <link>./projects/covid-website/covid-website.html</link>
+        <image>../img/projects/covid-website.png</image>
+        <date>January 31, 2021</date>
+        <type>Web-dev</type>
+        <description>A web application for a hackathon, to track and </description>
+    </entry>
+    <entry>
+        <title>Dino Game AI</title>
+        <link>./projects/dino-game-ai/dino-game-ai.html</link>
+        <image>../img/projects/dino-game-ai.png</image>
+        <date>January 26, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Geometry Calculator</title>
+        <link>https://owenmoogk.github.io/geometry-calculator/</link>
+        <image>../img/projects/geometry-calculator.png</image>
+        <date>January 17, 2021</date>
+        <type>Coding</type>
+        <description>A hydraulic arm I made for a school project. It turned out pretty well.</description>
+    </entry>
+    <entry>
+        <title>Simplelib</title>
+        <link>https://owenmoogk.github.io/simplelib-documentation</link>
+        <image>../img/projects/simplelib.png</image>
+        <date>Janary 14, 2021</date>
+        <type>Coding</type>
+        <description>A python library for more indepth use of datastructures and algorithms, as well as simplifying routine code.</description>
+    </entry>
+    <entry>
+        <title>Flappy Bird AI</title>
+        <link>./projects/flappy-bird-ai/flappy-bird-ai.html</link>
+        <image>../img/projects/flappy-bird-ai.png</image>
+        <date>January 7, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Email Bot</title>
+        <link>./projects/email-bot/email-bot.html</link>
+        <image>../img/projects/email-bot.png</image>
+        <date>January 6, 2021</date>
+        <type>Coding</type>
+        <description>A web application made in pure JS, to visualize different sorting algorithms.</description>
+    </entry>
+    <entry>
+        <title>Snake</title>
+        <link>./projects/snake/snake.html</link>
+        <image>../img/projects/snake.png</image>
+        <date>January 6, 2021</date>
+        <type>Coding</type>
+        <description>A snake game build in python pygame.</description>
+    </entry>
+    <entry>
+        <title>Model Rocket</title>
+        <link>./projects/model-rocket/model-rocket.html</link>
+        <image>../img/projects/model-rocket.png</image>
+        <date>January 8, 2021</date>
+        <type>Mechanical</type>
+        <description>A model rocket I designed and 3D printed to be launched.</description>
+    </entry>
+    <entry>
         <title>Hydraulic Arm</title>
-        <link>/html/projects/hydraulic-arm/hydraulic-arm.html</link>
+        <link>./projects/hydraulic-arm/hydraulic-arm.html</link>
         <image>../img/projects/hydraulic-arm.png</image>
         <date>November 7, 2020</date>
         <type>Mechanical</type>
@@ -9,7 +89,7 @@
     </entry>
     <entry>
         <title>Space Invaders</title>
-        <link>/html/projects/space-invaders/space-invaders.html</link>
+        <link>./projects/space-invaders/space-invaders.html</link>
         <image>../img/projects/space-invaders.png</image>
         <date>November 6, 2020</date>
         <type>Coding</type>
@@ -17,7 +97,7 @@
     </entry>
     <entry>
         <title>The Compiler</title>
-        <link>/html/projects/the-compiler/the-compiler.html</link>
+        <link>./projects/the-compiler/the-compiler.html</link>
         <image>../img/projects/classified.png</image>
         <date>October 19, 2020</date>
         <type>Web-dev</type>
@@ -25,7 +105,7 @@
     </entry>
     <entry>
         <title>Website Development</title>
-        <link>/html/projects/website-development/website-development.html</link>
+        <link>./projects/website-development/website-development.html</link>
         <image>../img/projects/website-development.png</image>
         <date>April 21, 2020</date>
         <type>Web-dev</type>
@@ -33,7 +113,7 @@
     </entry>
     <entry>
         <title>Renders/Graphic Design</title>
-        <link>/html/projects/renders/renders.html</link>
+        <link>./projects/renders/renders.html</link>
         <image>../img/projects/renders.png</image>
         <date>April 22, 2020</date>
         <type>CAD</type>
@@ -41,7 +121,7 @@
     </entry>
     <entry>
         <title>Minecraft Modifications</title>
-        <link>/html/projects/minecraft-mods/minecraft-mods.html</link>
+        <link>./projects/minecraft-mods/minecraft-mods.html</link>
         <image>../img/projects/minecraft-mods.png</image>
         <date>April 20, 2020</date>
         <type>Coding</type>
@@ -49,7 +129,7 @@
     </entry>
     <entry>
         <title>Vortex</title>
-        <link>/html/projects/vortex/vortex.html</link>
+        <link>./projects/vortex/vortex.html</link>
         <image>../img/projects/vortex.png</image>
         <date>April 15, 2020</date>
         <type>CAD</type>
@@ -57,7 +137,7 @@
     </entry>
     <entry>
         <title>2702 Rebels 2020 Robot</title>
-        <link>/html/projects/2702-2020/2702-2020.html</link>
+        <link>./projects/2702-2020/2702-2020.html</link>
         <image>../img/projects/2702-2020.png</image>
         <date>March 24, 2020</date>
         <type>Mechanical</type>
@@ -65,7 +145,7 @@
     </entry>
     <entry>
         <title>Engine Assembly</title>
-        <link>/html/projects/engine/engine.html</link>
+        <link>./projects/engine/engine.html</link>
         <image>../img/projects/engine.png</image>
         <date>March 16, 2020</date>
         <type>Mechanical</type>
@@ -73,7 +153,7 @@
     </entry>
     <entry>
         <title>2702 Rebels 2019 Robot</title>
-        <link>/html/projects/2702-2019/2702-2019.html</link>
+        <link>./projects/2702-2019/2702-2019.html</link>
         <image>../img/projects/2702-2019.png</image>
         <date>May 5, 2019</date>
         <type>Mechanical</type>

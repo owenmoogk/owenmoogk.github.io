@@ -12,10 +12,4 @@
             Will I make another version? Maybe. Anyway, it is now up live at <a href="http://thecompiler.cf" class="blinks" target='_blank'>thecompiler.cf</a>. Feel free to check it out!
         </text>
     </block>
-    <block>
-        <title>IFrame</title>
-        <text>
-            <iframe src="http://thecompiler.cf" frameborder="0" style='width:85vw;height:80vh;'></iframe>
-        </text>
-    </block>
 </page>

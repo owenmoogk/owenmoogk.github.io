@@ -6,7 +6,7 @@ function loadBlog() {
 			blog(this);
 		}
     };
-    xmlhttp.open("GET", "../assets/blog.xml", true);
+    xmlhttp.open("GET", "/assets/blog.xml", true);
     xmlhttp.send();
 }
 
@@ -17,9 +17,10 @@ function blog(xml) {
     var titles, dates, i, txt, xmlDoc, texts; 
     xmlDoc = xml.responseXML;
     txt = "";
-    titles = xmlDoc.getElementsByTagName("title");
-    dates = xmlDoc.getElementsByTagName('date');
-    texts = xmlDoc.getElementsByTagName('text');
+    titles = xmlDoc.getElementsByTagName("title")
+    dates = xmlDoc.getElementsByTagName('date')
+    texts = xmlDoc.getElementsByTagName('text')
+    // images = xmlDoc.getElementsByTagName("image")
 
     // looping throught the elements and appending to text
     for (i = 0; i < titles.length; i++) {
@@ -33,13 +34,15 @@ function blog(xml) {
                 exitLoop = true
             }
         }
-        txt += '<div class="item"><div class="text"><div class="blog-title">'+titles[i].childNodes[0].nodeValue+'</div><div class="date">'+dates[i].childNodes[0].nodeValue+'</div><div class="content">'+texts[i].childNodes[0].nodeValue+'</div></div>';
-        if (i+1 != titles.length){
-            txt += '<hr class="list-seperate">'
-        }
+        // txt += '<div class="image"><img src="'+images[i].childNodes[0].nodeValue+'"></div>'
+        txt += '<div class="item">'
+        txt += '<p class="blog-title">'+titles[i].childNodes[0].nodeValue+'<h2>'
+        txt += '<p class="date">'+dates[i].childNodes[0].nodeValue+'<h3>'
+        txt += '<p class="content">'+texts[i].childNodes[0].nodeValue+'<p>'
+        txt += '<hr />'
         txt += '</div>'
     }
-    document.getElementById("blogs").innerHTML = txt;
+    document.getElementById("blogs").innerHTML = txt
 }
 // search function. the search bar searches through name, title, and description
 function search() {

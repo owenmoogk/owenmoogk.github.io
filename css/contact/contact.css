@@ -1,19 +1,6 @@
 /* CONTACT */
-
 *{
     text-decoration: none;
-}
-body{
-	background-position: center;
-	background-size: cover;
-    background-image: url('../../img/backgrounds/color-clouds.jpg');
-    backdrop-filter: blur(10px);
-    background-attachment: fixed;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-    margin-left: 0px;
-    margin-top: 0px;
 }
 .contact{
     display: flex;
@@ -32,7 +19,7 @@ body{
 }
 .link{
     margin: 20px;
-    border: 3px solid black;
+    border: 3px solid white;
     text-align: center;
     font-weight: bolder;
     width: 175px;
@@ -42,16 +29,15 @@ body{
 .text{
     text-align: center;
     font-weight: bolder;
-    color: black;
+    color: white;
     transition: 0.5s;
 }
 .link:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
     transition: 0.5s;
 }
 .link:hover .text{
-    color: white;
+    color: black;
     transition: 0.5s;
 }
 
