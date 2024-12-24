@@ -1,0 +1,63 @@
+<projects>
+    <item>
+        <title>Hydraulic Arm</title>
+        <link>"./projects/hydraulic-arm/hydraulic-arm.html"</link>
+        <image>"img/projects/hydraulic-arm.png"</image>
+        <description>A hydraulic arm I made for a school project. It turned out pretty well.</description>
+    </item>
+    <item>
+        <title>Space Invaders</title>
+        <link>"./projects/space-invaders/space-invaders.html"</link>
+        <image>"img/projects/space-invaders.png"</image>
+        <description>A Space Invaders style game I made using python and pygame. It's pretty basic, but I learned a lot through the process.</description>
+
+    </item>
+    <item>
+        <title>The Compiler</title>
+        <link>"./projects/the-compiler/the-compiler.html"</link>
+        <image>"img/projects/classified.png"</image>
+        <description>My page for files and websites I find useful (and you might too!). Coming Soon.</description>
+    </item>
+    <item>
+        <title>Website Development</title>
+        <link>"./projects/website-development/website-development.html"</link>
+        <image>"img/projects/website-development.png"</image>
+        <description>This website's project page!</description>
+    </item>
+    <item>
+        <title>Renders/Graphic Design</title>
+        <link>"./projects/renders/renders.html"</link>
+        <image>"img/projects/renders.png"</image>
+        <description>I have been working on designing some everyday items for rendering, to develop skills and to use in graphic design.</description>
+    </item>
+    <item>
+        <title>Minecraft Modifications</title>
+        <link>"./projects/minecraft-mods/minecraft-mods.html"</link>
+        <image>"img/projects/minecraft-mods.png"</image>
+        <description>I have wrote small amounts of code and made game specific files to modify the popular voxel-based game, Minecraft.</description>
+    </item>
+    <item>
+        <title>Double Chomp (Robot)</title>
+        <link>"./projects/double-chomp/double-chomp.html"</link>
+        <image>"img/projects/classified.png"</image>
+        <description>A robotics CAD challenge, in which I designed a functional robot for a competition.</description>
+    </item>
+    <item>
+        <title>2702 Rebels 2020 Robot</title>
+        <link>"./projects/2702-2020/2702-2020.html"</link>
+        <image>"img/projects/2702-2020.png"</image>
+        <description>I was a part of designing and building the 2702 Rebels 2020 FRC robot, designed to compete in the Infinite Recharge robotics competition.</description>
+    </item>
+    <item>
+        <title>Engine Assembly</title>
+        <link>"./projects/engine/engine.html"</link>
+        <image>"img/projects/engine.png"</image>
+        <description>I recently built a small engine from basic components, used for appliances like lawnmowers or snowblowers.</description>
+    </item>
+    <item>
+        <title>2702 Rebels 2019 Robot</title>
+        <link>"./projects/2702-2019/2702-2019.html"</link>
+        <image>"img/projects/2702-2019.png"</image>
+        <description>I was a part of designing and building the 2702 Rebels 2019 FRC robot, designed to compete in the Destination Deep Space robotics competition.</description>
+    </item>
+</projects>
