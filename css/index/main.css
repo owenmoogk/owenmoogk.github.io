@@ -1,0 +1,38 @@
+*{
+    font-family: 'IBM Plex Sans', serif;
+}
+/*INDEX*/
+body{
+	/*background image*/
+	height: 100vh;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	background-image: url('../../img/backgrounds/index.png');
+}
+.title{
+	font-size: 100px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+#title{
+	margin-bottom: 10px;
+}
+#navBox{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 30px;
+}
+.navlinks{
+	text-decoration: none;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.navlinks:hover p{
+	border-bottom: 2px solid white;
+}

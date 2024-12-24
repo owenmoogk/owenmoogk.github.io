@@ -1,1 +1,3 @@
+#references the 404 page
+
 ErrorDocument 404 /404.html

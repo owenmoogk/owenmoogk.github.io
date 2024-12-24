@@ -1,7 +1,7 @@
-Website Version 3
+# Website Version 4
 
-Website I made to work on my web design skills and showcase what I have been up to.
+Work in progress, wanted an upgrade from my older websites.
 
 This is now and older version, please go to https://owenmoogk.codes for the updated version.
 
-If you would like to look at this version, it is active at https://owenmoogk.github.io/website-v3
+If you would like to look at this version, it is active at https://owenmoogk.github.io/website-v4

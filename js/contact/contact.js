@@ -9,19 +9,15 @@ function loadContacts() {
     xmlhttp.send();
 }
 function contacts(xml) {
-    var titles, links, i, txt, xmlDoc, images; 
+    var titles, links, i, txt, xmlDoc, texts; 
     xmlDoc = xml.responseXML;
     txt = "";
+    console.log(xmlDoc)
     titles = xmlDoc.getElementsByTagName("title");
     links = xmlDoc.getElementsByTagName('link');
     texts = xmlDoc.getElementsByTagName('text');
-    for (i = 0; i < 3; i++) { 
-        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
+    for (i = 0; i < titles.length; i++) { 
+        txt += '<div class="link primary"><a href="'+links[i].childNodes[0].nodeValue+'" target = "_blank"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';
     }
-    console.log(txt)
     document.getElementById("main").innerHTML = txt;
-    txt = '';
-    for (i = 3; i < titles.length; i++) { 
-        txt += '<div class="link"><a href="'+links[i].childNodes[0].nodeValue+'"><div class="text">'+titles[i].childNodes[0].nodeValue+'</div></a></div>';    }
-    document.getElementById("other").innerHTML = txt;
 }
