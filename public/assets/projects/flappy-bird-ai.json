@@ -1,0 +1,33 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Flappy Bird AI",
+			"date": "January 7, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I wanted to learn how to use the NEAT library in python to implement machine learning. It really interests me and I find it so fascinating. I decided to do flappy bird when I saw a youtube video from TechWithTim, so I could have some guidance along the way."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/flappy-bird-ai"
+					},
+					{
+						"text": "Just the game",
+						"href": "https://github.com/owenmoogk/flappy-bird"
+					}
+				]
+			}
+		]
+	}
+}

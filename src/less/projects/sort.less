@@ -1,0 +1,123 @@
+/* here we got the sorting css */
+
+:root {
+	--color_all: rgb(30, 39, 46);
+	--color_cad: #DBD56E;
+	--color_coding: #53B3CB;
+	--color_mechanical: #F08A4B;
+	--color_web-dev: #B24C63;
+	--white: #ffffff;
+}
+
+#searchBar{
+    color: white;
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    font-weight: bold;
+    padding-left: 10px;
+    background-color: rgb(30, 30, 30);
+    border: 2px solid white;
+}
+
+.buttons p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+.btn p { 
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.btn {
+    float: left;
+    padding: 4px 6px 4px 6px;
+    margin: 0 5px 5px 0;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sort_all {
+    border: 2px solid var(--color_all);
+    color: var(--color_all);
+    background-color: var(--white);
+    fill: var(--color_all);
+}
+.sort_all.active, .sort_all:hover {
+    color: var(--white);
+    background-color: var(--color_all);
+    fill: var(--white);
+}
+.sort_cad {
+    border: 2px solid var(--color_cad);
+    color: var(--color_cad);
+    background-color: var(--white);
+    fill: var(--color_cad);
+}
+.sort_cad.active, .sort_cad:hover{
+    color: var(--white);
+    background-color: var(--color_cad);
+    fill: var(--white);
+}
+.sort_coding {
+    border: 2px solid var(--color_coding);
+    color: var(--color_coding);
+    background-color: var(--white);
+    fill: var(--color_coding);
+}
+.sort_coding.active, .sort_coding:hover{
+    color: var(--white);
+    background-color: var(--color_coding);
+    fill: var(--white);
+}
+.sort_mechanical {
+    border: 2px solid var(--color_mechanical);
+    color: var(--color_mechanical);
+    background-color: var(--white);
+    fill: var(--color_mechanical);
+}
+.sort_mechanical.active, .sort_mechanical:hover{
+    color: var(--white);
+    background-color: var(--color_mechanical);
+    fill: var(--white);
+}
+.sort_web-dev {
+    border: 2px solid var(--color_web-dev);
+    color: var(--color_web-dev);
+    background-color: var(--white);
+    fill: var(--color_web-dev);
+}
+.sort_web-dev.active, .sort_web-dev:hover{
+    color: var(--white);
+    background-color: var(--color_web-dev);
+    fill: var(--white);
+}
+
+/* sport by select element */
+.sort {
+    float: right;
+}
+
+.sort label {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--m-color);
+}
+
+/* the project icons */
+
+.mechanical{
+	background-color: var(--color_mechanical);
+}
+.coding{
+	background-color: var(--color_coding);
+}
+.cad{
+	background-color: var(--color_cad);
+}
+.web-dev{
+	background-color: var(--color_web-dev);
+}

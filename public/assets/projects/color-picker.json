@@ -1,0 +1,33 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Color Picker",
+			"date": "February 15, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I was looking into manipulation of images with Javascript, so I decided to create something to grab colors from an image and get the pixel data. I know there are a few others but they are populated with ads and really annoying to use so this does have a practical purpose for me. I also know of a few other people who use this, so it feels really good to make something that has an impact, no matter the size."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Website",
+						"href": "https://owenmoogk.github.io/color-picker/"
+					},
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/color-picker"
+					}
+				]
+			}
+		]
+	}
+}

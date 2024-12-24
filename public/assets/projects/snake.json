@@ -1,0 +1,33 @@
+{
+	"page": {
+		"page-head": {
+			"page-title": "Snake",
+			"date": "January 6, 2021"
+		},
+		"block": [
+			{
+				"title": "Overview",
+				"text": "I have been learning a bit about python, so I implemented the classic snake game into pygame. I also am working on an AI version of this, but at the moment I am just using a Hamiltonian cycle."
+			},
+			{
+				"title": "Screenshots"
+			},
+			{
+				"render": "main.png"
+			},
+			{
+				"title": "Downloads",
+				"ul": [
+					{
+						"text": "Code",
+						"href": "https://github.com/owenmoogk/snake"
+					},
+					{
+						"text": "AI Repository",
+						"href": "https://github.com/owenmoogk/snake-ai"
+					}
+				]
+			}
+		]
+	}
+}
