@@ -13,6 +13,7 @@ export default function Homepage() {
 			setSplash(item)
   		});
 	}
+
 	function getRandomInt(min, max) {
 		min = Math.ceil(min)
 		max = Math.floor(max)
