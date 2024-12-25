@@ -1,72 +1,87 @@
-.body{
-    float: left;
-    width: 85%;
-    font-size: 20px;
-}
-.project-page-title{
-    font-size: 60px;
-    font-weight: bold;
-    text-align: left !important;
-}
-.date{
-    padding-bottom: 20px;
-    margin-top: -50px;
-    width: 200px;
-}
-.pdate{
-    border-top: 5px solid black;
-    padding-top: 10px;
-}
-.block{
-    padding-bottom: 20px;
-    width: 100%;
-    float: left;
-}
-.text{
-    display: inline-block;
-    vertical-align: middle;
-    width: 60%;
-}
-.left{
-	text-align: left;
-	font-weight: normal;
-}
-div.img{
-    width: 275px;
-    margin-left: 40px;
-    display: inline-block;
-    vertical-align: middle;
-}
-.render{
-    width: 500px;
-    margin-left: 40px;
-    display: inline-block;
-    vertical-align: middle;
-}
-img.img{
-    width: 100%;
-    height: 100%;
-    border: 5px solid white;
-}
-h1{
-    line-height: 50px;
-}
-li{
-	text-align: left;
-}
+#projectBody {
+	font-size: 16px;
+	margin-bottom: 40px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 
-@media only screen and (min-width: 1000px) {
-    .body{
-        margin-left: 175px;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    .block{
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 972px) {
-    .text{
-        width: 100%;
-    }
+	.title {
+		#hr {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			height: 4px;
+			width: 100px;
+			background-color: var(--textColor);
+		}
+	}
+
+	ul {
+		width: min(90%, 700px);
+	}
+
+	li {
+		width: fit-content;
+	}
+
+	.subtitle {
+		color: var(--grey);
+		font-size: 18px;
+	}
+
+	#blocks {
+		width: min(700px, 90%);
+
+		h1 {
+			text-align: center;
+			margin-bottom: 10px !important;
+			margin-top: 30px !important;
+		}
+	
+		img {
+			border-radius: 20px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+			max-height: 350px;
+			max-width: 100%;
+			margin: auto;
+		}
+	
+		video {
+			border-radius: 20px;
+			max-height: 500px;
+			max-width: min(100%, 500px);
+			margin: auto;
+		}
+	
+		iframe {
+			max-width: calc(100% - 10px);
+			border-radius: 20px;
+		}
+	
+		.sliderContainer {
+			width: min(90%, 400px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	
+			.subtitle {
+				color: var(--grey);
+				width: fit-content;
+			}
+		}
+	}
+	
+	#blocks>div{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// this is so all elements have same spacing, and thus distance from the header
+	#blocks>div>*{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 }

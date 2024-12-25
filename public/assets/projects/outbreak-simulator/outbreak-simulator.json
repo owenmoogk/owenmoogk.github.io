@@ -1,0 +1,10 @@
+{
+    "title": "Outbreak Simulator",
+    "date": "February 16, 2021",
+    "types": [
+        "Python",
+        "Pygame"
+    ],
+    "description": "COVID-19 and other diseases simulator, with adjustable transmission rates, etc.",
+    "featured": true
+}

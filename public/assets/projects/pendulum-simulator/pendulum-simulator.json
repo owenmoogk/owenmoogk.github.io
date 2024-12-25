@@ -1,0 +1,10 @@
+{
+    "title": "Pendulum Physics Simulator",
+    "date": "February 26, 2021",
+    "types": [
+        "Python",
+        "Matplotlib",
+        "Pygame"
+    ],
+    "description": "Physics simulation of a pendulum, with adjustable settings."
+}

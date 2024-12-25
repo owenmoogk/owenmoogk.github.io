@@ -1,0 +1,163 @@
+html {
+	// when code scrolls the page, it looks sexy
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--textColor);
+	min-height: 100vh;
+}
+
+#root {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	letter-spacing: 0px;
+}
+
+/* highlights */
+
+::selection {
+	background: grey;
+	color: black;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: lightslategrey;
+}
+
+::-webkit-scrollbar-corner {
+	background: rgba(0, 0, 0, 0);
+}
+
+body {
+	--textColor: black;
+	--backgroundColor: white;
+	--overlayColor: rgba(255, 255, 255, 0.6);
+	--primaryColor: #388ed1;
+	--linkHover: rgb(60, 60, 60);
+	--linkColor: #388ed1;
+	--fade: rgb(100, 100, 255);
+	--grey: rgb(72, 72, 72);
+	--lightgrey: lightgrey;
+	// BLUE GRADIENT
+	// --gradient: linear-gradient(45deg, rgba(135, 206, 235, 0.3), rgba(135, 206, 235, 0.1), rgba(135, 206, 235, 0.3));
+	// GREY GRADIENT (EIDAN LIKES)
+	// --gradient: linear-gradient(60deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.3));
+
+	--navBackground: rgba(255, 255, 255, 0.4);
+}
+
+body.dark {
+	--backgroundColor: rgb(35, 35, 35);
+	--textColor: white;
+	--overlayColor: rgba(0, 0, 0, 0.6);
+	--primaryColor: rgb(135, 206, 235);
+	--linkColor: skyblue;
+	--linkHover: pink;
+	--fade: rgb(189, 238, 255);
+	--grey: lightgrey;
+	--lightgrey: rgb(44, 44, 44);
+	// --gradient: linear-gradient(45deg, #332024, #001633, #332024);
+	--gradient: var(--backgroundColor);
+	--navBackground: rgba(50, 50, 50, 0.4);
+}
+
+#backgroundDiv {
+	background-color: var(--backgroundColor);
+	background-image: var(--gradient);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+p:not([class]) {
+	line-height: 30px;
+}
+
+p {
+	font-size: 18px;
+}
+
+.main {
+	max-width: calc(100% - 100px);
+	margin: 0 min(10%, 150px);
+	display: flex;
+	flex-direction: column;
+	padding-top: 100px;
+}
+
+.title {
+	font-size: 50px;
+	font-weight: bold;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.special {
+	color: var(--primaryColor);
+}
+
+.subtitle {
+	margin: 5px 0;
+	font-style: italic;
+	color: var(--grey);
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+p a {
+	color: var(--linkColor);
+	font-weight: bold;
+
+	&:hover {
+		color: var(--linkHover);
+	}
+}
+
+li a {
+	color: var(--linkColor);
+
+	&:hover {
+		color: var(--linkHover);
+	}
+}
+
+a h3 {
+	color: var(--textColor);
+}
+
+li {
+	font-size: 18px;
+}
+
+#notFoundPage {
+	align-items: center;
+
+	p {
+		max-width: 90%;
+		text-align: center;
+	}
+}

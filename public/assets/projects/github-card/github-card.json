@@ -1,0 +1,9 @@
+{
+    "title": "React GitHub Card",
+    "date": "June 30, 2021",
+    "types": [
+        "React"
+    ],
+    "externalLink": "github-card",
+    "description": "The github card, in a React component."
+}

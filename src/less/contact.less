@@ -1,94 +1,33 @@
-/* CONTACT */
+#contactPage {
+	text-align: center;
 
-* {
-	text-decoration: none;
-}
-
-#contactPage{
-
-	height: calc(100% - 300px);
-
-	#contactCards{
-		display: flex;
-		flex-direction: row;
-		height: 100%;
-	}
-
-	#contactForm, #contactLinks{
-		flex: 1;
-		margin: 0 5%;
-		border-radius: 20px;
-		background-color: lightblue;
-	}
-
-	#contactForm{
-
-		h2{
-			text-align: center;
-		}
-
-		#formSplit{
-			display: flex;
-			flex-direction: row;
-
-			input{
-				flex: 1;
-			}
-		}
-
-		input,textarea{
-			outline: none;
-			background-color: rgba(255,255,255, 0.5);
-			border: none;
-			margin: 10px;
-			padding: 10px;
-			color: white;
-		}
-
-		textarea{
-			outline: none;
-			background-color: rgba(255,255,255, 0.5);
-			border: none;
-			margin: 10px;
-			padding: 10px;
-			color: white;
-			height: 100%;
-			resize: none;
-		}
-		
-		form{
-			display: flex;
-			flex-direction: column;
-		}
-
-		button{
-			width: 200px;
-			align-self: center;
-			margin-bottom: 10px;
-		}
+	h2 {
+		font-size: 30px;
+		margin-bottom: 10px;
+		font-weight: normal;
 	}
 
 	#contactLinks {
-		line-height: 40px;
-		font-size: 23px;
-		font-weight: bold;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		flex-wrap: wrap;
-		max-width: 800px;
+		margin-bottom: 50px;
 		justify-content: center;
 
-		.contactLink {
-			font-size: 20px;
-			color: black;
+		svg {
+			fill: var(--textColor);
+			transition: 0.3s;
+			width: 30px;
+			height: 30px;
 
-			.header{
-				font-weight: bold;
+			&:hover {
+				fill: var(--grey);
+				transform: scale(1.1);
 			}
+		}
 
-			.contactText{
-				font-weight: lighter;
-			}
+		a {
+			padding: 10px;
 		}
 	}
 }

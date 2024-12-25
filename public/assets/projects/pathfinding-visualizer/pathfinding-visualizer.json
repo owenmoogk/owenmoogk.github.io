@@ -1,0 +1,11 @@
+{
+    "title": "Pathfinding Visualizer",
+    "date": "February 20, 2021",
+    "types": [
+        "Python",
+        "React"
+    ],
+    "description": "Pathfinding algorithms visualization built using Pygame.",
+    "featured": true,
+    "externalLink": "pathfinding-visualizer"
+}

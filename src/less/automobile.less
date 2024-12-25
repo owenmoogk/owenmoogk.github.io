@@ -1,0 +1,114 @@
+// this is for mobile stuff
+
+// cutoff for mobile display is 875px, it is when the nav no longer fits
+// at this point, page becomes centered instead of left aligned
+// text will still stay left aligned, with their parent being centered
+
+@media only screen and (max-width: 875px) {
+
+    .main {
+        max-width: 100%;
+        margin: 0%;
+        padding-top: 50px;
+    }
+
+    #workItems {
+        width: min(450, 90%);
+
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    // NAV
+    #navButton {
+        z-index: 10;
+        display: flex;
+    }
+
+    #navBox {
+        flex-direction: column;
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--overlayColor);
+        position: fixed;
+        top: 0;
+        border-radius: 0 !important;
+
+        #navLinks {
+            flex-direction: column;
+            margin: 0;
+            height: 100%;
+            margin-top: 30%;
+
+            .navlink {
+                margin-top: 10px;
+                font-size: 40px;
+            }
+        }
+
+        #darkmode {
+            height: 40px;
+            margin: 20px;
+            display: flex;
+        }
+    }
+
+    // project directory
+    .dot {
+        display: none;
+    }
+
+    .contentDesc {
+        display: none;
+    }
+
+    #projectIcons {
+        width: min(90%, 400px);
+    }
+
+    .projectDirectoryPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+	.featuredIcon {
+		width: 300px;
+	}
+
+    // links only show up on navbar
+    #links {
+        display: none;
+        z-index: 20;
+    }
+
+    // homepage
+    #pfp {
+        display: none;
+    }
+
+    .larger {
+        text-align: center;
+    }
+
+    #homePage {
+        padding: 50px 10% 0 10% !important;
+    }
+
+    #homepageTitle {
+        justify-content: center !important;
+    }
+
+    #splash {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .workTitleDate {
+        display: none;
+    }
+}

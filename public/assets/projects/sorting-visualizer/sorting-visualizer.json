@@ -1,0 +1,10 @@
+{
+    "title": "Sorting Visualizer",
+    "date": "January 31, 2021",
+    "externalLink": "sorting-visualizer",
+    "types": [
+        "Javascript"
+    ],
+    "description": "Website to visualize sorting algorithms in action.",
+    "featured": true
+}

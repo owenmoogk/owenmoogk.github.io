@@ -1,0 +1,11 @@
+{
+    "title": "Game of Life",
+    "date": "June 4, 2023",
+    "externalLink": "game-of-life",
+    "types": [
+        "React",
+        "Javascript"
+    ],
+    "description": "An implementation of Conway's game of life.",
+    "featured": true
+}

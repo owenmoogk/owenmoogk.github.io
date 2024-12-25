@@ -1,0 +1,37 @@
+projects to add:
+	rectangle calculator
+	snake ai to page
+	passion project (or add it to work)
+	wave function collapse
+	new tab
+	hack the globe
+	conway's game of life
+	towers of hanoi
+	django twitter
+	frc website
+	elastic car
+	revit-house
+	pomodoro-timer-extension
+	computer website
+	gists?
+	arm project (torque minimizer)
+	covid health app??
+	github rooms?
+	
+
+
+	rework email bot page
+
+
+From todoist:
+	toyota innovation challenge
+	stats project
+	trip prices
+	f1 stats
+	torque optimizer
+	conways game of life
+	email bot
+	busplanner
+
+
+nav has a bug on mobile where it doesn't close

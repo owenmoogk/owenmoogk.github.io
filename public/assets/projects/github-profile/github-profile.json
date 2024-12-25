@@ -1,0 +1,10 @@
+{
+    "title": "GitHub Profile",
+    "date": "June 9, 2021",
+    "externalLink": "github-profile",
+    "types": [
+        "React"
+    ],
+    "description": "Website to retrieve and implement github API data.",
+    "featured": false
+}

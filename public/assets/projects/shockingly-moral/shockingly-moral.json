@@ -1,0 +1,12 @@
+{
+    "title": "Shockingly Moral",
+    "date": "May 28, 2022",
+    "githubLink": "https://github.com/owenmoogk/shocking",
+    "types": [
+        "MIT-AI",
+        "C++",
+        "Arduino"
+    ],
+    "description": "Shocking project, made at Jamhacks 6",
+    "featured": true
+}

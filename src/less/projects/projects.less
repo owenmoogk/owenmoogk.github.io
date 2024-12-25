@@ -1,83 +1,147 @@
-@media only screen and (max-width: 800px) {
-	.page{
-		width: auto;
-		max-width: 640px;
-	}
+:root {
+	--all: grey;
+	--solidworks: #B24C63;
+	--python: #53B3CB;
+	--mechanical: #F08A4B;
+	--javascript: #DBD56E;
+	--react: #02b875;
+	--django: #4B92DB;
+	--white: #ffffff;
+
+	--projectBorderRadius: 10px;
+	--projectBorderThickness: 3px;
+
 }
 
-@media only screen and (max-width: 800px) {
-	.sort{
+.featuredIcon {
+	height: 250px;
+	min-width: 250px;
+	max-width: 350px;
+	border-radius: var(--projectBorderRadius);
+	transition: 0.3s;
+	border: var(--projectBorderThickness) solid var(--textColor);
+	background-color: white;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	.featuredLabel {
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+		border-radius: calc(var(--projectBorderRadius) - var(--projectBorderThickness));
+		height: 100%;
 		width: 100%;
 		display: flex;
-		justify-content: center;
-	}
-	.buttons{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-}
+		justify-content: flex-end;
+		flex-direction: column;
+		
+		.featuredText {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			margin-bottom: 15px;
 
-/* the entry has the image and text split */
-#projectsGoHere {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-	width: 100%;
-	
-	.content {
-		margin: 20px;
-		position: relative;
-		width: 300px;
-		height: 300px;
-		text-align: center;
-		overflow: hidden;
-	
-		.content-overlay {
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			opacity: 0.9;
-			transition: all 0.3s ease-in-out 0s;
-			z-index: 2;
-		}
-	
-		.content-image{
-			height: 300px;
-			margin-left: 50%;
-			transform: translateX(-50%);
-		}
-	
-		.content-details {
-			position: absolute;
-			transform: translate(-50%, -50%);
-			top: 50%;
-			left: 50%;
-			color: black;
-			z-index: 10;
+			.contentTitle {
+				color: white;
+				font-weight: bold;
+				font-size: 30px;
+			}
 
-			h3{
-				font-weight: 500;
-				letter-spacing: 0.05em;
-				margin-bottom: 0.5em;
+			.contentDate {
+				color: white;
+				font-size: 16px;
+				display: flex;
+				justify-content: space-between;
+				height: 20px;
+			}
+		}
+
+		.iconContainer {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: flex-end;
+			margin-bottom: 10px;
+
+			.iconImage {
+				height: 30px;
+				width: 30px;
 				margin-top: 10px;
-				text-transform: uppercase;
-			}
-	
-			p{
-				font-size: 0.8em;
-				margin-top: 0;
-			}
-		}
-
-		&:hover{
-			.content-overlay{
-				opacity: 0;
-			}
-			.content-details{
-				display: none;
 			}
 		}
 	}
+}
+
+#projectPage {
+
+	margin-bottom: 70px;
+
+	#featuredContainer {
+		justify-content: center;
+		display: flex;
+		flex-direction: row;
+		width: calc(100% + 40px);
+		flex-wrap: wrap;
+		margin-left: -20px;
+	}
+
+	#projectIcons {
+
+		margin-top: 20px;
+
+		.content {
+
+			border-bottom: 1px solid var(--grey);
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			transition: 0.3s;
+			color: var(--textColor);
+			padding: 5px 20px;
+			height: fit-content;
+			min-height: 35px;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.2);
+			}
+
+			.contentTitle {
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			.contentDesc {
+				font-size: 16px;
+			}
+
+			.dot {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.projectIcons {
+				display: flex;
+				align-items: center;
+
+				a {
+					height: fit-content;
+					display: flex;
+					align-items: center;
+					margin: 0 3px;
+
+					svg {
+						stroke: var(--textColor);
+						transition: 0.3s;
+
+						&:hover {
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
+
 }

@@ -1,114 +1,57 @@
+#homePage {
+	padding: 100px 10% 0 10%;
+	margin: 0 auto 50px auto;
+	max-width: min(calc(100% - 100px), 800px);
+	display: flex;
+	flex-direction: column;
 
-@media only screen and (min-width: 1000px) {
-	#homepage{
-
+	#homepageTitle {
+		font-size: 20px;
+		color: grey;
 		display: flex;
 		flex-direction: row;
-		height: calc(100% - 100px);
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
 
-		#smallScreenContactButton{
-			display: none;
-		}
+		.photo {
+			height: 175px;
+			width: 175px;
 
-		#leftSection{
-			padding: 100px 100px 0;
-			height: calc(100% - 100px);
-			flex: 2;
-			background-color: white;
-
-			h1 {
-				font-size: 70px;
-				font-weight: bold;
-				line-height: 80px;
-			}
-			
-			#splash{
-				font-size: 30px;
-				transition: 0.2s;
-				width: fit-content;
-				max-width: 300px;
-				transform-origin: left;
-				user-select: none;
-
-				&:hover{
-					transform: scale(1.1);
-				}
-			}
-
-			a{
-				text-decoration: none;
-				color: rgb(0,150,255);
-			}
-
-			a:hover{
-				border-bottom: 2px solid rgb(0,150,255);
+			img {
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
 			}
 		}
 
+		.larger {
+			font-weight: bold;
+			font-size: 40px;
+			color: var(--textColor);
 
-		#rightSection{
-			flex: 5;
-			padding: 100px 50px;
-			height: calc(100% - 100px);
-			background-color: #add8e6;
+			.special {
+				font-size: 60px;
+			}
+		}
 
-			p{
-				font-size: 25px;
+		#splash {
+			user-select: none;
+			transition: 0.3s;
+			transform-origin: left top;
+			text-align: left;
+
+			&:hover {
+				transform: scale(1.1);
 			}
 		}
 	}
-}
 
-@media only screen and (max-width: 1000px) {
-	#homepage{
-
+	#featuredContainer {
 		display: flex;
-		flex-direction: column;
-
-		#largeScreenContactButton{
-			display: none;
-		}
-
-		#leftSection{
-			padding-top: 50px;
-		}
-
-		.homepageSection{
-			padding: 0 100px;
-			background-color: white;
-
-			h1 {
-				font-size: 70px;
-				font-weight: bold;
-				line-height: 80px;
-			}
-			
-			#splash{
-				font-size: 30px;
-				transition: 0.2s;
-				width: 0px;
-				white-space: nowrap;
-
-				&:hover{
-					transform: scale(1.1);
-				}
-			}
-
-			a{
-				text-decoration: none;
-				color: rgb(0,150,255);
-			}
-			a:hover{
-				border-bottom: 2px solid rgb(0,150,255);
-			}
-
-			p{
-				font-size: 25px;
-			}
-		}
-	}
-
-	html, body{
-		overflow-x: hidden;
+		flex-direction: row;
+		width: calc(100% + 40px);
+		flex-wrap: wrap;
+		margin-left: -20px;
 	}
 }
