@@ -4,58 +4,91 @@
 	text-decoration: none;
 }
 
-#contacts {
-	line-height: 40px;
-	font-size: 23px;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-width: 800px;
-	justify-content: center;
-}
+#contactPage{
 
-.contactLink {
-	color: white;
-	font-size: 20px;
-	border-bottom: 1px solid white;
-}
+	height: calc(100% - 300px);
 
-.contactLink .header{
-	font-weight: bold;
-}
+	#contactCards{
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+	}
 
-.contactLink .contactText{
-	font-weight: lighter;
-}
+	#contactForm, #contactLinks{
+		flex: 1;
+		margin: 0 5%;
+		border-radius: 20px;
+		background-color: lightblue;
+	}
 
-.contactPage input,textarea{
-	outline: none;
-	background-color: rgba(255,255,255, 0.2);
-	border: none;
-	flex: 1;
-	margin: 10px;
-	padding: 20px;
-	color: white;
-}
+	#contactForm{
 
-button{
-	width: 100px;
-	margin: auto;
-	color: white;
-	outline: none;
-	border: none;
-	border-radius: 10px;
-	font-size: 20px;
-	padding: 10px 0;
-	background-color: rgba(255,255,255, 0.2);
-}
+		h2{
+			text-align: center;
+		}
 
-.contactPage textarea{
-	height: 200px;
-}
+		#formSplit{
+			display: flex;
+			flex-direction: row;
 
-.contactPage form{
-	display: flex;
-	flex-direction: column;
+			input{
+				flex: 1;
+			}
+		}
+
+		input,textarea{
+			outline: none;
+			background-color: rgba(255,255,255, 0.5);
+			border: none;
+			margin: 10px;
+			padding: 10px;
+			color: white;
+		}
+
+		textarea{
+			outline: none;
+			background-color: rgba(255,255,255, 0.5);
+			border: none;
+			margin: 10px;
+			padding: 10px;
+			color: white;
+			height: 100%;
+			resize: none;
+		}
+		
+		form{
+			display: flex;
+			flex-direction: column;
+		}
+
+		button{
+			width: 200px;
+			align-self: center;
+			margin-bottom: 10px;
+		}
+	}
+
+	#contactLinks {
+		line-height: 40px;
+		font-size: 23px;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-width: 800px;
+		justify-content: center;
+
+		.contactLink {
+			font-size: 20px;
+			color: black;
+
+			.header{
+				font-weight: bold;
+			}
+
+			.contactText{
+				font-weight: lighter;
+			}
+		}
+	}
 }

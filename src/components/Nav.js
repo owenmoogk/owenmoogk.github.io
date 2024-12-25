@@ -6,7 +6,7 @@ import '../css/navbar.css'
 export default function Nav() {
 	return (
 		<div id="navBox">
-			<Link to="/" className="navlinks"><p>Home</p></Link>
+			<a href="/" className="navlinks"><p>Home</p></a>
 			<Link to="/projects" className="navlinks"><p>Projects</p></Link>
 			<Link to="/work" className="navlinks"><p>Work</p></Link>
 			<Link to="/contact" className="navlinks"><p>Contact</p></Link>

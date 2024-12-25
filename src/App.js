@@ -1,17 +1,16 @@
 import React from 'react';
 import {
 	HashRouter as Router,
-	Routes as Switch,
+	Switch,
 	Route
 } from 'react-router-dom';
-import Nav from "./components/Nav.js"
+import Nav from './components/Nav';
 import NavButton from './components/NavButton.js'
 import Homepage from './components/homepage/Homepage.js'
 import Workpage from './components/Workpage.js'
-import ContactPage from './components/contact/Contact.js';
-import ProjectPage from './components/projects/ProjectPage.js'
+import ContactPage from './components/contact/ContactPage.js';
+import ProjectRouter from './components/ProjectRouter.js';
 import './css/index.css'
-import Projects from './components/projects/Projects.js'
 
 function App(props) {
 
@@ -20,11 +19,18 @@ function App(props) {
 			<NavButton/>
 			<Nav/>
 			<Switch>
-				<Route exact path='/projects' element={<Projects/>}/>
-				<Route path='/projects/:name' element={<ProjectPage />} />
-				<Route path='/work' element={<Workpage/>}/>
-				<Route path='/contact' element={<ContactPage/>}/>
-				<Route exact path='/' element={<Homepage/>}/>
+				<Route path='/projects'>
+					<ProjectRouter/>
+				</Route>
+				<Route path='/work'>
+					<Workpage/>
+				</Route>
+				<Route path='/contact'>
+					<ContactPage/>
+				</Route>
+				<Route exact path='/'>
+					<Homepage/>
+				</Route>
 			</Switch>
 		</Router>
 	);

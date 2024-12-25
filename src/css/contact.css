@@ -2,7 +2,60 @@
 * {
   text-decoration: none;
 }
-#contacts {
+#contactPage {
+  height: calc(100% - 300px);
+}
+#contactPage #contactCards {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#contactPage #contactForm,
+#contactPage #contactLinks {
+  flex: 1;
+  margin: 0 5%;
+  border-radius: 20px;
+  background-color: lightblue;
+}
+#contactPage #contactForm h2 {
+  text-align: center;
+}
+#contactPage #contactForm #formSplit {
+  display: flex;
+  flex-direction: row;
+}
+#contactPage #contactForm #formSplit input {
+  flex: 1;
+}
+#contactPage #contactForm input,
+#contactPage #contactForm textarea {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+}
+#contactPage #contactForm textarea {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  height: 100%;
+  resize: none;
+}
+#contactPage #contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+#contactPage #contactForm button {
+  width: 200px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+#contactPage #contactLinks {
   line-height: 40px;
   font-size: 23px;
   font-weight: bold;
@@ -12,42 +65,13 @@
   max-width: 800px;
   justify-content: center;
 }
-.contactLink {
-  color: white;
+#contactPage #contactLinks .contactLink {
   font-size: 20px;
-  border-bottom: 1px solid white;
+  color: black;
 }
-.contactLink .header {
+#contactPage #contactLinks .contactLink .header {
   font-weight: bold;
 }
-.contactLink .contactText {
+#contactPage #contactLinks .contactLink .contactText {
   font-weight: lighter;
-}
-.contactPage input,
-textarea {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  flex: 1;
-  margin: 10px;
-  padding: 20px;
-  color: white;
-}
-button {
-  width: 100px;
-  margin: auto;
-  color: white;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-  padding: 10px 0;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.contactPage textarea {
-  height: 200px;
-}
-.contactPage form {
-  display: flex;
-  flex-direction: column;
 }

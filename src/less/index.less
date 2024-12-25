@@ -27,22 +27,14 @@
 
 body {
 	margin: 0;
-	background-color: rgba(30, 30, 30, 1);
+	height: 100vh;
 }
 
 .title {
+	font-weight: bold;
 	font-size: 50px;
 	margin-bottom: 0px;
-	color: white;
 	text-align: center;
-}
-
-.main {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
 }
 
 #root{
@@ -50,7 +42,26 @@ body {
 }
 
 hr{
-	width: 100px;
+	width: 50px;
 	height: 3px;
-	background-color: white;
+	background-color: black;
+}
+
+.main{
+	padding-top: 30px;
+}
+
+button{
+	background-color: rgb(30,30,30);
+	outline: none;
+	border: none;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	transition: 0.2s;
+
+	&:hover{
+		cursor: pointer;
+		transform: scale(1.1);
+	}
 }

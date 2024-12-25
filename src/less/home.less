@@ -1,34 +1,114 @@
-canvas#background-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: black;
+
+@media only screen and (min-width: 1000px) {
+	#homepage{
+
+		display: flex;
+		flex-direction: row;
+		height: calc(100% - 100px);
+
+		#smallScreenContactButton{
+			display: none;
+		}
+
+		#leftSection{
+			padding: 100px 100px 0;
+			height: calc(100% - 100px);
+			flex: 2;
+			background-color: white;
+
+			h1 {
+				font-size: 70px;
+				font-weight: bold;
+				line-height: 80px;
+			}
+			
+			#splash{
+				font-size: 30px;
+				transition: 0.2s;
+				width: fit-content;
+				max-width: 300px;
+				transform-origin: left;
+				user-select: none;
+
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+
+			a{
+				text-decoration: none;
+				color: rgb(0,150,255);
+			}
+
+			a:hover{
+				border-bottom: 2px solid rgb(0,150,255);
+			}
+		}
+
+
+		#rightSection{
+			flex: 5;
+			padding: 100px 50px;
+			height: calc(100% - 100px);
+			background-color: #add8e6;
+
+			p{
+				font-size: 25px;
+			}
+		}
+	}
 }
 
-#title {
-	font-size: 100px;
-	color: white;
-	padding-top: calc(calc(100vh / 2) - 200px);
-	margin: 0;
-}
+@media only screen and (max-width: 1000px) {
+	#homepage{
 
-#splash {
-	color: var(--textcolor);
-	font-size: 20px;
-	width: fit-content;
-	margin: auto;
-	user-select: none;
-}
+		display: flex;
+		flex-direction: column;
 
-#secret{
-	font-size: 20px;
-	display: none;
-}
+		#largeScreenContactButton{
+			display: none;
+		}
 
-#secretButton{
-	position: absolute;
-	height: 50px;
-	width: 50px;
-	bottom: 0;
-	left: 0;
+		#leftSection{
+			padding-top: 50px;
+		}
+
+		.homepageSection{
+			padding: 0 100px;
+			background-color: white;
+
+			h1 {
+				font-size: 70px;
+				font-weight: bold;
+				line-height: 80px;
+			}
+			
+			#splash{
+				font-size: 30px;
+				transition: 0.2s;
+				width: 0px;
+				white-space: nowrap;
+
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+
+			a{
+				text-decoration: none;
+				color: rgb(0,150,255);
+			}
+			a:hover{
+				border-bottom: 2px solid rgb(0,150,255);
+			}
+
+			p{
+				font-size: 25px;
+			}
+		}
+	}
+
+	html, body{
+		overflow-x: hidden;
+	}
 }

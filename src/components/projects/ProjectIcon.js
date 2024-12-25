@@ -18,7 +18,7 @@ export default function ProjectIcon(props) {
 			<div>
 				<div className={"content-overlay "+type}></div>
 				<img className="content-image" src={img} alt=''/>
-				<div className={"content-details "+type}>
+				<div className={"content-details "}>
 					<h3 className="content-title">{props.title}</h3>
 					<p className="type">{type.toUpperCase()}</p>
 				</div>

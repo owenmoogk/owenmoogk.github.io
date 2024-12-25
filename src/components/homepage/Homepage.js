@@ -1,6 +1,5 @@
 import '../../css/home.css'
 import React, {useState, useEffect} from 'react'
-import Background from '../background/Background.js'
 
 export default function Homepage() {
 
@@ -14,8 +13,6 @@ export default function Homepage() {
 			setSplash(item)
   		});
 	}
-	
-	// from https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range
 	function getRandomInt(min, max) {
 		min = Math.ceil(min)
 		max = Math.floor(max)
@@ -29,28 +26,29 @@ export default function Homepage() {
 		// load a random splash
 		loadSplash();
 
-		// setting the background to have no scrolling
-		document.body.style.overflowY = 'hidden'
-		document.body.style.overflowX = 'hidden'
-
-		// return is fired on componentwillunmount
-		return() =>{
-			document.body.style.overflowY = 'scroll'
-			document.body.style.overflowX = 'scroll'
-		}
-
 	}, []);
-	
 
 	return (
-		<div>
-			<div className='title'>
-				<p id="title">Owen Moogk</p>
+		<div id='homepage'>
+			<div id='leftSection' className='homepageSection'>
+				<h1>Owen <br/> Moogk</h1>
 				<p id="splash" onClick={() => loadSplash()}>{splash}</p>
-				<p id="secret">You found the top secret button (don't click this text)</p>
+				<a href='/#/contact' id='largeScreenContactButton'>
+					<button>Contact Me</button>
+					<br/><br/>
+				</a>
 			</div>
-			<div id="secretButton" onClick={()=> document.getElementById('secret').style.display = 'inherit'}></div>
-			<Background />
+			<div id="rightSection" className='homepageSection'>
+				<p>
+					Hey! I'm Owen, and this is my website.
+					I aspire to be a software engineer, and also work on web development and mechanical CAD.
+					Feel free to <a href='/#/contact'>reach out</a>, or have a look at my <a href='/#/projects'>projects</a>.
+				</p>
+				<a href='/#/contact' id='smallScreenContactButton'>
+					<button>Contact Me</button>
+					<br/><br/>
+				</a>
+			</div>
 		</div>
 	);
 }

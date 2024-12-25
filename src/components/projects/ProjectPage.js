@@ -143,11 +143,7 @@ export default function ProjectIcon() {
 
 	return (
 		<div className="body">
-			{
-				loadProjectPage(xmlFileLink, name) ?
-				<div>hi</div>:
-				<div>else</div>
-			}
+			{loadProjectPage(xmlFileLink, name)}
 		</div>
 	);
 }
