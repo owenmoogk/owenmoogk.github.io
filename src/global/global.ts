@@ -7,6 +7,5 @@ export const memoriesPhotosLink = memoriesLink + 'photos/';
 export const blogLink = 'https://owenmoogk.github.io/blogs';
 
 export const linkedIn = 'https://linkedin.com/in/owenmoogk';
-export const instagram = 'https://www.instagram.com/owen.moogk';
 export const headshot =
   'https://owenmoogk.github.io/owenmoogk/pfps/suit-edited-square.png';
