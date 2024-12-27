@@ -23,9 +23,10 @@ import './main.css';
 // import Adventures from '@components/adventures/adventures';
 import Memories from '@components/memories/memories';
 import Projects from '@components/projects/Projects';
+import { assetUrl } from '@global/global';
 
-function Redirect() {
-  window.location.replace('https://github.com/owenmoogk/');
+function Redirect({ to }: { to: string }) {
+  window.location.replace(to);
   return null;
 }
 
@@ -76,7 +77,14 @@ export default function App() {
           <Route path="/memories" element={<Memories />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/404" element={<NotFoundPage />} />
-          <Route path="/github" element={<Redirect />} />
+          <Route
+            path="/github"
+            element={<Redirect to="https://github.com/owenmoogk/" />}
+          />
+          <Route
+            path="/resume"
+            element={<Redirect to={assetUrl + 'resume/resume.pdf'} />}
+          />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
       </Router>
