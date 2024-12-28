@@ -11,6 +11,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mantine/core": "^7.15.2",
+    "@mantine/hooks": "^7.15.2",
     "date-fns": "^4.1.0",
     "js-yaml": "^4.1.0",
     "pigeon-maps": "^0.21.6",

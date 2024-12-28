@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useLocalStorage } from '@mantine/hooks';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   Navigate,
@@ -31,14 +32,10 @@ function Redirect({ to }: { to: string }) {
 }
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem('darkmode') !== 'false'
-  );
-
-  function toggleDarkMode() {
-    localStorage.setItem('darkmode', darkMode ? 'false' : 'true');
-    setDarkMode(!darkMode);
-  }
+  const [darkMode, setDarkMode] = useLocalStorage<boolean>({
+    key: 'darkmode',
+    defaultValue: true,
+  });
 
   function updateDarkMode(darkMode: boolean) {
     if (darkMode) {
@@ -58,7 +55,7 @@ export default function App() {
     <>
       <div id="backgroundDiv" />
       <Router>
-        <Nav toggleDarkMode={toggleDarkMode} />
+        <Nav toggleDarkMode={() => setDarkMode((val) => !val)} />
         <Routes>
           <Route path="/projects" element={<HelmetTitle name="Projects" />}>
             <Route index element={<Projects />} />

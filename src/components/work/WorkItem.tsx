@@ -1,5 +1,6 @@
+import { useDisclosure } from '@mantine/hooks';
 import type { ReactNode } from 'react';
-import React, { useState } from 'react';
+import React from 'react';
 
 export type StringDictionary = Record<string, string>;
 
@@ -11,7 +12,7 @@ type Props = {
 };
 
 export default function WorkItem(props: Props) {
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, { toggle }] = useDisclosure(true);
 
   function getSummary(summary?: ReactNode) {
     if (summary) {
@@ -37,7 +38,7 @@ export default function WorkItem(props: Props) {
   return (
     <div className="workItem">
       {props.summary ? (
-        <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
+        <div className="graphics" onClick={toggle}>
           <div className="svg">
             <svg
               style={{
@@ -54,13 +55,13 @@ export default function WorkItem(props: Props) {
           </div>
         </div>
       ) : (
-        <div className="graphics" onClick={() => setCollapsed(!collapsed)}>
+        <div className="graphics" onClick={toggle}>
           <div className="svg" />
         </div>
       )}
 
       <div className="text">
-        <div className="titleBlock" onClick={() => setCollapsed(!collapsed)}>
+        <div className="titleBlock" onClick={toggle}>
           <div className="workTitle">
             <span>{props.title}</span>
             <span className="workTitleDate">{props.dateString}</span>

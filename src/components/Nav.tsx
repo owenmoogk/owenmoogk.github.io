@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Links from './Links';
 
 export default function Nav(props: { toggleDarkMode: () => void }) {
-  const [shown, setShown] = useState(false);
+  const [shown, { toggle: toggleShown, close: hide }] = useDisclosure(false);
 
   window.addEventListener('click', (e) => {
     if (shown && e.target === document.getElementById('navBox')) {
-      setShown(false);
+      hide();
     }
   });
 
@@ -16,7 +17,7 @@ export default function Nav(props: { toggleDarkMode: () => void }) {
     <div id="navContainer">
       <svg
         id="navButton"
-        onClick={() => setShown(!shown)}
+        onClick={() => toggleShown()}
         preserveAspectRatio="xMidYMid meet"
         viewBox="0 0 48 48"
       >
@@ -31,11 +32,7 @@ export default function Nav(props: { toggleDarkMode: () => void }) {
           <path d="M7.95 35.95h32" />
         </g>
       </svg>
-      <div
-        id="navBox"
-        style={{ display: shown ? 'flex' : '' }}
-        onClick={() => setShown(false)}
-      >
+      <div id="navBox" style={{ display: shown ? 'flex' : '' }} onClick={hide}>
         <div id="navLinks">
           <NavLink link="" text="Home" />
           <NavLink link="projects" text="Projects" />
