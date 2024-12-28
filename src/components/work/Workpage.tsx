@@ -1,3 +1,4 @@
+import { Text } from '@mantine/core';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -87,9 +88,9 @@ export default function Workpage() {
                   subtitle={item.issuer}
                   dateString={getDateString(item.startDate)}
                   summary={
-                    <p>
+                    <Text>
                       <a href={item.url}>Certification</a>
-                    </p>
+                    </Text>
                   }
                 />
               );

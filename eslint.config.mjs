@@ -76,6 +76,7 @@ export default [
 
             // React rules
             ...reactPlugin.configs.recommended.rules,
+            "react/react-in-jsx-scope": "off",
             "react/no-unescaped-entities": "off",
             "react/jsx-closing-bracket-location": ["error", {
                 location: "line-aligned",

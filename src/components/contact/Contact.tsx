@@ -1,3 +1,4 @@
+import { Text } from '@mantine/core';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -12,11 +13,11 @@ export default function ContactPage() {
       <p className="title">Contact</p>
       <div id="contactPage">
         <h2>Say hi...</h2>
-        <p>
+        <Text>
           <a href="mailto:owenmoogk@gmail.com">owenmoogk@gmail.com</a>
           <br />
           <a href={linkedIn}>{linkedIn.replace('https://', '')}</a>
-        </p>
+        </Text>
         <h2>...or find me here</h2>
 
         <div id="contactLinks">

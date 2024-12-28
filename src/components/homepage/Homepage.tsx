@@ -1,3 +1,4 @@
+import { Text } from '@mantine/core';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -42,7 +43,7 @@ export default function Homepage() {
         </div>
       </div>
       <div>
-        <p>
+        <Text>
           I'm currently a{' '}
           <a
             href="https://uwaterloo.ca/future-students/programs/mechatronics-engineering"
@@ -100,14 +101,14 @@ export default function Homepage() {
             SHAD
           </a>{' '}
           program. For more info, check out my <a href="work">work</a> page.
-        </p>
+        </Text>
       </div>
       <div>
         <h1>Featured Projects</h1>
-        <p>
+        <Text>
           Some of the most interesting <a href="projects">projects</a> that I've
           worked on:
-        </p>
+        </Text>
         <div id="featuredContainer">
           <FeaturedIcon
             data={{

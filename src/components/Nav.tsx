@@ -1,70 +1,91 @@
+import { Burger, Center, Container, Flex, Menu } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React from 'react';
-import { Link } from 'react-router-dom';
+// import { IconChevronDown } from '@tabler/icons-react';
 
-import Links from './Links';
+import classes from './HeaderMenu.module.css';
 
-export default function Nav(props: { toggleDarkMode: () => void }) {
-  const [shown, { toggle: toggleShown, close: hide }] = useDisclosure(false);
+const links = [
+  { link: '/about', label: 'Features' },
+  {
+    link: '#1',
+    label: 'Learn',
+    links: [
+      { link: '/docs', label: 'Documentation' },
+      { link: '/resources', label: 'Resources' },
+      { link: '/community', label: 'Community' },
+      { link: '/blog', label: 'Blog' },
+    ],
+  },
+  { link: '/about', label: 'About' },
+  { link: '/pricing', label: 'Pricing' },
+  {
+    link: '#2',
+    label: 'Support',
+    links: [
+      { link: '/faq', label: 'FAQ' },
+      { link: '/demo', label: 'Book a demo' },
+      { link: '/forums', label: 'Forums' },
+    ],
+  },
+];
 
-  window.addEventListener('click', (e) => {
-    if (shown && e.target === document.getElementById('navBox')) {
-      hide();
+export function Nav() {
+  const [opened, { toggle }] = useDisclosure(false);
+
+  const items = links.map((link) => {
+    const menuItems = link.links?.map((item) => (
+      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+    ));
+
+    if (menuItems) {
+      return (
+        <Menu
+          key={link.label}
+          trigger="hover"
+          transitionProps={{ exitDuration: 0 }}
+          withinPortal
+        >
+          <Menu.Target>
+            <a
+              style={{ width: '100px' }}
+              href={link.link}
+              className={classes.link}
+              onClick={(event) => event.preventDefault()}
+            >
+              <Center>
+                <span className={classes.linkLabel}>{link.label}</span>
+                {/* <IconChevronDown size={14} stroke={1.5} /> */}
+                DD
+              </Center>
+            </a>
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+        </Menu>
+      );
     }
+
+    return (
+      <a
+        style={{ width: '100px' }}
+        key={link.label}
+        href={link.link}
+        className={classes.link}
+        onClick={(event) => event.preventDefault()}
+      >
+        {link.label}
+      </a>
+    );
   });
 
   return (
-    <div id="navContainer">
-      <svg
-        id="navButton"
-        onClick={() => toggleShown()}
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 48 48"
-      >
-        <g
-          fill="none"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M7.95 11.95h32" />
-          <path d="M7.95 23.95h32" />
-          <path d="M7.95 35.95h32" />
-        </g>
-      </svg>
-      <div id="navBox" style={{ display: shown ? 'flex' : '' }} onClick={hide}>
-        <div id="navLinks">
-          <NavLink link="" text="Home" />
-          <NavLink link="projects" text="Projects" />
-          <NavLink link="work" text="Work" />
-          {/* <NavLink link="notes" text="Notes" /> */}
-          <NavLink link="contact" text="Contact" />
-          <div id="darkmode" className="navlink" onClick={props.toggleDarkMode}>
-            <svg
-              width="30px"
-              height="30px"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24"
-            >
-              <path d="M9.37 5.51A7.35 7.35 0 0 0 9.1 7.5c0 4.08 3.32 7.4 7.4 7.4c.68 0 1.35-.09 1.99-.27A7.014 7.014 0 0 1 12 19c-3.86 0-7-3.14-7-7c0-2.93 1.81-5.45 4.37-6.49zM12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26a5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <Links shown={shown} />
-    </div>
-  );
-}
-
-function NavLink(props: { link: string; text: string; newTab?: boolean }) {
-  return (
-    <Link
-      to={props.link}
-      className="navlink"
-      target={props.newTab ? '_blank' : ''}
-      rel="noreferrer"
-    >
-      {props.text}
-    </Link>
+    <header className={classes.header}>
+      <Container size="md">
+        <Flex dir="row">
+          {/* {console.log(items)} */}
+          {items}
+        </Flex>
+        <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+      </Container>
+    </header>
   );
 }
