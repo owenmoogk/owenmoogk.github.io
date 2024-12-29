@@ -11,7 +11,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { FaChevronDown, FaRegMoon, FaRegSun, FaSun } from 'react-icons/fa';
+import { FaChevronDown, FaRegMoon, FaRegSun } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router';
 

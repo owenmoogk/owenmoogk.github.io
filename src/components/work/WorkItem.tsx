@@ -1,4 +1,4 @@
-import { Box, Flex, Stack } from '@mantine/core';
+import { Flex, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import type { ReactNode } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
