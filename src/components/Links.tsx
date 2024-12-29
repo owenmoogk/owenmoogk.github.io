@@ -6,10 +6,11 @@ import { linkedIn } from '@global/global';
 export default function Links() {
   const iconProps = {
     color: 'var(--mantine-color-text)',
+    size: 30,
   };
 
   return (
-    <Stack id="links" gap={10}>
+    <Stack pos={'fixed'} bottom="20px" right="20px" gap={10}>
       <Anchor
         href="https://github.com/owenmoogk"
         target="_blank"

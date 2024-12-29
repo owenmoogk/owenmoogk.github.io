@@ -127,6 +127,7 @@ export function Nav() {
         </Stack>
       </Drawer>
       <Box
+        hiddenFrom="sm"
         pos="fixed"
         top={10}
         left={10}
@@ -134,12 +135,12 @@ export function Nav() {
         style={{
           backdropFilter: 'blur(10px)',
           background: 'rgba(255,255,255,0.1)',
-          borderRadius: 'md',
+          borderRadius: '5px',
         }}
         w="fit-content"
         h="fit-content"
       >
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" />
+        <Burger opened={opened} onClick={toggle} />
       </Box>
     </>
   );

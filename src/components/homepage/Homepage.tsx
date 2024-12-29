@@ -1,7 +1,6 @@
 import { Anchor, Box, Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router';
 
 import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
@@ -57,60 +56,35 @@ export default function Homepage() {
           <Anchor href="https://uwaterloo.ca/" target="_blank" rel="noreferrer">
             University of Waterloo
           </Anchor>
-          , quite passionate about engineering and design. I made this website
-          to work on my web development skills as well as showcase some work.
-          Check out my <Link to="/projects">projects</Link> page for details on
-          personal endeavors with programming, mechanical design, web
-          development, and 3D printing.
+          , quite passionate about engineering and design. I'm usually using
+          Altium, Python, React, 3D printing, and SolidWorks to make cool stuff!
+          Check out my <Anchor href="/projects">projects</Anchor> page for
+          details on personal endeavors with programming, mechanical design, and
+          web development.
           <br />
           <br />
-          I've recently completed a internship as a Software Developer at{' '}
+          I've formerly been employed at{' '}
+          <Anchor target="_blank" rel="noreferrer" href="https://rfa.space">
+            Rocket Factory Augsburg
+          </Anchor>
+          , the{' '}
           <Anchor
-            href="https://busplanner.com"
             target="_blank"
             rel="noreferrer"
+            href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions"
+          >
+            ULethbridge Hub for Neuroengineering Solutions
+          </Anchor>
+          , and{' '}
+          <Anchor
+            target="_blank"
+            rel="noreferrer"
+            href="https://busplanner.com"
           >
             BusPlanner
-          </Anchor>
-          , where I worked to develop a fullstack application for the BusPlanner
-          Student Transportation Suite, allowing clients to easily plan and
-          implement transportation solutions.
-          <br />
-          <br />
-          This winter, I have accepted a internship in a Research and
-          Development engineering role at the{' '}
-          <Anchor href="https://uleth.ca" target="_blank" rel="noreferrer">
-            University of Lethbridge
           </Anchor>{' '}
-          <Anchor
-            href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Neuroengineering Hub
-          </Anchor>
-          , and am very excited to spend the winter in Alberta, working and
-          learning more about hardware development and project development.
-          <br />
-          <br />
-          In high school, I worked as a student on the FRC robotics team{' '}
-          <Anchor
-            href="https://2702rebels.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            2702 Rebels
-          </Anchor>
-          , involved myself in the{' '}
-          <Anchor href="https://dukeofed.org" target="_blank" rel="noreferrer">
-            Duke of Edinburgh's Award
-          </Anchor>
-          , and attended the prestigious month-long{' '}
-          <Anchor href="https://shad.ca" target="_blank" rel="noreferrer">
-            SHAD
-          </Anchor>{' '}
-          program. For more info, check out my <Link to="/work">work</Link>{' '}
-          page.
+          in engineering related roles. For more information about my work, see
+          my <Anchor href="/work">work page</Anchor>.
         </Text>
       </div>
       <Box mt={30}>

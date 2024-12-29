@@ -1,3 +1,4 @@
+import { Anchor } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router';
@@ -29,13 +30,13 @@ export default function Sitemap() {
         <div className="assets">
           <ul>
             <li>
-              <a href="/assets">/assets</a>
+              <Anchor href="/assets">/assets</Anchor>
             </li>
             <li>
-              <a href="/projects/directory">/projects/directory</a>
+              <Anchor href="/projects/directory">/projects/directory</Anchor>
             </li>
             <li>
-              <a href="/memories">/memories</a>
+              <Anchor href="/memories">/memories</Anchor>
             </li>
             <br />
             {projectData.map((project, key) => {
@@ -54,9 +55,9 @@ export default function Sitemap() {
                 }
                 return (
                   <li key={key}>
-                    <a href={link} target="_blank" rel="noreferrer">
+                    <Anchor href={link} target="_blank" rel="noreferrer">
                       {linkDisplay}
-                    </a>
+                    </Anchor>
                   </li>
                 );
               }

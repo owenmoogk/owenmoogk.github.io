@@ -88,7 +88,7 @@ export default function Workpage() {
                   dateString={getDateString(item.startDate)}
                   summary={
                     <Text>
-                      <a href={item.url}>Certification</a>
+                      <Anchor href={item.url}>Certification</Anchor>
                     </Text>
                   }
                 />
@@ -130,13 +130,13 @@ export default function Workpage() {
       </div>
       <p className="subtitle">
         A condensed version of my working documents can be found{' '}
-        <a href="/assets">here</a>.
+        <Anchor href="/assets">here</Anchor>.
       </p>
       <p className="subtitle">
         And for anyone really curious:{' '}
-        <a href={extracurricularsLink} target="_blank" rel="noreferrer">
+        <Anchor href={extracurricularsLink} target="_blank" rel="noreferrer">
           everything I've ever done
-        </a>
+        </Anchor>
         .
       </p>
     </Container>

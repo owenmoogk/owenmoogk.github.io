@@ -1,3 +1,4 @@
+import { Box, TextInput } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -19,7 +20,7 @@ export default function ProjectDirectory() {
   }, [navigate]);
 
   return (
-    <div className="main projectDirectoryPage" id="projectPage">
+    <Box className="projectDirectoryPage" id="projectPage" maw={800} m="auto">
       <p className="title" id="projectTitle">
         Project Directory
       </p>
@@ -54,8 +55,7 @@ export default function ProjectDirectory() {
             filter={filter}
           />
         </div>
-        <input
-          type="text"
+        <TextInput
           onChange={(e) => setSearchQuery(e.target.value)}
           value={searchQuery}
           placeholder="Search"
@@ -80,6 +80,6 @@ export default function ProjectDirectory() {
           }
         })}
       </div>
-    </div>
+    </Box>
   );
 }

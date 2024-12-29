@@ -1,6 +1,8 @@
+import { Flex } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
 
@@ -94,7 +96,7 @@ export default function ProjectPage() {
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>
 
-        <div id="icons">
+        <Flex id="icons" gap="sm" align="center">
           {metaData.githubLink === '' ? null : (
             <a
               href={
@@ -105,36 +107,20 @@ export default function ProjectPage() {
               target="_blank"
               rel="noreferrer"
             >
-              <svg
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
+              <FaGithub size={24} />
             </a>
           )}
 
           {externalLink && (
             <a href={externalLink} target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" className="projectSvg">
-                <g fill="none">
-                  <path
-                    d="M10 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </g>
-              </svg>
+              <FaExternalLinkAlt size={20} />
             </a>
           )}
 
           {metaData.types.map((type: string, key: number) => {
             return <Tag type={type} key={key} />;
           })}
-        </div>
+        </Flex>
 
         <div id="blocks">
           <MarkdownView
