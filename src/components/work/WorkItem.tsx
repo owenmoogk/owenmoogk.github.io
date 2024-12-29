@@ -39,7 +39,7 @@ export default function WorkItem(props: Props) {
   return (
     <Stack align="center" gap={0}>
       <Flex justify="space-between" align="center" w="100%" gap={25}>
-        <div className="graphics" onClick={toggle}>
+        <div onClick={toggle}>
           {props.summary ? (
             <FaChevronRight
               style={{

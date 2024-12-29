@@ -77,21 +77,10 @@ export default function ProjectPage() {
     externalLink = metaData.externalLink ? externalLink : metaData.externalLink;
 
     return (
-      <div id="projectBody" className="main">
+      <div id="projectBody">
         <Helmet>
           <title>{metaData.title + ' - Owen Moogk'}</title>
         </Helmet>
-
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-            html, body{
-              max-width: 100%;
-              overflow-x: hidden;
-            }
-          `,
-          }}
-        />
 
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>

@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Box,
   Burger,
   Drawer,
@@ -10,7 +11,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
+import { FaChevronDown, FaRegMoon, FaRegSun, FaSun } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router';
 
@@ -95,10 +96,18 @@ export function Nav() {
           align="center"
           justify="end"
           className="navlink"
-          onClick={colorScheme.toggleColorScheme}
         >
-          {colorScheme.colorScheme === 'dark'}
-          <FaRegMoon size="1.25em" />
+          <ActionIcon
+            onClick={colorScheme.toggleColorScheme}
+            variant="transparent"
+            color="var(--mantine-color-text)"
+          >
+            {colorScheme.colorScheme === 'dark' ? (
+              <FaRegSun size="1.25em" />
+            ) : (
+              <FaRegMoon size="1.25em" />
+            )}
+          </ActionIcon>
         </Flex>
       </SimpleGrid>
       <Drawer
