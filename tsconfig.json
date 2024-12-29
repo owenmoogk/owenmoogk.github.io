@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
+    "target": "ESNext",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
     "moduleResolution": "Node",
@@ -31,5 +31,6 @@
   "exclude": [
     "node_modules",
     "dist"
-  ]
+  ],
+  
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Anchor } from '@mantine/core';
 import { Helmet } from 'react-helmet';
 
 import data from './publicAssets.json';
@@ -32,9 +32,9 @@ export default function Assets() {
               }
               return (
                 <li key={key}>
-                  <a href={link} target="_blank" rel="noreferrer">
+                  <Anchor href={link} target="_blank" rel="noreferrer">
                     {asset.name}
-                  </a>
+                  </Anchor>
                 </li>
               );
             })}

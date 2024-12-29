@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet';
 import { useNavigate, useParams } from 'react-router-dom';

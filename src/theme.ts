@@ -1,10 +1,12 @@
 import {
+  Anchor,
   Card,
   Container,
   createTheme,
   Paper,
   rem,
   Select,
+  Title,
 } from '@mantine/core';
 
 const CONTAINER_SIZES: Record<string, string> = {
@@ -16,9 +18,23 @@ const CONTAINER_SIZES: Record<string, string> = {
   xl: rem('1400px'),
   xxl: rem('1600px'),
 };
-
 export const mantineTheme = createTheme({
   /** Put your mantine theme override here */
+
+  colors: {
+    dark: [
+      '#FFFFFF',
+      '#b8b8b8',
+      '#828282',
+      '#696969',
+      '#424242',
+      '#3b3b3b',
+      '#2e2e2e',
+      '#242424',
+      '#1f1f1f',
+      '#141414',
+    ],
+  },
   fontSizes: {
     xs: rem('12px'),
     sm: rem('14px'),
@@ -43,6 +59,13 @@ export const mantineTheme = createTheme({
   },
   primaryColor: 'blue',
   components: {
+    Anchor: Anchor.extend({
+      defaultProps: {
+        underline: 'never',
+        fz: 'inherit',
+        c: 'var(--primaryColor)',
+      },
+    }),
     /** Put your mantine component override here */
     Container: Container.extend({
       vars: (_, { size, fluid }) => ({
@@ -75,6 +98,12 @@ export const mantineTheme = createTheme({
     Select: Select.extend({
       defaultProps: {
         checkIconPosition: 'right',
+      },
+    }),
+    Title: Title.extend({
+      defaultProps: {
+        mt: 20,
+        mb: 10,
       },
     }),
   },

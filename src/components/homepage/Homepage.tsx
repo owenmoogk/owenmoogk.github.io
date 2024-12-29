@@ -1,6 +1,7 @@
-import { Text } from '@mantine/core';
-import React, { useState } from 'react';
+import { Anchor, Box, Container, Text, Title } from '@mantine/core';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router';
 
 import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
@@ -23,7 +24,7 @@ export default function Homepage() {
   }
 
   return (
-    <div id="homePage">
+    <Container maw="800px">
       <Helmet>
         <title>{'Owen Moogk'}</title>
       </Helmet>
@@ -45,28 +46,32 @@ export default function Homepage() {
       <div>
         <Text>
           I'm currently a{' '}
-          <a
+          <Anchor
             href="https://uwaterloo.ca/future-students/programs/mechatronics-engineering"
             target="_blank"
             rel="noreferrer"
           >
             Mechatronics Engineering
-          </a>{' '}
+          </Anchor>{' '}
           student at the{' '}
-          <a target="_blank" rel="noreferrer" href="https://uwaterloo.ca/">
+          <Anchor href="https://uwaterloo.ca/" target="_blank" rel="noreferrer">
             University of Waterloo
-          </a>
+          </Anchor>
           , quite passionate about engineering and design. I made this website
           to work on my web development skills as well as showcase some work.
-          Check out my <a href="projects">projects</a> page for details on
+          Check out my <Link to="/projects">projects</Link> page for details on
           personal endeavors with programming, mechanical design, web
           development, and 3D printing.
           <br />
           <br />
           I've recently completed a internship as a Software Developer at{' '}
-          <a href="https://busplanner.com" target="_blank" rel="noreferrer">
+          <Anchor
+            href="https://busplanner.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             BusPlanner
-          </a>
+          </Anchor>
           , where I worked to develop a fullstack application for the BusPlanner
           Student Transportation Suite, allowing clients to easily plan and
           implement transportation solutions.
@@ -74,40 +79,45 @@ export default function Homepage() {
           <br />
           This winter, I have accepted a internship in a Research and
           Development engineering role at the{' '}
-          <a href="https://uleth.ca" target="_blank" rel="noreferrer">
+          <Anchor href="https://uleth.ca" target="_blank" rel="noreferrer">
             University of Lethbridge
-          </a>{' '}
-          <a
+          </Anchor>{' '}
+          <Anchor
             href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions"
             target="_blank"
             rel="noreferrer"
           >
             Neuroengineering Hub
-          </a>
+          </Anchor>
           , and am very excited to spend the winter in Alberta, working and
           learning more about hardware development and project development.
           <br />
           <br />
           In high school, I worked as a student on the FRC robotics team{' '}
-          <a href="https://2702rebels.com" target="_blank" rel="noreferrer">
+          <Anchor
+            href="https://2702rebels.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             2702 Rebels
-          </a>
+          </Anchor>
           , involved myself in the{' '}
-          <a href="https://dukeofed.org" target="_blank" rel="noreferrer">
+          <Anchor href="https://dukeofed.org" target="_blank" rel="noreferrer">
             Duke of Edinburgh's Award
-          </a>
+          </Anchor>
           , and attended the prestigious month-long{' '}
-          <a href="https://shad.ca" target="_blank" rel="noreferrer">
+          <Anchor href="https://shad.ca" target="_blank" rel="noreferrer">
             SHAD
-          </a>{' '}
-          program. For more info, check out my <a href="work">work</a> page.
+          </Anchor>{' '}
+          program. For more info, check out my <Link to="/work">work</Link>{' '}
+          page.
         </Text>
       </div>
-      <div>
-        <h1>Featured Projects</h1>
+      <Box mt={30}>
+        <Title order={1}>Featured Projects</Title>
         <Text>
-          Some of the most interesting <a href="projects">projects</a> that I've
-          worked on:
+          Some of the most interesting{' '}
+          <Anchor href="/projects">projects</Anchor> that I've worked on:
         </Text>
         <div id="featuredContainer">
           <FeaturedIcon
@@ -127,7 +137,7 @@ export default function Homepage() {
             }}
           />
         </div>
-      </div>
-    </div>
+      </Box>
+    </Container>
   );
 }

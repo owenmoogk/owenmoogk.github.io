@@ -1,36 +1,39 @@
-import { Burger, Center, Container, Flex, Menu } from '@mantine/core';
+import {
+  Box,
+  Burger,
+  Flex,
+  Menu,
+  SimpleGrid,
+  useMantineColorScheme,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
+import { Link } from 'react-router';
+
+import type { Link as LinkType } from '../types';
+import classes from './HeaderMenu.module.css';
 // import { IconChevronDown } from '@tabler/icons-react';
 
-import classes from './HeaderMenu.module.css';
-
-const links = [
-  { link: '/about', label: 'Features' },
-  {
-    link: '#1',
-    label: 'Learn',
-    links: [
-      { link: '/docs', label: 'Documentation' },
-      { link: '/resources', label: 'Resources' },
-      { link: '/community', label: 'Community' },
-      { link: '/blog', label: 'Blog' },
-    ],
-  },
-  { link: '/about', label: 'About' },
-  { link: '/pricing', label: 'Pricing' },
-  {
-    link: '#2',
-    label: 'Support',
-    links: [
-      { link: '/faq', label: 'FAQ' },
-      { link: '/demo', label: 'Book a demo' },
-      { link: '/forums', label: 'Forums' },
-    ],
-  },
+const links: LinkType[] = [
+  { link: '/', label: 'Home' },
+  { link: '/projects', label: 'Projects' },
+  { link: '/work', label: 'Work' },
+  { link: '/contact', label: 'Contact' },
+  // {
+  //   link: '#2',
+  //   label: 'Support',
+  //   links: [
+  //     { link: '/faq', label: 'FAQ' },
+  //     { link: '/demo', label: 'Book a demo' },
+  //     { link: '/forums', label: 'Forums' },
+  //   ],
+  // },
 ];
 
 export function Nav() {
   const [opened, { toggle }] = useDisclosure(false);
+
+  const colorScheme = useMantineColorScheme();
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
@@ -46,18 +49,12 @@ export function Nav() {
           withinPortal
         >
           <Menu.Target>
-            <a
-              style={{ width: '100px' }}
-              href={link.link}
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
-              <Center>
+            <Link to={link.link} className={classes.link}>
+              <Flex align="end">
                 <span className={classes.linkLabel}>{link.label}</span>
-                {/* <IconChevronDown size={14} stroke={1.5} /> */}
-                DD
-              </Center>
-            </a>
+                <FaChevronDown size={12} />
+              </Flex>
+            </Link>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -65,27 +62,36 @@ export function Nav() {
     }
 
     return (
-      <a
-        style={{ width: '100px' }}
+      <Link
         key={link.label}
-        href={link.link}
+        to={link.link}
         className={classes.link}
-        onClick={(event) => event.preventDefault()}
+        style={{ borderRadius: '5px' }}
       >
         {link.label}
-      </a>
+      </Link>
     );
   });
 
   return (
-    <header className={classes.header}>
-      <Container size="md">
-        <Flex dir="row">
-          {/* {console.log(items)} */}
-          {items}
-        </Flex>
-        <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-      </Container>
-    </header>
+    <SimpleGrid className={classes.header} cols={3}>
+      <Box />
+      <Flex justify="center" align="center">
+        {items}
+      </Flex>
+      <Flex
+        id="darkmode"
+        mx="xl"
+        align="center"
+        justify="end"
+        className="navlink"
+        onClick={colorScheme.toggleColorScheme}
+      >
+        {colorScheme.colorScheme === 'dark'}
+        <FaRegMoon size="1.25em" />
+      </Flex>
+
+      <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+    </SimpleGrid>
   );
 }

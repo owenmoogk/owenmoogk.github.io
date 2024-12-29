@@ -1,5 +1,4 @@
 import { Map, Marker } from 'pigeon-maps';
-import React from 'react';
 
 type Coordinate = [number, number];
 type Place = {

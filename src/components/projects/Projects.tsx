@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { Container } from '@mantine/core';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import FeaturedIcon from './FeaturedIcon';
@@ -18,7 +19,7 @@ export default function ProjectPage() {
   }, [navigate]);
 
   return (
-    <div className="main" id="projectPage">
+    <Container maw={1400} id="projectPage">
       <p className="title" id="projectTitle">
         Projects
       </p>
@@ -63,6 +64,6 @@ export default function ProjectPage() {
           })}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

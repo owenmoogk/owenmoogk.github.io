@@ -1,20 +1,13 @@
-import { useLocalStorage } from '@mantine/hooks';
-import React, { useEffect } from 'react';
+import { Container } from '@mantine/core';
 import { Helmet } from 'react-helmet';
-import {
-  Navigate,
-  Outlet,
-  Route,
-  BrowserRouter as Router,
-  Routes,
-} from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
 import Assets from './components/assets/Assets';
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
 import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
-import {Nav} from './components/Nav';
+import { Nav } from './components/Nav';
 import NotFoundPage from './components/NotFoundPage';
 import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';
@@ -22,6 +15,7 @@ import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
 import './main.css';
 // import Adventures from '@components/adventures/adventures';
+import Links from '@components/Links';
 import Memories from '@components/memories/memories';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
@@ -32,31 +26,12 @@ function Redirect({ to }: { to: string }) {
 }
 
 export default function App() {
-  const [darkMode, setDarkMode] = useLocalStorage<boolean>({
-    key: 'darkmode',
-    defaultValue: true,
-  });
-
-  function updateDarkMode(darkMode: boolean) {
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }
-
-  useEffect(() => {
-    updateDarkMode(darkMode);
-  }, [darkMode]);
-
-  updateDarkMode(darkMode);
-
   return (
     <>
+      <Nav />
+      <Links />
       <div id="backgroundDiv" />
-      <Router>
-        <Nav />
-        {/* toggleDarkMode={() => setDarkMode((val) => !val)}  */}
+      <Container maw={'100%'} pb={50}>
         <Routes>
           <Route path="/projects" element={<HelmetTitle name="Projects" />}>
             <Route index element={<Projects />} />
@@ -85,7 +60,7 @@ export default function App() {
           />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
-      </Router>
+      </Container>
     </>
   );
 }

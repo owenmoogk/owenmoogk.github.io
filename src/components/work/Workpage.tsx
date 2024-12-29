@@ -1,5 +1,4 @@
-import { Text } from '@mantine/core';
-import React from 'react';
+import { Anchor, Container, Text } from '@mantine/core';
 import { Helmet } from 'react-helmet';
 
 import data from './work.json';
@@ -28,21 +27,21 @@ function getDateString(startDate: string, endDate?: string) {
 
 export default function Workpage() {
   return (
-    <div className="main" id="workPage">
+    <Container id="workPage">
       <Helmet>
         <title>Work - Owen Moogk</title>
       </Helmet>
       <p className="title">Work</p>
       <p className="subtitle">
         Connect with me on{' '}
-        <a href={linkedIn} target="_blank" rel="noreferrer">
+        <Anchor href={linkedIn} target="_blank" rel="noreferrer">
           LinkedIn
-        </a>
+        </Anchor>
         <br />
         or have a look at my{' '}
-        <a href={resumeLink} target="_blank" rel="noreferrer">
+        <Anchor href={resumeLink} target="_blank" rel="noreferrer">
           Resume
-        </a>
+        </Anchor>
       </p>
       <div id="workItems">
         <div>
@@ -140,6 +139,6 @@ export default function Workpage() {
         </a>
         .
       </p>
-    </div>
+    </Container>
   );
 }
