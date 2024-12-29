@@ -31,7 +31,7 @@ export default function App() {
       <Nav />
       <Links />
       <div id="backgroundDiv" />
-      <Container maw={'100%'} pb={50}>
+      <Container maw={'100vw'} pb={50} pt={40}>
         <Routes>
           <Route path="/projects" element={<HelmetTitle name="Projects" />}>
             <Route index element={<Projects />} />
