@@ -7,7 +7,7 @@ import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
 import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
-import { Nav } from './components/Nav';
+import Nav from './components/Nav';
 import NotFoundPage from './components/NotFoundPage';
 import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';

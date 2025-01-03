@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './App';
 import { mantineCssVariableResolver } from './cssVariableResolver';
+import './main.css';
 import { mantineTheme } from './theme';
 
 createRoot(document.getElementById('root')!).render(

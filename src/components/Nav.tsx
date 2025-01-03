@@ -11,7 +11,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { FaChevronDown, FaRegMoon, FaRegSun } from 'react-icons/fa';
+import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router';
 
@@ -35,7 +35,7 @@ const links: LinkType[] = [
   // },
 ];
 
-export function Nav() {
+export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
 
   const colorScheme = useMantineColorScheme();
@@ -102,11 +102,7 @@ export function Nav() {
             variant="transparent"
             color="var(--mantine-color-text)"
           >
-            {colorScheme.colorScheme === 'dark' ? (
-              <FaRegSun size="1.25em" />
-            ) : (
-              <FaRegMoon size="1.25em" />
-            )}
+            <FaRegMoon size="1.25em" />
           </ActionIcon>
         </Flex>
       </SimpleGrid>
@@ -130,7 +126,6 @@ export function Nav() {
             justify="end"
             onClick={colorScheme.toggleColorScheme}
           >
-            {colorScheme.colorScheme === 'dark'}
             <FaRegMoon size="1.25em" />
           </Flex>
         </Stack>
