@@ -1,4 +1,4 @@
-import { Anchor, Container, Text } from '@mantine/core';
+import { Anchor, Container, List } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
@@ -88,9 +88,11 @@ export default function Workpage() {
                   subtitle={item.issuer}
                   dateString={getDateString(item.startDate)}
                   summary={
-                    <Text>
-                      <Anchor href={item.url}>Certification</Anchor>
-                    </Text>
+                    <List mb={10}>
+                      <List.Item>
+                        <Anchor href={item.url}>Certification</Anchor>
+                      </List.Item>
+                    </List>
                   }
                 />
               );

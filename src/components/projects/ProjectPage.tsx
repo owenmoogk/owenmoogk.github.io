@@ -2,7 +2,6 @@ import { Flex } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet-async';
-
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';

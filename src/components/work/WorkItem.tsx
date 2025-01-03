@@ -1,4 +1,4 @@
-import { Flex, Stack } from '@mantine/core';
+import { Box, Flex, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import type { ReactNode } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
@@ -18,7 +18,7 @@ export default function WorkItem(props: Props) {
   function getSummary(summary?: ReactNode) {
     if (summary && !collapsed) {
       return (
-        <div className="content">
+        <Box className="content">
           {typeof summary === 'string' ? (
             <p
               dangerouslySetInnerHTML={{
@@ -30,14 +30,14 @@ export default function WorkItem(props: Props) {
           ) : (
             summary
           )}
-        </div>
+        </Box>
       );
     }
     return null;
   }
 
   return (
-    <Stack align="center" gap={0}>
+    <Stack gap={0}>
       <Flex justify="space-between" align="center" w="100%" gap={25}>
         <div onClick={toggle}>
           {props.summary ? (
