@@ -24,6 +24,8 @@ const links: LinkType[] = [
   { link: '/projects', label: 'Projects' },
   { link: '/work', label: 'Work' },
   { link: '/contact', label: 'Contact' },
+  { link: '/notes', label: 'Writing' },
+  { link: '/adventures', label: 'Travel' },
   // {
   //   link: '#2',
   //   label: 'Support',

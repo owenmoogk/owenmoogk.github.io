@@ -1,6 +1,6 @@
-import { Anchor, Container } from '@mantine/core';
+import { Container } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 import FeaturedIcon from './FeaturedIcon';
 import FilterButton from '../common/FilterButton';
@@ -25,7 +25,7 @@ export default function ProjectPage() {
       </p>
       <p className="subtitle">
         These are some of my favorite projects. For a complete list, have a look{' '}
-        <Anchor href="/projects/directory">here</Anchor>.
+        <Link to="/projects/directory">here</Link>.
       </p>
       <div id="sortingContainer">
         <div id="buttonContainer">

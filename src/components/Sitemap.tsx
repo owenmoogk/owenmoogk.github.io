@@ -1,8 +1,6 @@
-import { Anchor } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
@@ -31,13 +29,13 @@ export default function Sitemap() {
         <div className="assets">
           <ul>
             <li>
-              <Anchor href="/assets">/assets</Anchor>
+              <Link to="/assets">/assets</Link>
             </li>
             <li>
-              <Anchor href="/projects/directory">/projects/directory</Anchor>
+              <Link to="/projects/directory">/projects/directory</Link>
             </li>
             <li>
-              <Anchor href="/memories">/memories</Anchor>
+              <Link to="/memories">/memories</Link>
             </li>
             <br />
             {projectData.map((project, key) => {
@@ -56,9 +54,9 @@ export default function Sitemap() {
                 }
                 return (
                   <li key={key}>
-                    <Anchor href={link} target="_blank" rel="noreferrer">
+                    <Link to={link} target="_blank" rel="noreferrer">
                       {linkDisplay}
-                    </Anchor>
+                    </Link>
                   </li>
                 );
               }

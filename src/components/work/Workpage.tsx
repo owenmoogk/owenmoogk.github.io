@@ -1,5 +1,6 @@
 import { Anchor, Container, Text } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 import data from './work.json';
 import WorkItem from './WorkItem';
@@ -130,7 +131,7 @@ export default function Workpage() {
       </div>
       <p className="subtitle">
         A condensed version of my working documents can be found{' '}
-        <Anchor href="/assets">here</Anchor>.
+        <Link to="/assets">here</Link>.
       </p>
       <p className="subtitle">
         And for anyone really curious:{' '}

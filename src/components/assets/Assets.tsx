@@ -1,6 +1,5 @@
-import { Anchor } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
-
+import { Link } from 'react-router';
 
 import data from './publicAssets.json';
 import { assetUrl } from '@global/global';
@@ -33,9 +32,9 @@ export default function Assets() {
               }
               return (
                 <li key={key}>
-                  <Anchor href={link} target="_blank" rel="noreferrer">
+                  <Link to={link} target="_blank" rel="noreferrer">
                     {asset.name}
-                  </Anchor>
+                  </Link>
                 </li>
               );
             })}

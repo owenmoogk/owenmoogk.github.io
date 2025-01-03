@@ -1,4 +1,5 @@
-import { Anchor, Container, Text } from '@mantine/core';
+import { Container, Text } from '@mantine/core';
+import { Link } from 'react-router';
 
 export default function NotFoundPage() {
   return (
@@ -7,10 +8,10 @@ export default function NotFoundPage() {
       <p className="subtitle">Uh oh, looks like I lost you.</p>
       <Text>
         If there should be a valid page here, please{' '}
-        <Anchor href="/contact">let me know</Anchor>.
+        <Link to="/contact">let me know</Link>.
         <br />
         <br />
-        Country roads... <Anchor href="/">take me home</Anchor>.
+        Country roads... <Link to="/">take me home</Link>.
       </Text>
     </Container>
   );

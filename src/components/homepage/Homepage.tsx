@@ -1,7 +1,7 @@
 import { Anchor, Box, Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-
+import { Link } from 'react-router';
 
 import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
@@ -59,9 +59,9 @@ export default function Homepage() {
           </Anchor>
           , quite passionate about engineering and design. I'm usually using
           Altium, Python, React, 3D printing, and SolidWorks to make cool stuff!
-          Check out my <Anchor href="/projects">projects</Anchor> page for
-          details on personal endeavors with programming, mechanical design, and
-          web development.
+          Check out my <Link to="/projects">projects</Link> page for details on
+          personal endeavors with programming, mechanical design, and web
+          development.
           <br />
           <br />
           I've formerly been employed at{' '}
@@ -85,14 +85,14 @@ export default function Homepage() {
             BusPlanner
           </Anchor>{' '}
           in engineering related roles. For more information about my work, see
-          my <Anchor href="/work">work page</Anchor>.
+          my <Link to="/work">work page</Link>.
         </Text>
       </div>
       <Box mt={30}>
         <Title order={1}>Featured Projects</Title>
         <Text>
-          Some of the most interesting{' '}
-          <Anchor href="/projects">projects</Anchor> that I've worked on:
+          Some of the most interesting <Link to="/projects">projects</Link> that
+          I've worked on:
         </Text>
         <div id="featuredContainer">
           <FeaturedIcon

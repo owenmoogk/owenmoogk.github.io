@@ -1,7 +1,7 @@
 import { Anchor, Container, Group, Text } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
-
 import { FaGithub, FaLinkedin, FaSpotify } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 import { linkedIn } from '@global/global';
 
@@ -34,9 +34,9 @@ export default function ContactPage() {
             owenmoogk@gmail.com
           </Anchor>
           <br />
-          <Anchor href={linkedIn} target="_blank" rel="noreferrer">
+          <Link to={linkedIn} target="_blank" rel="noreferrer">
             {linkedIn.replace('https://', '')}
-          </Anchor>
+          </Link>
         </Text>
         <h2>...or find me here</h2>
 
