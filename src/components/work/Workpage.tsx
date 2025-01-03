@@ -1,5 +1,5 @@
 import { Anchor, Container, Text } from '@mantine/core';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 import data from './work.json';
 import WorkItem from './WorkItem';

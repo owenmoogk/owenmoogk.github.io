@@ -1,5 +1,5 @@
 import { Container } from '@mantine/core';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
 import Assets from './components/assets/Assets';

@@ -1,6 +1,7 @@
 import { Anchor, Box, Container, Text, Title } from '@mantine/core';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+
 
 import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';

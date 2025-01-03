@@ -1,5 +1,6 @@
 import { Anchor } from '@mantine/core';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+
 
 import data from './publicAssets.json';
 import { assetUrl } from '@global/global';
