@@ -26,13 +26,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
       
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Compile Less to CSS
         run: npx less-watch-compiler src/less src main.less --run-once
       
       - name: Build
-        run: npm run build
+        run: yarn build
       
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
@@ -52,16 +52,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
       
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Compile Less to CSS
         run: npx less-watch-compiler src/less src main.less --run-once
       
       - name: Run ESLint
-        run: npm run lint
+        run: yarn lint
       
       - name: Type Check
-        run: npx tsc --noEmit
+        run: yarn typecheck
 
   deploy:
     if: github.event_name == 'release'
