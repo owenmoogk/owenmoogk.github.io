@@ -12,11 +12,16 @@ export default function Memories() {
   const [index, setIndex] = useState<number>(-1);
 
   const [metadata, setMetadata] = useState<MemoryImage[]>([]);
+  const [thumbnailMetadata, setThumbnailMetadata] = useState<MemoryImage[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     getImageMetadata()
-      .then((response) => setMetadata(response))
+      .then((response) => {
+        const [metadata, thumbnailMetadata] = response;
+        setMetadata(metadata);
+        setThumbnailMetadata(thumbnailMetadata);
+      })
       .catch((e) => console.log(e));
   }, [navigate]);
 
@@ -27,7 +32,7 @@ export default function Memories() {
       <br />
       <div className="memoryPage">
         <RowsPhotoAlbum
-          photos={metadata}
+          photos={thumbnailMetadata}
           onClick={({ index }) => setIndex(index)}
           targetRowHeight={(width) =>
             width > 1200
