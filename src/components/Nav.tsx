@@ -23,18 +23,17 @@ const links: LinkType[] = [
   { link: '/', label: 'Home' },
   { link: '/projects', label: 'Projects' },
   { link: '/work', label: 'Work' },
-  { link: '/contact', label: 'Contact' },
-  { link: '/notes', label: 'Writing' },
-  { link: '/adventures', label: 'Travel' },
+  // { link: '/notes', label: 'Notes' },
+  // // TODO: This should have subpages
   // {
-  //   link: '#2',
-  //   label: 'Support',
+  //   link: '#',
+  //   label: 'Adventures',
   //   links: [
-  //     { link: '/faq', label: 'FAQ' },
-  //     { link: '/demo', label: 'Book a demo' },
-  //     { link: '/forums', label: 'Forums' },
+  //     { link: '/adventures', label: 'Travels' },
+  //     { link: '/memories', label: 'Memories' },
   //   ],
   // },
+  { link: '/contact', label: 'Contact' },
 ];
 
 export default function Nav() {
@@ -44,7 +43,16 @@ export default function Nav() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      <Menu.Item key={item.link}>
+        <Link
+          key={item.label}
+          to={item.link}
+          style={{ borderRadius: '5px' }}
+          onClick={close}
+        >
+          {item.label}
+        </Link>
+      </Menu.Item>
     ));
 
     if (menuItems) {
