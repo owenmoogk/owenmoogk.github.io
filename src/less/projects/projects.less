@@ -8,8 +8,8 @@
 	--django: #4B92DB;
 	--white: #ffffff;
 
-	--projectBorderRadius: 10px;
-	--projectBorderThickness: 3px;
+	--projectBorderRadius: 0px;
+	--projectBorderThickness: 2px;
 
 }
 
@@ -19,7 +19,7 @@
 	max-width: 350px;
 	border-radius: var(--projectBorderRadius);
 	transition: 0.3s;
-	border: var(--projectBorderThickness) solid var(--textColor);
+	border: var(--projectBorderThickness) solid var(--mantine-color-text);
 	background-color: white;
 
 	&:hover {
@@ -90,7 +90,6 @@
 		margin-top: 20px;
 
 		.content {
-
 			border-bottom: 1px solid var(--grey);
 			display: flex;
 			flex-direction: row;
@@ -98,7 +97,7 @@
 			align-items: center;
 
 			transition: 0.3s;
-			color: var(--textColor);
+			color: var(--mantine-color-text);
 			padding: 5px 20px;
 			height: fit-content;
 			min-height: 35px;
@@ -132,7 +131,7 @@
 					margin: 0 3px;
 
 					svg {
-						stroke: var(--textColor);
+						stroke: var(--mantine-color-text);
 						transition: 0.3s;
 
 						&:hover {

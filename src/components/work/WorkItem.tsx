@@ -1,6 +1,7 @@
+import { Box, Flex, Stack } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import type { ReactNode } from 'react';
-import React from 'react';
+import { FaChevronRight } from 'react-icons/fa';
 
 export type StringDictionary = Record<string, string>;
 
@@ -15,9 +16,9 @@ export default function WorkItem(props: Props) {
   const [collapsed, { toggle }] = useDisclosure(true);
 
   function getSummary(summary?: ReactNode) {
-    if (summary) {
+    if (summary && !collapsed) {
       return (
-        <div className="content" style={{ height: collapsed ? '0' : '' }}>
+        <Box className="content">
           {typeof summary === 'string' ? (
             <p
               dangerouslySetInnerHTML={{
@@ -29,47 +30,36 @@ export default function WorkItem(props: Props) {
           ) : (
             summary
           )}
-        </div>
+        </Box>
       );
     }
     return null;
   }
 
   return (
-    <div className="workItem">
-      {props.summary ? (
-        <div className="graphics" onClick={toggle}>
-          <div className="svg">
-            <svg
+    <Stack gap={0}>
+      <Flex justify="space-between" align="center" w="100%" gap={25}>
+        <div onClick={toggle}>
+          {props.summary ? (
+            <FaChevronRight
               style={{
-                transition: '0.3s',
-                transform: !collapsed ? 'rotate(90deg)' : 'rotate(0deg',
+                transform: collapsed ? 'rotate(0deg)' : 'rotate(90deg)',
+                transition: 'transform 0.3s',
               }}
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
-            </svg>
-          </div>
+            />
+          ) : (
+            <FaChevronRight color="transparent" />
+          )}
         </div>
-      ) : (
-        <div className="graphics" onClick={toggle}>
-          <div className="svg" />
-        </div>
-      )}
-
-      <div className="text">
-        <div className="titleBlock" onClick={toggle}>
+        <Stack className="titleBlock" w="100%" onClick={toggle} gap={0}>
           <div className="workTitle">
             <span>{props.title}</span>
             <span className="workTitleDate">{props.dateString}</span>
           </div>
           {props.subtitle}
-        </div>
-        {getSummary(props.summary)}
-      </div>
-    </div>
+        </Stack>
+      </Flex>
+      <Flex ml={42}>{getSummary(props.summary)}</Flex>
+    </Stack>
   );
 }

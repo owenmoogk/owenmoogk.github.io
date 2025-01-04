@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Container } from '@mantine/core';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 
 import FeaturedIcon from './FeaturedIcon';
 import FilterButton from '../common/FilterButton';
@@ -18,13 +19,13 @@ export default function ProjectPage() {
   }, [navigate]);
 
   return (
-    <div className="main" id="projectPage">
+    <Container maw={1400} id="projectPage">
       <p className="title" id="projectTitle">
         Projects
       </p>
       <p className="subtitle">
         These are some of my favorite projects. For a complete list, have a look{' '}
-        <a href="/projects/directory">here</a>.
+        <Link to="/projects/directory">here</Link>.
       </p>
       <div id="sortingContainer">
         <div id="buttonContainer">
@@ -63,6 +64,6 @@ export default function ProjectPage() {
           })}
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

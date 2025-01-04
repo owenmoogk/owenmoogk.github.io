@@ -1,20 +1,9 @@
 #projectBody {
-	font-size: 16px;
-	margin-bottom: 40px;
 	justify-content: center;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 
-	.title {
-		#hr {
-			margin-top: 10px;
-			margin-bottom: 20px;
-			height: 4px;
-			width: 100px;
-			background-color: var(--textColor);
-		}
-	}
 
 	ul {
 		width: min(90%, 700px);
@@ -25,12 +14,15 @@
 	}
 
 	.subtitle {
-		color: var(--grey);
 		font-size: 18px;
 	}
 
 	#blocks {
 		width: min(700px, 90%);
+
+		a {
+			color: var(--primaryColor)
+		}
 
 		h1 {
 			text-align: center;
@@ -39,15 +31,13 @@
 		}
 	
 		img {
-			border-radius: 20px;
 			background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
 			max-height: 350px;
-			max-width: 100%;
+			width: 100%;
 			margin: auto;
 		}
 	
 		video {
-			border-radius: 20px;
 			max-height: 500px;
 			max-width: min(100%, 500px);
 			margin: auto;
@@ -55,7 +45,6 @@
 	
 		iframe {
 			max-width: calc(100% - 10px);
-			border-radius: 20px;
 		}
 	
 		.sliderContainer {
@@ -65,7 +54,6 @@
 			align-items: center;
 	
 			.subtitle {
-				color: var(--grey);
 				width: fit-content;
 			}
 		}

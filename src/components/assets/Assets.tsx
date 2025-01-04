@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 import data from './publicAssets.json';
 import { assetUrl } from '@global/global';
@@ -32,9 +32,9 @@ export default function Assets() {
               }
               return (
                 <li key={key}>
-                  <a href={link} target="_blank" rel="noreferrer">
+                  <Link to={link} target="_blank" rel="noreferrer">
                     {asset.name}
-                  </a>
+                  </Link>
                 </li>
               );
             })}

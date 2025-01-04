@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Anchor, Box, Container, Text, Title } from '@mantine/core';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
@@ -22,7 +24,7 @@ export default function Homepage() {
   }
 
   return (
-    <div id="homePage">
+    <Container maw="800px">
       <Helmet>
         <title>{'Owen Moogk'}</title>
       </Helmet>
@@ -42,72 +44,56 @@ export default function Homepage() {
         </div>
       </div>
       <div>
-        <p>
+        <Text>
           I'm currently a{' '}
-          <a
+          <Anchor
             href="https://uwaterloo.ca/future-students/programs/mechatronics-engineering"
             target="_blank"
             rel="noreferrer"
           >
             Mechatronics Engineering
-          </a>{' '}
+          </Anchor>{' '}
           student at the{' '}
-          <a target="_blank" rel="noreferrer" href="https://uwaterloo.ca/">
+          <Anchor href="https://uwaterloo.ca/" target="_blank" rel="noreferrer">
             University of Waterloo
-          </a>
-          , quite passionate about engineering and design. I made this website
-          to work on my web development skills as well as showcase some work.
-          Check out my <a href="projects">projects</a> page for details on
-          personal endeavors with programming, mechanical design, web
-          development, and 3D printing.
+          </Anchor>
+          , quite passionate about engineering and design. I'm usually using
+          Altium, Python, React, 3D printing, and SolidWorks to make cool stuff!
+          Check out my <Link to="/projects">projects</Link> page for details on
+          personal endeavors with programming, mechanical design, and web
+          development.
           <br />
           <br />
-          I've recently completed a internship as a Software Developer at{' '}
-          <a href="https://busplanner.com" target="_blank" rel="noreferrer">
-            BusPlanner
-          </a>
-          , where I worked to develop a fullstack application for the BusPlanner
-          Student Transportation Suite, allowing clients to easily plan and
-          implement transportation solutions.
-          <br />
-          <br />
-          This winter, I have accepted a internship in a Research and
-          Development engineering role at the{' '}
-          <a href="https://uleth.ca" target="_blank" rel="noreferrer">
-            University of Lethbridge
-          </a>{' '}
-          <a
-            href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions"
+          I've formerly been employed at{' '}
+          <Anchor target="_blank" rel="noreferrer" href="https://rfa.space">
+            Rocket Factory Augsburg
+          </Anchor>
+          , the{' '}
+          <Anchor
             target="_blank"
             rel="noreferrer"
+            href="https://www.linkedin.com/company/hub-for-neuroengineering-solutions"
           >
-            Neuroengineering Hub
-          </a>
-          , and am very excited to spend the winter in Alberta, working and
-          learning more about hardware development and project development.
-          <br />
-          <br />
-          In high school, I worked as a student on the FRC robotics team{' '}
-          <a href="https://2702rebels.com" target="_blank" rel="noreferrer">
-            2702 Rebels
-          </a>
-          , involved myself in the{' '}
-          <a href="https://dukeofed.org" target="_blank" rel="noreferrer">
-            Duke of Edinburgh's Award
-          </a>
-          , and attended the prestigious month-long{' '}
-          <a href="https://shad.ca" target="_blank" rel="noreferrer">
-            SHAD
-          </a>{' '}
-          program. For more info, check out my <a href="work">work</a> page.
-        </p>
+            ULethbridge Hub for Neuroengineering Solutions
+          </Anchor>
+          , and{' '}
+          <Anchor
+            target="_blank"
+            rel="noreferrer"
+            href="https://busplanner.com"
+          >
+            BusPlanner
+          </Anchor>{' '}
+          in engineering related roles. For more information about my work, see
+          my <Link to="/work">work page</Link>.
+        </Text>
       </div>
-      <div>
-        <h1>Featured Projects</h1>
-        <p>
-          Some of the most interesting <a href="projects">projects</a> that I've
-          worked on:
-        </p>
+      <Box mt={30}>
+        <Title order={1}>Featured Projects</Title>
+        <Text>
+          Some of the most interesting <Link to="/projects">projects</Link> that
+          I've worked on:
+        </Text>
         <div id="featuredContainer">
           <FeaturedIcon
             data={{
@@ -126,7 +112,7 @@ export default function Homepage() {
             }}
           />
         </div>
-      </div>
-    </div>
+      </Box>
+    </Container>
   );
 }

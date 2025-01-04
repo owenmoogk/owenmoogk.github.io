@@ -1,13 +1,6 @@
-import { useLocalStorage } from '@mantine/hooks';
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
-import {
-  Navigate,
-  Outlet,
-  Route,
-  BrowserRouter as Router,
-  Routes,
-} from 'react-router-dom';
+import { Container } from '@mantine/core';
+import { Helmet } from 'react-helmet-async';
+import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
 import Assets from './components/assets/Assets';
 import Blog from './components/blog/Blog';
@@ -22,6 +15,7 @@ import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
 import './main.css';
 // import Adventures from '@components/adventures/adventures';
+import Links from '@components/Links';
 import Memories from '@components/memories/memories';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
@@ -32,30 +26,12 @@ function Redirect({ to }: { to: string }) {
 }
 
 export default function App() {
-  const [darkMode, setDarkMode] = useLocalStorage<boolean>({
-    key: 'darkmode',
-    defaultValue: true,
-  });
-
-  function updateDarkMode(darkMode: boolean) {
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }
-
-  useEffect(() => {
-    updateDarkMode(darkMode);
-  }, [darkMode]);
-
-  updateDarkMode(darkMode);
-
   return (
     <>
+      <Nav />
+      <Links />
       <div id="backgroundDiv" />
-      <Router>
-        <Nav toggleDarkMode={() => setDarkMode((val) => !val)} />
+      <Container maw={'100vw'} pb={50} pt={40}>
         <Routes>
           <Route path="/projects" element={<HelmetTitle name="Projects" />}>
             <Route index element={<Projects />} />
@@ -84,7 +60,7 @@ export default function App() {
           />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
-      </Router>
+      </Container>
     </>
   );
 }

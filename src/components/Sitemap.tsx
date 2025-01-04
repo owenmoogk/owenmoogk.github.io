@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link, useNavigate } from 'react-router';
 
 import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
@@ -29,13 +29,13 @@ export default function Sitemap() {
         <div className="assets">
           <ul>
             <li>
-              <a href="/assets">/assets</a>
+              <Link to="/assets">/assets</Link>
             </li>
             <li>
-              <a href="/projects/directory">/projects/directory</a>
+              <Link to="/projects/directory">/projects/directory</Link>
             </li>
             <li>
-              <a href="/memories">/memories</a>
+              <Link to="/memories">/memories</Link>
             </li>
             <br />
             {projectData.map((project, key) => {
@@ -54,9 +54,9 @@ export default function Sitemap() {
                 }
                 return (
                   <li key={key}>
-                    <a href={link} target="_blank" rel="noreferrer">
+                    <Link to={link} target="_blank" rel="noreferrer">
                       {linkDisplay}
-                    </a>
+                    </Link>
                   </li>
                 );
               }

@@ -1,70 +1,161 @@
+import {
+  ActionIcon,
+  Box,
+  Burger,
+  Drawer,
+  Flex,
+  Menu,
+  SimpleGrid,
+  Stack,
+  Title,
+  useMantineColorScheme,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
+import { IoIosClose } from 'react-icons/io';
+import { Link } from 'react-router';
 
-import Links from './Links';
+import type { Link as LinkType } from '../types';
+import classes from './HeaderMenu.module.css';
+// import { IconChevronDown } from '@tabler/icons-react';
 
-export default function Nav(props: { toggleDarkMode: () => void }) {
-  const [shown, { toggle: toggleShown, close: hide }] = useDisclosure(false);
+const links: LinkType[] = [
+  { link: '/', label: 'Home' },
+  { link: '/projects', label: 'Projects' },
+  { link: '/work', label: 'Work' },
+  // { link: '/notes', label: 'Notes' },
+  // // TODO: This should have subpages
+  // {
+  //   link: '#',
+  //   label: 'Adventures',
+  //   links: [
+  //     { link: '/adventures', label: 'Travels' },
+  //     { link: '/memories', label: 'Memories' },
+  //   ],
+  // },
+  { link: '/contact', label: 'Contact' },
+];
 
-  window.addEventListener('click', (e) => {
-    if (shown && e.target === document.getElementById('navBox')) {
-      hide();
+export default function Nav() {
+  const [opened, { toggle, close }] = useDisclosure(false);
+
+  const colorScheme = useMantineColorScheme();
+
+  const items = links.map((link) => {
+    const menuItems = link.links?.map((item) => (
+      <Menu.Item key={item.link}>
+        <Link
+          key={item.label}
+          to={item.link}
+          style={{ borderRadius: '5px' }}
+          onClick={close}
+        >
+          {item.label}
+        </Link>
+      </Menu.Item>
+    ));
+
+    if (menuItems) {
+      return (
+        <Menu
+          key={link.label}
+          trigger="hover"
+          transitionProps={{ exitDuration: 0 }}
+          withinPortal
+        >
+          <Menu.Target>
+            <Link to={link.link} className={classes.link}>
+              <Flex align="end">
+                <span className={classes.linkLabel}>{link.label}</span>
+                <FaChevronDown size={12} />
+              </Flex>
+            </Link>
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+        </Menu>
+      );
     }
+
+    return (
+      <Link
+        key={link.label}
+        to={link.link}
+        className={classes.link}
+        style={{ borderRadius: '5px' }}
+        onClick={close}
+      >
+        {link.label}
+      </Link>
+    );
   });
 
   return (
-    <div id="navContainer">
-      <svg
-        id="navButton"
-        onClick={() => toggleShown()}
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 48 48"
+    <>
+      <SimpleGrid
+        cols={3}
+        className={classes.header}
+        display={{ base: 'none', sm: 'grid' }}
       >
-        <g
-          fill="none"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        <Box />
+        <Flex justify="center" align="center">
+          {items}
+        </Flex>
+        <Flex
+          id="darkmode"
+          mx="xl"
+          align="center"
+          justify="end"
+          className="navlink"
         >
-          <path d="M7.95 11.95h32" />
-          <path d="M7.95 23.95h32" />
-          <path d="M7.95 35.95h32" />
-        </g>
-      </svg>
-      <div id="navBox" style={{ display: shown ? 'flex' : '' }} onClick={hide}>
-        <div id="navLinks">
-          <NavLink link="" text="Home" />
-          <NavLink link="projects" text="Projects" />
-          <NavLink link="work" text="Work" />
-          {/* <NavLink link="notes" text="Notes" /> */}
-          <NavLink link="contact" text="Contact" />
-          <div id="darkmode" className="navlink" onClick={props.toggleDarkMode}>
-            <svg
-              width="30px"
-              height="30px"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24"
-            >
-              <path d="M9.37 5.51A7.35 7.35 0 0 0 9.1 7.5c0 4.08 3.32 7.4 7.4 7.4c.68 0 1.35-.09 1.99-.27A7.014 7.014 0 0 1 12 19c-3.86 0-7-3.14-7-7c0-2.93 1.81-5.45 4.37-6.49zM12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26a5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <Links shown={shown} />
-    </div>
-  );
-}
-
-function NavLink(props: { link: string; text: string; newTab?: boolean }) {
-  return (
-    <Link
-      to={props.link}
-      className="navlink"
-      target={props.newTab ? '_blank' : ''}
-      rel="noreferrer"
-    >
-      {props.text}
-    </Link>
+          <ActionIcon
+            onClick={colorScheme.toggleColorScheme}
+            variant="transparent"
+            color="var(--mantine-color-text)"
+          >
+            <FaRegMoon size="1.25em" />
+          </ActionIcon>
+        </Flex>
+      </SimpleGrid>
+      <Drawer
+        opened={opened}
+        onClose={close}
+        hiddenFrom="sm"
+        size="90%"
+        withCloseButton={false}
+      >
+        <Box pos={'absolute'} right={0} top={0} p="xl" onClick={close}>
+          <IoIosClose size={40} />
+        </Box>
+        <Stack h="calc(100vh - 66px)" justify="space-between">
+          <Stack>
+            <Title order={2}>Owen Moogk</Title>
+            {items}
+          </Stack>
+          <Flex
+            id="darkmode"
+            justify="end"
+            onClick={colorScheme.toggleColorScheme}
+          >
+            <FaRegMoon size="1.25em" />
+          </Flex>
+        </Stack>
+      </Drawer>
+      <Box
+        hiddenFrom="sm"
+        pos="fixed"
+        top={10}
+        left={10}
+        p={3}
+        style={{
+          backdropFilter: 'blur(10px)',
+          background: 'rgba(255,255,255,0.1)',
+          borderRadius: '5px',
+        }}
+        w="fit-content"
+        h="fit-content"
+      >
+        <Burger opened={opened} onClick={toggle} />
+      </Box>
+    </>
   );
 }

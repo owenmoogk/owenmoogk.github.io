@@ -1,5 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Anchor, Container, List } from '@mantine/core';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 
 import data from './work.json';
 import WorkItem from './WorkItem';
@@ -27,21 +28,21 @@ function getDateString(startDate: string, endDate?: string) {
 
 export default function Workpage() {
   return (
-    <div className="main" id="workPage">
+    <Container id="workPage">
       <Helmet>
         <title>Work - Owen Moogk</title>
       </Helmet>
       <p className="title">Work</p>
       <p className="subtitle">
         Connect with me on{' '}
-        <a href={linkedIn} target="_blank" rel="noreferrer">
+        <Anchor href={linkedIn} target="_blank" rel="noreferrer">
           LinkedIn
-        </a>
+        </Anchor>
         <br />
         or have a look at my{' '}
-        <a href={resumeLink} target="_blank" rel="noreferrer">
+        <Anchor href={resumeLink} target="_blank" rel="noreferrer">
           Resume
-        </a>
+        </Anchor>
       </p>
       <div id="workItems">
         <div>
@@ -87,9 +88,11 @@ export default function Workpage() {
                   subtitle={item.issuer}
                   dateString={getDateString(item.startDate)}
                   summary={
-                    <p>
-                      <a href={item.url}>Certification</a>
-                    </p>
+                    <List mb={10}>
+                      <List.Item>
+                        <Anchor href={item.url}>Certification</Anchor>
+                      </List.Item>
+                    </List>
                   }
                 />
               );
@@ -130,15 +133,15 @@ export default function Workpage() {
       </div>
       <p className="subtitle">
         A condensed version of my working documents can be found{' '}
-        <a href="/assets">here</a>.
+        <Link to="/assets">here</Link>.
       </p>
       <p className="subtitle">
         And for anyone really curious:{' '}
-        <a href={extracurricularsLink} target="_blank" rel="noreferrer">
+        <Anchor href={extracurricularsLink} target="_blank" rel="noreferrer">
           everything I've ever done
-        </a>
+        </Anchor>
         .
       </p>
-    </div>
+    </Container>
   );
 }

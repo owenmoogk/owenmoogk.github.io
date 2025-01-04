@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Tag(props: { type: string }) {
   const type = props.type;
   return (

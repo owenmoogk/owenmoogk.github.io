@@ -1,5 +1,5 @@
+import { Text } from '@mantine/core';
 import type { Dispatch, SetStateAction } from 'react';
-import React from 'react';
 
 export default function FilterButton(props: {
   displayName?: string;
@@ -24,7 +24,7 @@ export default function FilterButton(props: {
         color: 'var(--' + nameLower + ')',
       }}
     >
-      <p>{displayName}</p>
+      <Text>{displayName}</Text>
       <style
         dangerouslySetInnerHTML={{
           __html: `
