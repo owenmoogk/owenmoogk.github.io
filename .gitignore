@@ -6,3 +6,5 @@ dist/
 public/img/projects/ecoflow/demo.mp4
 
 src/main.css
+
+.env
