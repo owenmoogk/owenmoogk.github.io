@@ -1,23 +1,15 @@
 import { Box, TextInput } from '@mantine/core';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
 import ProjectIcon from './ProjectIcon';
 import FilterButton from '../common/FilterButton';
-import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
+import useFetchData from '@api/useGetData';
 
 export default function ProjectDirectory() {
-  const [projectData, setProjectData] = useState<Project[]>();
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filter, setFilter] = useState<string>('');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetchProjects()
-      .then((projects) => setProjectData(projects))
-      .catch(() => void navigate('/404'));
-  }, [navigate]);
+  const projectData = useFetchData(fetchProjects, null);
 
   return (
     <Box className="projectDirectoryPage" id="projectPage" maw={800} m="auto">

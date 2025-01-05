@@ -1,25 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
 
 import Tag from '../common/Tags';
-import type { BlogPost as BlogType } from '@api/blogs';
 import { getBlog, parseMarkdown } from '@api/blogs';
+import useFetchData from '@api/useGetData';
 import { headshot } from '@global/global';
 
 export default function BlogPost() {
-  const [content, setContent] = useState<string>();
-  const [blogData, setBlogData] = useState<BlogType>();
   const { name } = useParams();
 
-  useEffect(() => {
-    getBlog(name ?? '')
-      .then(({ content, blog }) => {
-        setContent(content);
-        setBlogData(blog);
-      })
-      .catch(() => null);
-  }, [name]);
+  const { content, blog } = useFetchData(getBlog, name ?? '') ?? {
+    content: null,
+    blog: null,
+  };
 
   function capitalizeWords(str: string) {
     return str
@@ -31,11 +24,11 @@ export default function BlogPost() {
   return (
     <div className="main">
       <div id="blogPage" className="blogPostPage">
-        {blogData && (
+        {blog && (
           <>
-            <p className="title">{blogData.title}</p>
+            <p className="title">{blog.title}</p>
             <div className="tags" id="icons">
-              {blogData.tags.map((type, key) => (
+              {blog.tags.map((type, key) => (
                 <Tag type={capitalizeWords(type)} key={key} />
               ))}
             </div>
@@ -44,7 +37,7 @@ export default function BlogPost() {
                 <img src={headshot} className="headshot" alt="" />
                 <div className="text">
                   <p className="authorText">Owen Moogk</p>
-                  <p className="date">{blogData.date.toString()}</p>
+                  <p className="date">{blog.date.toString()}</p>
                 </div>
               </div>
             </div>

@@ -1,22 +1,17 @@
 import { format } from 'date-fns';
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import FilterButton from '../common/FilterButton';
 import type { BlogPost } from '@api/blogs';
 import { getBlogs } from '@api/blogs';
+import useFetchData from '@api/useGetData';
 import { blogLink } from '@global/global';
 
 export default function Blog() {
-  const [blogData, setBlogData] = useState<BlogPost[]>();
-  const [filter, setFilter] = useState<string>('');
-  const navigate = useNavigate();
+  const blogData = useFetchData(getBlogs, null);
 
-  useEffect(() => {
-    getBlogs()
-      .then((posts) => setBlogData(posts))
-      .catch(() => void navigate('/404'));
-  }, [navigate]);
+  const [filter, setFilter] = useState<string>('');
 
   return (
     <div className="main">

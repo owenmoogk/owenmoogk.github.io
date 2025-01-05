@@ -1,22 +1,15 @@
 import { Container } from '@mantine/core';
-import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { useState } from 'react';
+import { Link } from 'react-router';
 
 import FeaturedIcon from './FeaturedIcon';
 import FilterButton from '../common/FilterButton';
-import type { Project } from '@api/projects';
 import { fetchProjects } from '@api/projects';
+import useFetchData from '@api/useGetData';
 
 export default function ProjectPage() {
-  const [projectData, setProjectData] = useState<Project[]>();
   const [filter, setFilter] = useState<string>('');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetchProjects()
-      .then((data) => setProjectData(data))
-      .catch(() => void navigate('/404'));
-  }, [navigate]);
+  const projectData = useFetchData(fetchProjects, null);
 
   return (
     <Container maw={1400} id="projectPage">

@@ -1,31 +1,21 @@
 import { Flex } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet-async';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
 
 import Tag from '../common/Tags';
-import type { Project } from '@api/projects';
 import { fetchProjectJSON, fetchProjectMarkdown } from '@api/projects';
+import useFetchData from '@api/useGetData';
 import { homepageUrl } from '@global/global';
 
 export default function ProjectPage() {
-  const [projectData, setProjectData] = useState<string>();
-  const [metaData, setMetaData] = useState<Project>();
   const { name } = useParams();
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchProjectJSON(name ?? '')
-      .then((response) => setMetaData(response))
-      .catch(() => void navigate('/404'));
-
-    fetchProjectMarkdown(name ?? '')
-      .then((response) => setProjectData(response))
-      .catch(() => void navigate('/404'));
-  }, [name, navigate]);
+  const metaData = useFetchData(fetchProjectJSON, name ?? '');
+  const projectData = useFetchData(fetchProjectMarkdown, name ?? '');
 
   // this is really stupid and is fully bad practice,
   // but......

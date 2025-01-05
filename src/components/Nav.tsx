@@ -24,6 +24,7 @@ const links: LinkType[] = [
   { link: '/projects', label: 'Projects' },
   { link: '/work', label: 'Work' },
   // { link: '/notes', label: 'Notes' },
+  // TODO: ADD MUSIC
   // // TODO: This should have subpages
   // {
   //   link: '#',

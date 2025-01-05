@@ -7,26 +7,23 @@ import {
   Tabs,
   Text,
 } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaSpotify } from 'react-icons/fa';
 
 import type { TimeframeType } from '@api/spotify';
 import { getTopTracks } from '@api/spotify';
-import type { SpotifyTopTrackItem, SpotifyTopTracks } from '@api/spotifyTypes';
+import type { SpotifyTopTrackItem } from '@api/spotifyTypes';
+import useFetchData from '@api/useGetData';
 
 export default function MusicPage() {
-  const [topTracks, setTopTracks] = useState<SpotifyTopTracks>();
   const [activeTab, setActiveTab] = useState<TimeframeType>('short_term');
-
-  useEffect(() => {
-    void getTopTracks(activeTab).then((response) => setTopTracks(response));
-  }, [activeTab]);
+  const topTracks = useFetchData(getTopTracks, activeTab);
 
   return (
     <Container maw={650}>
       <Helmet>
-        <title>{'Spotify - Owen Moogk'}</title>
+        <title>{'Music - Owen Moogk'}</title>
       </Helmet>
       <p className="title">Music</p>
       <p className="subtitle">
@@ -45,7 +42,6 @@ export default function MusicPage() {
           value={activeTab}
           onChange={(value) => {
             setActiveTab(value as TimeframeType);
-            setTopTracks(undefined);
           }}
         >
           <Tabs.List justify="center">
@@ -76,7 +72,7 @@ const SongRow = (song: SpotifyTopTrackItem) => {
           </a>
           <Flex>
             {song.artists.map((artist, key) => (
-              <>
+              <Fragment key={key}>
                 <Anchor
                   key={key}
                   href={artist.external_urls.spotify}
@@ -89,7 +85,7 @@ const SongRow = (song: SpotifyTopTrackItem) => {
                   {artist.name}
                 </Anchor>
                 {key !== song.artists.length - 1 && <Text c="gray">, </Text>}
-              </>
+              </Fragment>
             ))}
           </Flex>
         </Stack>
