@@ -1,54 +1,47 @@
-import {
-  memoriesLink,
-  memoriesPhotosLink,
-  memoriesThumbnailLink,
-} from '@global/global';
+import type { Photo } from 'react-photo-album/*';
+import type { Slide } from 'yet-another-react-lightbox';
 
-export type MemoryImage = {
-  name: string;
+import { memoriesLink } from '@global/global';
+
+export type ApiReturnType = {
+  type: 'image' | 'video';
   src: string;
-  date: Date;
+  thumbnail: string;
+  name: string;
+  date: string;
   location: [number, number] | null;
   width: number;
   height: number;
 };
 
 export async function getImageMetadata(): Promise<
-  [metadata: MemoryImage[], thumbnailMetadata: MemoryImage[]]
+  [metadata: Slide[], thumbnailMetadata: Photo[]]
 > {
   const response = await fetch(memoriesLink + 'image_metadata.json');
-  const json = (await response.json()) as {
-    [key: string]: unknown;
-    name: string;
-    date: string;
-  }[];
+  const json = (await response.json()) as ApiReturnType[];
+
+  json.reverse();
 
   // Convert the date string to a Date object
-  let imageData: MemoryImage[] = json.map(
-    (img) =>
-      ({
-        ...img,
-        date: new Date(
-          img.date.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3')
-        ),
-        src: memoriesPhotosLink + img.name,
-      }) as MemoryImage
-  );
+  const imageData: Slide[] = json.map((img) => ({
+    ...img,
+    type: img.type,
+    date: new Date(img.date.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3')),
+    src: memoriesLink + img.src,
+    sources: [
+      {
+        src: memoriesLink + img.src,
+        type: 'video/' + img.name.split('.').pop(),
+      },
+    ],
+  }));
 
-  let thumbnailImageData: MemoryImage[] = json.map(
-    (img) =>
-      ({
-        ...img,
-        date: new Date(
-          img.date.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3')
-        ),
-        src: memoriesThumbnailLink + img.name,
-      }) as MemoryImage
-  );
-
-  imageData = imageData.sort((a, b) => b.date.getTime() - a.date.getTime());
-  thumbnailImageData = thumbnailImageData.sort(
-    (a, b) => b.date.getTime() - a.date.getTime()
-  );
+  const thumbnailImageData: Photo[] = json.map((img) => ({
+    ...img,
+    date: new Date(img.date.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3')),
+    src: memoriesLink + img.thumbnail,
+    width: img.width ?? 0,
+    height: img.height ?? 0,
+  }));
   return [imageData, thumbnailImageData];
 }
