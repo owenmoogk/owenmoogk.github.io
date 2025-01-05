@@ -40,11 +40,13 @@ export const getNowPlaying = async () => {
   return (await response.json()) as SpotifyNowPlaying;
 };
 
-export const getTopTracks = async () => {
+export type TimeframeType = 'short_term' | 'medium_term' | 'long_term';
+
+export const getTopTracks = async (type: TimeframeType) => {
   const { access_token } = await getAccessToken();
 
   const response = await fetch(
-    `${TOP_TRACKS_ENDPOINT}?time_range=short_term&limit=10`,
+    `${TOP_TRACKS_ENDPOINT}?time_range=${type}&limit=10`,
     {
       headers: {
         Authorization: `Bearer ${access_token}`,

@@ -17,6 +17,7 @@ import './main.css';
 // import Adventures from '@components/adventures/adventures';
 import Links from '@components/Links';
 import Memories from '@components/memories/memories';
+import MusicPage from '@components/music/Music';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
 
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/memories" element={<Memories />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/404" element={<NotFoundPage />} />
+          <Route path="/music" element={<MusicPage />} />
           <Route
             path="/github"
             element={<Redirect to="https://github.com/owenmoogk/" />}
