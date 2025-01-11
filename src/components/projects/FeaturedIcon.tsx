@@ -1,3 +1,4 @@
+import { Box } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
 export default function FeaturedIcon(props: {
@@ -34,7 +35,7 @@ export default function FeaturedIcon(props: {
               margin: '0 20px',
             }}
           >
-            <div className="featuredText">
+            <Box className="featuredText" mr={15}>
               <span className="contentTitle">{data.title}</span>
               {data.date && <span className="contentDate">{data.date}</span>}
 
@@ -45,7 +46,7 @@ export default function FeaturedIcon(props: {
               <span className="type" style={{ display: 'none' }}>
                 {data.types}
               </span>
-            </div>
+            </Box>
             <span className="iconContainer">
               {types.map((type, key) => (
                 <img
