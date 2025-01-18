@@ -1,5 +1,5 @@
 import { Anchor, Box, Container, Text, Title } from '@mantine/core';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
@@ -7,7 +7,7 @@ import splashes from './splashes.json';
 import FeaturedIcon from '../projects/FeaturedIcon';
 import { assetUrl } from '@global/global';
 
-export function getRandomInt(min: number, max: number) {
+function getRandomIntInclusive(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -16,11 +16,19 @@ export function getRandomInt(min: number, max: number) {
 export default function Homepage() {
   const defaultSplash = 'Mechatronics Engineering Student';
   const [splash, setSplash] = useState(defaultSplash);
+  const alreadyShownSet = useRef(new Set<number>());
 
   function changeSplash() {
-    setSplash(
-      splashes ? splashes[getRandomInt(0, splashes.length)] : defaultSplash
-    );
+    if (alreadyShownSet.current.size == splashes.length) {
+      alreadyShownSet.current.clear();
+    }
+
+    let randomInt: number | null = null;
+    while (randomInt == null || alreadyShownSet.current.has(randomInt)) {
+      randomInt = getRandomIntInclusive(0, splashes.length - 1);
+    }
+    alreadyShownSet.current.add(randomInt);
+    setSplash(splashes ? splashes[randomInt] : defaultSplash);
   }
 
   return (
