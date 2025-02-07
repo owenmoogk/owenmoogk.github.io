@@ -60,7 +60,9 @@ export default function ProjectPage() {
       return;
     }
 
-    let externalLink = metaData.externalLink?.includes('https://')
+    let externalLink: string | undefined = metaData.externalLink?.includes(
+      'https://'
+    )
       ? metaData.externalLink
       : homepageUrl + metaData.externalLink;
     // if it doesn't exist just leave it
