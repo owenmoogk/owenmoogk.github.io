@@ -42,7 +42,7 @@ export default function BlogPost() {
               </div>
             </div>
             <MarkdownView
-              markdown={parseMarkdown(content ?? '')}
+              markdown={parseMarkdown(content)}
               options={{ tables: true, emoji: true }}
             />
           </>

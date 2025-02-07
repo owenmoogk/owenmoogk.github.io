@@ -73,6 +73,7 @@ export default [
             "@typescript-eslint/no-implied-eval": "error",
             "@typescript-eslint/promise-function-async": "error",
             "@typescript-eslint/return-await": "error",
+            "@typescript-eslint/no-unnecessary-condition": "error",
 
             // React rules
             ...reactPlugin.configs.recommended.rules,

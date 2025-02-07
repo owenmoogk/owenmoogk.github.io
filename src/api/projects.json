@@ -1,0 +1,530 @@
+[
+  {
+    "title": "Light Calipers",
+    "date": "November 15, 2023",
+    "types": [
+      "Solidworks",
+      "Python"
+    ],
+    "description": "Convoluted caliper for stats class.",
+    "featured": true,
+    "name": "light-calipers"
+  },
+  {
+    "title": "Trip Prices",
+    "date": "October 12, 2023",
+    "types": [
+      "React",
+      "Django"
+    ],
+    "description": "Trip price tracking application.",
+    "featured": true,
+    "name": "trip-prices"
+  },
+  {
+    "title": "F1 Stats",
+    "date": "August 24, 2023",
+    "types": [
+      "React",
+      "Javascript"
+    ],
+    "description": "F1 Hypotheticals Calculator",
+    "externalLink": "f1-stats",
+    "featured": true,
+    "name": "f1-stats"
+  },
+  {
+    "title": "Game of Life",
+    "date": "June 4, 2023",
+    "externalLink": "game-of-life",
+    "types": [
+      "React",
+      "Javascript"
+    ],
+    "description": "An implementation of Conway's game of life.",
+    "featured": true,
+    "name": "game-of-life"
+  },
+  {
+    "title": "SoilAri",
+    "date": "March 25, 2023",
+    "types": [
+      "Python"
+    ],
+    "description": "SHAD 2021 Project, designing a system to reduce water usage.",
+    "githubLink": "https://github.com/owenmoogk/soilari",
+    "featured": true,
+    "name": "soilari"
+  },
+  {
+    "title": "Chess Robot",
+    "date": "December 2, 2022",
+    "githubLink": "https://github.com/owenmoogk/carl-bot",
+    "types": [
+      "C++",
+      "EV3"
+    ],
+    "description": "Chess Playing Robot",
+    "featured": true,
+    "name": "chess-bot"
+  },
+  {
+    "title": "E-Car 2022",
+    "date": "May 28, 2022",
+    "githubLink": "",
+    "types": [
+      "Mechanical"
+    ],
+    "description": "2022 Bluevale Collegiate Electric Car",
+    "featured": true,
+    "name": "e-car"
+  },
+  {
+    "title": "Shockingly Moral",
+    "date": "May 28, 2022",
+    "githubLink": "https://github.com/owenmoogk/shocking",
+    "types": [
+      "MIT-AI",
+      "C++",
+      "Arduino"
+    ],
+    "description": "Shocking project, made at Jamhacks 6",
+    "featured": true,
+    "name": "shockingly-moral"
+  },
+  {
+    "title": "Macropad",
+    "date": "November 30, 2021",
+    "types": [
+      "Python",
+      "C++",
+      "Solidworks"
+    ],
+    "description": "A homemade macropad for custom keycommands.",
+    "featured": true,
+    "name": "macropad"
+  },
+  {
+    "title": "React GitHub Card",
+    "date": "June 30, 2021",
+    "types": [
+      "React"
+    ],
+    "externalLink": "github-card",
+    "description": "The github card, in a React component.",
+    "name": "github-card"
+  },
+  {
+    "title": "Password Manager",
+    "date": "June 30, 2021",
+    "types": [
+      "Javascript"
+    ],
+    "externalLink": "password-manager",
+    "description": "Password manager website, using localstorage.",
+    "name": "password-manager"
+  },
+  {
+    "title": "Sticky Caps",
+    "date": "June 30, 2021",
+    "types": [
+      "Python"
+    ],
+    "description": "Python script to simplify 'sArCaSm CaPs'.",
+    "githubLink": "https://github.com/owenmoogk/gists/tree/main/sticky-caps",
+    "name": "sticky-caps"
+  },
+  {
+    "title": "Typeracer",
+    "date": "June 30, 2021",
+    "types": [
+      "Python"
+    ],
+    "description": "Python script to crush opponents in Typeracer.",
+    "githubLink": "https://github.com/owenmoogk/gists/tree/main/typeracer",
+    "name": "typeracer"
+  },
+  {
+    "title": "Unix Time Converter",
+    "date": "June 30, 2021",
+    "types": [
+      "Javascript"
+    ],
+    "externalLink": "unix-time",
+    "description": "A cute little website for converting unix time to current time.",
+    "name": "unix-time"
+  },
+  {
+    "title": "GitHub Profile",
+    "date": "June 9, 2021",
+    "externalLink": "github-profile",
+    "types": [
+      "React"
+    ],
+    "description": "Website to retrieve and implement github API data.",
+    "featured": false,
+    "name": "github-profile"
+  },
+  {
+    "title": "Site Blocker",
+    "date": "June 5, 2021",
+    "types": [
+      "Javascript"
+    ],
+    "description": "Chrome extension to manipulate and block websites.",
+    "name": "site-blocker"
+  },
+  {
+    "title": "Rocket Calculator",
+    "date": "May 26, 2021",
+    "types": [
+      "React",
+      "Javascript"
+    ],
+    "description": "A website to calculate a rocket's trajectory.",
+    "externalLink": "rocket-calculator",
+    "featured": false,
+    "name": "rocket-calculator"
+  },
+  {
+    "title": "XML JSON Convertor",
+    "date": "May 26, 2021",
+    "types": [
+      "Javascript"
+    ],
+    "externalLink": "xml-json-convertor",
+    "description": "Website to convert XML data into JSON format.",
+    "name": "xml-json-convertor"
+  },
+  {
+    "title": "Cat Feeder",
+    "date": "May 22, 2021",
+    "githubLink": "https://github.com/JanikThePanic/JAMHacksV_CatFeeder",
+    "externalLink": "https://janikthepanic.github.io/JAMHacksV_CatFeeder",
+    "types": [
+      "Python",
+      "C++",
+      "Solidworks"
+    ],
+    "description": "AI powered cat feeding robot, powered by Arduino.",
+    "featured": true,
+    "name": "cat-feeder"
+  },
+  {
+    "title": "COVID Health App",
+    "date": "May 22, 2021",
+    "githubLink": "https://github.com/owenmoogk/covid-health-app",
+    "types": [
+      "React",
+      "Javascript"
+    ],
+    "description": "A COVID health tracking app, built for a hackathon.",
+    "featured": false,
+    "name": "covid-website"
+  },
+  {
+    "title": "Fullstack Template",
+    "date": "April 15, 2021",
+    "types": [
+      "React",
+      "Django"
+    ],
+    "description": "React and Django fullstack outline with user authentication, using JWT",
+    "name": "fullstack-template"
+  },
+  {
+    "title": "Firefly Simulator",
+    "date": "March 31, 2021",
+    "types": [
+      "Python",
+      "Pygame"
+    ],
+    "description": "Pygame simulation of firefly behavior.",
+    "githubLink": "https://github.com/owenmoogk/gists/tree/main/fireflies",
+    "name": "firefly-simulator"
+  },
+  {
+    "title": "NHL Fantasy App",
+    "date": "March 24, 2021",
+    "types": [
+      "Django"
+    ],
+    "description": "Fantasy sports app, built using an NHL API and Django backend.",
+    "name": "nhl-fantasy"
+  },
+  {
+    "title": "Grocery List App",
+    "date": "March 8, 2021",
+    "types": [
+      "Django",
+      "Javascript"
+    ],
+    "description": "Grocery list app to learn Django.",
+    "name": "grocery-list"
+  },
+  {
+    "title": "Pendulum Physics Simulator",
+    "date": "February 26, 2021",
+    "types": [
+      "Python",
+      "Matplotlib",
+      "Pygame"
+    ],
+    "description": "Physics simulation of a pendulum, with adjustable settings.",
+    "name": "pendulum-simulator"
+  },
+  {
+    "title": "Pathfinding Visualizer",
+    "date": "February 20, 2021",
+    "types": [
+      "Python",
+      "React"
+    ],
+    "description": "Pathfinding algorithms visualization built using Pygame.",
+    "featured": true,
+    "externalLink": "pathfinding-visualizer",
+    "name": "pathfinding-visualizer"
+  },
+  {
+    "title": "Sudoku Visualizer",
+    "date": "February 18, 2021",
+    "externalLink": "sudoku-visualizer",
+    "types": [
+      "Javascript"
+    ],
+    "description": "A sudoku solver website, which can visualize the algorithm.",
+    "featured": true,
+    "name": "sudoku-visualizer"
+  },
+  {
+    "title": "Outbreak Simulator",
+    "date": "February 16, 2021",
+    "types": [
+      "Python",
+      "Pygame"
+    ],
+    "description": "COVID-19 and other diseases simulator, with adjustable transmission rates, etc.",
+    "featured": true,
+    "name": "outbreak-simulator"
+  },
+  {
+    "title": "Color Picker",
+    "date": "February 15, 2021",
+    "externalLink": "color-picker",
+    "types": [
+      "Javascript"
+    ],
+    "description": "Web app for getting pixel data of an image.",
+    "featured": true,
+    "name": "color-picker"
+  },
+  {
+    "title": "Sorting Visualizer",
+    "date": "January 31, 2021",
+    "externalLink": "sorting-visualizer",
+    "types": [
+      "Javascript"
+    ],
+    "description": "Website to visualize sorting algorithms in action.",
+    "featured": true,
+    "name": "sorting-visualizer"
+  },
+  {
+    "title": "Dino Game AI",
+    "date": "January 26, 2021",
+    "types": [
+      "Python",
+      "NEAT"
+    ],
+    "description": "Artificial Intelligence used to beat the infamous dinosaur game.",
+    "featured": false,
+    "name": "dino-game-ai"
+  },
+  {
+    "title": "Simplelib",
+    "date": "January 23, 2021",
+    "externalLink": "simplelib",
+    "types": [
+      "Python",
+      "Javascript"
+    ],
+    "description": "A python library for dealing with complex data structures and algorithms.",
+    "featured": true,
+    "name": "simplelib"
+  },
+  {
+    "title": "Model Rocket",
+    "date": "January 8, 2021",
+    "types": [
+      "Solidworks"
+    ],
+    "description": "3D printed model rocket, with semi-functioning parachute :P",
+    "featured": true,
+    "name": "model-rocket"
+  },
+  {
+    "title": "Email Bot",
+    "date": "January 6, 2021",
+    "types": [
+      "Python"
+    ],
+    "description": "App designed to send emails automatically, to the masses.",
+    "name": "email-bot"
+  },
+  {
+    "title": "Snake AI",
+    "date": "January 6, 2021",
+    "types": [
+      "Python",
+      "Pygame"
+    ],
+    "description": "Classic snake game in Pygame.",
+    "name": "snake-ai"
+  },
+  {
+    "title": "Mecanum Drive",
+    "date": "December 21, 2020",
+    "types": [
+      "Solidworks"
+    ],
+    "description": "Mecanum drive powered robot, 3D printed.",
+    "name": "mecanum-drive"
+  },
+  {
+    "title": "Space Invaders",
+    "date": "November 6, 2020",
+    "types": [
+      "Python",
+      "Pygame"
+    ],
+    "description": "Space invaders game made in Pygame.",
+    "githubLink": "https://github.com/owenmoogk/gists/tree/main/space-invaders",
+    "name": "space-invaders"
+  },
+  {
+    "title": "The Compiler",
+    "date": "Oct 22, 2020",
+    "types": [
+      "React"
+    ],
+    "externalLink": "the-compiler",
+    "description": "Compilation of useful data and websites.",
+    "featured": false,
+    "name": "the-compiler"
+  },
+  {
+    "title": "Eco Flow",
+    "date": "July 30, 2020",
+    "types": [
+      "React",
+      "Solidworks",
+      "C++"
+    ],
+    "description": "SHAD 2021 Project, designing a system to reduce water usage.",
+    "externalLink": "ecoflow",
+    "featured": true,
+    "name": "ecoflow"
+  },
+  {
+    "title": "Renders / Graphic Design",
+    "date": "April 22, 2020",
+    "types": [
+      "Solidworks"
+    ],
+    "description": "Me messing around with Solidworks and Blender.",
+    "name": "renders"
+  },
+  {
+    "title": "Computer Website",
+    "date": "April 21, 2020",
+    "externalLink": "computer-website",
+    "types": [
+      "Javascript"
+    ],
+    "description": "Computer website made for a computer science class.",
+    "name": "computer-website"
+  },
+  {
+    "title": "FRC Website",
+    "date": "April 21, 2020",
+    "externalLink": "frc-website",
+    "types": [
+      "Javascript"
+    ],
+    "description": "FRC website made for a computer science class.",
+    "name": "frc-website"
+  },
+  {
+    "title": "Website Development",
+    "date": "April 21, 2020",
+    "githubLink": "https://github.com/owenmoogk/personal-website",
+    "types": [
+      "React",
+      "Typescript"
+    ],
+    "description": "Showcase of my website development projects.",
+    "name": "web-development"
+  },
+  {
+    "title": "Minecraft Modifications",
+    "date": "April 20, 2020",
+    "types": [],
+    "description": "Minecraft resource packs and datapacks.",
+    "name": "minecraft-modifications"
+  },
+  {
+    "title": "Vortex",
+    "date": "April 15, 2020",
+    "types": [
+      "Solidworks"
+    ],
+    "description": "A swerve-drive robot I designed for a CADathon.",
+    "featured": true,
+    "name": "vortex"
+  },
+  {
+    "title": "2702 Rebels 2020 Robot",
+    "date": "March 24, 2020",
+    "githubLink": "",
+    "types": [
+      "Mechanical",
+      "Solidworks"
+    ],
+    "description": "2020 FIRST Robotics season with the 2702 Rebels Team.",
+    "featured": true,
+    "name": "2702-2020"
+  },
+  {
+    "title": "Engine Assembly",
+    "date": "March 16, 2020",
+    "githubLink": "",
+    "types": [
+      "Mechanical"
+    ],
+    "description": "1 cylinder, 4-stroke lawnmower engine assembly.",
+    "name": "engine"
+  },
+  {
+    "title": "2702 Rebels 2019 Robot",
+    "date": "May 5, 2019",
+    "githubLink": "",
+    "types": [
+      "Mechanical",
+      "Solidworks"
+    ],
+    "externalLink": "https://2702rebels.com/resource/resource-2019/",
+    "description": "2019 FIRST Robotics season with the 2702 Rebels Team.",
+    "featured": true,
+    "name": "2702-2019"
+  },
+  {
+    "title": "Hydraulic Arm",
+    "date": "May 31, 2018",
+    "types": [
+      "Solidworks"
+    ],
+    "description": "Hydraulic powered arm, with 3D printed claw.",
+    "featured": true,
+    "name": "hydraulic-arm"
+  }
+]

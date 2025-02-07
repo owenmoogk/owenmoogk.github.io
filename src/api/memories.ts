@@ -41,8 +41,8 @@ export async function getImageMetadata(): Promise<{
     ...img,
     date: new Date(img.date.replace(/^(\d{4}):(\d{2}):(\d{2})/, '$1-$2-$3')),
     src: memoriesLink + img.thumbnail,
-    width: img.width ?? 0,
-    height: img.height ?? 0,
+    width: img.width,
+    height: img.height,
   }));
   return { metadata: imageData, thumbnailMetadata: thumbnailImageData };
 }

@@ -17,6 +17,20 @@ projects to add:
 	arm project (torque minimizer)
 	covid health app??
 	github rooms?
+
+
+
+	// FROM OLD
+	object-detection
+	gists
+	elastic-car
+	toyota-stickers
+	revit-house
+	passion-project
+	torque-optimizer
+	rectangle-calculator
+	django-twitter
+	pomodoro-timer-extension
 	
 
 

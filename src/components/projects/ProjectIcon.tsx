@@ -1,24 +1,16 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import type { Project } from '@api/projects';
 import { homepageUrl } from '@global/global';
 
-export default function ProjectIcon(props: {
-  data: {
-    name: string;
-    githubLink: string;
-    types: string[];
-    title: string;
-    externalLink: string;
-    description: string;
-  };
-}) {
+export default function ProjectIcon(props: { data: Project }) {
   const data = props.data;
   const githubLink =
     data.githubLink ?? 'https://github.com/owenmoogk/' + data.name;
   const types = data.types.map((x: string) => x.toLowerCase());
   const primaryType = types[0] ?? '';
-  let externalLink = data.externalLink?.includes('https://')
+  let externalLink: string | undefined = data.externalLink?.includes('https://')
     ? data.externalLink
     : homepageUrl + data.externalLink;
   // if it doesn't exist just leave it

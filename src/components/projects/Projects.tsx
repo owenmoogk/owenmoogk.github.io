@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { Link } from 'react-router';
 
 import FeaturedIcon from './FeaturedIcon';
+import data from '../../api/projects.json';
 import FilterButton from '../common/FilterButton';
-import { fetchProjects } from '@api/projects';
-import useFetchData from '@api/useGetData';
+import type { Project } from '@api/projects';
+
+const projectData = data as Project[];
 
 export default function ProjectPage() {
   const [filter, setFilter] = useState<string>('');
-  const projectData = useFetchData(fetchProjects, null);
 
   return (
     <Container maw={1400} id="projectPage">
@@ -45,7 +46,7 @@ export default function ProjectPage() {
 
       <div id="featuredProjects">
         <div id="featuredContainer">
-          {projectData?.map((data, key) => {
+          {projectData.map((data, key) => {
             const dataTypes = data.types.map((item) => item.toLowerCase());
             if (
               data.featured &&

@@ -28,7 +28,7 @@ export default function Homepage() {
       randomInt = getRandomIntInclusive(0, splashes.length - 1);
     }
     alreadyShownSet.current.add(randomInt);
-    setSplash(splashes ? splashes[randomInt] : defaultSplash);
+    setSplash(splashes[randomInt]);
   }
 
   return (

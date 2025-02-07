@@ -2,14 +2,15 @@ import { Box, TextInput } from '@mantine/core';
 import { useState } from 'react';
 
 import ProjectIcon from './ProjectIcon';
+import data from '../../api/projects.json';
 import FilterButton from '../common/FilterButton';
-import { fetchProjects } from '@api/projects';
-import useFetchData from '@api/useGetData';
+import type { Project } from '@api/projects';
+
+const projectData = data as Project[];
 
 export default function ProjectDirectory() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [filter, setFilter] = useState<string>('');
-  const projectData = useFetchData(fetchProjects, null);
 
   return (
     <Box className="projectDirectoryPage" id="projectPage" maw={800} m="auto">
@@ -56,7 +57,7 @@ export default function ProjectDirectory() {
         />
       </div>
       <div id="projectIcons">
-        {projectData?.map((data, key) => {
+        {projectData.map((data, key) => {
           const dataTypes = data.types.map((item) => item.toLowerCase());
           const searchQueryLower = searchQuery.toLowerCase();
           const matchesSearchQuery =
