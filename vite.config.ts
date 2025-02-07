@@ -59,6 +59,7 @@ export default defineConfig({
               }
             }
           }
+          // write to src/api/projects.json
           await fs.writeFile(
             ProjectJsonPath,
             JSON.stringify(
@@ -69,8 +70,15 @@ export default defineConfig({
               null,
               2
             )
-          ); // Use fs.writeFile
-          console.log('Project metadata generated successfully.');
+          );
+          // copy the file to public/assets
+          const publicAssetsPath = path.resolve(
+            __dirname,
+            'public',
+            'assets',
+            'projects.json'
+          );
+          await fs.copyFile(ProjectJsonPath, publicAssetsPath);
         } catch (error) {
           console.error('Error generating project metadata:', error);
           throw error; // Stop the build
@@ -82,10 +90,6 @@ export default defineConfig({
         { src: 'src/components/homepage/splashes.json', dest: 'assets' },
         { src: 'src/components/work/work.json', dest: 'assets' },
         { src: 'src/components/assets/publicAssets.json', dest: 'assets' },
-        {
-          src: 'src/components/projects/projectDirectory.json',
-          dest: 'assets',
-        },
       ],
     }),
   ],

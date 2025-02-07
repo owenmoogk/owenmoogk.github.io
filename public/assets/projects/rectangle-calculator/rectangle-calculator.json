@@ -1,0 +1,9 @@
+{
+    "title": "Rectangle Calculator",
+    "date": "February 7, 2021",
+    "externalLink": "rectangle-calculator",
+    "types": [
+        "Javascript"
+    ],
+    "description": "A calculator for forming a maximum number of rectangles."
+}
