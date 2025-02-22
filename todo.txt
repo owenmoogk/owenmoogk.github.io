@@ -17,6 +17,7 @@ projects to add:
 	arm project (torque minimizer)
 	covid health app??
 	github rooms?
+	cli / os website
 
 
 
