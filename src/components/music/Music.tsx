@@ -1,11 +1,11 @@
 import {
   Anchor,
+  Box,
   Container,
   Flex,
   Image,
   Stack,
   Tabs,
-  Text,
 } from '@mantine/core';
 import { Fragment, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -72,20 +72,20 @@ const SongRow = (song: SpotifyTopTrackItem) => {
           </a>
           <Flex>
             {song.artists.map((artist, key) => (
-              <Fragment key={key}>
-                <Anchor
-                  key={key}
-                  href={artist.external_urls.spotify}
-                  target="_blank"
-                  rel="noreferrer"
-                  c="gray"
-                  fz={'sm'}
-                  fs="italic"
-                >
+              <Anchor
+                key={key}
+                href={artist.external_urls.spotify}
+                target="_blank"
+                rel="noreferrer"
+                c="gray"
+                fz={'sm'}
+                fs="italic"
+              >
+                <Box c="gray">
                   {artist.name}
-                </Anchor>
-                {key !== song.artists.length - 1 && <Text c="gray">, </Text>}
-              </Fragment>
+                  {key !== song.artists.length - 1 && <>,&nbsp;</>}
+                </Box>
+              </Anchor>
             ))}
           </Flex>
         </Stack>
