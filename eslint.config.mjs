@@ -64,16 +64,15 @@ export default [
     rules: {
       // for some reason, these can't be applied at top level
       ...reactHooksPlugin.configs.recommended.rules,
+      'react-hooks/exhaustive-deps': 'error',
 
+      // typescript eslint
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-confusing-void-expression': 'off',
       '@typescript-eslint/member-ordering': 'error',
-      '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/no-implied-eval': 'error',
       '@typescript-eslint/promise-function-async': 'error',
-      '@typescript-eslint/return-await': 'error',
-      '@typescript-eslint/no-unnecessary-condition': 'error',
 
+      // react
       'react/react-in-jsx-scope': 'off',
       'react/no-unescaped-entities': 'off',
       'react/jsx-closing-bracket-location': [
@@ -88,9 +87,7 @@ export default [
       ],
       'react/self-closing-comp': 'error',
 
-      'react-hooks/exhaustive-deps': 'error',
-      'react-hooks/rules-of-hooks': 'error',
-
+      // import
       'import/order': [
         'error',
         {
@@ -109,8 +106,7 @@ export default [
       ],
       'import/no-named-as-default': 'error',
 
-      // General ESLint rules
-      'no-unused-vars': 'off', // handled by tslint
+      // javascript
       'no-useless-return': 'error',
       eqeqeq: 'error',
       'no-console': 'warn',
