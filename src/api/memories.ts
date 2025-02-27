@@ -32,7 +32,7 @@ export async function getImageMetadata(): Promise<{
     sources: [
       {
         src: memoriesLink + img.src,
-        type: 'video/' + img.name.split('.').pop(),
+        type: 'video/' + (img.name.split('.').pop() ?? ''),
       },
     ],
   }));

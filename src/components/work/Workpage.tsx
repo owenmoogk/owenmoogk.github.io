@@ -15,7 +15,7 @@ function formatDate(dateString: string) {
   }
   const date = new Date(dateString);
   const month = date.toLocaleString('en-US', { month: 'short' });
-  const year = date.getFullYear();
+  const year = date.getFullYear().toString();
   return `${month} ${year}`;
 }
 

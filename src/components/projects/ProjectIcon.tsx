@@ -12,7 +12,7 @@ export default function ProjectIcon(props: { data: Project }) {
   const primaryType = types[0] ?? '';
   let externalLink: string | undefined = data.externalLink?.includes('https://')
     ? data.externalLink
-    : homepageUrl + data.externalLink;
+    : homepageUrl + (data.externalLink ?? '');
   // if it doesn't exist just leave it
   externalLink = data.externalLink ? externalLink : data.externalLink;
 

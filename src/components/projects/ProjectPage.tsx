@@ -14,8 +14,10 @@ import { homepageUrl } from '@global/global';
 export default function ProjectPage() {
   const { name } = useParams();
 
-  const metaData = useFetchData(fetchProjectJSON, name ?? '');
-  const projectData = useFetchData(fetchProjectMarkdown, name ?? '');
+  const projectName = name ?? '';
+
+  const metaData = useFetchData(fetchProjectJSON, projectName);
+  const projectData = useFetchData(fetchProjectMarkdown, projectName);
 
   // this is really stupid and is fully bad practice,
   // but......
@@ -43,13 +45,13 @@ export default function ProjectPage() {
     // also, it doesn't match anything that starts with a slash, because that means it wants the root directory (eg "contact me" is /contact, and not the project dir)
     data = data.replaceAll(
       /\]\((?!https?:\/\/)(?!\/)(.+?)(?=(.+))/g,
-      `](/assets/projects/${name}/$1`
+      `](/assets/projects/${projectName}/$1`
     );
 
     // replace the src on video tags
     data = data.replaceAll(
       /<video src=("|')(.+?)\1><\/video>/g,
-      `<video src="/assets/projects/${name}/$2" controls></video>`
+      `<video src="/assets/projects/${projectName}/$2" controls></video>`
     );
 
     return data;
@@ -64,7 +66,7 @@ export default function ProjectPage() {
       'https://'
     )
       ? metaData.externalLink
-      : homepageUrl + metaData.externalLink;
+      : homepageUrl + (metaData.externalLink ?? '');
     // if it doesn't exist just leave it
     externalLink = metaData.externalLink ? externalLink : metaData.externalLink;
 
@@ -83,7 +85,7 @@ export default function ProjectPage() {
               href={
                 metaData.githubLink
                   ? metaData.githubLink
-                  : 'https://github.com/owenmoogk/' + name
+                  : 'https://github.com/owenmoogk/' + projectName
               }
               target="_blank"
               rel="noreferrer"
@@ -113,8 +115,12 @@ export default function ProjectPage() {
                 return (
                   <div className="sliderContainer">
                     <ReactCompareImage
-                      leftImage={'/assets/projects/' + name + '/' + image1}
-                      rightImage={'/assets/projects/' + name + '/' + image2}
+                      leftImage={
+                        '/assets/projects/' + projectName + '/' + image1
+                      }
+                      rightImage={
+                        '/assets/projects/' + projectName + '/' + image2
+                      }
                       aspectRatio="taller"
                       handle={
                         <button

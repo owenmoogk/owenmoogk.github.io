@@ -7,20 +7,20 @@ function useFetchData<T, P>(
 ): T | null {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     // Reset states on dependency change
     setIsLoading(true);
-    setError(null);
+    setError(false);
 
     fetchFunction(params)
       .then((response) => {
         setData(response);
         setIsLoading(false);
       })
-      .catch((err: Error) => {
-        setError(err.message);
+      .catch(() => {
+        setError(true);
         setIsLoading(false);
       });
   }, [fetchFunction, params, dependencies]);
