@@ -16,7 +16,9 @@ export const ProjectJsonPath = path.resolve(
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'automatic',
+    }),
     eslint({
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       emitWarning: true,

@@ -19,12 +19,12 @@ export default function Homepage() {
   const alreadyShownSet = useRef(new Set<number>());
 
   function changeSplash() {
-    if (alreadyShownSet.current.size == splashes.length) {
+    if (alreadyShownSet.current.size === splashes.length) {
       alreadyShownSet.current.clear();
     }
 
     let randomInt: number | null = null;
-    while (randomInt == null || alreadyShownSet.current.has(randomInt)) {
+    while (randomInt === null || alreadyShownSet.current.has(randomInt)) {
       randomInt = getRandomIntInclusive(0, splashes.length - 1);
     }
     alreadyShownSet.current.add(randomInt);

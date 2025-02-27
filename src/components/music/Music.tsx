@@ -7,7 +7,7 @@ import {
   Stack,
   Tabs,
 } from '@mantine/core';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaSpotify } from 'react-icons/fa';
 
