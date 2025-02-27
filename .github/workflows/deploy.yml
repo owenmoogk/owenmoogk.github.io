@@ -61,6 +61,10 @@ jobs:
       - name: Compile Less to CSS
         run: npx less-watch-compiler src/less src main.less --run-once
       
+      # need to build to generate projects.json file
+      - name: Build
+        run: yarn build
+
       - name: Run ESLint
         run: yarn lint
       
