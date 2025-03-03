@@ -1,6 +1,5 @@
 node_modules/
 build/
-.vscode/
 dist/
 
 public/img/projects/ecoflow/demo.mp4
