@@ -1,0 +1,14 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
+	],
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": true,
+	"editor.tabSize": 2,
+}
