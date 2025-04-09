@@ -1,8 +1,8 @@
 import { format } from 'date-fns';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import FilterButton from '../common/FilterButton';
+// import FilterButton from '../common/FilterButton';
 import type { BlogPost } from '@api/blogs';
 import { getBlogs } from '@api/blogs';
 import useFetchData from '@api/useGetData';
@@ -11,7 +11,7 @@ import { blogLink } from '@global/global';
 export default function Blog() {
   const blogData = useFetchData(getBlogs, null);
 
-  const [filter, setFilter] = useState<string>('');
+  // const [filter, setFilter] = useState<string>('');
 
   return (
     <div className="main">
@@ -19,7 +19,7 @@ export default function Blog() {
       <p className="subtitle">For everything goin' on up there.</p>
       <div id="sortingContainer">
         <div id="buttonContainer">
-          <FilterButton
+          {/* <FilterButton
             name="Personal"
             displayName="Personal Reflections"
             setFilter={setFilter}
@@ -42,17 +42,17 @@ export default function Blog() {
             handle=""
             setFilter={setFilter}
             filter={filter}
-          />
+          /> */}
         </div>
       </div>
       <div id="blogPage">
         {blogData?.map((post, key) => {
-          const postTags = post.tags.map((item) =>
-            item.replace(' ', '_').toLowerCase()
-          );
-          if (postTags.includes(filter) || filter === '') {
-            return <BlogItem post={post} key={key} />;
-          }
+          // const postTags = post.tags.map((item) =>
+          //   item.replace(' ', '_').toLowerCase()
+          // );
+          // if (postTags.includes(filter) || filter === '') {
+          return <BlogItem post={post} key={key} />;
+          // }
           return null;
         }) ?? <p style={{ textAlign: 'center' }}>Loading blogs...</p>}
         <br />

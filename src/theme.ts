@@ -6,6 +6,7 @@ import {
   Paper,
   rem,
   Select,
+  Text,
   Title,
 } from '@mantine/core';
 
@@ -41,6 +42,7 @@ export const mantineTheme = createTheme({
     md: rem('17px'),
     lg: rem('18px'),
     xl: rem('20px'),
+    xxl: rem('50px'),
   },
   spacing: {
     '3xs': rem('4px'),
@@ -54,6 +56,7 @@ export const mantineTheme = createTheme({
     '3xl': rem('32px'),
   },
   primaryColor: 'blue',
+
   components: {
     Anchor: Anchor.extend({
       defaultProps: {
@@ -100,7 +103,26 @@ export const mantineTheme = createTheme({
       defaultProps: {
         mt: 20,
         mb: 10,
+        ta: 'center',
       },
+      styles: (theme, props) => ({
+        root: {
+          ...(props.order === 1 && {
+            fontSize: rem('50px'),
+          }),
+        },
+      }),
+    }),
+    Text: Text.extend({
+      styles: (theme, props) => ({
+        root: {
+          ...(props.variant === 'subtitle' && {
+            margin: '5px 0',
+            fontStyle: 'italic',
+            textAlign: 'center',
+          }),
+        },
+      }),
     }),
   },
   other: {
