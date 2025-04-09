@@ -63,8 +63,8 @@ const SongRow = (song: SpotifyTopTrackItem) => {
       <Flex gap={20}>
         <Image
           src={song.album.images[0].url}
-          height={albumArtSize}
-          width={albumArtSize}
+          mah={albumArtSize}
+          maw={albumArtSize}
         />
         <Stack gap={5} justify="center">
           <a href={song.external_urls.spotify} target="_blank" rel="noreferrer">
