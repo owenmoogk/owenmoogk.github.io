@@ -6,7 +6,6 @@ import {
   Paper,
   rem,
   Select,
-  Text,
   Title,
 } from '@mantine/core';
 
@@ -19,9 +18,8 @@ const CONTAINER_SIZES: Record<string, string> = {
   xl: rem('1400px'),
   xxl: rem('1600px'),
 };
-export const mantineTheme = createTheme({
-  /** Put your mantine theme override here */
 
+export const mantineTheme = createTheme({
   colors: {
     dark: [
       '#FFFFFF',
@@ -36,14 +34,15 @@ export const mantineTheme = createTheme({
       '#141414',
     ],
   },
+
   fontSizes: {
     xs: rem('12px'),
-    sm: rem('15px'),
-    md: rem('17px'),
-    lg: rem('18px'),
-    xl: rem('20px'),
-    xxl: rem('50px'),
+    sm: rem('16px'),
+    md: rem('18px'),
+    lg: rem('24px'),
+    xl: rem('50px'),
   },
+
   spacing: {
     '3xs': rem('4px'),
     '2xs': rem('8px'),
@@ -55,6 +54,7 @@ export const mantineTheme = createTheme({
     '2xl': rem('28px'),
     '3xl': rem('32px'),
   },
+
   primaryColor: 'blue',
 
   components: {
@@ -65,7 +65,7 @@ export const mantineTheme = createTheme({
         c: 'var(--primaryColor)',
       },
     }),
-    /** Put your mantine component override here */
+
     Container: Container.extend({
       vars: (_, { size, fluid }) => ({
         root: {
@@ -77,52 +77,35 @@ export const mantineTheme = createTheme({
         },
       }),
     }),
+
     Paper: Paper.extend({
       defaultProps: {
         p: 'md',
         shadow: 'xl',
         radius: 'md',
         withBorder: true,
+        bg: 'var(--mantine-color-card)',
       },
     }),
 
     Card: Card.extend({
       defaultProps: {
-        p: 'xl',
         shadow: 'xl',
         radius: 'var(--mantine-radius-default)',
         withBorder: true,
       },
     }),
+
     Select: Select.extend({
       defaultProps: {
         checkIconPosition: 'right',
       },
     }),
+
     Title: Title.extend({
       defaultProps: {
-        mt: 20,
-        mb: 10,
-        ta: 'center',
+        m: '20px 0 10px 0',
       },
-      styles: (theme, props) => ({
-        root: {
-          ...(props.order === 1 && {
-            fontSize: rem('50px'),
-          }),
-        },
-      }),
-    }),
-    Text: Text.extend({
-      styles: (theme, props) => ({
-        root: {
-          ...(props.variant === 'subtitle' && {
-            margin: '5px 0',
-            fontStyle: 'italic',
-            textAlign: 'center',
-          }),
-        },
-      }),
     }),
   },
   other: {

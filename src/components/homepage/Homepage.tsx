@@ -1,4 +1,4 @@
-import { Anchor, Box, Container, Text, Title } from '@mantine/core';
+import { Anchor, Box, Container, Flex, Text, Title } from '@mantine/core';
 import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
@@ -53,15 +53,7 @@ export default function Homepage() {
       </div>
       <div>
         <Text>
-          I'm currently a{' '}
-          <Anchor
-            href="https://uwaterloo.ca/future-students/programs/mechatronics-engineering"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Mechatronics Engineering
-          </Anchor>{' '}
-          student at the{' '}
+          I'm currently a mechatronics engineering student at the{' '}
           <Anchor href="https://uwaterloo.ca/" target="_blank" rel="noreferrer">
             University of Waterloo
           </Anchor>
@@ -102,7 +94,7 @@ export default function Homepage() {
           Some of the most interesting <Link to="/projects">projects</Link> that
           I've worked on:
         </Text>
-        <div id="featuredContainer">
+        <Flex gap={20} mt={20}>
           <FeaturedIcon
             data={{
               title: '2702 Rebels 2020 Robot',
@@ -119,7 +111,7 @@ export default function Homepage() {
               link: 'projects/pathfinding-visualizer',
             }}
           />
-        </div>
+        </Flex>
       </Box>
     </Container>
   );

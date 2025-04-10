@@ -1,4 +1,5 @@
 import { Anchor, Stack } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { linkedIn } from '@global/global';
@@ -9,8 +10,16 @@ export default function Links() {
     size: 30,
   };
 
+  const { width } = useViewportSize();
+
   return (
-    <Stack pos={'fixed'} bottom="20px" right="20px" gap={10}>
+    <Stack
+      pos={'fixed'}
+      bottom="20px"
+      right="20px"
+      gap={10}
+      display={width < 700 ? 'none' : ''}
+    >
       <Anchor
         href="https://github.com/owenmoogk"
         target="_blank"

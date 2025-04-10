@@ -50,3 +50,6 @@ From todoist:
 
 
 nav has a bug on mobile where it doesn't close
+
+
+I should make the project no longer tiles, it would be better to make them into rows like the blog posts

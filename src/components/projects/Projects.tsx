@@ -1,4 +1,4 @@
-import { Container } from '@mantine/core';
+import { Container, Flex } from '@mantine/core';
 import { useState } from 'react';
 import { Link } from 'react-router';
 
@@ -44,20 +44,15 @@ export default function ProjectPage() {
         </div>
       </div>
 
-      <div id="featuredProjects">
-        <div id="featuredContainer">
-          {projectData.map((data, key) => {
-            const dataTypes = data.types.map((item) => item.toLowerCase());
-            if (
-              data.featured &&
-              (dataTypes.includes(filter) || filter === '')
-            ) {
-              return <FeaturedIcon data={data} key={key} />;
-            }
-            return null;
-          })}
-        </div>
-      </div>
+      <Flex wrap="wrap" justify="center" gap={20}>
+        {projectData.map((data, key) => {
+          const dataTypes = data.types.map((item) => item.toLowerCase());
+          if (data.featured && (dataTypes.includes(filter) || filter === '')) {
+            return <FeaturedIcon data={data} key={key} />;
+          }
+          return null;
+        })}
+      </Flex>
     </Container>
   );
 }

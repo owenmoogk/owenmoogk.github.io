@@ -1,4 +1,5 @@
 import { Container } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import { Helmet } from 'react-helmet-async';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
@@ -27,12 +28,19 @@ function Redirect({ to }: { to: string }) {
 }
 
 export default function App() {
+  const { width } = useViewportSize();
+
   return (
     <>
       <Nav />
       <Links />
       <div id="backgroundDiv" />
-      <Container maw={'100vw'} pb={50} pt={40}>
+      <Container
+        maw={width < 700 ? '100vw' : 'calc(100vw - 120px)'}
+        m={'auto'}
+        pb={50}
+        pt={40}
+      >
         <Routes>
           <Route path="/projects" element={<HelmetTitle name="Projects" />}>
             <Route index element={<Projects />} />

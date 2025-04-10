@@ -1,11 +1,11 @@
 import type { CSSVariablesResolver } from '@mantine/core';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const mantineCssVariableResolver: CSSVariablesResolver = (theme) => ({
+export const mantineCssVariableResolver: CSSVariablesResolver = () => ({
   variables: {},
   light: {
-    '--primaryColor': '#0087e4',
+    '--primaryColor': '#0077e0',
     '--grey': 'rgb(72, 72, 72)',
+    '--mantine-color-text': 'rgb(36,36,36)',
   },
   dark: {
     '--primaryColor': '#9ad7ff',

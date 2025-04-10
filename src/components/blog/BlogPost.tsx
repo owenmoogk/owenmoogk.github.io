@@ -26,7 +26,9 @@ export default function BlogPost() {
       <div id="blogPage" className="blogPostPage">
         {blog && (
           <>
-            <p className="title">{blog.title}</p>
+            <p className="title" style={{ letterSpacing: '-0.50px' }}>
+              {blog.title}
+            </p>
             <div className="tags" id="icons">
               {blog.tags.map((type, key) => (
                 <Tag type={capitalizeWords(type)} key={key} />
@@ -36,15 +38,26 @@ export default function BlogPost() {
               <div className="author">
                 <img src={headshot} className="headshot" alt="" />
                 <div className="text">
-                  <p className="authorText">Owen Moogk</p>
+                  <p>Owen Moogk</p>
                   <p className="date">{blog.date.toString()}</p>
                 </div>
               </div>
             </div>
-            <MarkdownView
-              markdown={parseMarkdown(content)}
-              options={{ tables: true, emoji: true }}
-            />
+
+            <p
+              style={{
+                // fontFamily:
+                // 'source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif',
+                lineHeight: '32px',
+                fontSize: '20px',
+                letterSpacing: '-.2px',
+              }}
+            >
+              <MarkdownView
+                markdown={parseMarkdown(content)}
+                options={{ tables: true, emoji: true }}
+              />
+            </p>
           </>
         )}
       </div>
