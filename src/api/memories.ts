@@ -12,10 +12,14 @@ export type ApiReturnType = {
   location: [number, number] | null;
   width: number;
   height: number;
+  city: string;
+  province: string;
+  country: string;
 };
 
 export async function getImageMetadata(): Promise<{
-  metadata: Slide[];
+  metadata: ApiReturnType[];
+  slideData: Slide[];
   thumbnailMetadata: Photo[];
 }> {
   const response = await fetch(memoriesLink + 'image_metadata.json');
@@ -44,5 +48,9 @@ export async function getImageMetadata(): Promise<{
     width: img.width,
     height: img.height,
   }));
-  return { metadata: imageData, thumbnailMetadata: thumbnailImageData };
+  return {
+    metadata: json,
+    slideData: imageData,
+    thumbnailMetadata: thumbnailImageData,
+  };
 }

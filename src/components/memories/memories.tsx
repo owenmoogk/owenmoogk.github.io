@@ -1,3 +1,4 @@
+import { Box, Text } from '@mantine/core';
 import { useState } from 'react';
 import { RowsPhotoAlbum } from 'react-photo-album';
 import 'react-photo-album/rows.css';
@@ -10,18 +11,19 @@ import useFetchData from '@api/useGetData';
 
 export default function Memories() {
   const [index, setIndex] = useState<number>(-1);
-  const { metadata, thumbnailMetadata } = useFetchData(
+  const { metadata, slideData, thumbnailMetadata } = useFetchData(
     getImageMetadata,
     null
   ) ?? {
-    metadata: [],
+    slideData: [],
     thumbnailMetadata: [],
+    metadata: [],
   };
 
   return (
     <div className="main">
-      <p className="title">Memories</p>
-      <p className="subtitle">Basically a VSCO girl...</p>
+      <p className="title">Through My Eyes</p>
+      <p className="subtitle">Family, Friends, Projects and Travels</p>
       <br />
       <div className="memoryPage">
         <RowsPhotoAlbum
@@ -38,13 +40,40 @@ export default function Memories() {
                     ? width / 2
                     : width
           }
+          render={{
+            extras: (_, photo) => (
+              <Box
+                pos={'absolute'}
+                bottom={0}
+                p={10}
+                w={'100%'}
+                ta="right"
+                c="white"
+                fs="italic"
+                fw={'bold'}
+                bg={'rgba(0,0,0,0.3)'}
+              >
+                <Text>
+                  {/* <FaMapMarkerAlt /> */}
+                  {metadata[photo.index].city}, {metadata[photo.index].country}
+                  {metadata[photo.index].city ? '' : ''}
+                  {/* {new Date(
+                    metadata[photo.index].date.replace(
+                      /^(\d{4}):(\d{2}):(\d{2})/,
+                      '$1-$2-$3'
+                    )
+                  ).getFullYear()} */}
+                </Text>
+              </Box>
+            ),
+          }}
         />
       </div>
       <Lightbox
         plugins={[Video]}
         video={{ autoPlay: true }}
         index={index}
-        slides={metadata}
+        slides={slideData}
         open={index >= 0}
         close={() => setIndex(-1)}
         controller={{ closeOnBackdropClick: true }}
