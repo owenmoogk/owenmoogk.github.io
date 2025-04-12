@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet-async';
 import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 
 import Assets from './components/assets/Assets';
-import Blog from './components/blog/Blog';
-import BlogPost from './components/blog/BlogPost';
 import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
 import Nav from './components/Nav';
+import Blog from './components/notes/Blog';
+import BlogPost from './components/notes/BlogPost';
 import NotFoundPage from './components/NotFoundPage';
 import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';
@@ -19,6 +19,7 @@ import './main.css';
 import Links from '@components/Links';
 import Memories from '@components/memories/memories';
 import MusicPage from '@components/music/Music';
+import Collections from '@components/notes/collections/Collections';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
 
@@ -49,6 +50,7 @@ export default function App() {
           </Route>
           <Route path="/notes" element={<HelmetTitle name="Notes" />}>
             <Route index element={<Blog />} />
+            <Route path="collections" element={<Collections />} />
             <Route path=":name" element={<BlogPost />} />
           </Route>
           <Route path="/work" element={<Workpage />} />
