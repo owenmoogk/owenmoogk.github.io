@@ -41,31 +41,32 @@ export default function Memories() {
                     : width
           }
           render={{
-            extras: (_, photo) => (
-              <Box
-                pos={'absolute'}
-                bottom={0}
-                p={10}
-                w={'100%'}
-                ta="right"
-                c="white"
-                fs="italic"
-                fw={'bold'}
-                bg={'rgba(0,0,0,0.3)'}
-              >
-                <Text>
-                  {/* <FaMapMarkerAlt /> */}
-                  {metadata[photo.index].city}, {metadata[photo.index].country}
-                  {metadata[photo.index].city ? '' : ''}
-                  {/* {new Date(
+            extras: (_, photo) =>
+              metadata[photo.index].city && (
+                <Box
+                  pos={'absolute'}
+                  bottom={0}
+                  p={10}
+                  w={'100%'}
+                  ta="right"
+                  c="white"
+                  fs="italic"
+                  fw={'bold'}
+                  bg={'rgba(0,0,0,0.3)'}
+                >
+                  <Text>
+                    {metadata[photo.index].city}
+                    {metadata[photo.index].country && ', '}
+                    {metadata[photo.index].country}
+                    {/* {new Date(
                     metadata[photo.index].date.replace(
                       /^(\d{4}):(\d{2}):(\d{2})/,
                       '$1-$2-$3'
                     )
                   ).getFullYear()} */}
-                </Text>
-              </Box>
-            ),
+                  </Text>
+                </Box>
+              ),
           }}
         />
       </div>
