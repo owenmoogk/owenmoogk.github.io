@@ -1,5 +1,6 @@
-import { Anchor, Container, List } from '@mantine/core';
+import { Accordion, Anchor, Container, List } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
+import { FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 import data from './work.json';
@@ -27,6 +28,7 @@ function getDateString(startDate: string, endDate?: string) {
 }
 
 export default function Workpage() {
+  const chevron = <FaChevronDown />;
   return (
     <Container id="workPage">
       <Helmet>
@@ -47,7 +49,7 @@ export default function Workpage() {
       <div id="workItems">
         <div>
           <h1>Work</h1>
-          <div className="workCategory">
+          <Accordion chevron={chevron}>
             {workData.work.map((item, itemKey) => {
               return (
                 <WorkItem
@@ -59,11 +61,11 @@ export default function Workpage() {
                 />
               );
             })}
-          </div>
+          </Accordion>
         </div>
         <div>
           <h1>Awards</h1>
-          <div className="workCategory">
+          <Accordion chevron={chevron}>
             {workData.awards.map((item, itemKey) => {
               return (
                 <WorkItem
@@ -75,11 +77,11 @@ export default function Workpage() {
                 />
               );
             })}
-          </div>
+          </Accordion>
         </div>
         <div>
           <h1>Certificates</h1>
-          <div className="workCategory">
+          <Accordion chevron={chevron}>
             {workData.certificates.map((item, itemKey) => {
               return (
                 <WorkItem
@@ -97,11 +99,11 @@ export default function Workpage() {
                 />
               );
             })}
-          </div>
+          </Accordion>
         </div>
         <div>
           <h1>Volunteer</h1>
-          <div className="workCategory">
+          <Accordion chevron={chevron}>
             {workData.volunteer.map((item, itemKey) => {
               return (
                 <WorkItem
@@ -113,11 +115,11 @@ export default function Workpage() {
                 />
               );
             })}
-          </div>
+          </Accordion>
         </div>
         <div>
           <h1>Education</h1>
-          <div className="workCategory">
+          <Accordion chevron={null}>
             {workData.education.map((item, itemKey) => {
               return (
                 <WorkItem
@@ -128,7 +130,7 @@ export default function Workpage() {
                 />
               );
             })}
-          </div>
+          </Accordion>
         </div>
       </div>
       <p className="subtitle">

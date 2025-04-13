@@ -1,7 +1,5 @@
-import { Box, Flex, Stack } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { Accordion, Box, Flex, Text, Title } from '@mantine/core';
 import type { ReactNode } from 'react';
-import { FaChevronRight } from 'react-icons/fa';
 
 export type StringDictionary = Record<string, string>;
 
@@ -13,12 +11,10 @@ type Props = {
 };
 
 export default function WorkItem(props: Props) {
-  const [collapsed, { toggle }] = useDisclosure(true);
-
   function getSummary(summary?: ReactNode) {
-    if (summary && !collapsed) {
+    if (summary) {
       return (
-        <Box className="content">
+        <Box>
           {typeof summary === 'string' ? (
             <p
               dangerouslySetInnerHTML={{
@@ -37,29 +33,21 @@ export default function WorkItem(props: Props) {
   }
 
   return (
-    <Stack gap={0}>
-      <Flex justify="space-between" align="center" w="100%" gap={25}>
-        <div onClick={toggle}>
-          {props.summary ? (
-            <FaChevronRight
-              style={{
-                transform: collapsed ? 'rotate(0deg)' : 'rotate(90deg)',
-                transition: 'transform 0.3s',
-              }}
-            />
-          ) : (
-            <FaChevronRight color="transparent" />
-          )}
-        </div>
-        <Stack className="titleBlock" w="100%" onClick={toggle} gap={0}>
-          <div className="workTitle">
-            <span>{props.title}</span>
-            <span className="workTitleDate">{props.dateString}</span>
-          </div>
+    <Accordion.Item value={props.title} key={props.title}>
+      <Accordion.Control>
+        <Flex justify={'space-between'} fw={'bold'} mr={20}>
+          <Title order={4} m={0}>
+            {props.title}
+          </Title>
+          <Text className="workTitleDate" w={'fit-content'} m={0}>
+            {props.dateString}
+          </Text>
+        </Flex>
+        <Text fs="italic" m={0}>
           {props.subtitle}
-        </Stack>
-      </Flex>
-      <Flex ml={42}>{getSummary(props.summary)}</Flex>
-    </Stack>
+        </Text>
+      </Accordion.Control>
+      <Accordion.Panel>{getSummary(props.summary)}</Accordion.Panel>
+    </Accordion.Item>
   );
 }

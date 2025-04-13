@@ -2,16 +2,11 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 30px;
 }
 
 #workItems {
 	width: 700px;
 	padding-bottom: 20px;
-
-	.workCategory {
-		overflow: hidden;
-	}
 
 	h1 {
 		padding: 20px 0 10px;
@@ -21,38 +16,6 @@
 		border-bottom: 2px solid light-dark(var(--mantine-color-dark-2), var(--mantine-color-dark-1));
 		width: 100%;
 	}
-
-	p {
-		width: calc(100% - 20px);
-		margin-top: 10px;
-	}
-
-
-	.titleBlock {
-		height: fit-content;
-		margin-bottom: 10px;
-		font-size: 17px;
-
-		.workTitle {
-			font-size: 20px;
-			font-weight: bold;
-			margin-bottom: 3px;
-			display: flex;
-			justify-content: space-between;
-		}
-
-		:hover {
-			cursor: pointer;
-		}
-	}
-
-	.content {
-		overflow: hidden;
-		font-style: italic;
-		color: light-dark(var(--mantine-color-dark-4), var(--mantine-color-dark-1));
-	}
-
-
 
 }
 
