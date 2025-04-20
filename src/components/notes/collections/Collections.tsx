@@ -3,6 +3,7 @@ import { Accordion, Card, Title } from '@mantine/core';
 import CollectionItem from './CollectionItem';
 import { getCollections } from '@api/blogs';
 import useFetchData from '@api/useGetData';
+import { snakeToTitleCase } from '@api/util';
 
 export default function Collections() {
   const collections = useFetchData(getCollections, null);
@@ -15,13 +16,10 @@ export default function Collections() {
       <Card mt={40}>
         <Accordion chevronPosition="right">
           {collections?.map(({ category, items }) => (
-            <Accordion.Item
-              key={category}
-              value={category.charAt(0).toUpperCase() + category.slice(1)}
-            >
+            <Accordion.Item key={category} value={snakeToTitleCase(category)}>
               <Accordion.Control>
                 <Title order={4} m={0}>
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                  {snakeToTitleCase(category)}
                 </Title>
               </Accordion.Control>
               <Accordion.Panel>

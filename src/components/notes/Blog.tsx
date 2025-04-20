@@ -8,15 +8,9 @@ import { Link } from 'react-router-dom';
 import type { BlogPost } from '@api/blogs';
 import { getBlogs } from '@api/blogs';
 import useFetchData from '@api/useGetData';
+import { snakeToTitleCase } from '@api/util';
 import FilterButton from '@components/common/FilterButton';
 import { blogLink } from '@global/global';
-
-export function toTitleCase(snakeStr: string): string {
-  return snakeStr
-    .split('_')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
 
 export default function Blog() {
   const blogData = useFetchData(getBlogs, null);
@@ -47,7 +41,7 @@ export default function Blog() {
             <FilterButton
               name={tag}
               key={tag}
-              displayName={toTitleCase(tag)}
+              displayName={snakeToTitleCase(tag)}
               {...{ setFilter, filter }}
             />
           ))}

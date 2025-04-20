@@ -7,10 +7,10 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import dark from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 import light from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-light';
 
-import { toTitleCase } from './Blog';
 import Tag from '../common/Tags';
 import { getBlog, parseMarkdown } from '@api/blogs';
 import useFetchData from '@api/useGetData';
+import { snakeToTitleCase } from '@api/util';
 import { headshot } from '@global/global';
 
 const SyntaxHighlighterComponent =
@@ -35,7 +35,7 @@ export default function BlogPost() {
             </p>
             <div className="tags" id="icons">
               {blog.tags.map((type, key) => (
-                <Tag type={toTitleCase(type)} key={key} />
+                <Tag type={snakeToTitleCase(type)} key={key} />
               ))}
             </div>
             <div className="meta">
