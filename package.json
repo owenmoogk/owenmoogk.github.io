@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "yarn lint && yarn typecheck"
   },
   "dependencies": {
     "@mantine/core": "^7.17.0",

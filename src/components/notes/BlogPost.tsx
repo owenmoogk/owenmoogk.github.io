@@ -1,10 +1,4 @@
-import {
-  Box,
-  Image,
-  Text,
-  useMantineColorScheme,
-  useMantineTheme,
-} from '@mantine/core';
+import { Box, Image, Text, useMantineColorScheme } from '@mantine/core';
 import type { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
