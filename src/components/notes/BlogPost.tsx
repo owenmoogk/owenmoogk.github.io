@@ -77,7 +77,9 @@ export default function BlogPost() {
                         <Text
                           mt={10}
                           size={'14px'}
-                          c={theme.colors.dark[4]}
+                          c={
+                            'light-dark(var(--mantine-color-dark-4),var(--mantine-color-gray-1))'
+                          }
                           ta={'center'}
                           lh={'20px'}
                         >
