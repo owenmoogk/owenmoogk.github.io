@@ -19,8 +19,12 @@ function useFetchData<T, P>(
         setData(response);
         setIsLoading(false);
       })
-      .catch(() => {
+      .catch((error: unknown) => {
         setError(true);
+        if (error instanceof Error) {
+          // eslint-disable-next-line no-console
+          console.error(error.message);
+        }
         setIsLoading(false);
       });
   }, [fetchFunction, params, dependencies]);
