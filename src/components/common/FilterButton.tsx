@@ -8,32 +8,29 @@ export default function FilterButton(props: {
   filter: string;
   handle?: string;
 }) {
-  const nameLower = props.name.toLowerCase().replace(' ', '_');
-  const handle = props.handle ?? nameLower;
-  const filter = props.filter.toLowerCase();
-  const displayName = props.displayName ?? props.name;
+  const { name, filter } = props;
+  const displayName = props.displayName ?? name;
+  const handle = props.handle ?? name;
 
   return (
     <span
-      className={
-        'sort_' + nameLower + ' btn ' + (filter === handle ? 'active' : '')
-      }
+      className={'sort_' + name + ' btn ' + (filter === name ? 'active' : '')}
       onClick={() => props.setFilter(handle)}
       style={{
-        border: '2px solid var(--' + nameLower + ')',
-        color: 'var(--' + nameLower + ')',
+        border: '2px solid var(--' + name + ', grey)',
+        color: 'var(--' + name + ')',
       }}
     >
       <Text>{displayName}</Text>
       <style
         dangerouslySetInnerHTML={{
           __html: `
-        .sort_${nameLower}.active{
-          background-color: var(--${nameLower}) !important;
+        .sort_${name}.active{
+          background-color: var(--${name}) !important;
           color: var(--textColor) !important
         }
-        .sort_${nameLower}:hover{
-          background-color: var(--${nameLower}) !important;
+        .sort_${name}:hover{
+          background-color: var(--${name}) !important;
           color: var(--textColor) !important
         }
       `,

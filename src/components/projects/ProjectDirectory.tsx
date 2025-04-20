@@ -24,26 +24,45 @@ export default function ProjectDirectory() {
       <div id="sortingContainer">
         <div id="buttonContainer">
           <FilterButton
-            name="All"
+            name=""
+            displayName="All"
             handle=""
             setFilter={setFilter}
             filter={filter}
           />
-          <FilterButton name="Python" setFilter={setFilter} filter={filter} />
           <FilterButton
-            name="Javascript"
-            setFilter={setFilter}
-            filter={filter}
-          />
-          <FilterButton name="React" setFilter={setFilter} filter={filter} />
-          <FilterButton name="Django" setFilter={setFilter} filter={filter} />
-          <FilterButton
-            name="Solidworks"
+            name="python"
+            displayName="Python"
             setFilter={setFilter}
             filter={filter}
           />
           <FilterButton
-            name="Mechanical"
+            name="javascript"
+            displayName="Javascript"
+            setFilter={setFilter}
+            filter={filter}
+          />
+          <FilterButton
+            name="react"
+            displayName="React"
+            setFilter={setFilter}
+            filter={filter}
+          />
+          <FilterButton
+            name="django"
+            displayName="Django"
+            setFilter={setFilter}
+            filter={filter}
+          />
+          <FilterButton
+            name="solidworks"
+            displayName="SolidWorks"
+            setFilter={setFilter}
+            filter={filter}
+          />
+          <FilterButton
+            name="mechanical"
+            displayName="Mechanical"
             setFilter={setFilter}
             filter={filter}
           />

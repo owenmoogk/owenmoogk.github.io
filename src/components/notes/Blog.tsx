@@ -11,10 +11,25 @@ import useFetchData from '@api/useGetData';
 import FilterButton from '@components/common/FilterButton';
 import { blogLink } from '@global/global';
 
+export function toTitleCase(snakeStr: string): string {
+  return snakeStr
+    .split('_')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 export default function Blog() {
   const blogData = useFetchData(getBlogs, null);
 
   const [filter, setFilter] = useState<string>('');
+
+  const tags = [
+    'technology',
+    'personal',
+    'coding_adventures',
+    'reflection',
+    'internet',
+  ];
 
   return (
     <div className="main" id="blogList">
@@ -23,29 +38,19 @@ export default function Blog() {
       <div id="sortingContainer">
         <div id="buttonContainer">
           <FilterButton
-            name="Personal"
-            displayName="Personal Reflections"
-            setFilter={setFilter}
-            filter={filter}
-          />
-          <FilterButton
-            name="internet"
-            displayName="Internet Bits"
-            setFilter={setFilter}
-            filter={filter}
-          />
-          <FilterButton
-            name="Tech"
-            displayName="Technology"
-            setFilter={setFilter}
-            filter={filter}
-          />
-          <FilterButton
-            name="All"
             handle=""
-            setFilter={setFilter}
-            filter={filter}
+            displayName="All"
+            name="allnotes"
+            {...{ setFilter, filter }}
           />
+          {tags.map((tag) => (
+            <FilterButton
+              name={tag}
+              key={tag}
+              displayName={toTitleCase(tag)}
+              {...{ setFilter, filter }}
+            />
+          ))}
         </div>
       </div>
       <Flex gap={20} direction={'column'}>

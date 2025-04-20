@@ -24,20 +24,33 @@ export default function ProjectPage() {
       <div id="sortingContainer">
         <div id="buttonContainer">
           <FilterButton
-            name="All"
+            name="all"
+            displayName="All"
             handle=""
             setFilter={setFilter}
             filter={filter}
           />
-          <FilterButton name="Python" setFilter={setFilter} filter={filter} />
           <FilterButton
-            name="Javascript"
+            name="python"
+            displayName="Python"
             setFilter={setFilter}
             filter={filter}
           />
-          <FilterButton name="React" setFilter={setFilter} filter={filter} />
           <FilterButton
-            name="Solidworks"
+            name="javascript"
+            displayName="Javascript"
+            setFilter={setFilter}
+            filter={filter}
+          />
+          <FilterButton
+            name="react"
+            displayName="React"
+            setFilter={setFilter}
+            filter={filter}
+          />{' '}
+          <FilterButton
+            name="solidworks"
+            displayName="SolidWorks"
             setFilter={setFilter}
             filter={filter}
           />
