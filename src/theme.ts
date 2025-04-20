@@ -37,8 +37,8 @@ export const mantineTheme = createTheme({
 
   fontSizes: {
     xs: rem('12px'),
-    sm: rem('16px'),
-    md: rem('18px'),
+    sm: rem('15px'),
+    md: rem('17px'),
     lg: rem('24px'),
     xl: rem('50px'),
   },

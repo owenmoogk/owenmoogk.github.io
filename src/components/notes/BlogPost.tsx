@@ -1,4 +1,10 @@
-import { useMantineColorScheme } from '@mantine/core';
+import {
+  Box,
+  Image,
+  Text,
+  useMantineColorScheme,
+  useMantineTheme,
+} from '@mantine/core';
 import type { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import MarkdownView from 'react-showdown';
@@ -18,6 +24,8 @@ const SyntaxHighlighterComponent =
 
 export default function BlogPost() {
   const { name } = useParams();
+
+  const theme = useMantineTheme();
 
   const { colorScheme } = useMantineColorScheme();
 
@@ -53,8 +61,8 @@ export default function BlogPost() {
               style={{
                 // fontFamily:
                 // 'source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif',
-                lineHeight: '32px',
-                fontSize: '20px',
+                lineHeight: '30px',
+                fontSize: '18px',
                 letterSpacing: '-.2px',
               }}
             >
@@ -62,13 +70,46 @@ export default function BlogPost() {
                 markdown={parseMarkdown(content)}
                 options={{ tables: true, emoji: true }}
                 components={{
+                  img(props: { alt: string; src: string }) {
+                    return (
+                      <Box mb={30}>
+                        <Image src={props.src} alt="" p={0} m={0} />
+                        <Text
+                          mt={10}
+                          size={'14px'}
+                          c={theme.colors.dark[4]}
+                          ta={'center'}
+                          lh={'20px'}
+                        >
+                          {props.alt}
+                        </Text>
+                      </Box>
+                    );
+                  },
                   code(props: { children: string[]; className?: string }) {
                     const language = props.className?.split(' ')[0];
+                    if (!language) {
+                      return (
+                        <code
+                          style={{
+                            backgroundColor:
+                              'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
+                          }}
+                        >
+                          {props.children[0]}
+                        </code>
+                      );
+                    }
                     return (
                       <SyntaxHighlighterComponent
                         style={colorScheme === 'dark' ? dark : light}
                         language={language}
-                        customStyle={{ lineHeight: '20px', fontSize: '14px' }}
+                        customStyle={{
+                          lineHeight: '20px',
+                          fontSize: '14px',
+                          backgroundColor:
+                            'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
+                        }}
                       >
                         {props.children[0]}
                       </SyntaxHighlighterComponent>
