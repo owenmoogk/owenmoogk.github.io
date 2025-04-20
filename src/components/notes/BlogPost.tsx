@@ -24,9 +24,6 @@ const SyntaxHighlighterComponent =
 
 export default function BlogPost() {
   const { name } = useParams();
-
-  const theme = useMantineTheme();
-
   const { colorScheme } = useMantineColorScheme();
 
   const { content, blog } = useFetchData(getBlog, name ?? '') ?? {
