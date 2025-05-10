@@ -1,4 +1,5 @@
 import { Box, Text } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import { useState } from 'react';
 import { RowsPhotoAlbum } from 'react-photo-album';
 import 'react-photo-album/rows.css';
@@ -11,6 +12,7 @@ import useFetchData from '@api/useGetData';
 
 export default function Memories() {
   const [index, setIndex] = useState<number>(-1);
+  const { width } = useViewportSize();
   const { metadata, slideData, thumbnailMetadata } = useFetchData(
     getImageMetadata,
     null
@@ -29,17 +31,7 @@ export default function Memories() {
         <RowsPhotoAlbum
           photos={thumbnailMetadata}
           onClick={({ index }) => setIndex(index)}
-          targetRowHeight={(width) =>
-            width > 1200
-              ? width / 5
-              : width > 900
-                ? width / 4
-                : width > 600
-                  ? width / 3
-                  : width > 300
-                    ? width / 2
-                    : width
-          }
+          targetRowHeight={250}
           render={{
             extras: (_, photo) =>
               metadata[photo.index].city && (
@@ -78,7 +70,7 @@ export default function Memories() {
         open={index >= 0}
         close={() => setIndex(-1)}
         controller={{ closeOnBackdropClick: true }}
-        carousel={{ padding: '40px' }}
+        carousel={{ padding: width > 700 ? '40px' : '0px' }}
       />
     </div>
   );
