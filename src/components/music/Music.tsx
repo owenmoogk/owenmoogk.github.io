@@ -16,7 +16,7 @@ import { getTopTracks } from '@api/spotify';
 import type { SpotifyTopTrackItem } from '@api/spotifyTypes';
 import useFetchData from '@api/useGetData';
 
-export default function MusicPage() {
+export default function SpotifyFavorites() {
   const [activeTab, setActiveTab] = useState<TimeframeType>('short_term');
   const topTracks = useFetchData(getTopTracks, activeTab);
 
@@ -25,7 +25,7 @@ export default function MusicPage() {
       <Helmet>
         <title>{'Music - Owen Moogk'}</title>
       </Helmet>
-      <p className="title">Music</p>
+      <p className="title">Favorites</p>
       <p className="subtitle">
         My favorites (pulled from{' '}
         <a
