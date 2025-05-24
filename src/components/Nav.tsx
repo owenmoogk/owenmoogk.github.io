@@ -23,7 +23,7 @@ const links: LinkType[] = [
   { link: '/', label: 'Home' },
   { link: '/projects', label: 'Projects' },
   { link: '/work', label: 'Work' },
-  // { link: '/notes', label: 'Notes' },
+  { link: '/notes', label: 'Notes' },
   {
     link: '#',
     label: 'Music',
@@ -51,16 +51,14 @@ export default function Nav() {
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
-      <Menu.Item key={item.link}>
-        <Link
-          key={item.label}
-          to={item.link}
-          style={{ borderRadius: '5px' }}
-          onClick={close}
-        >
-          {item.label}
-        </Link>
-      </Menu.Item>
+      <Link
+        key={item.label}
+        to={item.link}
+        style={{ borderRadius: '5px' }}
+        onClick={close}
+      >
+        <Menu.Item key={item.link}>{item.label}</Menu.Item>
+      </Link>
     ));
 
     if (menuItems) {
