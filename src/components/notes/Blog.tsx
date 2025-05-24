@@ -16,14 +16,7 @@ export default function Blog() {
   const blogData = useFetchData(getBlogs, null);
 
   const [filter, setFilter] = useState<string>('');
-
-  const tags = [
-    'technology',
-    'personal',
-    'coding_adventures',
-    'reflection',
-    'internet',
-  ];
+  const tags = Array.from(new Set(blogData?.flatMap((post) => post.tags)));
 
   return (
     <div className="main" id="blogList">

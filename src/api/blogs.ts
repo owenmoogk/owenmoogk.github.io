@@ -104,12 +104,6 @@ function extractFrontmatter(markdown: string) {
 }
 
 export function parseMarkdown(content: string) {
-  function removeFirstLine(content: string) {
-    const lines = content.split('\n');
-    lines.shift(); // Remove the first line (the title is already displayed)
-    return lines.join('\n');
-  }
-
   function fixRelativeLinks(content: string) {
     const imageRegex = /!\[.*?\]\(([^)]+)\)/g;
 
@@ -125,7 +119,6 @@ export function parseMarkdown(content: string) {
     content = content.replaceAll('..', '');
     return content;
   }
-  content = removeFirstLine(content);
   content = fixRelativeLinks(content);
   return content;
 }
