@@ -15,7 +15,7 @@ import ProjectPage from './components/projects/ProjectPage';
 import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
 import './main.css';
-// import Adventures from '@components/adventures/adventures';
+import Adventures from '@components/adventures/adventures';
 import Links from '@components/Links';
 import Memories from '@components/memories/memories';
 import SpotifyFavorites from '@components/music/Music';
@@ -58,7 +58,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/assets" element={<Assets />} />
           <Route path="/sitemap" element={<Sitemap />} />
-          {/* <Route path="/adventures" element={<Adventures />} /> */}
+          <Route path="/adventures" element={<Adventures />} />
           <Route path="/memories" element={<Memories />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/404" element={<NotFoundPage />} />

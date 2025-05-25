@@ -21,8 +21,14 @@ import classes from './HeaderMenu.module.css';
 
 const links: LinkType[] = [
   { link: '/', label: 'Home' },
-  { link: '/projects', label: 'Projects' },
-  { link: '/work', label: 'Work' },
+  {
+    link: '#',
+    label: 'Work',
+    links: [
+      { link: '/projects', label: 'Projects' },
+      { link: '/work', label: 'Experience' },
+    ],
+  },
   { link: '/notes', label: 'Notes' },
   {
     link: '#',
