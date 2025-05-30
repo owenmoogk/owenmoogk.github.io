@@ -4,23 +4,23 @@ projects to add:
 	passion project (or add it to work)
 	wave function collapse
 	new tab
-	hack the globe
-	conway's game of life
 	towers of hanoi
 	django twitter
-	frc website
 	elastic car
 	revit-house
 	pomodoro-timer-extension
-	computer website
 	gists?
 	arm project (torque minimizer)
 	covid health app??
 	github rooms?
 	cli / os website
-
-	// FROM OLD
-	object-detection
+	multi-function-feeder
+	hns modular pcb
+	beehive project
+	syringe pump
+	water feed
+	tax calculator
+	sudoku wave function collapse
 	gists
 	elastic-car
 	toyota-stickers
@@ -30,15 +30,6 @@ projects to add:
 	rectangle-calculator
 	django-twitter
 	pomodoro-timer-extension
-
 	rework email bot page
-
-
-From todoist:
-	toyota innovation challenge
-	trip prices
-	torque optimizer
-	email bot
-
 
 nav has a bug on mobile where it doesn't close
