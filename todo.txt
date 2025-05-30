@@ -19,8 +19,6 @@ projects to add:
 	github rooms?
 	cli / os website
 
-
-
 	// FROM OLD
 	object-detection
 	gists
@@ -32,24 +30,15 @@ projects to add:
 	rectangle-calculator
 	django-twitter
 	pomodoro-timer-extension
-	
-
 
 	rework email bot page
 
 
 From todoist:
 	toyota innovation challenge
-	stats project
 	trip prices
-	f1 stats
 	torque optimizer
-	conways game of life
 	email bot
-	busplanner
 
 
 nav has a bug on mobile where it doesn't close
-
-
-I should make the project no longer tiles, it would be better to make them into rows like the blog posts
