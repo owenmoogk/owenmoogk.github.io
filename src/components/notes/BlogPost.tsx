@@ -48,15 +48,7 @@ export default function BlogPost() {
               </div>
             </div>
 
-            <p
-              style={{
-                // fontFamily:
-                // 'source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif',
-                lineHeight: '30px',
-                fontSize: '18px',
-                letterSpacing: '-.2px',
-              }}
-            >
+            <p>
               <MarkdownView
                 markdown={parseMarkdown(content)}
                 options={{ tables: true, emoji: true }}

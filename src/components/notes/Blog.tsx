@@ -62,14 +62,16 @@ function BlogItem(props: { post: BlogPost }) {
     <Link to={post.file_name}>
       <Paper style={{ overflow: 'hidden' }} radius="lg">
         <Flex m={-15} gap={20}>
-          <Box miw={200}>
-            <Image src={blogLink + '/' + post.image} h={150} maw={200} alt="" />
+          <Box miw={130}>
+            <Image src={blogLink + '/' + post.image} h={130} maw={130} alt="" />
           </Box>
           <Flex direction="column" justify="center">
             <Title order={3} m={0}>
               {post.title}
             </Title>
             <Text fs="italic" size="sm" mt={10}>
+              {post.tags.map((x) => snakeToTitleCase(x)).join(', ')}
+              &nbsp; – &nbsp;
               {format(post.date, 'MMMM d, yyyy')}
             </Text>
           </Flex>
