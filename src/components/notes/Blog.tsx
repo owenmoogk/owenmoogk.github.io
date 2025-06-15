@@ -61,7 +61,7 @@ function BlogItem(props: { post: BlogPost }) {
   return (
     <Link to={post.file_name}>
       <Paper style={{ overflow: 'hidden' }} radius="lg">
-        <Flex m={-15} gap={20}>
+        <Flex m={-16} gap={20}>
           <Box miw={130}>
             <Image src={blogLink + '/' + post.image} h={130} maw={130} alt="" />
           </Box>

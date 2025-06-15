@@ -24,7 +24,7 @@ export default function ContactPage() {
       </Helmet>
       <p className="title">Contact</p>
       <div id="contactPage">
-        <h2>Say hi...</h2>
+        <h2>Say hello...</h2>
         <Text>
           <Anchor
             href="mailto:owenmoogk@gmail.com"
@@ -33,10 +33,6 @@ export default function ContactPage() {
           >
             owenmoogk@gmail.com
           </Anchor>
-          <br />
-          <Link to={linkedIn} target="_blank" rel="noreferrer">
-            {linkedIn.replace('https://', '')}
-          </Link>
         </Text>
         <h2>...or find me here</h2>
 
