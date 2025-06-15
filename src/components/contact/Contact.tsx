@@ -1,7 +1,6 @@
 import { Anchor, Container, Group, Text } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaLinkedin, FaSpotify } from 'react-icons/fa';
-import { Link } from 'react-router';
 
 import { linkedIn } from '@global/global';
 
