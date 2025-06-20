@@ -4,15 +4,15 @@ I have recently been doing renders and graphical design with [Solidworks](https:
 
 # Donut
 
-![Donut Image](donut/donut7.png)
+![](donut/donut7.png)
 
-![Donut Image](donut/donut1.png)
+![](donut/donut1.png)
 
 # Sticky Notes
 
-![Sticky Notes Image](sticky_notes/stickynotes.png)
+![](sticky_notes/stickynotes.png)
 
-![Sticky Notes Image](sticky_notes/stickynotes2.png)
+![](sticky_notes/stickynotes2.png)
 
 # Balls
 

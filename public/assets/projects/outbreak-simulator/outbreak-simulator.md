@@ -4,7 +4,7 @@ In the midst of COVID-19, I was looking at how computers can simulate disease ou
 
 # Screenshots
 
-![Screenshots Image](main.png)
+![Some "people" moving around, infecting eachother.](main.png)
 
-![Screenshots Image](graph.png)
+![Graph of Dead (blue), Recovered (green), Infected (Red), and Unaffected (Grey) over time.](graph.png)
 

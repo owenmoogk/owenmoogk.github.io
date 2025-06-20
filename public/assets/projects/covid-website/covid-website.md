@@ -6,7 +6,7 @@ In my first ever hackathon, run in January 2021, the theme was about COVID-19. P
 
 This app allows a user to track their temperatures, collect points, check the current COVID numbers in their areas, and view public health guidelines.
 
-![Overview Image](numbers.png)
+![](numbers.png)
 
 # Technical
 

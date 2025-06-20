@@ -6,9 +6,9 @@ The last thing that I added that was cool was an option to input an API key. I h
 
 Both the website and GitHub page are linked above.
 
-![](repo.png)
+![Repository Display](repo.png)
 
-![](main.png)
+![User Display](main.png)
 
-![](components.png)
+![React Component Display](components.png)
 

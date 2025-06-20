@@ -4,17 +4,17 @@ I am a part of the Bluevale Collegiate Electric Car Team, where I work with a sm
 
 # Images
 
-![Images Image](big-wheel.JPG)
+!["Big Wheel"](big-wheel.png)
 
-![Images Image](red-car.JPG)
+!["Red Car"](red-car.png)
 
 # Competition
 
 This car was designed to compete in the University of Waterloo Electric Vehicle Challenge. It is an endurance race where teams compete to complete the most laps in a set amount of time. There are two categories, 12V and 24V, with the winner of the 24V winning the opportunity of showing the car at the Toronto Auto Show. In the 12V race, our team finished first and second with the two cars that we entered, and in the 24V race we came first.
 
-![Competition Image](driving.jpg)
+![Driving at Competition](driving.png)
 
-![Competition Image](janik.jpg)
+![](janik.png)
 
-![](winner.jpg)
+![We won first place!](winner.png)
 

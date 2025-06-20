@@ -6,7 +6,7 @@ The red claw was 3D printed, and the rest was made from wood and dowels. String 
 
 # Renders
 
-![Renders Image](render1.png)
+![](render1.png)
 
-![Renders Image](render3.png)
+![](render3.png)
 

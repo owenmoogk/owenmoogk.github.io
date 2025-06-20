@@ -10,9 +10,9 @@ The main learnings from this were the calibration process, collecting data and f
 
 # Images
 
-![Images Image](all.png)
+![Full Caliper System](all.png)
 
-![Images Image](measurement.png)
+![Measurement Output](measurement.png)
 
-![Images Image](electronics.png)
+![Wiring](electronics.png)
 

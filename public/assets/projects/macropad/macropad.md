@@ -4,7 +4,7 @@
 
 When looking for a macropad on Amazon, I found that everything was overpriced, with little functionality. Then I remembered, I have a 3D printer! With some CAD, Python, and C++ the custom macropad was created.
 
-![Overview Image](final.png)
+![](final.png)
 
 # Technical
 
@@ -14,9 +14,9 @@ This gadget employs the functionality of an Arduino Nano, connected to 11 Cherry
 
 I used EasyEDA to design a schematic and an PCB, which I ordered using JLCPCB. It was an awesome experience learning how to make a PCB, and I think that I will use this skill for future projects. Check it out below, or open it on [EasyEDA](https://easyeda.com/editor#id=53ef828834a34f2d87e6da74e034d6bf).
 
-![Electrical Image](electronics.png)
+![Schematic](electronics.png)
 
-![Electrical Image](pcb.jpg)
+![Princed Circuit Board Design](pcb.jpg)
 
 # Materials
 

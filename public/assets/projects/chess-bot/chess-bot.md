@@ -8,7 +8,7 @@ In my first term at the University of Waterloo, myself and my peers were tasked 
 
 <video src='demo.mp4'></video>
 
-![](team.png)
+![My team, Eidan, Owen, Shabd, and Richard](team.png)
 
 # Sidenote
 
@@ -22,13 +22,13 @@ This robot was built completely from scratch, and includes a two-axis system to 
 
 The base was constructed with Tetrix pieces, arranged in a square to encompass the chess board. It acts as the structure holding the rails and all other components. It is 0.65 by 0.58 meters, designed for a tournament style chess board.
 
-![Base Image](overhead.png)
+![](overhead.png)
 
 # 2-Axis Movement
 
 The axial movement for the robot, allowing the claw to reach all positions on the board, is controlled with two 'Large' EV3 motors. The x-axis (moving the EV3 and carriage system) is operated on rails, with wheels to propel the system. The y-axis is controlled using a pulley system, with fishing line. This allows the system to be driven by a motor that is offboard, decreasing weight on the carriage. A video of this in action can be seen below., along with an image of the pulley system
 
-![2-Axis Movement Image](pulley.png)
+![X-Axis Movement System](pulley.png)
 
 <video src='rails.mov'></video>
 
@@ -36,13 +36,13 @@ The axial movement for the robot, allowing the claw to reach all positions on th
 
 The axis additionally use an intelligent system to control its positioning. The x-axis uses a color sensor to locate its position relative to the board, with red paper as an indicator, shown below. The y-axis uses a motor encoder value to determine its distance from the initial, 'A' cell.
 
-![Axis Positioning Image](color.png)
+![Color Sensor Positioning on Red Tape](color.png)
 
 # Claw System
 
 The claw system used a Tetrix claw, modified with rubber lego wheels and scotch tape, for added grip. It is actuated up and down using a 'Medium' motor connected to a rack and pinion. This was a significantly tough to integrate, as the Tetrix claw needed an onboard battery and control board, adding plenty of cable and weight to the carriage, however we managed to get it working consistently after some troubleshooting.
 
-![Claw System Image](claw.png)
+![](claw.png)
 
 # Software Design
 

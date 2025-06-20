@@ -16,9 +16,9 @@ The other option is using ultrasonic sensors or something of the sort, therefore
 
 This was designed with an Arduino Uno, connected to an ultrasonic sensor. I had to take the ultrasonic sensor and de-solder the transmitter. This left two separate modules that could communicate with each-other. This was then attached to some 3D printed housing (see below), which allowed it to be clamped onto the pipe.
 
-![Components Image](housing.jpg)
+![Top Pipe Sensor](housing.jpg)
 
-![Components Image](Components.jpg)
+![System Components](components.jpg)
 
 <video src='desc.mp4'></video>
 

@@ -25,13 +25,13 @@ The image detection is performed using a python library called CV2, getting a fr
 * Leds (x3)
 * Camera (any webcam)
 
-![](cat.png)
+![AI Cat Detection on a Test Image](cat.png)
 
 # Renders
 
-![Renders Image](main.png)
+![](main.png)
 
-![Renders Image](front.png)
+![](front.png)
 
 # Presentation
 

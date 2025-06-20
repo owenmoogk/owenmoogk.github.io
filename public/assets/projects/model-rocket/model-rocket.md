@@ -1,4 +1,4 @@
-![](rocket.png)
+![Liftoff!](rocket.png)
 
 # Overview
 
@@ -31,9 +31,9 @@ So I did some quick calculations with my grade 11 physics knowledge, just to fin
 
 I also had to work up some sketchy electronics to get the igniter to go, here's the layout:
 
-![](circuit.png)
+![Super simple switch-and-igniter circuit.](circuit.png)
 
 # Renders
 
-![Renders Image](main.png)
+![CAD Render of the Rocket](main.png)
 

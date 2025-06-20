@@ -6,5 +6,5 @@ So. I just learned how to send emails with python. And I send a ton of emails. I
 
 This was all made in python, and I setup my python code to be very versatile. All that is needed is a text file with the message and any wanted variables. Then, setup a file with the emails, and corresponding variables, and that's it. I may look at developing this into a fullstack app with a frontend, but for now it suits my needs.
 
-![Technical Image](demo.png)
+![](demo.png)
 

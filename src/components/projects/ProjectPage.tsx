@@ -1,4 +1,4 @@
-import { Flex } from '@mantine/core';
+import { Box, Flex, Image, Text } from '@mantine/core';
 import { useEffect } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet-async';
@@ -110,6 +110,30 @@ export default function ProjectPage() {
             markdown={parseMarkdown(projectData ?? '')}
             options={{ tables: true, emoji: true }}
             components={{
+              img(props: { alt: string; src: string }) {
+                return (
+                  <Flex
+                    justify={'center'}
+                    direction={'column'}
+                    component="span"
+                    mb={30}
+                  >
+                    <Image src={props.src} alt="" p={0} m={0} />
+                    <Text
+                      mt={10}
+                      size={'14px'}
+                      c={
+                        'light-dark(var(--mantine-color-dark-4),var(--mantine-color-gray-1))'
+                      }
+                      ta={'center'}
+                      lh={'20px'}
+                      component="span"
+                    >
+                      {props.alt}
+                    </Text>
+                  </Flex>
+                );
+              },
               h4(props: { children: string[] }) {
                 const [image1, image2] = props.children[0].split(',');
                 return (

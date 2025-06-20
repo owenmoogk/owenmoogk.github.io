@@ -8,7 +8,7 @@ In the downloads found here, you can find some resource packs. One is the custom
 
 The other two resource packs are solely for redstone wires. One displays the wires as bars stretching across the blocks, as commonly used by many (Codecrafted, Faithful, etc.). The other is less visually appealing, with the signal strength on the wire. There are two separate packs for the reason of toggling between the two packs.
 
-![Resource Packs Image](highlightedores.png)
+![Some resource pack changes to highlight ores.](highlightedores.png)
 
 # Blocks
 
@@ -52,7 +52,7 @@ The other two resource packs are solely for redstone wires. One displays the wir
 
 My custom datapack includes custom crafting recipes to return blocks (such as half slabs, doors, fence gates, etc.) to their original material. It also has increased drop loot from both shulkers and wither skeletons. The goal of this is again to keep the vanilla feel of Minecraft while allowing for recipes that some players may find convenient. The drop rate increase is designed for servers where resources are limited.
 
-![Datapack Image](shulker.png)
+![](shulker.png)
 
 # Resources
 

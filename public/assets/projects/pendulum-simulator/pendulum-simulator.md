@@ -6,7 +6,7 @@ Next steps for this might be operating in true human units, as I just used some 
 
 # Screenshots
 
-![Screenshots Image](pendulum.png)
+![Pendulum Simulation](pendulum.png)
 
-![Screenshots Image](main.png)
+![Plot of Potential vs Kinetic Energy](main.png)
 
