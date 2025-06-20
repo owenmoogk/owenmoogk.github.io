@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from '@mantine/core';
+import { Flex, Image, Text } from '@mantine/core';
 import { useEffect } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { Helmet } from 'react-helmet-async';
