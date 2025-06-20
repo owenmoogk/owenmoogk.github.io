@@ -1,5 +1,3 @@
 export type Link = {
-  link: string;
   label: string;
-  links?: Link[];
-};
+} & ({ link: string; links?: never } | { link?: never; links: Link[] });

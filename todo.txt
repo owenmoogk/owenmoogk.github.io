@@ -32,4 +32,4 @@ projects to add:
 	pomodoro-timer-extension
 	rework email bot page
 
-nav has a bug on mobile where it doesn't close
+nav doesn't look great on mobile

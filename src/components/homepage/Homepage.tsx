@@ -94,7 +94,7 @@ export default function Homepage() {
           Some of the most interesting <Link to="/projects">projects</Link> that
           I've worked on:
         </Text>
-        <Flex gap={20} mt={20}>
+        <Flex gap={20} mt={20} wrap={'wrap'}>
           <FeaturedIcon
             data={{
               title: '2702 Rebels 2020 Robot',

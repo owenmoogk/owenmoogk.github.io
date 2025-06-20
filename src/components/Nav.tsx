@@ -7,6 +7,7 @@ import {
   Menu,
   SimpleGrid,
   Stack,
+  Text,
   Title,
   useMantineColorScheme,
 } from '@mantine/core';
@@ -17,12 +18,10 @@ import { Link } from 'react-router';
 
 import type { Link as LinkType } from '../types';
 import classes from './HeaderMenu.module.css';
-// import { IconChevronDown } from '@tabler/icons-react';
 
 const links: LinkType[] = [
   { link: '/', label: 'Home' },
   {
-    link: '#',
     label: 'Work',
     links: [
       { link: '/projects', label: 'Projects' },
@@ -31,7 +30,6 @@ const links: LinkType[] = [
   },
   { link: '/notes', label: 'Notes' },
   {
-    link: '#',
     label: 'Music',
     links: [
       { link: '/music/piano', label: 'Piano' },
@@ -56,16 +54,19 @@ export default function Nav() {
   const colorScheme = useMantineColorScheme();
 
   const items = links.map((link) => {
-    const menuItems = link.links?.map((item) => (
-      <Link
-        key={item.label}
-        to={item.link}
-        style={{ borderRadius: '5px' }}
-        onClick={close}
-      >
-        <Menu.Item key={item.link}>{item.label}</Menu.Item>
-      </Link>
-    ));
+    const menuItems = link.links?.map(
+      (item) =>
+        item.link && (
+          <Link
+            key={item.label}
+            to={item.link}
+            style={{ borderRadius: '5px' }}
+            onClick={close}
+          >
+            <Menu.Item key={item.link}>{item.label}</Menu.Item>
+          </Link>
+        )
+    );
 
     if (menuItems) {
       return (
@@ -76,12 +77,12 @@ export default function Nav() {
           withinPortal
         >
           <Menu.Target>
-            <Link to={link.link} className={classes.link}>
-              <Flex align="end">
+            <Text className={classes.link} style={{ borderRadius: '5px' }}>
+              <Flex component="span" align="end">
                 <span className={classes.linkLabel}>{link.label}</span>
                 <FaChevronDown size={12} />
               </Flex>
-            </Link>
+            </Text>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -91,7 +92,7 @@ export default function Nav() {
     return (
       <Link
         key={link.label}
-        to={link.link}
+        to={link.link ?? '#'}
         className={classes.link}
         style={{ borderRadius: '5px' }}
         onClick={close}
@@ -128,11 +129,18 @@ export default function Nav() {
           </ActionIcon>
         </Flex>
       </SimpleGrid>
+
+      {/* MOBILE NAV DRAWER */}
       <Drawer
+        overlayProps={{
+          blur: 10,
+          bg: 'rgba(0,0,0,0)',
+          opacity: 1,
+        }}
         opened={opened}
         onClose={close}
         hiddenFrom="sm"
-        size="90%"
+        size="100%"
         withCloseButton={false}
       >
         <Box pos={'absolute'} right={0} top={0} p="xl" onClick={close}>
@@ -152,6 +160,8 @@ export default function Nav() {
           </Flex>
         </Stack>
       </Drawer>
+
+      {/* OPEN CLOSE BUTTON */}
       <Box
         hiddenFrom="sm"
         pos="fixed"
@@ -159,7 +169,7 @@ export default function Nav() {
         left={10}
         p={3}
         style={{
-          backdropFilter: 'blur(10px)',
+          backdropFilter: 'blur(3px)',
           background: 'rgba(255,255,255,0.1)',
           borderRadius: '5px',
         }}
