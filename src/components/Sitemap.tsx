@@ -1,4 +1,3 @@
-import { Title } from '@mantine/core';
 import type { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
