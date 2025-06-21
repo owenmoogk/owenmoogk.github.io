@@ -1,3 +1,5 @@
+// import { Text } from '@mantine/core';
+// import { useReadingTime } from 'react-hook-reading-time';
 import { useParams } from 'react-router-dom';
 
 import Tag from '../common/Tags';
@@ -15,6 +17,14 @@ export default function BlogPost() {
     blog: null,
   };
 
+  // let readingTime: string | null = (
+  //   useReadingTime(content ?? '') as { text: string }
+  // ).text;
+
+  // if (!content) {
+  //   readingTime = null;
+  // }
+
   return (
     <div className="main">
       <div id="blogPage" className="blogPostPage">
@@ -23,11 +33,15 @@ export default function BlogPost() {
             <p className="title" style={{ letterSpacing: '-0.50px' }}>
               {blog.title}
             </p>
+
             <div className="tags" id="icons">
               {blog.tags.map((type, key) => (
                 <Tag type={snakeToTitleCase(type)} key={key} />
               ))}
             </div>
+            {/* <Text fs="italic" size="sm" mt={0}>
+              {readingTime}
+            </Text> */}
             <div className="meta">
               <div className="author">
                 <img src={headshot} className="headshot" alt="" />

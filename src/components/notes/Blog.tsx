@@ -2,11 +2,12 @@ import { Box, Flex, Image, Paper, Text, Title } from '@mantine/core';
 import { format } from 'date-fns';
 // import { useState } from 'react';
 import { useState } from 'react';
+import { useReadingTime } from 'react-hook-reading-time';
 import { Link } from 'react-router-dom';
 
 // import FilterButton from '../common/FilterButton';
 import type { BlogPost } from '@api/blogs';
-import { getBlogs } from '@api/blogs';
+import { getBlog, getBlogs } from '@api/blogs';
 import useFetchData from '@api/useGetData';
 import { snakeToTitleCase } from '@api/util';
 import FilterButton from '@components/common/FilterButton';
@@ -58,6 +59,17 @@ export default function Blog() {
 
 function BlogItem(props: { post: BlogPost }) {
   const post = props.post;
+
+  const blog = useFetchData(getBlog, post.file_name);
+
+  let timeEstimate: string | null = (
+    useReadingTime(blog?.content ?? '') as { text: string }
+  ).text;
+
+  if (!blog) {
+    timeEstimate = null;
+  }
+
   return (
     <Link to={post.file_name}>
       <Paper style={{ overflow: 'hidden' }} radius="lg">
@@ -73,6 +85,7 @@ function BlogItem(props: { post: BlogPost }) {
               {post.tags.map((x) => snakeToTitleCase(x)).join(', ')}
               &nbsp; – &nbsp;
               {format(post.date, 'MMMM d, yyyy')}
+              {timeEstimate && <>&nbsp; – &nbsp;{timeEstimate}</>}
             </Text>
           </Flex>
           <div className="image" />
