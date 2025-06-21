@@ -1,12 +1,35 @@
+import { Title } from '@mantine/core';
+import type { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
+import type { PathList } from '../Paths';
+import { paths } from '../Paths';
 import type { Project } from '@api/projects';
 import { homepageUrl } from '@global/global';
 
 import data from '@api/projects.json';
 
 const projectData = data as Project[];
+
+function renderPathLinks(paths: PathList[], parent?: string): ReactNode {
+  if (!parent) parent = '';
+  return paths.map(
+    (path, key) =>
+      path.path &&
+      path.path !== '/' &&
+      !path.path.startsWith(':') &&
+      path.path !== '*' && (
+        <>
+          <li key={key}>
+            <Link to={parent + path.path}>{parent + path.path}</Link>
+          </li>
+          {path.children &&
+            renderPathLinks(path.children, parent + path.path + '/')}
+        </>
+      )
+  );
+}
 
 export default function Sitemap() {
   return (
@@ -15,20 +38,10 @@ export default function Sitemap() {
         <title>{'Sitemap - Owen Moogk'}</title>
       </Helmet>
       <p className="title">Sitemap</p>
-      <p className="subtitle">
-        All other subpages (that are worth looking at).
-      </p>
+      <p className="subtitle">All subpages on my domain.</p>
       <div className="assets">
         <ul>
-          <li>
-            <Link to="/assets">/assets</Link>
-          </li>
-          <li>
-            <Link to="/projects/directory">/projects/directory</Link>
-          </li>
-          <li>
-            <Link to="/memories">/memories</Link>
-          </li>
+          {renderPathLinks(paths)}
           <br />
           {projectData.map((project, key) => {
             // don't include external links in sitemap (eg. Janik's Cat Feeder)

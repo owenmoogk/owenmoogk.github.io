@@ -16,37 +16,8 @@ import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
 import { IoIosClose } from 'react-icons/io';
 import { Link } from 'react-router';
 
-import type { Link as LinkType } from '../types';
 import classes from './HeaderMenu.module.css';
-
-const links: LinkType[] = [
-  { link: '/', label: 'Home' },
-  {
-    label: 'Work',
-    links: [
-      { link: '/projects', label: 'Projects' },
-      { link: '/work', label: 'Experience' },
-    ],
-  },
-  { link: '/notes', label: 'Notes' },
-  {
-    label: 'Music',
-    links: [
-      { link: '/music/piano', label: 'Piano' },
-      { link: '/music/favorites', label: 'My Favorites' },
-    ],
-  },
-  // // TODO: This should have subpages
-  // {
-  //   link: '#',
-  //   label: 'Adventures',
-  //   links: [
-  //     { link: '/adventures', label: 'Travels' },
-  //     { link: '/memories', label: 'Memories' },
-  //   ],
-  // },
-  { link: '/contact', label: 'Contact' },
-];
+import { links } from './NavLinks';
 
 export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
