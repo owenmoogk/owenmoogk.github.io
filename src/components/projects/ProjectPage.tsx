@@ -1,14 +1,12 @@
-import { Flex, Image, Text } from '@mantine/core';
-import { useEffect } from 'react';
-import ReactCompareImage from 'react-compare-image';
+import { Flex } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
-import MarkdownView from 'react-showdown';
 
 import Tag from '../common/Tags';
 import { fetchProjectJSON, fetchProjectMarkdown } from '@api/projects';
 import useFetchData from '@api/useGetData';
+import { MarkdownRenderer } from '@components/common/MarkdownRenderer';
 import { homepageUrl } from '@global/global';
 
 export default function ProjectPage() {
@@ -18,20 +16,6 @@ export default function ProjectPage() {
 
   const metaData = useFetchData(fetchProjectJSON, projectName);
   const projectData = useFetchData(fetchProjectMarkdown, projectName);
-
-  // this is really stupid and is fully bad practice,
-  // but......
-  // showdown doesn't handle videos properly so its not my fault, ok...?
-  // TLDR: Giving the videos controls because showdown removes them.
-  useEffect(() => {
-    const interval = setInterval(() => {
-      document.querySelectorAll('video').forEach((video) => {
-        video.setAttribute('controls', 'true');
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
 
   function parseMarkdown(data: string) {
     if (!data) {
@@ -106,77 +90,9 @@ export default function ProjectPage() {
         </Flex>
 
         <div id="blocks">
-          <MarkdownView
-            markdown={parseMarkdown(projectData ?? '')}
-            options={{ tables: true, emoji: true }}
-            components={{
-              img(props: { alt: string; src: string }) {
-                return (
-                  <Flex
-                    justify={'center'}
-                    direction={'column'}
-                    component="span"
-                    mb={30}
-                  >
-                    <Image src={props.src} alt="" p={0} m={0} />
-                    <Text
-                      mt={10}
-                      size={'14px'}
-                      c={
-                        'light-dark(var(--mantine-color-dark-4),var(--mantine-color-gray-1))'
-                      }
-                      ta={'center'}
-                      lh={'20px'}
-                      component="span"
-                    >
-                      {props.alt}
-                    </Text>
-                  </Flex>
-                );
-              },
-              h4(props: { children: string[]; id: string }) {
-                if (props.children[0].includes('::compare-image')) {
-                  const [image1, image2] = props.children[0]
-                    .split('[')[1]
-                    .split(']')[0]
-                    .split(',');
-                  return (
-                    <Flex
-                      className="sliderContainer"
-                      direction={'column'}
-                      align={'center'}
-                      justify={'center'}
-                      m={'auto'}
-                    >
-                      <ReactCompareImage
-                        leftImage={
-                          '/assets/projects/' + projectName + '/' + image1
-                        }
-                        rightImage={
-                          '/assets/projects/' + projectName + '/' + image2
-                        }
-                        aspectRatio="taller"
-                        handle={
-                          <button
-                            style={{
-                              height: '50px',
-                              outline: 'none',
-                              width: '10px',
-                              border: 'none',
-                              borderRadius: '5px',
-                            }}
-                          />
-                        }
-                      />
-                      <Text className="subtitle">
-                        Move the slider to see inside.
-                      </Text>
-                    </Flex>
-                  );
-                }
-                return <h4 id={props.id}>{props.children}</h4>;
-              },
-            }}
+          <MarkdownRenderer
+            content={parseMarkdown(projectData ?? '')}
+            projectName={projectName}
           />
         </div>
       </div>
