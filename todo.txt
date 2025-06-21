@@ -1,24 +1,10 @@
 projects to add:
-	rectangle calculator
 	snake ai to page
-	passion project (or add it to work)
-	wave function collapse
 	new tab
 	towers of hanoi
-	django twitter
-	elastic car
-	revit-house
-	pomodoro-timer-extension
-	gists?
-	arm project (torque minimizer)
-	covid health app??
-	github rooms?
-	cli / os website
-	multi-function-feeder
-	hns modular pcb
+	covid health app
+	github rooms
 	beehive project
-	syringe pump
-	water feed
 	tax calculator
 	sudoku wave function collapse
 	gists

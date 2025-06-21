@@ -3,40 +3,11 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-
-
-	ul {
-		width: min(90%, 700px);
-	}
-
-	li {
-		width: fit-content;
-	}
-
-	.subtitle {
-		font-size: 18px;
-	}
-
+	width: min(700px, 90%);
+	margin: auto;
+	
 	#blocks {
-		width: min(700px, 90%);
-
-		a {
-			color: var(--primaryColor)
-		}
-
-		h1 {
-			text-align: center;
-			margin-bottom: 10px !important;
-			margin-top: 30px !important;
-		}
-	
-		img {
-			background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
-			max-height: 350px;
-			width: 100%;
-			margin: auto;
-		}
-	
+		
 		video {
 			max-height: 500px;
 			max-width: min(100%, 500px);
@@ -46,30 +17,14 @@
 		iframe {
 			max-width: calc(100% - 10px);
 		}
-	
+
+		img{
+			max-height: 500px;
+			object-fit: contain;
+		}
+		
 		.sliderContainer {
 			width: min(90%, 400px);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-	
-			.subtitle {
-				width: fit-content;
-			}
 		}
-	}
-	
-	#blocks>div{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	// this is so all elements have same spacing, and thus distance from the header
-	#blocks>div>*{
-		margin-top: 10px;
-		margin-bottom: 10px;
 	}
 }

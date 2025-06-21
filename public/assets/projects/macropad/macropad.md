@@ -1,4 +1,4 @@
-#### overlay1.png,overlay2.png
+####::compare-image[overlay1.png,overlay2.png]
 
 # Overview
 

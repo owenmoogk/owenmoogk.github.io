@@ -4,7 +4,7 @@
 
 I was getting into 3D printing, and had just bought myself a Ender 3 Pro. This was really fun to make! I 3D printed the whole thing, and recently launched it. Part one was a success, part two with a parachute has had one test launch... it didn't go well, as I forgot about heat retardant materials and melted the parachute. Next design coming soon (and I'll include a video next time)!
 
-#### overlay1.png,overlay2.png
+####::compare-image[overlay1.png,overlay2.png]
 
 # Videos
 

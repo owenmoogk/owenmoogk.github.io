@@ -1,0 +1,11 @@
+{
+    "title": "Syringe Pump",
+    "date": "April 22, 2024",
+    "featured": true,
+    "types": [
+        "SolidWorks",
+        "Python"
+    ],
+    "githubLink": "",
+    "description": "A medication delivery device designed for mice, to automate and enhance neuroscience research."
+}

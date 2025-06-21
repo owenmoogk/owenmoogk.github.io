@@ -79,7 +79,7 @@ export default function ProjectPage() {
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>
 
-        <Flex id="icons" gap="sm" align="center">
+        <Flex id="icons" gap="sm" align="center" mb={20}>
           {metaData.githubLink === '' ? null : (
             <a
               href={
@@ -134,35 +134,47 @@ export default function ProjectPage() {
                   </Flex>
                 );
               },
-              h4(props: { children: string[] }) {
-                const [image1, image2] = props.children[0].split(',');
-                return (
-                  <div className="sliderContainer">
-                    <ReactCompareImage
-                      leftImage={
-                        '/assets/projects/' + projectName + '/' + image1
-                      }
-                      rightImage={
-                        '/assets/projects/' + projectName + '/' + image2
-                      }
-                      aspectRatio="taller"
-                      handle={
-                        <button
-                          style={{
-                            height: '50px',
-                            outline: 'none',
-                            width: '10px',
-                            border: 'none',
-                            borderRadius: '5px',
-                          }}
-                        />
-                      }
-                    />
-                    <span className="subtitle">
-                      Move the slider to see inside.
-                    </span>
-                  </div>
-                );
+              h4(props: { children: string[]; id: string }) {
+                if (props.children[0].includes('::compare-image')) {
+                  const [image1, image2] = props.children[0]
+                    .split('[')[1]
+                    .split(']')[0]
+                    .split(',');
+                  return (
+                    <Flex
+                      className="sliderContainer"
+                      direction={'column'}
+                      align={'center'}
+                      justify={'center'}
+                      m={'auto'}
+                    >
+                      <ReactCompareImage
+                        leftImage={
+                          '/assets/projects/' + projectName + '/' + image1
+                        }
+                        rightImage={
+                          '/assets/projects/' + projectName + '/' + image2
+                        }
+                        aspectRatio="taller"
+                        handle={
+                          <button
+                            style={{
+                              height: '50px',
+                              outline: 'none',
+                              width: '10px',
+                              border: 'none',
+                              borderRadius: '5px',
+                            }}
+                          />
+                        }
+                      />
+                      <Text className="subtitle">
+                        Move the slider to see inside.
+                      </Text>
+                    </Flex>
+                  );
+                }
+                return <h4 id={props.id}>{props.children}</h4>;
               },
             }}
           />

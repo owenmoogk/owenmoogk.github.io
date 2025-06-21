@@ -1,0 +1,11 @@
+{
+    "title": "Mouse Monitoring PCB",
+    "date": "April 22, 2024",
+    "featured": true,
+    "types": [
+        "Altium",
+        "Python"
+    ],
+    "githubLink": "",
+    "description": "A custom-designed PCB to monitor mouse habitats, and upload data directly to the cloud."
+}

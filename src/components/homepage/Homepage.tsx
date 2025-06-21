@@ -43,9 +43,9 @@ export default function Homepage() {
             <br />
             <span className="special">Owen Moogk</span>
           </div>
-          <p className="subtitle" id="splash" onClick={() => changeSplash()}>
+          <Text className="subtitle" id="splash" onClick={() => changeSplash()}>
             {splash}
-          </p>
+          </Text>
         </div>
         <div className="photo" id="pfp">
           <img src={assetUrl + 'pfps/suit-edited-square.png'} alt="" />

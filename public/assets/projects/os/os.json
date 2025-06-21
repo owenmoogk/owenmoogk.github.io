@@ -1,0 +1,11 @@
+{
+    "title": "Command Line Website",
+    "date": "February 22, 2025",
+    "featured": true,
+    "externalLink": "os",
+    "types": [
+        "React",
+        "Javascript"
+    ],
+    "description": "A personal portfolio website built like an command line interface."
+}
