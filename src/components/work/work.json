@@ -7,7 +7,7 @@
     "email": "owenmoogk@gmail.com",
     "phone": "2269890602",
     "url": "",
-    "summary": "I am an aspiring engineering student from Waterloo, Canada, and I'm excited to travel the world while working on the most advanced technologies. I'm passionate about motorsports, robotic systems, space travel, and AI.\n\nI'm currently studying Mechatronics Engineering at the University of Waterloo, and am working as an Operational Software Developer at Rocket Factory Augsburg (RFA Space). Previously, I was employed in R&D Development Engineering at the Hub for Neuroengineering Solutions, and as a Software Developer at Busplanner Inc.\n\nI'm excited about creating amazing tools with technology, whether it's DIY robotic systems or eye-catching websites. My personal website can be found at https://owenmoogk.github.io, where I document everything that gets me excited about engineering.",
+    "summary": "Hey, I'm Owen, a Mechatronics Engineering Student at the University of Waterloo (graduating in 2027).\n\nI enjoy solving interesting problems, usually with software and/or hardware. I'm passionate about robotic systems, space travel, motorsport, and energy solutions, and love to travel while working on advanced technology. I'm typically using tools like Altium, Python, React, SolidWorks, and 3D Printers to make cool stuff!\n\nI'm currently working at Wrmth in North Bay as an electrical engineering student, designing and building heated outdoor furniture!\n\nI've formerly been employed at Rocket Factory Augsburg, Qamp, QC Career School, the ULethbridge Hub for Neuroengineering Solutions, and BusPlanner in engineering-related roles.\n\nFor more information about my work, see my website at https://owenmoogk.github.io.",
     "location": {
       "countryCode": "US",
       "address": "Canada"
@@ -21,6 +21,15 @@
     ]
   },
   "work": [
+    {
+      "name": "Wrmth ",
+      "position": "Electrical Engineering",
+      "startDate": "2025-05-31",
+      "endDate": "",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/wrmth/",
+      "location": "North Bay, Ontario, Canada"
+    },
     {
       "name": "Rocket Factory Augsburg - RFA",
       "position": "Operational Software Developer",
@@ -68,7 +77,7 @@
       "endDate": "2023-09-30",
       "highlights": [],
       "summary": "As a Software Developer, I developed and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients. I implemented and improved many web application features, directly affecting hundreds of clients across North America.\n\nI resolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n\nAdditionally, I designed SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation, as well as improving codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n\nI conducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
-      "url": "https://www.linkedin.com/company/georefsystems/",
+      "url": "https://www.linkedin.com/company/busplannersoftware/",
       "location": "Waterloo, Ontario, Canada"
     },
     {
@@ -122,13 +131,13 @@
       "location": "Waterloo, Ontario, Canada"
     },
     {
-      "name": "Bluevale Collegiate Institute",
+      "name": "Waterloo Region District School Board",
       "position": "C2L Student",
       "startDate": "2018-09-30",
       "endDate": "2022-06-30",
       "highlights": [],
       "summary": "Accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. \n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more like-minded people who are leadership-oriented, and I have learned and practiced many different leadership styles and management techniques.",
-      "url": "https://www.linkedin.com/company/bluevale-collegiate-institute/",
+      "url": "https://www.linkedin.com/company/waterloo-region-district-school-board/",
       "location": "Waterloo, Ontario, Canada"
     },
     {
@@ -294,22 +303,22 @@
   "publications": [],
   "skills": [
     {
-      "name": "FastAPI",
+      "name": "Printed Circuit Board (PCB) Design",
       "level": "",
       "keywords": []
     },
     {
-      "name": "TanStack",
+      "name": "Electrical Design",
       "level": "",
       "keywords": []
     },
     {
-      "name": "PostgreSQL",
+      "name": "Electrical Engineering",
       "level": "",
       "keywords": []
     },
     {
-      "name": "Project Management",
+      "name": "Design for Manufacturing",
       "level": "",
       "keywords": []
     },
@@ -320,6 +329,16 @@
     },
     {
       "name": "ASP.NET MVC",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Project Management",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "FastAPI",
       "level": "",
       "keywords": []
     },
@@ -384,6 +403,11 @@
       "keywords": []
     },
     {
+      "name": "TanStack",
+      "level": "",
+      "keywords": []
+    },
+    {
       "name": "Microcontrollers",
       "level": "",
       "keywords": []
@@ -420,6 +444,16 @@
     },
     {
       "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Internet of Things (IoT)",
       "level": "",
       "keywords": []
     },
