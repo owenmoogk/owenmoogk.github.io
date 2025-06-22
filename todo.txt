@@ -19,5 +19,4 @@ projects to add:
 	rework email bot page
 
 nav doesn't look great on mobile
-add want to go places to adventures
 add adventures / memories to nav
