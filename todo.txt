@@ -1,9 +1,7 @@
 projects to add:
 	snake ai to page
 	new tab
-	towers of hanoi
 	covid health app
-	github rooms
 	beehive project
 	tax calculator
 	sudoku wave function collapse
@@ -12,7 +10,6 @@ projects to add:
 	toyota-stickers
 	revit-house
 	passion-project
-	torque-optimizer
 	rectangle-calculator
 	django-twitter
 	pomodoro-timer-extension

@@ -1,0 +1,10 @@
+{
+    "title": "Towers of Hanoi",
+    "date": "June 4, 2023",
+    "types": [
+        "Javascript"
+    ],
+    "featured": true,
+    "externalLink": "towers-of-hanoi",
+    "description": "A small visualizer of how the Towers of Hanoi algorithm works."
+}

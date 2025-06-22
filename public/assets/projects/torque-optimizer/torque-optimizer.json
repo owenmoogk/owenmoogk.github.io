@@ -1,0 +1,8 @@
+{
+    "title": "Torque Optimizer",
+    "date": "March 23, 2023",
+    "types": [
+        "Python"
+    ],
+    "description": "A school project to design a robotic arm to bear the least amount of torque in different configurations."
+}
