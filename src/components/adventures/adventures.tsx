@@ -1,7 +1,7 @@
 import { Carousel } from '@mantine/carousel';
-import { Card, Flex, Image, Title } from '@mantine/core';
+import { Box, Container, Flex, Image, Text, Title } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
-import { Map, Marker } from 'pigeon-maps';
+import { Map, Marker, ZoomControl } from 'pigeon-maps';
 import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 
@@ -38,70 +38,71 @@ export default function Adventures() {
       ? getDistance(img.location, selectedLocation.coords) < distanceThreshold
       : false
   );
-  const { width } = useViewportSize();
-
+  const { width: screenWidth, height: screenHeight } = useViewportSize();
   return (
-    <div className="main">
+    <Container className="main" maw={700}>
       <p className="title">Adventures</p>
-      <Flex className="page" mt={20} justify={'center'} maw={1500}>
-        <Card flex={2}>
-          <Title mt={0} order={3}>
-            Some places I've been!
-          </Title>
-          <Map
-            height={400}
-            defaultCenter={[50, 0]}
-            defaultZoom={1.3}
-            onBoundsChanged={({ zoom, center }) => {
-              console.log(zoom, center);
-            }}
-            minZoom={1.3}
-            limitBounds="edge"
-          >
-            {/* <ZoomControl /> */}
-            {adventures.map((place, index) => (
-              <Marker
-                width={30}
-                anchor={place.coords}
-                color="rgb(0, 89, 255)"
-                key={index}
-                payload={place}
-                onClick={({ payload }) => {
-                  setSelectedLocation(payload as Adventure);
-                }}
-              />
-            ))}
-          </Map>
-        </Card>
+      <Flex className="page" mt={20} justify={'center'} direction={'column'}>
+        <Map
+          height={Math.min(400, screenHeight * 0.7)}
+          defaultCenter={[30, 0]}
+          defaultZoom={1.5}
+          onBoundsChanged={({ zoom, center }) => {
+            console.log(zoom, center);
+          }}
+          minZoom={1.5}
+          limitBounds="edge"
+        >
+          <ZoomControl />
+          {adventures.map((place, index) => (
+            <Marker
+              width={30}
+              anchor={place.coords}
+              color="rgb(0, 89, 255)"
+              key={index}
+              payload={place}
+              onClick={({ payload }) => {
+                setSelectedLocation(payload as Adventure);
+              }}
+            />
+          ))}
+        </Map>
 
-        <Card w={width - 800} mx={20} flex={3}>
-          <Title mt={0} order={3}>
+        <Box>
+          <Title order={3}>
             {selectedLocation?.name ?? 'Click on a map marker!'}
           </Title>
           {selectedLocation?.description}
-          <Title order={4}>{selectedLocation && 'Pictures'}</Title>
-          {selectedLocation && (
-            <Carousel
-              withIndicators
-              height={200}
-              type="container"
-              emblaOptions={{ align: 'start', dragFree: true }}
-            >
-              {selectedThumbnailMetadata.map((img, key) => (
-                <Image
-                  src={img.src}
-                  key={img.src}
-                  style={{
-                    objectFit: 'contain',
-                    height: '200px',
-                    marginRight: '20px',
-                  }}
-                  onClick={() => setIndex(key)}
-                />
-              ))}
-            </Carousel>
+          {selectedLocation && selectedThumbnailMetadata.length > 0 && (
+            <>
+              <Title order={4}>Pictures</Title>
+              {
+                <Carousel
+                  withIndicators
+                  height={200}
+                  type="container"
+                  emblaOptions={{ align: 'start', dragFree: true }}
+                >
+                  {selectedThumbnailMetadata.map((img, key) => (
+                    <Image
+                      src={img.src}
+                      key={img.src}
+                      style={{
+                        objectFit: 'contain',
+                        height: '200px',
+                        marginRight: '20px',
+                      }}
+                      onClick={() => setIndex(key)}
+                    />
+                  ))}
+                </Carousel>
+              }
+            </>
           )}
-        </Card>
+          {selectedLocation && selectedSlideData.length === 0 && (
+            <Text>No pictures, but I promise I've been there!</Text>
+          )}
+        </Box>
       </Flex>
       <Lightbox
         video={{ autoPlay: true }}
@@ -110,8 +111,8 @@ export default function Adventures() {
         open={index >= 0}
         close={() => setIndex(-1)}
         controller={{ closeOnBackdropClick: true }}
-        carousel={{ padding: width > 700 ? '40px' : '0px' }}
+        carousel={{ padding: screenWidth > 700 ? '40px' : '0px' }}
       />
-    </div>
+    </Container>
   );
 }

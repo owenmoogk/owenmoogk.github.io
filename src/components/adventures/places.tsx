@@ -34,16 +34,12 @@ export const adventures: Adventure[] = [
     coords: [48.1351, 11.582],
   },
   {
-    name: 'Havana, Cuba',
-    coords: [23.1136, -82.3666],
-  },
-  {
-    name: 'Santo Domingo, Dominican Republic',
-    coords: [18.4861, -69.9312],
-  },
-  {
     name: 'Zephyrhills, United States',
     coords: [28.2336, -82.1812],
+  },
+  {
+    name: 'Cayo Santa Maria, Cuba',
+    coords: [22.6567, -78.9507],
   },
   {
     name: 'Salzburg, Austria',
@@ -66,6 +62,14 @@ export const adventures: Adventure[] = [
     coords: [45.4408, 12.3155],
   },
   {
+    name: 'Saint Martin',
+    coords: [18.0708, -63.0501],
+  },
+  {
+    name: 'Saint Thomas, US Virgin Islands',
+    coords: [18.3381, -64.8941],
+  },
+  {
     name: 'Haifa, Israel',
     coords: [32.794, 34.9896],
   },
@@ -86,8 +90,20 @@ export const adventures: Adventure[] = [
     coords: [42.3601, -71.0589],
   },
   {
-    name: 'Edmonton, Canada',
-    coords: [53.5461, -113.4938],
+    name: 'Jasper, Canada',
+    coords: [52.8734, -118.0814],
+  },
+  {
+    name: 'Lake Louise, Canada',
+    coords: [51.4254, -116.1773],
+  },
+  {
+    name: 'Chicago, United States',
+    coords: [41.8781, -87.6298],
+  },
+  {
+    name: 'Bavaro, Dominican Republic',
+    coords: [18.6707, -68.4144],
   },
   {
     name: 'Ljubljana, Slovenia',
