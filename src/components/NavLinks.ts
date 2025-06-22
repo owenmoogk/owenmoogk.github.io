@@ -17,12 +17,10 @@ export const links: NavLink[] = [
       { link: '/music/favorites', label: 'My Favorites' },
     ],
   },
-  // // TODO: This should have subpages
   // {
-  //   link: '#',
-  //   label: 'Adventures',
+  //   label: 'Travel',
   //   links: [
-  //     { link: '/adventures', label: 'Travels' },
+  //     { link: '/adventures', label: 'Adventures' },
   //     { link: '/memories', label: 'Memories' },
   //   ],
   // },
