@@ -19,6 +19,5 @@ projects to add:
 	rework email bot page
 
 nav doesn't look great on mobile
-change adventure map provide to a better one: https://pigeon-maps.js.org/docs/tile-provider
 add want to go places to adventures
 add adventures / memories to nav

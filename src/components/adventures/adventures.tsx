@@ -2,6 +2,7 @@ import { Carousel } from '@mantine/carousel';
 import { Box, Container, Flex, Image, Text, Title } from '@mantine/core';
 import { useViewportSize } from '@mantine/hooks';
 import { Map, Marker, ZoomControl } from 'pigeon-maps';
+import { maptiler } from 'pigeon-maps/providers';
 import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 
@@ -10,6 +11,8 @@ import { adventures } from './places';
 import { getImageMetadata } from '@api/memories';
 import useFetchData from '@api/useGetData';
 
+const apiKey = import.meta.env.VITE_MAPTILER_API_KEY;
+
 function getDistance(loc1: [number, number], loc2: [number, number]) {
   return Math.sqrt((loc1[0] - loc2[0]) ** 2 + (loc1[1] - loc2[1]) ** 2);
 }
@@ -17,6 +20,8 @@ function getDistance(loc1: [number, number], loc2: [number, number]) {
 const distanceThreshold = 0.3; // in degrees
 
 export default function Adventures() {
+  const maptilerProvider = maptiler(apiKey, 'basic-v2');
+
   const [index, setIndex] = useState<number>(-1);
 
   const { slideData, thumbnailMetadata } = useFetchData(
@@ -44,6 +49,7 @@ export default function Adventures() {
       <p className="title">Adventures</p>
       <Flex className="page" mt={20} justify={'center'} direction={'column'}>
         <Map
+          provider={maptilerProvider}
           height={Math.min(400, screenHeight * 0.7)}
           defaultCenter={[30, 0]}
           defaultZoom={1.5}
