@@ -17,3 +17,11 @@ projects to add:
 
 nav doesn't look great on mobile
 add adventures / memories to nav
+
+projects to move to featured (after a re-work):
+	email bot
+	snake ai
+	firefly simulator
+	covid health app?
+	github profile
+	react github card (release on NPM!! this could be a component!)
