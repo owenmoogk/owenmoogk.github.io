@@ -18,6 +18,7 @@ import Memories from '@components/memories/memories';
 import SpotifyFavorites from '@components/music/Music';
 import Piano from '@components/music/Piano';
 import Collections from '@components/notes/collections/Collections';
+import ProjectIdeas from '@components/projects/ProjectIdeas';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
 
@@ -34,6 +35,7 @@ export const paths: PathList[] = [
     children: [
       { path: '', element: <Projects /> },
       { path: 'directory', element: <ProjectDirectory /> },
+      { path: 'ideas', element: <ProjectIdeas /> },
       { path: ':name', element: <ProjectPage /> },
     ],
   },

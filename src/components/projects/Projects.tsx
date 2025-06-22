@@ -20,6 +20,9 @@ export default function ProjectPage() {
       <p className="subtitle">
         These are some of my favorite projects. For a complete list, have a look{' '}
         <Link to="/projects/directory">here</Link>.
+        <br />
+        For something you might see here soon, here are my{' '}
+        <Link to="/projects/ideas">project ideas</Link>.
       </p>
       <div id="sortingContainer">
         <div id="buttonContainer">

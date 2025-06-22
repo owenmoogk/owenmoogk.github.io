@@ -11,3 +11,5 @@ src/main.css
 # generated projects files
 src/api/projects.json
 public/assets/projects.json
+
+.obsidian
