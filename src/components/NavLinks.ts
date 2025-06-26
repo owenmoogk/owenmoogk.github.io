@@ -9,7 +9,7 @@ export const links: NavLink[] = [
       { link: '/work', label: 'Experience' },
     ],
   },
-  { link: '/notes', label: 'Notes' },
+  // { link: '/notes', label: 'Notes' },
   {
     label: 'Music',
     links: [
