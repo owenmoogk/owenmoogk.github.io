@@ -5,7 +5,6 @@ projects to add:
 	elastic-car
 	toyota-stickers
 	revit-house
-	rectangle-calculator
 	django-twitter
 	pomodoro-timer-extension
 	rework email bot page
