@@ -122,7 +122,7 @@ export const adventures: Adventure[] = [
     coords: [49.0134, 12.1016],
   },
   {
-    name: 'Kalia Beach, Israel',
+    name: 'Kalia Beach, West Bank',
     coords: [31.749, 35.535],
     description: (
       <>

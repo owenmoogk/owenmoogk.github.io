@@ -1,4 +1,5 @@
-import { Flex } from '@mantine/core';
+import { Box, Flex, Title } from '@mantine/core';
+import { GithubCard } from 'github-repo-card';
 import { Helmet } from 'react-helmet-async';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
@@ -59,10 +60,8 @@ export default function ProjectPage() {
         <Helmet>
           <title>{metaData.title + ' - Owen Moogk'}</title>
         </Helmet>
-
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>
-
         <Flex id="icons" gap="sm" align="center" mb={20}>
           {metaData.githubLink === '' ? null : (
             <a
@@ -88,13 +87,18 @@ export default function ProjectPage() {
             return <Tag type={type} key={key} />;
           })}
         </Flex>
-
         <div id="blocks">
           <MarkdownRenderer
             content={parseMarkdown(projectData ?? '')}
             projectName={projectName}
           />
         </div>
+        {metaData.githubLink === undefined && (
+          <Box w={'100%'}>
+            <Title order={3}>Check it out on GitHub!</Title>
+            <GithubCard username="owenmoogk" repo={projectName} />
+          </Box>
+        )}
       </div>
     );
   }

@@ -1,7 +1,6 @@
 {
     "title": "Chess Robot",
     "date": "December 2, 2022",
-    "githubLink": "https://github.com/owenmoogk/carl-bot",
     "types": [
         "C++",
         "EV3"
