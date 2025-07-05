@@ -6,5 +6,5 @@
         "React"
     ],
     "description": "Website to retrieve and implement github API data.",
-    "featured": false
+    "featured": true
 }

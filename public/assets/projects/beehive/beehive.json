@@ -1,0 +1,13 @@
+{
+    "title": "Beehive Monitoring",
+    "date": "April 19, 2024",
+    "types": [
+        "SolidWorks",
+        "React",
+        "Django",
+        "Python"
+    ],
+    "githubLink": "",
+    "featured": true,
+    "description": "A beehive monitoring and data collection system."
+}

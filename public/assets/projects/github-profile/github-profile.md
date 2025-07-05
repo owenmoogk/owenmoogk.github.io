@@ -6,9 +6,15 @@ The last thing that I added that was cool was an option to input an API key. I h
 
 Both the website and GitHub page are linked above.
 
+# Why?
+Obviously, this is all readily available on the GitHub website. However, I kind of like using an API that allows for a custom user interface and experience, that may be a bit different. Also, it's more focused on crunching stats (like language usage and contributions).
+
+It provides an "at a glance" of what languages were used, and who worked on what.
+
+Also, I liked that I could make a page where images and HTML could be easily downloaded for users, which is much more accessible than it is on GitHub.
+
 ![Repository Display](repo.png)
 
 ![User Display](main.png)
 
 ![React Component Display](components.png)
-

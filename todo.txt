@@ -1,12 +1,10 @@
 projects to add:
 	snake ai to page
 	covid health app
-	beehive project
 	gists
 	elastic-car
 	toyota-stickers
 	revit-house
-	passion-project
 	rectangle-calculator
 	django-twitter
 	pomodoro-timer-extension
@@ -20,5 +18,4 @@ projects to move to featured (after a re-work):
 	snake ai
 	firefly simulator
 	covid health app?
-	github profile
 	react github card (release on NPM!! this could be a component!)

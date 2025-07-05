@@ -38,19 +38,22 @@ export default function FeaturedIcon(props: {
             </span>
           </Box>
           <Flex gap={10} align={'center'}>
-            {types.map((type, key) => (
-              <Image
-                mah={30}
-                maw={30}
-                src={'/assets/icons/' + type.toLowerCase() + '.svg'}
-                className="iconImage"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
-                key={key}
-                alt=""
-              />
-            ))}
+            {types.map(
+              (type, key) =>
+                key < 3 && ( // only show the first 3
+                  <Image
+                    mah={30}
+                    maw={30}
+                    src={'/assets/icons/' + type.toLowerCase() + '.svg'}
+                    className="iconImage"
+                    onError={(e) => {
+                      (e.target as HTMLElement).style.display = 'none';
+                    }}
+                    key={key}
+                    alt=""
+                  />
+                )
+            )}
           </Flex>
         </Flex>
       </Card>

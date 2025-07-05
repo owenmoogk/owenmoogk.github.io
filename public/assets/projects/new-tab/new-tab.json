@@ -1,7 +1,8 @@
 {
     "title": "New Tab Page",
-    "date": "Feb 18, 2023",
+    "date": "February 18, 2023",
     "types": [
+        "React",
         "Javascript"
     ],
     "externalLink": "new-tab",
