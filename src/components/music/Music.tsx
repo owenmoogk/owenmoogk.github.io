@@ -50,7 +50,9 @@ export default function SpotifyFavorites() {
             <Tabs.Tab value="long_term">All Time</Tabs.Tab>
           </Tabs.List>
         </Tabs>
-        {topTracks?.items.map((track, key) => <SongRow {...track} key={key} />)}
+        {topTracks?.items.map((track, key) => (
+          <SongRow {...track} key={key} />
+        ))}
       </Stack>
     </Container>
   );
