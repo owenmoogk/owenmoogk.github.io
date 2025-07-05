@@ -1,0 +1,9 @@
+{
+    "title": "New Tab Page",
+    "date": "Feb 18, 2023",
+    "types": [
+        "Javascript"
+    ],
+    "externalLink": "new-tab",
+    "description": "A website to use as my default page when opening a new tab."
+}

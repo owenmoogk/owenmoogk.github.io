@@ -1,10 +1,7 @@
 projects to add:
 	snake ai to page
-	new tab
 	covid health app
 	beehive project
-	tax calculator
-	sudoku wave function collapse
 	gists
 	elastic-car
 	toyota-stickers
