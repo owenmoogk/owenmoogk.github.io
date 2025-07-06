@@ -2,7 +2,7 @@
   "homepage": "https://owenmoogk.github.io/",
   "name": "owenmoogk.github.io",
   "private": true,
-  "version": "8.7.3",
+  "version": "8.7.4",
   "type": "module",
   "scripts": {
     "start": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"vite\"",
@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "test": "yarn lint && yarn typecheck"
+    "test": "yarn lint && yarn typecheck",
+    "ver": "yarn version && git push && git push --tags"
   },
   "dependencies": {
     "@mantine/carousel": "^8.1.2",
