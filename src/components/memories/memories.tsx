@@ -27,7 +27,7 @@ export default function Memories() {
       <p className="title">Through My Eyes</p>
       <p className="subtitle">Family, Friends, Projects and Travels</p>
       <br />
-      <div className="memoryPage">
+      <div>
         <RowsPhotoAlbum
           photos={thumbnailMetadata}
           onClick={({ index }) => setIndex(index)}

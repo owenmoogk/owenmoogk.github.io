@@ -1,4 +1,12 @@
-import { Anchor, Box, Container, Flex, Text, Title } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Container,
+  Flex,
+  Image,
+  Text,
+  Title,
+} from '@mantine/core';
 import { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
@@ -36,21 +44,42 @@ export default function Homepage() {
       <Helmet>
         <title>{'Owen Moogk'}</title>
       </Helmet>
-      <div id="homepageTitle">
-        <div id="text">
-          <div className="larger">
+      <Flex
+        justify={'space-between'}
+        align={'center'}
+        mb={30}
+        id="homepageTitle"
+      >
+        <div>
+          <Text fz={40} fw={'bold'}>
             Hey, I'm
-            <br />
-            <span className="special">Owen Moogk</span>
-          </div>
-          <Text className="subtitle" id="splash" onClick={() => changeSplash()}>
+            <Text fz={60} fw={'bold'} className="special">
+              Owen Moogk
+            </Text>
+          </Text>
+          <Text
+            id="splash"
+            className="subtitle"
+            onClick={() => changeSplash()}
+            ta={'left'}
+            style={{
+              userSelect: 'none',
+              transition: '0.3s',
+              transformOrigin: 'left top',
+            }}
+          >
             {splash}
           </Text>
         </div>
-        <div className="photo" id="pfp">
-          <img src={assetUrl + 'pfps/suit-edited-square.png'} alt="" />
-        </div>
-      </div>
+        <Image
+          id={'pfp'}
+          h={175}
+          w={175}
+          bdrs={'50%'}
+          src={assetUrl + 'pfps/suit-edited-square.png'}
+          alt=""
+        />
+      </Flex>
       <div>
         <Text>
           I'm currently a mechatronics engineering student at the{' '}
