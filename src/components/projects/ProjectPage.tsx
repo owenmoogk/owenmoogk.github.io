@@ -107,6 +107,6 @@ export default function ProjectPage() {
     buildProjectPage()
   ) : (
     // will put errors here if there are any
-    <div id="projectBody"  />
+    <div id="projectBody" />
   );
 }

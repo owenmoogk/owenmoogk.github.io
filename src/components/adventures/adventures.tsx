@@ -58,7 +58,7 @@ export default function Adventures() {
   );
   const { width: screenWidth, height: screenHeight } = useViewportSize();
   return (
-    <Container  maw={700}>
+    <Container maw={700}>
       <p className="title">Adventures</p>
       <Flex className="page" mt={20} justify="center" direction="column">
         <Map

@@ -23,7 +23,7 @@ export default function Memories() {
   };
 
   return (
-    <div >
+    <div>
       <p className="title">Through My Eyes</p>
       <p className="subtitle">Family, Friends, Projects and Travels</p>
       <br />
