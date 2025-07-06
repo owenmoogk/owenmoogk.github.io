@@ -14,7 +14,7 @@ export default function Links() {
 
   return (
     <Stack
-      pos={'fixed'}
+      pos="fixed"
       bottom="20px"
       right="20px"
       gap={10}

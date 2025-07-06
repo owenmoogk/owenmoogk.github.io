@@ -13,7 +13,7 @@ export default function Assets() {
   return (
     <div className="main" id="resourcePage">
       <Helmet>
-        <title>{'Assets - Owen Moogk'}</title>
+        <title>Assets - Owen Moogk</title>
       </Helmet>
       <p className="title">Assets</p>
       <p className="subtitle">Extra bits, for storage.</p>

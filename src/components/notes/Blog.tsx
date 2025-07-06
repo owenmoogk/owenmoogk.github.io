@@ -41,7 +41,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-      <Flex gap={20} direction={'column'}>
+      <Flex gap={20} direction="column">
         {blogData?.map((post, key) => {
           const postTags = post.tags.map((item) =>
             item.replace(' ', '_').toLowerCase()

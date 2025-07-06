@@ -19,11 +19,11 @@ export default function ContactPage() {
   return (
     <Container>
       <Helmet>
-        <title>{'Contact - Owen Moogk'}</title>
+        <title>Contact - Owen Moogk</title>
       </Helmet>
       <p className="title">Contact</p>
-      <Box ta={'center'}>
-        <Title order={2} fw={'normal'}>
+      <Box ta="center">
+        <Title order={2} fw="normal">
           Say hello...
         </Title>
         <Text>
@@ -35,7 +35,7 @@ export default function ContactPage() {
             owenmoogk@gmail.com
           </Anchor>
         </Text>
-        <Title order={2} fw={'normal'}>
+        <Title order={2} fw="normal">
           ...or find me here
         </Title>
 

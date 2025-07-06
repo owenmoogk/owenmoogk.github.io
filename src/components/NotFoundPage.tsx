@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default function NotFoundPage() {
   return (
-    <Container id="notFoundPage" ta={'center'}>
+    <Container id="notFoundPage" ta="center">
       <h1 className="title">404!</h1>
       <p className="subtitle">Uh oh, looks like I lost you.</p>
       <Text>

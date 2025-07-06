@@ -23,7 +23,7 @@ export default function SpotifyFavorites() {
   return (
     <Container maw={650}>
       <Helmet>
-        <title>{'Music - Owen Moogk'}</title>
+        <title>Music - Owen Moogk</title>
       </Helmet>
       <p className="title">Favorites</p>
       <p className="subtitle">
@@ -80,7 +80,7 @@ const SongRow = (song: SpotifyTopTrackItem) => {
                 target="_blank"
                 rel="noreferrer"
                 c="gray"
-                fz={'sm'}
+                fz="sm"
                 fs="italic"
               >
                 <Box c="gray">

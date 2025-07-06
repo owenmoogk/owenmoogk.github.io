@@ -36,15 +36,15 @@ export default function Memories() {
             extras: (_, photo) =>
               metadata[photo.index].city && (
                 <Box
-                  pos={'absolute'}
+                  pos="absolute"
                   bottom={0}
                   p={10}
-                  w={'100%'}
+                  w="100%"
                   ta="right"
                   c="white"
                   fs="italic"
-                  fw={'bold'}
-                  bg={'rgba(0,0,0,0.3)'}
+                  fw="bold"
+                  bg="rgba(0,0,0,0.3)"
                 >
                   <Text>
                     {metadata[photo.index].city}

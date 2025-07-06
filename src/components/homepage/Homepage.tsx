@@ -42,18 +42,13 @@ export default function Homepage() {
   return (
     <Container maw="800px">
       <Helmet>
-        <title>{'Owen Moogk'}</title>
+        <title>Owen Moogk</title>
       </Helmet>
-      <Flex
-        justify={'space-between'}
-        align={'center'}
-        mb={30}
-        id="homepageTitle"
-      >
+      <Flex justify="space-between" align="center" mb={30} id="homepageTitle">
         <div>
-          <Text fz={40} fw={'bold'}>
+          <Text fz={40} fw="bold">
             Hey, I'm
-            <Text fz={60} fw={'bold'} className="special">
+            <Text fz={60} fw="bold" className="special">
               Owen Moogk
             </Text>
           </Text>
@@ -61,7 +56,7 @@ export default function Homepage() {
             id="splash"
             className="subtitle"
             onClick={() => changeSplash()}
-            ta={'left'}
+            ta="left"
             style={{
               userSelect: 'none',
               transition: '0.3s',
@@ -72,10 +67,10 @@ export default function Homepage() {
           </Text>
         </div>
         <Image
-          id={'pfp'}
+          id="pfp"
           h={175}
           w={175}
-          bdrs={'50%'}
+          bdrs="50%"
           src={assetUrl + 'pfps/suit-edited-square.png'}
           alt=""
         />
@@ -123,7 +118,7 @@ export default function Homepage() {
           Some of the most interesting <Link to="/projects">projects</Link> that
           I've worked on:
         </Text>
-        <Flex gap={20} mt={20} wrap={'wrap'}>
+        <Flex gap={20} mt={20} wrap="wrap">
           <FeaturedIcon
             data={{
               title: '2702 Rebels 2020 Robot',

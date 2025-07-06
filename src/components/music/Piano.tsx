@@ -8,11 +8,11 @@ export default function Piano() {
   return (
     <Container>
       <Helmet>
-        <title>{'Music - Owen Moogk'}</title>
+        <title>Music - Owen Moogk</title>
       </Helmet>
       <p className="title">Piano</p>
       <p className="subtitle">Imperfect renditions of songs I like.</p>
-      <Flex justify={'center'} gap={20} wrap={'wrap'} mt={30}>
+      <Flex justify="center" gap={20} wrap="wrap" mt={30}>
         {pianoSongs.map((song) => (
           <Song {...song} key={song.youtubeLink} />
         ))}
@@ -40,7 +40,7 @@ const Song = (song: PianoSong) => {
           <Title order={4} my={0}>
             {song.name}
           </Title>
-          <Text size="sm" fs={'italic'}>
+          <Text size="sm" fs="italic">
             {song.artist}
           </Text>
         </Box>

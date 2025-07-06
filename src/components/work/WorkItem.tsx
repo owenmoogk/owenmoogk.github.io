@@ -35,11 +35,11 @@ export default function WorkItem(props: Props) {
   return (
     <Accordion.Item value={props.title} key={props.title}>
       <Accordion.Control>
-        <Flex justify={'space-between'} fw={'bold'} mr={20}>
+        <Flex justify="space-between" fw="bold" mr={20}>
           <Title order={4} m={0}>
             {props.title}
           </Title>
-          <Text className="workTitleDate" w={'fit-content'} m={0}>
+          <Text className="workTitleDate" w="fit-content" m={0}>
             {props.dateString}
           </Text>
         </Flex>

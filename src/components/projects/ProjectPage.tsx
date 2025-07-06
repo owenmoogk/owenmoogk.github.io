@@ -94,7 +94,7 @@ export default function ProjectPage() {
           />
         </div>
         {metaData.githubLink === undefined && (
-          <Box w={'100%'}>
+          <Box w="100%">
             <Title order={3}>Check it out on GitHub!</Title>
             <GithubCard username="owenmoogk" repo={projectName} />
           </Box>

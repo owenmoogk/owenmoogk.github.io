@@ -38,21 +38,14 @@ export const MarkdownRenderer = (props: {
       components={{
         img(props: { alt: string; src: string }) {
           return (
-            <Flex
-              justify={'center'}
-              direction={'column'}
-              component="span"
-              mb={30}
-            >
+            <Flex justify="center" direction="column" component="span" mb={30}>
               <Image src={props.src} alt="" p={0} m={0} />
               <Text
                 mt={10}
-                size={'14px'}
-                c={
-                  'light-dark(var(--mantine-color-dark-4),var(--mantine-color-gray-1))'
-                }
-                ta={'center'}
-                lh={'20px'}
+                size="14px"
+                c="light-dark(var(--mantine-color-dark-4),var(--mantine-color-gray-1))"
+                ta="center"
+                lh="20px"
                 component="span"
               >
                 {props.alt}
@@ -104,10 +97,10 @@ export const MarkdownRenderer = (props: {
             return (
               <Flex
                 className="sliderContainer"
-                direction={'column'}
-                align={'center'}
-                justify={'center'}
-                m={'auto'}
+                direction="column"
+                align="center"
+                justify="center"
+                m="auto"
               >
                 <ReactCompareImage
                   leftImage={'/assets/projects/' + projectName + '/' + image1}

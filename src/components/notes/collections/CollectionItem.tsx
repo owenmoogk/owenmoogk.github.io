@@ -23,8 +23,8 @@ export default function CollectionItem(props: { item: CollectionItem }) {
           : FaGlobe;
 
   return (
-    <Flex gap={10} align={'center'} mt={5}>
-      <Flex align={'center'}>
+    <Flex gap={10} align="center" mt={5}>
+      <Flex align="center">
         <Icon size={18} />
       </Flex>
       <Anchor href={item.url} target="_blank" rel="noreferrer" size="md">

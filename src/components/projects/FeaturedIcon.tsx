@@ -37,7 +37,7 @@ export default function FeaturedIcon(props: {
               {data.types}
             </span>
           </Box>
-          <Flex gap={10} align={'center'}>
+          <Flex gap={10} align="center">
             {types.map(
               (type, key) =>
                 key < 3 && ( // only show the first 3

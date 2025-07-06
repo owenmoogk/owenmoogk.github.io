@@ -60,7 +60,7 @@ export default function Adventures() {
   return (
     <Container className="main" maw={700}>
       <p className="title">Adventures</p>
-      <Flex className="page" mt={20} justify={'center'} direction={'column'}>
+      <Flex className="page" mt={20} justify="center" direction="column">
         <Map
           provider={maptilerProvider}
           height={Math.min(400, screenHeight * 0.7)}
@@ -101,7 +101,7 @@ export default function Adventures() {
             ))}
         </Map>
         <Anchor
-          ta={'right'}
+          ta="right"
           onClick={() => {
             setSelectedLocation(undefined);
             toggleWantToGo();
@@ -120,27 +120,25 @@ export default function Adventures() {
             !showWantToGo && (
               <>
                 <Title order={4}>Pictures</Title>
-                {
-                  <Carousel
-                    withIndicators
-                    height={200}
-                    type="container"
-                    emblaOptions={{ align: 'start', dragFree: true }}
-                  >
-                    {selectedThumbnailMetadata.map((img, key) => (
-                      <Image
-                        src={img.src}
-                        key={img.src}
-                        style={{
-                          objectFit: 'contain',
-                          height: '200px',
-                          marginRight: '20px',
-                        }}
-                        onClick={() => setIndex(key)}
-                      />
-                    ))}
-                  </Carousel>
-                }
+                <Carousel
+                  withIndicators
+                  height={200}
+                  type="container"
+                  emblaOptions={{ align: 'start', dragFree: true }}
+                >
+                  {selectedThumbnailMetadata.map((img, key) => (
+                    <Image
+                      src={img.src}
+                      key={img.src}
+                      style={{
+                        objectFit: 'contain',
+                        height: '200px',
+                        marginRight: '20px',
+                      }}
+                      onClick={() => setIndex(key)}
+                    />
+                  ))}
+                </Carousel>
               </>
             )}
           {selectedLocation &&
