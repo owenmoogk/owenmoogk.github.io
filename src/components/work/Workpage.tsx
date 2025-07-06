@@ -1,4 +1,4 @@
-import { Accordion, Anchor, Container, List } from '@mantine/core';
+import { Accordion, Anchor, Box, Flex, List } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router';
@@ -30,7 +30,7 @@ function getDateString(startDate: string, endDate?: string) {
 export default function Workpage() {
   const chevron = <FaChevronDown />;
   return (
-    <Container id="workPage">
+    <Flex direction="column" align="center" id="workItems">
       <Helmet>
         <title>Work - Owen Moogk</title>
       </Helmet>
@@ -46,7 +46,7 @@ export default function Workpage() {
           Resume
         </Anchor>
       </p>
-      <div id="workItems">
+      <Box w={700} pb={20}>
         <div>
           <h1>Work</h1>
           <Accordion chevron={chevron}>
@@ -132,7 +132,7 @@ export default function Workpage() {
             })}
           </Accordion>
         </div>
-      </div>
+      </Box>
       <p className="subtitle">
         A condensed version of my working documents can be found{' '}
         <Link to="/assets">here</Link>.
@@ -144,6 +144,6 @@ export default function Workpage() {
         </Anchor>
         .
       </p>
-    </Container>
+    </Flex>
   );
 }

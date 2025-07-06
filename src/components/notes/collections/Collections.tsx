@@ -9,7 +9,7 @@ export default function Collections() {
   const collections = useFetchData(getCollections, null);
 
   return (
-    <div className="main" id="blogList">
+    <div  id="blogList">
       <p className="title">Collections</p>
       <p className="subtitle">To *not* see something for the last time</p>
 

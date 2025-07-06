@@ -1,3 +1,4 @@
+import { Flex } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 
@@ -11,13 +12,13 @@ export type Asset = {
 
 export default function Assets() {
   return (
-    <div className="main" id="resourcePage">
+    <Flex align="center" direction="column">
       <Helmet>
         <title>Assets - Owen Moogk</title>
       </Helmet>
       <p className="title">Assets</p>
       <p className="subtitle">Extra bits, for storage.</p>
-      <div className="assets">
+      <div>
         <ul>
           {data.map((asset, key) => {
             let link: string;
@@ -39,6 +40,6 @@ export default function Assets() {
           })}
         </ul>
       </div>
-    </div>
+    </Flex>
   );
 }

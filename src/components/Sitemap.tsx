@@ -1,3 +1,4 @@
+import { Flex } from '@mantine/core';
 import type { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
@@ -32,13 +33,13 @@ function renderPathLinks(paths: PathList[], parent?: string): ReactNode {
 
 export default function Sitemap() {
   return (
-    <div className="main" id="resourcePage">
+    <Flex align="center" direction="column">
       <Helmet>
         <title>Sitemap - Owen Moogk</title>
       </Helmet>
       <p className="title">Sitemap</p>
       <p className="subtitle">All subpages on my domain.</p>
-      <div className="assets">
+      <div>
         <ul>
           {renderPathLinks(paths)}
           <br />
@@ -68,6 +69,6 @@ export default function Sitemap() {
           })}
         </ul>
       </div>
-    </div>
+    </Flex>
   );
 }

@@ -26,7 +26,7 @@ export default function BlogPost() {
   // }
 
   return (
-    <div className="main">
+    <div>
       <div id="blogPage" className="blogPostPage">
         {blog && (
           <>

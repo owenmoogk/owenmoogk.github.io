@@ -20,7 +20,7 @@ export default function Blog() {
   const tags = Array.from(new Set(blogData?.flatMap((post) => post.tags)));
 
   return (
-    <div className="main" id="blogList">
+    <div  id="blogList">
       <p className="title">Notes</p>
       <p className="subtitle">For everything goin' on up there.</p>
       <div id="sortingContainer">
