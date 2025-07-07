@@ -2342,13 +2342,14 @@ get-tsconfig@^4.10.1:
   dependencies:
     resolve-pkg-maps "^1.0.0"
 
-github-repo-card@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/github-repo-card/-/github-repo-card-1.0.2.tgz#13ae3ae61de8943be74a3d60fafa6258cce6aba3"
-  integrity sha512-QYbt/CpiRpSLuLRkh16AWIn25H5GlL4rpGYd4fxUNypd/iRc3Kkl6yrjqjRD4FhWTvChLbhA1UsekmfJdx9CGw==
+github-repo-card@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/github-repo-card/-/github-repo-card-2.0.0.tgz#a370dc04e07a000cdc831a32e0adad77ef9d7ae7"
+  integrity sha512-2Bz6bY2l7N6HqvdRqgJmb2kleioH9e2frLvqqSoTrcmonu7ar+w22ATyvLIuVoJxH0hxwseL49ivo/OSTdRa+w==
   dependencies:
-    react "^19.0.0"
-    react-dom "^19.0.0"
+    "@types/node" "^24.0.10"
+    react "^17.0.0 || ^18.0.0 || ^19.0.0"
+    react-dom "^17.0.0 || ^18.0.0 || ^19.0.0"
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
@@ -3415,7 +3416,7 @@ react-compare-image@^3.5.6:
   dependencies:
     tiny-invariant "^1.3.3"
 
-react-dom@^19.0.0, react-dom@^19.1.0:
+"react-dom@^17.0.0 || ^18.0.0 || ^19.0.0", react-dom@^19.1.0:
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.1.0.tgz#133558deca37fa1d682708df8904b25186793623"
   integrity sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==
@@ -3538,7 +3539,7 @@ react-textarea-autosize@8.5.9:
     use-composed-ref "^1.3.0"
     use-latest "^1.2.1"
 
-react@^19.0.0, react@^19.1.0:
+"react@^17.0.0 || ^18.0.0 || ^19.0.0", react@^19.1.0:
   version "19.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-19.1.0.tgz#926864b6c48da7627f004795d6cce50e90793b75"
   integrity sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==
