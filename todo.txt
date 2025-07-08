@@ -8,6 +8,7 @@ projects to add:
 	django-twitter
 	pomodoro-timer-extension
 	rework email bot page
+	add dev-shield extension to standard pcb project
 
 nav doesn't look great on mobile
 add adventures / memories to nav
