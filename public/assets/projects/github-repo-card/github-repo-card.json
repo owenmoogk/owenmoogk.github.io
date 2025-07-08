@@ -4,6 +4,7 @@
     "types": [
         "React"
     ],
-    "externalLink": "github-card",
+    "featured": true,
+    "externalLink": "github-repo-card",
     "description": "The github card, in a React component."
 }

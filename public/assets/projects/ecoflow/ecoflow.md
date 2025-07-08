@@ -1,4 +1,4 @@
-![](apperatus-2.jpg)
+![](main.png)
 
 # Overview
 

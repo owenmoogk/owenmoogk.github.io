@@ -3,6 +3,11 @@
 # Overview
 As part of my involvement in the ULethbridge Hub for Neuroengineering Solutions, I designed custom schematics and a printed circuit board for mouse cage environment monitoring. This had many functions, including illiumination (in both IR and visible light), camera recording, gas monitoring, water delivery sensors, and more niche application-specific functions. Additionally, it was designed to be expandable for future projects.
 
+# Modularity
+The base board had a mating for an external development bord, allowing flexibilty in module expansion and room for new projects.
+
+![Base Board](RatPCB.png)
+![Modular Shield](Shield.png)
 # Design Requirements
 - Determine changes in water level when mice drink
 - Monitor the current cleanliness of the cage (through gas sensing)
