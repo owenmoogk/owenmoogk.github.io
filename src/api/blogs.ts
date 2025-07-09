@@ -23,13 +23,7 @@ type APIBlogPost = {
 export type CollectionItem = {
   title: string;
   url: string;
-  date: Date;
-};
-
-type CollectionItemAPI = {
-  title: string;
-  url: string;
-  add_date: string;
+  add_date: Date | string;
 };
 
 export async function getBlogs() {
@@ -48,27 +42,6 @@ export async function getBlogs() {
   // sorting so newest are first
   posts.sort((a, b) => b.date.getTime() - a.date.getTime());
   return posts;
-}
-
-export async function getCollections() {
-  const response = await fetch(blogLink + '/collections/index.json');
-  const categories = (await response.json()) as string[];
-
-  const fetchPromises = categories.map(async (category) => {
-    const categoryResponse = await fetch(
-      `${blogLink}/collections/${category}.json`
-    );
-    const items = (await categoryResponse.json()) as CollectionItemAPI[];
-    return {
-      category,
-      items: items.map((item) => ({
-        ...item,
-        date: new Date(parseInt(item.add_date, 10) * 1000),
-      })),
-    };
-  });
-
-  return await Promise.all(fetchPromises);
 }
 
 export async function getBlog(name: string) {

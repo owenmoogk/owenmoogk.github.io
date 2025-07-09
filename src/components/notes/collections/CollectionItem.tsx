@@ -23,7 +23,7 @@ export default function CollectionItem(props: { item: CollectionItem }) {
           : FaGlobe;
 
   return (
-    <Flex gap={10} align="center" mt={5}>
+    <Flex gap={10} align="center" mt={5} ml={20}>
       <Flex align="center">
         <Icon size={18} />
       </Flex>

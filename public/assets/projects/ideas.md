@@ -68,6 +68,8 @@ I can't really be upset, because it's a really bad architecture. The Nano doesn'
 
 I also want to maybe add a few potentiometers and LEDs to jazz this up a bit, like this video: [DIY Macro Pad Keyboard Build from Scratch with Custom PCB and Mechanical Switches](https://www.youtube.com/watch?v=P_oSLBZABGA&list=PLDlu7PVlJUFtCAMwffs1lwe7iIy3aZIIQ&index=49&t=343s&pp=gAQBiAQB).
 
+Also making something modular would be sick, although probably somewhat unnecessary. Similar to [this](https://www.youtube.com/watch?v=7DfexfHzT-w).
+
 ## Power Supply
 Coolness: 7/10 • Difficulty: 7/10
 
