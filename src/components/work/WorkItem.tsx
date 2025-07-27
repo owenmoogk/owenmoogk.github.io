@@ -33,7 +33,7 @@ export default function WorkItem(props: Props) {
   }
 
   return (
-    <Accordion.Item value={props.title+"-"+props.subtitle}>
+    <Accordion.Item value={props.title + '-' + props.subtitle}>
       <Accordion.Control>
         <Flex justify="space-between" fw="bold" mr={20}>
           <Title order={4} m={0}>
