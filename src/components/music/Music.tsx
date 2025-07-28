@@ -1,11 +1,11 @@
 import {
   Anchor,
-  Box,
   Container,
   Flex,
   Image,
   Stack,
   Tabs,
+  Text,
 } from '@mantine/core';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -72,24 +72,24 @@ const SongRow = (song: SpotifyTopTrackItem) => {
           <a href={song.external_urls.spotify} target="_blank" rel="noreferrer">
             {song.name}
           </a>
-          <Flex>
+          <Text c="grey">
             {song.artists.map((artist, key) => (
-              <Anchor
-                key={key}
-                href={artist.external_urls.spotify}
-                target="_blank"
-                rel="noreferrer"
-                c="gray"
-                fz="sm"
-                fs="italic"
-              >
-                <Box c="gray">
+              <>
+                <Anchor
+                  key={key}
+                  href={artist.external_urls.spotify}
+                  target="_blank"
+                  rel="noreferrer"
+                  c="gray"
+                  fz="sm"
+                  fs="italic"
+                >
                   {artist.name}
-                  {key !== song.artists.length - 1 && <>,&nbsp;</>}
-                </Box>
-              </Anchor>
+                </Anchor>
+                {key !== song.artists.length - 1 && <>,&nbsp;</>}
+              </>
             ))}
-          </Flex>
+          </Text>
         </Stack>
       </Flex>
       <a href={song.external_urls.spotify} target="_blank" rel="noreferrer">
