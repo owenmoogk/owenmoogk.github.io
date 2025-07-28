@@ -46,7 +46,7 @@ export default function Workpage() {
           Resume
         </Anchor>
       </p>
-      <Box w={700} pb={20}>
+      <Box pb={20}>
         <div>
           <h1>Work</h1>
           <Accordion chevron={chevron}>

@@ -1,4 +1,5 @@
 import { Accordion, Box, Flex, Text, Title } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 import type { ReactNode } from 'react';
 
 export type StringDictionary = Record<string, string>;
@@ -11,6 +12,7 @@ type Props = {
 };
 
 export default function WorkItem(props: Props) {
+  const { width } = useViewportSize();
   function getSummary(summary?: ReactNode) {
     if (summary) {
       return (
@@ -39,7 +41,12 @@ export default function WorkItem(props: Props) {
           <Title order={4} m={0}>
             {props.title}
           </Title>
-          <Text className="workTitleDate" w="fit-content" m={0}>
+          <Text
+            className="workTitleDate"
+            w="fit-content"
+            m={0}
+            hidden={width < 600}
+          >
             {props.dateString}
           </Text>
         </Flex>
@@ -47,7 +54,9 @@ export default function WorkItem(props: Props) {
           {props.subtitle}
         </Text>
       </Accordion.Control>
-      <Accordion.Panel>{getSummary(props.summary)}</Accordion.Panel>
+      <Accordion.Panel>
+        {getSummary(props.summary) ?? 'No information yet.'}
+      </Accordion.Panel>
     </Accordion.Item>
   );
 }
