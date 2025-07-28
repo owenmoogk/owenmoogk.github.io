@@ -24,3 +24,6 @@ projects to move to featured (after a re-work):
 
 add giscus to blog posts?:
 	https://giscus.app/
+
+mantine has code highlight, it's probably better?:
+	https://mantine.dev/x/code-highlight/
