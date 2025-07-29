@@ -1,20 +1,13 @@
-import { Flex, Image, Text, useMantineColorScheme } from '@mantine/core';
-import { useEffect, type FC } from 'react';
+import { CodeHighlight } from '@mantine/code-highlight';
+import { Flex, Image, Text } from '@mantine/core';
+import { useEffect } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import MarkdownView from 'react-showdown';
-import type { SyntaxHighlighterProps } from 'react-syntax-highlighter';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import dark from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
-import light from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-light';
-
-const SyntaxHighlighterComponent =
-  SyntaxHighlighter as unknown as FC<SyntaxHighlighterProps>;
 
 export const MarkdownRenderer = (props: {
   content: string;
   projectName?: string;
 }) => {
-  const { colorScheme } = useMantineColorScheme();
   const { projectName, content } = props;
 
   // this is really stupid and is fully bad practice,
@@ -67,20 +60,7 @@ export const MarkdownRenderer = (props: {
               </code>
             );
           }
-          return (
-            <SyntaxHighlighterComponent
-              style={colorScheme === 'dark' ? dark : light}
-              language={language}
-              customStyle={{
-                lineHeight: '20px',
-                fontSize: '14px',
-                backgroundColor:
-                  'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
-              }}
-            >
-              {props.children[0]}
-            </SyntaxHighlighterComponent>
-          );
+          return <CodeHighlight language={language} code={props.children[0]} />;
         },
         h4(props: { children: string[]; id: string }) {
           if (props.children[0].includes('::compare-image')) {
