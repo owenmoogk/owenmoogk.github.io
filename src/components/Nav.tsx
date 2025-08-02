@@ -22,7 +22,7 @@ import { links } from './NavLinks';
 export default function Nav() {
   const [opened, { toggle, close }] = useDisclosure(false);
 
-  const colorScheme = useMantineColorScheme();
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   const items = links.map((link) => {
     const menuItems = link.links?.map(
@@ -92,7 +92,7 @@ export default function Nav() {
           className="navlink"
         >
           <ActionIcon
-            onClick={colorScheme.toggleColorScheme}
+            onClick={toggleColorScheme}
             variant="transparent"
             color="var(--mantine-color-text)"
           >
@@ -105,7 +105,10 @@ export default function Nav() {
       <Drawer
         overlayProps={{
           blur: 10,
-          bg: 'rgba(0,0,0,0)',
+          bg:
+            colorScheme === 'dark'
+              ? 'rgba(0,0,0,0.5)'
+              : 'rgba(255,255,255,0.5)',
           opacity: 1,
         }}
         opened={opened}
@@ -122,11 +125,7 @@ export default function Nav() {
             <Title order={2}>Owen Moogk</Title>
             {items}
           </Stack>
-          <Flex
-            id="darkmode"
-            justify="end"
-            onClick={colorScheme.toggleColorScheme}
-          >
+          <Flex id="darkmode" justify="end" onClick={toggleColorScheme}>
             <FaRegMoon size="1.25em" />
           </Flex>
         </Stack>
