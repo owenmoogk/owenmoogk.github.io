@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"vite\"",
+    "start:host": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"vite --host\"",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
