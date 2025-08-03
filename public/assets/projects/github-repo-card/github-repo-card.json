@@ -2,7 +2,8 @@
     "title": "React GitHub Card",
     "date": "June 30, 2021",
     "types": [
-        "React"
+        "React",
+        "Typescript"
     ],
     "featured": true,
     "externalLink": "github-repo-card",

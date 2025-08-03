@@ -5,7 +5,7 @@
     "externalLink": "os",
     "types": [
         "React",
-        "Javascript"
+        "Typescript"
     ],
     "description": "A personal portfolio website built like an command line interface."
 }
