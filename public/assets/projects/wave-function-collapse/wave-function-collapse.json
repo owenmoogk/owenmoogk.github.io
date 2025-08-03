@@ -1,0 +1,11 @@
+{
+    "title": "Wave Function Collapse",
+    "date": "August 3, 2025",
+    "externalLink": "wave-function-collapse",
+    "types": [
+        "React",
+        "Typescript"
+    ],
+    "description": "A sudoku solver website implementing a WFC algorithm.",
+    "featured": true
+}

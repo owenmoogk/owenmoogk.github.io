@@ -14,3 +14,4 @@ The backtracking algorithm is SUPER simple. Maybe not the most efficient thing o
 
 After leaving this for a while, I became interested in the applications of wave functions. Interestingly, a wave function collapse can be used to solve a sudoku. I am currently working on a visualization of this and will link it here when it is finished.
 
+UPDATE: It's finished! Check it out [here](/projects/wave-function-collapse).
