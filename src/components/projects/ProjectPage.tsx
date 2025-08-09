@@ -1,10 +1,11 @@
-import { Box, Flex, Title } from '@mantine/core';
+import { Box, Flex, Text, Title } from '@mantine/core';
 import { GithubCard } from 'github-repo-card';
 import { Helmet } from 'react-helmet-async';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import Tag from '../common/Tags';
+import type { Project } from '@api/projects';
 import { fetchProjectJSON, fetchProjectMarkdown } from '@api/projects';
 import useFetchData from '@api/useGetData';
 import { MarkdownRenderer } from '@components/common/MarkdownRenderer';
@@ -42,11 +43,7 @@ export default function ProjectPage() {
     return data;
   }
 
-  function buildProjectPage() {
-    if (!metaData) {
-      return;
-    }
-
+  function buildProjectPage(metaData: Project) {
     let externalLink: string | undefined = metaData.externalLink?.includes(
       'https://'
     )
@@ -103,10 +100,22 @@ export default function ProjectPage() {
     );
   }
 
-  return metaData && projectData ? (
-    buildProjectPage()
-  ) : (
-    // will put errors here if there are any
-    <div id="projectBody" />
-  );
+  if (!metaData) return;
+
+  if (Object.keys(metaData).includes('error')) {
+    return (
+      <div id="projectBody">
+        <Text ta="center">
+          Project not found. <br />
+          Please <Link to="/contact">let me know</Link> if there should be a
+          page here.
+          <br />
+          <br />
+          <Link to="/projects">Back to Projects</Link>
+        </Text>
+      </div>
+    );
+  }
+
+  return projectData && buildProjectPage(metaData as Project);
 }

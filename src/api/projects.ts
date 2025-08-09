@@ -1,3 +1,5 @@
+import type { APIError } from './useGetData';
+
 export type Project = {
   name: string;
 
@@ -15,9 +17,14 @@ export type Project = {
 
 export async function fetchProjectJSON(name: string) {
   const jsonLink = '/assets/projects/' + name + '/' + name + '.json';
-  const response = await fetch(jsonLink);
-  const json = (await response.json()) as Project;
-  return json;
+  try {
+    const response = await fetch(jsonLink);
+    const json = (await response.json()) as Project;
+    return json;
+  } catch {
+    const error: APIError = { error: 'Project does not exist' };
+    return error;
+  }
 }
 
 export async function fetchProjectMarkdown(name: string) {
