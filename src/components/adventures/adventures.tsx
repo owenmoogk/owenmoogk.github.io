@@ -123,7 +123,6 @@ export default function Adventures() {
                 <Carousel
                   withIndicators
                   height={200}
-                  type="container"
                   emblaOptions={{ align: 'start', dragFree: true }}
                 >
                   {selectedThumbnailMetadata.map((img, key) => (
@@ -131,8 +130,8 @@ export default function Adventures() {
                       src={img.src}
                       key={img.src}
                       style={{
-                        objectFit: 'contain',
                         height: '200px',
+                        width: 'fit-content',
                         marginRight: '20px',
                       }}
                       onClick={() => setIndex(key)}
