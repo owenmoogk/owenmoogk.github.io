@@ -84,7 +84,6 @@ export const mantineTheme = createTheme({
         shadow: 'xl',
         radius: 'md',
         withBorder: true,
-        bg: 'var(--mantine-color-card)',
       },
     }),
 

@@ -1,11 +1,13 @@
+import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
+import '@mantine/spotlight/styles.css';
+import '@mantine/code-highlight/styles.css';
+
 import {
   CodeHighlightAdapterProvider,
   createShikiAdapter,
 } from '@mantine/code-highlight';
-import '@mantine/code-highlight/styles.css';
 import { MantineProvider } from '@mantine/core';
-import '@mantine/core/styles.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';

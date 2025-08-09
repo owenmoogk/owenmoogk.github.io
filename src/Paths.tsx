@@ -26,6 +26,7 @@ export type PathList = {
   path: string;
   element: ReactNode;
   children?: PathList[];
+  name?: string;
 };
 
 export const paths: PathList[] = [
@@ -54,7 +55,7 @@ export const paths: PathList[] = [
   { path: '/sitemap', element: <Sitemap /> },
   { path: '/adventures', element: <Adventures /> },
   { path: '/memories', element: <Memories /> },
-  { path: '/', element: <Homepage /> },
+  { path: '/', element: <Homepage />, name: 'Homepage' },
   { path: '/404', element: <NotFoundPage /> },
   { path: '/music/favorites', element: <SpotifyFavorites /> },
   { path: '/music/piano', element: <Piano /> },

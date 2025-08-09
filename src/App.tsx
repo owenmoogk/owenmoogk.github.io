@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import './main.css';
 import { paths } from './Paths';
 import Links from '@components/Links';
+import { Spotlight } from '@components/Spotlight';
 
 export default function App() {
   const { width } = useViewportSize();
@@ -14,6 +15,7 @@ export default function App() {
     <>
       <Nav />
       <Links />
+      <Spotlight />
       <div id="backgroundDiv" />
       <Container
         maw={width < 700 ? '100vw' : 'calc(100vw - 120px)'}
