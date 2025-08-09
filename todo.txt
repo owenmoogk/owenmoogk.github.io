@@ -15,7 +15,6 @@ add adventures / memories to nav
 projects to move to featured (after a re-work):
 	email bot
 	snake ai
-	firefly simulator
 	covid health app?
 	xml-json-converter can maybe also be published to npm?
 	refactoring typeracer can make it featured
