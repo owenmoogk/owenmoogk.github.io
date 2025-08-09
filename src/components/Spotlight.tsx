@@ -5,24 +5,23 @@ import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 import type { SpotlightActions } from '@mantine/spotlight/lib/Spotlight';
 import projectData from '../api/projects.json';
+import { getAllPathLinks } from './Sitemap';
 
 export function Spotlight() {
   const navigate = useNavigate();
 
-  const actions: SpotlightActions[] = paths
-    .filter((path) => path.path !== '*' && path.path !== '/404')
-    .map((path) => ({
-      onClick: async () => navigate(path.path),
-      label:
-        path.name ??
-        path.path
-          .split('/')
-          .filter((x) => !!x)
-          .map((pathName) => snakeToTitleCase(pathName))
-          .join(' > '),
-      id: path.path,
-      description: path.path,
-    }));
+  const actions: SpotlightActions[] = getAllPathLinks(paths).map((path) => ({
+    onClick: async () => navigate(path.path),
+    label:
+      path.name ??
+      path.path
+        .split('/')
+        .filter((x) => !!x)
+        .map((pathName) => snakeToTitleCase(pathName))
+        .join(' > '),
+    id: path.path,
+    description: path.path,
+  }));
 
   const projectActions: SpotlightActions[] = projectData.map((proj) => ({
     label: 'Projects > ' + proj.title,
