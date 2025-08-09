@@ -1,0 +1,12 @@
+{
+    "title": "XML JSON Converter",
+    "date": "May 26, 2021",
+    "types": [
+        "React",
+        "Typescript"
+    ],
+    "externalLink": "xml-json-converter",
+    "description": "Website to convert XML data into JSON format.",
+    "featured": true
+}
+
