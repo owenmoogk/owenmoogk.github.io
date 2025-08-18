@@ -72,7 +72,7 @@ const SongRow = (song: SpotifyTopTrackItem) => {
           <a href={song.external_urls.spotify} target="_blank" rel="noreferrer">
             {song.name}
           </a>
-          <Text c="grey">
+          <Text c="gray">
             {song.artists.map((artist, key) => (
               <>
                 <Anchor
