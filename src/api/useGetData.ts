@@ -18,7 +18,6 @@ function useFetchData<T, P>(
       })
       .catch((error: unknown) => {
         if (error instanceof Error) {
-          // eslint-disable-next-line no-console
           console.error(error.message);
         }
       });

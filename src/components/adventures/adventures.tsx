@@ -66,9 +66,6 @@ export default function Adventures() {
           height={Math.min(400, screenHeight * 0.7)}
           defaultCenter={[30, 0]}
           defaultZoom={1.5}
-          onBoundsChanged={({ zoom, center }) => {
-            console.log(zoom, center);
-          }}
           minZoom={1.5}
           limitBounds="edge"
         >
