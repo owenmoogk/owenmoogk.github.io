@@ -1,9 +1,9 @@
 import { CodeHighlight } from '@mantine/code-highlight';
 import { Flex, Image, Text } from '@mantine/core';
 import type { ReactNode } from 'react';
-import { useEffect } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import remarkGfm from 'remark-gfm';
@@ -13,20 +13,6 @@ export const MarkdownRenderer = (props: {
   projectName?: string;
 }) => {
   const { projectName, content } = props;
-
-  // this is really stupid and is fully bad practice,
-  // but......
-  // showdown doesn't handle videos properly so its not my fault, ok...?
-  // TLDR: Giving the videos controls because showdown removes them.
-  useEffect(() => {
-    const interval = setInterval(() => {
-      document.querySelectorAll('video').forEach((video) => {
-        video.setAttribute('controls', 'true');
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const CompareImage = (props: { id: string; children: ReactNode }) => {
     if (!projectName) {
@@ -98,6 +84,7 @@ export const MarkdownRenderer = (props: {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype]}
+      rehypePlugins={[rehypeRaw]}
       components={components}
     >
       {content}
