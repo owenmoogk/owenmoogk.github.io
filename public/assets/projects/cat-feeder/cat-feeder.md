@@ -8,7 +8,7 @@ This was the most fun I've had working on a project in a while, and we ended up 
 
 For technical information the GitHub page is linked at the top.
 
-####::compare-image[overlay1.png,overlay2.png]
+::compare-image[overlay1.png,overlay2.png]
 
 # Technical
 
