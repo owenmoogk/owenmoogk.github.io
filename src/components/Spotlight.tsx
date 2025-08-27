@@ -36,6 +36,7 @@ export function Spotlight() {
     <MantineSpotlight
       scrollable
       actions={actions}
+      shortcut={['mod + K', '/']}
       nothingFound="Nothing found..."
       highlightQuery
       searchProps={{
