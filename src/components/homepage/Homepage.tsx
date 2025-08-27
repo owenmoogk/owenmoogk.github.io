@@ -89,8 +89,28 @@ export default function Homepage() {
           <br />
           <br />
           I've formerly been employed at{' '}
+          <Anchor target="_blank" rel="noreferrer" href="https://wrmth.com">
+            Wrmth
+          </Anchor>
+          ,{' '}
           <Anchor target="_blank" rel="noreferrer" href="https://rfa.space">
             Rocket Factory Augsburg
+          </Anchor>
+          ,{' '}
+          <Anchor
+            target="_blank"
+            rel="noreferrer"
+            href="https://linkedin.com/company/qampio/"
+          >
+            QAMP
+          </Anchor>
+          ,{' '}
+          <Anchor
+            target="_blank"
+            rel="noreferrer"
+            href="https://qccareerschool.com/"
+          >
+            QC Career School
           </Anchor>
           , the{' '}
           <Anchor
