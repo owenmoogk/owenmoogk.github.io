@@ -94,6 +94,10 @@ export const adventures: Adventure[] = [
     coords: [52.8734, -118.0814],
   },
   {
+    name: 'Quebec City, Canada',
+    coords: [46.8139, -71.2082],
+  },
+  {
     name: 'Lake Louise, Canada',
     coords: [51.4254, -116.1773],
   },
