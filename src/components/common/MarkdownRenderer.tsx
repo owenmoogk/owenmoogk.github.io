@@ -1,12 +1,22 @@
 import { CodeHighlight } from '@mantine/code-highlight';
 import { Flex, Image, Text } from '@mantine/core';
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
+import { Carousel as MantineCarousel } from '@mantine/carousel';
 import remarkGfm from 'remark-gfm';
+import Lightbox from 'yet-another-react-lightbox';
+import { useViewportSize } from '@mantine/hooks';
+
+const getImagePath = (imagePath: string, projectName?: string) => {
+  if (projectName) {
+    return '/assets/projects/' + projectName + '/' + imagePath;
+  }
+  return imagePath;
+};
 
 export const MarkdownRenderer = (props: {
   content: string;
@@ -15,17 +25,13 @@ export const MarkdownRenderer = (props: {
   const { projectName, content } = props;
 
   const CompareImage = (props: { id: string; children: ReactNode }) => {
-    if (!projectName) {
-      console.warn('Warning: Project Name not passed to MarkdownRenderer');
-      return;
-    }
     if (typeof props.children !== 'string') return;
     const [image1, image2] = props.children.split(',');
     return (
       <Flex className="sliderContainer" direction="column" m="auto">
         <ReactCompareImage
-          leftImage={'/assets/projects/' + projectName + '/' + image1}
-          rightImage={'/assets/projects/' + projectName + '/' + image2}
+          leftImage={getImagePath(image1, projectName)}
+          rightImage={getImagePath(image2, projectName)}
           handle={
             <button
               style={{
@@ -40,6 +46,46 @@ export const MarkdownRenderer = (props: {
         />
         <Text className="subtitle">Move the slider to see inside.</Text>
       </Flex>
+    );
+  };
+
+  const Carousel = (props: { id: string; children: ReactNode }) => {
+    const [index, setIndex] = useState<number>(-1);
+    const { width: screenWidth } = useViewportSize();
+
+    if (typeof props.children !== 'string') return;
+    const baseImages = props.children.split(',');
+    const images = baseImages.map((image) => getImagePath(image, projectName));
+    return (
+      <>
+        <MantineCarousel
+          height={250}
+          maw="100%"
+          emblaOptions={{ align: 'start', dragFree: true }}
+        >
+          {images.map((img, key) => (
+            <Image
+              src={img}
+              key={img}
+              style={{
+                height: '250px',
+                width: 'fit-content',
+                marginRight: '20px',
+              }}
+              onClick={() => setIndex(key)}
+            />
+          ))}
+        </MantineCarousel>
+        <Lightbox
+          video={{ autoPlay: true }}
+          index={index}
+          slides={images.map((img) => ({ src: img }))}
+          open={index >= 0}
+          close={() => setIndex(-1)}
+          controller={{ closeOnBackdropClick: true }}
+          carousel={{ padding: screenWidth > 700 ? '40px' : '0px' }}
+        />
+      </>
     );
   };
 
@@ -79,6 +125,7 @@ export const MarkdownRenderer = (props: {
       return <CodeHighlight language={language} code={props.children} />;
     },
     'compare-image': CompareImage,
+    carousel: Carousel,
   };
 
   return (

@@ -9,10 +9,5 @@ For my statistics class, myself and my peers were tasked with creating a custom 
 The main learnings from this were the calibration process, collecting data and finding the best fit for our data, while also identifying systematic and random error from the system. Our group created a report detailing this process that can be found [here](/assets/projects/light-calipers/report.pdf).
 
 # Images
-
-![Full Caliper System](all.png)
-
-![Measurement Output](measurement.png)
-
-![Wiring](electronics.png)
+::carousel[all.png,measurement.png,electronics.png]
 
