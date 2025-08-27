@@ -106,6 +106,10 @@ export const adventures: Adventure[] = [
     coords: [41.8781, -87.6298],
   },
   {
+    name: 'North Bay, Canada',
+    coords: [46.3091, -79.4608],
+  },
+  {
     name: 'Bavaro, Dominican Republic',
     coords: [18.6707, -68.4144],
   },
