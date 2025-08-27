@@ -118,8 +118,7 @@ export default function Adventures() {
               <>
                 <Title order={4}>Pictures</Title>
                 <Carousel
-                  withIndicators
-                  height={200}
+                  height={250}
                   emblaOptions={{ align: 'start', dragFree: true }}
                 >
                   {selectedThumbnailMetadata.map((img, key) => (
@@ -127,7 +126,7 @@ export default function Adventures() {
                       src={img.src}
                       key={img.src}
                       style={{
-                        height: '200px',
+                        height: '250px',
                         width: 'fit-content',
                         marginRight: '20px',
                       }}
