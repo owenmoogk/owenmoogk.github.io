@@ -24,16 +24,17 @@
     {
       "name": "Wrmth ",
       "position": "Electrical Engineering",
-      "startDate": "2025-05-31",
-      "endDate": "",
+      "startDate": "2025-05-01",
+      "endDate": "2025-08-31",
       "highlights": [],
+      "summary": "As an electrical engineering student, I developed custom circuitry (PCBs) for heated outdoor furniture and the manufacturing systems to build them.\n\nI designed schematics in Altium Designer, for prototyping and then mass production, ensuring performance in sub-optimal conditions (weather). I then designed PCBs according to these constraints for reliability and manufacturing ease, reducing board costs by ~80%.\n\nI developed test procedures and PCB bring-up methods to ensure board functionality and performance.\n\nI used SolidWorks CAD tools to design and 3D print a SCARA (selectively compliant) robotic arm, for use in combined additive and subtractive manufacturing settings. I programmed a custom G-code slicer, including inverse kinematics for said robotic arm, including safety endstops and controlled feed-rate.\n\nI designed and built an IoT communication architecture for modular component reusability and plug-and-play prototyping support.",
       "url": "https://www.linkedin.com/company/wrmth/",
       "location": "North Bay, Ontario, Canada"
     },
     {
       "name": "Rocket Factory Augsburg - RFA",
       "position": "Operational Software Developer",
-      "startDate": "2024-09-30",
+      "startDate": "2024-09-01",
       "endDate": "2024-12-31",
       "highlights": [],
       "summary": "As an operational software developer at RFA, I developed internal tools in the form of web applications for company-wide use.\n\nWorking with FastAPI, React, TanStack, and TypeScript, I implemented features on full-stack applications, fixing bugs, improving features, and developing new workflows for users.\n\nI developed a custom time tracking tool for company-wide use, allowing time budgeting and recording to inform financial decisions and give insights regarding internal spending.\n\nI spent most of my time developing a manufacturing execution system, making design and implementation decisions around a tool for tracking assemblies, part statuses, task completion, and storage details.\n\nI designed and improved upon database architectures, using Postgres and Pydantic's integrations with FastAPI, to reduce complexity and improve developer usability.",
@@ -43,7 +44,7 @@
     {
       "name": "QC Career School",
       "position": "Software Developer",
-      "startDate": "2024-08-31",
+      "startDate": "2024-08-01",
       "endDate": "2024-12-31",
       "highlights": [],
       "summary": "As a software developer at QC Career School, I developed marketing websites with Next.js, using React, Bootstrap, and TypeScript, optimizing for load times and compatibility.\n\nI transformed Figma designs into marketing webpages, ensuring accuracy with attention to detail, and I refactored and optimized the codebase to be modular and increase developer usability.",
@@ -53,7 +54,7 @@
     {
       "name": "Qamp",
       "position": "Lead Software Developer",
-      "startDate": "2023-09-30",
+      "startDate": "2023-09-01",
       "endDate": "2024-11-30",
       "highlights": [],
       "summary": "As the lead software development at QAMP (a camping platform), I built a full-stack website complete with trip planning and social features.\n\nI implemented pages and components with React on Next.js, integrating with third-party mapping libraries, and using Django to build a REST API to serve data and respond to user requests.\n\nI built database scripting tools for the mass transfer and processing of spatial-relational databases and information, and implemented graphing algorithms for path planning and routing.",
@@ -63,7 +64,7 @@
     {
       "name": "Hub for Neuroengineering Solutions",
       "position": "R&D Development Engineering",
-      "startDate": "2024-01-31",
+      "startDate": "2024-01-01",
       "endDate": "2024-04-30",
       "highlights": [],
       "summary": "As a R&D development engineering student, I developed engineering solutions to create innovative neuroscience research devices, here at the University of Lethbridge.\n\nI built software tools using Django, Python, and ReactJS to process and relay recorded information to a user, and I developed embedded systems code in Python for Linux-based operating machines, optimizing speed and performance of data collection.\n\nI leveraged SolidWorks CAD tools to design mechanical components for 3D printed production and rapid iteration, and improved CNC tools for optimal speed and performance.\n\nI designed and built electrical circuitry with microprocessors, sensors, and actuators for ease of use and implementation, for which I created electrical schematics and printed circuit boards (PCBs) for mass production in Altium Designer.",
@@ -73,7 +74,7 @@
     {
       "name": "BusPlanner Inc.",
       "position": "Software Developer",
-      "startDate": "2023-05-31",
+      "startDate": "2023-05-01",
       "endDate": "2023-09-30",
       "highlights": [],
       "summary": "As a Software Developer, I developed and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients. I implemented and improved many web application features, directly affecting hundreds of clients across North America.\n\nI resolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n\nAdditionally, I designed SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation, as well as improving codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n\nI conducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
@@ -83,7 +84,7 @@
     {
       "name": "University of Waterloo Formula Motorsports",
       "position": "Powertrain Member",
-      "startDate": "2022-09-30",
+      "startDate": "2022-09-01",
       "endDate": "2023-04-30",
       "highlights": [],
       "summary": "As a powertrain team member, I worked closely with the team to develop the powertrain for a competitive formula-style racecar.\n\nI created SolidWorks CAD designs for 3D printed tools to aid the manufacturing process, and machined high-precision mechanical components.",
@@ -93,7 +94,7 @@
     {
       "name": "Merry Hill Golf Club",
       "position": "Clubhouse Employee",
-      "startDate": "2021-05-31",
+      "startDate": "2021-05-01",
       "endDate": "2022-09-30",
       "highlights": [],
       "summary": "As a Clubhouse Employee, I worked to provide excellent customer experiences and services at Merry Hill Golf Club. I have not only gained skills with POS transactions, but I also have had plenty of experience in both diffusing situations with customers and working closely with a team to achieve results.",
@@ -103,7 +104,7 @@
     {
       "name": "Merry-Hill Golf Club",
       "position": "Backshop Employee",
-      "startDate": "2020-05-31",
+      "startDate": "2020-05-01",
       "endDate": "2021-05-31",
       "highlights": [],
       "summary": "As a backshop employee, I worked on customer service and maintenance tasks to provide an amazing customer experience.",
@@ -113,7 +114,7 @@
     {
       "name": "FIRST",
       "position": "First Robotics",
-      "startDate": "2018-08-31",
+      "startDate": "2018-08-01",
       "endDate": "2022-09-30",
       "highlights": [],
       "summary": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills.\n\nOn top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
@@ -123,7 +124,7 @@
     {
       "name": "Bluevale Collegiate",
       "position": "Electric Racecar Team",
-      "startDate": "2021-09-30",
+      "startDate": "2021-09-01",
       "endDate": "2022-06-30",
       "highlights": [],
       "summary": "As a part of the Bluevale Collegiate Electric Car Team, where worked with a small team to develop and build a fully electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system.\n\nIn the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race.",
@@ -133,7 +134,7 @@
     {
       "name": "Waterloo Region District School Board",
       "position": "C2L Student",
-      "startDate": "2018-09-30",
+      "startDate": "2018-09-01",
       "endDate": "2022-06-30",
       "highlights": [],
       "summary": "Accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. \n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more like-minded people who are leadership-oriented, and I have learned and practiced many different leadership styles and management techniques.",
@@ -143,7 +144,7 @@
     {
       "name": "Shad Canada",
       "position": "SHAD Fellow",
-      "startDate": "2021-07-31",
+      "startDate": "2021-07-01",
       "endDate": "2021-07-31",
       "highlights": [],
       "summary": "Participated in the prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I learned about many different topics, with a design project focused on solving water issues in the country. \n\nWith my team, I designed an award-winning solution that tracks water usage from different appliances and provides meaningful insight to save water.",
@@ -153,7 +154,7 @@
     {
       "name": "WMBA",
       "position": "Umpire",
-      "startDate": "2017-05-31",
+      "startDate": "2017-05-01",
       "endDate": "2020-05-31",
       "highlights": [],
       "summary": "Employed as an Umpire by the WMBA for 3 years, I navigated difficult situations employing management and cooperation skills while promoting kindness, sportsmanship, and fun.",
@@ -163,7 +164,7 @@
     {
       "name": "DECA Inc.",
       "position": "DECA Competitor",
-      "startDate": "2018-09-30",
+      "startDate": "2018-09-01",
       "endDate": "2019-11-30",
       "highlights": [],
       "summary": "Excelled in the DECA global business competition, in which I solved Financial problems in business case studies with practical and personal skills.\n\nI achieved within the top 10% on both the written knowledge test and the practical roleplay test competing in the Principles of Finance (PFN) category, qualifying for the provincial championship.",
@@ -175,7 +176,7 @@
     {
       "organization": "Parkwood Mennonite Home",
       "position": "Server / Caregiver",
-      "startDate": "2018-08-31",
+      "startDate": "2018-08-01",
       "endDate": "2020-03-31",
       "summary": "Serving coffee and facilitating the morning church services, while befriending and caring for elderly residents.",
       "highlights": [],
@@ -184,7 +185,7 @@
     {
       "organization": "FIRST",
       "position": "Team Mentor",
-      "startDate": "2018-08-31",
+      "startDate": "2018-08-01",
       "endDate": "2019-03-31",
       "summary": "I mentored a local FLL robotics team, teaching and assisting with engineering and teamwork skills, with students from Grade 4 to Grade 8. It was quite enjoyable to create an environment for learning and teaching with hands-on skills, and give back to the program that I learned a lot from as a kid.",
       "highlights": [],
@@ -196,7 +197,7 @@
       "institution": "University of Waterloo",
       "area": "Mechatronics Engineering",
       "studyType": "Bachelor of Applied Science - BASc",
-      "startDate": "2022-09-30",
+      "startDate": "2022-09-01",
       "endDate": "2027-04-30",
       "score": "",
       "courses": []
@@ -205,7 +206,7 @@
       "institution": "Bluevale Collegiate Institute",
       "area": "",
       "studyType": "OSSD",
-      "startDate": "2018-09-30",
+      "startDate": "2018-09-01",
       "endDate": "2022-06-30",
       "score": "",
       "courses": []
@@ -214,43 +215,43 @@
   "awards": [
     {
       "title": "Duke of Edinburgh Silver Award",
-      "date": "2024-06-30",
+      "date": "2024-06-01",
       "awarder": "Duke of Edinburgh",
       "summary": "I achieved the Silver Duke of Edinburgh Award due to plenty of involvement with the community, volunteering, and skill development in multiple forms."
     },
     {
       "title": "AP Scholars Award",
-      "date": "2022-06-30",
+      "date": "2022-06-01",
       "awarder": "College Board",
       "summary": "I was awarded the AP Scholars award for exceptional performance on 3 AP examinations. I achieved course qualifying scores on all three exams that I wrote, in Chemistry, Physics, and Economics."
     },
     {
       "title": "Honors",
-      "date": "2022-06-30",
+      "date": "2022-06-01",
       "awarder": "Waterloo Region District School Board",
       "summary": "Have completed 4 years in high school with honors in all semesters."
     },
     {
       "title": "First Place - Sustainable Engineering Design Challenge",
-      "date": "2022-03-31",
+      "date": "2022-03-01",
       "awarder": "University of Waterloo",
       "summary": "With my peers, I worked to create a sustainable solution for a growing education system, implementing a multitude of ideas into a fluid solution. We pitched it to judges and were awarded first place for meeting criteria such as sustainability, accessibility, and design efficiency."
     },
     {
       "title": "First Place - Canadian Computing Competition",
-      "date": "2022-02-28",
+      "date": "2022-02-01",
       "awarder": "Bluevale Collegiate Institute",
       "summary": "Achieved first place at Bluevale Collegiate for my score in the Canadian Computing Competition."
     },
     {
       "title": "Jamhacks V Winner",
-      "date": "2021-05-31",
+      "date": "2021-05-01",
       "awarder": "Jamhacks V",
       "summary": "I achieved an award for competing in the Jamhacks V hackathon. With my friend Janik, I engineered a cat feeding robot, which implemented computer vision AI, CAD, 3D Printing, and electronics to complete the finished product, which won the \"Best Hardware Hack\" award."
     },
     {
       "title": "Duke of Edinburgh Bronze Award",
-      "date": "2019-10-31",
+      "date": "2019-10-01",
       "awarder": "Duke of Edinburgh",
       "summary": "I achieved the Bronze Duke of Edinburgh Award due to plenty of involvement with the community, volunteering, skill development, and physical activity."
     }
@@ -259,49 +260,54 @@
     {
       "name": "SHAD Certificate",
       "issuer": "Shad Canada",
-      "startDate": "2021-07-31",
+      "startDate": "2021-07-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/shad.pdf"
     },
     {
       "name": "Accessibility for Ontarians with Disabilities",
       "issuer": "Ontario Government | Gouvernement de l’Ontario",
-      "startDate": "2022-07-31",
+      "startDate": "2022-07-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/aoda.pdf"
     },
     {
       "name": "Smart Serve Ontario",
       "issuer": "Smart Serve Ontario",
-      "startDate": "2022-06-30",
+      "startDate": "2022-06-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/smartserve.pdf"
     },
     {
       "name": "CPR/AED/First Aid",
       "issuer": "Canadian Red Cross",
-      "startDate": "2022-08-31",
+      "startDate": "2022-08-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/first-aid-certificate.pdf"
     },
     {
       "name": "WHMIS 2015",
       "issuer": "Canada Safety Training Centre",
       "endDate": "2024-04-30",
-      "startDate": "2021-04-30",
+      "startDate": "2021-04-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/whmis.pdf"
     },
     {
       "name": "Responsive Web Design",
       "issuer": "freeCodeCamp",
-      "startDate": "2021-07-31",
+      "startDate": "2021-07-01",
       "url": "https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design"
     },
     {
       "name": "Worker Health and Safety Awareness",
       "issuer": "Ontario Government | Gouvernement de l’Ontario",
-      "startDate": "2022-07-31",
+      "startDate": "2022-07-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/health-and-safety.pdf"
     }
   ],
   "publications": [],
   "skills": [
+    {
+      "name": "Altium Designer",
+      "level": "",
+      "keywords": []
+    },
     {
       "name": "Printed Circuit Board (PCB) Design",
       "level": "",
@@ -314,11 +320,6 @@
     },
     {
       "name": "Electrical Engineering",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Design for Manufacturing",
       "level": "",
       "keywords": []
     },
@@ -423,6 +424,11 @@
       "keywords": []
     },
     {
+      "name": "Design for Manufacturing",
+      "level": "",
+      "keywords": []
+    },
+    {
       "name": "Next.js",
       "level": "",
       "keywords": []
@@ -474,7 +480,7 @@
   "projects": [
     {
       "name": "Personal Website",
-      "startDate": "2018-01-31",
+      "startDate": "2018-01-01",
       "summary": "All of my personal projects and endevours have been documented on my website. I made it as a place to showcase my work and projects, as well as explore website development. I built it first using HTML, CSS, and JavaScript, and later upgraded to ReactJS.",
       "url": "https://owenmoogk.github.io",
       "endDate": "2018-01-31"
