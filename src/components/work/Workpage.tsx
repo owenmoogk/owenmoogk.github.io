@@ -30,7 +30,7 @@ function getDateString(startDate: string, endDate?: string) {
 export default function Workpage() {
   const chevron = <FaChevronDown />;
   return (
-    <Flex direction="column" align="center" id="workItems">
+    <Flex direction="column" align="center" id="workItems" maw="700px" m="auto">
       <Helmet>
         <title>Work - Owen Moogk</title>
       </Helmet>
@@ -46,92 +46,82 @@ export default function Workpage() {
           Resume
         </Anchor>
       </p>
-      <Box pb={20}>
-        <div>
-          <h1>Work</h1>
-          <Accordion chevron={chevron}>
-            {workData.work.map((item, itemKey) => {
-              return (
-                <WorkItem
-                  key={itemKey}
-                  title={item.position}
-                  subtitle={item.name}
-                  summary={item.summary}
-                  dateString={getDateString(item.startDate, item.endDate)}
-                />
-              );
-            })}
-          </Accordion>
-        </div>
-        <div>
-          <h1>Awards</h1>
-          <Accordion chevron={chevron}>
-            {workData.awards.map((item, itemKey) => {
-              return (
-                <WorkItem
-                  key={itemKey}
-                  title={item.title}
-                  subtitle={item.awarder}
-                  dateString={formatDate(item.date)}
-                  summary={item.summary}
-                />
-              );
-            })}
-          </Accordion>
-        </div>
-        <div>
-          <h1>Certificates</h1>
-          <Accordion chevron={chevron}>
-            {workData.certificates.map((item, itemKey) => {
-              return (
-                <WorkItem
-                  key={itemKey}
-                  title={item.name}
-                  subtitle={item.issuer}
-                  dateString={getDateString(item.startDate)}
-                  summary={
-                    <List mb={10}>
-                      <List.Item>
-                        <Anchor href={item.url}>Certification</Anchor>
-                      </List.Item>
-                    </List>
-                  }
-                />
-              );
-            })}
-          </Accordion>
-        </div>
-        <div>
-          <h1>Volunteer</h1>
-          <Accordion chevron={chevron}>
-            {workData.volunteer.map((item, itemKey) => {
-              return (
-                <WorkItem
-                  key={itemKey}
-                  title={item.position}
-                  subtitle={item.organization}
-                  dateString={getDateString(item.startDate, item.endDate)}
-                  summary={item.summary}
-                />
-              );
-            })}
-          </Accordion>
-        </div>
-        <div>
-          <h1>Education</h1>
-          <Accordion chevron={null}>
-            {workData.education.map((item, itemKey) => {
-              return (
-                <WorkItem
-                  key={itemKey}
-                  title={item.area === '' ? item.studyType : item.area}
-                  subtitle={item.institution}
-                  dateString={getDateString(item.startDate, item.endDate)}
-                />
-              );
-            })}
-          </Accordion>
-        </div>
+      <Box pb={20} w="100%">
+        <h1>Work</h1>
+        <Accordion chevron={chevron}>
+          {workData.work.map((item, itemKey) => {
+            return (
+              <WorkItem
+                key={itemKey}
+                title={item.position}
+                subtitle={item.name}
+                summary={item.summary}
+                dateString={getDateString(item.startDate, item.endDate)}
+              />
+            );
+          })}
+        </Accordion>
+        <h1>Awards</h1>
+        <Accordion chevron={chevron}>
+          {workData.awards.map((item, itemKey) => {
+            return (
+              <WorkItem
+                key={itemKey}
+                title={item.title}
+                subtitle={item.awarder}
+                dateString={formatDate(item.date)}
+                summary={item.summary}
+              />
+            );
+          })}
+        </Accordion>
+        <h1>Certificates</h1>
+        <Accordion chevron={chevron}>
+          {workData.certificates.map((item, itemKey) => {
+            return (
+              <WorkItem
+                key={itemKey}
+                title={item.name}
+                subtitle={item.issuer}
+                dateString={getDateString(item.startDate)}
+                summary={
+                  <List mb={10}>
+                    <List.Item>
+                      <Anchor href={item.url}>Certification</Anchor>
+                    </List.Item>
+                  </List>
+                }
+              />
+            );
+          })}
+        </Accordion>
+        <h1>Volunteer</h1>
+        <Accordion chevron={chevron}>
+          {workData.volunteer.map((item, itemKey) => {
+            return (
+              <WorkItem
+                key={itemKey}
+                title={item.position}
+                subtitle={item.organization}
+                dateString={getDateString(item.startDate, item.endDate)}
+                summary={item.summary}
+              />
+            );
+          })}
+        </Accordion>
+        <h1>Education</h1>
+        <Accordion chevron={null}>
+          {workData.education.map((item, itemKey) => {
+            return (
+              <WorkItem
+                key={itemKey}
+                title={item.area === '' ? item.studyType : item.area}
+                subtitle={item.institution}
+                dateString={getDateString(item.startDate, item.endDate)}
+              />
+            );
+          })}
+        </Accordion>
       </Box>
       <p className="subtitle">
         A condensed version of my working documents can be found{' '}
