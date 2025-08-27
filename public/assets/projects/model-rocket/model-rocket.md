@@ -25,7 +25,7 @@ The engines were C6-3 engines that I got from the [Canadian Rocket Store](https:
 # Physics
 
 So I did some quick calculations with my grade 11 physics knowledge, just to find its probable apogee and velocity. Here is what I came across:
-<iframe frameBorder="0" width="800px" height="100%" style="min-width: 400px; min-height:600px" src="https://www.mathcha.io/editor/10JLmhV1HvqhW4gK9ocX6QK9xFv7LzVvHJJmLG5?embedded=true"></iframe><iframe src="https://www.desmos.com/calculator/wpvjgrsnpr?embed" width="500px" height="500px" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe style="min-width: 100%; min-height:500px" src="https://www.mathcha.io/editor/10JLmhV1HvqhW4gK9ocX6QK9xFv7LzVvHJJmLG5?embedded=true"></iframe><iframe src="https://www.desmos.com/calculator/wpvjgrsnpr?embed" width="100%" height="500px" ></iframe>
 
 # Electronics
 
