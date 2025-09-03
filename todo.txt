@@ -1,13 +1,10 @@
 projects to add:
-	snake ai to page
-	covid health app
 	gists
 	elastic-car
 	toyota-stickers
 	revit-house
 	django-twitter
 	pomodoro-timer-extension
-	rework email bot page
 
 nav doesn't look great on mobile
 add adventures / memories to nav
@@ -15,8 +12,7 @@ add adventures / memories to nav
 projects to move to featured (after a re-work):
 	email bot
 	snake ai
-	covid health app?
-	xml-json-converter can maybe also be published to npm?
+	covid health app
 	refactoring typeracer can make it featured
 	maybe dino game AI too
 
