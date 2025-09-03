@@ -1,0 +1,11 @@
+{
+    "title": "Heated Chair PCBs",
+    "date": "August 22, 2025",
+    "featured": true,
+    "types": [
+        "Altium",
+        "C++"
+    ],
+    "githubLink": "",
+    "description": "A collection of custom circuit boards for powering internet enabled outdoor furniture."
+}
