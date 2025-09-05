@@ -22,9 +22,9 @@ export default defineConfig({
     eslint({
       include: ['src/**/*.ts', 'src/**/*.tsx'],
       emitWarning: true,
-      emitError: false, // error doesn't block compilation
+      emitError: false,
       failOnWarning: false,
-      failOnError: false, // error doesn't block compilation
+      failOnError: false,
     }),
     {
       name: 'generate-project-metadata',
@@ -97,6 +97,9 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
+    warmup: {
+      clientFiles: ['./src/main.tsx'],
+    },
   },
   resolve: {
     alias: {

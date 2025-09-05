@@ -14,9 +14,10 @@
   padding: 8px 12px;
   font-weight: 500;
 
-  @mixin hover {
-    background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6));
-  }
+}
+
+.link:hover {
+  background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6));
 }
 
 .linkLabel {
