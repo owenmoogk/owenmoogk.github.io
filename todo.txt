@@ -6,15 +6,12 @@ projects to add:
 	django-twitter
 	pomodoro-timer-extension
 
-add adventures / memories to nav
-
 projects to move to featured (after a re-work):
 	email bot
 	snake ai
 	covid health app
 	refactoring typeracer can make it featured
 	maybe dino game AI too
-
 
 add giscus to blog posts?:
 	https://giscus.app/
