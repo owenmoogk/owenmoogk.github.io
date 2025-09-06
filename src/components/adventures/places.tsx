@@ -12,8 +12,6 @@ export const adventures: Adventure[] = [
   {
     name: 'Augsburg, Germany',
     coords: [48.3705, 10.8978],
-    description:
-      'I stayed in Augsburg for 4 months while completing an internship at a company called RFA Space! I did lots of tourism around europe, but found lots to do in Augsburg too! Highlights include the town hall, Augsburger Plarrer (like Oktoberfest), and lots of fun with co-workers (pictures below!)',
   },
   {
     name: 'Toronto, Canada',
@@ -22,8 +20,6 @@ export const adventures: Adventure[] = [
   {
     name: 'Lethbridge, Canada',
     coords: [49.6956, -112.8451],
-    description:
-      'Living in Lethbridge for 4 months, I fell in love! The nature was beautiful and the people were friendly.',
   },
   {
     name: 'Ingolstadt, Germany',
@@ -132,14 +128,5 @@ export const adventures: Adventure[] = [
   {
     name: 'Kalia Beach, West Bank',
     coords: [31.749, 35.535],
-    description: (
-      <>
-        Some highlights:
-        <ul>
-          <li>Mud Baths</li>
-          <li>The dead sea!</li>
-        </ul>
-      </>
-    ),
   },
 ];

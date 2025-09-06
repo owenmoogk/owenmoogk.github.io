@@ -9,20 +9,21 @@ export const links: NavLink[] = [
       { link: '/work', label: 'Experience' },
     ],
   },
-  // { link: '/notes', label: 'Notes' },
   {
-    label: 'Music',
+    label: 'Collections',
     subLinks: [
+      { link: '/notes', label: 'Notes' },
+      { link: '/notes/collections', label: 'Collections' },
       { link: '/music/piano', label: 'Piano' },
-      { link: '/music/favorites', label: 'My Favorites' },
+      { link: '/music/favorites', label: 'Spotify' },
     ],
   },
-  // {
-  //   label: 'Travel',
-  //   links: [
-  //     { link: '/adventures', label: 'Adventures' },
-  //     { link: '/memories', label: 'Memories' },
-  //   ],
-  // },
+  {
+    label: 'Travel',
+    subLinks: [
+      { link: '/memories', label: 'Memories' },
+      { link: '/adventures', label: 'Adventures' },
+    ],
+  },
   { link: '/contact', label: 'Contact' },
 ];
