@@ -1,4 +1,5 @@
 import {
+  Accordion,
   ActionIcon,
   Box,
   Burger,
@@ -25,7 +26,7 @@ export default function Nav() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   const items = links.map((link) => {
-    const menuItems = link.links?.map(
+    const subItems = link.subLinks?.map(
       (item) =>
         item.link && (
           <Link
@@ -39,7 +40,7 @@ export default function Nav() {
         )
     );
 
-    if (menuItems) {
+    if (subItems) {
       return (
         <Menu
           key={link.label}
@@ -55,7 +56,7 @@ export default function Nav() {
               </Flex>
             </Text>
           </Menu.Target>
-          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+          <Menu.Dropdown>{subItems}</Menu.Dropdown>
         </Menu>
       );
     }
@@ -66,6 +67,61 @@ export default function Nav() {
         to={link.link ?? '#'}
         className={classes.link}
         style={{ borderRadius: '5px' }}
+        onClick={close}
+      >
+        {link.label}
+      </Link>
+    );
+  });
+
+  const mobileItems = links.map((link) => {
+    const subItems = link.subLinks?.map(
+      (item) =>
+        item.link && (
+          <Link
+            to={item.link}
+            style={{ borderRadius: '5px', fontSize: '15px' }}
+            onClick={close}
+            key={item.label}
+            className={classes.link}
+          >
+            {item.label}
+          </Link>
+        )
+    );
+
+    if (subItems) {
+      return (
+        <Accordion key={link.label}>
+          <Accordion.Item value={link.label}>
+            <Accordion.Control>
+              <Text style={{ borderRadius: '5px' }}>
+                <Flex component="span" align="end">
+                  <span className={classes.linkLabel}>{link.label}</span>
+                </Flex>
+              </Text>
+            </Accordion.Control>
+            <Accordion.Panel>
+              <Flex direction="column" ml={20} gap={10}>
+                {subItems}
+              </Flex>
+            </Accordion.Panel>
+          </Accordion.Item>
+        </Accordion>
+      );
+    }
+
+    return (
+      <Link
+        key={link.label}
+        to={link.link ?? '#'}
+        className={classes.link}
+        style={{
+          paddingLeft: '16px',
+          paddingTop: '20px',
+          paddingBottom: '20px',
+          borderBottom: '1px solid var(--mantine-color-default-border)',
+        }}
         onClick={close}
       >
         {link.label}
@@ -123,7 +179,7 @@ export default function Nav() {
         <Stack h="calc(100vh - 66px)" justify="space-between">
           <Stack>
             <Title order={2}>Owen Moogk</Title>
-            {items}
+            {mobileItems}
           </Stack>
           <Flex id="darkmode" justify="end" onClick={toggleColorScheme}>
             <FaRegMoon size="1.25em" />

@@ -1,3 +1,6 @@
 export type NavLink = {
   label: string;
-} & ({ link: string; links?: never } | { link?: never; links: NavLink[] });
+} & (
+  | { link: string; subLinks?: never }
+  | { link?: never; subLinks: NavLink[] }
+);

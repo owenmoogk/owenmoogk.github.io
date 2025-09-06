@@ -4,7 +4,7 @@ export const links: NavLink[] = [
   { link: '/', label: 'Home' },
   {
     label: 'Work',
-    links: [
+    subLinks: [
       { link: '/projects', label: 'Projects' },
       { link: '/work', label: 'Experience' },
     ],
@@ -12,7 +12,7 @@ export const links: NavLink[] = [
   // { link: '/notes', label: 'Notes' },
   {
     label: 'Music',
-    links: [
+    subLinks: [
       { link: '/music/piano', label: 'Piano' },
       { link: '/music/favorites', label: 'My Favorites' },
     ],

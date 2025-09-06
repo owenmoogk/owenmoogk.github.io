@@ -6,7 +6,6 @@ projects to add:
 	django-twitter
 	pomodoro-timer-extension
 
-nav doesn't look great on mobile
 add adventures / memories to nav
 
 projects to move to featured (after a re-work):
