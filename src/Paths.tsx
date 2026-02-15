@@ -14,7 +14,6 @@ import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
 import './main.css';
 import Adventures from '@components/adventures/adventures';
-import Memories from '@components/memories/memories';
 import SpotifyFavorites from '@components/music/Music';
 import Piano from '@components/music/Piano';
 import Collections from '@components/notes/collections/Collections';
@@ -54,7 +53,6 @@ export const paths: PathList[] = [
   { path: '/assets', element: <Assets /> },
   { path: '/sitemap', element: <Sitemap /> },
   { path: '/adventures', element: <Adventures /> },
-  { path: '/memories', element: <Memories /> },
   { path: '/', element: <Homepage />, name: 'Homepage' },
   { path: '/404', element: <NotFoundPage /> },
   { path: '/music/favorites', element: <SpotifyFavorites /> },
