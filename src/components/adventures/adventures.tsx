@@ -20,6 +20,7 @@ import type { WantToGo } from './wanttogo';
 import { wantToGo } from './wanttogo';
 import { getImageMetadata } from '@api/memories';
 import useFetchData from '@api/useGetData';
+import Video from 'yet-another-react-lightbox/plugins/video';
 
 const apiKey = import.meta.env.VITE_MAPTILER_API_KEY;
 
@@ -150,6 +151,7 @@ export default function Adventures() {
         </Box>
       </Flex>
       <Lightbox
+        plugins={[Video]}
         video={{ autoPlay: true }}
         index={index}
         slides={selectedSlideData}

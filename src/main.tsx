@@ -2,6 +2,7 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/spotlight/styles.css';
 import '@mantine/code-highlight/styles.css';
+import 'yet-another-react-lightbox/styles.css';
 
 import {
   CodeHighlightAdapterProvider,

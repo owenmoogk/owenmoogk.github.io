@@ -77,7 +77,6 @@ export const MarkdownRenderer = (props: {
           ))}
         </MantineCarousel>
         <Lightbox
-          video={{ autoPlay: true }}
           index={index}
           slides={images.map((img) => ({ src: img }))}
           open={index >= 0}
