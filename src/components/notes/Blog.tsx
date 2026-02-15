@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Paper, Text, Title } from '@mantine/core';
+import { Flex, Text, Title } from '@mantine/core';
 import { format } from 'date-fns';
 // import { useState } from 'react';
 import { useState } from 'react';
@@ -11,7 +11,6 @@ import { getBlog, getBlogs } from '@api/blogs';
 import useFetchData from '@api/useGetData';
 import { snakeToTitleCase } from '@api/util';
 import FilterButton from '@components/common/FilterButton';
-import { blogLink } from '@global/global';
 
 export default function Blog() {
   const blogData = useFetchData(getBlogs, null);
@@ -41,7 +40,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-      <Flex gap={20} direction="column">
+      <Flex direction="column" gap={15}>
         {blogData?.map((post, key) => {
           const postTags = post.tags.map((item) =>
             item.replace(' ', '_').toLowerCase()
@@ -72,25 +71,23 @@ function BlogItem(props: { post: BlogPost }) {
 
   return (
     <Link to={post.file_name}>
-      <Paper style={{ overflow: 'hidden' }} radius="lg">
-        <Flex m={-16} gap={20}>
-          <Box miw={130}>
-            <Image src={blogLink + '/' + post.image} h={130} maw={130} alt="" />
-          </Box>
-          <Flex direction="column" justify="center">
-            <Title order={3} m={0}>
-              {post.title}
-            </Title>
-            <Text fs="italic" size="sm" mt={10}>
-              {post.tags.map((x) => snakeToTitleCase(x)).join(', ')}
-              &nbsp; – &nbsp;
-              {format(post.date, 'MMMM d, yyyy')}
-              {timeEstimate && <>&nbsp; – &nbsp;{timeEstimate}</>}
-            </Text>
-          </Flex>
-          <div className="image" />
+      <Flex
+        gap={10}
+        p={15}
+        style={{ borderBottom: '1px solid var(--mantine-color-text)' }}
+      >
+        <Flex direction="column" justify="center">
+          <Title order={3} m={0}>
+            {post.title}
+          </Title>
+          <Text fs="italic" size="sm" mt={10}>
+            {post.tags.map((x) => snakeToTitleCase(x)).join(', ')}
+            &nbsp; – &nbsp;
+            {format(post.date, 'MMMM d, yyyy')}
+            {timeEstimate && <>&nbsp; – &nbsp;{timeEstimate}</>}
+          </Text>
         </Flex>
-      </Paper>
+      </Flex>
     </Link>
   );
 }
