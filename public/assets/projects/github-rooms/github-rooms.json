@@ -5,6 +5,5 @@
         "React",
         "Django"
     ],
-    "featured": true,
     "description": "A new way to connect, through code."
 }

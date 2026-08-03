@@ -6,6 +6,5 @@
         "React",
         "Javascript"
     ],
-    "description": "An implementation of Conway's game of life.",
-    "featured": true
+    "description": "An implementation of Conway's game of life."
 }

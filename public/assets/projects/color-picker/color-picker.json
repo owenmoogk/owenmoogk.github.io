@@ -5,6 +5,5 @@
     "types": [
         "Javascript"
     ],
-    "description": "Web app for getting pixel data of an image.",
-    "featured": true
+    "description": "Web app for getting pixel data of an image."
 }

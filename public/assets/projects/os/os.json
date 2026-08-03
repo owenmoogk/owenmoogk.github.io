@@ -1,7 +1,6 @@
 {
     "title": "Command Line Website",
     "date": "February 22, 2025",
-    "featured": true,
     "externalLink": "os",
     "types": [
         "React",

@@ -5,6 +5,5 @@
         "React",
         "Django"
     ],
-    "description": "Trip price tracking application.",
-    "featured": true
+    "description": "Trip price tracking application."
 }
