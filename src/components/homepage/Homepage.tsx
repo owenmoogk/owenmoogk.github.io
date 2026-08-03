@@ -81,11 +81,11 @@ export default function Homepage() {
           <Anchor href="https://uwaterloo.ca/" target="_blank" rel="noreferrer">
             University of Waterloo
           </Anchor>
-          , passionate about engineering and design. I'm usually using Altium,
-          Python, React, 3D printing, and SolidWorks to make cool stuff! Check
-          out my <Link to="/projects">projects</Link> page for details on
-          personal endeavors with programming, mechanical design, and web
-          development.
+          , passionate about engineering. I love using programming and design
+          skills to build awesome systems! Check out my{' '}
+          <Link to="/projects">projects</Link> page for details on personal
+          endeavors with software development, electrical engineering, and
+          mechanical design.
           <br />
           <br />
           I'm currently working at{' '}
