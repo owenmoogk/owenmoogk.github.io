@@ -100,9 +100,8 @@ Here's an example of what the URL might look like.
 Swap out the `client_id` and scopes for your own.
 
 ```bash
-https://accounts.spotify.com/authorize?client_id=8e94bde7dd
-b84a1f7a0e51bf3bc95be8&response_type=code&redirect_uri=http
-%3A%2F%2Flocalhost:3000&scope=user-read-currently-playing%20
+https://accounts.spotify.com/authorize?client_id=3bccb4d4dd884bbba391669bbfceaebe&response_type=code&redirect_uri=https
+%3A%2F%2Fowenmoogk.github.io&scope=user-read-currently-playing%20
 user-top-read
 ```
 
@@ -116,9 +115,7 @@ http://localhost:3000/callback?code=NApCCg..BkWtQ
 Next, we'll need to retrieve the refresh token. You'll need to generate a Base 64 encoded string containing the client ID and secret from earlier. You can use [this tool](https://www.base64encode.org/) to encode it online. The format should be `client_id:client_secret`.
 
 ```bash
-curl -H "Authorization: Basic <base64 encoded client_id:client_secret>"
--d grant_type=authorization_code -d code=<code> -d redirect_uri=http%3A
-%2F%2Flocalhost:3000 https://accounts.spotify.com/api/token
+curl -H "Authorization: Basic <base64 encoded client_id:client_secret>" -d grant_type=authorization_code -d code=<code> -d redirect_uri=http%3A%2F%2Fowenmoogk.github.io:3000 https://accounts.spotify.com/api/token
 ```
 
 This will return a JSON response containing a `refresh_token`. This token is [valid indefinitely](https://github.com/spotify/web-api/issues/374) unless you revoke access, so we'll want to save this in an environment variable.
