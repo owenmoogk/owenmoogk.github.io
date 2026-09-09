@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import type { Project } from '@api/projects';
 import { homepageUrl } from '@global/global';
+import { Text } from '@mantine/core';
 
 export default function ProjectIcon(props: { data: Project }) {
   const data = props.data;
@@ -21,10 +22,10 @@ export default function ProjectIcon(props: { data: Project }) {
       {/* content is the overarching; primary type is for the after pseudo element style above; and type is for sorting*/}
       <div className={'content ' + primaryType + 'Tile ' + types.join(' ')}>
         <div>
-          <span className="contentTitle">{data.title}</span>
-          <span className="dot">--</span>
+          <Text fw="bold" component="span">
+            {data.title}:
+          </Text>{' '}
           <span className="contentDesc">{data.description}</span>
-
           {/* this is just for sorting, not display */}
           <span className="type" style={{ display: 'none' }}>
             {types.map((x) => x)}

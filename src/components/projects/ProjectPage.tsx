@@ -53,13 +53,13 @@ export default function ProjectPage() {
     externalLink = metaData.externalLink ? externalLink : metaData.externalLink;
 
     return (
-      <div id="projectBody">
+      <Box id="projectBody" maw={700}>
         <Helmet>
           <title>{metaData.title + ' - Owen Moogk'}</title>
         </Helmet>
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>
-        <Flex id="icons" gap="sm" align="center" mb={20}>
+        <Flex id="icons" gap="sm" mb={20}>
           {metaData.githubLink === '' ? null : (
             <a
               href={
@@ -96,7 +96,7 @@ export default function ProjectPage() {
             <GithubCard username="owenmoogk" repository={projectName} />
           </Box>
         )}
-      </div>
+      </Box>
     );
   }
 

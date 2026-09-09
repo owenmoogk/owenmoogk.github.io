@@ -1,4 +1,4 @@
-import { Box, Card, Container, Flex, Text, Title } from '@mantine/core';
+import { Box, Card, Flex, Text, Title } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 
 import type { PianoSong } from './PianoSongs';
@@ -6,18 +6,18 @@ import { pianoSongs } from './PianoSongs';
 
 export default function Piano() {
   return (
-    <Container>
+    <Box>
       <Helmet>
         <title>Music - Owen Moogk</title>
       </Helmet>
       <p className="title">Piano</p>
       <p className="subtitle">Imperfect renditions of songs I like.</p>
-      <Flex justify="center" gap={20} wrap="wrap" mt={30}>
+      <Flex gap={20} wrap="wrap" mt={30}>
         {pianoSongs.map((song) => (
           <Song {...song} key={song.youtubeLink} />
         ))}
       </Flex>
-    </Container>
+    </Box>
   );
 }
 

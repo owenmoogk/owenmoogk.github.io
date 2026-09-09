@@ -12,7 +12,7 @@ export type Asset = {
 
 export default function Assets() {
   return (
-    <Flex align="center" direction="column">
+    <Flex direction="column">
       <Helmet>
         <title>Assets - Owen Moogk</title>
       </Helmet>

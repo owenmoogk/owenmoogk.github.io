@@ -30,7 +30,7 @@ function getDateString(startDate: string, endDate?: string) {
 export default function Workpage() {
   const chevron = <FaChevronDown />;
   return (
-    <Flex direction="column" align="center" id="workItems" maw="700px" m="auto">
+    <Flex direction="column" id="workItems" maw="800px">
       <Helmet>
         <title>Work - Owen Moogk</title>
       </Helmet>
@@ -47,7 +47,7 @@ export default function Workpage() {
         </Anchor>
       </p>
       <Box pb={20} w="100%">
-        <h1>Work</h1>
+        <h1>Experience</h1>
         <Accordion chevron={chevron}>
           {workData.work.map((item, itemKey) => {
             return (

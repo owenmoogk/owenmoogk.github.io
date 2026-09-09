@@ -1,12 +1,4 @@
-import {
-  Anchor,
-  Container,
-  Flex,
-  Image,
-  Stack,
-  Tabs,
-  Text,
-} from '@mantine/core';
+import { Anchor, Box, Flex, Image, Stack, Tabs, Text } from '@mantine/core';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaSpotify } from 'react-icons/fa';
@@ -21,7 +13,7 @@ export default function SpotifyFavorites() {
   const topTracks = useFetchData(getTopTracks, activeTab);
 
   return (
-    <Container maw={650}>
+    <Box maw={650}>
       <Helmet>
         <title>Music - Owen Moogk</title>
       </Helmet>
@@ -37,14 +29,14 @@ export default function SpotifyFavorites() {
         </a>
         ).
       </p>
-      <Stack justify="center" m="auto" pt={20}>
+      <Stack m="auto" pt={20}>
         <Tabs
           value={activeTab}
           onChange={(value) => {
             setActiveTab(value as TimeframeType);
           }}
         >
-          <Tabs.List justify="center">
+          <Tabs.List>
             <Tabs.Tab value="short_term">4 Weeks</Tabs.Tab>
             <Tabs.Tab value="medium_term">6 Months</Tabs.Tab>
             <Tabs.Tab value="long_term">All Time</Tabs.Tab>
@@ -54,7 +46,7 @@ export default function SpotifyFavorites() {
           <SongRow {...track} key={key} />
         ))}
       </Stack>
-    </Container>
+    </Box>
   );
 }
 

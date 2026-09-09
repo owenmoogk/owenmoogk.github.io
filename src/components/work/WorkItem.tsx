@@ -13,6 +13,7 @@ type Props = {
 
 export default function WorkItem(props: Props) {
   const { width } = useViewportSize();
+
   function getSummary(summary?: ReactNode) {
     if (summary) {
       return (
@@ -38,8 +39,11 @@ export default function WorkItem(props: Props) {
     <Accordion.Item value={props.title + '-' + props.subtitle}>
       <Accordion.Control>
         <Flex justify="space-between" fw="bold" mr={20}>
-          <Title order={4} m={0}>
-            {props.title}
+          <Title order={5} m={0} maw="90%">
+            {props.title} -{' '}
+            <Text component="span" fs="italic">
+              {props.subtitle}
+            </Text>
           </Title>
           <Text
             className="workTitleDate"
@@ -50,9 +54,6 @@ export default function WorkItem(props: Props) {
             {props.dateString}
           </Text>
         </Flex>
-        <Text fs="italic" m={0}>
-          {props.subtitle}
-        </Text>
       </Accordion.Control>
       <Accordion.Panel>
         {getSummary(props.summary) ?? 'No information yet.'}

@@ -1,209 +1,70 @@
 import {
-  Accordion,
   ActionIcon,
+  AppShell,
   Box,
-  Burger,
-  Drawer,
+  CloseButton,
   Flex,
-  Menu,
-  SimpleGrid,
+  Group,
+  NavLink,
   Stack,
-  Text,
-  Title,
   useMantineColorScheme,
 } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { FaChevronDown, FaRegMoon } from 'react-icons/fa';
-import { IoIosClose } from 'react-icons/io';
+import { FaRegMoon } from 'react-icons/fa';
 import { Link } from 'react-router';
 
-import classes from './HeaderMenu.module.css';
 import { links } from './NavLinks';
 
-export default function Nav() {
-  const [opened, { toggle, close }] = useDisclosure(false);
+export default function Nav({ close }: { close: () => void }) {
+  const { toggleColorScheme } = useMantineColorScheme();
 
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-
-  const items = links.map((link) => {
-    const subItems = link.subLinks?.map(
-      (item) =>
-        item.link && (
-          <Link
-            key={item.label}
-            to={item.link}
-            style={{ borderRadius: '5px' }}
-            onClick={close}
-          >
-            <Menu.Item key={item.link}>{item.label}</Menu.Item>
-          </Link>
-        )
-    );
-
-    if (subItems) {
+  // Render vertical nav links for both desktop and mobile
+  const navItems = links.map((link) => {
+    if (link.subLinks) {
       return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          transitionProps={{ exitDuration: 0 }}
-          withinPortal
-        >
-          <Menu.Target>
-            <Text className={classes.link} style={{ borderRadius: '5px' }}>
-              <Flex component="span" align="end">
-                <span className={classes.linkLabel}>{link.label}</span>
-                <FaChevronDown size={12} />
-              </Flex>
-            </Text>
-          </Menu.Target>
-          <Menu.Dropdown>{subItems}</Menu.Dropdown>
-        </Menu>
+        <NavLink key={link.label} label={link.label} childrenOffset={16}>
+          {link.subLinks.map((item) =>
+            item.link ? (
+              <NavLink
+                key={item.label}
+                component={Link}
+                to={item.link}
+                label={item.label}
+                onClick={close}
+              />
+            ) : null
+          )}
+        </NavLink>
       );
     }
 
     return (
-      <Link
+      <NavLink
         key={link.label}
-        to={link.link ?? '#'}
-        className={classes.link}
-        style={{ borderRadius: '5px' }}
+        component={Link}
+        to={link.link}
+        label={link.label}
         onClick={close}
-      >
-        {link.label}
-      </Link>
-    );
-  });
-
-  const mobileItems = links.map((link) => {
-    const subItems = link.subLinks?.map(
-      (item) =>
-        item.link && (
-          <Link
-            to={item.link}
-            style={{ borderRadius: '5px', fontSize: '15px' }}
-            onClick={close}
-            key={item.label}
-            className={classes.link}
-          >
-            {item.label}
-          </Link>
-        )
-    );
-
-    if (subItems) {
-      return (
-        <Accordion key={link.label}>
-          <Accordion.Item value={link.label}>
-            <Accordion.Control>
-              <Text style={{ borderRadius: '5px' }}>
-                <Flex component="span" align="end">
-                  <span className={classes.linkLabel}>{link.label}</span>
-                </Flex>
-              </Text>
-            </Accordion.Control>
-            <Accordion.Panel>
-              <Flex direction="column" ml={20} gap={10}>
-                {subItems}
-              </Flex>
-            </Accordion.Panel>
-          </Accordion.Item>
-        </Accordion>
-      );
-    }
-
-    return (
-      <Link
-        key={link.label}
-        to={link.link ?? '#'}
-        className={classes.link}
-        style={{
-          paddingLeft: '16px',
-          paddingTop: '20px',
-          paddingBottom: '20px',
-          borderBottom: '1px solid var(--mantine-color-default-border)',
-        }}
-        onClick={close}
-      >
-        {link.label}
-      </Link>
+      />
     );
   });
 
   return (
-    <>
-      <SimpleGrid
-        cols={3}
-        className={classes.header}
-        display={{ base: 'none', sm: 'grid' }}
-      >
-        <Box />
-        <Flex justify="center" align="center">
-          {items}
-        </Flex>
-        <Flex
-          id="darkmode"
-          mx="xl"
-          align="center"
-          justify="end"
-          className="navlink"
-        >
-          <ActionIcon
-            onClick={toggleColorScheme}
-            variant="transparent"
-            color="var(--mantine-color-text)"
-          >
-            <FaRegMoon size="1.25em" />
+    <AppShell.Navbar p="md">
+      <Stack justify="space-between" h="100%">
+        <Stack gap={0}>
+          <Group justify="flex-end" hiddenFrom="md" mb="md">
+            <CloseButton onClick={close} size="md" />
+          </Group>
+          <Box mt={30} visibleFrom="md" />
+          {navItems}
+        </Stack>
+
+        <Flex align="center" pt="md">
+          <ActionIcon onClick={toggleColorScheme} variant="default" size="lg">
+            <FaRegMoon size={16} />
           </ActionIcon>
         </Flex>
-      </SimpleGrid>
-
-      {/* MOBILE NAV DRAWER */}
-      <Drawer
-        overlayProps={{
-          blur: 10,
-          bg:
-            colorScheme === 'dark'
-              ? 'rgba(0,0,0,0.5)'
-              : 'rgba(255,255,255,0.5)',
-          opacity: 1,
-        }}
-        opened={opened}
-        onClose={close}
-        hiddenFrom="sm"
-        size="100%"
-        withCloseButton={false}
-      >
-        <Box pos="absolute" right={0} top={0} p="xl" onClick={close}>
-          <IoIosClose size={40} />
-        </Box>
-        <Stack h="calc(100vh - 66px)" justify="space-between">
-          <Stack>
-            <Title order={2}>Owen Moogk</Title>
-            {mobileItems}
-          </Stack>
-          <Flex id="darkmode" justify="end" onClick={toggleColorScheme}>
-            <FaRegMoon size="1.25em" />
-          </Flex>
-        </Stack>
-      </Drawer>
-
-      {/* OPEN CLOSE BUTTON */}
-      <Box
-        hiddenFrom="sm"
-        pos="fixed"
-        top={10}
-        left={10}
-        p={3}
-        style={{
-          backdropFilter: 'blur(3px)',
-          background: 'rgba(255,255,255,0.1)',
-          borderRadius: '5px',
-        }}
-        w="fit-content"
-        h="fit-content"
-      >
-        <Burger opened={opened} onClick={toggle} />
-      </Box>
-    </>
+      </Stack>
+    </AppShell.Navbar>
   );
 }

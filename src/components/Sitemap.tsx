@@ -47,7 +47,7 @@ function getPathElements(): ReactNode {
 
 export default function Sitemap() {
   return (
-    <Flex align="center" direction="column">
+    <Flex direction="column">
       <Helmet>
         <title>Sitemap - Owen Moogk</title>
       </Helmet>

@@ -5,19 +5,14 @@ import { Navigate, Outlet } from 'react-router-dom';
 import Assets from './components/assets/Assets';
 import ContactPage from './components/contact/Contact';
 import Homepage from './components/homepage/Homepage';
-import Blog from './components/notes/Blog';
-import BlogPost from './components/notes/BlogPost';
 import NotFoundPage from './components/NotFoundPage';
 import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';
 import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
 import './main.css';
-import Adventures from '@components/adventures/adventures';
 import SpotifyFavorites from '@components/music/Music';
 import Piano from '@components/music/Piano';
-import Collections from '@components/notes/collections/Collections';
-import ProjectIdeas from '@components/projects/ProjectIdeas';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
 
@@ -35,24 +30,15 @@ export const paths: PathList[] = [
     children: [
       { path: '', element: <Projects /> },
       { path: 'directory', element: <ProjectDirectory /> },
-      { path: 'ideas', element: <ProjectIdeas /> },
+      // { path: 'ideas', element: <ProjectIdeas /> },
       { path: ':name', element: <ProjectPage /> },
-    ],
-  },
-  {
-    path: '/notes',
-    element: <HelmetTitle name="Notes" />,
-    children: [
-      { path: '', element: <Blog /> },
-      { path: 'collections', element: <Collections /> },
-      { path: ':name', element: <BlogPost /> },
     ],
   },
   { path: '/work', element: <Workpage /> },
   { path: '/contact', element: <ContactPage /> },
   { path: '/assets', element: <Assets /> },
   { path: '/sitemap', element: <Sitemap /> },
-  { path: '/adventures', element: <Adventures /> },
+  // { path: '/adventures', element: <Adventures /> },
   { path: '/', element: <Homepage />, name: 'Homepage' },
   { path: '/404', element: <NotFoundPage /> },
   { path: '/music/favorites', element: <SpotifyFavorites /> },

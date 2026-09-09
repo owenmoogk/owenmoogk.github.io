@@ -1,4 +1,4 @@
-import { Anchor, Box, Container, Group, Text, Title } from '@mantine/core';
+import { Anchor, Box, Group, Text, Title } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaLinkedin, FaSpotify } from 'react-icons/fa';
 
@@ -17,12 +17,12 @@ export default function ContactPage() {
   };
 
   return (
-    <Container>
+    <Box>
       <Helmet>
         <title>Contact - Owen Moogk</title>
       </Helmet>
       <p className="title">Contact</p>
-      <Box ta="center">
+      <Box>
         <Title order={2} fw="normal">
           Say hello...
         </Title>
@@ -39,7 +39,7 @@ export default function ContactPage() {
           ...or find me here
         </Title>
 
-        <Group gap={15} justify="center">
+        <Group gap={15}>
           <a href={linkedIn} {...linkProps}>
             <FaLinkedin {...iconProps} />
           </a>
@@ -54,6 +54,6 @@ export default function ContactPage() {
           </a>
         </Group>
       </Box>
-    </Container>
+    </Box>
   );
 }
