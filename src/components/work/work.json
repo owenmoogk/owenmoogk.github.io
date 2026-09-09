@@ -21,6 +21,26 @@
     ]
   },
   "work": [
+     {
+      "name": "Virtu Financial",
+      "position": "Software Developer",
+      "startDate": "2026-06-01",
+      "endDate": "2026-08-30",
+      "highlights": [],
+      "summary": "📈 Making markets more efficient",
+      "url": "https://www.linkedin.com/company/virtu-financial/",
+      "location": "New York, NY, United States"
+    },
+    {
+      "name": "Base Power Company",
+      "position": "Software Developer",
+      "startDate": "2026-01-02",
+      "endDate": "2026-04-30",
+      "highlights": [],
+      "summary": "⚡Building the future of American power",
+      "url": "https://www.linkedin.com/company/basepowercompany/",
+      "location": "Austin, TX, United States"
+    },
     {
       "name": "Wrmth ",
       "position": "Electrical Engineering",
