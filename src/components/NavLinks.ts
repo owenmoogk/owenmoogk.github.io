@@ -8,7 +8,7 @@ export const links: NavLink[] = [
   },
   {
     link: '/work',
-    label: 'Experience',
+    label: 'Work',
   },
   {
     label: 'Music',
@@ -17,22 +17,6 @@ export const links: NavLink[] = [
       { link: '/music/favorites', label: 'Spotify' },
     ],
   },
-  // {
-  //   label: 'Work',
-  //   subLinks: [
-  //     { link: '/projects', label: 'Projects' },
-  //     { link: '/work', label: 'Experience' },
-  //   ],
-  // },
-  // {
-  //   label: 'Collections',
-  //   subLinks: [
-  //     { link: '/notes', label: 'Notes' },
-  //     { link: '/notes/collections', label: 'Collections' },
-  //     { link: '/music/piano', label: 'Piano' },
-  //     { link: '/music/favorites', label: 'Spotify' },
-  //   ],
-  // },
   // {
   //   label: 'Travel',
   //   subLinks: [

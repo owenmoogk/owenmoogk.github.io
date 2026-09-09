@@ -4,15 +4,6 @@
 		"link": "resume/resume.pdf"
 	},
 	{
-		"name": "Mechanical Resume",
-		"link": "resume/Mechanical/Resume.pdf"
-	},
-	{
-		"name": "Software Resume",
-		"link": "resume/Software/Resume.pdf"
-	},
-	{},
-	{
 		"name": "Extracurricular List",
 		"link": "extracurriculars.pdf"
 	},
@@ -28,14 +19,9 @@
 		"name": "AP Exams / AP Scholars Award",
 		"link": "ap-scores.pdf"
 	},
-	{},
 	{
 		"name": "Headshot",
-		"link": "pfps/suit-edited.png"
-	},
-	{
-		"name": "Business Card",
-		"link": "business-card.pdf"
+		"link": "pfps/suit-edited-square.png"
 	},
 	{},
 	{

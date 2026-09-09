@@ -55,7 +55,7 @@ export default function Nav({ close }: { close: () => void }) {
           <Group justify="flex-end" hiddenFrom="md" mb="md">
             <CloseButton onClick={close} size="md" />
           </Group>
-          <Box mt={30} visibleFrom="md" />
+          <Box mt={10} visibleFrom="md" />
           {navItems}
         </Stack>
 

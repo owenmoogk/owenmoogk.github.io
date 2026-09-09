@@ -22,13 +22,14 @@ export default function App() {
       <Box
         hiddenFrom="md"
         pos="fixed"
-        top={10}
-        left={10}
+        top={15}
+        right={15}
         p={3}
         style={{
-          backdropFilter: 'blur(3px)',
-          background: 'rgba(255,255,255,0.1)',
+          backdropFilter: 'blur(5px)',
+          background: 'rgba(128, 128, 128, 0.2)',
           borderRadius: '5px',
+          zIndex: 2,
         }}
         w="fit-content"
         h="fit-content"
@@ -41,7 +42,7 @@ export default function App() {
       </AppShell.Navbar>
       <AppShell.Main>
         <Spotlight />
-        <Box pb={50} pt={20} pl={40}>
+        <Box pb={50} px={{ base: 15, md: 40 }} pt={20}>
           <Routes>
             {paths.map((route, index) => (
               <Route key={index} path={route.path} element={route.element}>
