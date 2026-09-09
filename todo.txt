@@ -5,6 +5,7 @@ projects to add:
 	revit-house
 	django-twitter
 	pomodoro-timer-extension
+	ball balancing robot
 
 projects to move to featured (after a re-work):
 	email bot

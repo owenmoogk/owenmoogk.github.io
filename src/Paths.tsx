@@ -30,7 +30,6 @@ export const paths: PathList[] = [
     children: [
       { path: '', element: <Projects /> },
       { path: 'directory', element: <ProjectDirectory /> },
-      // { path: 'ideas', element: <ProjectIdeas /> },
       { path: ':name', element: <ProjectPage /> },
     ],
   },

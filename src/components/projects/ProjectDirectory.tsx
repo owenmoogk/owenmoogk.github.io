@@ -19,7 +19,7 @@ export default function ProjectDirectory() {
         All my projects. A lot of them are old, simple or just not worth showing
         off. But we all start somewhere.
       </p>
-      <Flex id="sortingContainer" my={20}>
+      <Flex my={20}>
         <Flex>
           <FilterButton
             name=""

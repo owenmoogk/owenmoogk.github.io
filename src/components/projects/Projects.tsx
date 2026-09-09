@@ -19,7 +19,7 @@ export default function ProjectPage() {
         These are some of my favorite projects. For a complete list, have a look{' '}
         <Link to="/projects/directory">here</Link>.
       </p>
-      <Flex id="sortingContainer" my={20}>
+      <Flex my={20}>
         <FilterButton
           name=""
           displayName="All"
