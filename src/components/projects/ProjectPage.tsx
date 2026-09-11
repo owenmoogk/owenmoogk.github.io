@@ -59,25 +59,39 @@ export default function ProjectPage() {
         </Helmet>
         <div className="title">{metaData.title}</div>
         <p className="subtitle">{metaData.date}</p>
-        <Flex id="icons" gap="sm" mb={20}>
+        <Flex gap="sm" mb={20} mt={10}>
           {metaData.githubLink === '' ? null : (
-            <a
-              href={
+            <Link
+              to={
                 metaData.githubLink
                   ? metaData.githubLink
                   : 'https://github.com/owenmoogk/' + projectName
               }
               target="_blank"
               rel="noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
             >
               <FaGithub size={24} />
-            </a>
+            </Link>
           )}
 
           {externalLink && (
-            <a href={externalLink} target="_blank" rel="noreferrer">
+            <Link
+              to={externalLink}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
               <FaExternalLinkAlt size={20} />
-            </a>
+            </Link>
           )}
 
           {metaData.types.map((type: string, key: number) => {

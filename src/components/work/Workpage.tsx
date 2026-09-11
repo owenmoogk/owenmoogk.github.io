@@ -1,4 +1,4 @@
-import { Accordion, Anchor, Box, Flex, List } from '@mantine/core';
+import { Accordion, Anchor, Box, Flex, List, Title } from '@mantine/core';
 import { Helmet } from 'react-helmet-async';
 import { FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router';
@@ -40,14 +40,14 @@ export default function Workpage() {
         <Anchor href={linkedIn} target="_blank" rel="noreferrer">
           LinkedIn
         </Anchor>
-        <br />
-        or have a look at my{' '}
+        , or have a look at my{' '}
         <Anchor href={resumeLink} target="_blank" rel="noreferrer">
-          Resume
+          resume
         </Anchor>
+        !
       </p>
       <Box pb={20} w="100%">
-        <h1>Experience</h1>
+        <Title order={1}>Experience</Title>
         <Accordion chevron={chevron}>
           {workData.work.map((item, itemKey) => {
             return (
@@ -61,7 +61,7 @@ export default function Workpage() {
             );
           })}
         </Accordion>
-        <h1>Awards</h1>
+        <Title order={1}>Awards</Title>
         <Accordion chevron={chevron}>
           {workData.awards.map((item, itemKey) => {
             return (
@@ -75,7 +75,7 @@ export default function Workpage() {
             );
           })}
         </Accordion>
-        <h1>Certificates</h1>
+        <Title order={1}>Certificates</Title>
         <Accordion chevron={chevron}>
           {workData.certificates.map((item, itemKey) => {
             return (
@@ -95,7 +95,7 @@ export default function Workpage() {
             );
           })}
         </Accordion>
-        <h1>Volunteer</h1>
+        <Title order={1}>Volunteer</Title>
         <Accordion chevron={chevron}>
           {workData.volunteer.map((item, itemKey) => {
             return (
