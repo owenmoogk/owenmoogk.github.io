@@ -22,7 +22,6 @@ export default function Tag(props: { type: string }) {
         w={15}
         bdrs="50%"
         m={5}
-        className="circle"
         style={{
           backgroundColor:
             'var(--' + type.toLowerCase().replace(/[^a-z]/gi, '') + ',grey)',

@@ -13,7 +13,7 @@ export default function ProjectPage() {
   const [filter, setFilter] = useState<string>('');
 
   return (
-    <Box id="projectPage">
+    <Box>
       <p className="title">Projects</p>
       <p className="subtitle">
         These are some of my favorite projects. For a complete list, have a look{' '}
@@ -52,7 +52,7 @@ export default function ProjectPage() {
         />
       </Flex>
 
-      <Flex wrap="wrap" gap={20}>
+      <Flex direction="column" gap={15}>
         {projectData.map((data, key) => {
           const dataTypes = data.types.map((item) => item.toLowerCase());
           if (data.featured && (dataTypes.includes(filter) || filter === '')) {

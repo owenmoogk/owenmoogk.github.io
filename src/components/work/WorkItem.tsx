@@ -45,12 +45,7 @@ export default function WorkItem(props: Props) {
               {props.subtitle}
             </Text>
           </Title>
-          <Text
-            className="workTitleDate"
-            w="fit-content"
-            m={0}
-            hidden={width < 600}
-          >
+          <Text w="fit-content" m={0} hidden={width < 600}>
             {props.dateString}
           </Text>
         </Flex>

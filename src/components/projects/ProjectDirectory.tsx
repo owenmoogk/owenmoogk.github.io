@@ -1,10 +1,10 @@
 import { Box, Flex, TextInput } from '@mantine/core';
 import { useState } from 'react';
 
-import ProjectIcon from './ProjectIcon';
 import data from '../../api/projects.json';
 import FilterButton from '../common/FilterButton';
 import type { Project } from '@api/projects';
+import FeaturedIcon from './FeaturedIcon';
 
 const projectData = data as Project[];
 
@@ -13,14 +13,14 @@ export default function ProjectDirectory() {
   const [filter, setFilter] = useState<string>('');
 
   return (
-    <Box className="projectDirectoryPage" id="projectPage" maw={800}>
+    <Box maw={800}>
       <p className="title">Project Directory</p>
       <p className="subtitle">
         All my projects. A lot of them are old, simple or just not worth showing
         off. But we all start somewhere.
       </p>
-      <Flex my={20}>
-        <Flex>
+      <Flex my={20} direction="column">
+        <Flex wrap="wrap">
           <FilterButton
             name=""
             displayName="All"
@@ -70,9 +70,10 @@ export default function ProjectDirectory() {
           placeholder="Search"
           title="Type to search"
           id="projectSearchBox"
+          maw={300}
         />
       </Flex>
-      <div id="projectIcons">
+      <Flex direction="column" gap={15}>
         {projectData.map((data, key) => {
           const dataTypes = data.types.map((item) => item.toLowerCase());
           const searchQueryLower = searchQuery.toLowerCase();
@@ -85,10 +86,17 @@ export default function ProjectDirectory() {
             (dataTypes.includes(filter) || filter === '') &&
             (matchesSearchQuery || searchQueryLower === '')
           ) {
-            return <ProjectIcon data={data} key={key} />;
+            return (
+              <FeaturedIcon
+                data={data}
+                key={key}
+                enableImages={false}
+                linkPrefix="../"
+              />
+            );
           }
         })}
-      </div>
+      </Flex>
     </Box>
   );
 }
