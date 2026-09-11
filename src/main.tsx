@@ -35,7 +35,7 @@ createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <Router>
       <MantineProvider
-        defaultColorScheme="dark"
+        defaultColorScheme="light"
         theme={mantineTheme}
         cssVariablesResolver={mantineCssVariableResolver}
       >
