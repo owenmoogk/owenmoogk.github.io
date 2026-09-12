@@ -3,23 +3,22 @@
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": "./src",
     "paths": {
       "@components/*": [
-        "components/*"
+        "./src/components/*"
       ],
       "@api/*": [
-        "api/*"
+        "./src/api/*"
       ],
       "@global/*": [
-        "global/*"
+        "./src/global/*"
       ]
     }
   },

@@ -2,7 +2,6 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs/promises'; // Use fs.promises for async file operations
 import path from 'path';
 import { defineConfig } from 'vite';
-import eslint from 'vite-plugin-eslint';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 import type { Project } from '@api/projects';
@@ -18,13 +17,6 @@ export default defineConfig({
   plugins: [
     react({
       jsxRuntime: 'automatic',
-    }),
-    eslint({
-      include: ['src/**/*.ts', 'src/**/*.tsx'],
-      emitWarning: true,
-      emitError: false,
-      failOnWarning: false,
-      failOnError: false,
     }),
     {
       name: 'generate-project-metadata',

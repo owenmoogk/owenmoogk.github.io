@@ -3,14 +3,14 @@ import { Spotlight as MantineSpotlight } from '@mantine/spotlight';
 import { paths } from '../Paths';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
-import type { SpotlightActions } from '@mantine/spotlight/lib/Spotlight';
+import type { SpotlightActionData } from '@mantine/spotlight';
 import projectData from '../api/projects.json';
 import { getAllPathLinks } from './Sitemap';
 
 export function Spotlight() {
   const navigate = useNavigate();
 
-  const actions: SpotlightActions[] = getAllPathLinks(paths).map((path) => ({
+  const actions: SpotlightActionData[] = getAllPathLinks(paths).map((path) => ({
     onClick: async () => navigate(path.path),
     label:
       path.name ??
@@ -23,7 +23,7 @@ export function Spotlight() {
     description: path.path,
   }));
 
-  const projectActions: SpotlightActions[] = projectData.map((proj) => ({
+  const projectActions: SpotlightActionData[] = projectData.map((proj) => ({
     label: 'Projects > ' + proj.title,
     id: proj.name + 'project',
     description: proj.description,

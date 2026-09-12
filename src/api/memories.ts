@@ -1,4 +1,4 @@
-import type { Photo } from 'react-photo-album/*';
+import type { Photo } from 'react-photo-album';
 import type { Slide } from 'yet-another-react-lightbox';
 
 import { memoriesLink } from '@global/global';
