@@ -11,6 +11,10 @@ export const links: NavLink[] = [
     label: 'Work',
   },
   {
+    label: 'Notes',
+    link: '/notes',
+  },
+  {
     label: 'Music',
     subLinks: [
       { link: '/music/piano', label: 'Piano' },

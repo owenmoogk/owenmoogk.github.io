@@ -4,3 +4,7 @@ export const resumeLink = assetUrl + 'resume/resume.pdf';
 export const extracurricularsLink = assetUrl + 'extracurriculars.pdf';
 export const memoriesLink = homepageUrl + 'owenmoogk.github.io-memories/';
 export const linkedIn = 'https://linkedin.com/in/owenmoogk';
+export const blogLink = 'https://owenmoogk.github.io/notes';
+export const blogImageLink = blogLink + '/images';
+export const headshot =
+  'https://owenmoogk.github.io/owenmoogk/pfps/suit-edited-square.png';

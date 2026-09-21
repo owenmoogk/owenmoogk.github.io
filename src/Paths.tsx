@@ -15,6 +15,8 @@ import SpotifyFavorites from '@components/music/Music';
 import Piano from '@components/music/Piano';
 import Projects from '@components/projects/Projects';
 import { assetUrl } from '@global/global';
+import Blog from '@components/notes/Notes';
+import BlogPost from '@components/notes/BlogPost';
 
 export type PathList = {
   path: string;
@@ -34,6 +36,15 @@ export const paths: PathList[] = [
     ],
   },
   { path: '/work', element: <Workpage /> },
+  {
+    path: '/notes',
+    element: <HelmetTitle name="Notes" />,
+    children: [
+      { path: '', element: <Blog /> },
+      { path: ':name', element: <BlogPost /> },
+    ],
+  },
+
   { path: '/contact', element: <ContactPage /> },
   { path: '/assets', element: <Assets /> },
   { path: '/sitemap', element: <Sitemap /> },

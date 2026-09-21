@@ -91,8 +91,21 @@ export const MarkdownRenderer = (props: {
   const components = {
     img: (props: { src?: string; alt?: string }) => {
       return (
-        <Flex justify="center" direction="column" component="span" mb={30}>
-          <Image src={props.src} alt="" p={0} m={0} />
+        <Flex
+          justify="center"
+          direction="column"
+          align="center"
+          component="span"
+          mb={30}
+        >
+          <Image
+            src={props.src}
+            p={0}
+            m={0}
+            w="auto"
+            fit="contain"
+            maw="100%"
+          />
           <Text
             mt={10}
             size="14px"
