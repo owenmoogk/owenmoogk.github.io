@@ -8,7 +8,7 @@ import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import { Carousel as MantineCarousel } from '@mantine/carousel';
 import remarkGfm from 'remark-gfm';
-import Lightbox, { CLASS_NO_SCROLL_PADDING } from 'yet-another-react-lightbox';
+import Lightbox from 'yet-another-react-lightbox';
 import { useViewportSize } from '@mantine/hooks';
 
 const getImagePath = (imagePath: string, projectName?: string) => {
