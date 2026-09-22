@@ -1,6 +1,6 @@
 import { CodeHighlight } from '@mantine/code-highlight';
 import { Flex, Image, Text } from '@mantine/core';
-import { useState, type ReactNode } from 'react';
+import { isValidElement, useState, type ReactNode } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -8,7 +8,7 @@ import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import { Carousel as MantineCarousel } from '@mantine/carousel';
 import remarkGfm from 'remark-gfm';
-import Lightbox from 'yet-another-react-lightbox';
+import Lightbox, { CLASS_NO_SCROLL_PADDING } from 'yet-another-react-lightbox';
 import { useViewportSize } from '@mantine/hooks';
 
 const getImagePath = (imagePath: string, projectName?: string) => {
@@ -119,22 +119,26 @@ export const MarkdownRenderer = (props: {
         </Flex>
       );
     },
-    code(props: { className?: string; children?: ReactNode }) {
-      if (typeof props.children !== 'string') return;
-      const language = props.className?.split('language-')[1];
-      if (!language) {
+    pre(props: { children?: ReactNode }) {
+      const { children } = props;
+      if (isValidElement<{ className?: string; children: string }>(children)) {
+        const language = children.props.className?.split('language-')[1];
         return (
-          <code
-            style={{
-              backgroundColor:
-                'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
-            }}
-          >
-            {props.children}
-          </code>
+          <CodeHighlight language={language} code={children.props.children} />
         );
       }
-      return <CodeHighlight language={language} code={props.children} />;
+    },
+    code(props: { children?: ReactNode }) {
+      return (
+        <code
+          style={{
+            backgroundColor:
+              'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
+          }}
+        >
+          {props.children}
+        </code>
+      );
     },
     'compare-image': CompareImage,
     carousel: Carousel,
