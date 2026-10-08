@@ -1,5 +1,5 @@
 import { CodeHighlight } from '@mantine/code-highlight';
-import { Flex, Image, Text } from '@mantine/core';
+import { Code, Flex, Image, Text } from '@mantine/core';
 import { isValidElement, useState, type ReactNode } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import ReactMarkdown from 'react-markdown';
@@ -119,6 +119,7 @@ export const MarkdownRenderer = (props: {
         </Flex>
       );
     },
+    // block code (```)
     pre(props: { children?: ReactNode }) {
       const { children } = props;
       if (isValidElement<{ className?: string; children: string }>(children)) {
@@ -128,16 +129,18 @@ export const MarkdownRenderer = (props: {
         );
       }
     },
+    // inline code `likeThis`
     code(props: { children?: ReactNode }) {
       return (
-        <code
+        <Code
+          fz={13.5}
           style={{
             backgroundColor:
-              'light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6))',
+              'light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5))',
           }}
         >
           {props.children}
-        </code>
+        </Code>
       );
     },
     'compare-image': CompareImage,
