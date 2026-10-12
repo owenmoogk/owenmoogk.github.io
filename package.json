@@ -2,7 +2,7 @@
   "homepage": "https://owenmoogk.com/",
   "name": "owenmoogk.github.io",
   "private": true,
-  "version": "8.12.5",
+  "version": "8.12.6",
   "type": "module",
   "scripts": {
     "start": "concurrently --kill-others \"less-watch-compiler src/less src main.less\" \"vite\"",
