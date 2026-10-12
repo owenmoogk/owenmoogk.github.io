@@ -14,4 +14,4 @@ So much like my previous website that visualizes the backtracking algorithm, thi
 
 Simply put, the sudoku originally has all of it's constraints and possibilites, and we look through the puzzle to find the cell with the least number of possiblities (hopefully one, but possibly more). Then, we choose one, and propagate that change to all the other cells ('collapse the wave function'). This continues until there is a conflict (ie. a cell has no possibilities anymore, meaning that we made a wrong decision somewhere along the way). From here, we backtrack and choose a different route, until we pick the right one.
 
-[Check it out!](https://owenmoogk.github.io/wave-function-collapse)
+[Check it out!](/wave-function-collapse)
