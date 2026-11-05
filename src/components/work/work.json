@@ -2,15 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Owen Moogk",
-    "label": "Mechatronics Engineering Student at the University of Waterloo",
+    "label": "Engineering Student at the University of Waterloo",
     "image": "",
     "email": "owenmoogk@gmail.com",
     "phone": "2269890602",
-    "url": "",
-    "summary": "Hey, I'm Owen, a Mechatronics Engineering Student at the University of Waterloo (graduating in 2027).\n\nI enjoy solving interesting problems, usually with software and/or hardware. I'm passionate about robotic systems, space travel, motorsport, and energy solutions, and love to travel while working on advanced technology. I'm typically using tools like Altium, Python, React, SolidWorks, and 3D Printers to make cool stuff!\n\nI'm currently working at Wrmth in North Bay as an electrical engineering student, designing and building heated outdoor furniture!\n\nI've formerly been employed at Rocket Factory Augsburg, Qamp, QC Career School, the ULethbridge Hub for Neuroengineering Solutions, and BusPlanner in engineering-related roles.\n\nFor more information about my work, see my website at https://owenmoogk.github.io.",
+    "url": "https://owenmoogk.github.io",
+    "summary": "I'm Owen, a Mechatronics Engineering student at the University of Waterloo!\n\nI enjoy solving interesting problems, usually with software and/or hardware. I'm passionate about robotic systems, space travel, motorsport, and energy solutions, and love to travel while working on advanced technology. I'm typically using tools like Altium, Python, React, SolidWorks, and 3D Printers to make cool stuff!\n\nI've formerly been employed at Virtu Financial, Base Power Company, Wrmth, Rocket Factory Augsburg, Qamp, QC Career School, the ULethbridge Hub for Neuroengineering Solutions, and BusPlanner in engineering related roles.\n\nFor more information about my work, see my website at owenmoogk.com.",
     "location": {
       "countryCode": "US",
-      "address": "Canada"
+      "address": "New York, New York, United States"
     },
     "profiles": [
       {
@@ -21,45 +21,45 @@
     ]
   },
   "work": [
-     {
+    {
       "name": "Virtu Financial",
       "position": "Software Developer",
       "startDate": "2026-06-01",
-      "endDate": "2026-08-30",
+      "endDate": "2026-08-31",
       "highlights": [],
       "summary": "📈 Making markets more efficient",
       "url": "https://www.linkedin.com/company/virtu-financial/",
-      "location": "New York, NY, United States"
+      "location": "New York, NY"
     },
     {
       "name": "Base Power Company",
       "position": "Software Developer",
-      "startDate": "2026-01-02",
+      "startDate": "2026-01-01",
       "endDate": "2026-04-30",
       "highlights": [],
       "summary": "⚡Building the future of American power",
       "url": "https://www.linkedin.com/company/basepowercompany/",
-      "location": "Austin, TX, United States"
+      "location": "Austin, Texas, United States"
     },
     {
-      "name": "Wrmth ",
+      "name": "Wrmth",
       "position": "Electrical Engineering",
       "startDate": "2025-05-01",
       "endDate": "2025-08-31",
       "highlights": [],
-      "summary": "As an electrical engineering student, I developed custom circuitry (PCBs) for heated outdoor furniture and the manufacturing systems to build them.\n\nI designed schematics in Altium Designer, for prototyping and then mass production, ensuring performance in sub-optimal conditions (weather). I then designed PCBs according to these constraints for reliability and manufacturing ease, reducing board costs by ~80%.\n\nI developed test procedures and PCB bring-up methods to ensure board functionality and performance.\n\nI used SolidWorks CAD tools to design and 3D print a SCARA (selectively compliant) robotic arm, for use in combined additive and subtractive manufacturing settings. I programmed a custom G-code slicer, including inverse kinematics for said robotic arm, including safety endstops and controlled feed-rate.\n\nI designed and built an IoT communication architecture for modular component reusability and plug-and-play prototyping support.",
+      "summary": "🔥 Designing heated outdoor furniture\n\nAs an electrical engineering student, I developed custom circuitry (PCBs) for heated outdoor furniture and the manufacturing systems to build them.\n\nI designed schematics in Altium Designer, for prototyping and then mass production, ensuring performance in sub-optimal conditions (weather). I then designed PCBs according to these constraints for reliability and manufacturing ease, reducing board costs by ~80%.\n\nI developed test procedures and PCB bring-up methods to ensure board functionality and performance.\n\nI used SolidWorks CAD tools to design and 3D print a SCARA (selectively compliant) robotic arm, for use in combined additive and subtractive manufacturing settings. I programmed a custom G-code slicer, including inverse kinematics for said robotic arm, including safety endstops and controlled feed-rate.\n\nI designed and built an IoT communication architecture for modular component reusability and plug-and-play prototyping support.",
       "url": "https://www.linkedin.com/company/wrmth/",
-      "location": "North Bay, Ontario, Canada"
+      "location": "North Bay, ON"
     },
     {
       "name": "Rocket Factory Augsburg - RFA",
-      "position": "Operational Software Developer",
+      "position": "Software Developer",
       "startDate": "2024-09-01",
       "endDate": "2024-12-31",
       "highlights": [],
-      "summary": "As an operational software developer at RFA, I developed internal tools in the form of web applications for company-wide use.\n\nWorking with FastAPI, React, TanStack, and TypeScript, I implemented features on full-stack applications, fixing bugs, improving features, and developing new workflows for users.\n\nI developed a custom time tracking tool for company-wide use, allowing time budgeting and recording to inform financial decisions and give insights regarding internal spending.\n\nI spent most of my time developing a manufacturing execution system, making design and implementation decisions around a tool for tracking assemblies, part statuses, task completion, and storage details.\n\nI designed and improved upon database architectures, using Postgres and Pydantic's integrations with FastAPI, to reduce complexity and improve developer usability.",
+      "summary": "🚀 Reducing cost to orbit\n\nAs an operational software developer at RFA, I developed internal tools in the form of web applications for company-wide use.\n\nWorking with FastAPI, React, TanStack, and TypeScript, I implemented features on full-stack applications, fixing bugs, improving features, and developing new workflows for users.\n\nI developed a custom time tracking tool for company-wide use, allowing time budgeting and recording to inform financial decisions and give insights regarding internal spending.\n\nI spent most of my time developing a manufacturing execution system, making design and implementation decisions around a tool for tracking assemblies, part statuses, task completion, and storage details.\n\nI designed and improved upon database architectures, using Postgres and Pydantic's integrations with FastAPI, to reduce complexity and improve developer usability.",
       "url": "https://www.linkedin.com/company/rfa-space/",
-      "location": "Augsburg, Bavaria, Germany"
+      "location": "Augsburg"
     },
     {
       "name": "QC Career School",
@@ -67,29 +67,29 @@
       "startDate": "2024-08-01",
       "endDate": "2024-12-31",
       "highlights": [],
-      "summary": "As a software developer at QC Career School, I developed marketing websites with Next.js, using React, Bootstrap, and TypeScript, optimizing for load times and compatibility.\n\nI transformed Figma designs into marketing webpages, ensuring accuracy with attention to detail, and I refactored and optimized the codebase to be modular and increase developer usability.",
+      "summary": "💻 Improving Online Education\n\nAs a software developer at QC Career School, I developed marketing websites with Next.js, using React, Bootstrap, and TypeScript, optimizing for load times and compatibility.\n\nI transformed Figma designs into marketing webpages, ensuring accuracy with attention to detail, and I refactored and optimized the codebase to be modular and increase developer usability.",
       "url": "https://www.linkedin.com/school/qc-career-school/",
-      "location": "Ottawa, Ontario, Canada"
+      "location": "Ottawa, ON"
     },
     {
       "name": "Qamp",
-      "position": "Lead Software Developer",
+      "position": "Software Developer",
       "startDate": "2023-09-01",
       "endDate": "2024-11-30",
       "highlights": [],
-      "summary": "As the lead software development at QAMP (a camping platform), I built a full-stack website complete with trip planning and social features.\n\nI implemented pages and components with React on Next.js, integrating with third-party mapping libraries, and using Django to build a REST API to serve data and respond to user requests.\n\nI built database scripting tools for the mass transfer and processing of spatial-relational databases and information, and implemented graphing algorithms for path planning and routing.",
+      "summary": "⛺ Planning your next camping trip\n\nAs the lead software development at QAMP (a camping platform), I built a full-stack website complete with trip planning and social features.\n\nI implemented pages and components with React on Next.js, integrating with third-party mapping libraries, and using Django to build a REST API to serve data and respond to user requests.\n\nI built database scripting tools for the mass transfer and processing of spatial-relational databases and information, and implemented graphing algorithms for path planning and routing.",
       "url": "https://www.linkedin.com/company/qampio/",
-      "location": "Ottawa, Ontario, Canada"
+      "location": "Ottawa, ON"
     },
     {
       "name": "Hub for Neuroengineering Solutions",
-      "position": "R&D Development Engineering",
+      "position": "Engineering & Design",
       "startDate": "2024-01-01",
       "endDate": "2024-04-30",
       "highlights": [],
-      "summary": "As a R&D development engineering student, I developed engineering solutions to create innovative neuroscience research devices, here at the University of Lethbridge.\n\nI built software tools using Django, Python, and ReactJS to process and relay recorded information to a user, and I developed embedded systems code in Python for Linux-based operating machines, optimizing speed and performance of data collection.\n\nI leveraged SolidWorks CAD tools to design mechanical components for 3D printed production and rapid iteration, and improved CNC tools for optimal speed and performance.\n\nI designed and built electrical circuitry with microprocessors, sensors, and actuators for ease of use and implementation, for which I created electrical schematics and printed circuit boards (PCBs) for mass production in Altium Designer.",
+      "summary": "🐭 Scaling tools for neuroscience research\n\nAs a R&D development engineering student, I developed engineering solutions to create innovative neuroscience research devices, here at the University of Lethbridge.\n\nI built software tools using Django, Python, and ReactJS to process and relay recorded information to a user, and I developed embedded systems code in Python for Linux-based operating machines, optimizing speed and performance of data collection.\n\nI leveraged SolidWorks CAD tools to design mechanical components for 3D printed production and rapid iteration, and improved CNC tools for optimal speed and performance.\n\nI designed and built electrical circuitry with microprocessors, sensors, and actuators for ease of use and implementation, for which I created electrical schematics and printed circuit boards (PCBs) for mass production in Altium Designer.",
       "url": "https://www.linkedin.com/company/hub-for-neuroengineering-solutions/",
-      "location": "Lethbridge, Alberta, Canada"
+      "location": "Lethbridge, AB"
     },
     {
       "name": "BusPlanner Inc.",
@@ -97,9 +97,9 @@
       "startDate": "2023-05-01",
       "endDate": "2023-09-30",
       "highlights": [],
-      "summary": "As a Software Developer, I developed and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients. I implemented and improved many web application features, directly affecting hundreds of clients across North America.\n\nI resolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n\nAdditionally, I designed SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation, as well as improving codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n\nI conducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
+      "summary": "🚌 Planning your trip to school\n\nAs a Software Developer, I developed and maintained web applications using the MVC ASP.NET framework, ensuring robust solutions for clients. I implemented and improved many web application features, directly affecting hundreds of clients across North America.\n\nI resolved issues on both the frontend and backend, employing debugging skills to identify and fix bugs, optimize performance, and enhance application usability with tools including C#, JavaScript/jQuery, and Bootstrap.\n\nAdditionally, I designed SQL database solutions and advanced SQL queries for efficient data retrieval and manipulation, as well as improving codebase structure, refactoring and optimizing existing code to enhance performance, reusability, and scalability.\n\nI conducted thorough testing of web applications to identify issues, ensuring optimal functionality and user experiences.",
       "url": "https://www.linkedin.com/company/busplannersoftware/",
-      "location": "Waterloo, Ontario, Canada"
+      "location": "Waterloo, ON"
     },
     {
       "name": "University of Waterloo Formula Motorsports",
@@ -109,7 +109,7 @@
       "highlights": [],
       "summary": "As a powertrain team member, I worked closely with the team to develop the powertrain for a competitive formula-style racecar.\n\nI created SolidWorks CAD designs for 3D printed tools to aid the manufacturing process, and machined high-precision mechanical components.",
       "url": "https://www.linkedin.com/company/university-of-waterloo-formula-motorsports/",
-      "location": "Waterloo, Ontario, Canada"
+      "location": "Waterloo, ON"
     },
     {
       "name": "Merry Hill Golf Club",
@@ -129,37 +129,47 @@
       "highlights": [],
       "summary": "As a backshop employee, I worked on customer service and maintenance tasks to provide an amazing customer experience.",
       "url": "https://www.linkedin.com/company/merry-hill-golf-club/",
-      "location": "Breslau, Ontario, Canada"
+      "location": "Waterloo, ON"
     },
     {
       "name": "FIRST",
-      "position": "First Robotics",
+      "position": "FRC Team Member",
       "startDate": "2018-08-01",
       "endDate": "2022-09-30",
       "highlights": [],
       "summary": "Led a subteam of robotics students using project management and teamwork skills to build a mechanism to complete a given task. Learned many applicable leadership skills transferrable to any workplace, through working tirelessly to achieve an end result. Technical skills include manufacturing, CAD, software/web development, sponsorship, outreach, and business skills.\n\nOn top of leading a mechanical design and manufacturing subteam, I also was the sponsorship team lead, where I used many of my personal skills and industry techniques to attract, recruit and retain support for the team.",
       "url": "https://www.linkedin.com/company/first-2/",
-      "location": "Waterloo, Ontario, Canada"
+      "location": "Waterloo, ON"
     },
     {
-      "name": "Bluevale Collegiate",
+      "name": "FIRST",
+      "position": "FLL Team Mentor",
+      "startDate": "2018-08-01",
+      "endDate": "2019-03-31",
+      "highlights": [],
+      "summary": "I mentored a local FLL robotics team, teaching and assisting with engineering and teamwork skills, with students from Grade 4 to Grade 8. It was quite enjoyable to create an environment for learning and teaching with hands-on skills, and give back to the program that I learned a lot from as a kid.",
+      "url": "https://www.linkedin.com/company/first-2/",
+      "location": "Waterloo, ON"
+    },
+    {
+      "name": "Bluevale Collegiate Institute",
       "position": "Electric Racecar Team",
       "startDate": "2021-09-01",
       "endDate": "2022-06-30",
       "highlights": [],
       "summary": "As a part of the Bluevale Collegiate Electric Car Team, where worked with a small team to develop and build a fully electric racecar. I took the lead on a few different aspects of the car, including designing an emergency stopping system, working on a driveshaft system, and fabricating an effective braking system.\n\nIn the two races at the University of Waterloo, our cars achieved the maximum positions possible, both first and second in the 12-volt race, and first place in the 24-volt race.",
       "url": "",
-      "location": "Waterloo, Ontario, Canada"
+      "location": "Waterloo, ON"
     },
     {
-      "name": "Waterloo Region District School Board",
+      "name": "Bluevale Collegiate Institute",
       "position": "C2L Student",
       "startDate": "2018-09-01",
       "endDate": "2022-06-30",
       "highlights": [],
       "summary": "Accepted into the 4 year intensive Choose to Lead program by demonstrating teamwork, cooperation, management, and leadership skills. \n\nThrough this program, I have had further opportunities to strengthen my skills in these areas and network/meet more like-minded people who are leadership-oriented, and I have learned and practiced many different leadership styles and management techniques.",
-      "url": "https://www.linkedin.com/company/waterloo-region-district-school-board/",
-      "location": "Waterloo, Ontario, Canada"
+      "url": "",
+      "location": "Waterloo, ON"
     },
     {
       "name": "Shad Canada",
@@ -169,17 +179,27 @@
       "highlights": [],
       "summary": "Participated in the prestigious month-long Science and Business summer program being held (virtually) from the University of PEI. I learned about many different topics, with a design project focused on solving water issues in the country. \n\nWith my team, I designed an award-winning solution that tracks water usage from different appliances and provides meaningful insight to save water.",
       "url": "https://www.linkedin.com/company/shadcanada/",
-      "location": "Prince Edward Island, Canada"
+      "location": "Charlottetown, PE"
     },
     {
-      "name": "WMBA",
+      "name": "Waterloo Minor Baseball Association",
       "position": "Umpire",
       "startDate": "2017-05-01",
       "endDate": "2020-05-31",
       "highlights": [],
       "summary": "Employed as an Umpire by the WMBA for 3 years, I navigated difficult situations employing management and cooperation skills while promoting kindness, sportsmanship, and fun.",
       "url": "",
-      "location": "Waterloo, Ontario, Canada"
+      "location": "Waterloo, ON"
+    },
+    {
+      "name": "Parkwood Mennonite Home",
+      "position": "Server + Caregiver",
+      "startDate": "2018-08-01",
+      "endDate": "2020-03-31",
+      "highlights": [],
+      "summary": "Volunteering at old age home, serving coffee and facilitating the morning church services, while befriending and caring for elderly residents.",
+      "url": "https://www.linkedin.com/company/parkwood-mennonite-home-inc/",
+      "location": "Waterloo, ON"
     },
     {
       "name": "DECA Inc.",
@@ -192,26 +212,7 @@
       "location": "Toronto, Ontario, Canada"
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Parkwood Mennonite Home",
-      "position": "Server / Caregiver",
-      "startDate": "2018-08-01",
-      "endDate": "2020-03-31",
-      "summary": "Serving coffee and facilitating the morning church services, while befriending and caring for elderly residents.",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/9885120"
-    },
-    {
-      "organization": "FIRST",
-      "position": "Team Mentor",
-      "startDate": "2018-08-01",
-      "endDate": "2019-03-31",
-      "summary": "I mentored a local FLL robotics team, teaching and assisting with engineering and teamwork skills, with students from Grade 4 to Grade 8. It was quite enjoyable to create an environment for learning and teaching with hands-on skills, and give back to the program that I learned a lot from as a kid.",
-      "highlights": [],
-      "url": "https://www.linkedin.com/company/355664"
-    }
-  ],
+  "volunteer": [],
   "education": [
     {
       "institution": "University of Waterloo",
@@ -278,10 +279,10 @@
   ],
   "certificates": [
     {
-      "name": "SHAD Certificate",
-      "issuer": "Shad Canada",
-      "startDate": "2021-07-01",
-      "url": "https://owenmoogk.github.io/owenmoogk/certifications/shad.pdf"
+      "name": "CPR/AED/First Aid",
+      "issuer": "Canadian Red Cross",
+      "startDate": "2022-08-01",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/first-aid-certificate.pdf"
     },
     {
       "name": "Accessibility for Ontarians with Disabilities",
@@ -290,23 +291,16 @@
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/aoda.pdf"
     },
     {
+      "name": "Worker Health and Safety Awareness",
+      "issuer": "Ontario Government | Gouvernement de l’Ontario",
+      "startDate": "2022-07-01",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/health-and-safety.pdf"
+    },
+    {
       "name": "Smart Serve Ontario",
       "issuer": "Smart Serve Ontario",
       "startDate": "2022-06-01",
       "url": "https://owenmoogk.github.io/owenmoogk/certifications/smartserve.pdf"
-    },
-    {
-      "name": "CPR/AED/First Aid",
-      "issuer": "Canadian Red Cross",
-      "startDate": "2022-08-01",
-      "url": "https://owenmoogk.github.io/owenmoogk/certifications/first-aid-certificate.pdf"
-    },
-    {
-      "name": "WHMIS 2015",
-      "issuer": "Canada Safety Training Centre",
-      "endDate": "2024-04-30",
-      "startDate": "2021-04-01",
-      "url": "https://owenmoogk.github.io/owenmoogk/certifications/whmis.pdf"
     },
     {
       "name": "Responsive Web Design",
@@ -315,180 +309,21 @@
       "url": "https://www.freecodecamp.org/certification/owenmoogk/responsive-web-design"
     },
     {
-      "name": "Worker Health and Safety Awareness",
-      "issuer": "Ontario Government | Gouvernement de l’Ontario",
-      "startDate": "2022-07-01",
-      "url": "https://owenmoogk.github.io/owenmoogk/certifications/health-and-safety.pdf"
+      "name": "SHAD Certificate",
+      "issuer": "Shad Canada",
+      "startDate": "2021-07-01",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/shad.pdf"
+    },
+    {
+      "name": "WHMIS 2015",
+      "issuer": "Canada Safety Training Centre",
+      "endDate": "2024-04-30",
+      "startDate": "2021-04-01",
+      "url": "https://owenmoogk.github.io/owenmoogk/certifications/whmis.pdf"
     }
   ],
   "publications": [],
-  "skills": [
-    {
-      "name": "Altium Designer",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Printed Circuit Board (PCB) Design",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Electrical Design",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Electrical Engineering",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Geographic Information Systems (GIS)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "ASP.NET MVC",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Project Management",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "FastAPI",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Git",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Onshape",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Django",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Python",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Bootstrap (Framework)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "JavaScript",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Leadership",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Hardware Engineering",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "jQuery",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Solidworks",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Visual Studio",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TanStack",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Microcontrollers",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SOLIDWORKS",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Electronics",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Design for Manufacturing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Next.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "3D Printing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "C#",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "ReactJS",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "TypeScript",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "PostgreSQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Internet of Things (IoT)",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Raspberry Pi",
-      "level": "",
-      "keywords": []
-    }
-  ],
+  "skills": [],
   "languages": [
     {
       "language": "English",
@@ -497,15 +332,7 @@
   ],
   "interests": [],
   "references": [],
-  "projects": [
-    {
-      "name": "Personal Website",
-      "startDate": "2018-01-01",
-      "summary": "All of my personal projects and endevours have been documented on my website. I made it as a place to showcase my work and projects, as well as explore website development. I built it first using HTML, CSS, and JavaScript, and later upgraded to ReactJS.",
-      "url": "https://owenmoogk.github.io",
-      "endDate": "2018-01-31"
-    }
-  ],
+  "projects": [],
   "meta": {
     "version": "v1.0.0",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"

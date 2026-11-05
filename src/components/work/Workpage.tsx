@@ -95,20 +95,6 @@ export default function Workpage() {
             );
           })}
         </Accordion>
-        <Title order={1}>Volunteer</Title>
-        <Accordion chevron={chevron}>
-          {workData.volunteer.map((item, itemKey) => {
-            return (
-              <WorkItem
-                key={itemKey}
-                title={item.position}
-                subtitle={item.organization}
-                dateString={getDateString(item.startDate, item.endDate)}
-                summary={item.summary}
-              />
-            );
-          })}
-        </Accordion>
         <h1>Education</h1>
         <Accordion chevron={null}>
           {workData.education.map((item, itemKey) => {
