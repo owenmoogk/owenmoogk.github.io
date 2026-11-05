@@ -3,7 +3,6 @@ import { useDisclosure } from '@mantine/hooks';
 import { Routes, Route } from 'react-router-dom';
 
 import Nav from './components/Nav';
-import './main.css';
 import { paths } from './Paths';
 import { Spotlight } from '@components/Spotlight';
 

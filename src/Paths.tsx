@@ -10,7 +10,6 @@ import ProjectDirectory from './components/projects/ProjectDirectory';
 import ProjectPage from './components/projects/ProjectPage';
 import Sitemap from './components/Sitemap';
 import Workpage from './components/work/Workpage';
-import './main.css';
 import SpotifyFavorites from '@components/music/Music';
 import Piano from '@components/music/Piano';
 import Projects from '@components/projects/Projects';

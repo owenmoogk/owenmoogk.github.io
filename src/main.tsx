@@ -16,7 +16,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './App';
 import { mantineCssVariableResolver } from './cssVariableResolver';
-import './main.css';
+import './less/main.less';
 import { mantineTheme } from './theme';
 
 // Lazy-loaded so the highlighter only downloads on pages with code blocks.
