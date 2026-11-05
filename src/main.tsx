@@ -19,17 +19,11 @@ import { mantineCssVariableResolver } from './cssVariableResolver';
 import './main.css';
 import { mantineTheme } from './theme';
 
-async function loadShiki() {
-  const { createHighlighter } = await import('shiki');
-  const shiki = await createHighlighter({
-    langs: ['tsx', 'scss', 'html', 'bash', 'json', 'xml', 'jsx'],
-    themes: [],
-  });
-
-  return shiki;
-}
-
-const shikiAdapter = createShikiAdapter(loadShiki);
+// Lazy-loaded so the highlighter only downloads on pages with code blocks.
+const shikiAdapter = createShikiAdapter(async () => {
+  const { createHighlighter } = await import('./shiki');
+  return createHighlighter();
+});
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
