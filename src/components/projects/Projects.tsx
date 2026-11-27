@@ -13,16 +13,18 @@ const projectData = data as Project[];
 const CARD_MIN = 250;
 const CARD_MAX = 320;
 const CARD_GAP = 15;
+const MAX_COLS = 4;
 
 export default function ProjectPage() {
   const [filter, setFilter] = useState<string>('');
 
   // Fit as many columns as possible at CARD_MIN, then let them grow up to
-  // CARD_MAX. The gap stays fixed and any leftover space sits on the right.
+  // CARD_MAX (at most MAX_COLS per row). The gap stays fixed and any leftover
+  // space sits on the right.
   const { ref: gridRef, width } = useElementSize();
-  const cols = Math.max(
-    1,
-    Math.floor((width + CARD_GAP) / (CARD_MIN + CARD_GAP))
+  const cols = Math.min(
+    MAX_COLS,
+    Math.max(1, Math.floor((width + CARD_GAP) / (CARD_MIN + CARD_GAP)))
   );
   const colWidth = Math.min(CARD_MAX, (width - (cols - 1) * CARD_GAP) / cols);
   const gridTemplateColumns =
@@ -37,7 +39,7 @@ export default function ProjectPage() {
         These are some of my favorite projects. For a complete list, have a look{' '}
         <Link to="/projects/directory">here</Link>.
       </p>
-      <Flex my={20}>
+      <Flex my={20} wrap="wrap">
         <FilterButton
           name=""
           displayName="All"
@@ -61,7 +63,7 @@ export default function ProjectPage() {
           displayName="React"
           setFilter={setFilter}
           filter={filter}
-        />{' '}
+        />
         <FilterButton
           name="solidworks"
           displayName="SolidWorks"
